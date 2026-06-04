@@ -5,8 +5,8 @@ keywords: ['remboursement wegovy mounjaro sécurité sociale 2026', 'rembourseme
 seoTitle: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026 en France"
 seoDescription: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026 : calendrier officiel, avis HAS, conditions IMC ≥ 35. Tout savoir sur la prise en charge GLP-1 en France."
 pubDate: 2026-03-16
-date: '2026-03-17'
-updatedAt: '2026-03-17'
+date: '2026-05-29'
+updatedAt: '2026-05-29'
 author: "Dr. Marie Dubois"
 category: "Économie santé"
 tags: ["wegovy", "mounjaro", "remboursement", "sécurité sociale", "glp1", "prix", "2026"]
@@ -28,13 +28,13 @@ La question est sur toutes les lèvres des patients souffrant d'obésité : quan
 
 ### Wegovy (semaglutide 2,4 mg)
 
-Wegovy est disponible en France depuis 2023. En mars 2026, il n'est **pas remboursé** par la Sécurité Sociale dans l'indication obésité. Pour le détail des tarifs par dosage, consultez notre guide sur les [prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/).
+Wegovy a bénéficié d'un accès précoce en France de juillet 2022 à septembre 2023, puis est commercialisé librement en pharmacie depuis octobre 2024. En mars 2026, il n'est **pas remboursé** par la Sécurité Sociale dans l'indication obésité. Pour le détail des tarifs par dosage, consultez notre guide sur les [prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/).
 
 La HAS a rendu un **avis favorable au remboursement** de Wegovy, reconnaissant son service médical rendu (SMR) comme important dans les formes sévères d'obésité. Cet avis est une étape nécessaire mais pas suffisante : il doit être suivi de négociations avec le CEPS (Comité Économique des Produits de Santé) sur le prix remboursable.
 
 ### Mounjaro (tirzepatide)
 
-Mounjaro a obtenu son autorisation européenne pour l'obésité (AMM European Medicines Agency) en 2023 et est commercialisé en France depuis novembre 2024. En mars 2026, il n'est **pas non plus remboursé** pour l'obésité. Retrouvez le détail des tarifs dans notre guide sur les [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/).
+Mounjaro a obtenu son AMM européenne initiale en septembre 2022 (diabète de type 2), puis l'extension d'indication à l'obésité en décembre 2024. Il est commercialisé en France depuis novembre 2024. En mars 2026, il n'est **pas non plus remboursé** pour l'obésité. Retrouvez le détail des tarifs dans notre guide sur les [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/).
 
 La HAS a publié en décembre 2025 un **avis favorable au remboursement** de Mounjaro dans l'obésité, avec un SMR qualifié d'important. Cet avis est désormais entre les mains du CEPS pour la négociation du prix.
 
@@ -106,7 +106,7 @@ Wegovy et Mounjaro n'étant pas remboursés, les pharmacies fixent librement leu
 
 Si votre médecin estime que votre situation médicale le justifie, certains GLP-1 sont déjà remboursés en France :
 
-- **Ozempic** (semaglutide, indication diabète de type 2) : remboursé à 30 % (65 % en ALD diabète) pour le diabète de type 2. Attention : son utilisation pour la perte de poids seule constitue un mésusage.
+- **Ozempic** (semaglutide, indication diabète de type 2) : remboursé à 65 % en bithérapie metformine (100 % en ALD diabète) pour le diabète de type 2. Attention : son utilisation pour la perte de poids seule constitue un mésusage.
 - **Trulicity, Victoza** : remboursés pour le diabète de type 2 avec ou sans co-indication obésité.
 
 Pour en savoir plus sur les remboursements actuels, consultez notre guide complet sur le [remboursement GLP-1 en France 2026](/collections/glp1-cout/remboursement-glp1-2026/).

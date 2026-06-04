@@ -144,7 +144,7 @@ Un traitement complet par Wegovy, en incluant la phase de titration (4 mois) et 
 
 Si vous êtes diabétique de type 2, les traitements GLP-1 suivants sont déjà remboursés et entraînent une perte de poids :
 
-- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** (sémaglutide 0,5/1/2 mg) : remboursé à 30 % (65 % en ALD diabète). C'est le même principe actif que Wegovy, à dose plus faible
+- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** (sémaglutide 0,5/1/2 mg) : remboursé à 65 % en bithérapie metformine (100 % en ALD diabète). C'est le même principe actif que Wegovy, à dose plus faible
 - **Trulicity** (dulaglutide) : remboursé à 65 %
 - **Victoza** (liraglutide) : remboursé à 65 %
 

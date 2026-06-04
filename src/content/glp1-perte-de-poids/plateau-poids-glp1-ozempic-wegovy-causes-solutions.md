@@ -52,7 +52,7 @@ Ce mécanisme est universel et indépendant du traitement utilisé : il s'observ
 
 Lors d'une perte de poids, une partie du poids perdu est de la masse maigre (muscle). Or le muscle est le tissu le plus consommateur d'énergie au repos. Moins de muscle = moins de dépense de base = poids plus difficile à perdre. La [fonte musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un enjeu majeur du traitement.
 
-Sous GLP-1, cet effet est réel : les études montrent que 20 à 40 % du poids perdu peut être de la masse maigre, contre 60 à 80 % de masse grasse. Ce ratio peut être amélioré par un apport suffisant en [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/) (minimum 1,2 g/kg/jour) et par la pratique d'une activité physique avec résistance (musculation, marche avec charges).
+Sous GLP-1, cet effet est réel : les études montrent que 20 à 40 % du poids perdu peut être de la masse maigre, contre 60 à 80 % de masse grasse. Ce ratio peut être amélioré par un apport suffisant en [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) (minimum 1,2 g/kg/jour) et par la pratique d'une activité physique avec résistance (musculation, marche avec charges).
 
 ### 3. La tolérance pharmacologique
 
@@ -98,7 +98,7 @@ L'alimentation sous GLP-1 doit être centrée sur les protéines. En période de
 
 **Qualité plutôt que restriction supplémentaire**
 
-Adopter une [alimentation optimale sous Mounjaro](/collections/regime-glp1/régime-mounjaro-optimal/) ou un régime adapté à votre GLP-1 est plus efficace que de réduire davantage les calories. Réduire encore davantage les calories est rarement la bonne réponse : un déficit trop sévère aggrave l'adaptation métabolique et la perte musculaire. Mieux vaut améliorer la qualité des aliments : réduire les sucres rapides et les ultra-transformés, augmenter les légumes et les fibres pour soutenir le microbiote.
+Adopter une [alimentation optimale sous Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal/) ou un régime adapté à votre GLP-1 est plus efficace que de réduire davantage les calories. Réduire encore davantage les calories est rarement la bonne réponse : un déficit trop sévère aggrave l'adaptation métabolique et la perte musculaire. Mieux vaut améliorer la qualité des aliments : réduire les sucres rapides et les ultra-transformés, augmenter les légumes et les fibres pour soutenir le microbiote.
 
 **Revoir l'index glycémique**
 
@@ -146,6 +146,9 @@ C'est déconseillé. L'arrêt du traitement entraîne généralement une reprise
 
 **Le plateau est-il causé par le stress ou le manque de sommeil ?**
 Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétention de graisses viscérales et la résistance à l'insuline. Le manque de sommeil augmente la ghréline (hormone de la faim) et réduit la leptine (signal de satiété) — ce qui peut faire "tomber" partiellement l'effet anorexigène du GLP-1. Un travail sur le stress et le sommeil est souvent sous-estimé dans la [prise en charge](/collections/glp1-cout/remboursement-glp1-2026/) de l'obésité. Un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) pour dépasser le plateau peut également aider à identifier les comportements alimentaires qui freinent la progression.
+
+
+> **À lire aussi** : [Calories Journalières GLP-1](/collections/regime-glp1/glp1-calories-journalieres/)
 
 ## Résumé : que faire face à un plateau ?
 

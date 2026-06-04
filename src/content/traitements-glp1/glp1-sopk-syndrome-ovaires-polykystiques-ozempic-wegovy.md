@@ -127,7 +127,7 @@ Les effets secondaires des GLP-1 sont les mêmes chez les femmes atteintes de SO
 
 - **Nausées et troubles digestifs** : fréquents en début de traitement (30 à 40 % des patients), généralement transitoires et liés à la titration progressive des doses.
 - **Risque d'hypoglycémie** : faible en l'absence de diabète traité par sulfonylurées ou insuline, car les GLP-1 agissent de façon glucose-dépendante.
-- **[Chute de cheveux](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/)** : un effluvium télogène a été rapporté sous GLP-1, notamment en cas de perte de poids rapide et d'apports protéiques insuffisants. Maintenir un [apport en protéines](/collections/regime-glp1/glp1-protéines/) d'au moins 1,2 g/kg/jour est recommandé.
+- **[Chute de cheveux](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/)** : un effluvium télogène a été rapporté sous GLP-1, notamment en cas de perte de poids rapide et d'apports protéiques insuffisants. Maintenir un [apport en protéines](/collections/regime-glp1/glp1-proteines/) d'au moins 1,2 g/kg/jour est recommandé.
 
 Pour une vue complète, consultez les [effets secondaires des GLP-1](/collections/effets-secondaires-glp1/) sur notre site.
 
@@ -143,7 +143,7 @@ Les données actuelles ne permettent pas de recommander les GLP-1 comme substitu
 Oui, absolument. Les GLP-1 doivent être arrêtés au moins 2 mois avant toute tentative de conception. Il est essentiel d'en parler à votre médecin et de [planifier cet arrêt](/collections/effets-secondaires-glp1/glp1-grossesse-preconception-arret-traitement-fertilite/).
 
 **Les GLP-1 sont-ils remboursés pour le SOPK ?**
-Non. Le SOPK n'est pas une indication remboursée. Le remboursement ne s'applique que si vous avez également un diabète de type 2 ou une obésité (IMC ≥ 30 avec comorbidité). À plein tarif, le coût mensuel d'Ozempic est d'environ 77,60 €/stylo TTC (remboursé à 30 % pour le diabète de type 2, soit environ 54 €/mois après prise en charge) et celui de Wegovy de 169 à 360 € selon le dosage.
+Non. Le SOPK n'est pas une indication remboursée. Le remboursement ne s'applique que si vous avez également un diabète de type 2 ou une obésité (IMC ≥ 30 avec comorbidité). À plein tarif, le coût mensuel d'Ozempic est d'environ 80,18 €/stylo TTC (remboursé à 65 % en bithérapie metformine pour le diabète de type 2, soit environ 28 €/mois après prise en charge) et celui de Wegovy de 169 à 360 € selon le dosage.
 
 ## Conclusion : une piste prometteuse mais à encadrer
 

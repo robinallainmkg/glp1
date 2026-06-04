@@ -59,7 +59,9 @@ Ces résultats sont inférieurs à ceux des injectables comme Wegovy (–15 à �
 
 ### Statut réglementaire en Europe
 
-Eli Lilly a déposé une **demande d'autorisation de mise sur le marché (AMM)** auprès de l'Agence Européenne des Médicaments (EMA) en 2025. L'évaluation par l'EMA est en cours. Une décision est attendue courant **2026**, ce qui ouvre la voie à une commercialisation en France en **2027** au plus tôt, sous réserve des négociations de prix avec le CEPS.
+**Aux États-Unis**, la FDA a approuvé l'orforglipron en **avril 2026** sous le nom de marque **Foundayo** pour le traitement du diabète de type 2 et de l'obésité. C'est le premier GLP-1 oral approuvé sans contrainte de prise à jeun, marquant une étape historique.
+
+**En Europe**, Eli Lilly a déposé une demande d'AMM auprès de l'EMA en 2025. L'évaluation est en cours et une décision est attendue fin **2026 ou début 2027**, ouvrant la voie à une commercialisation en France en **2027** au plus tôt, sous réserve des négociations de prix avec le CEPS.
 
 ### Pourquoi l'orforglipron est-il révolutionnaire ?
 
@@ -136,7 +138,7 @@ L'amycrétine est encore en **phase 3** en mars 2026. Les résultats complets so
 | Amycrétine | Novo Nordisk | Comprimé oral quotidien | Phase 3 en cours | 2028-2029 |
 
 **Rappel des traitements déjà disponibles en France (mars 2026) :**
-- [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) : sémaglutide injectable, remboursé à 30% pour le DT2
+- [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) : sémaglutide injectable, remboursé à 65% en bithérapie metformine pour le DT2
 - [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) : sémaglutide 2,4 mg, non remboursé, pour l'obésité
 - [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) : tirzepatide, non remboursé, le plus efficace actuellement disponible
 
@@ -198,7 +200,7 @@ Oui. Des essais cliniques de phase 3 sont encore en cours pour certaines molécu
 Trop tôt pour le dire. L'amycrétine est encore en phase 3. Si les résultats sont confirmés, elle sera soumise à l'EMA, puis évaluée par la HAS pour le remboursement. Ce processus prend généralement 3 à 5 ans après le début de la phase 3.
 
 **Ces nouveaux médicaments remplacent-ils les GLP-1 actuels ?**
-Non, ils s'y ajoutent. Les GLP-1 actuels (Ozempic, Wegovy, Mounjaro) restent des traitements efficaces et disponibles. Notre [comparatif Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/) vous aide à choisir parmi ces traitements actuellement accessibles. Les nouvelles molécules offriront des alternatives pour les patients qui ne tolèrent pas les injections ou qui nécessitent une efficacité supérieure. Parmi les innovations proches, le [sémaglutide oral (comprimé) en France](/collections/traitements-glp1/semaglutide-oral-comprimé-ozempic-france/) représente une évolution majeure vers des traitements sans injection.
+Non, ils s'y ajoutent. Les GLP-1 actuels (Ozempic, Wegovy, Mounjaro) restent des traitements efficaces et disponibles. Notre [comparatif Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/) vous aide à choisir parmi ces traitements actuellement accessibles. Les nouvelles molécules offriront des alternatives pour les patients qui ne tolèrent pas les injections ou qui nécessitent une efficacité supérieure. Parmi les innovations proches, le [sémaglutide oral (comprimé) en France](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/) représente une évolution majeure vers des traitements sans injection.
 
 ---
 

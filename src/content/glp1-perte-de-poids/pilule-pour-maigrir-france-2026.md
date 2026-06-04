@@ -150,7 +150,7 @@ Les essais cliniques de Phase III (programme OASIS) ont démontré des résultat
 
 Approuve par la FDA en 2026 pour la perte de poids, le Wegovy oral est la premiere pilule GLP-1 autorisee pour l'obésité. La soumission EMA est en cours pour une mise a disposition en France.
 
-Pour suivre les dernieres informations, consultez : [Wegovy comprimé oral en France](/collections/traitements-glp1/wegovy-comprimé-oral-pilule-france-date-ema/).
+Pour suivre les dernieres informations, consultez : [Wegovy comprimé oral en France](/collections/traitements-glp1/wegovy-comprime-oral-pilule-france-date-ema/).
 
 ---
 

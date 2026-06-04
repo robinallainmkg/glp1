@@ -102,7 +102,7 @@ La question de l'utilisation des probiotiques pour améliorer la tolérance ou p
 
 Les prébiotiques — fibres alimentaires qui nourrissent les bactéries intestinales bénéfiques — ont un rôle potentiel complémentaire. Des aliments riches en fibres fermentescibles (inuline, fructo-oligosaccharides) comme l'artichaut, la chicorée, l'ail, la banane verte ou les légumineuses favorisent la croissance d'*Akkermansia muciniphila* et de *Bifidobacterium*, deux bactéries dont l'enrichissement est associé à de meilleurs résultats métaboliques.
 
-Des [régimes adaptés aux GLP-1](/collections/regime-glp1/glp1-protéines/) incluant des fibres prébiotiques pourraient donc synergiser avec les effets du médicament sur le microbiote — une piste intéressante mais encore à confirmer par des études cliniques.
+Des [régimes adaptés aux GLP-1](/collections/regime-glp1/glp1-proteines/) incluant des fibres prébiotiques pourraient donc synergiser avec les effets du médicament sur le microbiote — une piste intéressante mais encore à confirmer par des études cliniques.
 
 ## Implications pratiques pour les patients
 
@@ -126,6 +126,9 @@ Les antibiotiques, qui perturbent profondément le microbiote, devraient n'être
 
 Pour les professionnels de santé, l'intérêt du microbiote dans la réponse aux GLP-1 ouvre des pistes de recherche translationnelle : pourrait-on prédire la réponse à un traitement GLP-1 à partir de la composition du microbiote d'un patient ? Pourrait-on améliorer la tolérance et l'efficacité du traitement par une modulation ciblée du microbiote avant ou pendant le traitement ? Ces questions font l'objet d'études en cours.
 
+
+> **À lire aussi** : [Ozempic Dépression et Apathie](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/)
+
 ## Les perspectives de recherche
 
 ### Des essais cliniques en cours
@@ -144,7 +147,7 @@ Le [lien entre GLP-1 et comportements alimentaires](/collections/regime-glp1/glp
 
 Le microbiote intestinal n'est plus un spectateur passif des traitements GLP-1. Les premières données suggèrent que les GLP-1 modifient la composition de la flore intestinale — avec des effets potentiellement bénéfiques sur les souches associées à un meilleur profil métabolique, et des perturbations transitoires qui pourraient contribuer aux effets indésirables digestifs en début de traitement.
 
-Pour les patients, maintenir une [alimentation](/collections/regime-glp1/régime-mounjaro-optimal/) riche en fibres et en aliments fermentés pendant le traitement reste une recommandation raisonnable et bien tolérée. Les probiotiques ne sont pas déconseillés, mais les données ne permettent pas encore de recommander une souche spécifique. Ce domaine de recherche est en pleine effervescence et les prochaines années devraient apporter des réponses plus définitives.
+Pour les patients, maintenir une [alimentation](/collections/regime-glp1/regime-mounjaro-optimal/) riche en fibres et en aliments fermentés pendant le traitement reste une recommandation raisonnable et bien tolérée. Les probiotiques ne sont pas déconseillés, mais les données ne permettent pas encore de recommander une souche spécifique. Ce domaine de recherche est en pleine effervescence et les prochaines années devraient apporter des réponses plus définitives.
 
 ---
 

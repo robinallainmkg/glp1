@@ -84,7 +84,7 @@ Par ailleurs, la modification de la composition corporelle change la façon dont
 
 Sous GLP-1, l'appétit est significativement réduit. Ce qui est une bonne chose pour la perte de poids peut devenir problématique si l'alimentation devient insuffisante en certains nutriments essentiels :
 
-**[Protéines](/collections/regime-glp1/glp1-protéines/)** : Indispensables pour la synthèse du collagène, composant structurel des tendons et des os. Une carence protéique ralentit la réparation des micro-traumatismes et fragilise les structures tendineuses.
+**[Protéines](/collections/regime-glp1/glp1-proteines/)** : Indispensables pour la synthèse du collagène, composant structurel des tendons et des os. Une carence protéique ralentit la réparation des micro-traumatismes et fragilise les structures tendineuses.
 
 **Vitamine D** : Essentielle pour l'absorption du calcium et la minéralisation osseuse. Sa carence est très fréquente en France, et encore plus chez les personnes en situation d'obésité.
 
@@ -132,7 +132,7 @@ Une progression raisonnable pourrait ressembler à ceci :
 
 ### Maintenir un apport protéique suffisant
 
-La recommandation générale pour les patients sous GLP-1 est de consommer au minimum **1,2 à 1,5 g de [protéines](/collections/regime-glp1/glp1-protéines/) par kilogramme de poids idéal par jour**. Cet apport est essentiel pour préserver la masse musculaire et soutenir la synthèse de collagène dans les tendons.
+La recommandation générale pour les patients sous GLP-1 est de consommer au minimum **1,2 à 1,5 g de [protéines](/collections/regime-glp1/glp1-proteines/) par kilogramme de poids idéal par jour**. Cet apport est essentiel pour préserver la masse musculaire et soutenir la synthèse de collagène dans les tendons.
 
 Concrètement, pour une personne visant un poids de 70 kg, cela représente 84 à 105 g de protéines par jour — à répartir sur tous les repas, en privilégiant des sources de haute qualité biologique (viandes maigres, poissons, œufs, légumineuses, produits laitiers).
 

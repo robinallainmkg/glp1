@@ -32,7 +32,7 @@ Les **injections pour maigrir** ont profondement transforme la prise en charge d
 7. [Effets secondaires des injections](#effets-secondaires-des-injections-pour-maigrir)
 8. [Prix et remboursement 2026](#prix-et-remboursement-des-injections-pour-maigrir-en-2026)
 9. [Les futures injections (2027-2028)](#les-futures-injections-2027-2028)
-10. [FAQ](#questions-fréquentes-sur-les-injections-pour-maigrir)
+10. [FAQ](#questions-frequentes-sur-les-injections-pour-maigrir)
 
 ---
 
@@ -189,9 +189,11 @@ La grande majorite des patients decrivent l'injection comme **indolore ou a pein
 
 ## Qui Peut Beneficier d'une Injection pour Maigrir ?
 
-Les injections pour maigrir ne sont pas destinees a toute personne souhaitant perdre quelques kilos. Elles s'inscrivent dans un cadre medical precis avec des criteres stricts. Pour connaitre les conditions détaillées de prescription, consultez notre guide sur [les conditions de prescription de Wegovy et Mounjaro](/collections/medecins-glp1-france/médecin-généraliste-prescription-wegovy-mounjaro-conditions/).
+Les injections pour maigrir ne sont pas destinees a toute personne souhaitant perdre quelques kilos. Elles s'inscrivent dans un cadre medical precis avec des criteres stricts. Pour connaitre les conditions détaillées de prescription, consultez notre guide sur [les conditions de prescription de Wegovy et Mounjaro](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/).
 
 ### Criteres d'eligibilite
+
+Pour savoir si un traitement injectable vous concerne, consultez notre page [suis-je éligible à un GLP-1 ?](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/)
 
 - **IMC supérieur ou égal a 30** (obésité) : les injections peuvent etre prescrites directement après evaluation medicale.
 - **IMC supérieur ou égal a 27** (surpoids) : la prescription est possible en presence d'au moins une **comorbidité liée au poids** : diabète de type 2, hypertension artérielle, dyslipidemie, syndrome d'apnee du sommeil, steatose hepatique non alcoolique, ou arthrose invalidante.
@@ -235,7 +237,7 @@ Comme tout médicament, les injections GLP-1 peuvent provoquer des effets second
 
 ### Effets secondaires fréquents (premiers jours a premieres semaines)
 
-- **Nausees** : L'effet secondaire le plus courant, rapporte par **20 a 45 % des patients selon la molécule et le dosage** en debut de traitement. Les nausées sont generalement legeres et disparaissent progressivement en 2 a 4 semaines a mesure que l'organisme s'adapte.
+- **Nausees** : L'effet secondaire le plus courant, rapporte par **20 a 45 % des patients selon la molécule et le dosage** en debut de traitement. Les nausées sont generalement legeres et disparaissent progressivement en 2 a 4 semaines a mesure que l'organisme s'adapte. Pour des solutions concretes, lisez notre [guide pratique nausées et vomissements sous GLP-1](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/).
 - **Diarrhee ou constipation** : Des troubles du transit sont fréquents au debut du traitement. Ils se normalisent dans la majorite des cas.
 - **Douleurs abdominales** : Des crampes ou un inconfort abdominal peuvent survenir, en particulier lors des augmentations de dose.
 - **Maux de tete** et **fatigue** : Des symptomes generaux transitoires sont parfois rapportes.
@@ -265,12 +267,12 @@ Le cout des injections pour maigrir constitue un facteur important dans la déci
 
 En avril 2026, **aucune injection pour maigrir n'est integralement remboursee** par la Sécurité sociale dans l'indication de l'obésité :
 
-- **Ozempic** : Rembourse a 30% **uniquement pour le diabète de type 2**. La prescription hors AMM pour la perte de poids n'ouvre aucun droit a remboursement.
+- **Ozempic** : Rembourse a 65% en bithérapie metformine **uniquement pour le diabète de type 2**. La prescription hors AMM pour la perte de poids n'ouvre aucun droit a remboursement.
 - **Wegovy, Mounjaro, Saxenda** : Non rembourses pour le traitement de l'obésité.
 
 ### Remboursement prevu au second semestre 2026
 
-La Haute Autorite de Sante (HAS) a emis un avis favorable au remboursement de **Wegovy et Mounjaro pour le traitement de l'obésité**. Les negociations tarifaires avec le Comite Economique des Produits de Sante (CEPS) sont en cours. Le remboursement est attendu au **second semestre 2026**, ce qui constituera une avancee majeure pour l'accessibilite de ces traitements. Pour suivre l'avancement de ce processus, consultez notre article sur les [conditions de remboursement de Mounjaro](/collections/glp1-cout/mounjaro-remboursement-sécurité-sociale-conditions-2026/).
+La Haute Autorite de Sante (HAS) a emis un avis favorable au remboursement de **Wegovy et Mounjaro pour le traitement de l'obésité**. Les negociations tarifaires avec le Comite Economique des Produits de Sante (CEPS) sont en cours. Le remboursement est attendu au **second semestre 2026**, ce qui constituera une avancee majeure pour l'accessibilite de ces traitements. Pour suivre l'avancement de ce processus, consultez notre article sur les [conditions de remboursement de Mounjaro](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).
 
 ### Les options pour reduire le cout
 
@@ -286,7 +288,7 @@ La recherche sur les traitements injectables de l'obésité progresse rapidement
 
 ### CagriSema (semaglutide + cagrilintide)
 
-Developpe par Novo Nordisk, **[CagriSema](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-résultats/)** combine le semaglutide (l'ingredient actif de Wegovy) avec la cagrilintide, un analogue de l'amyline. Les résultats de l'essai clinique de phase 3 sont prometteurs :
+Developpe par Novo Nordisk, **[CagriSema](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-resultats/)** combine le semaglutide (l'ingredient actif de Wegovy) avec la cagrilintide, un analogue de l'amyline. Les résultats de l'essai clinique de phase 3 sont prometteurs :
 
 - **Perte de poids** : -20.4 % en intention de traiter (22.7 % chez les patients restes sous traitement)
 - **Injection** : Une fois par semaine
@@ -302,7 +304,7 @@ Eli Lilly developpe le **[retatrutide](/collections/recherche-glp1/retatrutide-t
 
 ### Orforglipron (GLP-1 oral)
 
-Une avancee majeure se profile également avec le developpement de **GLP-1 oraux** (comprimes) qui pourraient a terme remplacer les injections. L'orforglipron, developpe par Eli Lilly, est en phase 3 d'essais cliniques et montre des résultats prometteurs comparables aux formes injectables. Pour en savoir plus sur les alternatives orales, consultez notre article sur le [semaglutide oral](/collections/traitements-glp1/semaglutide-oral-comprimé-ozempic-france/).
+Une avancee majeure se profile également avec le developpement de **GLP-1 oraux** (comprimes) qui pourraient a terme remplacer les injections. L'orforglipron, developpe par Eli Lilly, est en phase 3 d'essais cliniques et montre des résultats prometteurs comparables aux formes injectables. Pour en savoir plus sur les alternatives orales, consultez notre article sur le [semaglutide oral](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/).
 
 ---
 
@@ -314,7 +316,7 @@ Les injections GLP-1 disposent d'un **profil de sécurité bien etabli**, valide
 
 ### Combien de kilos peut-on perdre avec une injection pour maigrir ?
 
-La perte de poids varie selon le traitement et le profil du patient. En moyenne : **Saxenda** permet de perdre 8 a 10% du poids corporel, **Ozempic** 5 a 10 %, **Wegovy** 15 a 17%, et **Mounjaro** 16 a 22.5 %. Pour une personne de 100 kg, cela représente une perte de 5 a 22.5 kg selon le traitement. Les résultats sont meilleurs lorsque le traitement est associe a une alimentation equilibree et a une activite physique reguliere. Decouvrez des [résultats reels avant/après](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/) de patients sous GLP-1.
+La perte de poids varie selon le traitement et le profil du patient. En moyenne : **Saxenda** permet de perdre 8 a 10% du poids corporel, **Ozempic** 5 a 10 %, **Wegovy** 15 a 17%, et **Mounjaro** 16 a 22.5 %. Pour une personne de 100 kg, cela représente une perte de 5 a 22.5 kg selon le traitement. Les résultats sont meilleurs lorsque le traitement est associe a une alimentation equilibree et a une activite physique reguliere. Decouvrez des [résultats reels avant/après](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) de patients sous GLP-1.
 
 ### Faut-il une ordonnance pour une injection pour maigrir ?
 

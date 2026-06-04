@@ -8,7 +8,8 @@ image: "/images/thumbnails/wegovy.jpg"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["wegovy", "glp-1", "obésité", "perte de poids", "traitement", "injection"]
-date: "2025-08-28"
+date: "2026-05-29"
+updatedAt: "2026-05-29"
 pubDate: "2025-08-28"
 mainKeyword: "wegovy guide complet france semaglutide"
 ---
@@ -27,7 +28,7 @@ mainKeyword: "wegovy guide complet france semaglutide"
 ## Sommaire
 1. [Qu'est-ce que Wegovy ?](#quest-ce-quewegovy)
 2. [Comment fonctionne Wegovy ?](#comment-fonctionne-wegovy)
-3. [Wegovy pour l'obésité](#wegovy-obésité)
+3. [Wegovy pour l'obésité](#wegovy-obesite)
 4. [Posologie et administration](#posologie-wegovy)
 5. [Comment commencer le traitement Wegovy ?](#comment-commencer-le-traitement-wegovy)
 6. [Alternatives à Wegovy](#alternatives-wegovy)
@@ -72,10 +73,10 @@ Dans les études cliniques STEP, Wegovy a démontré des résultats exceptionnel
 - Dose maximale : 2,4 mg/semaine
 - Résultat : -14,9% de perte de poids vs -2,4% placebo
 
-### Dans l'étude STEP 3
-- 611 patients avec [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)
+### Dans l'étude STEP 2
+- 1 210 patients avec [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)
 - Durée : 68 semaines
-- Résultat : -16,0% de perte de poids vs -5,7% placebo
+- Résultat : -10% de perte de poids vs -3% placebo (la perte de poids est moindre chez les patients diabétiques)
 
 ## Posologie et administration
 
@@ -86,7 +87,7 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'[e
 **Semaine 5-8** : 0,5 mg  
 **Semaine 9-12** : 1 mg  
 **Semaine 13-16** : 1,7 mg  
-**Semaine 17+** : 2,4 mg (dose maximale) — une dose encore plus élevée est à l'étude avec le programme [Wegovy haute dose 7,2 mg (STEP-UP)](/collections/recherche-glp1/wegovy-7-2-mg-haute-dose-step-up-résultats/)
+**Semaine 17+** : 2,4 mg (dose maximale) — une dose encore plus élevée est à l'étude avec le programme [Wegovy haute dose 7,2 mg (STEP-UP)](/collections/recherche-glp1/wegovy-7-2-mg-haute-dose-step-up-resultats/)
 
 ### Technique d'injection
 - Injection sous-cutanée (abdomen, cuisse ou bras supérieur)
@@ -95,6 +96,8 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'[e
 - Formation rapide (quelques minutes)
 
 ## Comment commencer le traitement Wegovy ?
+
+Avant de démarrer, vérifiez si vous remplissez les [critères d'éligibilité au traitement GLP-1](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/) et consultez notre guide pour [commencer un traitement GLP-1 en France](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/).
 
 ### Étape 1 : Consultation initiale et évaluation
 **Bilan préalable obligatoire** :
@@ -139,7 +142,7 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'[e
 - [**Saxenda**](/collections/traitements-glp1/guide-complet-saxenda/) (liraglutide 3 mg) : injection quotidienne, non remboursé (240-300 €/mois)
 
 ### GLP-1 remboursés pour le diabète de type 2 uniquement
-- **Ozempic** (semaglutide 2 mg) : injection hebdomadaire, remboursé à 30 % pour le DT2 (~76,58 €/stylo)
+- **Ozempic** (semaglutide 1 mg max) : injection hebdomadaire, remboursé à 65 % en bithérapie metformine pour le DT2 (~76,58 €/stylo)
 - **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** (dulaglutide) : injection hebdomadaire, remboursé à 65 % pour le DT2 (~81 €/mois)
 
 ### Traitements alternatifs

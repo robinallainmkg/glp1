@@ -19,11 +19,11 @@ mainKeyword: "effets secondaires mounjaro tirzepatide"
 
 ## Effets Secondaires Mounjaro à Long Terme : Guide Complet 2026
 
-Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (Mounjaro) provoque chez **80 à 90% des patients** des troubles digestifs (nausées, vomissements, diarrhée, constipation), généralement transitoires les 8 premières semaines. À **long terme** (au-delà de 6-12 mois), les principaux risques surveillés sont la **pancréatite aiguë** (rare, 0,1-0,2%), la **gastroparésie** persistante, des **troubles thyroïdiens** (cancer médullaire chez l'animal, contre-indication MEN-2) et une **fonte musculaire** liée à la perte de poids rapide. Voici la liste complète des **effets indésirables Mounjaro** classés par fréquence et gravité, avec les solutions concrètes pour les gérer. Lire aussi notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) et le [comparatif effets secondaires GLP-1](/collections/effets-secondaires-glp1/).
+Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (Mounjaro) provoque chez **45 à 55% des patients** des troubles digestifs (nausées, vomissements, diarrhée, constipation), généralement transitoires les 8 premières semaines. À **long terme** (au-delà de 6-12 mois), les principaux risques surveillés sont la **pancréatite aiguë** (rare, 0,1-0,2%), la **gastroparésie** persistante, des **troubles thyroïdiens** (cancer médullaire chez l'animal, contre-indication MEN-2) et une **fonte musculaire** liée à la perte de poids rapide. Voici la liste complète des **effets indésirables Mounjaro** classés par fréquence et gravité, avec les solutions concrètes pour les gérer. Lire aussi notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) et le [comparatif effets secondaires GLP-1](/collections/effets-secondaires-glp1/).
 
 ## ⚠️ Effets Secondaires Fréquents Mounjaro
 
-### Troubles digestifs (80-90% des patients)
+### Troubles digestifs (45-55% des patients)
 
 **Nausées et vomissements**
 - **Fréquence** : Très fréquent (>10%)
@@ -133,11 +133,11 @@ Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (
 **Pendant le traitement**
 - **[Dose progressive](/collections/traitements-glp1/mounjaro-dosage/)** : Commencer à 2,5 mg/semaine
 - **Surveillance rapprochée** : Premiers jours/semaines
-- **[Alimentation adaptée](/collections/regime-glp1/régime-mounjaro-optimal/)** : Repas légers, fractionnés
+- **[Alimentation adaptée](/collections/regime-glp1/regime-mounjaro-optimal/)** : Repas légers, fractionnés
 
 ### Gestion des effets secondaires courants
 
-**Pour les nausées**
+**Pour les nausées** (consultez notre [guide pratique nausées et vomissements sous GLP-1](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/) pour des conseils détaillés)
 - Prendre l'injection le soir
 - Manger des aliments froids ou à température ambiante
 - Éviter les odeurs fortes de cuisson
@@ -184,7 +184,7 @@ Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (
 - **Polymédication** : Interactions possibles
 
 ### Précautions particulières
-- **Grossesse** : Contre-indiqué (arrêter le traitement au moins 2 mois avant une grossesse planifiée)
+- **Grossesse** : Contre-indiqué (arrêter le traitement au moins 1 mois avant une grossesse planifiée, conformément au RCP EMA)
 - **Allaitement** : Déconseillé
 - **Enfants** : Non étudié chez <18 ans
 - **Chirurgie** : Arrêt temporaire si nécessaire

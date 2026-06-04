@@ -34,11 +34,11 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)
-2. [Contexte médical](#contexte-médical)
-3. [Analyse détaillée](#analyse-détaillée)
+2. [Contexte médical](#contexte-medical)
+3. [Analyse détaillée](#analyse-detaillee)
 4. [Recommandations pratiques](#recommandations-pratiques)
-5. [Questions fréquentes](#questions-fréquentes)
-6. [Ressources complémentaires](#ressources-complémentaires)
+5. [Questions fréquentes](#questions-frequentes)
+6. [Ressources complémentaires](#ressources-complementaires)
 
 ---
 

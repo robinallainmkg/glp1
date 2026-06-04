@@ -41,7 +41,7 @@ Les **agonistes du récepteur GLP-1** (Glucagon-Like Peptide-1) représentent un
 | **Victoza** | Diabète T2 | -3% à -6% | ~60,26€ | Remboursé 65% (DT2) |
 | **Rybelsus** | Diabète T2 | -4% à -7% | 80-110€ | NON remboursé |
 
-*Prix indicatifs mars 2026. Ozempic est remboursé à 30% (SMR modéré, DT2 uniquement) ; Trulicity et Victoza sont remboursés à 65% (DT2 uniquement). Rybelsus n'est pas remboursé (avis HAS défavorable). Les traitements indiqués pour l'obésité (Wegovy, Saxenda, Mounjaro) restent entièrement à la charge du patient. Consultation médicale requise.*
+*Prix indicatifs mars 2026. Ozempic, Trulicity et Victoza sont remboursés à 65% en bithérapie metformine (DT2 uniquement, 100% en ALD). Rybelsus n'est pas remboursé (avis HAS défavorable). Les traitements indiqués pour l'obésité (Wegovy, Saxenda, Mounjaro) restent entièrement à la charge du patient. Consultation médicale requise.*
 
 ## 🏥 Nos Services Experts
 

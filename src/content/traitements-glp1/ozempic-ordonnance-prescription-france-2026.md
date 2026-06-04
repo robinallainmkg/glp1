@@ -23,10 +23,10 @@ Ce guide détaillé les etapes pour obtenir une ordonnance Ozempic en 2026, les 
 
 ## Sommaire
 
-1. [Ozempic nécessité une ordonnance en France](#ozempic-nécessité-une-ordonnance-en-france)
+1. [Ozempic nécessité une ordonnance en France](#ozempic-necessite-une-ordonnance-en-france)
 2. [Nouvelles regles ANSM depuis juin 2025](#nouvelles-regles-ansm-depuis-juin-2025)
 3. [Comment obtenir une ordonnance Ozempic : etape par etape](#comment-obtenir-une-ordonnance-ozempic-etape-par-etape)
-4. [Téléconsultation : obtenir une ordonnance Ozempic en ligne](#téléconsultation-obtenir-une-ordonnance-ozempic-en-ligne)
+4. [Téléconsultation : obtenir une ordonnance Ozempic en ligne](#teleconsultation-obtenir-une-ordonnance-ozempic-en-ligne)
 5. [Prix et remboursement Ozempic avec ordonnance](#prix-et-remboursement-ozempic-avec-ordonnance)
 6. [Ozempic sans ordonnance : pourquoi c'est impossible et dangereux](#ozempic-sans-ordonnance-pourquoi-cest-impossible-et-dangereux)
 7. [Ozempic vs Wegovy : quelle difference pour la prescription ?](#ozempic-vs-wegovy-quelle-difference-pour-la-prescription)
@@ -53,11 +53,11 @@ Jusqu'en 2025, la prescription d'Ozempic et des autres agonistes GLP-1 pour la p
 
 **Depuis juin 2025, l'ANSM a assoupli les regles de prescription.** Desormais, tout médecin peut prescrire un traitement GLP-1, y compris les médecins généralistes, sous certaines conditions :
 
-- **Criteres d'eligibilite du patient** : IMC supérieur ou égal a 30 kg/m2, ou IMC supérieur ou égal a 27 kg/m2 avec au moins une comorbidité liée au poids (diabète de type 2, hypertension, apnee du sommeil, dyslipidemia).
+- **Criteres d'eligibilite du patient** : IMC supérieur ou égal a 30 kg/m2, ou IMC supérieur ou égal a 27 kg/m2 avec au moins une comorbidité liée au poids (diabète de type 2, hypertension, apnee du sommeil, dyslipidemia). Consultez notre page [êtes-vous éligible à un GLP-1 ?](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/) pour une évaluation détaillée.
 - **Suivi regulier recommandé** : un suivi regulier est recommandé pendant la premiere annee de traitement, idealement tous les 3 mois.
 - **Prescription initiale limitee** : la premiere ordonnance est valable 3 mois maximum, renouvelable après reevaluation clinique.
 
-Pour en savoir plus sur ces nouvelles regles, consultez notre article dedie sur les [conditions de prescription par les généralistes](/collections/medecins-glp1-france/médecin-généraliste-prescription-wegovy-mounjaro-conditions/).
+Pour en savoir plus sur ces nouvelles regles, consultez notre article dedie sur les [conditions de prescription par les généralistes](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/).
 
 **Important** : pour le diabète de type 2, Ozempic pouvait deja etre prescrit par tout médecin, y compris généraliste, avant cette reforme. Les nouvelles regles concernent spécifiquement l'elargissement de la prescription pour l'indication perte de poids/obésité.
 

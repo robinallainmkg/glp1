@@ -10,6 +10,7 @@ collection: "alternatives-glp1"
 thumbnail: "/images/thumbnails/alternatives-bio-glp1-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Alternatives Bio GLP-1"
 featured: false
+published: false
 priority: 5
 schema: "Article"
 mainKeyword: "alternatives bio GLP-1"

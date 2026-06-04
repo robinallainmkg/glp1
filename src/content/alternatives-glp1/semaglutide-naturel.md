@@ -1,5 +1,6 @@
 ---
 title: "Sémaglutide Naturel Alternative au GLP-1 : Guide Complet"
+published: false
 description: "Sémaglutide naturel alternative : plantes, compléments alimentaires et approches holistiques pour stimuler le GLP-1 et gérer la glycémie sans ordonnance."
 pubDate: 2025-08-20
 date: 2025-08-20

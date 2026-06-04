@@ -168,6 +168,7 @@ import { supabaseConfig } from '../../lib/supabase';
     .ap-status-badge.idle { background: #1e293b; color: #475569; }
     .ap-status-badge.running { background: #052e16; color: #22c55e; animation: pulse-glow 2s infinite; }
     .ap-status-badge.error { background: #450a0a; color: #f87171; }
+    .ap-status-badge.done { background: #052e16; color: #4ade80; }
 
     .ap-desc {
       font-size: 0.65rem;
@@ -196,6 +197,39 @@ import { supabaseConfig } from '../../lib/supabase';
       color: #475569;
       text-transform: uppercase;
       letter-spacing: 0.06em;
+    }
+
+    /* Pipeline phases */
+    .ap-phases {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      position: relative;
+      z-index: 1;
+    }
+    .ap-phase {
+      flex: 1;
+      padding: 0.35rem 0.5rem;
+      border-radius: 6px;
+      background: #1e293b;
+      border: 1px solid #1e293b;
+      text-align: center;
+      font-size: 0.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #374151;
+      transition: all 0.3s;
+    }
+    .ap-phase.completed { background: #052e16; border-color: #22c55e33; color: #4ade80; }
+    .ap-phase.active { background: #0f2a17; border-color: #22c55e66; color: #22c55e; animation: pulse-glow 2s infinite; }
+    .ap-phase.error { background: #450a0a; border-color: #f8717133; color: #f87171; }
+    .ap-phase-connector {
+      display: flex;
+      align-items: center;
+      color: #1e293b;
+      font-size: 0.6rem;
+      flex-shrink: 0;
     }
 
     /* Budget meter */
@@ -232,6 +266,64 @@ import { supabaseConfig } from '../../lib/supabase';
       font-weight: 700;
       color: #94a3b8;
     }
+
+    /* ==================== SITE VITALS ==================== */
+    .vitals-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .vital-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      transition: border-color 0.2s;
+    }
+    .vital-card:hover { border-color: #334155; }
+    .vital-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .vital-label {
+      font-size: 0.52rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #475569;
+      font-weight: 600;
+    }
+    .vital-icon {
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+    .vital-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      line-height: 1;
+    }
+    .vital-detail {
+      font-size: 0.52rem;
+      color: #64748b;
+    }
+    .vital-trend {
+      font-size: 0.5rem;
+      font-weight: 700;
+      padding: 0.08rem 0.3rem;
+      border-radius: 3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.15rem;
+      width: fit-content;
+    }
+    .vital-trend.up { background: #052e16; color: #4ade80; }
+    .vital-trend.down { background: #450a0a; color: #f87171; }
+    .vital-trend.neutral { background: #1e293b; color: #64748b; }
 
     /* ==================== AGENT ARENA ==================== */
     .arena-section {
@@ -530,6 +622,12 @@ import { supabaseConfig } from '../../lib/supabase';
       padding: 0.08rem 0.3rem;
       border-radius: 3px;
     }
+    .arena-run-result {
+      font-size: 0.48rem;
+      color: #475569;
+      margin-top: 0.25rem;
+      line-height: 1.4;
+    }
 
     /* ==================== KPI ROW ==================== */
     .kpi-row {
@@ -643,6 +741,7 @@ import { supabaseConfig } from '../../lib/supabase';
     }
     .console-tab .tab-dot.running { background: #22c55e; animation: pulse-glow 1.5s infinite; }
     .console-tab .tab-dot.stopped { background: #475569; }
+    .console-tab .tab-dot.error { background: #f87171; }
     .console-tab .tab-lines {
       font-size: 0.45rem;
       color: #374151;
@@ -705,119 +804,99 @@ import { supabaseConfig } from '../../lib/supabase';
     /* Filter: hide tool lines in essential mode */
     .console-body.filter-essential .console-line.level-tool { display: none; }
     .console-body.filter-essential .console-line.level-info { display: none; }
-    /* Filter: show all in detail mode (default) */
-    /* Filter: hide nothing in raw mode */
-    /* Console filter bar */
-    .console-filters {
-      display: flex;
-      gap: 0.2rem;
-      flex-shrink: 0;
-    }
-    .console-filter-btn {
-      padding: 0.12rem 0.4rem;
-      border-radius: 3px;
-      font-size: 0.5rem;
-      font-weight: 600;
-      cursor: pointer;
-      border: 1px solid #1e293b;
-      background: transparent;
-      color: #475569;
-      font-family: 'JetBrains Mono', monospace;
-      transition: all 0.15s;
-    }
-    .console-filter-btn:hover { border-color: #334155; color: #94a3b8; }
-    .console-filter-btn.active { background: #1e293b; color: #e2e8f0; border-color: #334155; }
 
-    /* ==================== LOG FEED ==================== */
-    .log-section {
+    /* ==================== ACTIVITY FEED ==================== */
+    .activity-section {
       background: #111827;
       border: 1px solid #1e293b;
       border-radius: 10px;
       overflow: hidden;
     }
-    .log-header {
+    .activity-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0.6rem 1rem;
       border-bottom: 1px solid #1e293b;
     }
-    .log-title {
+    .activity-title {
       font-size: 0.68rem;
       font-weight: 600;
       color: #475569;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
-    .log-live {
-      font-size: 0.6rem;
-      color: #22c55e;
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
+    .activity-refresh {
+      font-size: 0.55rem;
+      color: #374151;
+      cursor: pointer;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid #1e293b;
+      background: transparent;
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.15s;
     }
-    .log-live .live-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #22c55e;
-      animation: pulse-glow 1.5s infinite;
-    }
-    .log-feed {
-      max-height: 260px;
+    .activity-refresh:hover { border-color: #334155; color: #94a3b8; }
+    .activity-feed {
+      max-height: 360px;
       overflow-y: auto;
       padding: 0.25rem 0;
       scrollbar-width: thin;
       scrollbar-color: #1e293b transparent;
     }
-    .log-feed::-webkit-scrollbar { width: 6px; }
-    .log-feed::-webkit-scrollbar-track { background: transparent; }
-    .log-feed::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
-    .log-entry {
+    .activity-feed::-webkit-scrollbar { width: 6px; }
+    .activity-feed::-webkit-scrollbar-track { background: transparent; }
+    .activity-feed::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    .activity-entry {
       display: flex;
       align-items: flex-start;
       gap: 0.6rem;
-      padding: 0.3rem 1rem;
-      font-size: 0.65rem;
+      padding: 0.4rem 1rem;
+      font-size: 0.62rem;
       transition: background 0.1s;
       animation: log-appear 0.3s ease-out;
     }
-    .log-entry:hover { background: #1a2332; }
+    .activity-entry:hover { background: #1a2332; }
     @keyframes log-appear {
       from { opacity: 0; transform: translateY(-4px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .log-time { color: #374151; font-variant-numeric: tabular-nums; flex-shrink: 0; min-width: 58px; }
-    .log-agent-tag {
-      padding: 0.1rem 0.3rem;
+    .activity-time {
+      color: #374151;
+      font-variant-numeric: tabular-nums;
+      flex-shrink: 0;
+      min-width: 58px;
+      font-size: 0.55rem;
+    }
+    .activity-icon {
+      flex-shrink: 0;
+      width: 20px;
+      text-align: center;
+      font-size: 0.7rem;
+    }
+    .activity-tag {
+      padding: 0.1rem 0.35rem;
       border-radius: 3px;
-      font-size: 0.58rem;
+      font-size: 0.5rem;
       font-weight: 700;
       text-transform: uppercase;
       flex-shrink: 0;
-      min-width: 64px;
+      min-width: 50px;
       text-align: center;
     }
-    .tag-seo-audit { background: #1e3a5f; color: #38bdf8; }
-    .tag-analytics { background: #1e3a1e; color: #4ade80; }
-    .tag-fact-check { background: #3a2e1e; color: #fbbf24; }
-    .tag-opportunities { background: #2e1e3a; color: #c084fc; }
-    .tag-editorial { background: #1e2e3a; color: #67e8f9; }
-    .log-message { color: #94a3b8; flex: 1; }
-    .log-status {
-      font-size: 0.58rem;
-      padding: 0.1rem 0.3rem;
-      border-radius: 3px;
-      font-weight: 600;
-      flex-shrink: 0;
-    }
-    .ls-success { background: #052e16; color: #4ade80; }
-    .ls-error { background: #450a0a; color: #f87171; }
-    .log-empty {
+    .tag-agent { background: #1e3a5f; color: #38bdf8; }
+    .tag-ticket { background: #1e2e3a; color: #67e8f9; }
+    .tag-coach { background: #2e1e3a; color: #c084fc; }
+    .tag-affiliate { background: #3a2e1e; color: #fbbf24; }
+    .tag-contact { background: #1e3a1e; color: #4ade80; }
+    .tag-deploy { background: #052e16; color: #86efac; }
+    .activity-message { color: #94a3b8; flex: 1; }
+    .activity-empty {
       text-align: center;
       padding: 1.5rem;
       color: #374151;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
     }
 
     /* Server warning */
@@ -838,9 +917,11 @@ import { supabaseConfig } from '../../lib/supabase';
       .mc-main { padding: 1rem; }
       .arena-grid { grid-template-columns: repeat(2, 1fr); }
       .ap-top { flex-direction: column; text-align: center; }
-      .ap-stats { justify-content: center; }
+      .ap-stats { justify-content: center; flex-wrap: wrap; }
       .ap-budget { align-items: center; }
+      .ap-phases { flex-wrap: wrap; }
       .kpi-row { grid-template-columns: repeat(2, 1fr); }
+      .vitals-row { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -864,7 +945,7 @@ import { supabaseConfig } from '../../lib/supabase';
       <div class="ap-top">
         <div class="ap-btn-area">
           <button class="ap-big-btn" id="apBigBtn" onclick="launchRoutine()">&#9654;</button>
-          <span class="ap-btn-label" id="apBtnLabel">Lancer Routine</span>
+          <span class="ap-btn-label" id="apBtnLabel">Lancer Pipeline</span>
         </div>
         <div class="ap-info">
           <div class="ap-title-row">
@@ -872,9 +953,8 @@ import { supabaseConfig } from '../../lib/supabase';
             <span class="ap-status-badge idle" id="apBadge">IDLE</span>
           </div>
           <div class="ap-desc">
-            UN cycle complet : sync analytics &rarr; fact-check + seo-audit + opportunities + maillage &rarr; editorial (corrections) &rarr; validator (deploy).
-            <br><code style="font-size:0.7rem;color:#64748b">node scripts/routine.mjs</code>
-            <button onclick="showRoutineInfo()" style="margin-left:0.5rem;background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 8px;border-radius:4px;cursor:pointer;font-size:0.7rem;font-family:inherit">+ d'infos</button>
+            Cycle complet : sync &rarr; audit + fact-check + opps + maillage &rarr; editorial &rarr; validator (deploy).
+            <button onclick="showRoutineInfo()" style="margin-left:0.5rem;background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 8px;border-radius:4px;cursor:pointer;font-size:0.7rem;font-family:inherit">?</button>
           </div>
           <div class="ap-stats" id="apStats">
             <div class="ap-stat">
@@ -890,17 +970,74 @@ import { supabaseConfig } from '../../lib/supabase';
               <span class="ap-stat-label">Dernier run</span>
             </div>
             <div class="ap-stat">
-              <span class="ap-stat-val" id="apArticles">166</span>
+              <span class="ap-stat-val" id="apLastDuration">--</span>
+              <span class="ap-stat-label">Duree</span>
+            </div>
+            <div class="ap-stat">
+              <span class="ap-stat-val" id="apArticles">--</span>
               <span class="ap-stat-label">Articles</span>
             </div>
           </div>
         </div>
+        <div class="ap-budget">
+          <span class="ap-budget-label">TOKENS</span>
+          <div class="ap-budget-bar"><div class="ap-budget-fill" id="apBudgetFill" style="width:0%"></div></div>
+          <span class="ap-budget-val" id="apBudgetVal">--</span>
+        </div>
+      </div>
+      <!-- Pipeline phase indicators -->
+      <div class="ap-phases" id="apPhases">
+        <div class="ap-phase" data-phase="sync">SYNC</div>
+        <span class="ap-phase-connector">&rarr;</span>
+        <div class="ap-phase" data-phase="generate">GENERATE</div>
+        <span class="ap-phase-connector">&rarr;</span>
+        <div class="ap-phase" data-phase="edit">EDIT</div>
+        <span class="ap-phase-connector">&rarr;</span>
+        <div class="ap-phase" data-phase="validate">VALIDATE</div>
+        <span class="ap-phase-connector">&rarr;</span>
+        <div class="ap-phase" data-phase="crawl">CRAWL</div>
       </div>
     </div>
 
     <!-- Server Warning -->
     <div class="server-warning" id="serverWarning">
       &#9888; Agent Server hors ligne &mdash; lance <code style="background:#0a0e17;padding:0.1rem 0.3rem;border-radius:3px">node scripts/agent-server.mjs</code>
+    </div>
+
+    <!-- Site Vitals -->
+    <div class="vitals-row" id="vitalsRow">
+      <div class="vital-card">
+        <div class="vital-header">
+          <span class="vital-label">Coach IA</span>
+          <span class="vital-icon">&#128172;</span>
+        </div>
+        <span class="vital-value" id="vCoachToday">--</span>
+        <span class="vital-detail" id="vCoachDetail">chargement...</span>
+      </div>
+      <div class="vital-card">
+        <div class="vital-header">
+          <span class="vital-label">Clics Affilies</span>
+          <span class="vital-icon">&#128279;</span>
+        </div>
+        <span class="vital-value" id="vClicksToday">--</span>
+        <span class="vital-detail" id="vClicksDetail">chargement...</span>
+      </div>
+      <div class="vital-card">
+        <div class="vital-header">
+          <span class="vital-label">Contacts / Leads</span>
+          <span class="vital-icon">&#128236;</span>
+        </div>
+        <span class="vital-value" id="vLeadsWeek">--</span>
+        <span class="vital-detail" id="vLeadsDetail">chargement...</span>
+      </div>
+      <div class="vital-card">
+        <div class="vital-header">
+          <span class="vital-label">Dernier Deploy</span>
+          <span class="vital-icon">&#128640;</span>
+        </div>
+        <span class="vital-value" id="vDeployTime">--</span>
+        <span class="vital-detail" id="vDeployDetail">chargement...</span>
+      </div>
     </div>
 
     <!-- Agent Arena -->
@@ -972,14 +1109,14 @@ import { supabaseConfig } from '../../lib/supabase';
       </div>
     </div>
 
-    <!-- Live log feed -->
-    <div class="log-section">
-      <div class="log-header">
-        <span class="log-title">Live Feed</span>
-        <span class="log-live"><span class="live-dot"></span> Realtime</span>
+    <!-- Recent Activity feed -->
+    <div class="activity-section">
+      <div class="activity-header">
+        <span class="activity-title">Activite Recente</span>
+        <button class="activity-refresh" onclick="loadActivity()">Rafraichir</button>
       </div>
-      <div class="log-feed" id="logFeed">
-        <div class="log-empty">En attente de logs...</div>
+      <div class="activity-feed" id="activityFeed">
+        <div class="activity-empty">Chargement...</div>
       </div>
     </div>
   </div>
@@ -1000,16 +1137,6 @@ import { supabaseConfig } from '../../lib/supabase';
     { key: 'validator', label: 'Validator', color: '#86efac', icon: '&#128737;', desc: 'Build, qualite' },
     { key: 'ui-designer', label: 'UI Designer', color: '#ec4899', icon: '&#127912;', desc: 'Design, UX' },
   ];
-
-  const TAG_CLASSES = {
-    'seo-audit': 'tag-seo-audit',
-    'analytics': 'tag-analytics',
-    'fact-check': 'tag-fact-check',
-    'opportunities': 'tag-opportunities',
-    'editorial': 'tag-editorial',
-    'validator': 'tag-seo-audit',
-    'internal-links': 'tag-analytics',
-  };
 
   function escapeHtml(str) {
     if (!str) return '';
@@ -1036,6 +1163,11 @@ import { supabaseConfig } from '../../lib/supabase';
   function formatTime(dateStr) {
     if (!dateStr) return '--:--';
     return new Date(dateStr).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  }
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '--';
+    return new Date(dateStr).toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
   }
 
   // ========== SUPABASE ==========
@@ -1128,13 +1260,11 @@ import { supabaseConfig } from '../../lib/supabase';
 
   // ========== ROUTINE PIPELINE ==========
   let routineRunning = false;
-  let autopilotRunning = false; // compat
+  let autopilotRunning = false;
 
   async function launchRoutine() {
     if (routineRunning) { alert('Pipeline deja en cours...'); return; }
     if (!serverOnline) { alert('Agent Server non connecte !\n\nLance: node scripts/agent-server.mjs'); return; }
-
-    // Fire and forget — the server orchestrates everything in background
     try {
       const r = await fetch(`${AGENT_SERVER}/pipeline`, { method: 'POST' });
       const data = await r.json();
@@ -1149,19 +1279,20 @@ import { supabaseConfig } from '../../lib/supabase';
 
   function showRoutineInfo() {
     alert(
-      'ROUTINE GLP-1 — Pipeline complet en 4 phases\n\n' +
+      'ROUTINE GLP-1 — Pipeline complet en 5 phases\n\n' +
+      '0. SYNC : Sync analytics GA4/GSC vers Supabase\n\n' +
       '1. GENERATE : Lance fact-check + seo-audit + opportunities + internal-links\n' +
-      '   → Cree des tickets de correction dans Supabase\n\n' +
+      '   -> Cree des tickets de correction dans Supabase\n\n' +
       '2. EDIT : Lance 4 instances editorial en parallele\n' +
-      '   → Applique les corrections dans les fichiers markdown\n\n' +
+      '   -> Applique les corrections dans les fichiers markdown\n\n' +
       '3. VALIDATE : Lance le validator\n' +
-      '   → Build check, si OK push main → deploy FTP auto\n\n' +
-      'Equivalent terminal : node scripts/routine.mjs\n' +
-      '(inclut aussi la sync analytics GA4/GSC)\n\n' +
-      'Les agents ecrivent dans Supabase (correction_tickets, fact_check_results, etc.)\n' +
-      'Seul l\'editorial modifie les fichiers. Seul le validator deploie.'
+      '   -> Build check, si OK push main -> deploy FTP auto\n\n' +
+      '4. CRAWL : Verification post-deploy du site live\n\n' +
+      'Equivalent : node scripts/agent-server.mjs + curl POST /pipeline'
     );
   }
+
+  const PHASE_ORDER = ['sync', 'generate', 'edit', 'validate', 'crawl'];
 
   function updateAutopilotUI() {
     const hero = document.getElementById('autopilotHero');
@@ -1169,8 +1300,10 @@ import { supabaseConfig } from '../../lib/supabase';
     const label = document.getElementById('apBtnLabel');
     const badge = document.getElementById('apBadge');
 
-    // Check pipeline state from server
+    // Try server pipeline status first
+    let serverPipelineHandled = false;
     fetch(`${AGENT_SERVER}/pipeline/status`).then(r => r.json()).then(ps => {
+      serverPipelineHandled = true;
       routineRunning = ps.running;
       autopilotRunning = ps.running;
       if (ps.running) {
@@ -1179,32 +1312,90 @@ import { supabaseConfig } from '../../lib/supabase';
         btn.innerHTML = '&#9632;';
         label.textContent = 'En cours...';
         badge.className = 'ap-status-badge running';
-        const phaseLabels = { sync: 'SYNC', generate: 'GENERATE', edit: 'EDIT', validate: 'VALIDATE', done: 'DONE', error: 'ERREUR' };
+        const phaseLabels = { sync: 'SYNC', generate: 'GENERATE', edit: 'EDIT', validate: 'VALIDATE', crawl: 'CRAWL', done: 'DONE', error: 'ERREUR' };
         badge.textContent = phaseLabels[ps.phase] || ps.phase?.toUpperCase() || 'RUNNING';
+        updatePhaseIndicators(ps.phase, 'running');
       } else {
         hero.classList.remove('is-running');
         btn.classList.remove('running');
         btn.innerHTML = '&#9654;';
         label.textContent = 'Lancer Pipeline';
         if (ps.phase === 'done') {
-          badge.className = 'ap-status-badge idle';
+          badge.className = 'ap-status-badge done';
           badge.textContent = 'TERMINE';
+          updatePhaseIndicators('done', 'completed');
         } else if (ps.phase === 'error') {
-          badge.className = 'ap-status-badge idle';
+          badge.className = 'ap-status-badge error';
           badge.textContent = 'ERREUR';
+          updatePhaseIndicators(ps.errorPhase || ps.phase, 'error');
         } else {
           badge.className = 'ap-status-badge idle';
           badge.textContent = 'IDLE';
+          // Use Supabase data for last pipeline run
+          updatePipelineFromSupabase();
         }
       }
-    }).catch(() => {});
+    }).catch(() => {
+      // Server offline — use Supabase history
+      hero.classList.remove('is-running');
+      btn.classList.remove('running');
+      btn.innerHTML = '&#9654;';
+      label.textContent = 'Lancer Pipeline';
+      updatePipelineFromSupabase();
+    });
 
     // Active agents count
     const activeCount = Object.keys(runningAgents).filter(k => k !== 'autopilot').length;
     document.getElementById('apAgentsActive').textContent = activeCount;
 
-    // Token estimation per agent type (tokens/minute based on observed patterns)
-    // Claude Max: rolling window — tokens consumed > WINDOW hours ago are recovered
+    // Token budget estimation
+    updateTokenBudget();
+  }
+
+  function updatePipelineFromSupabase() {
+    const badge = document.getElementById('apBadge');
+    // Check last pipeline/autopilot run from agentRuns
+    const pipelineRun = agentRuns['autopilot'] || agentRuns['pipeline'];
+    if (pipelineRun) {
+      const status = pipelineRun.status;
+      if (status === 'completed') {
+        badge.className = 'ap-status-badge done';
+        badge.textContent = 'TERMINE';
+        updatePhaseIndicators('done', 'completed');
+      } else if (status === 'error' || status === 'failed') {
+        badge.className = 'ap-status-badge error';
+        badge.textContent = 'ERREUR';
+      } else {
+        badge.className = 'ap-status-badge idle';
+        badge.textContent = 'IDLE';
+      }
+    } else {
+      badge.className = 'ap-status-badge idle';
+      badge.textContent = 'IDLE';
+    }
+  }
+
+  function updatePhaseIndicators(currentPhase, state) {
+    const phases = document.querySelectorAll('.ap-phase');
+    const phaseIdx = PHASE_ORDER.indexOf(currentPhase);
+
+    phases.forEach(el => {
+      const phase = el.dataset.phase;
+      const idx = PHASE_ORDER.indexOf(phase);
+      el.className = 'ap-phase';
+
+      if (state === 'completed' || currentPhase === 'done') {
+        el.classList.add('completed');
+      } else if (state === 'error' && phase === currentPhase) {
+        el.classList.add('error');
+      } else if (state === 'running') {
+        if (idx < phaseIdx) el.classList.add('completed');
+        else if (idx === phaseIdx) el.classList.add('active');
+      }
+    });
+  }
+
+  function updateTokenBudget() {
     const TOKEN_RATE_PER_MIN = {
       'editorial': 8000, 'validator': 6000, 'fact-check': 10000,
       'seo-audit': 5000, 'analytics': 4000, 'opportunities': 5000,
@@ -1216,35 +1407,25 @@ import { supabaseConfig } from '../../lib/supabase';
     const windowMs = ROLLING_WINDOW_H * 3600000;
     const now = Date.now();
 
-    // Estimate tokens per run with age tracking
     const runTokens = Object.values(agentRuns).map(r => {
       const startT = new Date(r.started_at).getTime();
       const endT = r.completed_at ? new Date(r.completed_at).getTime() : now;
       const durationMin = Math.min(30, (endT - startT) / 60000);
       const rate = TOKEN_RATE_PER_MIN[r.agent_name] || 5000;
       const tokens = Math.round(rate * durationMin);
-      const age = now - endT; // ms since run ended
+      const age = now - endT;
       return { tokens, age, startT, endT, agent: r.agent_name };
     });
 
-    // Current window: only runs that ended within the rolling window
     const inWindow = runTokens.filter(r => r.age < windowMs);
     const estimatedTokens = inWindow.reduce((s, r) => s + r.tokens, 0);
-
-    // Tokens recovering soon (runs ending 4-5h ago, about to fall off)
-    const recoveringSoon = inWindow.filter(r => r.age > (windowMs - 3600000)); // last hour of window
+    const recoveringSoon = inWindow.filter(r => r.age > (windowMs - 3600000));
     const recoveryPerHour = recoveringSoon.reduce((s, r) => s + r.tokens, 0);
-
-    // Active burn: tokens from runs started in last 30min (currently consuming)
-    const activeBurn = inWindow.filter(r => (now - r.startT) < 1800000);
-    const activeBurnPerMin = activeBurn.reduce((s, r) => {
-      const rate = TOKEN_RATE_PER_MIN[r.agent] || 5000;
-      // If still running, it's actively burning
-      return s + (r.age < 0 || !r.endT ? rate : 0);
-    }, 0);
 
     const budgetFill = document.getElementById('apBudgetFill');
     const budgetVal = document.getElementById('apBudgetVal');
+    if (!budgetFill || !budgetVal) return;
+
     const tokenPct = Math.min(100, Math.round(estimatedTokens / MAX_TOKENS * 100));
     const tokenDisplay = estimatedTokens > 1000000
       ? (estimatedTokens / 1000000).toFixed(1) + 'M'
@@ -1254,85 +1435,12 @@ import { supabaseConfig } from '../../lib/supabase';
       : recoveryPerHour.toString();
     budgetFill.style.width = tokenPct + '%';
     budgetFill.style.background = tokenPct > 80 ? '#f87171' : tokenPct > 50 ? '#fbbf24' : '#3b82f6';
-    budgetVal.innerHTML = `~${tokenDisplay} / 5M · ${inWindow.length} runs · <span style="color:#4ade80">↻${recoveryDisplay} recup/h</span>`;
+    budgetVal.innerHTML = `~${tokenDisplay} / 5M &middot; ${inWindow.length} runs &middot; <span style="color:#4ade80">${recoveryDisplay} recup/h</span>`;
 
     const budgetLabel = document.querySelector('.ap-budget-label');
     if (budgetLabel) {
-      budgetLabel.textContent = tokenPct >= 80 ? '⚠ TOKENS (ralentir)' : tokenPct >= 50 ? '◐ TOKENS' : '● TOKENS';
+      budgetLabel.textContent = tokenPct >= 80 ? 'TOKENS (ralentir)' : 'TOKENS';
       budgetLabel.style.color = tokenPct > 80 ? '#f87171' : tokenPct > 50 ? '#fbbf24' : '#475569';
-    }
-
-    // ---- BURN RATE (net: consumption - recovery) ----
-    if (!window._tokenSnapshots) window._tokenSnapshots = [];
-    const snapshots = window._tokenSnapshots;
-    snapshots.push({ t: now, tokens: estimatedTokens, activeAgents: activeBurn.length });
-    while (snapshots.length > 0 && (now - snapshots[0].t) > 300000) snapshots.shift();
-
-    const burnFill = document.getElementById('apBurnFill');
-    const burnVal = document.getElementById('apBurnVal');
-    const burnLabel = document.getElementById('apBurnLabel');
-
-    if (snapshots.length >= 2) {
-      let refSnap = snapshots[0];
-      for (const s of snapshots) {
-        if ((now - s.t) >= 60000) refSnap = s;
-      }
-      const dtMin = (now - refSnap.t) / 60000;
-      const dTokens = estimatedTokens - refSnap.tokens;
-
-      if (dtMin > 0.3) {
-        const grossBurn = Math.round(dTokens / dtMin); // observed change per min
-        const recoveryPerMin = Math.round(recoveryPerHour / 60);
-        const netBurn = grossBurn; // already net (estimatedTokens accounts for window)
-        const fmtRate = (v) => Math.abs(v) > 1000 ? Math.round(v / 1000) + 'k' : v.toString();
-
-        const MAX_BURN = 100000;
-        const burnPct = Math.min(100, Math.round(Math.abs(netBurn) / MAX_BURN * 100));
-        burnFill.style.width = burnPct + '%';
-
-        if (netBurn > 50000) {
-          burnFill.style.background = '#f87171';
-          burnLabel.textContent = '🔥 BURN RATE';
-          burnLabel.style.color = '#f87171';
-        } else if (netBurn > 20000) {
-          burnFill.style.background = '#fbbf24';
-          burnLabel.textContent = '◐ BURN RATE';
-          burnLabel.style.color = '#fbbf24';
-        } else if (netBurn > 0) {
-          burnFill.style.background = '#3b82f6';
-          burnLabel.textContent = '● BURN RATE';
-          burnLabel.style.color = '#475569';
-        } else if (netBurn < -1000) {
-          // Recovering! More tokens falling off than being consumed
-          burnFill.style.background = '#22c55e';
-          burnLabel.textContent = '♻ RECOVERING';
-          burnLabel.style.color = '#22c55e';
-        } else {
-          burnFill.style.background = '#1e293b';
-          burnLabel.textContent = '○ BURN RATE';
-          burnLabel.style.color = '#334155';
-        }
-
-        const remaining = MAX_TOKENS - estimatedTokens;
-        if (netBurn > 0 && remaining > 0) {
-          const minsLeft = Math.round(remaining / netBurn);
-          const hLeft = Math.floor(minsLeft / 60);
-          const mLeft = minsLeft % 60;
-          const timeStr = hLeft > 0 ? `${hLeft}h${mLeft.toString().padStart(2,'0')}` : `${mLeft}min`;
-          const color = minsLeft < 30 ? '#f87171' : minsLeft < 120 ? '#fbbf24' : '#4ade80';
-          burnVal.innerHTML = `${fmtRate(netBurn)} tok/min · <span style="color:${color}">${timeStr} restant</span>`;
-        } else if (netBurn < -1000) {
-          burnVal.innerHTML = `<span style="color:#4ade80">+${fmtRate(Math.abs(netBurn))} tok/min recup</span> · capacite en hausse`;
-        } else if (netBurn <= 0) {
-          burnVal.textContent = 'idle — tokens se recuperent';
-        } else {
-          burnVal.textContent = `${fmtRate(netBurn)} tok/min`;
-        }
-      } else {
-        burnVal.textContent = 'mesure en cours...';
-      }
-    } else {
-      burnVal.textContent = 'en attente (30s)...';
     }
   }
 
@@ -1396,7 +1504,6 @@ import { supabaseConfig } from '../../lib/supabase';
   function renderArena() {
     const grid = document.getElementById('arenaGrid');
     if (!grid) return;
-
     grid.innerHTML = ARENA_AGENTS.map(agent => {
       const run = agentRuns[agent.key];
       const hasRun = !!run;
@@ -1418,7 +1525,6 @@ import { supabaseConfig } from '../../lib/supabase';
         for (let i = 0; i < activeInstances; i++) {
           characters += buildCharacter('dancing', agent.color, i);
         }
-        // Hint: sleeping bonhomme if lots of pending work
         if (pending > 10 && activeInstances < 3) {
           characters += buildCharacter('sleeping', agent.color, activeInstances);
         }
@@ -1438,7 +1544,7 @@ import { supabaseConfig } from '../../lib/supabase';
         pendingHtml = `<span class="pending-badge" style="background:${agent.color}22;color:${agent.color}">${pending} en attente</span>`;
       }
 
-      // Meta left
+      // Meta left: last run info from Supabase
       let metaLeft = '';
       if (activeInstances > 0) {
         const uptime = runningAgents[agent.key]?.uptime || '';
@@ -1449,17 +1555,35 @@ import { supabaseConfig } from '../../lib/supabase';
         metaLeft = 'jamais lance';
       }
 
+      // Run result summary from metadata
+      let resultHtml = '';
+      if (hasRun && run.metadata && activeInstances === 0) {
+        const m = run.metadata;
+        const parts = [];
+        if (m.items_processed) parts.push(`${m.items_processed} traites`);
+        if (m.tickets_created) parts.push(`${m.tickets_created} tickets`);
+        if (m.links_suggested) parts.push(`${m.links_suggested} liens`);
+        if (m.articles_checked) parts.push(`${m.articles_checked} articles`);
+        if (m.corrections_applied) parts.push(`${m.corrections_applied} corrections`);
+        if (m.errors && m.errors > 0) parts.push(`<span style="color:#f87171">${m.errors} erreurs</span>`);
+        if (run.status === 'error' || run.status === 'failed') {
+          parts.push(`<span style="color:#f87171">ECHEC</span>`);
+        }
+        if (parts.length > 0) {
+          resultHtml = `<div class="arena-run-result">${parts.join(' &middot; ')}</div>`;
+        }
+      }
+
       const countBadge = activeInstances > 0
         ? `<span class="arena-cell-count active" style="--agent-color:${agent.color}">x${activeInstances}</span>`
         : `<span class="arena-cell-count zero">x0</span>`;
 
-      // Action buttons — inline, no more prompt()
+      // Action buttons
       let btns = '';
       if (serverOnline) {
         if (activeInstances === 0) {
           btns = `<button class="arena-btn arena-btn-go" onclick="event.stopPropagation();launchAgent('${agent.key}')" title="Lancer">+</button>`;
         } else {
-          // Show console button + spawn more button
           btns = `<button class="arena-btn arena-btn-console" onclick="event.stopPropagation();selectConsoleAgent('${instanceNames[0]}')" title="Console">&#128187;</button>`
             + `<button class="arena-btn arena-btn-spawn" onclick="event.stopPropagation();launchAgentMulti('${agent.key}')" title="Spawner +1">+1</button>`
             + `<button class="arena-btn arena-btn-stop" onclick="event.stopPropagation();stopAllInstances('${agent.key}')" title="Stopper tout">&#9632;</button>`;
@@ -1478,6 +1602,7 @@ import { supabaseConfig } from '../../lib/supabase';
           <span>${metaLeft}</span>
           ${pendingHtml}
         </div>
+        ${resultHtml}
       </div>`;
     }).join('');
   }
@@ -1514,31 +1639,43 @@ import { supabaseConfig } from '../../lib/supabase';
 
   // ========== LOAD DATA ==========
   let agentRuns = {};
+  let allRecentRuns = [];
 
   async function loadAgentRuns() {
     try {
-      const runs = await supabaseFetch('agent_runs', 'select=*&order=started_at.desc&limit=50');
+      const runs = await supabaseFetch('agent_runs', 'select=*&order=started_at.desc&limit=80');
+      allRecentRuns = runs;
       const latest = {};
       for (const r of runs) {
         if (!latest[r.agent_name]) latest[r.agent_name] = r;
       }
       agentRuns = latest;
 
-      // Update autopilot stats
-      const apRun = latest['autopilot'];
-      if (apRun && apRun.metadata) {
-        const m = apRun.metadata;
-        if (m.cycle) document.getElementById('apCycle').textContent = m.cycle;
-      }
+      // Pipeline stats from last autopilot/pipeline run
+      const pipelineRun = latest['autopilot'] || latest['pipeline'];
       const apLast = document.getElementById('apLastRun');
-      if (apRun) apLast.textContent = timeAgo(apRun.completed_at || apRun.started_at);
+      const apDuration = document.getElementById('apLastDuration');
+      if (pipelineRun) {
+        apLast.textContent = timeAgo(pipelineRun.completed_at || pipelineRun.started_at);
+        if (pipelineRun.completed_at && pipelineRun.started_at) {
+          const dur = new Date(pipelineRun.completed_at).getTime() - new Date(pipelineRun.started_at).getTime();
+          apDuration.textContent = formatDuration(dur);
+        }
+      }
 
-      // Tickets processed 24h
+      // Tickets processed in last 24h (from all agent runs)
+      const now = Date.now();
       const processed24h = runs.filter(r => {
-        const age = Date.now() - new Date(r.started_at).getTime();
+        const age = now - new Date(r.started_at).getTime();
         return age < 86400000 && r.metadata?.items_processed;
       }).reduce((sum, r) => sum + (r.metadata.items_processed || 0), 0);
-      document.getElementById('apTicketsProcessed').textContent = processed24h || '--';
+      document.getElementById('apTicketsProcessed').textContent = processed24h || '0';
+
+      // Article count
+      try {
+        const artCount = await supabaseFetchCount('articles', 'is_active=eq.true');
+        document.getElementById('apArticles').textContent = artCount || '--';
+      } catch(e) {}
 
       updateAutopilotUI();
       renderArena();
@@ -1553,7 +1690,6 @@ import { supabaseConfig } from '../../lib/supabase';
         supabaseFetchCount('content_opportunities', 'status=eq.approved'),
       ]);
 
-      // Count tickets by source
       const bySource = {};
       for (const t of tickets) {
         const src = t.source_agent || 'fact-check';
@@ -1572,6 +1708,52 @@ import { supabaseConfig } from '../../lib/supabase';
 
       renderArena();
     } catch(e) {}
+  }
+
+  // ========== SITE VITALS ==========
+  async function loadSiteVitals() {
+    const now = new Date();
+    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).toISOString();
+    const yesterdayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1).toISOString();
+    const weekStart = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7).toISOString();
+
+    try {
+      const [coachToday, coachTotal, clicksToday, clicksYesterday, leadsWeek, leadsTotal, lastDeploy] = await Promise.all([
+        supabaseFetchCount('coach_messages', `created_at=gte.${todayStart}&role=eq.user`),
+        supabaseFetchCount('coach_messages', 'role=eq.user'),
+        supabaseFetchCount('affiliate_clicks', `created_at=gte.${todayStart}`),
+        supabaseFetchCount('affiliate_clicks', `created_at=gte.${yesterdayStart}&created_at=lt.${todayStart}`),
+        supabaseFetchCount('contacts', `created_at=gte.${weekStart}`),
+        supabaseFetchCount('contacts', ''),
+        supabaseFetch('agent_runs', 'select=completed_at,status,agent_name&agent_name=eq.validator&status=eq.completed&order=completed_at.desc&limit=1'),
+      ]);
+
+      // Coach IA
+      document.getElementById('vCoachToday').textContent = coachToday;
+      document.getElementById('vCoachDetail').textContent = `${coachTotal} messages total`;
+
+      // Affiliate clicks
+      document.getElementById('vClicksToday').textContent = clicksToday;
+      const clicksDiff = clicksToday - clicksYesterday;
+      const trendClass = clicksDiff > 0 ? 'up' : clicksDiff < 0 ? 'down' : 'neutral';
+      const trendArrow = clicksDiff > 0 ? '+' : '';
+      document.getElementById('vClicksDetail').innerHTML = `hier: ${clicksYesterday} <span class="vital-trend ${trendClass}">${trendArrow}${clicksDiff}</span>`;
+
+      // Contacts/Leads
+      document.getElementById('vLeadsWeek').textContent = leadsWeek;
+      document.getElementById('vLeadsDetail').textContent = `cette semaine / ${leadsTotal} total`;
+
+      // Last deploy
+      if (lastDeploy.length > 0 && lastDeploy[0].completed_at) {
+        document.getElementById('vDeployTime').textContent = timeAgo(lastDeploy[0].completed_at);
+        document.getElementById('vDeployDetail').textContent = formatDate(lastDeploy[0].completed_at);
+      } else {
+        document.getElementById('vDeployTime').textContent = '--';
+        document.getElementById('vDeployDetail').textContent = 'aucun deploy recense';
+      }
+    } catch(e) {
+      console.error('Vitals load error:', e);
+    }
   }
 
   // ========== KPIs ==========
@@ -1632,56 +1814,123 @@ import { supabaseConfig } from '../../lib/supabase';
       const inProgress = ticketsAll.filter(t => t.statut === 'in_progress').length;
       document.getElementById('kpiThroughput').textContent = deployedRecent;
       document.getElementById('kpiThroughputSub').innerHTML = `deployes &middot; <span style="color:#fbbf24">${pendingAll} en stock</span>`;
-      // Throughput bar: ratio deployed vs total active
       const totalActive = pendingAll + inProgress + deployedRecent;
       const throughputPct = totalActive > 0 ? Math.round(deployedRecent / totalActive * 100) : 0;
       document.getElementById('kpiThroughputBar').style.width = throughputPct + '%';
       document.getElementById('kpiThroughputBar').style.background = throughputPct > 70 ? '#22c55e' : throughputPct > 40 ? '#fbbf24' : '#f87171';
 
-      // Debit / Charge — tickets created vs resolved last 24h
+      // Debit / Charge
       const created24h = ticketsAll.filter(t => new Date(t.created_at).getTime() > last24h).length;
       const resolved24h = ticketsAll.filter(t => (t.statut === 'deployed' || t.statut === 'ready_to_deploy') && new Date(t.created_at).getTime() > last24h).length;
       const ratio = created24h > 0 ? (resolved24h / created24h) : (resolved24h > 0 ? 99 : 0);
       const ratioDisplay = created24h > 0 ? ratio.toFixed(1) + 'x' : '--';
       document.getElementById('kpiEfficiency').textContent = ratioDisplay;
       document.getElementById('kpiEfficiency').style.color = ratio >= 1 ? '#22c55e' : ratio >= 0.5 ? '#fbbf24' : '#f87171';
-      document.getElementById('kpiEfficiencySub').innerHTML = `<span style="color:#4ade80">↑${resolved24h}</span> resolus &middot; <span style="color:#f87171">↓${created24h}</span> crees (24h)`;
+      document.getElementById('kpiEfficiencySub').innerHTML = `<span style="color:#4ade80">${resolved24h}</span> resolus &middot; <span style="color:#f87171">${created24h}</span> crees (24h)`;
       const effPct = Math.min(100, Math.round(ratio * 50));
       document.getElementById('kpiEfficiencyBar').style.width = effPct + '%';
       document.getElementById('kpiEfficiencyBar').style.background = ratio >= 1 ? '#22c55e' : ratio >= 0.5 ? '#fbbf24' : '#f87171';
     } catch(e) {}
   }
 
-  // ========== LOG FEED ==========
-  let lastLogId = null;
+  // ========== RECENT ACTIVITY FEED ==========
+  async function loadActivity() {
+    const feed = document.getElementById('activityFeed');
+    feed.innerHTML = '<div class="activity-empty">Chargement...</div>';
 
-  async function loadLogs(append) {
+    const now = new Date();
+    const threeDaysAgo = new Date(now.getTime() - 3 * 86400000).toISOString();
+
     try {
-      const logs = await supabaseFetch('agent_logs', 'select=*&order=created_at.desc&limit=50');
-      const feed = document.getElementById('logFeed');
-      if (logs.length === 0) {
-        if (!append) feed.innerHTML = '<div class="log-empty">En attente de logs...</div>';
+      const [runs, tickets, coaches, clicks, contacts] = await Promise.all([
+        supabaseFetch('agent_runs', `select=agent_name,status,started_at,completed_at,metadata&started_at=gte.${threeDaysAgo}&order=started_at.desc&limit=15`),
+        supabaseFetch('correction_tickets', `select=id,source_agent,statut,ticket_type,urgence,created_at&created_at=gte.${threeDaysAgo}&order=created_at.desc&limit=10`),
+        supabaseFetch('coach_messages', `select=id,role,created_at,content&created_at=gte.${threeDaysAgo}&role=eq.user&order=created_at.desc&limit=8`),
+        supabaseFetch('affiliate_clicks', `select=id,partner,campaign,element,page_url,created_at&created_at=gte.${threeDaysAgo}&order=created_at.desc&limit=8`),
+        supabaseFetch('contacts', `select=id,contact_type,email,created_at&created_at=gte.${threeDaysAgo}&order=created_at.desc&limit=5`),
+      ]);
+
+      // Merge all events into a unified timeline
+      const events = [];
+
+      for (const r of runs) {
+        events.push({
+          time: r.completed_at || r.started_at,
+          type: 'agent',
+          icon: r.status === 'completed' ? '&#9989;' : r.status === 'error' ? '&#10060;' : '&#9881;',
+          tag: 'AGENT',
+          tagClass: 'tag-agent',
+          message: `${r.agent_name} ${r.status === 'completed' ? 'termine' : r.status === 'error' ? 'ECHEC' : 'demarre'}${r.metadata?.items_processed ? ' (' + r.metadata.items_processed + ' items)' : ''}`
+        });
+      }
+
+      for (const t of tickets) {
+        const urgLabel = t.urgence === 'critical' ? ' [CRITICAL]' : '';
+        events.push({
+          time: t.created_at,
+          type: 'ticket',
+          icon: t.statut === 'deployed' ? '&#128230;' : '&#127915;',
+          tag: 'TICKET',
+          tagClass: 'tag-ticket',
+          message: `${t.source_agent || '?'}: ${t.ticket_type || 'correction'}${urgLabel} (${t.statut})`
+        });
+      }
+
+      for (const c of coaches) {
+        const preview = (c.content || '').substring(0, 60).replace(/\n/g, ' ');
+        events.push({
+          time: c.created_at,
+          type: 'coach',
+          icon: '&#128172;',
+          tag: 'COACH',
+          tagClass: 'tag-coach',
+          message: preview + (preview.length >= 60 ? '...' : '')
+        });
+      }
+
+      for (const cl of clicks) {
+        const page = (cl.page_url || '').replace(/^https?:\/\/[^/]+/, '').substring(0, 40);
+        events.push({
+          time: cl.created_at,
+          type: 'affiliate',
+          icon: '&#128279;',
+          tag: 'CLIC',
+          tagClass: 'tag-affiliate',
+          message: `${cl.partner || 'annette'} via ${cl.element || cl.campaign || 'lien'}${page ? ' sur ' + page : ''}`
+        });
+      }
+
+      for (const co of contacts) {
+        events.push({
+          time: co.created_at,
+          type: 'contact',
+          icon: '&#128236;',
+          tag: 'LEAD',
+          tagClass: 'tag-contact',
+          message: `${co.contact_type || 'contact'} — ${co.email || 'anonyme'}`
+        });
+      }
+
+      // Sort by time descending
+      events.sort((a, b) => new Date(b.time) - new Date(a.time));
+
+      if (events.length === 0) {
+        feed.innerHTML = '<div class="activity-empty">Aucune activite recente (3 derniers jours)</div>';
         return;
       }
-      if (append && lastLogId === logs[0].id) return;
-      lastLogId = logs[0].id;
 
-      feed.innerHTML = logs.map(log => {
-        const meta = log.metadata || {};
-        const details = meta.action || meta.tickets_created !== undefined
-          ? `${meta.action || ''} ${meta.tickets_created ? meta.tickets_created + ' tickets' : ''} ${meta.score ? 'score:' + meta.score : ''}`.trim()
-          : '';
-        const tagClass = TAG_CLASSES[log.agent_type] || 'tag-seo-audit';
-        const statusClass = log.status === 'success' ? 'ls-success' : 'ls-error';
-
-        return `<div class="log-entry">
-          <span class="log-time">${formatTime(log.created_at)}</span>
-          <span class="log-agent-tag ${tagClass}">${escapeHtml(log.agent_type)}</span>
-          <span class="log-message">${escapeHtml(details || '-')}</span>
-          <span class="log-status ${statusClass}">${escapeHtml(log.status)}</span>
-        </div>`;
-      }).join('');
-    } catch (e) { console.error('Admin load error:', e); }
+      feed.innerHTML = events.slice(0, 25).map(ev => `
+        <div class="activity-entry">
+          <span class="activity-time">${formatTime(ev.time)}</span>
+          <span class="activity-icon">${ev.icon}</span>
+          <span class="activity-tag ${ev.tagClass}">${ev.tag}</span>
+          <span class="activity-message">${escapeHtml(ev.message)}</span>
+        </div>
+      `).join('');
+    } catch(e) {
+      console.error('Activity load error:', e);
+      feed.innerHTML = '<div class="activity-empty">Erreur chargement activite</div>';
+    }
   }
 
   // ========== AGENT CONSOLE ==========
@@ -1690,7 +1939,6 @@ import { supabaseConfig } from '../../lib/supabase';
   let consoleAutoScroll = true;
   let consoleTimer = null;
 
-  // Map server-side level to CSS class
   function levelToClass(level) {
     const map = {
       'tool': 'cl-tool',
@@ -1711,8 +1959,7 @@ import { supabaseConfig } from '../../lib/supabase';
     return '';
   }
 
-  // Console filter
-  // Always essential mode — hide tool/info noise
+  // Always essential mode
   (function() {
     const body = document.getElementById('consoleBody');
     if (body) body.className = 'console-body filter-essential';
@@ -1733,16 +1980,31 @@ import { supabaseConfig } from '../../lib/supabase';
     }
     if (agentNames.size === 0) { tabsEl.innerHTML = ''; return; }
 
+    // Check which agents have errors in their buffers
+    const errorAgents = new Set();
+    if (window._serverBuffers) {
+      for (const [name, buf] of Object.entries(window._serverBuffers)) {
+        if (buf.hasError) errorAgents.add(name);
+      }
+    }
+
     tabsEl.innerHTML = [...agentNames].sort().map(name => {
       const isRunning = !!runningAgents[name];
+      const hasError = errorAgents.has(name);
       const isActive = consoleAgent === name;
       const lineCount = window._serverBuffers?.[name]?.lines || 0;
-      return `<button class="console-tab ${isActive ? 'active' : ''}" onclick="selectConsoleAgent('${name}')">
-        <span class="tab-dot ${isRunning ? 'running' : 'stopped'}"></span>
+      const dotClass = isRunning ? 'running' : hasError ? 'error' : 'stopped';
+      return `<button class="console-tab ${isActive ? 'active' : ''}" onclick="selectConsoleAgent('${name}')" ${hasError ? 'style="border-color:#f8717144"' : ''}>
+        <span class="tab-dot ${dotClass}"></span>
         ${name}
         ${lineCount > 0 ? `<span class="tab-lines">(${lineCount})</span>` : ''}
       </button>`;
     }).join('');
+
+    // Auto-open console for agent with errors if no agent selected
+    if (!consoleAgent && errorAgents.size > 0) {
+      selectConsoleAgent([...errorAgents][0]);
+    }
   }
 
   function selectConsoleAgent(name) {
@@ -1797,7 +2059,7 @@ import { supabaseConfig } from '../../lib/supabase';
   });
 
   window.selectConsoleAgent = selectConsoleAgent;
-  window.toggleAutopilot = launchRoutine; // compat
+  window.toggleAutopilot = launchRoutine;
   window.launchRoutine = launchRoutine;
 
   // ========== CLOCK ==========
@@ -1814,23 +2076,22 @@ import { supabaseConfig } from '../../lib/supabase';
   function setupRealtime() {
     const wsUrl = SUPABASE_URL.replace('https://', 'wss://') + '/realtime/v1/websocket?apikey=' + SUPABASE_ANON_KEY + '&vsn=1.0.0';
     let ws;
+    let heartbeatInterval;
 
     function connect() {
       ws = new WebSocket(wsUrl);
       ws.onopen = () => {
-        ws.send(JSON.stringify({
-          topic: 'realtime:public:agent_runs',
-          event: 'phx_join',
-          payload: { config: { broadcast: { self: false }, postgres_changes: [{ event: '*', schema: 'public', table: 'agent_runs' }] } },
-          ref: '1'
-        }));
-        ws.send(JSON.stringify({
-          topic: 'realtime:public:agent_logs',
-          event: 'phx_join',
-          payload: { config: { broadcast: { self: false }, postgres_changes: [{ event: '*', schema: 'public', table: 'agent_logs' }] } },
-          ref: '2'
-        }));
-        setInterval(() => {
+        // Subscribe to key tables
+        const tables = ['agent_runs', 'correction_tickets', 'coach_messages', 'affiliate_clicks', 'contacts'];
+        tables.forEach((table, i) => {
+          ws.send(JSON.stringify({
+            topic: `realtime:public:${table}`,
+            event: 'phx_join',
+            payload: { config: { broadcast: { self: false }, postgres_changes: [{ event: '*', schema: 'public', table }] } },
+            ref: String(i + 1)
+          }));
+        });
+        heartbeatInterval = setInterval(() => {
           if (ws.readyState === WebSocket.OPEN) {
             ws.send(JSON.stringify({ topic: 'phoenix', event: 'heartbeat', payload: {}, ref: 'hb' }));
           }
@@ -1840,13 +2101,26 @@ import { supabaseConfig } from '../../lib/supabase';
         try {
           const msg = JSON.parse(event.data);
           if (msg.event === 'postgres_changes') {
-            loadAgentRuns();
-            loadLogs(true);
-            loadPendingCounts();
+            const table = msg.topic?.replace('realtime:public:', '');
+            // Targeted refresh based on which table changed
+            if (table === 'agent_runs') {
+              loadAgentRuns();
+              loadPendingCounts();
+            } else if (table === 'correction_tickets') {
+              loadPendingCounts();
+              loadHealthKPIs();
+            } else if (table === 'coach_messages' || table === 'affiliate_clicks' || table === 'contacts') {
+              loadSiteVitals();
+            }
+            // Always refresh activity on any change
+            loadActivity();
           }
         } catch(e) {}
       };
-      ws.onclose = () => setTimeout(connect, 3000);
+      ws.onclose = () => {
+        clearInterval(heartbeatInterval);
+        setTimeout(connect, 3000);
+      };
       ws.onerror = () => ws.close();
     }
     connect();
@@ -1863,17 +2137,19 @@ import { supabaseConfig } from '../../lib/supabase';
         if (running.length > 0) selectConsoleAgent(running[0]);
       }
     });
-    loadLogs(true);
   }, 5000);
 
   setInterval(() => {
-    Promise.all([loadPendingCounts(), loadHealthKPIs()]).then(() => loadAgentRuns());
+    Promise.all([loadPendingCounts(), loadHealthKPIs(), loadSiteVitals()]).then(() => loadAgentRuns());
   }, 30000);
 
+  // Refresh activity less often
+  setInterval(loadActivity, 60000);
+
   // ========== INIT ==========
-  Promise.all([checkServer(), loadPendingCounts(), loadHealthKPIs()]).then(() => {
+  Promise.all([checkServer(), loadPendingCounts(), loadHealthKPIs(), loadSiteVitals()]).then(() => {
     loadAgentRuns();
-    loadLogs(false);
+    loadActivity();
   });
   setupRealtime();
 </script>

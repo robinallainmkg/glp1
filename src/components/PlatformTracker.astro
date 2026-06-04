@@ -1,0 +1,128 @@
+---
+import { supabaseConfig } from '../lib/supabase.js';
+---
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+(function() {
+  'use strict';
+
+  var API = supabaseUrl + '/rest/v1/platform_events';
+  var KEY = supabaseAnonKey;
+  var sid = localStorage.getItem('glp1_coach_session') || 'anon_' + Math.random().toString(36).slice(2, 10);
+  if (!localStorage.getItem('glp1_coach_session')) localStorage.setItem('glp1_coach_session', sid);
+  var page = window.location.pathname;
+  var sent = {};
+
+  function track(type, meta) {
+    var key = type + JSON.stringify(meta || {});
+    if (sent[key]) return;
+    sent[key] = true;
+
+    fetch(API, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': KEY,
+        'Authorization': 'Bearer ' + KEY,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        event_type: type,
+        page_url: page,
+        session_id: sid,
+        metadata: meta || {}
+      }),
+      keepalive: true
+    }).catch(function() {});
+  }
+
+  // --- Page view with metadata ---
+  var collMeta = document.querySelector('meta[name="collection"]');
+  track('page_view', {
+    collection: collMeta ? collMeta.content : '',
+    referrer: document.referrer.substring(0, 200),
+    screen: window.innerWidth + 'x' + window.innerHeight
+  });
+
+  // --- Scroll depth (25%, 50%, 75%, 100%) ---
+  var scrollTimer;
+  window.addEventListener('scroll', function() {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var pct = Math.round((window.scrollY / h) * 100);
+      [25, 50, 75, 100].forEach(function(t) {
+        if (pct >= t) track('scroll_depth', { depth: t });
+      });
+    }, 300);
+  }, { passive: true });
+
+  // --- Time on page (30s, 60s, 120s, 300s) ---
+  [30, 60, 120, 300].forEach(function(t) {
+    setTimeout(function() {
+      if (!document.hidden) track('time_on_page', { seconds: t });
+    }, t * 1000);
+  });
+
+  // --- Coach IA open/close tracking ---
+  var coachObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.target.id === 'coach-panel') {
+        var isOpen = !m.target.classList.contains('coach-hidden');
+        track(isOpen ? 'coach_open' : 'coach_close', {});
+      }
+    });
+  });
+  var coachPanel = document.getElementById('coach-panel');
+  if (coachPanel) {
+    coachObserver.observe(coachPanel, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  // --- Coach first message tracking ---
+  document.addEventListener('click', function(e) {
+    var sendBtn = e.target.closest('#coach-send');
+    if (!sendBtn) return;
+    var input = document.getElementById('coach-input');
+    if (input && input.value.trim()) {
+      track('coach_first_message', { length: input.value.trim().length });
+    }
+  });
+
+  // --- CTA impression tracking (IntersectionObserver) ---
+  if ('IntersectionObserver' in window) {
+    var ctaObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          var ctaType = el.getAttribute('data-partner-block') || el.className.split(' ')[0] || 'unknown';
+          track('cta_impression', { type: ctaType });
+          ctaObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('[data-partner-block], .partner-sidebar, .partner-cta-inline').forEach(function(el) {
+      ctaObserver.observe(el);
+    });
+  }
+
+  // --- Exit intent (desktop only) ---
+  if (window.innerWidth > 768) {
+    document.addEventListener('mouseout', function(e) {
+      if (e.clientY < 5) track('exit_intent', {});
+    });
+  }
+
+  // --- Track session start (once per session) ---
+  if (!sessionStorage.getItem('glp1_session_started')) {
+    sessionStorage.setItem('glp1_session_started', '1');
+    track('session_start', {
+      landing_page: page,
+      utm_source: new URLSearchParams(window.location.search).get('utm_source') || '',
+      utm_medium: new URLSearchParams(window.location.search).get('utm_medium') || '',
+      utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || ''
+    });
+  }
+})();
+</script>

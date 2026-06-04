@@ -96,7 +96,7 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 
 ### Conditions de remboursement
 
-**Rybelsus n'est PAS remboursé** par l'Assurance Maladie. La HAS a rendu un avis defavorable au remboursement du semaglutide oral. Contrairement a Ozempic (semaglutide injectable, rembourse 30% pour le DT2), Rybelsus reste integralement a la charge du patient :
+**Rybelsus n'est PAS remboursé** par l'Assurance Maladie. La HAS a rendu un avis defavorable au remboursement du semaglutide oral. Contrairement a Ozempic (semaglutide injectable, rembourse 65% en biotherapie metformine pour le DT2), Rybelsus reste integralement a la charge du patient :
 
 ✅ **Prescription médicale obligatoire**
 ✅ **Diabète de type 2 confirmé**
@@ -203,7 +203,7 @@ Rybelsus n'étant pas remboursé par la Sécurité Sociale, le mécanisme classi
 
 ## 📝 Conclusion
 
-**Rybelsus est une [alternative orale du sémaglutide](/collections/traitements-glp1/semaglutide-oral-comprimé-ozempic-france/)** pour le diabète de type 2, mais il n'est pas [remboursé](/collections/glp1-cout/remboursement-glp1-2026/) par la Sécurité Sociale en France (avis défavorable de la HAS). Le coût reste intégralement à la charge du patient.
+**Rybelsus est une [alternative orale du sémaglutide](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/)** pour le diabète de type 2, mais il n'est pas [remboursé](/collections/glp1-cout/remboursement-glp1-2026/) par la Sécurité Sociale en France (avis défavorable de la HAS). Le coût reste intégralement à la charge du patient.
 
 ### Points clés à retenir :
 - **Prix moyen** : 80-110 €/mois

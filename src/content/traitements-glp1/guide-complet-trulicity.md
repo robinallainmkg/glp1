@@ -27,7 +27,7 @@ mainKeyword: "trulicity guide complet france dulaglutide"
 ## Sommaire
 1. [Qu'est-ce que Trulicity ?](#quest-ce-quetrulicity)
 2. [Comment fonctionne Trulicity ?](#comment-fonctionne-trulicity)
-3. [Trulicity pour le diabète de type 2](#trulicity-diabète-type-2)
+3. [Trulicity pour le diabète de type 2](#trulicity-diabete-type-2)
 4. [Trulicity pour la perte de poids](#trulicity-perte-poids)
 5. [Posologie et administration](#posologie-trulicity)
 6. [Comment commencer le traitement Trulicity ?](#comment-commencer-le-traitement-trulicity)

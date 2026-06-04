@@ -30,7 +30,7 @@ mainKeyword: "zepbound guide complet france"
 3. [Zepbound vs autres GLP-1](#zepbound-vs-autres-glp1)
 4. [Indications et contre-indications](#indications-zepbound)
 5. [Posologie et administration](#posologie-zepbound)
-6. [Résultats et perte de poids](#résultats-zepbound)
+6. [Résultats et perte de poids](#resultats-zepbound)
 7. [Prix et remboursement](#prix-zepbound)
 8. [FAQ Zepbound](#faq-zepbound)
 

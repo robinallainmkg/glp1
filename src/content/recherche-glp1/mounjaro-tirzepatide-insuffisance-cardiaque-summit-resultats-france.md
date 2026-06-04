@@ -146,7 +146,7 @@ C'est le point qui préoccupe le plus les patients et les médecins. En mars 202
 - **Mounjaro dans l'obésité** : non remboursé, négociations en cours avec le CEPS pour un remboursement attendu au 2e semestre 2026
 - **Mounjaro dans l'ICFEp avec obésité** : non remboursé spécifiquement pour cette indication, mais les négociations avec le CEPS intègrent les données SUMMIT pour élargir potentiellement les conditions de remboursement
 
-Les cardiologues plaident auprès de la HAS pour que l'indication ICFEp avec obésité soit reconnue comme une condition prioritaire ouvrant droit à remboursement, compte tenu de la sévérité de cette association morbide. Pour suivre l'évolution du remboursement, consultez notre [guide complet remboursement Mounjaro 2026](/collections/glp1-cout/mounjaro-remboursement-sécurité-sociale-conditions-2026/).
+Les cardiologues plaident auprès de la HAS pour que l'indication ICFEp avec obésité soit reconnue comme une condition prioritaire ouvrant droit à remboursement, compte tenu de la sévérité de cette association morbide. Pour suivre l'évolution du remboursement, consultez notre [guide complet remboursement Mounjaro 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).
 
 ### Coût actuel pour les patients
 
@@ -172,7 +172,7 @@ Pour être considéré comme candidat à Mounjaro dans une perspective d'insuffi
 - **IMC ≥ 30 kg/m²** (obésité confirmée)
 - **Fraction d'éjection ≥ 50%** (ICFEp, évaluée par échocardiographie)
 - **Symptômes d'insuffisance cardiaque** de classe NYHA II (limitation légère à l'effort) ou III (limitation significative à l'effort modéré)
-- **Absence de [contre-indications aux GLP-1](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-précautions/)** (antécédents de pancréatite, antécédents de carcinome thyroïdien médullaire ou NEM2)
+- **Absence de [contre-indications aux GLP-1](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/)** (antécédents de pancréatite, antécédents de carcinome thyroïdien médullaire ou NEM2)
 
 ### Le bilan cardiologique préalable
 
@@ -219,11 +219,14 @@ Oui. L'étude STEP-HFpEF a démontré des bénéfices du sémaglutide 2,4 mg ([W
 **Combien de temps doit durer le traitement par Mounjaro dans l'insuffisance cardiaque ?**
 SUMMIT n'a évalué les effets que sur 52 semaines (1 an). Les données à plus long terme ne sont pas encore disponibles. En pratique, comme pour l'obésité, il s'agit probablement d'un traitement au long cours : l'arrêt risque d'entraîner une reprise de poids et une perte du bénéfice cardiaque associé.
 
+
+> **À lire aussi** : [GLP-1 et Cholestérol](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-benefices/)
+
 ## Conclusion
 
 L'étude SUMMIT marque un tournant dans la prise en charge de l'insuffisance cardiaque à fraction d'éjection préservée associée à l'obésité. En réduisant de 38% le risque d'aggravation cardiaque, le tirzepatide s'impose comme le premier traitement de l'obésité à démontrer simultanément un bénéfice majeur sur l'insuffisance cardiaque dans cette population.
 
-Pour les patients français concernés, le principal obstacle reste le coût, en l'absence de remboursement spécifique pour cette indication. Mais les négociations en cours et les données scientifiques solides laissent espérer une évolution favorable dans les prochains mois. En attendant, si vous souffrez d'obésité et d'insuffisance cardiaque, discutez avec votre cardiologue et votre médecin traitant de l'opportunité d'un traitement par Mounjaro. Pour comprendre toutes les options disponibles, notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) reste le point de départ le plus complet. Consultez également notre [guide patient GLP-1 et insuffisance cardiaque](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-précautions/) pour les contre-indications et précautions spécifiques.
+Pour les patients français concernés, le principal obstacle reste le coût, en l'absence de remboursement spécifique pour cette indication. Mais les négociations en cours et les données scientifiques solides laissent espérer une évolution favorable dans les prochains mois. En attendant, si vous souffrez d'obésité et d'insuffisance cardiaque, discutez avec votre cardiologue et votre médecin traitant de l'opportunité d'un traitement par Mounjaro. Pour comprendre toutes les options disponibles, notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) reste le point de départ le plus complet. Consultez également notre [guide patient GLP-1 et insuffisance cardiaque](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/) pour les contre-indications et précautions spécifiques.
 
 ---
 

@@ -26,8 +26,8 @@ Plutot que de s'appuyer uniquement sur les promesses marketing, nous avons compi
 ## Sommaire
 
 1. [Ozempic : Rappel du Traitement](#ozempic--rappel-du-traitement)
-2. [Résultats Moyens : Ce que Disent les Etudes Cliniques](#résultats-moyens--ce-que-disent-les-etudes-cliniques)
-3. [Témoignages Patients : Avis Reels](#témoignages-patients--avis-reels)
+2. [Résultats Moyens : Ce que Disent les Etudes Cliniques](#resultats-moyens--ce-que-disent-les-etudes-cliniques)
+3. [Témoignages Patients : Avis Reels](#temoignages-patients--avis-reels)
 4. [Note Globale des Patients : 4.2/5](#note-globale-des-patients--4.2-sur-5)
 5. [Ozempic vs Wegovy vs Mounjaro : Comparatif Avis](#ozempic-vs-wegovy-vs-mounjaro--comparatif-avis)
 6. [Les Effets Secondaires les Plus Cites dans les Avis](#les-effets-secondaires-les-plus-cites-dans-les-avis)
@@ -282,7 +282,7 @@ La question du cout est omnipresente dans les avis patients. Elle constitue souv
 
 ### Situation actuelle du remboursement
 
-- **Patients diabetiques de type 2** : Ozempic est rembourse a **30 % par la Sécurité sociale** (taux en vigueur depuis decembre 2021), avec une prise en charge complémentaire par la mutuelle. Les patients en **ALD (Affection Longue Duree)** beneficient d'un remboursement a **100 %**. Pour les autres, le reste a charge depend de la couverture mutuelle.
+- **Patients diabetiques de type 2** : Ozempic est rembourse a **65 % par la Sécurité sociale** en bithérapie metformine, avec une prise en charge complémentaire par la mutuelle. Les patients en **ALD (Affection Longue Duree)** beneficient d'un remboursement a **100 %**. Pour les autres, le reste a charge depend de la couverture mutuelle.
 - **Patients en surpoids/obésité (hors diabète)** : Ozempic est prescrit hors AMM et **n'est pas rembourse**. Le cout mensuel se situe entre **80 et 130 euros** selon le dosage et la pharmacie.
 
 ### Ce que disent les patients

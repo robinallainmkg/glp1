@@ -2,8 +2,8 @@
 title: "GLP-1 Senior Plus 65 Ans : Limites ANSM et Alternatives"
 description: "GLP-1 personne âgée senior plus 65 ans : l'ANSM limite ces traitements aux moins de 65 ans. Risques, raisons médicales et alternatives disponibles."
 pubDate: 2026-03-17
-date: "2026-03-17"
-updatedAt: 2026-03-17
+date: "2026-05-29"
+updatedAt: 2026-05-29
 author: "Dr. Marie Dubois"
 category: "Traitements"
 tags: ["glp1", "seniors", "65 ans", "ANSM", "obésité", "sarcopénie", "alternatives", "personnes âgées"]
@@ -103,11 +103,11 @@ Un suivi par un diététicien spécialisé en nutrition de la personne âgée es
 
 **Orlistat (Xenical, Alli)** : inhibiteur de la lipase pancréatique, disponible avec ou sans ordonnance selon la dose. Efficacité modérée (perte de 5-7 % du poids en plus du régime), mais bonne tolérance cardiovasculaire. Effets indésirables principalement digestifs. Pas de restriction d'âge officiellement.
 
-**Naltrexone/Bupropion (Contrave)** : disponible en France sur prescription pour l'obésité. Moins efficace que les GLP-1 mais peut être prescrit sans restriction d'âge officielle. À utiliser avec prudence en cas d'antécédents cardiovasculaires ou de prise d'autres antidépresseurs.
+**Naltrexone/Bupropion (Mysimba)** : disponible en France sur prescription pour l'obésité. (Note : le nom commercial en Europe est Mysimba, Contrave étant le nom utilisé aux États-Unis.) Moins efficace que les GLP-1 mais peut être prescrit sans restriction d'âge officielle. À utiliser avec prudence en cas d'antécédents cardiovasculaires ou de prise d'autres antidépresseurs.
 
 ### La chirurgie bariatrique : une option pour les cas sévères
 
-La chirurgie bariatrique (sleeve, bypass gastrique) n'a pas de limite d'âge absolue, mais elle implique des [précautions chirurgicales sous GLP-1](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/) spécifiques à connaître. Pour les patients de plus de 65 ans présentant une obésité sévère (IMC ≥ 40 ou ≥ 35 avec comorbidités graves) et ayant une bonne condition cardio-respiratoire, la chirurgie peut être discutée en réunion pluridisciplinaire. L'âge avancé nécessite une évaluation préopératoire très complète et un suivi postopératoire renforcé.
+La chirurgie bariatrique (sleeve, bypass gastrique) n'a pas de limite d'âge absolue, mais elle implique des [précautions chirurgicales sous GLP-1](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) spécifiques à connaître. Pour les patients de plus de 65 ans présentant une obésité sévère (IMC ≥ 40 ou ≥ 35 avec comorbidités graves) et ayant une bonne condition cardio-respiratoire, la chirurgie peut être discutée en réunion pluridisciplinaire. L'âge avancé nécessite une évaluation préopératoire très complète et un suivi postopératoire renforcé.
 
 ### La prise en charge psychologique
 

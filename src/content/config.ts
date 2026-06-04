@@ -21,6 +21,11 @@ const unifiedSchema = z.object({
   relatedArticles: z.array(z.string()).optional(), // Articles similaires manuels
   imageAlt: z.string().optional(), // Texte alternatif pour l'image
   thumbnailAlt: z.string().optional(), // Texte alternatif pour thumbnail
+  // FAQ Schema pour rich snippets Google
+  faqSchema: z.array(z.object({
+    question: z.string(),
+    answer: z.string(),
+  })).optional(),
   // Champs legacy (transition)
   date: z.coerce.date().optional(), // Alias pour pubDate (migration en cours)
   collection: z.string().optional(), // Collection explicite dans le frontmatter

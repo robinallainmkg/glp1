@@ -63,7 +63,7 @@ Le risque cardiovasculaire d'un patient avec un syndrome métabolique est multip
 
 ### Action 1 : La réduction de la graisse abdominale
 
-La [graisse viscérale](/collections/glp1-perte-de-poids/glp1-graisse-abdominale-viscerale-ozempic-mounjaro-résultats/) — celle qui s'accumule autour des organes dans la cavité abdominale — est la composante centrale du syndrome métabolique. C'est elle qui est responsable de la résistance à l'insuline et qui entretient l'inflammation chronique de bas grade.
+La [graisse viscérale](/collections/glp1-perte-de-poids/glp1-graisse-abdominale-viscerale-ozempic-mounjaro-resultats/) — celle qui s'accumule autour des organes dans la cavité abdominale — est la composante centrale du syndrome métabolique. C'est elle qui est responsable de la résistance à l'insuline et qui entretient l'inflammation chronique de bas grade.
 
 Les GLP-1 réduisent préférentiellement la graisse viscérale par rapport à la graisse sous-cutanée. Dans l'étude SURMOUNT-1, le tirzépatide (Mounjaro) a réduit la graisse viscérale de **-40,1 %** versus -7,3 % dans le groupe placebo. Le sémaglutide (Wegovy) dans les études STEP montre des résultats similaires, avec une réduction marquée du tour de taille.
 
@@ -123,7 +123,7 @@ Il est important de noter que ces effets sont maintenus tant que le traitement e
 
 ### Ozempic (sémaglutide injectable) : si diabète de type 2 associé
 
-[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide 0,5 mg, 1 mg ou 2 mg) est indiqué pour le **diabète de type 2** et remboursé à 30 % (65 % en ALD diabète) en France pour cette indication. C'est le choix de référence quand le syndrome métabolique est associé à un diabète de type 2 avéré. Son bénéfice cardiovasculaire est prouvé par les études SUSTAIN-6 et SELECT.
+[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide 0,5 mg, 1 mg ou 2 mg) est indiqué pour le **diabète de type 2** et remboursé à 65 % en bithérapie metformine (100 % en ALD diabète) en France pour cette indication. C'est le choix de référence quand le syndrome métabolique est associé à un diabète de type 2 avéré. Son bénéfice cardiovasculaire est prouvé par les études SUSTAIN-6 et SELECT.
 
 ### Wegovy (sémaglutide 2,4 mg) : si obésité sans diabète
 
@@ -146,7 +146,7 @@ Les GLP-1 sont un outil puissant contre le syndrome métabolique, mais ils fonct
 
 ### Le syndrome métabolique justifie-t-il un remboursement du GLP-1 ?
 
-Le syndrome métabolique en tant que tel n'est pas une indication remboursée pour les GLP-1 en France. Le remboursement dépend de l'indication : diabète de type 2 pour Ozempic (30 %, 65 % en ALD), obésité sévère avec comorbidités dans certains cas. Si vous avez un syndrome métabolique avec diabète de type 2, Ozempic est remboursé. Si vous avez un syndrome métabolique sans diabète, vous n'avez pas droit au remboursement actuellement.
+Le syndrome métabolique en tant que tel n'est pas une indication remboursée pour les GLP-1 en France. Le remboursement dépend de l'indication : diabète de type 2 pour Ozempic (65 % en bithérapie metformine, 100 % en ALD), obésité sévère avec comorbidités dans certains cas. Si vous avez un syndrome métabolique avec diabète de type 2, Ozempic est remboursé. Si vous avez un syndrome métabolique sans diabète, vous n'avez pas droit au remboursement actuellement.
 
 ### Mon médecin traitant peut-il prescrire un GLP-1 pour syndrome métabolique ?
 

@@ -88,7 +88,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Trulicity | ~81 € | 65% (DT2 uniquement) |
-| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 € | 30% (DT2 uniquement) |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~80,18 € | 65% (DT2 bithérapie) |
 | Wegovy | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
 | Mounjaro | 230-440 € | Non remboursé |

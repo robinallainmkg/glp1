@@ -98,7 +98,7 @@ Dans ces situations, d'autres causes de chute de cheveux doivent être écartée
 
 ### L'alimentation est le levier principal
 
-La mesure la plus efficace pour limiter l'effluvium télogène sous GLP-1 est de maintenir un apport nutritionnel suffisant malgré la réduction de l'appétit. Les GLP-1 diminuent considérablement la faim, ce qui peut conduire à des apports très faibles en [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/) et en micronutriments — un terrain fertile pour l'effluvium.
+La mesure la plus efficace pour limiter l'effluvium télogène sous GLP-1 est de maintenir un apport nutritionnel suffisant malgré la réduction de l'appétit. Les GLP-1 diminuent considérablement la faim, ce qui peut conduire à des apports très faibles en [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) et en micronutriments — un terrain fertile pour l'effluvium.
 
 **Prioriser les protéines**
 

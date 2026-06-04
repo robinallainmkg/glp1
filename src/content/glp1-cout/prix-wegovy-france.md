@@ -7,8 +7,8 @@ keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy prix phar
 seoTitle: "Wegovy Prix Pharmacie Moins Cher 2026 : dès 169€"
 seoDescription: "Wegovy prix pharmacie moins cher en France 2026 : 169 à 360€/mois selon dosage. Comparatif officines, achat en ligne, remboursement S2 2026."
 publishedAt: '2025-01-28'
-updatedAt: '2026-03-17'
-date: '2026-03-17'
+updatedAt: '2026-05-28'
+date: '2026-05-28'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
@@ -16,6 +16,18 @@ image: "/images/thumbnails/prix-wegovy-france-illus.jpg"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 mainKeyword: "prix Wegovy France"
+secondaryKeywords: ["wegovy prix", "wegovy prix pharmacie moins cher", "wegovy pharmacie moins cher autour de moi", "wegovy prix pharmacie lafayette", "wegovy remboursement 2026", "wegovy non remboursé", "wegovy prix 2.4 mg", "wegovy prix pharmacie carte"]
+faqSchema:
+  - question: "Quel est le prix du Wegovy en pharmacie en 2026 ?"
+    answer: "Le prix du Wegovy varie de 169 à 360 euros par mois selon le dosage (0,25 mg d'initiation à 2,4 mg d'entretien). Les prix sont libres et varient d'une pharmacie à l'autre."
+  - question: "Le Wegovy sera-t-il remboursé en 2026 ?"
+    answer: "La HAS a rendu un avis favorable au remboursement du Wegovy. Les négociations de prix avec le CEPS sont en cours. Le remboursement est attendu au plus tôt au second semestre 2026."
+  - question: "Où trouver le Wegovy le moins cher près de chez moi ?"
+    answer: "Utilisez notre carte interactive des pharmacies pour comparer les prix du Wegovy. Les tarifs varient significativement entre officines, avec des écarts pouvant atteindre 30%."
+  - question: "Le Wegovy est-il disponible en pharmacie Lafayette ?"
+    answer: "Oui, le Wegovy est disponible dans les pharmacies Lafayette et autres grandes pharmacies en France. Le prix peut varier selon l'officine. Vérifiez la disponibilité auprès de votre pharmacie."
+  - question: "Peut-on se faire rembourser le Wegovy par sa mutuelle ?"
+    answer: "Certaines mutuelles haut de gamme commencent à proposer des forfaits couvrant partiellement le Wegovy. Vérifiez les conditions de votre contrat, notamment les forfaits 'médecines non remboursées' ou 'prévention obésité'."
 ---
 
 <script type="application/ld+json">
@@ -315,7 +327,7 @@ Le coût mensuel de Wegovy est **intégralement à la charge du patient** car il
 
 **Différence avec Ozempic :**
 - Wegovy = Indication **perte de poids**/obésité — **non remboursé**
-- Ozempic = Indication **[diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)** — **remboursé à 30%** (DT2 uniquement)
+- Ozempic = Indication **[diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)** — **remboursé à 65%** en bithérapie metformine (DT2 uniquement, 100% en ALD)
 - Même principe actif (sémaglutide) mais dosages différents
 
 ### Ma mutuelle peut-elle prendre en charge Wegovy ?
@@ -348,11 +360,11 @@ Le coût mensuel de Wegovy est **intégralement à la charge du patient** car il
 
 **Ozempic (sémaglutide 2 mg - diabète) :**
 - Prix pharmacie : **~77,60 €/stylo (TTC)**
-- Remboursement : **30%** (diabète de type 2 uniquement)
+- Remboursement : **65%** en bithérapie metformine (diabète de type 2 uniquement)
 - Dosage maximal : 2 mg/semaine
 - Perte de poids moyenne : **-12 à -15%**
 
-**Verdict : Ozempic est beaucoup moins cher** car remboursé à 30% pour le diabète de type 2, contre aucun remboursement pour Wegovy.
+**Verdict : Ozempic est beaucoup moins cher** car remboursé à 65% en bithérapie metformine pour le diabète de type 2, contre aucun remboursement pour Wegovy.
 
 Mais :
 - **Ozempic** est remboursé **uniquement** pour le diabète de type 2 (pas pour la perte de poids seule)
@@ -494,6 +506,9 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 
 ---
 
+
+> **À lire aussi** : [Acheter Wegovy en France en Pharmacie](/collections/glp1-cout/acheter-wegovy-en-france/)
+
 ## 🔗 Ressources et Guides Complémentaires
 
 **Optimisez votre traitement Wegovy :**
@@ -502,7 +517,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 - **[Guide Complet Wegovy 2026](/collections/traitements-glp1/guide-complet-wegovy/)** - Posologie complète de 0.25mg à 2.4mg
 - **[Effets Secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)** - Comment gérer nausées et vomissements
 - **[Dosage Wegovy Optimal](/collections/traitements-glp1/wegovy-dosage/)** - Guide d'escalade progressive
-- **[Régime Alimentaire sous Wegovy](/collections/regime-glp1/régime-mounjaro-optimal/)** - Nutrition optimale
+- **[Régime Alimentaire sous Wegovy](/collections/regime-glp1/regime-mounjaro-optimal/)** - Nutrition optimale
 
 ### Remboursement et Mutuelles
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)** - Guide exhaustif 2026
@@ -520,8 +535,8 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 - **[Cliniques Spécialisées Obésité](/collections/medecins-glp1-france/clinique-pour-obesite/)** - Prise en charge globale
 
 ### Témoignages et Communauté
-- **[Résultats Avant/Après Wegovy](/collections/temoignages/avant-après-glp1)** - Transformations réelles
-- **[Témoignages Avant/Après GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/)** - Résultats réels de patients
+- **[Résultats Avant/Après Wegovy](/collections/temoignages/avant-apres-glp1)** - Transformations réelles
+- **[Témoignages Avant/Après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour Wegovy ?**
 - 📞 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)

@@ -80,7 +80,7 @@ Cet article vous présente les informations essentielles et actualisées. Pour u
 - 83% patients perdent ≥5% poids
 - 66% patients perdent ≥10% poids
 - 48% patients perdent ≥15% poids
-- 32% patients perdent ≥20% poids — un résultat que pourrait dépasser le [Wegovy 7,2 mg haute dose (STEP-UP)](/collections/recherche-glp1/wegovy-7-2-mg-haute-dose-step-up-résultats/)
+- 32% patients perdent ≥20% poids — un résultat que pourrait dépasser le [Wegovy 7,2 mg haute dose (STEP-UP)](/collections/recherche-glp1/wegovy-7-2-mg-haute-dose-step-up-resultats/)
 
 **Profil d'efficacité détaillé :**
 - Perte rapide : -5% dès 12 semaines
@@ -119,6 +119,8 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 ## Facteurs Influençant l'Efficacité
 
 ### Variables Prédictives de Succès
+
+Pour savoir si vous êtes un bon candidat, consultez notre page [êtes-vous éligible à un GLP-1 ?](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/)
 
 **Facteurs favorables :**
 - **IMC initial 32-45 kg/m²** (zone optimale)
@@ -268,7 +270,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 ## Questions Fréquemment Posées
 
 **Combien peut-on perdre avec les GLP-1 ?**
-En moyenne 15-20% du poids initial avec Wegovy, 8-12% avec [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/), variables selon profil individuel. Pour une vision concrète, découvrez les [résultats avant/après réels avec les GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/) dans nos témoignages documentés.
+En moyenne 15-20% du poids initial avec Wegovy, 8-12% avec [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/), variables selon profil individuel. Pour une vision concrète, découvrez les [résultats avant/après réels avec les GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) dans nos témoignages documentés.
 
 **Combien de temps pour voir les premiers résultats ?**
 Les premiers effets apparaissent dès 2-4 semaines, avec une perte significative visible après 8-12 semaines.

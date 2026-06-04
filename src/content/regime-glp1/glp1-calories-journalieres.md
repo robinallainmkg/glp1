@@ -43,8 +43,8 @@ Les agonistes GLP-1 réduisent naturellement l'apport calorique de 200-500 kcal/
 ## Prix, disponibilité et variations en France
 
 ### Coût par calorie économisée
-- **Ozempic®** : ~76,58€/stylo (remboursé 30 % DT2) → ~0,42€ par 100 kcal réduites
-- **Trulicity®** : ~81€/mois (remboursé 30 % DT2) → ~0,43€ par 100 kcal réduites
+- **Ozempic®** : ~80,18€/stylo (remboursé 65 % DT2 en bithérapie metformine) → ~0,42€ par 100 kcal réduites
+- **Trulicity®** : ~81€/mois (remboursé 65 % DT2) → ~0,43€ par 100 kcal réduites
 - **Saxenda®** : 240-300€/mois (non remboursé) → ~1,30€ par 100 kcal réduites
 
 
@@ -109,7 +109,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Photos avant/après** : Motivation visuelle
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/regime-glp1/régime-cetogene-glp1/)
+- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)

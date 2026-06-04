@@ -24,7 +24,7 @@ mainKeyword: "effets secondaires Rybelsus sémaglutide oral"
 
 ### Troubles digestifs
 
-> **Bon à savoir** : La HAS a rendu un avis défavorable au remboursement de Rybelsus. Contrairement à Ozempic (sémaglutide injectable, remboursé à 30 % (65 % en ALD diabète) par l'Assurance Maladie pour le diabète de type 2, avec justificatif de prescription depuis février 2025), Rybelsus, forme de [sémaglutide oral](/collections/traitements-glp1/semaglutide-oral-comprimé-ozempic-france/), reste intégralement à la charge du patient.
+> **Bon à savoir** : La HAS a rendu un avis défavorable au remboursement de Rybelsus. Contrairement à Ozempic (sémaglutide injectable, remboursé à 65 % en bithérapie metformine (100 % en ALD diabète) par l'Assurance Maladie pour le diabète de type 2, avec justificatif de prescription depuis février 2025), Rybelsus, forme de [sémaglutide oral](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/), reste intégralement à la charge du patient.
 
 **Nausées et vomissements**
 - **Fréquence** : Très fréquent (>=10% selon le RCP)
@@ -171,10 +171,10 @@ mainKeyword: "effets secondaires Rybelsus sémaglutide oral"
 
 | Traitement | Nausées | Diarrhée | Maux tête | Tolérance générale |
 |------------|---------|----------|-----------|-------------------|
-| Rybelsus | 15-25% | 3-5% | 5-8% | Très bonne |
-| Ozempic | 20-30% | 10-15% | 10-12% | Bonne |
-| Wegovy | 25-35% | 12-18% | 8-10% | Moyenne |
-| Saxenda | 15-25% | 3-5% | 5-8% | Très bonne |
+| Rybelsus | 15-20% | 3-5% | 5-8% | Bonne |
+| Ozempic | ~24% | 10-15% | 10-12% | Bonne |
+| Wegovy | ~44% | 12-18% | 8-10% | Modérée (début) |
+| Saxenda | ~39% | ~20% | ~14% | Modérée |
 
 ## 💡 Conseils pour une Bonne Tolérance
 
@@ -205,7 +205,7 @@ mainKeyword: "effets secondaires Rybelsus sémaglutide oral"
 
 ### Associations de patients
 
-**Association Française des Diabétiques (AFD)**
+**Fédération Française des Diabétiques (FFD)**
 - **Site** : afdiabete.fr
 - **Téléphone** : 01 42 81 28 81
 - **Support** : Groupes de parole, conseils

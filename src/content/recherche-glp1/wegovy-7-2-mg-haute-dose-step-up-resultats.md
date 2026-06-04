@@ -34,8 +34,8 @@ Depuis son autorisation en France, [Wegovy (sémaglutide 2,4 mg)](/collections/t
 
 1. [Pourquoi augmenter la dose de Wegovy ?](#pourquoi-augmenter)
 2. [Le programme STEP-UP : conception et objectifs](#programme-step-up)
-3. [Résultats de STEP-UP : 7,2 mg vs 2,4 mg](#résultats-step-up)
-4. [Profil de tolérance de la haute dose](#tolérance)
+3. [Résultats de STEP-UP : 7,2 mg vs 2,4 mg](#resultats-step-up)
+4. [Profil de tolérance de la haute dose](#tolerance)
 5. [Comment se situe le 7,2 mg face à la concurrence ?](#comparaison)
 6. [Calendrier réglementaire et arrivée en France](#calendrier-france)
 7. [Ce que cela change pour les patients français](#patients-francais)
@@ -60,7 +60,7 @@ C'est une approche dose-réponse classique en pharmacologie : si la courbe d'eff
 
 ### La pression concurrentielle
 
-L'arrivée du [tirzépatide (Mounjaro/Zepbound)](/collections/traitements-glp1/guide-complet-mounjaro/), qui a montré des pertes de poids atteignant 20 à 22 % dans les études SURMOUNT, et le développement du [CagriSema](/collections/recherche-glp1/cagrisema-résultats-phase3-redefine-arrivee-france-2026/) (combinaison sémaglutide + cagrilintide) avec des résultats proches de 23 %, ont poussé Novo Nordisk à explorer le plein potentiel de sa molécule phare en monothérapie.
+L'arrivée du [tirzépatide (Mounjaro/Zepbound)](/collections/traitements-glp1/guide-complet-mounjaro/), qui a montré des pertes de poids atteignant 20 à 22 % dans les études SURMOUNT, et le développement du [CagriSema](/collections/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/) (combinaison sémaglutide + cagrilintide) avec des résultats proches de 23 %, ont poussé Novo Nordisk à explorer le plein potentiel de sa molécule phare en monothérapie.
 
 ## Le programme STEP-UP : conception et objectifs {#programme-step-up}
 
@@ -137,13 +137,13 @@ Point rassurant : la dose de 7,2 mg n'a pas fait émerger de nouveau signal de s
 
 ### Wegovy 7,2 mg vs Mounjaro (tirzépatide)
 
-Le tirzépatide à sa dose maximale (15 mg) a montré des pertes de poids moyennes de 20 à 22 % dans les études SURMOUNT. Avec 18,7 %, le sémaglutide 7,2 mg se rapproche de ces résultats mais ne les égale pas tout à fait. L'avantage du tirzépatide tient à son double mécanisme d'action (agoniste GLP-1 et GIP), qui semble apporter un bénéfice supplémentaire.
+Le tirzépatide à sa dose maximale (15 mg) a montré des pertes de poids moyennes de 20 à 22 % dans les études SURMOUNT. Avec 20,7 %, le sémaglutide 7,2 mg se rapproche de ces résultats et rivalise directement. L'avantage du tirzépatide tient à son double mécanisme d'action (agoniste GLP-1 et GIP), qui semble apporter un bénéfice supplémentaire.
 
 Toutefois, la comparaison directe entre études différentes a ses limites : les populations, les critères d'inclusion et les protocoles ne sont pas identiques. Seule une étude comparative directe (head-to-head) permettrait de trancher définitivement.
 
 ### Wegovy 7,2 mg vs CagriSema
 
-Le [CagriSema (sémaglutide + cagrilintide)](/collections/recherche-glp1/cagrisema-résultats-phase3-redefine-arrivee-france-2026/) a atteint 22,7 % de perte de poids dans REDEFINE 1, soit environ 4 points de plus que le 7,2 mg en monothérapie. Cela suggère que la combinaison avec l'amyline apporte un bénéfice supplémentaire au-delà de ce que l'augmentation de dose seule peut offrir.
+Le [CagriSema (sémaglutide + cagrilintide)](/collections/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/) a atteint 22,7 % de perte de poids dans REDEFINE 1, soit environ 4 points de plus que le 7,2 mg en monothérapie. Cela suggère que la combinaison avec l'amyline apporte un bénéfice supplémentaire au-delà de ce que l'augmentation de dose seule peut offrir.
 
 ### L'intérêt stratégique pour Novo Nordisk
 
@@ -192,7 +192,7 @@ Quelle que soit la dose, le sémaglutide reste un médicament qui s'inscrit dans
 
 ## Points clés à retenir
 
-- Le sémaglutide 7,2 mg (Wegovy haute dose) a montré une perte de poids de **18,7 %** dans l'essai STEP-UP, contre 15,6 % pour la dose actuelle de 2,4 mg.
+- Le sémaglutide 7,2 mg (Wegovy haute dose) a montré une perte de poids de **20,7 %** dans l'essai STEP-UP, contre 17,5 % pour la dose actuelle de 2,4 mg.
 - Près de **45 % des patients** sous 7,2 mg ont perdu au moins 20 % de leur poids.
 - Les effets secondaires gastro-intestinaux sont plus fréquents mais restent gérables avec une escalade de dose progressive.
 - Aucun nouveau signal de sécurité n'a été identifié par rapport à la dose de 2,4 mg.

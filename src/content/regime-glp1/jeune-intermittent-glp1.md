@@ -43,7 +43,7 @@ Le jeûne intermittent (JI) et les agonistes GLP-1 sont synergiques pour la pert
 ## Prix, disponibilité et variations en France
 
 ### Coûts JI + GLP-1
-- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)® + suivi** : ~76,58€/stylo (remboursé à 30 % (65 % en ALD diabète) pour le diabète de type 2) + consultation nutritionnelle
+- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)® + suivi** : ~80,18€/stylo (remboursé à 65 % en bithérapie metformine pour le diabète de type 2, 100 % en ALD) + consultation nutritionnelle
 - **Trulicity® + apps** : ~81€/mois (remboursé 65 % DT2) + applications JI (0-10€/mois)
 - **Lecteur glucose continu** : 60€/mois (optionnel surveillance)
 - **Suppléments** : Multivitamines 15-25€/mois
@@ -99,7 +99,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Éviter** : Sucres rapides en rupture jeûne
 - **Qualité** : Aliments entiers, peu transformés
 
-Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/) pour la [préservation de la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/). Le jeûne intermittent modifie les apports alimentaires. Consultez notre guide sur l'[apport calorique journalier optimal sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/) pour équilibrer votre alimentation.
+Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour la [préservation de la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/). Le jeûne intermittent modifie les apports alimentaires. Consultez notre guide sur l'[apport calorique journalier optimal sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/) pour équilibrer votre alimentation.
 
 ## Produits cosmétiques recommandés
 
@@ -114,7 +114,7 @@ Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/coll
 - **Spray buccal** : Fraîcheur haleine
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/regime-glp1/régime-cetogene-glp1/)
+- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)

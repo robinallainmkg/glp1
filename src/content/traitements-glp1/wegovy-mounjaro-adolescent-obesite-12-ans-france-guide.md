@@ -5,8 +5,8 @@ keywords: ['wegovy adolescent', 'mounjaro adolescent', 'obesite pediatrique glp1
 seoTitle: "Wegovy et Mounjaro Adolescent 12 ans+ : Guide Complet France 2026"
 seoDescription: "Wegovy adolescent 12 ans en France : conditions de prescription, résultats STEP TEENS, suivi spécifique et conseils pour les parents. Guide complet 2026."
 publishedAt: '2026-03-17'
-updatedAt: '2026-03-17'
-date: 2026-03-17
+updatedAt: '2026-05-29'
+date: 2026-05-29
 featured: true
 priority: 2
 author: 'Dr. Marie Dubois'
@@ -131,14 +131,14 @@ C'est une question légitime que se posent les parents. Les données chez l'adol
 
 Cela ne signifie pas que le traitement est inutile — il offre une fenêtre thérapeutique précieuse pour améliorer les habitudes de vie, les comorbidités et l'estime de soi. La question de la durée optimale du traitement chez l'adolescent est encore en cours d'évaluation dans les études de suivi à long terme.
 
+
+> **À lire aussi** : [Effets Secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
+
 ## Le remboursement de Wegovy chez les adolescents
 
 ### Situation actuelle
 
-En mars 2026, Wegovy n'est **pas remboursé par l'Assurance Maladie** pour les adolescents obèses, tout comme il ne l'est pas pour les adultes obèses. Le coût est entièrement à la charge des familles :
-
-- Dose initiale (0,25 mg) : environ 75-90 €/mois
-- Dose cible (2,4 mg) : environ 310-360 €/mois
+Depuis le 15 juin 2026, Wegovy est **remboursé à 65 % par l'Assurance Maladie** pour les adultes obèses (IMC ≥ 35 avec comorbidité ou IMC ≥ 40), après échec nutritionnel documenté. Les prix officiels remboursés sont de **146,91 €/mois** pour les premiers dosages. Pour les adolescents, le remboursement spécifique n'a pas encore été confirmé — une décision dédiée à cette population est attendue. En l'absence de remboursement spécifique pour les adolescents, le coût peut rester à la charge des familles.
 
 Certaines mutuelles prennent en charge partiellement le coût. Il est recommandé de vérifier les conditions de votre contrat.
 

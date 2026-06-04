@@ -1,5 +1,6 @@
 ---
 title: "Plantes Diabète Remèdes Naturels : Guide Glycémie 2026"
+published: false
 description: "Plantes diabète remèdes naturels validés par la science pour contrôler la glycémie. Guide des plantes médicinales en complément médical GLP-1."
 pubDate: 2025-08-20
 date: 2025-08-20

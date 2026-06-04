@@ -140,7 +140,7 @@ La perte de poids rapide sous GLP-1 ne distingue pas toujours entre la masse gra
 
 **Comment préserver sa masse musculaire :**
 
-- **Apports protéiques suffisants** : viser 1,2 à 1,6 g de protéines par kg de poids corporel par jour (soit 80-100 g/j pour une personne de 70 kg). Consultez notre guide sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/)
+- **Apports protéiques suffisants** : viser 1,2 à 1,6 g de protéines par kg de poids corporel par jour (soit 80-100 g/j pour une personne de 70 kg). Consultez notre guide sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/)
 - **Activité physique régulière** : la musculation et les exercices de résistance sont prioritaires par rapport au cardio pour préserver la masse musculaire. Voir notre guide [sport et GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/)
 - **Répartition des protéines sur la journée** : plutôt que de concentrer les protéines au dîner, viser un apport à chaque repas
 
@@ -206,7 +206,7 @@ Les traitements GLP-1 sont très efficaces, mais ils demandent un suivi nutritio
 - Signalez à votre médecin tout signe de fatigue intense, de neuropathie ou de chute de cheveux importante
 - La supplémentation doit être guidée par le bilan sanguin, pas systématique
 
-Pour aller plus loin, consultez notre guide sur les [micronutriments et vitamines sous GLP-1](/collections/regime-glp1/glp1-micronutriments/), notre [programme détox doux compatible GLP-1](/collections/regime-glp1/régime-detox-glp1/) ou notre article sur le [régime alimentaire optimal sous GLP-1](/collections/regime-glp1/régime-mediterraneen-glp1/).
+Pour aller plus loin, consultez notre guide sur les [micronutriments et vitamines sous GLP-1](/collections/regime-glp1/glp1-micronutriments/), notre [programme détox doux compatible GLP-1](/collections/regime-glp1/regime-detox-glp1/) ou notre article sur le [régime alimentaire optimal sous GLP-1](/collections/regime-glp1/regime-mediterraneen-glp1/).
 
 ---
 

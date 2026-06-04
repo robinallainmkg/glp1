@@ -204,6 +204,9 @@ Comme pour tous les GLP-1, les signaux habituels de pharmacovigilance sont suivi
 
 Un signal de sécurité nouveau a été identifié dans TRIUMPH-4 : la **dysesthésie** (sensations anormales de type picotements ou engourdissements), rapportée chez 20,9 % des patients à la dose de 12 mg. Cet effet n'avait pas été observé avec les autres agonistes GLP-1 et pourrait être lié au composant glucagon du triple agoniste. Le recul clinique reste limité et la pharmacovigilance post-AMM sera cruciale.
 
+
+> **À lire aussi** : [GLP-1 et Arthrose](/collections/recherche-glp1/glp1-arthrose-douleurs-articulaires-benefices-risques/)
+
 ## Questions fréquentes {#faq}
 
 **Le retatrutide est-il disponible en France en 2026 ?**
@@ -224,7 +227,7 @@ Un accès à titre exceptionnel (accès précoce via la HAS) pourrait être acco
 
 **Quels sont les essais en cours sur le retatrutide au-delà de l'obésité ?**
 
-Eli Lilly conduit des essais sur le retatrutide dans le diabète de type 2 (TRIUMPH-1 et TRIUMPH-2), la stéatohépatite non alcoolique (NASH/MASH), et a annoncé un futur essai sur l'arthrose du genou. Parmi les autres molécules en développement, [CagriSema](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-résultats/) (Novo Nordisk) et l'[orforglipron oral de Lilly](/collections/traitements-glp1/orforglipron-pilule-glp1-lilly-france-date/) font partie des traitements prometteurs à suivre. Les données cardiovasculaires à long terme font l'objet de l'essai TRIUMPH CV, dont les résultats sont attendus en 2028-2029.
+Eli Lilly conduit des essais sur le retatrutide dans le diabète de type 2 (TRIUMPH-1 et TRIUMPH-2), la stéatohépatite non alcoolique (NASH/MASH), et a annoncé un futur essai sur l'arthrose du genou. Parmi les autres molécules en développement, [CagriSema](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-resultats/) (Novo Nordisk) et l'[orforglipron oral de Lilly](/collections/traitements-glp1/orforglipron-pilule-glp1-lilly-france-date/) font partie des traitements prometteurs à suivre. Les données cardiovasculaires à long terme font l'objet de l'essai TRIUMPH CV, dont les résultats sont attendus en 2028-2029.
 
 ---
 

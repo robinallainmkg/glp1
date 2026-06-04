@@ -10,6 +10,7 @@ collection: "régime-glp1"
 thumbnail: "/images/thumbnails/glp1-index-glycemique.jpg"
 thumbnailAlt: "Illustration pour l'article glp1-index-glycemique"
 featured: false
+published: false
 priority: 5
 schema: "Article"
 mainKeyword: "index glycémique GLP-1 aliments glycémie"

@@ -167,6 +167,6 @@ Sophie a dû gérer les [effets secondaires](/collections/effets-secondaires-glp
 
 ---
 
-Pour les chiffres des études cliniques et d'autres témoignages, consultez notre dossier sur les [résultats avant/après documentés des GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/).
+Pour les chiffres des études cliniques et d'autres témoignages, consultez notre dossier sur les [résultats avant/après documentés des GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
 
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*

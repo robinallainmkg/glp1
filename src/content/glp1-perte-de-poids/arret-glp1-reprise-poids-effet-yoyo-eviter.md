@@ -31,7 +31,7 @@ affiliateConfig:
 
 ## Sommaire
 
-1. [Ce que disent les études sur la reprise de poids](#données)
+1. [Ce que disent les études sur la reprise de poids](#donnees)
 2. [Pourquoi le poids revient-il ?](#mecanismes)
 3. [Facteurs qui influencent la reprise](#facteurs)
 4. [Stratégies pour maintenir les résultats](#strategies)
@@ -103,7 +103,7 @@ Le temps sous GLP-1 doit être utilisé comme une "fenêtre de changement". Le m
 
 - Apprendre à manger plus lentement et en pleine conscience
 - Réduire les portions sans frustration (l'appétit diminué facilite cela)
-- Augmenter la consommation de [protéines](/collections/regime-glp1/glp1-protéines) et de légumes
+- Augmenter la consommation de [protéines](/collections/regime-glp1/glp1-proteines) et de légumes
 - Instaurer un [programme d'exercice pour maintenir les résultats](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) — la musculation est particulièrement efficace
 - Travailler sur les comportements alimentaires émotionnels grâce à un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) si nécessaire
 
@@ -173,4 +173,4 @@ Oui. Il n'existe pas de contre-indication médicale à la reprise d'un traitemen
 
 ---
 
-*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. La décision d'arrêter ou de poursuivre un traitement GLP-1 doit être prise en concertation avec votre médecin. Pour comprendre les [résultats attendus sous GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/), consultez nos guides détaillés. Dernière mise à jour : mars 2026.*
+*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. La décision d'arrêter ou de poursuivre un traitement GLP-1 doit être prise en concertation avec votre médecin. Pour comprendre les [résultats attendus sous GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/), consultez nos guides détaillés. Dernière mise à jour : mars 2026.*

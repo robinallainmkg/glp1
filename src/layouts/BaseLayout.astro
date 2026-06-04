@@ -8,6 +8,7 @@ import AnnouncementBar from '../components/AnnouncementBar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import AiCoach from '../components/AiCoach.astro';
 import AffiliateTracker from '../components/AffiliateTracker.astro';
+import PlatformTracker from '../components/PlatformTracker.astro';
 import SinocareBanner from '../components/SinocareBanner.astro';
 
 export interface Props {
@@ -90,6 +91,7 @@ const ogImage = new URL("/og-image.svg", Astro.site).href;
 
   <!-- Tracking clics affilies -->
   <AffiliateTracker />
+  <PlatformTracker />
 
   <script>
     // Newsletter handling only (navigation handled by SiteHeader component)

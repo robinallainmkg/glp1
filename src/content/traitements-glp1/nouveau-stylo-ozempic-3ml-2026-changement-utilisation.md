@@ -106,11 +106,11 @@ Avec le stylo 3 ml, le réservoir de solution n'est généralement pas visible d
 Les règles de conservation sont identiques à celles de l'ancien stylo :
 
 - **Avant la première utilisation** : conservez le stylo au réfrigérateur entre 2°C et 8°C. Ne le congelez jamais. Ne le placez pas près de la zone de refroidissement du réfrigérateur pour éviter le gel
-- **Après la première utilisation** : le stylo peut être conservé à température ambiante (ne dépassant pas 30°C) **pendant 8 semaines maximum**
+- **Après la première utilisation** : le stylo peut être conservé à température ambiante (ne dépassant pas 30°C) **pendant 6 semaines maximum**
 - **À l'abri de la chaleur et de la lumière** : ne laissez pas le stylo en plein soleil ou dans une voiture en été
 - **Durée de vie** : vérifiez la date de péremption imprimée sur le stylo. N'utilisez jamais un stylo périmé
 
-Pour la [conservation du stylo en voyage](/collections/traitements-glp1/conservation-injection-glp1-stylo-voyage-guide-pratique/), des précautions supplémentaires s'appliquent. Le stylo 3 ml étant utilisé sur deux mois (à la dose de 0,5 mg/semaine), il est impératif de noter la date de la **première injection** sur le stylo ou dans un agenda. Le stylo entamé ne doit pas être utilisé au-delà de 8 semaines, même s'il contient encore de la solution.
+Pour la [conservation du stylo en voyage](/collections/traitements-glp1/conservation-injection-glp1-stylo-voyage-guide-pratique/), des précautions supplémentaires s'appliquent. Le stylo 3 ml étant utilisé sur deux mois (à la dose de 0,5 mg/semaine), il est impératif de noter la date de la **première injection** sur le stylo ou dans un agenda. Le stylo entamé ne doit pas être utilisé au-delà de 6 semaines, même s'il contient encore de la solution.
 
 ## Transition entre les deux stylos {#transition}
 
@@ -145,7 +145,7 @@ Oui, bien sûr. Terminez votre stylo actuel normalement. La transition vers le n
 Le prix du boîtier peut différer légèrement du fait du nouveau conditionnement, mais le coût mensuel du traitement reste comparable. Renseignez-vous auprès de votre pharmacien ou consultez notre [guide des prix Ozempic](/collections/glp1-cout/prix-ozempic-france/) pour les tarifs actualisés.
 
 **Est-ce que je dois stocker différemment le nouveau stylo ?**
-Non, les règles de conservation sont identiques : réfrigérateur avant ouverture, et 8 semaines maximum à température ambiante après la première utilisation. Notez simplement la date de première utilisation pour ne pas dépasser la limite de 8 semaines.
+Non, les règles de conservation sont identiques : réfrigérateur avant ouverture, et 6 semaines maximum à température ambiante après la première utilisation. Notez simplement la date de première utilisation pour ne pas dépasser la limite de 6 semaines.
 
 **Novo Nordisk va-t-il aussi changer le conditionnement d'Ozempic 1 mg ?**
 Les informations disponibles en mars 2026 concernent spécifiquement le changement du conditionnement d'Ozempic 0,5 mg. Pour le 1 mg, renseignez-vous auprès de votre pharmacien ou consultez les communications officielles de l'ANSM.

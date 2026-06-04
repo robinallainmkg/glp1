@@ -8,6 +8,21 @@
 - **CI/CD** : GitHub Actions → FTP vers Hostinger
 - **Branche unique** : `main` (test local + deploy)
 - **Analytics** : GA4 (`G-SFS6MEPVPC`) + Google Search Console (`sc-domain:glp1-france.fr`) + Hotjar
+- **Sync Analytics** : GitHub Actions daily (`sync-analytics.yml`, 8h Paris) + routine analytics (12h Paris)
+
+### Regle critique : Fraicheur donnees GA4/GSC
+
+**A CHAQUE session** touchant SEO/trafic/analytics/monetisation, verifier :
+```sql
+SELECT 'ga_metrics' as tbl, MAX(date) FROM ga_metrics UNION ALL SELECT 'gsc_metrics', MAX(date) FROM gsc_metrics;
+```
+- GA > 2 jours de retard OU GSC > 5 jours = **ALERTE IMMEDIATE**
+- **Cause probable** : refresh token Google expire
+- **Fix** (4 commandes, 2 minutes) :
+  1. `node scripts/sync-analytics.mjs --setup` (renouvelle token via navigateur)
+  2. `node scripts/sync-analytics.mjs --days 10` (rattrape les donnees)
+  3. `gh secret set GOOGLE_REFRESH_TOKEN < <(grep GOOGLE_REFRESH_TOKEN .env | cut -d= -f2-)` (met a jour GitHub Actions)
+  4. `gh workflow run sync-analytics.yml` (verifie)
 
 ### Règles absolues
 
@@ -21,48 +36,37 @@
 - Push sur `main` déclenche le deploy
 - **NE JAMAIS court-circuiter les agents** — toujours passer par le pipeline pour les modifications
 
-## Monetisation — Partenariat Annette.care (CPA)
+## Monetisation — Sinocare + Coach IA
 
-**Seul partenaire actif** : Annette.care (Charles.co retire, pas de deal signe)
+**Politique active depuis 12/05/2026** : Sinocare-only (affiliation produits sante) + Coach IA (abonnement)
 
-### Annette.care — Accompagnement + Prescription GLP-1
-- **CPA** : commission par patient oriente vers Annette
-- **Offre** : suivi dietetique + medecins partenaires (primo-prescription si eligible + renouvellement)
-- **Code promo** : `CARE50` (50% sur le 1er mois → 24,50€ au lieu de 49€)
-- **Note Google** : 4.8/5, 2 000+ patients accompagnes
-- **Lien affilie** : `https://www.annette.care/?utm_source=glp1france&utm_medium={medium}&utm_campaign=partenariat_{context}`
+### Annette.care — DESACTIVE
+- Tous les composants Annette (PartnerCTA, PartnerSidebar, PartnerComparator) sont **neutralises** (rendu vide)
+- Les composants restent dans le code pour compat des imports mais ne rendent RIEN
+- **NE PAS reactiver** sans decision explicite de l'utilisateur
+- Ancien code promo CARE50, ancien lien affilie — ne plus utiliser
 
-### Points de contact affiliation (tous les liens vers annette.care) :
-1. **Nav header** : bouton bleu "Consulter un specialiste" (desktop + mobile) — `utm_medium=nav`
-2. **CTA mid-article** : injecte apres le 2e H2 dans chaque article — `utm_medium=affiliation`, context=`article_inline`
-3. **CTA bottom article** : en bas de chaque article — `utm_medium=affiliation`, context=`article`
-4. **Sidebar** : card partenaire sticky sur desktop, sous l'article sur mobile — `utm_medium=affiliation`, context=`sidebar`
-5. **Comparateur homepage** : bloc complet section #partenaires — `utm_medium=affiliation`
-6. **Chat Coach IA** : redirection naturelle quand pertinent (prescription, accompagnement) — `utm_medium=chat_coach`
-7. **Banner homepage** : bandeau CTA section 8.5 — `utm_medium=affiliation`, context=`banner`
+### Sinocare — Affiliation produits sante (actif)
+- **Callouts produits** : glucometres, tensiometres, CGM integres dans les articles pertinents
+- **Tracking** : `affiliate_clicks` table avec `element = 'sinocare_callout'`
+- Pages actives : prix-ozempic, prix-mounjaro, effets-secondaires, traitements
 
-### Composants partenaires :
-- `src/components/PartnerCTA.astro` — CTA inline (articles)
-- `src/components/PartnerComparator.astro` — Bloc comparateur (homepage)
-- `src/components/PartnerSidebar.astro` — Sidebar sticky (articles)
-- `src/components/AffiliateTracker.astro` — Tracking clics (tous les layouts)
+### Coach IA — Monetisation principale (actif)
+- **Edge function** : `supabase/functions/ai-coach/index.ts` (Groq/Llama 3.3 70B + RAG Mistral)
+- **Widget** : `src/components/AiCoach.astro` — chat flottant sur toutes les pages
+- **Active dans** : BaseLayout, StaticLayout, UnifiedLayout, DiagnosticLayout
+- **Composants conversion** : `CoachCTA` (inline articles), `CoachSidebar` (sidebar articles)
+- **Injection** : CoachCTA insere avant le 3e H2 dans les articles (client-side)
+- **Metriques** : ~30 sessions/sem, ~1.7 leads/jour depuis activation
 
 ### Tracking des clics affilies :
 - **Table Supabase** : `affiliate_clicks` (partner, campaign, page_url, element, session_id, created_at)
-- **JS client** : `AffiliateTracker.astro` intercepte les clics `rel="sponsored"` ou `href*="annette.care"`
+- **JS client** : `AffiliateTracker.astro` intercepte les clics `rel="sponsored"` + liens partenaires
 - **Requete reporting** :
   ```sql
   SELECT partner, campaign, element, count(*), date_trunc('day', created_at) as jour
   FROM affiliate_clicks GROUP BY partner, campaign, element, jour ORDER BY jour DESC;
   ```
-
-### Coach IA avec redirection Annette :
-- **Edge function** : `supabase/functions/ai-coach/index.ts` (Groq/Llama 3.3 70B + RAG Mistral)
-- **Widget** : `src/components/AiCoach.astro` — chat flottant sur toutes les pages
-- **Active dans** : BaseLayout, StaticLayout, UnifiedLayout, DiagnosticLayout
-- **System prompt** inclut une section PARTENAIRE ANNETTE.CARE qui redirige naturellement vers annette.care quand l'utilisateur parle de prescription, eligibilite, accompagnement, suivi nutritionnel
-- **Fallbacks** prescription et diet mentionnent aussi Annette avec le code CARE50
-- Les agents (opportunities, editorial, internal-links) priorisent le contenu a forte intention d'achat
 
 ## Structure du projet
 

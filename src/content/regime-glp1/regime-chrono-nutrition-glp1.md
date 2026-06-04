@@ -111,7 +111,7 @@ Lors de l'initiation du traitement, les nausées peuvent perturber les habitudes
 
 | Traitement | Prix mensuel | Remboursement Sécu |
 |-----------|-------------|-------------------|
-| **Ozempic** (sémaglutide DT2) | ~77 € | 30% (DT2) à 100% (ALD 30) |
+| **Ozempic** (sémaglutide DT2) | ~80 € | 65% (DT2 bithérapie) à 100% (ALD) |
 | **Wegovy** (sémaglutide obésité) | ~270 € | Non remboursé |
 | **Mounjaro** (tirzepatide) | 230 à 440 € | Non remboursé (attendu S2 2026) |
 
@@ -126,7 +126,7 @@ La chrono-nutrition n'est pas rigide : l'important est de respecter l'ordre des 
 Sous GLP-1, la faim peut être très réduite, parfois jusqu'à oublier de manger. Dans ce cas, ne vous forcez pas à finir votre assiette. L'objectif n'est pas de manger un certain volume, mais d'apporter les bons nutriments au bon moment, en tenant compte de vos [calories journalières](/collections/regime-glp1/glp1-calories-journalieres/).
 
 ### Surveiller la masse musculaire
-Une perte de poids rapide peut entraîner une perte de masse musculaire. Assurez-vous d'apporter suffisamment de [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/) à chaque repas (au moins 1,2 g par kg de poids corporel par jour) pour préserver vos muscles.
+Une perte de poids rapide peut entraîner une perte de masse musculaire. Assurez-vous d'apporter suffisamment de [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) à chaque repas (au moins 1,2 g par kg de poids corporel par jour) pour préserver vos muscles.
 
 ## FAQ
 

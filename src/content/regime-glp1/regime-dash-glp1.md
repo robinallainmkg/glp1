@@ -107,7 +107,7 @@ Le régime DASH, naturellement peu gras et bien structuré en petits repas, conv
 
 ### Ozempic (sémaglutide)
 - Prix par stylo : ~76,58 €
-- Remboursement Sécu : **30%** pour le diabète de type 2
+- Remboursement Sécu : **65%** en bithérapie metformine pour le diabète de type 2
 - **ALD 30 (diabète de type 2)** : prise en charge à 100% du ticket modérateur. L'obésité seule n'est pas une ALD en France en mars 2026.
 
 ### Wegovy (sémaglutide 2,4 mg pour l'obésité)
@@ -138,6 +138,9 @@ Le traitement GLP-1 n'impose pas de restriction sodée en lui-même. Cependant, 
 
 ### Le régime DASH peut-il remplacer les médicaments antihypertenseurs ?
 Non. Le régime DASH peut réduire significativement la tension artérielle mais ne remplace pas un traitement antihypertenseur prescrit par votre médecin. Il peut permettre, dans certains cas, d'abaisser les doses médicamenteuses — mais cette décision appartient à votre médecin.
+
+
+> **À lire aussi** : [Régime méditerranéen GLP-1 alimentation santé](/collections/regime-glp1/regime-mediterraneen-glp1/)
 
 ## Conclusion
 

@@ -35,12 +35,13 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 
 | Médicament | Laboratoire | Indications | Posologie | Prix/mois | Remboursement |
 |------------|-------------|-------------|-----------|-----------|---------------|
-| **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** | Novo Nordisk | Diabète type 2 | 0.25mg à 2mg/semaine | ~76,58€/stylo | 30% DT2 uniquement |
+| **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** | Novo Nordisk | Diabète type 2 | 0.25mg à 2mg/semaine | ~80,18€/stylo | 65% DT2 (100% en ALD) |
 | **[Wegovy (sémaglutide)](/collections/traitements-glp1/guide-complet-wegovy/)** | Novo Nordisk | Obésité (IMC ≥30) | 0.25mg à 2.4mg/semaine | 169-360€ | Non remboursé |
 | **<a href="/collections/traitements-glp1/guide-complet-saxenda/">Saxenda</a>** | Novo Nordisk | Obésité | 0.6mg à 3mg/jour | 240-300€ | Non remboursé |
-| **<a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** | Lilly | Diabète type 2 | 0.75mg à 4.5mg/semaine | ~81€ | 30% DT2 |
-| **<a href="/collections/traitements-glp1/guide-complet-victoza/">Victoza</a>** | Novo Nordisk | Diabète type 2 | 0.6mg à 1.8mg/jour | ~60€ | 30% DT2 |
-| **Rybelsus** | Novo Nordisk | Diabète type 2 | 3mg à 14mg/jour | 80-110€ | 30% DT2 |
+| **<a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** | Lilly | Diabète type 2 | 0.75mg à 4.5mg/semaine | ~81€ | 65% DT2 (100% en ALD) |
+| **<a href="/collections/traitements-glp1/guide-complet-victoza/">Victoza</a>** | Novo Nordisk | Diabète type 2 | 0.6mg à 1.8mg/jour | ~60€ | 65% DT2 (100% en ALD) |
+| **[Mounjaro (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/)** | Eli Lilly | Diabète type 2 + Obésité | 2.5mg à 15mg/semaine | 200-350€ | Non remboursé (en cours d'évaluation HAS) |
+| **Rybelsus** | Novo Nordisk | Diabète type 2 | 3mg à 14mg/jour | 80-110€ | Non remboursé en France (avis HAS défavorable) |
 
 **💡 Conseil d'expert :** Pour optimiser votre [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/), combinez votre traitement avec une alimentation équilibrée et de l'activité physique régulière.
 
@@ -60,19 +61,19 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 - **Laboratoire :** Novo Nordisk
 - **Indications :** Diabète type 2
 - **Posologie :** 0.6mg à 1.8mg/jour
-- **Prix :** ~60,26€/mois (remboursé 30% DT2)
+- **Prix :** ~60,26€/mois (remboursé 65% DT2)
 
 ### 6. **Rybelsus (Sémaglutide oral)**
 - **Laboratoire :** Novo Nordisk
 - **Indications :** Diabète type 2
 - **Posologie :** 3mg à 14mg/jour
-- **Prix :** 80-110€/mois (remboursé 30% DT2)
+- **Prix :** 80-110€/mois (non remboursé en France, avis HAS défavorable)
 
 ## Efficacité des GLP-1 pour la Perte de Poids
 
 ### Résultats Cliniques Prouvés
 
-**Les médicaments GLP-1 offrent des résultats exceptionnels** pour la perte de poids durable. Découvrez pourquoi ces traitements révolutionnent la prise en charge de l'obésité en France. Pour aller plus loin, consultez les [résultats avant/après des traitements GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/) de vrais patients.
+**Les médicaments GLP-1 offrent des résultats exceptionnels** pour la perte de poids durable. Découvrez pourquoi ces traitements révolutionnent la prise en charge de l'obésité en France. Pour aller plus loin, consultez les [résultats avant/après des traitements GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) de vrais patients.
 
 - **Perte de poids moyenne :** 8-15% du poids corporel en 6-12 mois
 - **Ozempic/Wegovy :** Jusqu'à 15-20% de perte de poids (jusqu'à 15kg)
@@ -99,7 +100,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 ### Effets Gastro-Intestinaux (Les Plus Fréquents)
 
-**Les nausées et troubles digestifs sont les [effets secondaires](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) les plus courants** des médicaments GLP-1, mais ils sont généralement temporaires et diminuent avec le temps.
+**Les nausées et troubles digestifs sont les [effets secondaires](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) les plus courants** des médicaments GLP-1, mais ils sont généralement temporaires et diminuent avec le temps. Pour des stratégies concrètes, lisez notre [guide pratique nausées et vomissements sous GLP-1](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/).
 
 - **Nausées :** 30-40% des patients (diminuent après 4-6 semaines)
 - **Vomissements :** 10-15% des patients (rares à posologie optimale)
@@ -130,23 +131,23 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 **Le remboursement des médicaments GLP-1 dépend de votre situation médicale.** Pour toutes les conditions détaillées, consultez notre [guide complet du remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
-- **Diabète type 2 :** 30% remboursé par la Sécurité Sociale (100% en ALD 30) — depuis février 2025, un formulaire obligatoire encadre la prescription selon les [règles ANSM de prescription des GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)
+- **Diabète type 2 :** 65% remboursé par la Sécurité Sociale en bithérapie metformine (100% en ALD 30) — depuis février 2025, un formulaire obligatoire encadre la prescription selon les [règles ANSM de prescription des GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)
 - **Obésité (IMC ≥30) :** Wegovy, Mounjaro et Saxenda ne sont **pas remboursés** en France (mars 2026)
 - **ALD 30 (diabète de type 2) :** 100% du ticket modérateur pour Ozempic
 - **Mutuelle santé :** Peut couvrir le reste à charge selon votre contrat
 
-**Pour bénéficier du remboursement GLP-1 :** Seuls les traitements indiqués pour le diabète de type 2 (Ozempic, Trulicity, Victoza, Rybelsus) sont remboursés à 30% par la Sécurité Sociale. Wegovy, Mounjaro et Saxenda (indiqués pour l'obésité) ne sont **pas remboursés** en France (mars 2026) et restent entièrement à la charge du patient.
+**Pour bénéficier du remboursement GLP-1 :** Seuls les traitements indiqués pour le diabète de type 2 (Ozempic, Trulicity, Victoza) sont remboursés à 65% en bithérapie metformine (100% en ALD) par la Sécurité Sociale. Rybelsus n'est pas remboursé (avis HAS défavorable). Wegovy, Mounjaro et Saxenda (indiqués pour l'obésité) ne sont **pas remboursés** en France (mars 2026) et restent entièrement à la charge du patient.
 
 ### Prix Réels des Médicaments GLP-1 en Pharmacie (mars 2026)
 
 | Médicament | Prix Public/mois | Remboursement SS | Prix Final/mois |
 |------------|------------------|------------------|-----------------|
-| **Ozempic** | ~76,58€/stylo | 30% DT2 | ~54€ (DT2) |
+| **Ozempic** | ~80,18€/stylo | 65% DT2 (bithérapie) | ~28€ (DT2) |
 | **Wegovy** | 169-360€ | Non remboursé | 169-360€ (à charge) |
 | **Saxenda** | 240-300€ | Non remboursé | 240-300€ (à charge) |
-| **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | ~81€ | 30% DT2 | ~57€ (DT2) |
-| **Victoza** | ~60,26€ | 30% DT2 | ~42€ (DT2) |
-| **Rybelsus** | 80-110€ | 30% DT2 | 56-77€ (DT2) |
+| **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | ~81€ | 65% DT2 | ~28€ (DT2) |
+| **Victoza** | ~60,26€ | 65% DT2 | ~21€ (DT2) |
+| **Rybelsus** | 80-110€ | Non remboursé | 80-110€ (à charge) |
 
 **💰 Conseil économique :** Pour réduire le coût de votre traitement GLP-1, vérifiez d'abord votre éligibilité au remboursement diabète. Les médicaments comme Ozempic — consultez le [prix d'Ozempic](/collections/glp1-cout/prix-ozempic-france/) en détail — et Trulicity peuvent être très abordables une fois remboursés.
 
@@ -187,9 +188,9 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 ### Étape 1 : Consultation Médicale Initiale
 
-**La première étape indispensable** pour commencer un traitement GLP-1 est une consultation médicale complète avec votre médecin.
+**La première étape indispensable** pour [commencer un traitement GLP-1](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/) est une consultation médicale complète avec votre médecin.
 
-- **Médecin traitant** ou **endocrinologue** spécialisé en diabète/obésité — il est aussi possible d'[obtenir une prescription GLP-1 en ligne](/collections/medecins-glp1-france/prescription-glp1-télémédecine-en-ligne-france/) via la télémédecine
+- **Médecin traitant** ou **endocrinologue** spécialisé en diabète/obésité — il est aussi possible d'[obtenir une prescription GLP-1 en ligne](/collections/medecins-glp1-france/prescription-glp1-telemedecine-en-ligne-france/) via la télémédecine
 - **Bilan sanguin complet :** Glycémie, HbA1c, cholestérol, triglycérides
 - **Évaluation IMC** et composition corporelle
 - **Recherche de comorbidités :** Hypertension, apnée du sommeil, etc.

@@ -43,7 +43,7 @@ L'association régime cétogène et agonistes GLP-1 peut être synergique pour l
 ## Prix, disponibilité et variations en France
 
 ### Coûts régime cétogène + GLP-1
-- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)® + suppléments** : ~76,58€/stylo (remboursé 30 % DT2) + 30-50€/mois
+- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)® + suppléments** : ~80,18€/stylo (remboursé 65 % DT2 en bithérapie metformine) + 30-50€/mois
 - **Trulicity® + MCT oil** : ~81€/mois (remboursé 65 % DT2) + 25-40€/mois
 - **Suivi nutritionnel** : 60-80€/consultation
 - **Bandelettes cétones** : 40-60€/mois
@@ -111,7 +111,7 @@ Le régime cétogène (ou "keto") réduit drastiquement les glucides au profit d
 - **Probiotiques** : Microbiote intestinal
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/regime-glp1/régime-cetogene-glp1/)
+- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
@@ -124,10 +124,10 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
 Oui, mais surveillance accrue nécessaire. Risque potentiel d'acidocétose chez diabétiques prédisposés.
 
 ### Faut-il diminuer la dose de GLP-1 en keto ?
-Souvent utile initialement car le keto réduit naturellement l'appétit. Réajustement progressif selon tolérance. Vous pouvez aussi explorer le [régime paléo sous GLP-1](/collections/regime-glp1/régime-paleo-glp1/) comme alternative moins restrictive.
+Souvent utile initialement car le keto réduit naturellement l'appétit. Réajustement progressif selon tolérance. Vous pouvez aussi explorer le [régime paléo sous GLP-1](/collections/regime-glp1/regime-paleo-glp1/) comme alternative moins restrictive.
 
 ### Combien de temps maintenir cette association ?
-3-6 mois généralement, puis transition vers [régime méditerranéen](/collections/regime-glp1/régime-mediterraneen-glp1) équilibré tout en maintenant GLP-1. Certains patients optent pour le [jeûne intermittent associé aux GLP-1](/collections/regime-glp1/jeune-intermittent-glp1/) comme alternative lors de la transition.
+3-6 mois généralement, puis transition vers [régime méditerranéen](/collections/regime-glp1/regime-mediterraneen-glp1) équilibré tout en maintenant GLP-1. Certains patients optent pour le [jeûne intermittent associé aux GLP-1](/collections/regime-glp1/jeune-intermittent-glp1/) comme alternative lors de la transition.
 
 ### Quels risques spécifiques à surveiller ?
 Acidocétose (diabétiques), constipation majorée, calculs rénaux, carences vitamines liposolubles.

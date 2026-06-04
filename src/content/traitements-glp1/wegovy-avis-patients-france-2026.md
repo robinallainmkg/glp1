@@ -26,8 +26,8 @@ Nous avons croise les données des essais cliniques STEP, les témoignages de pa
 ## Sommaire
 
 1. [Wegovy : Rappel du Traitement](#wegovy--rappel-du-traitement)
-2. [Résultats Cliniques : Les Etudes STEP](#résultats-cliniques--les-etudes-step)
-3. [Témoignages Patients : 5 Avis Reels](#témoignages-patients--5-avis-reels)
+2. [Résultats Cliniques : Les Etudes STEP](#resultats-cliniques--les-etudes-step)
+3. [Témoignages Patients : 5 Avis Reels](#temoignages-patients--5-avis-reels)
 4. [Note Globale des Patients : 4.1/5](#note-globale-des-patients--41-sur-5)
 5. [Prix et Remboursement : Le Point de Friction](#prix-et-remboursement--le-point-de-friction)
 6. [Effets Secondaires : Ce que Rapportent les Patients](#effets-secondaires--ce-que-rapportent-les-patients)

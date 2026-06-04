@@ -10,6 +10,7 @@ collection: "alternatives-glp1"
 thumbnail: "/images/thumbnails/berberine-glp1-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Berberine GLP-1"
 featured: false
+published: false
 priority: 5
 schema: "Article"
 mainKeyword: "berbérine GLP-1 glycémie perte de poids"
@@ -111,7 +112,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ### Optimisation résultats
 - **Hygiène de vie** : Alimentation exercice complémentaires
-- **Suivi biologique** : Bilans réguliers programmés, notamment [cholestérol et triglycérides](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-bénéfices/)
+- **Suivi biologique** : Bilans réguliers programmés, notamment [cholestérol et triglycérides](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-benefices/)
 - **Education thérapeutique** : Formation patient essentielle
 - **Soutien psychologique** : Accompagnement si nécessaire
 

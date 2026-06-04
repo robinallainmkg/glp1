@@ -36,8 +36,8 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 1. [Dosage Wegovy : Protocole complet](#dosage-wegovy-protocole-complet)
 2. [Augmentation progressive](#augmentation-progressive)
 3. [Adaptation individuelle](#adaptation-individuelle)
-4. [Précautions et contre-indications](#précautions-et-contre-indications)
-5. [Questions fréquentes](#questions-fréquentes)
+4. [Précautions et contre-indications](#precautions-et-contre-indications)
+5. [Questions fréquentes](#questions-frequentes)
 
 ---
 

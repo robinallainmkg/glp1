@@ -122,7 +122,7 @@ En attendant l'arrivée du comprimé oral pour l'obésité en France, plusieurs 
 
 1. **Rybelsus** (sémaglutide oral 14 mg max) si vous êtes diabétique de type 2 : non remboursé par la Sécurité Sociale en France (la HAS a rendu un avis défavorable au remboursement), mais déjà disponible en pharmacie
 2. **[Wegovy](/collections/traitements-glp1/wegovy-dosage/)** (sémaglutide injectable 2,4 mg) pour l'obésité : non remboursé, 169-360 €/mois, disponible dès maintenant
-3. **Ozempic** (sémaglutide injectable 2 mg) si vous avez un diabète de type 2 : remboursé à 30%, disponible
+3. **Ozempic** (sémaglutide injectable 2 mg) si vous avez un diabète de type 2 : remboursé à 65% en bithérapie metformine, disponible
 4. **[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)** (tirzepatide injectable, double action GLP-1/GIP) : non remboursé, 230-440 €/mois
 
 ## Questions fréquentes
@@ -136,11 +136,14 @@ Non, la contrainte de prise à jeun avec peu d'eau reste obligatoire même avec 
 ### Y aura-t-il un comprimé équivalent à Mounjaro (tirzepatide) ?
 Eli Lilly travaille également sur des formulations orales de tirzepatide, mais ces développements sont moins avancés que ceux de Novo Nordisk pour le sémaglutide. Une forme orale de tirzepatide n'est pas attendue avant 2028-2029.
 
+
+> **À lire aussi** : [Effets Secondaires Rybelsus Sémaglutide Oral](/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/)
+
 ## Conclusion
 
 Le sémaglutide oral haute dose représente l'évolution naturelle des traitements GLP-1 : une molécule déjà prouvée, rendue accessible sans injection. Si la contrainte de la prise à jeun persiste, elle est jugée acceptable par la majorité des patients dans les études cliniques.
 
-Novo Nordisk travaille également sur un [Wegovy en comprimé oral](/collections/traitements-glp1/wegovy-comprimé-oral-pilule-france-date-ema/), dont l'arrivée en France est prévue d'ici 2027-2028, après les procédures réglementaires européennes. En attendant, les patients éligibles peuvent déjà accéder aux formes injectables ou à Rybelsus (pour le diabète de type 2).
+Novo Nordisk travaille également sur un [Wegovy en comprimé oral](/collections/traitements-glp1/wegovy-comprime-oral-pilule-france-date-ema/), dont l'arrivée en France est prévue d'ici 2027-2028, après les procédures réglementaires européennes. En attendant, les patients éligibles peuvent déjà accéder aux formes injectables ou à Rybelsus (pour le diabète de type 2).
 
 ---
 

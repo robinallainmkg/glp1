@@ -34,7 +34,7 @@ En France, plus de 3 millions de personnes souffrent d'insuffisance rénale chro
 
 1. [Comment les GLP-1 protègent-ils les reins ?](#mecanisme)
 2. [Les grandes études cliniques](#etudes)
-3. [Peut-on prendre des GLP-1 en insuffisance rénale ?](#précautions)
+3. [Peut-on prendre des GLP-1 en insuffisance rénale ?](#precautions)
 4. [Recommandations françaises 2026](#recommandations)
 5. [Questions fréquentes](#faq)
 

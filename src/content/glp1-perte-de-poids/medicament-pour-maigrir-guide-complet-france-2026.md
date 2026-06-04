@@ -32,14 +32,14 @@ Ce guide complet passe en revue **tous les traitements autorisés** pour la pert
 
 ## Sommaire
 
-- [Les 4 medicaments GLP-1 autorisés pour la perte de poids](#les-4-médicaments-glp-1-autorisés-pour-la-perte-de-poids)
-- [Tableau comparatif](#tableau-comparatif-des-médicaments-pour-maigrir)
-- [Les medicaments oraux (comprimes)](#les-médicaments-oraux-comprimés)
+- [Les 4 medicaments GLP-1 autorisés pour la perte de poids](#les-4-medicaments-glp-1-autorises-pour-la-perte-de-poids)
+- [Tableau comparatif](#tableau-comparatif-des-medicaments-pour-maigrir)
+- [Les medicaments oraux (comprimes)](#les-medicaments-oraux-comprimes)
 - [Comment obtenir une prescription](#comment-obtenir-une-prescription-)
 - [Les alternatives non-GLP-1](#les-alternatives-non-glp-1)
 - [Effets secondaires](#effets-secondaires--ce-quil-faut-savoir)
 - [Prix et remboursement en 2026](#prix-et-remboursement-en-2026)
-- [FAQ](#faq--questions-fréquentes)
+- [FAQ](#faq--questions-frequentes)
 
 ## Les 4 Médicaments GLP-1 Autorisés pour la Perte de Poids
 
@@ -195,7 +195,7 @@ Le **Rybelsus** est le seul GLP-1 disponible sous forme de comprimé en France. 
 
 Le Rybelsus doit etre pris a jeun avec un demi-verre d'eau, au moins 30 minutes avant le premier repas. Cette contrainte peut etre genante au quotidien.
 
-Pour en savoir plus : [guide complet Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/) | [semaglutide oral en France](/collections/traitements-glp1/semaglutide-oral-comprimé-ozempic-france/)
+Pour en savoir plus : [guide complet Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/) | [semaglutide oral en France](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/)
 
 ### Orforglipron -- La Future Pilule pour Maigrir
 
@@ -219,7 +219,7 @@ Depuis **juin 2025**, les regles de prescription des medicaments GLP-1 pour l'ob
 
 ### Conditions de prescription
 
-Pour beneficier d'un médicament pour maigrir, vous devez remplir l'une des conditions suivantes :
+Pour vérifier votre éligibilité, consultez notre page [suis-je éligible à un traitement GLP-1 ?](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/) Pour beneficier d'un médicament pour maigrir, vous devez remplir l'une des conditions suivantes :
 
 - **IMC supérieur ou égal a 30** (obésité) : prescription possible sans condition supplémentaire
 - **IMC supérieur ou égal a 27** (surpoids) : prescription possible si vous presentez au moins une comorbidité associee (diabète de type 2, hypertension artérielle, dyslipidemie, apnee du sommeil, steatose hepatique)
@@ -260,7 +260,7 @@ Comme tout médicament, les GLP-1 peuvent provoquer des effets secondaires. La b
 
 ### Effets secondaires fréquents (touches 20 a 45 % des patients selon la molécule)
 
-- **Nausees** : l'effet le plus courant, surtout en debut de traitement et lors des augmentations de dose. Elles diminuent generalement en 4 a 6 semaines.
+- **Nausees** : l'effet le plus courant, surtout en debut de traitement et lors des augmentations de dose. Elles diminuent generalement en 4 a 6 semaines — consultez notre [guide pratique pour gérer les nausées sous GLP-1](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/).
 - **Diarrhee ou constipation** : troubles du transit fréquents pendant la phase d'adaptation.
 - **Douleurs abdominales** : crampes et ballonnements, habituellement transitoires.
 - **Diminution de l'appétit** : c'est l'effet recherche, mais il peut etre tres marque chez certains patients.
@@ -327,7 +327,7 @@ En avril 2026, **aucun médicament GLP-1 n'est rembourse par la Sécurité socia
 - Le remboursement du Wegovy et potentiellement du Mounjaro est attendu au **second semestre 2026**
 - Les conditions exactes (IMC minimum, comorbidités requises) seront definies par arrete ministeriel
 
-Pour en savoir plus : [remboursement des GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/) | [remboursement Mounjaro](/collections/glp1-cout/mounjaro-remboursement-sécurité-sociale-conditions-2026/)
+Pour en savoir plus : [remboursement des GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/) | [remboursement Mounjaro](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
 
 ### Les mutuelles qui remboursent
 

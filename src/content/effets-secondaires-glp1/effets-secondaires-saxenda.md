@@ -189,7 +189,7 @@ La tolérance aux GLP-1 varie considérablement selon les individus, les dosages
 
 ### Associations de patients
 
-**Association Française des Diabétiques (AFD)**
+**Fédération Française des Diabétiques (FFD)**
 - **Site** : afdiabete.fr
 - **Téléphone** : 01 42 81 28 81
 - **Support** : Groupes de parole, conseils
@@ -224,7 +224,7 @@ La tolérance aux GLP-1 varie considérablement selon les individus, les dosages
 
 ## 📝 Conclusion
 
-**Saxenda présente une excellente tolérance** avec des effets secondaires moins fréquents que la moyenne des GLP-1. Si le coût du traitement vous préoccupe, consultez notre page sur le [prix de Saxenda en France](/collections/glp1-cout/prix-saxenda-france/). Pour en savoir plus, consultez notre [guide complet Saxenda](/collections/traitements-glp1/guide-complet-saxenda/).
+**Saxenda présente un profil de tolérance connu et bien documenté**, avec des effets secondaires digestifs fréquents mais généralement transitoires (nausées ~39%, diarrhée ~20%). Si le coût du traitement vous préoccupe, consultez notre page sur le [prix de Saxenda en France](/collections/glp1-cout/prix-saxenda-france/). Pour en savoir plus, consultez notre [guide complet Saxenda](/collections/traitements-glp1/guide-complet-saxenda/).
 
 ### Points clés :
 - **Effets fréquents** : Nausées, diarrhée, constipation (très fréquents >=10%)

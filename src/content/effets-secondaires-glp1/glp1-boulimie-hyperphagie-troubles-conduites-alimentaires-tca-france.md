@@ -183,6 +183,9 @@ Si vous souffrez d'un TCA ou en avez eu un par le passé et envisagez un traitem
 5. **Boulimie avec purges actives : risques élevés**, à évaluer au cas par cas avec un spécialiste
 6. **L'accompagnement psychologique n'est pas optionnel** — c'est la clé d'un traitement durable
 
+
+> **À lire aussi** : [Effets Secondaires Ozempic Sémaglutide](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/)
+
 ## Questions fréquentes {#faq}
 
 ### Puis-je prendre Ozempic si j'ai eu de la boulimie dans le passé ?

@@ -5,8 +5,8 @@ keywords: ['prescription glp1 généraliste', 'ansm regles prescription glp1 202
 seoTitle: "GLP-1 Obésité : Généralistes Autorisés à Prescrire depuis Juin 2025 (ANSM)"
 seoDescription: "Depuis juin 2025, votre médecin généraliste peut prescrire Wegovy, Mounjaro et Saxenda pour l'obésité. Conditions, procédure et ce qui change concrètement."
 publishedAt: '2026-03-18'
-date: 2026-03-18
-updatedAt: '2026-03-18'
+date: 2026-05-29
+updatedAt: '2026-05-29'
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -58,7 +58,7 @@ Plusieurs facteurs ont conduit à cette évolution réglementaire :
 
 ### Vous n'avez plus besoin d'un spécialiste pour une première prescription
 
-C'est le changement le plus important. Si vous souffrez d'obésité (IMC ≥ 30) ou de surpoids avec comorbidité (IMC ≥ 27 avec hypertension, diabète, dyslipidémie ou apnée du sommeil), les [conditions de prescription par le médecin généraliste](/collections/medecins-glp1-france/médecin-généraliste-prescription-wegovy-mounjaro-conditions/) sont désormais remplies et votre médecin traitant peut :
+C'est le changement le plus important. Si vous souffrez d'obésité (IMC ≥ 30) ou de surpoids avec comorbidité (IMC ≥ 27 avec hypertension, diabète, dyslipidémie ou apnée du sommeil), les [conditions de prescription par le médecin généraliste](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/) sont désormais remplies et votre médecin traitant peut :
 
 1. Évaluer votre éligibilité lors d'une consultation dédiée
 2. Prescrire un traitement par Wegovy, Mounjaro ou Saxenda
@@ -158,9 +158,9 @@ Votre médecin généraliste assurera le suivi selon les recommandations habitue
 
 ## Ce qui ne change pas : les conditions de remboursement
 
-### Les GLP-1 pour l'obésité restent non remboursés en mars 2026
+### Les GLP-1 pour l'obésité sont remboursés depuis le 15 juin 2026
 
-La décision de l'ANSM ouvre la prescription aux généralistes, mais ne modifie pas les conditions de remboursement. En mars 2026, Wegovy, Mounjaro et Saxenda ne sont pas remboursés par l'Assurance Maladie pour l'indication obésité.
+La décision de l'ANSM ouvre la prescription aux généralistes. Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance Maladie pour l'indication obésité, sous conditions strictes : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec d'une prise en charge nutritionnelle bien conduite. La prescription initiale est réservée aux structures spécialisées (CSO, CHU, SMR nutrition/endocrinologie). Saxenda n'est pas concerné par ce remboursement.
 
 La HAS a rendu un avis favorable au remboursement de Wegovy (avis CT du 23 octobre 2024, publié le 4 décembre 2024 ; l'avis CEESP économique date de juillet 2025) et de Mounjaro (décembre 2025), mais **uniquement pour les patients avec un IMC initial ≥ 35 kg/m²** en cas d'échec de la prise en charge nutritionnelle. L'avis est défavorable pour les autres situations couvertes par l'AMM (IMC 27-35 avec comorbidité). Les négociations de prix avec le CEPS sont en cours, et un [remboursement est attendu au second semestre 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/).
 
@@ -197,7 +197,7 @@ Oui, c'est effectif depuis le 23 juin 2025. Tout médecin inscrit à l'Ordre des
 
 **Mon médecin traitant n'est pas formé sur les GLP-1. Que faire ?**
 
-Tous les médecins ne sont pas encore à l'aise avec ces nouvelles molécules. Si le vôtre ne souhaite pas les prescrire, vous pouvez consulter un autre médecin généraliste — en présentiel ou en télémédecine — sans avoir besoin d'un spécialiste. Des plateformes de [télémédecine spécialisées](/collections/medecins-glp1-france/prescription-glp1-télémédecine-en-ligne-france/) proposent des consultations avec des médecins formés.
+Tous les médecins ne sont pas encore à l'aise avec ces nouvelles molécules. Si le vôtre ne souhaite pas les prescrire, vous pouvez consulter un autre médecin généraliste — en présentiel ou en télémédecine — sans avoir besoin d'un spécialiste. Des plateformes de [télémédecine spécialisées](/collections/medecins-glp1-france/prescription-glp1-telemedecine-en-ligne-france/) proposent des consultations avec des médecins formés.
 
 **Le fait que mon généraliste prescrive plutôt qu'un spécialiste change-t-il le remboursement ?**
 

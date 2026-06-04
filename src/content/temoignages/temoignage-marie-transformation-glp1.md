@@ -85,7 +85,7 @@ mainKeyword: "témoignage Ozempic perte de poids femme"
 ## Les Clés de Sa Réussite
 
 1. **Suivi médical rigoureux** : Consultations mensuelles
-2. **[Alimentation équilibrée](/collections/regime-glp1/régime-mounjaro-optimal/)** : Pas de régime strict, juste de bonnes habitudes
+2. **[Alimentation équilibrée](/collections/regime-glp1/regime-mounjaro-optimal/)** : Pas de régime strict, juste de bonnes habitudes
 3. **Activité physique progressive** : De la marche à la course
 4. **Soutien familial** : Mari et enfants très encourageants
 5. **Mental positif** : Focus sur la santé, pas juste le poids
@@ -123,6 +123,6 @@ mainKeyword: "témoignage Ozempic perte de poids femme"
 
 ---
 
-Découvrez d'autres témoignages et les données cliniques dans notre guide sur les [résultats avant/après des traitements GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/).
+Découvrez d'autres témoignages et les données cliniques dans notre guide sur les [résultats avant/après des traitements GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
 
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*
