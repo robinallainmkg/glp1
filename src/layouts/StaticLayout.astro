@@ -5,6 +5,7 @@ import Hotjar from '../components/Hotjar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import AiCoach from '../components/AiCoach.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import AnnouncementBar from '../components/AnnouncementBar.astro';
 import AffiliateTracker from '../components/AffiliateTracker.astro';
 import SinocareBanner from '../components/SinocareBanner.astro';
 
@@ -100,6 +101,7 @@ const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).hr
 
 <body class="bg-white text-gray-900 font-sans">
   <!-- Navigation Header -->
+  <AnnouncementBar />
   <SiteHeader />
 
   <!-- Main Content -->
