@@ -5,10 +5,10 @@ thumbnailAlt: "Prix et coût du traitement wegovy-france"
 description: "Wegovy prix pharmacie moins cher 2026 : à partir de 169€/mois. Tarifs par dosage 0,25 à 2,4 mg, où l'acheter en France et remboursement S2 2026."
 keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy prix pharmacie moins cher', 'wegovy pharmacie moins cher', 'wegovy pharmacie', 'wegovy prix pharmacie', 'remboursement wegovy', 'wegovy prix 2026', 'coût wegovy', 'wegovy non remboursé', 'prix wegovy 2.4 mg']
 seoTitle: "Wegovy Prix Pharmacie Moins Cher 2026 : dès 169€"
-seoDescription: "Wegovy prix pharmacie moins cher en France 2026 : 169 à 360€/mois selon dosage. Comparatif officines, achat en ligne, remboursement S2 2026."
+seoDescription: "Wegovy prix pharmacie moins cher en France 2026 : 169 à 360€/mois selon dosage. Comparatif officines, achat en ligne, remboursé 65% dès le 15 juin 2026."
 publishedAt: '2025-01-28'
-updatedAt: '2026-05-28'
-date: '2026-05-28'
+updatedAt: '2026-06-06'
+date: '2026-06-06'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
@@ -21,7 +21,7 @@ faqSchema:
   - question: "Quel est le prix du Wegovy en pharmacie en 2026 ?"
     answer: "Le prix du Wegovy varie de 169 à 360 euros par mois selon le dosage (0,25 mg d'initiation à 2,4 mg d'entretien). Les prix sont libres et varient d'une pharmacie à l'autre."
   - question: "Le Wegovy sera-t-il remboursé en 2026 ?"
-    answer: "La HAS a rendu un avis favorable au remboursement du Wegovy. Les négociations de prix avec le CEPS sont en cours. Le remboursement est attendu au plus tôt au second semestre 2026."
+    answer: "Le remboursement du Wegovy à 65% pour l'obésité entre en vigueur le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée)."
   - question: "Où trouver le Wegovy le moins cher près de chez moi ?"
     answer: "Utilisez notre carte interactive des pharmacies pour comparer les prix du Wegovy. Les tarifs varient significativement entre officines, avec des écarts pouvant atteindre 30%."
   - question: "Le Wegovy est-il disponible en pharmacie Lafayette ?"
@@ -66,7 +66,7 @@ faqSchema:
         "name": "Quel est le prix de Wegovy en pharmacie ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le prix de Wegovy en pharmacie varie de 169€ à 360€ par mois selon le dosage (0.25 mg à 2.4 mg). Wegovy n'est pas remboursé par la Sécurité Sociale en mars 2026. Le coût est intégralement à la charge du patient."
+          "text": "Le prix de Wegovy en pharmacie varie de 169€ à 360€ par mois selon le dosage (0.25 mg à 2.4 mg). Pour l'obésité, le remboursement à 65% par la Sécurité Sociale entre en vigueur le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions d'éligibilité."
         }
       },
       {
@@ -74,7 +74,7 @@ faqSchema:
         "name": "Wegovy est-il remboursé en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Non, Wegovy n'est pas remboursé par la Sécurité Sociale en mars 2026. Les négociations entre Novo Nordisk et le CEPS (Comité économique des produits de santé) sont en cours, avec un remboursement possible au 2e semestre 2026. La HAS recommandé le remboursement pour les patients avec un IMC ≥ 35 après échec des mesures nutritionnelles."
+          "text": "Wegovy est remboursé à 65% par la Sécurité Sociale pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026). Conditions : IMC ≥ 35 avec comorbidité (ou ≥ 40) après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée."
         }
       },
       {
@@ -82,7 +82,7 @@ faqSchema:
         "name": "Wegovy sera-t-il remboursé en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Un remboursement de Wegovy est possible au 2e semestre 2026. Les négociations CEPS sont en cours. La HAS recommandé le remboursement pour IMC ≥ 35 après échec nutritionnel. Le taux probable serait de 65% si et quand le remboursement est accordé."
+          "text": "Wegovy est remboursé à 65% pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée)."
         }
       }
     ]
@@ -92,7 +92,7 @@ faqSchema:
 
 ## 💰 Wegovy Prix Pharmacie Moins Cher en France (2026)
 
-À la recherche du **Wegovy prix pharmacie moins cher** en France ? Le **prix Wegovy** démarre à **169€/mois** pour le dosage initial 0,25 mg et atteint **360€/mois** pour le 2,4 mg de maintenance (mars 2026). Le sémaglutide commercialisé par Novo Nordisk reste **non remboursé** par la Sécurité Sociale, mais un **remboursement Wegovy au 2e semestre 2026** est envisagé après avis HAS. Pour réduire la facture, comparez les officines en ligne et physiques (écarts jusqu'à 30€/mois selon nos relevés). Consultez aussi notre [comparatif prix Mounjaro France](/collections/glp1-cout/prix-mounjaro-france/) et notre page [Wegovy remboursement mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/) pour optimiser votre prise en charge.
+À la recherche du **Wegovy prix pharmacie moins cher** en France ? Le **prix Wegovy** démarre à **169€/mois** pour le dosage initial 0,25 mg et atteint **360€/mois** pour le 2,4 mg de maintenance (mars 2026). Le sémaglutide commercialisé par Novo Nordisk est **remboursé à 65% pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026), sous conditions — voir les [conditions d'éligibilité détaillées](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/). Pour réduire la facture, comparez les officines en ligne et physiques (écarts jusqu'à 30€/mois selon nos relevés). Consultez aussi notre [comparatif prix Mounjaro France](/collections/glp1-cout/prix-mounjaro-france/) et notre page [Wegovy remboursement mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/) pour optimiser votre prise en charge.
 
 ### Tarifs Wegovy par dosage en pharmacie (2026)
 
