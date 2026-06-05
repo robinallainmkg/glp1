@@ -1,12 +1,12 @@
 ---
 title: "Wegovy Remboursé France 2026 : Calendrier, Conditions"
-description: "Wegovy remboursé France 2026 : avis HAS favorable, négociations CEPS en cours. Calendrier de remboursement et critères d'éligibilité."
+description: "Wegovy remboursé à 65% en France à partir du 15 juin 2026 (arrêté 23 mai). Calendrier officiel, conditions IMC et démarches."
 keywords: ['quand wegovy remboursé france', 'wegovy remboursement 2026', 'wegovy remboursé conditions', 'wegovy remboursement calendrier', 'wegovy HAS CEPS remboursement', 'wegovy sécurité sociale 2026']
 seoTitle: "Quand Wegovy Remboursé France 2026 : Calendrier Conditions"
-seoDescription: "Wegovy remboursement France 2026 : la HAS a rendu un avis favorable. Calendrier, conditions IMC, négociations CEPS. Tout savoir sur la prise en charge."
+seoDescription: "Wegovy remboursé 65% pour l'obésité à partir du 15 juin 2026 (arrêté 23 mai). Calendrier officiel, conditions d'éligibilité IMC, démarches."
 publishedAt: '2026-03-17'
-date: 2026-03-17
-updatedAt: '2026-03-17'
+date: 2026-06-06
+updatedAt: '2026-06-06'
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -31,7 +31,7 @@ affiliateConfig:
 
 ## Quand Wegovy Sera-t-il Remboursé en France ? Calendrier et Conditions 2026
 
-"Quand est-ce que Wegovy sera remboursé ?" C'est probablement la question la plus posée par les patients français en surpoids ou obèses qui envisagent un traitement GLP-1. Et pour cause : [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) est disponible en France depuis 2024, mais à un prix qui reste élevé sans prise en charge par la Sécurité Sociale. En mars 2026, les choses avancent enfin concrètement. Voici le point complet sur le calendrier, les conditions attendues et ce que vous pouvez faire en attendant.
+"Quand est-ce que Wegovy sera remboursé ?" C'est probablement la question la plus posée par les patients français en surpoids ou obèses qui envisagent un traitement GLP-1. Et pour cause : [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) est disponible en France depuis 2024. La réponse est désormais officielle : **Wegovy est remboursé à 65% pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026). Voici le point complet sur le calendrier, les conditions d'éligibilité et les démarches.
 
 ## Sommaire
 
@@ -42,7 +42,7 @@ affiliateConfig:
 5. [Les alternatives remboursées en attendant](#alternatives)
 6. [FAQ](#faq)
 
-## Où en est le remboursement de Wegovy en mars 2026 ? {#etat-des-lieux}
+## Wegovy remboursé à 65% à partir du 15 juin 2026 {#etat-des-lieux}
 
 ### L'avis favorable de la HAS
 
@@ -69,29 +69,29 @@ Novo Nordisk a répondu à cette inquiétude en doublant la capacité de product
 
 ### Les étapes clés
 
-Voici le calendrier le plus probable pour le remboursement de Wegovy en France, basé sur les processus réglementaires habituels et les informations disponibles en mars 2026 :
+Voici le calendrier officiel du remboursement de Wegovy en France :
 
 | Étape | Statut | Date estimée |
 |-------|--------|-------------|
 | Avis HAS (SMR/ASMR) | Rendu (favorable) | T4 2025 |
-| Négociations CEPS | En cours | T1-T2 2026 |
-| Publication au Journal Officiel | En attente | T2-T3 2026 |
-| Inscription sur la liste des médicaments remboursables | En attente | T3 2026 |
-| Remboursement effectif en pharmacie | En attente | **S2 2026** |
+| Négociations CEPS | Terminées | 2026 |
+| Arrêté d'inscription au remboursement | Publié | 23 mai 2026 (JO 28 mai) |
+| Inscription sur la liste des médicaments remboursables | Acquise | Mai 2026 |
+| Remboursement effectif en pharmacie | ✅ Confirmé | **15 juin 2026** |
 
 ### L'estimation la plus réaliste
 
-En tenant compte des délais habituels et de l'avancement actuel du dossier, un **remboursement effectif au second semestre 2026** (entre septembre et décembre) est l'hypothèse la plus probable. Les plus optimistes espèrent l'été 2026, les plus prudents tablent sur début 2027.
+Le remboursement de Wegovy à 65% pour l'obésité **entre en vigueur le 15 juin 2026**, en application de l'arrêté du 23 mai 2026 (publié au Journal officiel le 28 mai). Voir les [conditions d'éligibilité détaillées](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
 
 ### Pourquoi c'est si long ?
 
 Le processus de remboursement d'un médicament en France est l'un des plus encadrés au monde. Chaque étape — évaluation scientifique, négociation de prix, publication réglementaire — prend du temps. Ce cadre protège le système de santé contre des médicaments trop chers ou insuffisamment efficaces, mais il implique des délais incompressibles pour les patients.
 
-## Les conditions d'éligibilité attendues {#conditions}
+## Les conditions d'éligibilité {#conditions}
 
 ### Les critères qui se dessinent
 
-Sur la base de l'avis HAS et des discussions en cours, voici les conditions d'éligibilité au remboursement de Wegovy qui se dessinent :
+Voici les conditions d'éligibilité au remboursement de Wegovy (arrêté du 23 mai 2026) :
 
 **Critère d'IMC** :
 - **IMC >= 35 kg/m²** (obésité sévère), ou
