@@ -3,10 +3,10 @@ title: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026"
 description: "Remboursement Wegovy et Mounjaro par la Sécurité Sociale 2026 : avis HAS, critères IMC ≥ 35, calendrier CEPS. Serez-vous remboursé ? Réponses claires."
 keywords: ['remboursement wegovy mounjaro sécurité sociale 2026', 'remboursement wegovy', 'remboursement mounjaro', 'sécurité sociale wegovy mounjaro', 'wegovy mounjaro prise en charge 2026', 'remboursement glp1 obésité france', 'critères remboursement wegovy imc 35', 'quand wegovy remboursé france']
 seoTitle: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026 en France"
-seoDescription: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026 : calendrier officiel, avis HAS, conditions IMC ≥ 35. Tout savoir sur la prise en charge GLP-1 en France."
+seoDescription: "Remboursement Wegovy Mounjaro : 65% pour l'obésité à partir du 15 juin 2026 (arrêté 23 mai). Conditions IMC ≥ 35, prescription, calendrier officiel."
 pubDate: 2026-03-16
-date: '2026-05-29'
-updatedAt: '2026-05-29'
+date: '2026-06-06'
+updatedAt: '2026-06-06'
 author: "Dr. Marie Dubois"
 category: "Économie santé"
 tags: ["wegovy", "mounjaro", "remboursement", "sécurité sociale", "glp1", "prix", "2026"]
@@ -22,19 +22,19 @@ mainKeyword: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026"
 secondaryKeywords: ["wegovy remboursement date", "mounjaro sécurité sociale", "glp1 obesite remboursement france", "prix wegovy après remboursement", "HAS wegovy mounjaro avis"]
 ---
 
-La question est sur toutes les lèvres des patients souffrant d'obésité : quand [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) seront-ils enfin remboursés par la Sécurité Sociale française ? Ces deux médicaments, qui permettent des pertes de poids de 15 à 20 %, restent actuellement entièrement à la charge des patients — soit entre 170 et 440 euros par mois. Voici l'état exact des négociations en mars 2026 et ce que vous pouvez espérer pour les prochains mois.
+La question est sur toutes les lèvres des patients souffrant d'obésité : quand [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) seront-ils enfin remboursés par la Sécurité Sociale française ? Ces deux médicaments, qui permettent des pertes de poids de 15 à 20 %, étaient jusqu'ici entièrement à la charge des patients — soit entre 170 et 440 euros par mois. **C'est désormais acté : Wegovy et Mounjaro sont remboursés à 65% pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026). Voici les conditions exactes et ce que cela change pour vous.
 
-## La situation en mars 2026 : toujours pas de remboursement
+## La situation en juin 2026 : remboursement à 65% à partir du 15 juin
 
 ### Wegovy (semaglutide 2,4 mg)
 
-Wegovy a bénéficié d'un accès précoce en France de juillet 2022 à septembre 2023, puis est commercialisé librement en pharmacie depuis octobre 2024. En mars 2026, il n'est **pas remboursé** par la Sécurité Sociale dans l'indication obésité. Pour le détail des tarifs par dosage, consultez notre guide sur les [prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/).
+Wegovy a bénéficié d'un accès précoce en France de juillet 2022 à septembre 2023, puis est commercialisé librement en pharmacie depuis octobre 2024. Il est **remboursé à 65%** par la Sécurité Sociale dans l'indication obésité **à partir du 15 juin 2026** (arrêté du 23 mai 2026), sous conditions. Pour le détail des tarifs par dosage, consultez notre guide sur les [prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/).
 
 La HAS a rendu un **avis favorable au remboursement** de Wegovy, reconnaissant son service médical rendu (SMR) comme important dans les formes sévères d'obésité. Cet avis est une étape nécessaire mais pas suffisante : il doit être suivi de négociations avec le CEPS (Comité Économique des Produits de Santé) sur le prix remboursable.
 
 ### Mounjaro (tirzepatide)
 
-Mounjaro a obtenu son AMM européenne initiale en septembre 2022 (diabète de type 2), puis l'extension d'indication à l'obésité en décembre 2024. Il est commercialisé en France depuis novembre 2024. En mars 2026, il n'est **pas non plus remboursé** pour l'obésité. Retrouvez le détail des tarifs dans notre guide sur les [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/).
+Mounjaro a obtenu son AMM européenne initiale en septembre 2022 (diabète de type 2), puis l'extension d'indication à l'obésité en décembre 2024. Il est commercialisé en France depuis novembre 2024. Il est **remboursé à 65% pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026), sous conditions. Retrouvez le détail des tarifs dans notre guide sur les [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/).
 
 La HAS a publié en décembre 2025 un **avis favorable au remboursement** de Mounjaro dans l'obésité, avec un SMR qualifié d'important. Cet avis est désormais entre les mains du CEPS pour la négociation du prix.
 
@@ -70,17 +70,17 @@ Les patients avec un IMC entre 27 et 35 sans comorbidité sévère ne devraient 
 
 ## Le calendrier prévisionnel
 
-### Scénario optimiste : 2e semestre 2026
+### Calendrier confirmé : remboursement le 15 juin 2026
 
-Selon des sources proches des négociations et des déclarations officielles de la HAS et du ministère de la Santé, **un remboursement partiel de Wegovy au second semestre 2026** est le scénario le plus probable pour Wegovy.
+C'est désormais officiel : **Wegovy et Mounjaro sont remboursés à 65% pour l'obésité à partir du 15 juin 2026**, en application de l'arrêté du 23 mai 2026 (publié au Journal officiel le 28 mai 2026). Voir les [conditions d'éligibilité détaillées](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
 
-Pour Mounjaro, le calendrier est légèrement décalé car l'avis HAS date de décembre 2025. La négociation CEPS prend généralement 6 à 12 mois. Un remboursement Mounjaro est donc envisageable **début 2027** dans le meilleur des cas.
+Les deux traitements suivent le même calendrier et les mêmes conditions d'éligibilité (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée).
 
 ### Ce que cela signifie concrètement
 
 Si le remboursement est accordé dans les conditions envisagées :
 
-- **Taux de remboursement probable** : 65 % (comme les autres médicaments de l'obésité) ou 100 % en ALD si le patient est diabétique de type 2 (ALD 8)
+- **Taux de remboursement** : 65 % par l'Assurance Maladie (35% à la charge du patient ou de la mutuelle), ou 100 % en ALD si le patient est diabétique de type 2 (ALD 8)
 - **Prix remboursable** : inférieur au prix libre actuel. Basé sur les précédents européens, le prix négocié pourrait être entre 60 % et 75 % du prix libre
 - **Reste à charge mensuel** : entre 60 € et 120 € par mois pour les patients remboursés, selon le dosage et la couverture mutuelle
 
