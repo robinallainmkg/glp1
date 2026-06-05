@@ -37,7 +37,7 @@ affiliateConfig:
 
 ## Wegovy : statut Sécu en mai 2026
 
-Avant tout, le rappel essentiel : **Wegovy n'est pas pris en charge par l'Assurance Maladie en mai 2026**. La HAS a rendu un avis favorable au remboursement début 2026 pour les adultes IMC ≥ 35 kg/m² en échec de prise en charge nutritionnelle, mais les **négociations de prix entre Novo Nordisk et le CEPS** sont toujours en cours. L'inscription effective sur la liste des spécialités remboursables est attendue au second semestre 2026.
+Le rappel essentiel : **Wegovy est remboursé à 65% par l'Assurance Maladie pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026), pour les adultes IMC ≥ 35 avec comorbidité (ou ≥ 40) en échec de prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. La mutuelle complète alors le **reste à charge de 35%**. Détails : [conditions d'éligibilité](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
 
 Tant que l'inscription n'est pas faite, les complémentaires comme Apicil ne peuvent intervenir qu'au travers de **forfaits dédiés**, pas dans le cadre du droit commun.
 

@@ -37,7 +37,7 @@ La **MGEN** (Mutuelle Générale de l'Éducation Nationale) compte parmi les com
 
 ## Wegovy : statut de remboursement Sécurité sociale en 2026
 
-Avant d'aborder la couverture MGEN, il faut rappeler le contexte global. **Wegovy n'est pas pris en charge par l'Assurance Maladie en mai 2026** : la HAS a rendu un avis favorable au remboursement début 2026 pour les adultes avec un IMC ≥ 35 kg/m² en échec de prise en charge nutritionnelle, mais les **négociations de prix entre Novo Nordisk et le Comité Économique des Produits de Santé (CEPS)** sont toujours en cours. La mise sur la liste des médicaments remboursables est attendue au second semestre 2026.
+Avant d'aborder la couverture MGEN, rappelons le contexte global. **Wegovy est remboursé à 65% par l'Assurance Maladie pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026), pour les adultes avec un IMC ≥ 35 avec comorbidité (ou ≥ 40) en échec de prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. La MGEN complète alors le **reste à charge de 35%**. Détails : [conditions d'éligibilité](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
 
 Pour suivre l'évolution réglementaire en temps réel, consultez notre [dossier remboursement Wegovy Sécurité sociale 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
