@@ -457,7 +457,7 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 
 **Choix selon situation :**
 - **Budget serré / Diabète T2** : Ozempic (remboursé 65% bithérapie metformine)
-- **Efficacité maximale (budget disponible)** : Mounjaro (non remboursé)
+- **Efficacité maximale** : Mounjaro (remboursé 65% pour l'obésité à partir du 15/06/2026, sous conditions)
 - **Compromis** : Ozempic puis Mounjaro si insuffisant
 
 [Comparaison détaillée Ozempic vs Mounjaro](/guides/quel-traitement-glp1-choisir)
