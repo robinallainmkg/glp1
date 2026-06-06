@@ -152,13 +152,28 @@ Vous cherchez **Mounjaro au prix le moins cher en France** ? Voici la réponse c
   </div>
 
   <div class="price-note">
-    Prix libre : les tarifs varient selon les pharmacies. Mounjaro n'est pas remboursé par la Sécurité Sociale (mars 2026). Avis favorable HAS décembre 2025, remboursement envisagé 2e semestre 2026.
+    Ce tableau indique le prix libre en pharmacie (tarifs variables selon les officines), à la charge des patients non éligibles au remboursement. Depuis le 15 juin 2026, les patients éligibles bénéficient d'un remboursement à 65% pour l'obésité — voir les prix remboursés et le reste à charge ci-dessous.
   </div>
 </div>
 
+## Combien Coûte Mounjaro Après Remboursement ? (dès le 15 juin 2026) {#prix-rembourse}
+
+Depuis le **15 juin 2026**, Mounjaro est **remboursé à 65%** par l'Assurance Maladie pour l'obésité, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée), en application de l'arrêté du 23 mai 2026. Pour les patients éligibles, le **prix public remboursable** et le **reste à charge** (35%, avant mutuelle) sont les suivants :
+
+| Dosage | Prix public TTC | Reste à charge (35%) |
+|--------|-----------------|----------------------|
+| 2,5 mg | 176,10 € | **61,64 €** |
+| 5 mg | 237,68 € | **83,19 €** |
+| 7,5 et 10 mg | 335,95 € | **117,58 €** |
+| 12,5 et 15 mg | 433,80 € | **151,83 €** |
+
+Bon à savoir : le prix public remboursable (176 à 434 €) est **inférieur au prix libre** pratiqué avant remboursement (230 à 440 €). Le **reste à charge de 35%** peut en outre être pris en charge, en tout ou partie, par votre **mutuelle** (ticket modérateur) : avec une bonne complémentaire santé, le coût final peut être très faible. Les patients **non éligibles** (perte de poids hors critères) continuent de payer le prix libre.
+
+Pour vérifier votre éligibilité et le détail des conditions, consultez notre guide du [remboursement de Mounjaro et Wegovy au 15 juin 2026](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
+
 ### Comparaison Tarifaire avec les Autres Traitements GLP-1 {#comparaison}
 
-Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GLP-1 disponibles en France est le plus élevé, reflétant son statut de traitement de dernière génération à double mécanisme d'action. Aucun de ces traitements anti-obésité n'est remboursé par la Sécurité Sociale en mars 2026, à l'exception d'Ozempic dans l'indication diabète de type 2.
+Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GLP-1 disponibles en France est parmi les plus élevés, reflétant son statut de traitement de dernière génération à double mécanisme d'action. Depuis le 15 juin 2026, Mounjaro et Wegovy sont remboursés à 65% pour l'obésité (sous conditions) ; Ozempic reste remboursé dans le diabète de type 2 ; Saxenda n'est pas remboursé.
 
 <div class="comparison-table-enhanced">
   <div class="comparison-header">
