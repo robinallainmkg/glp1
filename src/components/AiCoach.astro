@@ -663,6 +663,15 @@ import { supabaseConfig } from '../lib/supabase.js';
   #ai-coach-widget .coach-feedback-btn.selected { border-color: #16a34a; color: #16a34a; background: #f0fdf4; cursor: default; }
   #ai-coach-widget .coach-feedback-btn:disabled { cursor: default; }
 
+  /* Réponses suggérées (chips cliquables) */
+  #ai-coach-widget .coach-suggestions-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  #ai-coach-widget .coach-suggestion-btn {
+    background: #fff; border: 1.5px solid #16a34a; color: #15803d;
+    border-radius: 999px; padding: 6px 13px; font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; line-height: 1.3; font-family: inherit; transition: all .15s;
+  }
+  #ai-coach-widget .coach-suggestion-btn:hover { background: #16a34a; color: #fff; }
+
   /* Compteur messages restants */
   #ai-coach-widget #coach-daily-counter { text-align: center; font-size: 0.7rem; color: #9ca3af; padding: 4px 0; }
 
@@ -1038,7 +1047,7 @@ import { supabaseConfig } from '../lib/supabase.js';
       }
 
       // Display response with typewriter effect
-      typewriterMessage(data.response || "D\u00e9sol\u00e9, je n'ai pas pu r\u00e9pondre.", data.sources || []);
+      typewriterMessage(data.response || "D\u00e9sol\u00e9, je n'ai pas pu r\u00e9pondre.", data.sources || [], data.suggestions || []);
 
       // Show signup CTA after 2nd user message
       if (messageCount >= 2 && !ctaShown) {
@@ -1085,7 +1094,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     scrollToBottom();
   }
 
-  function typewriterMessage(text, sources) {
+  function typewriterMessage(text, sources, suggestions) {
     var div = document.createElement('div');
     div.className = 'coach-msg coach-msg-assistant';
     div.style.cssText = 'display:flex;gap:8px;max-width:90%;align-self:flex-start;';
@@ -1117,6 +1126,7 @@ import { supabaseConfig } from '../lib/supabase.js';
           addSources(content, sources);
         }
         addFeedback(content, text);
+        if (suggestions && suggestions.length) addSuggestions(content, suggestions);
         scrollToBottom();
         return;
       }
@@ -1139,6 +1149,36 @@ import { supabaseConfig } from '../lib/supabase.js';
     }
 
     requestAnimationFrame(tick);
+  }
+
+  function logSuggestionEvent(suggestion, position, event) {
+    try {
+      fetch(supabaseUrl + '/rest/v1/coach_suggestion_events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Prefer': 'return=minimal' },
+        body: JSON.stringify({ conversation_id: conversationId, session_id: sessionId, page_url: window.location.pathname, suggestion: suggestion, position: position, event: event })
+      }).catch(function(){});
+    } catch(e) {}
+  }
+
+  function addSuggestions(parentDiv, suggestions) {
+    var wrap = document.createElement('div');
+    wrap.className = 'coach-suggestions-row';
+    suggestions.slice(0, 3).forEach(function(s, idx) {
+      var btn = document.createElement('button');
+      btn.className = 'coach-suggestion-btn';
+      btn.textContent = s;
+      btn.addEventListener('click', function() {
+        if (isSending) return;
+        logSuggestionEvent(s, idx, 'clicked');
+        wrap.remove();
+        handleUserMessage(s);
+      });
+      wrap.appendChild(btn);
+      logSuggestionEvent(s, idx, 'shown');
+    });
+    parentDiv.appendChild(wrap);
+    scrollToBottom();
   }
 
   function addFeedback(parentDiv, msgContent) {

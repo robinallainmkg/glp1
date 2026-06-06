@@ -74,7 +74,12 @@ SEGMENTS DE VISITEURS (adapter la réponse) :
 - ~28% sont des victimes d'arnaques (ont acheté de faux GLP-1 en ligne, souvent 29-80 EUR). Être empathique, ne pas juger, proposer les recours.
 - ~16% ont une intention d'achat directe. Expliquer le parcours légal (médecin → ordonnance → pharmacie) et orienter vers un médecin pour la prescription.
 - ~10% ont des questions médicales (diabète, compatibilité). Orienter vers le médecin après information factuelle.
-- Le reste sont des curieux qui cherchent à comprendre les GLP-1.`;
+- Le reste sont des curieux qui cherchent à comprendre les GLP-1.
+
+RÉPONSES SUGGÉRÉES (OBLIGATOIRE, à la TOUTE FIN de chaque réponse) :
+Ajoute une dernière ligne au format EXACT :
+[[SUGGESTIONS]] réponse 1 | réponse 2 | réponse 3
+Ce sont 2 à 3 répliques COURTES (max 5 mots) que l'utilisateur cliquerait pour continuer, formulées de SON point de vue (ex : "Oui, vérifions", "C'est quoi les conditions ?", "Trouve une pharmacie", "Plus tard"). Adapte-les à ta question/relance : si tu as posé une question fermée, propose les réponses possibles ; sinon propose les suites naturelles. Ne mets RIEN après cette ligne et ne mentionne JAMAIS ce format dans ta réponse visible.`;
 
 // --- Fallback v1 (rules engine) ---
 const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string }> = [
@@ -635,10 +640,19 @@ Utilise le prénom et adapte tes conseils à ce profil.`;
       const assistantResponse = llmData.choices[0]?.message?.content || "Désolé, je n'ai pas pu générer une réponse.";
       const tokensUsed = llmData.usage?.total_tokens || null;
 
+      // Extraire les réponses suggérées émises par le LLM : [[SUGGESTIONS]] a | b | c
+      let suggestions: string[] = [];
+      let cleanResponse = assistantResponse;
+      const suggMatch = assistantResponse.match(/\[\[SUGGESTIONS\]\]\s*([^\n]+)\s*$/);
+      if (suggMatch) {
+        suggestions = suggMatch[1].split('|').map((s: string) => s.trim()).filter((s: string) => s.length > 0 && s.length <= 40).slice(0, 3);
+        cleanResponse = assistantResponse.replace(/\n*\s*\[\[SUGGESTIONS\]\][^\n]*\s*$/, '').trim();
+      }
+
       // --- 6. Save messages ---
       const detectedIntent = scamSignals.isScamRelated ? `scam:${scamSignals.severity}` : null;
       await saveMessages(
-        supabase, convId, session_id, cleanMessage, assistantResponse,
+        supabase, convId, session_id, cleanMessage, cleanResponse,
         detectedIntent, "llama-3.3-70b-versatile",
         sources.length > 0 ? sources : null,
         tokensUsed,
@@ -646,10 +660,11 @@ Utilise le prénom et adapte tes conseils à ce profil.`;
       );
 
       return jsonResponse({
-        response: assistantResponse,
+        response: cleanResponse,
         conversation_id: convId,
         sources: sources.slice(0, 3), // max 3 sources to display
         model: "llama-3.3-70b-versatile",
+        ...(suggestions.length > 0 && { suggestions }),
         ...(dailyRemaining !== null && { daily_remaining: dailyRemaining }),
       });
 
