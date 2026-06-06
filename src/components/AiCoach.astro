@@ -48,8 +48,8 @@ import { supabaseConfig } from '../lib/supabase.js';
         <div style="display:flex;flex-direction:column;gap:2px;min-width:0;">
           <span style="font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:0 4px;color:#16a34a;">Coach GLP-1</span>
           <div class="coach-bubble coach-bubble-assistant">
-            Bonjour ! Je suis le Coach GLP-1, votre assistant d'information sur les traitements GLP-1 en France.<br><br>
-            Comment puis-je vous aider ?
+            Bonjour 👋 Je suis le Coach GLP-1. Je réponds en direct sur les prix, le <strong>remboursement à 65%</strong> (nouveau au 15 juin), les effets ou comment obtenir ton traitement.<br><br>
+            Par quoi veux-tu commencer ?
           </div>
         </div>
       </div>
@@ -834,52 +834,52 @@ import { supabaseConfig } from '../lib/supabase.js';
 
     if (path.includes('ozempic')) {
       actions = [
+        { q: "Suis-je éligible au remboursement à 65% ?", label: "✅ Suis-je éligible ?" },
         { q: "Quel est le prix d'Ozempic en pharmacie ?", label: "Prix Ozempic" },
-        { q: "Ozempic est-il rembourse ?", label: "Remboursement" },
         { q: "Quels sont les effets secondaires d'Ozempic ?", label: "Effets secondaires" },
-        { q: "Comment obtenir Ozempic ?", label: "Obtenir Ozempic" }
+        { q: "Comment obtenir Ozempic ?", label: "Comment l'obtenir ?" }
       ];
     } else if (path.includes('wegovy')) {
       actions = [
-        { q: "Quel est le prix de Wegovy ?", label: "Prix Wegovy" },
-        { q: "Wegovy est-il disponible en France ?", label: "Disponibilite" },
-        { q: "Quelle est la difference entre Wegovy et Ozempic ?", label: "Wegovy vs Ozempic" },
-        { q: "Wegovy est-il rembourse ?", label: "Remboursement" }
+        { q: "Suis-je éligible au remboursement de Wegovy ?", label: "✅ Suis-je éligible ?" },
+        { q: "Combien vais-je payer pour Wegovy avec le remboursement à 65% ?", label: "💰 Combien je paierai ?" },
+        { q: "Quelle est la différence entre Wegovy et Mounjaro ?", label: "Wegovy vs Mounjaro" },
+        { q: "Quels sont les effets secondaires de Wegovy ?", label: "Effets secondaires" }
       ];
     } else if (path.includes('mounjaro')) {
       actions = [
-        { q: "Quel est le prix de Mounjaro ?", label: "Prix Mounjaro" },
-        { q: "Mounjaro est-il disponible en pharmacie ?", label: "Disponibilite" },
-        { q: "Quelle difference entre Mounjaro et Ozempic ?", label: "Mounjaro vs Ozempic" },
+        { q: "Suis-je éligible au remboursement de Mounjaro ?", label: "✅ Suis-je éligible ?" },
+        { q: "Combien vais-je payer pour Mounjaro avec le remboursement à 65% ?", label: "💰 Combien je paierai ?" },
+        { q: "Quelle différence entre Mounjaro et Wegovy ?", label: "Mounjaro vs Wegovy" },
         { q: "Quels sont les effets secondaires de Mounjaro ?", label: "Effets secondaires" }
       ];
-    } else if (path.includes('prix') || path.includes('remboursement')) {
+    } else if (path.includes('prix') || path.includes('remboursement') || path.includes('cout')) {
       actions = [
-        { q: "Quel GLP-1 est le moins cher ?", label: "Le moins cher" },
-        { q: "Quels traitements sont rembourses ?", label: "Remboursements" },
-        { q: "Comment se faire rembourser Ozempic ?", label: "Remboursement Ozempic" },
-        { q: "Combien coute Wegovy par mois ?", label: "Prix Wegovy" }
+        { q: "Suis-je éligible au remboursement à 65% ?", label: "✅ Suis-je éligible ?" },
+        { q: "Qu'est-ce qui change avec le remboursement du 15 juin 2026 ?", label: "📅 Remboursement 15 juin" },
+        { q: "Combien je paierai après le remboursement ?", label: "💰 Mon reste à charge" },
+        { q: "Trouve une pharmacie pas chère près de chez moi", label: "📍 Pharmacie près de moi" }
       ];
     } else if (path.includes('effet') || path.includes('secondaire')) {
       actions = [
-        { q: "Quels sont les effets secondaires les plus courants ?", label: "Effets courants" },
-        { q: "Les nausees disparaissent-elles avec le temps ?", label: "Nausees" },
-        { q: "Que faire en cas d'effets secondaires graves ?", label: "Effets graves" },
-        { q: "Comment reduire les nausees sous GLP-1 ?", label: "Reduire nausees" }
+        { q: "Comment réduire les nausées sous GLP-1 ?", label: "Réduire les nausées" },
+        { q: "Les effets secondaires disparaissent-ils avec le temps ?", label: "Ça s'améliore ?" },
+        { q: "Que faire en cas d'effet secondaire grave ?", label: "Effets graves" },
+        { q: "Suis-je éligible au remboursement à 65% ?", label: "✅ Suis-je éligible ?" }
       ];
     } else if (path.includes('poids') || path.includes('maigrir') || path.includes('regime')) {
       actions = [
-        { q: "Combien de poids peut-on perdre avec un GLP-1 ?", label: "Perte de poids" },
-        { q: "Quel regime alimentaire suivre sous GLP-1 ?", label: "Alimentation" },
-        { q: "Faut-il faire du sport avec un GLP-1 ?", label: "Sport" },
-        { q: "Reprend-on du poids a l'arret du traitement ?", label: "Reprise de poids" }
+        { q: "Suis-je éligible à un traitement GLP-1 pour maigrir ?", label: "✅ Suis-je éligible ?" },
+        { q: "Combien de poids peut-on perdre avec un GLP-1 ?", label: "Perte de poids attendue" },
+        { q: "Quel régime alimentaire suivre sous GLP-1 ?", label: "Alimentation" },
+        { q: "Comment préserver mes muscles pendant la perte de poids ?", label: "Préserver les muscles" }
       ];
     } else {
       actions = [
-        { q: "Est-ce que vous vendez du GLP-1 ?", label: "Vous vendez du GLP-1 ?" },
-        { q: "Combien coute un traitement GLP-1 ?", label: "Prix des traitements" },
+        { q: "Suis-je éligible au remboursement à 65% ?", label: "✅ Suis-je éligible ?" },
+        { q: "Combien coûte un traitement GLP-1 et est-il remboursé ?", label: "💰 Prix & remboursement" },
         { q: "Comment obtenir une ordonnance pour un GLP-1 ?", label: "Obtenir une ordonnance" },
-        { q: "J'ai un probleme avec mon stylo injecteur", label: "Probleme de stylo" }
+        { q: "Trouve une pharmacie près de chez moi", label: "📍 Pharmacie près de moi" }
       ];
     }
 
