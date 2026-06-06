@@ -1,12 +1,12 @@
 ---
-title: "Pénurie Ozempic et Wegovy 2026 : Que Faire ? Solutions et Alternatives"
-description: "Pénurie Ozempic, Wegovy, Mounjaro en pharmacie en 2026 : votre médicament est en rupture de stock ? Voici que faire immédiatement, les alternatives validées par l'ANSM et quand la situation va se normaliser."
-keywords: ['penurie ozempic', 'rupture stock wegovy', 'penurie mounjaro', 'penurie glp1 pharmacie', 'ozempic indisponible pharmacie', 'alternative penurie glp1', 'rupture approvisionnement semaglutide']
-seoTitle: "Pénurie Ozempic Wegovy 2026 : Que Faire ? Alternatives"
-seoDescription: "Votre Ozempic ou Wegovy est en rupture de stock ? Voici les alternatives validées, les conseils de l'ANSM et la situation de l'approvisionnement en France en 2026."
+title: "Pénurie Ozempic et Wegovy : Où en Est-on en 2026 et Où en Trouver ?"
+description: "Ozempic, Wegovy ou Mounjaro indisponible en pharmacie ? Point sur les tensions d'approvisionnement en 2026, où en trouver, les alternatives validées par l'ANSM et l'impact de la demande liée au remboursement du 15 juin."
+keywords: ['penurie ozempic', 'rupture stock wegovy', 'penurie mounjaro', 'penurie glp1 pharmacie', 'ozempic indisponible pharmacie', 'alternative penurie glp1', 'rupture approvisionnement semaglutide', 'ozempic wegovy penurie']
+seoTitle: "Pénurie Ozempic Wegovy 2026 : Où en Trouver ?"
+seoDescription: "Ozempic, Wegovy, Mounjaro en rupture ? Où en trouver en 2026, alternatives validées ANSM et impact de la demande liée au remboursement du 15 juin."
 publishedAt: '2026-03-17'
-updatedAt: '2026-05-28'
-date: 2026-05-28
+updatedAt: '2026-06-06'
+date: 2026-06-06
 featured: true
 priority: 3
 author: 'Dr. Marie Dubois'
@@ -29,7 +29,7 @@ La pandémie de succès des GLP-1 a créé une pénurie mondiale sans précéden
 
 En France, l'ANSM a été contrainte d'émettre plusieurs alertes de tension d'approvisionnement entre 2022 et 2024, avec des recommandations spécifiques pour les patients diabétiques (priorité de prescription).
 
-### La situation en mars 2026
+### La situation en juin 2026
 
 La situation s'est globalement améliorée mais reste fragile :
 
@@ -39,6 +39,8 @@ La situation s'est globalement améliorée mais reste fragile :
 - [**Saxenda**](/collections/traitements-glp1/guide-complet-saxenda/) (liraglutide) : disponibilité stable
 
 Novo Nordisk a investi dans l'extension de ses capacités de production, notamment sur son site de Chartres (France), pour sécuriser les approvisionnements européens à long terme.
+
+À noter : le **remboursement de Wegovy et Mounjaro pour l'obésité à partir du 15 juin 2026** (à 65%, sous conditions) va élargir l'accès à ces traitements et pourrait accentuer ponctuellement les tensions sur certains dosages. Pour anticiper le coût avant et après remboursement, consultez nos guides du [prix de Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) et du [prix de Wegovy en France](/collections/glp1-cout/prix-wegovy-france/).
 
 ### Pourquoi les pénuries persistent-elles ponctuellement ?
 
