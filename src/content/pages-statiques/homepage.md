@@ -34,14 +34,14 @@ Les **agonistes du récepteur GLP-1** (Glucagon-Like Peptide-1) représentent un
 | Traitement | Indication | Efficacité Poids | Prix/Mois | Remboursement |
 |------------|------------|------------------|-----------|---------------|
 | **Ozempic** | Diabète T2 | -5% à -10% | ~76,58€/stylo | Remboursé 30% (DT2) |
-| **Wegovy** | Obésité | -15% à -17% | 169-360€ | NON remboursé |
+| **Wegovy** | Obésité | -15% à -17% | 169-360€ | Remboursé 65% (obésité, dès le 15/06/2026)* |
 | **Saxenda** | Obésité | -8% à -12% | 240-300€ | NON remboursé |
-| **Mounjaro** | DT2 / Obésité | -17% à -21% | 230-440€ | NON remboursé |
+| **Mounjaro** | DT2 / Obésité | -17% à -21% | 230-440€ | Remboursé 65% (obésité, dès le 15/06/2026)* |
 | **Trulicity** | Diabète T2 | -3% à -5% | ~81€ | Remboursé 65% (DT2) |
 | **Victoza** | Diabète T2 | -3% à -6% | ~60,26€ | Remboursé 65% (DT2) |
 | **Rybelsus** | Diabète T2 | -4% à -7% | 80-110€ | NON remboursé |
 
-*Prix indicatifs mars 2026. Ozempic, Trulicity et Victoza sont remboursés à 65% en bithérapie metformine (DT2 uniquement, 100% en ALD). Rybelsus n'est pas remboursé (avis HAS défavorable). Les traitements indiqués pour l'obésité (Wegovy, Saxenda, Mounjaro) restent entièrement à la charge du patient. Consultation médicale requise.*
+*Prix indicatifs juin 2026. Ozempic, Trulicity et Victoza sont remboursés à 65% en bithérapie metformine (DT2 uniquement, 100% en ALD). Rybelsus et Saxenda ne sont pas remboursés. **Wegovy et Mounjaro sont remboursés à 65% pour l'obésité à partir du 15 juin 2026** (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée). Consultation médicale requise.*
 
 ## 🏥 Nos Services Experts
 
