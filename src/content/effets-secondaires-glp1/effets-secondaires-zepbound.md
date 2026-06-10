@@ -30,6 +30,9 @@ affiliateConfig:
 
 **Zepbound / Mounjaro** (tirzepatide) est un traitement pour la perte de poids, mais comme tout médicament puissant, il peut provoquer des effets secondaires. Ce guide complet vous aide à les comprendre et les gérer.
 
+> **À lire aussi** : [risque de pancréatite](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)
+
+
 ## Profil de Sécurité Général
 
 ### Classification des Effets
@@ -79,6 +82,9 @@ affiliateConfig:
 - **Mécanisme** : Ralentissement vidange
 - **Symptômes** : Brûlures, régurgitations
 - **Horaire** : Nocturne souvent
+
+> **À lire aussi** : [gastroparésie sous GLP-1](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/)
+
 
 ## Effets Systémiques
 
@@ -280,6 +286,9 @@ affiliateConfig:
 - Pharmacien référent
 - Numéro urgence médecin
 - Groupe patients en ligne
+
+
+> **À lire aussi** : [interactions médicamenteuses du tirzepatide](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/)
 
 ## Conclusion
 

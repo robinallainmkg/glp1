@@ -80,8 +80,8 @@ Les GLP-1 existent dans deux grandes catégories selon leur indication :
 | **<a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** | Dulaglutide | Diabète type 2 | Oui, 65% |
 | **[Victoza](/collections/traitements-glp1/guide-complet-victoza/)*** | Liraglutide 1,2/1,8 mg | Diabète type 2 | Oui, 65% |
 | **<a href="/collections/traitements-glp1/guide-complet-rybelsus/">Rybelsus</a>** | Sémaglutide oral | Diabète type 2 | Non |
-| **Wegovy** | Sémaglutide 2,4 mg | Obésité (IMC ≥ 30) | Non (attendu 2026) |
-| **Mounjaro** | Tirzépatide | Obésité ou DT2 avec obésité | Non (attendu 2026) |
+| **Wegovy** | Sémaglutide 2,4 mg | Obésité (IMC ≥ 30) | Remboursé 65% (depuis 15 juin 2026 sous conditions) |
+| **Mounjaro** | Tirzépatide | Obésité ou DT2 avec obésité | Remboursé 65% (depuis 15 juin 2026 sous conditions) |
 | **Saxenda** | Liraglutide 3 mg | Obésité | Non |
 
 *Victoza : arrêt de commercialisation annoncé fin 2026
@@ -247,7 +247,7 @@ Il n'existe pas de contre-indication absolue à l'association de GLP-1 avec d'au
 ## Questions fréquentes des patients {#faq}
 
 **Mon Ozempic est-il toujours remboursé depuis le formulaire de février 2025 ?**
-Oui, si vous êtes diabétique de type 2 et que votre médecin remplit le formulaire obligatoire. Votre remboursement à 30% est maintenu. Si vous avez eu des difficultés de remboursement a posteriori, notre [guide remboursement Ozempic 2026](/collections/glp1-cout/remboursement-ozempic-diabete-justificatif-prescription-guide-2026/) détaille les démarches.
+Oui, si vous êtes diabétique de type 2 et que votre médecin remplit le formulaire obligatoire. Votre remboursement à 65% en bithérapie metformine est maintenu (30% en trithérapie insuline basale). Si vous avez eu des difficultés de remboursement a posteriori, notre [guide remboursement Ozempic 2026](/collections/glp1-cout/remboursement-ozempic-diabete-justificatif-prescription-guide-2026/) détaille les démarches.
 
 **Puis-je utiliser mon GLP-1 diabète pour perdre du poids ?**
 La perte de poids est un effet secondaire attendu et bénéfique des GLP-1 prescrits dans le diabète. Ozempic peut entraîner une perte de 3 à 7% du poids en moyenne, ce qui est favorable pour le contrôle glycémique. Cependant, vous ne pouvez pas légalement obtenir une prescription d'Ozempic à des doses plus élevées ou hors AMM uniquement pour perdre du poids. Si vous souhaitez un traitement médicamenteux dédié à la perte de poids, Wegovy et Mounjaro sont les options approuvées.

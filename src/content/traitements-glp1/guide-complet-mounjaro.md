@@ -332,6 +332,9 @@ Pour savoir si vous pouvez bénéficier de Mounjaro, consultez notre page [êtes
 - **Moment** : indifférent par rapport aux repas
 - **Stylo prérempli** : utilisation simple et intuitive
 
+> **À lire aussi** : [avis patients Mounjaro 2026](/collections/traitements-glp1/mounjaro-avis-patients-france-2026/)
+
+
 ## Comment commencer le traitement Mounjaro ?
 
 Pour un parcours complet étape par étape, consultez notre guide [comment démarrer un traitement GLP-1 en France](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/).

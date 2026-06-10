@@ -333,6 +333,9 @@ Pour en savoir plus : [remboursement des GLP-1 en 2026](/collections/glp1-cout/r
 
 Quelques mutuelles haut de gamme commencent a proposer une prise en charge partielle des medicaments anti-obésité, generalement sous forme de forfait annuel (500 a 1 500 euros). Renseignez-vous aupres de votre complémentaire sante.
 
+
+> **À lire aussi** : [injections pour maigrir](/collections/glp1-perte-de-poids/injection-pour-maigrir-guide-complet-france-2026/)
+
 ## FAQ -- Questions Fréquentes
 
 ### Quel est le médicament le plus efficace pour maigrir ?

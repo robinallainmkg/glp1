@@ -88,6 +88,9 @@ thumbnailAlt: "Effets secondaires du traitement victoza"
 - Contre-indiqué si antécédents familiaux
 - Surveillance thyroïdienne recommandée
 
+> **À lire aussi** : [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/)
+
+
 ## 📊 Fréquence des Effets Secondaires
 
 ### Très fréquents (>=10%)
@@ -227,6 +230,9 @@ thumbnailAlt: "Effets secondaires du traitement victoza"
 - Signalements rares d'effets graves
 - Profil de sécurité favorable
 - Bénéfice/risque positif
+
+
+> **À lire aussi** : [arrêt de commercialisation Victoza](/collections/traitements-glp1/victoza-arret-commercialisation-alternative-2026/)
 
 ## 📝 Conclusion
 

@@ -76,7 +76,7 @@ L'alcool est l'une des deux principales causes de pancréatite (avec les calculs
 
 ### Calculs biliaires (lithiase biliaire)
 
-Les GLP-1 favorisent la formation de calculs biliaires, notamment en raison de la perte de poids rapide qu'ils induisent. Or les calculs biliaires sont la première cause de pancréatite en France. Des données montrent une augmentation du risque de lithiase biliaire symptomatique de l'ordre de 70% sous sémaglutide par rapport au placebo — ce qui indirectement augmente le risque de pancréatite biliaire.
+Les GLP-1 favorisent la formation de calculs biliaires, notamment en raison de la perte de poids rapide qu'ils induisent. Or les calculs biliaires sont la première cause de pancréatite en France. Des données montrent une augmentation du risque de lithiase biliaire symptomatique estimée à environ 28% pour l'ensemble des agonistes GLP-1 (méta-analyses récentes) par rapport au placebo — ce qui indirectement augmente le risque de pancréatite biliaire.
 
 ### Hypertriglycéridémie
 

@@ -136,6 +136,9 @@ Pour une semaine de rééquilibrage alimentaire adapté aux patients GLP-1 :
 
 **Les compléments "détox" sans avis médical** (charbon actif, argile, certaines plantes comme la valériane ou la réglisse à forte dose) peuvent interagir avec l'absorption des médicaments ou fatiguer les reins. Demandez toujours l'avis de votre médecin ou pharmacien.
 
+
+> **À lire aussi** : [micronutriments et vitamines](/collections/regime-glp1/glp1-micronutriments/)
+
 ## FAQ
 
 ### Peut-on faire une cure détox en début de traitement GLP-1 ?

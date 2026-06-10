@@ -113,6 +113,9 @@ Vous cherchez **Mounjaro au prix le moins cher en France** ? Voici la réponse c
   <a href="#comparaison" class="nav-button">Comparaison</a>
 </div>
 
+> **À lire aussi** : [témoignages et résultats réels](/collections/traitements-glp1/mounjaro-avis-patients-france-2026/)
+
+
 ## Prix Officiel Mounjaro en Pharmacie {#prix-officiel}
 
 <div class="price-breakdown">

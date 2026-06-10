@@ -1,7 +1,7 @@
 ---
 title: "Sémaglutide Oral en Comprimé France 2026 : Rybelsus et Après"
 thumbnail: "/images/thumbnails/guide-complet-ozempic-illus.jpg"
-slug: "semaglutide-oral-comprimé-ozempic-france"
+slug: "semaglutide-oral-comprime-ozempic-france"
 description: "Sémaglutide oral en comprimé France 2026 : Rybelsus, Wegovy comprimé attendu fin 2027. Technologie SNAC, efficacité comparée à l'injectable Ozempic."
 mainKeyword: "semaglutide oral comprimé France 2026"
 secondaryKeywords: ["semaglutide oral comprimé France 2026", "rybelsus sémaglutide oral", "wegovy comprimé oral", "glp1 comprimé sans injection", "sémaglutide oral efficacité", "ozempic comprimé France", "traitement obesite oral glp1"]
@@ -19,6 +19,9 @@ priority: 3
 ## Sémaglutide Oral en Comprimé : Ce qui Arrive en France en 2026
 
 Pour des millions de patients qui doivent aujourd'hui s'injecter leur traitement GLP-1 chaque semaine, une alternative de plus en plus attendue se profile à l'horizon : le sémaglutide en comprimé. Cette forme orale du principe actif d'[Ozempic (sémaglutide injectable)](/collections/traitements-glp1/guide-complet-ozempic/) et de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) représente une avancée technologique majeure — et son arrivée en France est désormais une question de mois.
+
+> **À lire aussi** : [pilule pour maigrir en France](/collections/glp1-perte-de-poids/pilule-pour-maigrir-france-2026/)
+
 
 ## Le sémaglutide oral existe déjà : Rybelsus, le précurseur
 

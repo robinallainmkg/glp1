@@ -45,6 +45,9 @@ Concrètement :
 
 Eli Lilly, déjà fabricant de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide), a investi massivement dans l'orforglipron. Le laboratoire américain voit dans ce comprimé une opportunité de toucher une population beaucoup plus large que les injectables — en particulier dans les pays à revenus intermédiaires où les piqûres sont culturellement moins acceptées.
 
+> **À lire aussi** : [pilules pour maigrir disponibles](/collections/glp1-perte-de-poids/pilule-pour-maigrir-france-2026/)
+
+
 ## Efficacité : ce que disent les études
 
 ### Résultats des phases 3 publiés en 2025
@@ -80,6 +83,9 @@ Les études sur l'orforglipron dans le diabète de type 2 montrent également de
 | Rybelsus | Comprimé quotidien (contraint) | 4-5% | Non |
 
 L'orforglipron se positionne comme l'équivalent oral de Wegovy en termes d'efficacité — une première dans l'histoire des GLP-1.
+
+> **À lire aussi** : [médicaments pour maigrir en 2026](/collections/glp1-perte-de-poids/medicament-pour-maigrir-guide-complet-france-2026/)
+
 
 ## Effets secondaires de l'orforglipron
 

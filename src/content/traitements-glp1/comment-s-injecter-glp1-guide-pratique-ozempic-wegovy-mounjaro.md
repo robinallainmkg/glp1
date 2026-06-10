@@ -91,7 +91,7 @@ Un exemple de rotation sur 4 semaines :
 
 1. **Lavez-vous les mains** soigneusement avec du savon pendant au moins 30 secondes
 2. **Sortez le stylo du réfrigérateur** 30 minutes avant l'injection pour le réchauffer à température ambiante (les injections trop froides sont plus inconfortables)
-3. **Vérifiez le stylo** : date de péremption, aspect de la solution (doit être claire et incolore — légèrement jaune pâle pour Ozempic/Wegovy), absence de particules
+3. **Vérifiez le stylo** : date de péremption, aspect de la solution (doit être limpide et incolore ou presque incolore pour Ozempic/Wegovy ; incolore à légèrement jaune pâle pour Mounjaro), absence de particules
 4. **Nettoyez la peau** avec une compresse imbibée d'alcool, laissez sécher 15-30 secondes
 5. **Fixez une aiguille neuve** sur le stylo : ôtez le capuchon papier, vissez l'aiguille dans le sens horaire jusqu'à la butée, puis retirez les deux capuchons (extérieur et intérieur)
 

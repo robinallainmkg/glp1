@@ -98,6 +98,9 @@ mainKeyword: "effets secondaires Rybelsus sémaglutide oral"
 - Peut entraîner une perte de vision dans l'œil atteint
 - Consulter immédiatement en cas de troubles visuels soudains
 
+> **À lire aussi** : [gastroparésie sous GLP-1](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/)
+
+
 ## 📊 Fréquence des Effets Secondaires
 
 ### Très fréquents (>=10%)

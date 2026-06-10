@@ -195,6 +195,9 @@ Si vous souhaitez comparer avec un autre traitement de la même famille, consult
 
 Pensez également à surveiller les [carences nutritionnelles à surveiller sous Ozempic](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), notamment en vitamine B12, vitamine D et protéines, surtout en cas de perte de poids rapide.
 
+> **À lire aussi** : [retours d'expérience des patients](/collections/traitements-glp1/ozempic-avis-patients-france-2026/)
+
+
 ## 📞 Ressources d'Aide
 
 ### Associations de patients

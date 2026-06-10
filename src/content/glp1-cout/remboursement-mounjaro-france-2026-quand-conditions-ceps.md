@@ -5,8 +5,8 @@ keywords: ['remboursement mounjaro', 'mounjaro rembourse france', 'mounjaro 2026
 seoTitle: "Remboursement Mounjaro 2026 : Date, Conditions et Démarches"
 seoDescription: "Mounjaro remboursé 65% pour l'obésité à partir du 15 juin 2026 (arrêté 23 mai). Conditions IMC ≥35, prescription spécialisée, démarches."
 publishedAt: '2026-03-19'
-updatedAt: '2026-06-06'
-date: 2026-06-06
+updatedAt: '2026-06-10'
+date: 2026-06-10
 featured: true
 priority: 2
 author: 'Dr. Marie Dubois'
@@ -119,8 +119,8 @@ Pour situer Mounjaro par rapport au paysage actuel des médicaments remboursés 
 | Ozempic | Sémaglutide | Diabète type 2 | 65 % |
 | Trulicity | Dulaglutide | Diabète type 2 | 65 % |
 | [Victoza](/collections/traitements-glp1/guide-complet-victoza)* | Liraglutide | Diabète type 2 | 65 % |
-| **Mounjaro** | **Tirzépatide** | **Obésité** | **En cours** |
-| **Wegovy** | **Sémaglutide 2,4 mg** | **Obésité** | **En cours** |
+| **Mounjaro** | **Tirzépatide** | **Obésité + DT2** | **65 % (depuis 15/06/2026)** |
+| **Wegovy** | **Sémaglutide 2,4 mg** | **Obésité** | **65 % (depuis 15/06/2026)** |
 | Saxenda | Liraglutide 3 mg | Obésité | Non |
 
 *Arrêt de commercialisation prévu fin 2026
@@ -139,7 +139,7 @@ Certaines mutuelles ont des garanties "médicaments non remboursables" ou des fo
 
 **Combien coûtera Mounjaro après remboursement ?**
 
-Le prix remboursé n'est pas encore fixé. À titre d'exemple, si le taux est de 30 % sur un prix de référence de 300 €/mois, le reste à charge serait d'environ 210 € (sans mutuelle). Si votre mutuelle complète le remboursement, le reste à charge pourrait être nul ou proche de zéro selon votre contrat.
+Le taux de remboursement est de 65 % par la Sécurité Sociale (ticket modérateur de 35 %). Sur un prix de référence de 300 €/mois, le reste à charge serait d'environ 105 € (sans mutuelle). Si votre mutuelle complète le remboursement, le reste à charge pourrait être nul ou proche de zéro selon votre contrat.
 
 **Y aura-t-il des génériques de Mounjaro ?**
 
@@ -147,11 +147,11 @@ Le brevet sur le tirzépatide protège Mounjaro jusqu'à la fin des années 2030
 
 **Et pour les patients diabétiques ? Mounjaro peut-il déjà être remboursé ?**
 
-Oui, partiellement : Mounjaro dispose d'une AMM pour le diabète de type 2 (en plus de l'obésité), et ce depuis 2022. Cependant, en France, le remboursement pour l'indication diabète n'est pas encore accordé non plus — il fait l'objet d'un dossier séparé. Des patients diabétiques peuvent donc prendre Mounjaro avec une ordonnance, mais sans remboursement à ce jour pour cette indication.
+Oui : Mounjaro dispose d'une AMM pour le diabète de type 2 (en plus de l'obésité), et ce depuis 2022. Depuis le 15 juin 2026, Mounjaro est remboursé à 65 % pour le DT2 — au même titre que pour l'obésité. Les patients diabétiques éligibles peuvent donc bénéficier du remboursement sur présentation d'une ordonnance conforme aux conditions définies par la HAS.
 
 ## Conclusion
 
-Le remboursement de Mounjaro en France est engagé : l'avis favorable de la HAS de décembre 2025 est une étape déterminante, et les négociations avec le CEPS sont en cours. Le scénario le plus probable est un remboursement effectif au 3e ou 4e trimestre 2026, sous conditions strictes (IMC ≥ 35 avec comorbidité ou ≥ 40). Le [prix de Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) restera la variable clé pour l'accessibilité réelle du traitement à des millions de Français éligibles.
+Le remboursement de Mounjaro en France est acté : l'avis favorable de la HAS de décembre 2025 a ouvert la voie, et les négociations CEPS ont abouti à l'arrêté du 23 mai 2026. Le remboursement est effectif depuis le 15 juin 2026 à 65 % pour l'obésité et le DT2, sous conditions strictes (IMC ≥ 35 avec comorbidité ou ≥ 40). Le [prix de Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) restera la variable clé pour l'accessibilité réelle du traitement à des millions de Français éligibles.
 
 ---
 

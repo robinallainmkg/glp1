@@ -113,6 +113,9 @@ L'évaluation comparative des différentes options thérapeutiques intègre à l
 
 Cette analyse médico-économique guide les recommandations thérapeutiques et les décisions de remboursement.
 
+> **À lire aussi** : [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/)
+
+
 ## Optimisation financière
 Plusieurs stratégies permettent d'optimiser le coût du traitement tout en maintenant une efficacité thérapeutique optimale.
 

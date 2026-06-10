@@ -53,6 +53,9 @@ Selon les endocrinologues français... Cette approche s'inscrit dans les recomma
 
 Les GLP-1, agonistes GLP-1, diabète type 2 sont des éléments clés dans ce domaine médical.
 
+> **À lire aussi** : [traitements GLP-1 pour le diabète](/collections/glp1-perte-de-poids/guide-complet-glp1-2025-france/)
+
+
 
 
 

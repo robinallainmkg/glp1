@@ -131,16 +131,16 @@ Pour tirer le meilleur du paléo sans ses inconvénients, une version adaptée e
 
 ### Ozempic (sémaglutide pour le diabète de type 2)
 - **Prix** : ~76,58 € par stylo
-- **Remboursement** : 30% par l'Assurance Maladie pour le DT2
+- **Remboursement** : 65% en bithérapie metformine pour le DT2 (30% en trithérapie insuline basale)
 - **ALD 30 (diabète de type 2)** : 100% du ticket modérateur. L'obésité seule n'est pas reconnue comme ALD en France en mars 2026.
 
 ### [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide pour l'obésité)
 - **Prix** : ~250 à 290 €/mois
-- **Remboursement** : non remboursé en mars 2026
+- **Remboursement** : remboursé à 65% depuis le 15 juin 2026 pour obésité et DT2
 
 ### Mounjaro (tirzepatide)
 - **Prix** : 230 à 440 €/mois selon dosage
-- **Remboursement** : non remboursé (avis HAS favorable décembre 2025 — remboursement possible S2 2026)
+- **Remboursement** : remboursé à 65% depuis le 15 juin 2026 pour obésité et DT2
 
 ## Conseils pratiques
 

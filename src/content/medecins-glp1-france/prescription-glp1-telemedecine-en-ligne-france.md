@@ -42,6 +42,9 @@ Même après l'ouverture de la prescription aux généralistes, de nombreux méd
 
 Des plateformes de télémédecine généralistes (Qare, Doctolib, MaConsultation) et des acteurs spécialisés en santé métabolique (Charles.co, Mia.co, Jardé Médical) proposent désormais des consultations dédiées à la prise en charge de l'obésité et à la prescription des GLP-1. Certains acteurs américains ont également lancé des partenariats avec des fabricants comme Novo Nordisk pour proposer un circuit intégré téléconsultation-ordonnance-livraison.
 
+> **À lire aussi** : [prescription Ozempic en France](/collections/traitements-glp1/ozempic-ordonnance-prescription-france-2026/)
+
+
 ## Les critères médicaux : les mêmes que pour une consultation en présentiel
 
 ### Les conditions d'éligibilité à la prescription

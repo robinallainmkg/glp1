@@ -22,6 +22,9 @@ mainKeyword: "remboursement GLP-1 2026"
 
 Les traitements GLP-1 représentent une avancée majeure pour le [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et l'obésité. Pour une vue d'ensemble des molécules disponibles, consultez notre [guide complet des traitements GLP-1 disponibles en France](/collections/glp1-perte-de-poids/guide-complet-glp1-2025-france/). En 2026, le remboursement de ces médicaments évolue avec l'arrivée de nouvelles molécules et l'élargissement des conditions de prise en charge. Ce guide complet détaille tout ce qu'il faut savoir sur le remboursement de chaque traitement GLP-1 disponible en France.
 
+> **À lire aussi** : [coût Wegovy en pharmacie](/collections/glp1-cout/wegovy-prix/)
+
+
 ## 📋 Tableau Récapitulatif Remboursement GLP-1 2026
 
 | Médicament | Indication | Remboursement Sécu | Coût patient/mois | Statut 2026 |

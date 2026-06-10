@@ -20,6 +20,9 @@ thumbnailAlt: "Effets secondaires du traitement saxenda"
 
 ## Effets Secondaires Saxenda : Guide Complet
 
+> **À lire aussi** : [effets psychologiques des GLP-1](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/)
+
+
 ## ⚠️ Effets Secondaires Fréquents
 
 ### Troubles digestifs
@@ -84,6 +87,9 @@ thumbnailAlt: "Effets secondaires du traitement saxenda"
 - Risque très faible
 - Contre-indiqué si antécédents familiaux
 - Surveillance thyroïdienne recommandée
+
+> **À lire aussi** : [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)
+
 
 ## 📊 Fréquence des Effets Secondaires
 

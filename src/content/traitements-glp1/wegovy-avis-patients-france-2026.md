@@ -23,6 +23,13 @@ Nous avons croise les données des essais cliniques STEP, les témoignages de pa
 
 **Avertissement medical** : cet article a une vocation informative. Il ne remplace en aucun cas une consultation medicale. Tout traitement par Wegovy doit etre prescrit et suivi par un médecin spécialiste. Ne modifiez jamais votre traitement sans avis medical.
 
+> **À lire aussi** : [avis sur Ozempic](/collections/traitements-glp1/ozempic-avis-patients-france-2026/)
+
+> **À lire aussi** : [avis sur Mounjaro](/collections/traitements-glp1/mounjaro-avis-patients-france-2026/)
+
+> **À lire aussi** : [effets secondaires et précautions Wegovy](/collections/effets-secondaires-glp1/wegovy-danger/)
+
+
 ## Sommaire
 
 1. [Wegovy : Rappel du Traitement](#wegovy--rappel-du-traitement)

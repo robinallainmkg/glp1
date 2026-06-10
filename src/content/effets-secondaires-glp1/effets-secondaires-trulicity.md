@@ -91,6 +91,9 @@ thumbnailAlt: "Effets secondaires du traitement trulicity"
 - Contre-indiqué si antécédents familiaux
 - Surveillance thyroïdienne recommandée
 
+> **À lire aussi** : [risque de pancréatite](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)
+
+
 ## 📊 Fréquence des Effets Secondaires
 
 ### Très fréquents (>=10%)
@@ -135,6 +138,9 @@ thumbnailAlt: "Effets secondaires du traitement trulicity"
 - Hydratation importante
 - Régime BRAT (Banane, Riz, Compote, Thé)
 - Probiotiques si recommandé par médecin
+
+> **À lire aussi** : [prix Trulicity en France](/collections/glp1-cout/prix-trulicity-france/)
+
 
 ## 🩺 Quand Consulter ?
 
@@ -230,6 +236,9 @@ thumbnailAlt: "Effets secondaires du traitement trulicity"
 - Signalements rares d'effets graves
 - Profil de sécurité favorable
 - Bénéfice/risque positif
+
+
+> **À lire aussi** : [interactions médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/)
 
 ## 📝 Conclusion
 

@@ -21,6 +21,11 @@ Les **injections pour maigrir** ont profondement transforme la prise en charge d
 
 ---
 
+> **À lire aussi** : [tous les médicaments pour maigrir](/collections/glp1-perte-de-poids/medicament-pour-maigrir-guide-complet-france-2026/)
+
+> **À lire aussi** : [pilules amaigrissantes](/collections/glp1-perte-de-poids/pilule-pour-maigrir-france-2026/)
+
+
 ## Sommaire
 
 1. [Comment fonctionnent les injections pour maigrir ?](#comment-fonctionnent-les-injections-pour-maigrir)

@@ -203,6 +203,9 @@ mainKeyword: "effets secondaires Wegovy"
 - **Téléphone** : 01 42 81 28 81
 - **Support** : Groupes de parole, conseils
 
+> **À lire aussi** : [avis des patients sous Wegovy](/collections/traitements-glp1/wegovy-avis-patients-france-2026/)
+
+
 ### Centres de référence
 
 **Centres spécialisés obésité**
@@ -230,6 +233,9 @@ mainKeyword: "effets secondaires Wegovy"
 - Signalements rares d'effets graves
 - Profil de sécurité favorable, avec des [bénéfices cardiovasculaires démontrés par l'étude SELECT](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/)
 - Bénéfice/risque positif
+
+
+> **À lire aussi** : [dangers potentiels du Wegovy](/collections/effets-secondaires-glp1/wegovy-danger/)
 
 ## 📝 Conclusion
 

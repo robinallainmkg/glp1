@@ -69,6 +69,9 @@ En juillet 2023, le Comité de pharmacovigilance de l'EMA (PRAC) a ouvert une é
 
 Le PRAC a demandé aux titulaires d'AMM (Novo Nordisk pour le sémaglutide et le liraglutide, Eli Lilly pour le tirzépatide) de fournir l'ensemble des données disponibles : essais cliniques, bases de pharmacovigilance, études post-commercialisation.
 
+
+> **À lire aussi** : [bilan pharmacovigilance ANSM 2025-2026](/collections/recherche-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/)
+
 ### Les conclusions du PRAC (2024)
 
 En avril 2024, le PRAC a publié ses premières conclusions après analyse de l'ensemble des données disponibles. Le comité a conclu que :
@@ -204,6 +207,9 @@ Les médecins qui prescrivent des GLP-1 sont invités par l'ANSM à :
 - Ne pas hésiter à orienter vers un spécialiste en santé mentale en cas de doute
 
 Pour en savoir plus sur les [effets psychologiques des GLP-1 (dépression, apathie)](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/), nous avons consacré un article complet à ce sujet.
+
+> **À lire aussi** : [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/)
+
 
 ## Ressources et numéros d'aide {#ressources}
 

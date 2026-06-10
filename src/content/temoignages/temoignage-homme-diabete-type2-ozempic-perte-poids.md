@@ -56,6 +56,9 @@ secondaryKeywords: ["ozempic diabète résultats homme", "témoignage ozempic di
 
 > "Mon médecin traitant m'a proposé Ozempic. Franchement, j'avais des a priori. Un stylo à injection toutes les semaines, ça me paraissait contraignant. Et puis il y avait les nouvelles sur les 'effets secondaires d'Ozempic', les vidéos sur les réseaux... J'ai eu du mal à passer outre. Mais quand il m'a montré mes chiffres — HbA1c à 9,2%, cholestérol dégradé, en surcharge à 102 kg — j'ai compris que je n'avais plus vraiment le choix."
 
+> **À lire aussi** : [prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/)
+
+
 ## Son Parcours sous Ozempic
 
 ### Phase 1 : Le démarrage difficile (Mois 1-2)

@@ -111,6 +111,9 @@ Les GLP-1 ralentissent la vidange gastrique, ce qui réduit le pic post-prandial
 
 Des études précliniques montrent que les GLP-1 exercent des effets anti-inflammatoires directs sur les macrophages présents dans les plaques d'athérome, réduisant [l'inflammation vasculaire](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) indépendamment des modifications du profil lipidique circulant.
 
+> **À lire aussi** : [syndrome métabolique et GLP-1](/collections/glp1-perte-de-poids/glp1-syndrome-metabolique-traitement-composantes/)
+
+
 ## Données cliniques : LEADER, SUSTAIN, SURMOUNT {#données}
 
 ### Essai LEADER (liraglutide)

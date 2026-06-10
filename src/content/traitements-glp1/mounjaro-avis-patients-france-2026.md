@@ -32,6 +32,11 @@ Nous avons recueilli des dizaines de témoignages et analyse les données cliniq
   </ul>
 </div>
 
+> **À lire aussi** : [avis sur Ozempic](/collections/traitements-glp1/ozempic-avis-patients-france-2026/)
+
+> **À lire aussi** : [avis sur Wegovy](/collections/traitements-glp1/wegovy-avis-patients-france-2026/)
+
+
 ## Ce que disent les essais cliniques : les chiffres SURMOUNT
 
 Avant d'examiner les avis patients, rappelons les données scientifiques. Les essais cliniques SURMOUNT (phases I a IV) restent la référence pour evaluer l'efficacité du tirzepatide dans la perte de poids.

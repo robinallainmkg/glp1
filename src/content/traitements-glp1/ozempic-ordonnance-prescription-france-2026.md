@@ -21,6 +21,11 @@ Ozempic (semaglutide) est l'un des traitements GLP-1 les plus demandes en France
 
 Ce guide détaillé les etapes pour obtenir une ordonnance Ozempic en 2026, les nouvelles regles de prescription depuis juin 2025, les conditions de remboursement et les risques lies a l'achat sans ordonnance.
 
+> **À lire aussi** : [guide complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)
+
+> **À lire aussi** : [prescription GLP-1 en télémédecine](/collections/medecins-glp1-france/prescription-glp1-telemedecine-en-ligne-france/)
+
+
 ## Sommaire
 
 1. [Ozempic nécessité une ordonnance en France](#ozempic-necessite-une-ordonnance-en-france)

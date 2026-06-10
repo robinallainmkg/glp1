@@ -1,6 +1,6 @@
 ---
 title: "Wegovy Comprimé Oral : La Pilule GLP-1 Qui Change la Donne"
-description: "Wegovy comprimé oral France : sémaglutide oral haute dose pour la perte de poids, essais OASIS, efficacité 15-17 %, alternative aux injections. Date de disponibilité et guide complet."
+description: "Wegovy comprimé oral France : sémaglutide oral 25 mg approuvé FDA déc. 2025 et CHMP mai 2026, essais OASIS, efficacité 15-17 %, alternative aux injections. Lancement EU S2 2026."
 pubDate: 2026-05-28
 date: "2026-05-28"
 updatedAt: 2026-05-28
@@ -16,11 +16,11 @@ priority: 1
 schema: "Article"
 faqSchema:
   - question: "Le Wegovy comprimé oral est-il déjà disponible en France ?"
-    answer: "Non, pas encore. Le sémaglutide oral haute dose (50 mg) pour la perte de poids est en cours d'évaluation réglementaire. La FDA a avancé sur le dossier, et un dépôt auprès de l'EMA est attendu. La disponibilité en France est estimée à l'horizon 2027-2028."
+    answer: "Non, pas encore en France. Le sémaglutide oral 25 mg pour la perte de poids a été approuvé par la FDA en décembre 2025 et a reçu un avis positif du CHMP (EMA) en mai 2026. Un lancement européen est attendu au second semestre 2026, suivi des procédures HAS/CEPS pour la France."
   - question: "Le Wegovy oral est-il aussi efficace que le Wegovy injectable ?"
-    answer: "Les essais cliniques OASIS montrent une efficacité comparable : le sémaglutide oral haute dose (50 mg) entraîne une perte de poids d'environ 15 à 17 % du poids initial, ce qui est similaire aux 15-16 % obtenus avec l'injection hebdomadaire de Wegovy 2,4 mg."
+    answer: "Les essais cliniques OASIS montrent une efficacité comparable : le sémaglutide oral 25 mg (dose approuvée FDA déc. 2025 et CHMP EMA mai 2026) entraîne une perte de poids d'environ 15 à 17 % du poids initial, ce qui est similaire aux 15-16 % obtenus avec l'injection hebdomadaire de Wegovy 2,4 mg."
   - question: "Quelle est la différence entre le Wegovy oral et Rybelsus ?"
-    answer: "Rybelsus contient du sémaglutide oral à faible dose (14 mg max) et est indiqué uniquement pour le diabète de type 2, avec une perte de poids modeste. Le Wegovy oral (sémaglutide 50 mg) est une formulation haute dose spécifiquement développée pour la perte de poids, avec une efficacité nettement supérieure."
+    answer: "Rybelsus contient du sémaglutide oral à faible dose (14 mg max) et est indiqué uniquement pour le diabète de type 2, avec une perte de poids modeste. Le Wegovy oral (sémaglutide 25 mg, approuvé FDA déc. 2025 et CHMP EMA mai 2026) est une formulation spécifiquement développée pour la perte de poids, avec une efficacité nettement supérieure."
   - question: "Comment se prend le Wegovy comprimé oral ?"
     answer: "Comme Rybelsus, le sémaglutide oral doit être pris à jeun, avec un petit verre d'eau (environ 120 ml maximum), au moins 30 minutes avant le premier repas ou toute autre prise de médicament. Le comprimé ne doit être ni croqué, ni écrasé."
   - question: "Le Wegovy oral est-il mieux que l'orforglipron (Foundayo) ?"
@@ -39,7 +39,7 @@ affiliateConfig:
 
 Et si Wegovy existait sous forme de comprimé ? C'est exactement ce que Novo Nordisk développe : une version orale haute dose du sémaglutide, destinée à offrir les mêmes résultats de perte de poids que l'injection hebdomadaire de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), mais sous forme de pilule quotidienne. Pour les millions de patients qui hésitent à franchir le pas des injections, cette avancée pourrait être décisive.
 
-Le sémaglutide oral existe déjà sous le nom de [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/), mais à une dose maximale de 14 mg, indiquée uniquement pour le diabète de type 2 et avec des résultats modestes sur la perte de poids. La nouvelle formulation en développement vise une dose de **50 mg**, spécifiquement conçue pour la gestion du poids. Les essais cliniques OASIS ont produit des résultats très encourageants.
+Le sémaglutide oral existe déjà sous le nom de [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/), mais à une dose maximale de 14 mg, indiquée uniquement pour le diabète de type 2 et avec des résultats modestes sur la perte de poids. La nouvelle formulation approuvée est à **25 mg**, spécifiquement conçue pour la gestion du poids (approbation FDA déc. 2025, avis positif CHMP EMA mai 2026). Les essais cliniques OASIS ont produit des résultats très encourageants.
 
 Ce guide fait le point sur l'état actuel du développement, les données cliniques, le mécanisme d'action et la date de disponibilité attendue en France.
 
@@ -67,13 +67,13 @@ La technologie **SNAC** (salcaprozate de sodium) utilisée dans Rybelsus résout
 
 Cependant, la biodisponibilité orale reste faible : environ 1 % seulement du sémaglutide oral atteint la circulation sanguine. C'est pourquoi la dose orale (14 mg) est bien supérieure à la dose injectable (1 mg pour Ozempic), et pourquoi atteindre des niveaux plasmatiques équivalents à Wegovy (2,4 mg injectable) nécessite une dose orale encore plus élevée.
 
-### La solution : le sémaglutide oral haute dose (50 mg)
+### La solution : le sémaglutide oral 25 mg (dose approuvée)
 
-Novo Nordisk a développé une formulation orale haute dose à **50 mg** de sémaglutide, toujours avec la technologie SNAC, spécifiquement destinée à la gestion du poids. L'objectif : atteindre des concentrations plasmatiques comparables à celles de Wegovy 2,4 mg injectable, et donc une efficacité similaire sur la perte de poids.
+Novo Nordisk a développé une formulation orale à **25 mg** de sémaglutide (dose approuvée par la FDA en décembre 2025 et par le CHMP de l'EMA en mai 2026), toujours avec la technologie SNAC, spécifiquement destinée à la gestion du poids. L'objectif : atteindre des concentrations plasmatiques comparables à celles de Wegovy 2,4 mg injectable, et donc une efficacité similaire sur la perte de poids.
 
 **Nom prévu** : probablement commercialisé sous la marque Wegovy (version orale) ou un nom dédié  
 **Molécule** : Sémaglutide  
-**Dose** : 50 mg/jour  
+**Dose** : 25 mg/jour (approuvée FDA déc. 2025, CHMP EMA mai 2026)  
 **Technologie** : SNAC (salcaprozate de sodium)  
 **Laboratoire** : Novo Nordisk  
 **Forme** : Comprimé oral à prise quotidienne  
@@ -87,11 +87,11 @@ Le programme OASIS (*Oral Semaglutide Advanced Study in Obesity*) est le program
 
 ### OASIS 1 : le résultat phare
 
-L'essai OASIS 1 a évalué le sémaglutide oral 50 mg chez des adultes obèses ou en surpoids avec au moins une comorbidité liée au poids, sans diabète de type 2.
+L'essai OASIS 1 a évalué le sémaglutide oral 25 mg chez des adultes obèses ou en surpoids avec au moins une comorbidité liée au poids, sans diabète de type 2.
 
 **Résultats principaux** :
 
-| Paramètre | Sémaglutide oral 50 mg | Placebo |
+| Paramètre | Sémaglutide oral 25 mg | Placebo |
 |---|---|---|
 | **Perte de poids moyenne** | Environ 15-17 % | Environ 2-3 % |
 | **Patients perdant ≥ 5 %** | Environ 85-90 % | Environ 25 % |
@@ -167,8 +167,8 @@ Comme pour tous les GLP-1, le sémaglutide oral haute dose devrait suivre une es
 
 - **Semaines 1-4** : dose initiale faible (par exemple 3 mg/jour)
 - **Augmentations progressives** par paliers de 4 semaines
-- **Paliers intermédiaires** : probablement 7 mg, 14 mg, 25 mg
-- **Dose cible** : 50 mg/jour
+- **Paliers intermédiaires** : probablement 3 mg, 7 mg, 14 mg
+- **Dose cible** : 25 mg/jour (dose approuvée FDA/CHMP)
 
 Ce schéma vise à minimiser les effets secondaires gastro-intestinaux en laissant le corps s'adapter progressivement.
 
@@ -176,9 +176,9 @@ Ce schéma vise à minimiser les effets secondaires gastro-intestinaux en laissa
 
 ### Tableau comparatif
 
-| Critère | Wegovy oral (50 mg/jour) | Wegovy injectable (2,4 mg/semaine) |
+| Critère | Wegovy oral (25 mg/jour) | Wegovy injectable (2,4 mg/semaine) |
 |---|---|---|
-| **Administration** | Comprimé quotidien | Injection sous-cutanée hebdomadaire |
+| **Administration** | Comprimé quotidien (25 mg, approuvé FDA/CHMP) | Injection sous-cutanée hebdomadaire |
 | **Fréquence** | 1 fois/jour | 1 fois/semaine |
 | **Perte de poids** | ~15-17 % | ~15-16 % |
 | **Contraintes de prise** | À jeun, 120 ml d'eau, 30 min attente | Aucune contrainte alimentaire |
@@ -212,9 +212,9 @@ Ce schéma vise à minimiser les effets secondaires gastro-intestinaux en laissa
 
 L'arrivée simultanée de deux GLP-1 oraux — le sémaglutide haute dose (Novo Nordisk) et l'orforglipron/Foundayo (Eli Lilly) — crée une compétition directe. Consultez notre [article dédié à Foundayo](/collections/traitements-glp1/foundayo-orforglipron-fda-approuve-france-2026/) pour une analyse détaillée.
 
-| Critère | Wegovy oral (sémaglutide 50 mg) | Foundayo (orforglipron) |
+| Critère | Wegovy oral (sémaglutide 25 mg) | Foundayo (orforglipron) |
 |---|---|---|
-| **Type de molécule** | Peptide + SNAC | Non-peptidique |
+| **Type de molécule** | Peptide + SNAC (25 mg) | Non-peptidique |
 | **Prise à jeun** | Obligatoire (30 min) | Conditions simplifiées |
 | **Perte de poids** | ~15-17 % | ~14-15 % |
 | **Recul clinique** | Important (sémaglutide connu depuis des années) | Limité (nouvelle molécule) |
@@ -243,7 +243,7 @@ Le sémaglutide oral haute dose suit un parcours réglementaire parallèle à ce
 
 ### Calendrier estimé
 
-La disponibilité du Wegovy comprimé oral en France est estimée à l'horizon **2027-2028**, sous réserve de l'avancement des procédures réglementaires. Novo Nordisk, fort de son expérience avec Rybelsus et Wegovy injectable, dispose d'une expertise réglementaire européenne qui pourrait accélérer le processus.
+La FDA a approuvé le sémaglutide oral 25 mg en décembre 2025, et le CHMP de l'EMA a rendu un avis positif en mai 2026. Un lancement européen est attendu au **second semestre 2026**. La disponibilité en France dépendra ensuite des procédures HAS (SMR/ASMR) et de la négociation du prix avec le CEPS, qui peuvent prendre 6 à 18 mois supplémentaires.
 
 ### Question du remboursement
 
@@ -285,7 +285,7 @@ L'arrivée du Wegovy oral élargira considérablement les options pour les patie
 
 Le développement des GLP-1 oraux n'est pas un phénomène isolé. Il s'inscrit dans une tendance de fond de l'industrie pharmaceutique :
 
-- **Novo Nordisk** développe le sémaglutide oral haute dose (50 mg) pour la perte de poids
+- **Novo Nordisk** a obtenu l'approbation FDA (déc. 2025) et l'avis positif CHMP EMA (mai 2026) pour le sémaglutide oral 25 mg pour la perte de poids
 - **Eli Lilly** a obtenu l'approbation de la FDA pour l'orforglipron (Foundayo), un GLP-1 oral non-peptidique
 - **D'autres laboratoires** travaillent sur leurs propres formulations orales de GLP-1
 
@@ -306,7 +306,7 @@ L'avenir est probablement un **choix patient-médecin** entre formes orales et i
 
 ### Le Wegovy oral peut-il être prescrit pour le diabète ?
 
-Le sémaglutide oral existe déjà pour le diabète sous le nom de Rybelsus (dose maximale 14 mg). La formulation haute dose (50 mg) est développée principalement pour l'indication perte de poids. Une extension d'indication au diabète est possible mais nécessitera des données réglementaires spécifiques.
+Le sémaglutide oral existe déjà pour le diabète sous le nom de Rybelsus (dose maximale 14 mg). La formulation 25 mg (approuvée FDA déc. 2025, CHMP EMA mai 2026) est indiquée principalement pour la perte de poids. Une extension d'indication au diabète est possible mais nécessitera des données réglementaires spécifiques.
 
 ### Le sémaglutide oral haute dose est-il dangereux pour l'estomac ?
 
@@ -322,10 +322,10 @@ Les patients ayant subi un bypass gastrique ou une sleeve gastrectomie ont une a
 
 ## Points clés à retenir
 
-- **Le Wegovy comprimé oral** (sémaglutide 50 mg/jour) vise à offrir l'efficacité de Wegovy injectable (~15-17 % de perte de poids) sous forme de pilule quotidienne
+- **Le Wegovy comprimé oral** (sémaglutide 25 mg/jour, approuvé FDA déc. 2025 et CHMP EMA mai 2026) vise à offrir l'efficacité de Wegovy injectable (~15-17 % de perte de poids) sous forme de pilule quotidienne
 - **Les essais OASIS** montrent des résultats très proches de l'injection, confirmant que la voie orale peut rivaliser avec la voie injectable pour le sémaglutide
 - **Les contraintes de prise** (jeûne, peu d'eau, attente de 30 min) sont réelles et doivent être intégrées dans la routine quotidienne
-- **La disponibilité en France** est estimée à l'horizon 2027-2028, sous réserve des procédures réglementaires EMA et HAS
+- **La disponibilité en France** : FDA approuvé déc. 2025, CHMP avis positif mai 2026 — lancement EU S2 2026 prévu, France sous réserve des procédures HAS/CEPS
 - **En attendant**, Wegovy injectable, Mounjaro et les autres GLP-1 sont disponibles en France pour les patients éligibles — n'attendez pas si vous êtes éligible à un traitement
 
 Le Wegovy oral représente une avancée importante vers une démocratisation des traitements GLP-1 pour la perte de poids. Combiné à l'arrivée de Foundayo (orforglipron), il annonce une ère où les patients auront le choix entre comprimé et injection selon leurs préférences — une excellente nouvelle pour la prise en charge de l'obésité en France.

@@ -23,6 +23,11 @@ mainKeyword: "GLP-1 France 2025 guide complet"
 
 ![Guide Complet GLP-1 2025](/images/thumbnails/guide-complet-GLP1.jpg)
 
+> **À lire aussi** : [injections pour maigrir en France](/collections/glp1-perte-de-poids/injection-pour-maigrir-guide-complet-france-2026/)
+
+> **À lire aussi** : [médicaments pour maigrir autorisés en France](/collections/glp1-perte-de-poids/medicament-pour-maigrir-guide-complet-france-2026/)
+
+
 ## Qu'est-ce que les GLP-1 ?
 
 Les **GLP-1 (Glucagon-Like Peptide-1)** sont des hormones naturellement produites par l'organisme qui régulent la glycémie et l'appétit. Depuis leur découverte, ils ont révolutionné la prise en charge du [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et de l'obésité.

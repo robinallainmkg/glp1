@@ -129,7 +129,7 @@ Les recommandations actuelles des sociétés d'anesthésie préconisent :
 - D'arrêter un GLP-1 hebdomadaire (Ozempic, Wegovy, Mounjaro) **au moins 7 jours avant** une intervention programmée
 - D'arrêter un GLP-1 quotidien (liraglutide/Saxenda) **le jour de l'intervention** (ou la veille par précaution selon le protocole anesthésique, conformément aux recommandations PRAC de juillet 2024)
 - D'informer l'équipe anesthésique si l'arrêt n'a pas pu être effectué dans ces délais
-- De réaliser une échoendoscopie gastrique en préopératoire dans certains cas à risque
+- De réaliser une échographie gastrique au point de soins (POCUS) en préopératoire pour évaluer le contenu gastrique résiduel
 
 Si vous avez une chirurgie programmée, informez **immédiatement** le chirurgien et l'anesthésiste de votre traitement GLP-1. Consultez notre guide complet sur les [précautions d'arrêt avant chirurgie et anesthésie](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) pour les délais et protocoles recommandés.
 

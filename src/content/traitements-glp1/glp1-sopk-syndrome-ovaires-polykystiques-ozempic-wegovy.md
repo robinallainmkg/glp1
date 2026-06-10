@@ -87,7 +87,7 @@ Il est important de bien distinguer les indications officielles des usages "off-
 
 En France en 2026, les GLP-1 sont [remboursés](/collections/glp1-cout/remboursement-glp1-2026/) uniquement dans deux cadres :
 - **Diabète de type 2** (Ozempic, [Victoza](/collections/traitements-glp1/guide-complet-victoza/), [Trulicity](/collections/traitements-glp1/guide-complet-trulicity/), [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)/)
-- **Obésité avec IMC ≥ 30** et comorbidité, ou IMC ≥ 35 (Wegovy, Mounjaro — remboursement en cours de négociation)
+- **Obésité avec IMC ≥ 30** et comorbidité, ou IMC ≥ 35 (Wegovy et Mounjaro sont remboursés à 65% depuis le 15 juin 2026 sous conditions)
 
 Le SOPK en lui-même n'est pas une indication officielle pour la prescription de GLP-1.
 
@@ -95,7 +95,7 @@ Le SOPK en lui-même n'est pas une indication officielle pour la prescription de
 
 Un médecin peut prescrire un GLP-1 à une femme atteinte de SOPK s'il existe une indication reconnue associée — typiquement un surpoids ou une obésité (IMC ≥ 30), ou un diabète de type 2. Dans ce cas, la prescription est fondée sur l'indication officielle, pas sur le SOPK lui-même.
 
-Selon les [règles ANSM de prescription des GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/), depuis juin 2025, l'ensemble des médecins — y compris les généralistes — peuvent initier un traitement GLP-1 pour l'obésité. Votre gynécologue ou endocrinologue pourra également vous orienter.
+Selon les [règles ANSM de prescription des GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/), la primo-prescription est réservée aux spécialistes (CSO, CHU, endocrinologues) pour bénéficier du remboursement depuis le 15 juin 2026. Le renouvellement peut ensuite être effectué par tout médecin, y compris votre généraliste. Votre gynécologue ou endocrinologue pourra également vous orienter.
 
 Pour les femmes atteintes de SOPK sans surpoids significatif, la metformine reste le traitement de référence de la résistance à l'insuline, souvent associée à des contraceptifs oraux pour les manifestations androgéniques.
 

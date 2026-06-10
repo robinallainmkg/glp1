@@ -95,7 +95,7 @@ Voici les conditions d'éligibilité au remboursement de Wegovy (arrêté du 23 
 
 **Critère d'IMC** :
 - **IMC >= 35 kg/m²** (obésité sévère), ou
-- **IMC >= 30 kg/m²** avec au moins une comorbidité liée au poids (diabète de type 2, hypertension, apnée du sommeil, maladies cardiovasculaires)
+- **IMC >= 35 kg/m²** avec au moins une comorbidité liée au poids (diabète de type 2, hypertension, apnée du sommeil, maladies cardiovasculaires)
 
 **Parcours de soins préalable** :
 - **6 mois minimum** de prise en charge diététique et d'activité physique documentée, sans résultat suffisant
@@ -138,6 +138,9 @@ Certaines [mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/) com
 
 Un traitement complet par Wegovy, en incluant la phase de titration (4 mois) et la dose de maintien, coûte environ **3 200 à 3 600 euros par an** sans aucun remboursement. C'est un investissement significatif, qui explique l'attente forte autour du remboursement.
 
+> **À lire aussi** : [prix Wegovy en pharmacie](/collections/glp1-cout/wegovy-prix/)
+
+
 ## Les alternatives remboursées en attendant {#alternatives}
 
 ### Pour les patients diabétiques
@@ -164,11 +167,11 @@ Non, pas encore en mars 2026. L'avis HAS est favorable, les négociations de pri
 
 ### Quel sera le taux de remboursement ?
 
-Le taux devrait être de **30 % par la Sécurité Sociale**, complété par la mutuelle. Pour les patients en ALD (affection de longue durée pour obésité sévère), la prise en charge pourrait atteindre 100 %.
+Le taux est de **65 % par la Sécurité Sociale** (ticket modérateur de 35%). Pour les patients en ALD (affection de longue durée pour obésité sévère), la prise en charge pourrait atteindre 100 %.
 
 ### Tous les patients obèses pourront-ils en bénéficier ?
 
-Non. Des conditions d'IMC (>= 35, ou >= 30 avec comorbidité) et de parcours de soins préalable (6 mois de mesures diététiques) seront probablement requises.
+Non. Des conditions d'IMC (≥ 35 avec comorbidité ou ≥ 40) et de parcours de soins préalable (6 mois de mesures diététiques) sont requises.
 
 ### Mon médecin généraliste pourra-t-il me prescrire Wegovy remboursé ?
 

@@ -74,7 +74,7 @@ Le risque de pancréatite sous GLP-1 fait l'objet d'une surveillance depuis la m
 
 #### 4. Interactions et carences nutritionnelles
 
-Un [signal ANSM sur les carences nutritionnelles sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) documenté dans le bilan 2025-2026 concerne les **carences nutritionnelles** chez les patients sous GLP-1, particulièrement en vitamine B12, vitamine D et protéines. Ces carences, liées à la réduction significative des apports alimentaires, peuvent avoir des conséquences cliniques (fatigue, fragilité musculaire, troubles neurologiques). L'ANSM recommandé un bilan biologique annuel chez les patients traités au long cours.
+Un [signal ANSM sur les carences nutritionnelles sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) documenté dans le bilan 2025-2026 concerne les **carences nutritionnelles** chez les patients sous GLP-1, particulièrement en fer (anémie), vitamine B1 (thiamine, risque de syndrome de Gayet-Wernicke), et perte de masse musculaire (sarcopénie). Ces carences, liées à la réduction significative des apports alimentaires, peuvent avoir des conséquences cliniques (fatigue, fragilité musculaire, troubles neurologiques). L'ANSM recommandé un bilan biologique annuel chez les patients traités au long cours.
 
 ## Le mésusage : un problème de santé publique documenté
 

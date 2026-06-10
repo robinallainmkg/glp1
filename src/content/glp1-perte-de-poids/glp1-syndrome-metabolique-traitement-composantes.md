@@ -127,7 +127,7 @@ Il est important de noter que ces effets sont maintenus tant que le traitement e
 
 ### Wegovy (sémaglutide 2,4 mg) : si obésité sans diabète
 
-[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) à la dose de 2,4 mg est indiqué pour l'**obésité** (IMC ≥ 30) ou le surpoids (IMC ≥ 27) avec comorbidité. C'est le choix pour les patients avec syndrome métabolique mais sans diabète de type 2 diagnostiqué. Il n'est pas remboursé en France à ce jour.
+[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) à la dose de 2,4 mg est indiqué pour l'**obésité** (IMC ≥ 30) ou le surpoids (IMC ≥ 27) avec comorbidité. C'est le choix pour les patients avec syndrome métabolique mais sans diabète de type 2 diagnostiqué. Remboursé à 65% depuis le 15 juin 2026 pour IMC >=35 avec comorbidité ou >=40.
 
 ### Mounjaro (tirzépatide) : double mécanisme d'action
 
@@ -146,7 +146,7 @@ Les GLP-1 sont un outil puissant contre le syndrome métabolique, mais ils fonct
 
 ### Le syndrome métabolique justifie-t-il un remboursement du GLP-1 ?
 
-Le syndrome métabolique en tant que tel n'est pas une indication remboursée pour les GLP-1 en France. Le remboursement dépend de l'indication : diabète de type 2 pour Ozempic (65 % en bithérapie metformine, 100 % en ALD), obésité sévère avec comorbidités dans certains cas. Si vous avez un syndrome métabolique avec diabète de type 2, Ozempic est remboursé. Si vous avez un syndrome métabolique sans diabète, vous n'avez pas droit au remboursement actuellement.
+Le syndrome métabolique en tant que tel n'est pas une indication remboursée pour les GLP-1 en France. Le remboursement dépend de l'indication : diabète de type 2 pour Ozempic (65 % en bithérapie metformine, 100 % en ALD), obésité sévère avec comorbidités dans certains cas. Si vous avez un syndrome métabolique avec diabète de type 2, Ozempic est remboursé. Depuis le 15 juin 2026, Wegovy est remboursé pour les patients obèses sévères même sans diabète.
 
 ### Mon médecin traitant peut-il prescrire un GLP-1 pour syndrome métabolique ?
 

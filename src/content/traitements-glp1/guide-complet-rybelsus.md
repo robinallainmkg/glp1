@@ -24,6 +24,9 @@ mainKeyword: "Rybelsus Guide Complet France"
   </a>
 </div>
 
+> **À lire aussi** : [pilules amaigrissantes en France](/collections/glp1-perte-de-poids/pilule-pour-maigrir-france-2026/)
+
+
 ## Sommaire
 1. [Qu'est-ce que Rybelsus ?](#quest-ce-querybelsus)
 2. [Comment fonctionne Rybelsus ?](#comment-fonctionne-rybelsus)

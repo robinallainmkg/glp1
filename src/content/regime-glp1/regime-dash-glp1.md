@@ -112,11 +112,11 @@ Le régime DASH, naturellement peu gras et bien structuré en petits repas, conv
 
 ### Wegovy (sémaglutide 2,4 mg pour l'obésité)
 - Prix : ~250 à 290 €/mois
-- Non remboursé en mars 2026
+- Remboursé à 65% depuis le 15 juin 2026 sous conditions (IMC ≥40 ou ≥35 avec comorbidités)
 
 ### Mounjaro (tirzepatide)
 - Prix : 230 à 440 €/mois selon dosage
-- Non remboursé en mars 2026 (remboursement attendu 2e semestre 2026)
+- Remboursé à 65% depuis le 15 juin 2026 sous conditions (IMC ≥40 ou ≥35 avec comorbidités)
 
 ## Conseils pratiques pour démarrer
 

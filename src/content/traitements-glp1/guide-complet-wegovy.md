@@ -25,6 +25,11 @@ mainKeyword: "wegovy guide complet france semaglutide"
   </a>
 </div>
 
+> **À lire aussi** : [dangers et effets secondaires Wegovy](/collections/effets-secondaires-glp1/wegovy-danger/)
+
+> **À lire aussi** : [avis patients Wegovy 2026](/collections/traitements-glp1/wegovy-avis-patients-france-2026/)
+
+
 ## Sommaire
 1. [Qu'est-ce que Wegovy ?](#quest-ce-quewegovy)
 2. [Comment fonctionne Wegovy ?](#comment-fonctionne-wegovy)
@@ -149,6 +154,9 @@ Avant de démarrer, vérifiez si vous remplissez les [critères d'éligibilité 
 - **Orlistat (Xenical)** : Inhibiteur des lipases
 - **Phentermine/Topiramate (Qsymia)** : Association anorexigène
 - **Bupropion/Naltrexone (Mysimba)** : Action centrale sur l'appétit
+
+
+> **À lire aussi** : [prix Wegovy en pharmacie](/collections/glp1-cout/wegovy-prix/)
 
 ## FAQ Wegovy
 

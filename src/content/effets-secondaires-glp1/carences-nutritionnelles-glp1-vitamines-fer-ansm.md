@@ -1,6 +1,6 @@
 ---
-title: "Carences Nutritionnelles sous GLP-1 : Vitamines, Fer et Alerte ANSM"
-description: "Alerte ANSM sur les carences nutritionnelles sous GLP-1 (Ozempic, Wegovy, Mounjaro) : risques de déficits en fer, vitamine B1, B12, D et protéines. Prévention, bilans et supplémentation."
+title: "Carences sous GLP-1 : Vitamines et Fer | ANSM"
+description: "Carences sous GLP-1 : déficits en fer, vitamines B1, B12, D et protéines. Bilans recommandés, seuils d'alerte et prévention ANSM."
 pubDate: 2026-05-28
 date: "2026-05-28"
 updatedAt: 2026-05-28
@@ -66,6 +66,9 @@ L'Agence Nationale de Sécurité du Médicament et des produits de santé (ANSM)
 Ces recommandations s'inscrivent dans un contexte plus large de surveillance des effets secondaires des GLP-1, qui inclut également les risques gastro-intestinaux, pancréatiques et thyroïdiens. Pour une vue d'ensemble des effets indésirables, consultez nos guides sur les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et les [effets secondaires de Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/).
 
 ---
+
+> **À lire aussi** : [préserver la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
+
 
 ## Les carences à surveiller sous GLP-1
 
@@ -166,6 +169,9 @@ La carence protéique aggrave ce phénomène en privant l'organisme des acides a
 **Bilan recommandé :** albumine sérique, préalbumine (transthyrétine). L'albumine < 35 g/L signale une carence protéique significative.
 
 ---
+
+> **À lire aussi** : [apport en protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/)
+
 
 ## Le bilan biologique recommandé sous GLP-1
 
@@ -342,6 +348,9 @@ Le risque de carence est significatif, en particulier pendant les 6 premiers moi
 ### Dois-je prendre un multivitamines systématiquement sous GLP-1 ?
 
 La prise systématique d'un multivitamines n'est pas officiellement recommandée pour tous les patients sous GLP-1. En revanche, elle peut être envisagée au cas par cas, notamment pour les patients dont les apports alimentaires sont très réduits (< 1 200 kcal/jour). Un multivitamines ne remplace pas un bilan biologique ciblé ni une alimentation équilibrée, mais il peut constituer un filet de sécurité nutritionnel.
+
+> **À lire aussi** : [micronutriments essentiels sous GLP-1](/collections/regime-glp1/glp1-micronutriments/)
+
 
 ### La chute de cheveux sous GLP-1 est-elle liée aux carences ?
 

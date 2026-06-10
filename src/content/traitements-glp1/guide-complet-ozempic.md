@@ -24,6 +24,9 @@ mainKeyword: "ozempic guide complet france posologie prix"
   </a>
 </div>
 
+> **À lire aussi** : [avis patients Ozempic 2026](/collections/traitements-glp1/ozempic-avis-patients-france-2026/)
+
+
 ## Sommaire
 1. [Qu'est-ce qu'Ozempic ?](#quest-ce-quozempic)
 2. [Comment fonctionne Ozempic ?](#comment-fonctionne-ozempic)
@@ -152,6 +155,9 @@ Pour un parcours détaillé applicable à tous les GLP-1, consultez notre guide 
 - Sulfamides hypoglycémiants
 - Inhibiteurs DPP-4
 - [Inhibiteurs SGLT2 (iSGLT2)](/collections/regime-glp1/isglt2-liste/) — souvent associés aux GLP-1 pour une protection cardiovasculaire renforcée
+
+
+> **À lire aussi** : [obtenir une ordonnance Ozempic](/collections/traitements-glp1/ozempic-ordonnance-prescription-france-2026/)
 
 ## FAQ Ozempic
 

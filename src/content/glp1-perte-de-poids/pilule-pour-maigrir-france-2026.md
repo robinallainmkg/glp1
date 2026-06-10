@@ -25,6 +25,9 @@ Ce guide fait le point sur toutes les **pilules pour maigrir** disponibles ou en
 
 ---
 
+> **À lire aussi** : [injections GLP-1 pour maigrir](/collections/glp1-perte-de-poids/injection-pour-maigrir-guide-complet-france-2026/)
+
+
 ## 1. Rybelsus (Semaglutide Oral 14 mg) : Le Seul GLP-1 en Comprimé
 
 Le **Rybelsus** est le premier et actuellement le seul agoniste du récepteur GLP-1 disponible sous forme orale en France. Developpe par Novo Nordisk, ce médicament contient du semaglutide, la même molécule que l'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (injection hebdomadaire) et le [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (injection pour l'obésité).

@@ -65,6 +65,9 @@ Ce formulaire s'applique spécifiquement aux GLP-1 ayant une AMM pour le diabèt
 
 **Important** : Ce formulaire ne concerne PAS les prescriptions de Wegovy ou Mounjaro pour l'obésité, qui suivent leurs propres conditions de prescription.
 
+> **À lire aussi** : [obtenir une ordonnance Ozempic en 2026](/collections/traitements-glp1/ozempic-ordonnance-prescription-france-2026/)
+
+
 ## Le rapport bénéfice/risque confirmé par l'ANSM
 
 ### Que dit le dernier bilan de pharmacovigilance ?

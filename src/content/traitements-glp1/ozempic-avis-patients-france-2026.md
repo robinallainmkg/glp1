@@ -23,6 +23,11 @@ Plutot que de s'appuyer uniquement sur les promesses marketing, nous avons compi
 
 **Avertissement medical** : cet article a une vocation informative. Il ne remplace en aucun cas une consultation medicale. Tout traitement par Ozempic doit etre prescrit et suivi par un médecin.
 
+> **À lire aussi** : [avis sur Wegovy](/collections/traitements-glp1/wegovy-avis-patients-france-2026/)
+
+> **À lire aussi** : [avis sur Mounjaro](/collections/traitements-glp1/mounjaro-avis-patients-france-2026/)
+
+
 ## Sommaire
 
 1. [Ozempic : Rappel du Traitement](#ozempic--rappel-du-traitement)

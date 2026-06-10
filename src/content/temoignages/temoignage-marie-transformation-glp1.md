@@ -16,6 +16,9 @@ mainKeyword: "témoignage Ozempic perte de poids femme"
 
 ## Témoignage Ozempic Perte de Poids : Marie, -32 kg
 
+> **À lire aussi** : [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/)
+
+
 ## La Transformation Exceptionnelle de Marie L.
 
 **32 kilos perdus en 12 mois** avec le [traitement GLP-1](/collections/glp1-perte-de-poids/)

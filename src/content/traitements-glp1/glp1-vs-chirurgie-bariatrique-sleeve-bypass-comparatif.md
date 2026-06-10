@@ -44,6 +44,9 @@ L'**EWL (Excess Weight Loss)** mesure le pourcentage de l'excès de poids perdu.
 
 La chirurgie agit rapidement (résultats majeurs dans les 12 à 18 premiers mois) et durablement pour la majorité des patients, avec un maintien du poids à long terme supérieur aux régimes classiques.
 
+> **À lire aussi** : [injections GLP-1 pour maigrir](/collections/glp1-perte-de-poids/injection-pour-maigrir-guide-complet-france-2026/)
+
+
 ### Les GLP-1 : révolution sans bistouri
 
 Jusqu'à l'arrivée des GLP-1 de nouvelle génération, aucun traitement médical ne pouvait approcher l'efficacité de la chirurgie. Wegovy et Mounjaro ont changé la donne :
