@@ -110,10 +110,10 @@ faqSchema:
 
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
-| Wegovy (sémaglutide) | 169-360 € | Non remboursé |
-| [Ozempic (sémaglutide)](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 €/stylo (TTC) | 30% (DT2 uniquement) |
+| Wegovy (sémaglutide) | 195,10 € (PPTTC 2,4 mg) | Remboursé 65 % (sous conditions) |
+| [Ozempic (sémaglutide)](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 €/stylo (TTC) | 65% (DT2 uniquement) |
 | Saxenda (liraglutide) | 240-300 € | Non remboursé |
-| [Mounjaro (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 € | Non remboursé |
+| [Mounjaro (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 € | Remboursé 65 % (sous conditions) |
 
 > **À lire aussi** : [témoignages et retours sur Wegovy](/collections/traitements-glp1/wegovy-avis-patients-france-2026/)
 
@@ -257,8 +257,8 @@ Les différences de prix entre la France et les pays voisins sont souvent minime
 |---------|---------|--------|---------|
 | Prix mensuel | 169-360 € | ~77,60 €/stylo (TTC) | 240-300 € |
 | Perte poids moyenne | -15 à -20% | -5 à 15% selon dosage | -5 à -8% |
-| Remboursement | Non remboursé | 30% (DT2 uniquement) | Non remboursé |
-| Rapport qualité/prix | Efficace mais coûteux | Bon (si DT2) | Coûteux, efficacité moindre |
+| Remboursement | 65% (sous conditions, depuis 15/06/2026) | 65% (DT2 uniquement) | Non remboursé |
+| Rapport qualité/prix | Efficace + remboursé (si éligible) | Bon (si DT2) | Coûteux, efficacité moindre |
 
 ## 📝 Conclusion
 
@@ -483,11 +483,11 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 
 **Mounjaro (tirzépatide - Dual GLP-1/GIP) :**
 - Prix pharmacie : **230-440 €/mois** selon dosage
-- Remboursement : **Non remboursé** (juin 2026)
+- Remboursement : **65% depuis le 15 juin 2026** (sous conditions)
 - Perte de poids : -20 à -25% (étude SURMOUNT)
 - Mécanisme : Dual action (plus innovant)
 
-**Wegovy est remboursé à 65% depuis juin 2026** (sous conditions strictes) ; Mounjaro reste non remboursé. Mounjaro est plus cher mais plus efficace.
+**Wegovy et Mounjaro sont tous deux remboursés à 65% depuis le 15 juin 2026** sous conditions strictes. Mounjaro est plus cher mais plus efficace.
 
 **Recommandation selon profil :**
 
