@@ -79,6 +79,34 @@ function buildEmail(contact) {
   const prenom = contact.nom ? contact.nom.split(' ')[0] : null;
   const salut = prenom ? `Bonjour ${prenom}` : 'Bonjour';
 
+  // === COACH LEAD (email capturé pendant une conversation Coach IA) ===
+  if (contact.contact_type === 'coach_lead') {
+    return {
+      subject: 'Ta checklist GLP-1 — rendez-vous médecin & remboursement',
+      category: 'coach_checklist',
+      html: wrap(`
+      <p>${salut},</p>
+      <p>Comme convenu via notre Coach IA, voici ta <strong>checklist personnalisée</strong> pour avancer concrètement. 🎯</p>
+      <p style="font-weight:700;color:#065f46;margin-bottom:4px;">1. Le bon médecin</p>
+      <ul style="line-height:1.9;margin-top:4px;">
+        <li>Médecin traitant, endocrinologue ou médecin de l'obésité.</li>
+        <li>Pour le <strong>remboursement obésité (65% à partir du 15 juin 2026)</strong>, la primo-prescription doit être faite dans un <strong>centre spécialisé de l'obésité (CSO)</strong> ou un CHU ; le renouvellement se fait ensuite chez votre généraliste.</li>
+        <li>Annuaire : <a href="https://annuaire-sante.ameli.fr" style="color:#059669;">annuaire-sante.ameli.fr</a> — et notre <a href="${SITE}/collections/medecins-glp1-france/?utm_source=email&utm_medium=sav&utm_campaign=coach_checklist" style="color:#059669;">annuaire des médecins GLP-1</a>.</li>
+      </ul>
+      <p style="font-weight:700;color:#065f46;margin-bottom:4px;">2. Questions à poser en consultation</p>
+      <ul style="line-height:1.9;margin-top:4px;">
+        <li>Suis-je éligible au remboursement (IMC, comorbidités) ?</li>
+        <li>Quel traitement et quel dosage de départ pour mon profil ?</li>
+        <li>Comment gérer les effets secondaires du début ?</li>
+      </ul>
+      <p style="font-weight:700;color:#065f46;margin-bottom:4px;">3. Vérifier le prix près de chez vous</p>
+      <p style="margin-top:4px;"><a href="${SITE}/outils/carte-prix-pharmacies/?utm_source=email&utm_medium=sav&utm_campaign=coach_checklist" style="color:#059669;">Carte des prix en pharmacie →</a></p>
+      <p>Une question d'ici votre rendez-vous ? Notre Coach IA est disponible 24h/24 :</p>
+      ${coachCTA('coach_checklist')}
+      <p>On reste à vos côtés. 💪</p>`)
+    };
+  }
+
   // === DIAGNOSTIC ===
   if (contact.contact_type === 'diagnostic') {
     const rec = contact.message?.match(/Recommandation:\s*(\w+)/i)?.[1] || 'mounjaro';
@@ -87,7 +115,7 @@ function buildEmail(contact) {
     const recLabel = rec === 'mounjaro' ? 'Mounjaro (tirzépatide)' : rec === 'wegovy' ? 'Wegovy (sémaglutide)' : rec;
 
     const prixInfo = budgetLimite
-      ? `<p>Nous avons noté que le budget est un point important pour vous. Bonne nouvelle : la HAS a rendu un avis favorable au remboursement de Mounjaro en décembre 2025 — les négociations avec l'État sont en cours pour 2026.</p>`
+      ? `<p>Nous avons noté que le budget est un point important pour vous. <strong>Bonne nouvelle</strong> : Wegovy et Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité <strong>à partir du 15 juin 2026</strong> (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en centre spécialisé). Le reste à charge en est fortement réduit.</p>`
       : '';
 
     const dejaTraitementInfo = alreadyOnGlp1
@@ -117,8 +145,10 @@ function buildEmail(contact) {
   // Physical-product & unauthorized-charge indicators. GLP1 France ne vend
   // aucun produit physique, donc toute mention de flacons/boîtes/gélules/colis
   // ou de prélèvements/débits non sollicités = victime d'un site frauduleux.
+  // Note : "rembours" volontairement EXCLU — trop ambigu (une question légitime
+  // sur le remboursement Sécu déclencherait à tort le protocole anti-arnaque).
   const scamKeywords = [
-    'flacon', 'commandé', 'commande', 'livraison', 'pack', 'rembours',
+    'flacon', 'commandé', 'commande', 'livraison', 'pack',
     'boîte', 'boite', 'gélule', 'gelule', 'colis', 'prélèvement', 'prelevement',
     'débit', 'debit'
   ];
@@ -146,6 +176,29 @@ function buildEmail(contact) {
       <p>Pour toute question médicale sur les traitements GLP-1 légitimes, notre Coach IA peut vous accompagner gratuitement :</p>
       ${coachCTA('scam_victim')}
       <p>Je suis sincèrement désolé que vous ayez vécu cette situation. N'hésitez pas à nous recontacter si vous avez besoin d'autres informations.</p>`)
+    };
+  }
+
+  // === PRESCRIPTION / RECHERCHE DE MÉDECIN ===
+  const isPrescription =
+    (contact.subject && /prescription|m[eé]decin/i.test(contact.subject)) ||
+    (contact.message && /prescri|ordonnance|endocrino|nutritionniste|m[eé]decin|\bCSO\b|commencer (le|un) traitement/i.test(contact.message));
+
+  if (isPrescription) {
+    return {
+      subject: 'Obtenir une prescription GLP-1 — médecins et démarche',
+      category: 'prescription_help',
+      html: wrap(`
+      <p>${salut},</p>
+      <p>Merci pour votre message. Pour obtenir une prescription de GLP-1, voici les pistes concrètes :</p>
+      <ul style="line-height: 1.9;">
+        <li>Consultez un médecin traitant, un endocrinologue ou un médecin de l'obésité.</li>
+        <li>Pour le <strong>remboursement obésité (65% à partir du 15 juin 2026)</strong>, la primo-prescription doit être réalisée dans un <strong>centre spécialisé de l'obésité (CSO)</strong> ou un CHU ; le renouvellement peut ensuite se faire chez votre généraliste.</li>
+        <li>Annuaire officiel : <a href="https://annuaire-sante.ameli.fr" style="color:#059669;">annuaire-sante.ameli.fr</a> — et notre <a href="${SITE}/collections/medecins-glp1-france/?utm_source=email&utm_medium=sav&utm_campaign=prescription_help" style="color:#059669;">annuaire des médecins GLP-1</a>.</li>
+      </ul>
+      <p>Notre Coach IA peut vous aider à cibler un praticien proche et à préparer votre rendez-vous :</p>
+      ${coachCTA('prescription_help')}
+      <p>N'hésitez pas si vous avez d'autres questions.</p>`)
     };
   }
 

@@ -54,6 +54,7 @@ CONTEXTE IMPORTANT :
 
 ORIENTATION MÉDICALE (PRESCRIPTION / MÉDECIN / SUIVI) :
 - Pour une prescription ou un médecin : oriente vers le médecin traitant, un endocrinologue ou un médecin de l'obésité. Pour la primo-prescription ouvrant droit au remboursement obésité, elle doit être faite dans un centre spécialisé de l'obésité (CSO) ou un CHU ; le renouvellement peut ensuite se faire chez le généraliste. Annuaire officiel : annuaire-sante.ameli.fr.
+- ⚠️ NE DIS JAMAIS que le médecin traitant peut INITIER la primo-prescription du remboursement obésité, ni "faire le dossier" de primo-prescription : c'est FAUX. La primo-prescription se fait en CSO/CHU ; le généraliste ne fait que RENOUVELER ensuite. Pas de "depuis juin 2025 le médecin traitant peut initier" — c'est inexact.
 - Tu es indépendant : tu ne touches aucune commission et ne fais la promotion d'AUCUN service. Tu peux toutefois INFORMER de façon neutre et objective sur les options existantes (voir "PRESTATAIRES EN LIGNE" ci-dessous), sans en recommander une plutôt qu'une autre.
 
 PRESTATAIRES EN LIGNE / TÉLÉCONSULTATION (tu CONNAIS le paysage et tu en parles de façon NEUTRE et OBJECTIVE — aucune promotion, aucun dénigrement) :
@@ -71,11 +72,13 @@ FLUX "SUIS-JE ÉLIGIBLE AU REMBOURSEMENT ?" (à PROPOSER dès qu'on parle de pri
 
 REQUÊTES LOCALES (prix / pharmacie / médecin près de chez moi) — TRÈS FRÉQUENT :
 - Ne réponds JAMAIS "comparez vous-même" ou "appelez les pharmacies". C'est la 1re cause d'abandon.
-- Pour un prix ou une pharmacie proche : oriente vers la carte des prix du site → [Carte des prix en pharmacie](/outils/carte-prix-pharmacies/), et demande la ville pour cibler.
+- Pour un prix ou une pharmacie proche : oriente vers la carte des prix du site → [Carte des prix en pharmacie](/outils/carte-prix-pharmacies/), et demande la ville pour cibler. Ne dis JAMAIS "je ne peux pas donner une pharmacie spécifique" : donne TOUJOURS le lien de la carte des prix et demande la ville. C'est la 1re cause d'abandon.
 - Pour un médecin proche : annuaire-sante.ameli.fr (+ un CSO/CHU pour la primo-prescription du remboursement).
 
-CONVERSION (naturelle, jamais lourde) :
-- Aide vraiment d'abord. Quand c'est pertinent (après un test d'éligibilité, un plan de démarrage, un suivi de perte de poids), propose de créer un COMPTE GRATUIT pour garder l'historique et suivre la démarche, ou le COACH PREMIUM pour un suivi personnalisé dans le temps. Reste subtil et utile, jamais commercial. N'insère pas de lien d'affiliation.
+CONVERSION — CAPTURE EMAIL (PRIORITAIRE) :
+- Aide vraiment d'abord. Puis, dès que tu CONFIRMES une éligibilité au remboursement, OU que tu donnes les étapes concrètes pour obtenir le traitement / trouver un médecin / démarrer, PROPOSE un échange de valeur utile : "Veux-tu que je t'envoie ta checklist personnalisée pour ton rendez-vous médecin (étapes, questions à poser, documents) ? Laisse-moi ton email et je te l'envoie — on garde aussi ton résultat."
+- Formule-le comme un SERVICE concret, jamais comme une pub. UNE proposition, au bon moment. (Un champ email s'affichera automatiquement sous ta réponse.)
+- Pour un suivi dans le temps (perte de poids, patient déjà sous traitement), tu peux mentionner le COACH PREMIUM. N'insère JAMAIS de lien d'affiliation.
 
 SEGMENTS DE VISITEURS (adapter la réponse) :
 - ~28% sont des victimes d'arnaques (ont acheté de faux GLP-1 en ligne, souvent 29-80 EUR). Être empathique, ne pas juger, proposer les recours.
@@ -687,6 +690,13 @@ Utilise le prénom et adapte tes conseils à ce profil.`;
         cleanResponse = assistantResponse.replace(/\n*\s*\[\[SUGGESTIONS\]\][^\n]*\s*$/, '').trim();
       }
 
+      // Moment chaud → on propose la capture email (le funnel convertit à 0 sans capture).
+      // Hot = éligibilité CONFIRMÉE, ou étape concrète médecin/checklist.
+      const saysEligible = /\béligibl/i.test(cleanResponse);
+      const saysNotEligible = /\b(pas|plus)\b[^.]{0,25}éligibl|éligibl[^.]{0,25}\bsi\b/i.test(cleanResponse);
+      const doctorStep = /annuaire-sante\.ameli|prendre rendez-vous|checklist personnalisée/i.test(cleanResponse);
+      const offerCapture = (saysEligible && !saysNotEligible) || doctorStep;
+
       // --- 6. Save messages ---
       const detectedIntent = scamSignals.isScamRelated ? `scam:${scamSignals.severity}` : null;
       await saveMessages(
@@ -703,6 +713,7 @@ Utilise le prénom et adapte tes conseils à ce profil.`;
         sources: sources.slice(0, 3), // max 3 sources to display
         model: usedModel,
         ...(suggestions.length > 0 && { suggestions }),
+        ...(offerCapture && { offer_capture: true, capture_prompt: "Laisse-moi ton email et je t'envoie ta checklist personnalisée pour ton rendez-vous médecin (étapes, questions à poser, documents) — on garde ton résultat." }),
         ...(dailyRemaining !== null && { daily_remaining: dailyRemaining }),
       });
 

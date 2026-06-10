@@ -1047,7 +1047,7 @@ import { supabaseConfig } from '../lib/supabase.js';
       }
 
       // Display response with typewriter effect
-      typewriterMessage(data.response || "D\u00e9sol\u00e9, je n'ai pas pu r\u00e9pondre.", data.sources || [], data.suggestions || []);
+      typewriterMessage(data.response || "D\u00e9sol\u00e9, je n'ai pas pu r\u00e9pondre.", data.sources || [], data.suggestions || [], data.offer_capture ? (data.capture_prompt || '') : null);
 
       // Show signup CTA after 2nd user message
       if (messageCount >= 2 && !ctaShown) {
@@ -1094,7 +1094,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     scrollToBottom();
   }
 
-  function typewriterMessage(text, sources, suggestions) {
+  function typewriterMessage(text, sources, suggestions, capturePrompt) {
     var div = document.createElement('div');
     div.className = 'coach-msg coach-msg-assistant';
     div.style.cssText = 'display:flex;gap:8px;max-width:90%;align-self:flex-start;';
@@ -1127,6 +1127,7 @@ import { supabaseConfig } from '../lib/supabase.js';
         }
         addFeedback(content, text);
         if (suggestions && suggestions.length) addSuggestions(content, suggestions);
+        if (capturePrompt) addCaptureForm(content, capturePrompt);
         scrollToBottom();
         return;
       }
@@ -1159,6 +1160,58 @@ import { supabaseConfig } from '../lib/supabase.js';
         body: JSON.stringify({ conversation_id: conversationId, session_id: sessionId, page_url: window.location.pathname, suggestion: suggestion, position: position, event: event })
       }).catch(function(){});
     } catch(e) {}
+  }
+
+  function addCaptureForm(parentDiv, promptText) {
+    var wrap = document.createElement('div');
+    wrap.className = 'coach-capture';
+    wrap.style.cssText = 'margin-top:10px;padding:14px;border-radius:12px;background:linear-gradient(135deg,#ecfdf5,#d1fae5);border:1px solid #6ee7b7;';
+    wrap.innerHTML =
+      '<p style="margin:0 0 8px 0;font-size:0.82rem;color:#065f46;font-weight:600;">📋 ' + escapeHtml(promptText) + '</p>' +
+      '<div style="display:flex;gap:6px;">' +
+        '<input type="email" class="coach-capture-input" placeholder="ton@email.fr" autocomplete="email" style="flex:1;min-width:0;padding:9px 11px;border-radius:8px;border:1px solid #a7f3d0;font-size:0.85rem;" />' +
+        '<button class="coach-capture-btn" style="background:#059669;color:white;border:none;border-radius:8px;padding:9px 14px;font-weight:600;font-size:0.82rem;cursor:pointer;white-space:nowrap;">Recevoir ✓</button>' +
+      '</div>' +
+      '<p class="coach-capture-err" style="display:none;margin:6px 0 0 0;font-size:0.72rem;color:#dc2626;"></p>';
+    parentDiv.appendChild(wrap);
+
+    var input = wrap.querySelector('.coach-capture-input');
+    var btn = wrap.querySelector('.coach-capture-btn');
+    var err = wrap.querySelector('.coach-capture-err');
+
+    function submit() {
+      var email = (input.value || '').trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        err.textContent = 'Adresse email invalide';
+        err.style.display = 'block';
+        return;
+      }
+      btn.disabled = true; btn.textContent = '…';
+      fetch(supabaseUrl + '/rest/v1/contacts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Prefer': 'return=minimal' },
+        body: JSON.stringify({
+          email: email,
+          contact_type: 'coach_lead',
+          subject: 'checklist-rdv',
+          status: 'new',
+          message: 'Lead capture via le Coach IA (moment chaud). Conversation: ' + (conversationId || '-'),
+          notes: 'page: ' + window.location.pathname + ' | session: ' + sessionId
+        })
+      }).then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        wrap.innerHTML = '<p style="margin:0;font-size:0.85rem;color:#065f46;font-weight:600;">✅ C\'est noté ! Tu vas recevoir ta checklist par email. 📬</p>';
+        logSuggestionEvent('email_capture', 0, 'captured');
+      }).catch(function() {
+        btn.disabled = false; btn.textContent = 'Recevoir ✓';
+        err.textContent = 'Oups, réessaie dans un instant.';
+        err.style.display = 'block';
+      });
+    }
+
+    btn.addEventListener('click', submit);
+    input.addEventListener('keydown', function(e) { if (e.key === 'Enter') submit(); });
+    logSuggestionEvent('email_capture', 0, 'shown');
   }
 
   function addSuggestions(parentDiv, suggestions) {
