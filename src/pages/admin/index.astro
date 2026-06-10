@@ -1685,7 +1685,7 @@ import { supabaseConfig } from '../../lib/supabase';
   async function loadPendingCounts() {
     try {
       const [tickets, links, opps] = await Promise.all([
-        supabaseFetch('correction_tickets', 'select=source_agent,statut&statut=eq.approved'),
+        supabaseFetch('correction_tickets', 'select=source_agent,statut&statut=in.(approved,pending_review)'),
         supabaseFetchCount('internal_link_suggestions', 'status=eq.approved'),
         supabaseFetchCount('content_opportunities', 'status=eq.approved'),
       ]);
@@ -1782,7 +1782,7 @@ import { supabaseConfig } from '../../lib/supabase';
       document.getElementById('kpiFactCheckBar').style.background = pct > 70 ? '#22c55e' : pct > 40 ? '#fbbf24' : '#f87171';
 
       // SEO
-      const seoApproved = seoTickets.filter(t => t.statut === 'approved').length;
+      const seoApproved = seoTickets.filter(t => t.statut === 'approved' || t.statut === 'pending_review').length;
       const seoDone = seoTickets.filter(t => t.statut === 'deployed' || t.statut === 'ready_to_deploy').length;
       document.getElementById('kpiSeoIssues').textContent = seoApproved;
       document.getElementById('kpiSeoIssues').style.color = seoApproved > 0 ? '#f87171' : '#22c55e';
@@ -1810,7 +1810,7 @@ import { supabaseConfig } from '../../lib/supabase';
       const last7d = now - 7 * 86400000;
       const last24h = now - 86400000;
       const deployedRecent = ticketsAll.filter(t => t.statut === 'deployed' && new Date(t.created_at).getTime() > last7d).length;
-      const pendingAll = ticketsAll.filter(t => t.statut === 'approved').length;
+      const pendingAll = ticketsAll.filter(t => t.statut === 'approved' || t.statut === 'pending_review').length;
       const inProgress = ticketsAll.filter(t => t.statut === 'in_progress').length;
       document.getElementById('kpiThroughput').textContent = deployedRecent;
       document.getElementById('kpiThroughputSub').innerHTML = `deployes &middot; <span style="color:#fbbf24">${pendingAll} en stock</span>`;
