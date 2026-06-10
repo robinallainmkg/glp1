@@ -132,7 +132,9 @@ export default defineConfig({
     '/collections/medicaments-glp1': '/collections/traitements-glp1/',
     '/politique-de-confidentialite/': '/legal/politique-confidentialite/',
     '/politique-de-confidentialite': '/legal/politique-confidentialite/',
-    '/temoignages-glp1/': '/collections/temoignages/'
+    '/temoignages-glp1/': '/collections/temoignages/',
+    '/medicaments-glp1/ozempic/': '/collections/traitements-glp1/guide-complet-ozempic/',
+    '/medicaments-glp1/ozempic': '/collections/traitements-glp1/guide-complet-ozempic/'
     // Note : les wildcard redirects [...slug] ont été retirés — Astro les interprète
     // comme des routes dynamiques (besoin getStaticPaths()) et fail le build.
     // Les ~80% de 404 issus des migrations 2025 doivent être traités via .htaccess
