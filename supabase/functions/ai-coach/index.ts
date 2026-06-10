@@ -10,10 +10,10 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 // --- Configuration ---
 const MAX_HISTORY = 6;
-const MAX_RAG_CHUNKS = 5;
+const MAX_RAG_CHUNKS = 3;
 const RAG_THRESHOLD = 0.65;
 const MAX_INPUT_LENGTH = 500;
-const MAX_RESPONSE_TOKENS = 1200;
+const MAX_RESPONSE_TOKENS = 700;
 const RATE_LIMIT_WINDOW_MIN = 10;
 const RATE_LIMIT_WINDOW_MAX = 20;
 const RATE_LIMIT_HOURLY_MAX = 60;
@@ -47,17 +47,24 @@ CONTEXTE IMPORTANT :
 - Les vrais GLP-1 injectables (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Victoza) ne se vendent QU'en pharmacie sur ordonnance en France
 - Il existe des arnaques (faux GLP-1 en gélules vendus en ligne) mais il existe aussi des compléments alimentaires légaux (berbérine, etc.) — ne pas tout mélanger
 - Si quelqu'un a acheté un produit douteux et s'inquiète : le rassurer d'abord, poser des questions, puis informer factuellement
-- REMBOURSEMENT (FAIT OFFICIEL, PRIORITAIRE) : Wegovy ET Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026, publié au JO le 28 mai), sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en CSO/CHU, renouvellement possible par le généraliste). Ozempic reste remboursé 65% pour le diabète T2. ⚠️ CE FAIT EST PRIORITAIRE SUR LE CONTEXTE : si le contexte factuel récupéré indique "non remboursé", "pas encore remboursé", "2e semestre 2026", "négociations en cours" ou similaire, c'est PÉRIMÉ — ignore-le et applique le fait officiel ci-dessus. Ne dis JAMAIS que Wegovy ou Mounjaro ne sont pas remboursés pour l'obésité.
-- Prix : Ozempic ~77€/boîte (remboursé 65% diabète T2). Wegovy ~147-350€/mois selon dosage (remboursé 65% obésité depuis juin 2026). Mounjaro ~176-434€/mois selon dosage (remboursé 65% obésité depuis juin 2026). Saxenda ~270€/mois (non remboursé).
+- REMBOURSEMENT (FAIT OFFICIEL, PRIORITAIRE) : Wegovy ET Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026, publié au JO le 28 mai), sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en CSO/CHU, renouvellement possible par le généraliste). Ozempic reste remboursé 65% pour le diabète T2. ⚠️ CE FAIT EST PRIORITAIRE SUR LE CONTEXTE : si le contexte factuel récupéré indique "non remboursé", "pas encore remboursé", "2e semestre 2026", "négociations en cours" ou similaire, c'est PÉRIMÉ — ignore-le et applique le fait officiel ci-dessus. Ne dis JAMAIS que Wegovy ou Mounjaro ne sont pas remboursés, même si le contexte parle de "perte de poids" : ils SONT remboursés à 65% pour l'obésité (sous conditions) à partir du 15 juin 2026. Ne réponds jamais simplement "non remboursé" pour ces deux médicaments — précise toujours le remboursement obésité.
+- Prix : Ozempic ~77€/boîte (remboursé 65% diabète T2). Wegovy ~147-350€/mois selon dosage (remboursé 65% obésité à partir du 15 juin 2026). Mounjaro ~176-434€/mois selon dosage (remboursé 65% obésité à partir du 15 juin 2026). Saxenda ~270€/mois (non remboursé).
 - IMPORTANT : Quand un patient demande le remboursement, donne une réponse COMPLÈTE et NUANCÉE : mentionne les conditions d'éligibilité (IMC), le parcours (prescription initiale en CSO/CHU), le taux (65%), et conseille de vérifier auprès de sa mutuelle pour le reste à charge. Ne sois jamais trop affirmatif sans nuance.
 - Si la personne est victime d'arnaque avérée : orienter calmement vers signal.conso.gouv.fr et pré-plainte-en-ligne.gouv.fr
 
 ORIENTATION MÉDICALE (PRESCRIPTION / MÉDECIN / SUIVI) :
 - Pour une prescription ou un médecin : oriente vers le médecin traitant, un endocrinologue ou un médecin de l'obésité. Pour la primo-prescription ouvrant droit au remboursement obésité, elle doit être faite dans un centre spécialisé de l'obésité (CSO) ou un CHU ; le renouvellement peut ensuite se faire chez le généraliste. Annuaire officiel : annuaire-sante.ameli.fr.
-- N'oriente vers AUCUN service commercial ni partenaire privé. Tu es indépendant.
+- Tu es indépendant : tu ne touches aucune commission et ne fais la promotion d'AUCUN service. Tu peux toutefois INFORMER de façon neutre et objective sur les options existantes (voir "PRESTATAIRES EN LIGNE" ci-dessous), sans en recommander une plutôt qu'une autre.
+
+PRESTATAIRES EN LIGNE / TÉLÉCONSULTATION (tu CONNAIS le paysage et tu en parles de façon NEUTRE et OBJECTIVE — aucune promotion, aucun dénigrement) :
+- Un vrai GLP-1 injectable ne s'obtient JAMAIS "sans ordonnance" : il faut une prescription d'un médecin inscrit à l'Ordre, après une vraie consultation (en cabinet OU en téléconsultation).
+- Voie classique : médecin traitant, endocrinologue, médecin de l'obésité ; primo-prescription en CSO/CHU pour ouvrir le remboursement obésité.
+- Voie téléconsultation : des plateformes mettent en relation avec des médecins français à distance. Exemples connus du paysage français : Charles.co (et sa version féminine Mia), Annette Care, ou des plateformes généralistes comme Qare, Livi, Hellocare. Cite-les comme EXEMPLES si on te le demande, sans en privilégier une et sans promettre une ordonnance (le médecin peut refuser si ce n'est pas justifié).
+- Si on te demande "est-ce fiable ?", donne les critères d'un service sérieux : (1) vraie téléconsultation avec un médecin identifiable inscrit à l'Ordre ; (2) ordonnance délivrée seulement si médicalement justifié ; (3) médicament délivré en pharmacie (physique ou en ligne agréée ANSM), jamais par le site lui-même.
+- 🚩 Arnaque (à signaler calmement, sans dramatiser) : un site qui VEND directement de l'Ozempic/Wegovy/Mounjaro, "sans ordonnance", à prix cassé, paiement crypto/virement, sans aucune consultation = illégal et dangereux (contrefaçons). Ce ne sont PAS des prestataires sérieux.
 
 FLUX "SUIS-JE ÉLIGIBLE AU REMBOURSEMENT ?" (à PROPOSER dès qu'on parle de prix, de remboursement, ou de comment commencer) :
-- Propose-le simplement : "Le remboursement à 65% est en place depuis le 15 juin. Veux-tu qu'on vérifie ton éligibilité en 2-3 questions ?"
+- Propose-le simplement : "Le remboursement à 65% s'applique à partir du 15 juin 2026. Veux-tu qu'on vérifie ton éligibilité en 2-3 questions ?"
 - Si oui, collecte UNE info à la fois, sans tout redemander : (1) poids + taille → calcule l'IMC ; (2) comorbidités (diabète T2, hypertension, apnée du sommeil, etc.) ; (3) un suivi nutritionnel a-t-il déjà été tenté ?
 - Puis donne un verdict CLAIR et nuancé : "éligible", "probablement éligible", ou "à confirmer avec ton médecin" — en rappelant que la décision finale revient au médecin (critères : IMC ≥ 35 avec comorbidité, ou ≥ 40, après échec d'une prise en charge nutritionnelle).
 - Termine en proposant le suivi dans le temps (voir CONVERSION).
@@ -96,7 +103,7 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   {
     intent: 'price',
     pattern: /prix|co[uû]t|rembours|tarif|cher|combien/i,
-    response: "Prix des traitements GLP-1 en France (mis à jour juin 2026) :\n\n💊 Ozempic : ~77€/boîte (remboursé 65% pour diabète T2)\n💊 Wegovy : ~147-350€/mois selon dosage (remboursé 65% depuis juin 2026 pour obésité — IMC ≥ 35 avec comorbidité ou ≥ 40)\n💊 Mounjaro : ~176-434€/mois selon dosage (remboursé 65% depuis juin 2026, mêmes conditions)\n💊 Saxenda : ~270€/mois (non remboursé)\n\nLa prescription initiale doit être faite dans un centre spécialisé (CSO/CHU). Vérifiez aussi auprès de votre mutuelle pour le reste à charge."
+    response: "Prix des traitements GLP-1 en France (mis à jour juin 2026) :\n\n💊 Ozempic : ~77€/boîte (remboursé 65% pour diabète T2)\n💊 Wegovy : ~147-350€/mois selon dosage (remboursé 65% à partir du 15 juin 2026 pour obésité — IMC ≥ 35 avec comorbidité ou ≥ 40)\n💊 Mounjaro : ~176-434€/mois selon dosage (remboursé 65% à partir du 15 juin 2026, mêmes conditions)\n💊 Saxenda : ~270€/mois (non remboursé)\n\nLa prescription initiale doit être faite dans un centre spécialisé (CSO/CHU). Vérifiez aussi auprès de votre mutuelle pour le reste à charge."
   },
   {
     intent: 'device',
@@ -121,7 +128,7 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   {
     intent: 'prescription',
     pattern: /ordonnance|prescri|m[eé]decin|consult|obtenir|comment.*avoir|sp[eé]cialiste/i,
-    response: "Les traitements GLP-1 sont délivrés uniquement sur ordonnance. Le parcours :\n\n1. Consultation avec votre médecin traitant, un endocrinologue ou un médecin de l'obésité\n2. Pour le remboursement obésité (65% depuis le 15 juin 2026), la primo-prescription doit être faite dans un centre spécialisé de l'obésité (CSO) ou un CHU\n3. Délivrance en pharmacie\n\nPour trouver un praticien : annuaire-sante.ameli.fr. Voulez-vous qu'on vérifie si vous êtes éligible au remboursement ?"
+    response: "Les traitements GLP-1 (Ozempic, Wegovy, Mounjaro…) sont délivrés uniquement sur ordonnance. Le parcours est simple :\n\n1. Consultation avec votre médecin traitant, un endocrinologue ou un médecin de l'obésité.\n2. Remboursement obésité (65 %, à partir du 15 juin 2026) : la première prescription doit être réalisée dans un centre spécialisé de l'obésité (CSO) ou un CHU, puis le renouvellement peut se faire chez votre généraliste.\n3. Délivrance en pharmacie, sur présentation de l'ordonnance.\n\nPour trouver un praticien près de chez vous : annuaire-sante.ameli.fr.\n\nSouhaitez-vous qu'on vérifie ensemble, en 2-3 questions, si vous êtes éligible au remboursement ?"
   },
   {
     intent: 'side_effects',
@@ -501,9 +508,24 @@ serve(async (req) => {
     const scamSignals = detectScamSignals(cleanMessage);
 
     try {
-      // --- 1. Embed + load history in parallel ---
-      const [embedResponse, { data: history }] = await Promise.all([
-        fetch("https://api.mistral.ai/v1/embeddings", {
+      // --- 1. Load history (toujours disponible, indépendant du RAG) ---
+      const { data: history } = await supabase
+        .from("coach_messages")
+        .select("role, content")
+        .eq("conversation_id", convId)
+        .order("created_at", { ascending: false })
+        .limit(isPremiumUser ? 20 : MAX_HISTORY);
+
+      const historyMessages = (history || [])
+        .reverse()
+        .map((m: any) => ({ role: m.role, content: m.content }));
+
+      // --- 2. RAG (best-effort) : embed Mistral + recherche pgvector.
+      //     NE DOIT JAMAIS bloquer la réponse. Si Mistral rate-limit (429) ou
+      //     est indisponible, on répond quand même via Groq, sans contexte RAG. ---
+      let rankedChunks: any[] = [];
+      try {
+        const embedResponse = await fetch("https://api.mistral.ai/v1/embeddings", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -513,49 +535,41 @@ serve(async (req) => {
             model: "mistral-embed",
             input: [cleanMessage],
           }),
-        }),
-        supabase
-          .from("coach_messages")
-          .select("role, content")
-          .eq("conversation_id", convId)
-          .order("created_at", { ascending: false })
-          .limit(isPremiumUser ? 20 : MAX_HISTORY),
-      ]);
-
-      if (!embedResponse.ok) {
-        throw new Error(`Mistral embed error: ${embedResponse.status}`);
-      }
-
-      const embedData = await embedResponse.json();
-      const queryEmbedding = embedData.data[0].embedding;
-
-      const historyMessages = (history || [])
-        .reverse()
-        .map((m: any) => ({ role: m.role, content: m.content }));
-
-      // --- 2. Search pgvector for relevant chunks ---
-      const { data: chunks, error: chunksError } = await supabase
-        .rpc("match_article_chunks", {
-          query_embedding: queryEmbedding,
-          match_threshold: RAG_THRESHOLD,
-          match_count: MAX_RAG_CHUNKS,
         });
 
-      if (chunksError) {
-        console.error("pgvector search error:", chunksError);
+        if (!embedResponse.ok) {
+          throw new Error(`Mistral embed error: ${embedResponse.status}`);
+        }
+
+        const embedData = await embedResponse.json();
+        const queryEmbedding = embedData.data[0].embedding;
+
+        const { data: chunks, error: chunksError } = await supabase
+          .rpc("match_article_chunks", {
+            query_embedding: queryEmbedding,
+            match_threshold: RAG_THRESHOLD,
+            match_count: MAX_RAG_CHUNKS,
+          });
+
+        if (chunksError) {
+          console.error("pgvector search error:", chunksError);
+        }
+
+        // Boost chunks from the current page
+        const pageSlug = page_url ? page_url.replace(/^\/|\/$/g, '').split('/').pop() : null;
+        rankedChunks = (chunks || []).map((c: any) => ({
+          ...c,
+          similarity: pageSlug && c.article_slug === pageSlug
+            ? Math.min(c.similarity + 0.1, 1.0)
+            : c.similarity,
+        })).sort((a: any, b: any) => b.similarity - a.similarity);
+      } catch (ragError) {
+        console.warn("RAG indisponible, réponse sans contexte:", (ragError as Error).message);
+        // rankedChunks reste [] → le bot répond quand même
       }
 
-      // Boost chunks from the current page
-      const pageSlug = page_url ? page_url.replace(/^\/|\/$/g, '').split('/').pop() : null;
-      const rankedChunks = (chunks || []).map((c: any) => ({
-        ...c,
-        similarity: pageSlug && c.article_slug === pageSlug
-          ? Math.min(c.similarity + 0.1, 1.0)
-          : c.similarity,
-      })).sort((a: any, b: any) => b.similarity - a.similarity);
-
       const ragContext = rankedChunks
-        .map((c: any) => `---\nArticle: ${c.title} (/collections/${c.collection}/${c.article_slug}/)\nSection: ${c.section_heading || "Introduction"}\n${c.content}\n---`)
+        .map((c: any) => `---\nArticle: ${c.title} (/collections/${c.collection}/${c.article_slug}/)\nSection: ${c.section_heading || "Introduction"}\n${(c.content || '').slice(0, 600)}\n---`)
         .join("\n\n");
 
       const sources = rankedChunks.map((c: any) => ({
@@ -615,25 +629,49 @@ Utilise le prénom et adapte tes conseils à ce profil.`;
         { role: "user", content: userMessageWithContext },
       ];
 
-      // --- 5. Call Groq LLM ---
-      const llmResponse = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${groqKey}`,
-        },
-        body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
-          messages,
-          temperature: 0.3,
-          max_tokens: MAX_RESPONSE_TOKENS,
-          top_p: 0.9,
-        }),
-      });
+      // --- 5. Chaîne de secours multi-fournisseurs (résilience rate-limit) ---
+      // Le plan gratuit Groq plafonne à ~12k tokens/min PAR modèle. En conversation, le
+      // 70B sature (429). On bascule alors : Groq 70B → Groq 8B → Mistral. Chaque modèle
+      // a son PROPRE quota → pour tomber sur le fallback il faudrait que 3 modèles sur
+      // 2 fournisseurs soient saturés en même temps → dead-end quasi impossible.
+      const LLM_CHAIN = [
+        { url: "https://api.groq.com/openai/v1/chat/completions", key: groqKey, model: "llama-3.3-70b-versatile" },
+        { url: "https://api.groq.com/openai/v1/chat/completions", key: groqKey, model: "llama-3.1-8b-instant" },
+        { url: "https://api.mistral.ai/v1/chat/completions", key: mistralKey, model: "mistral-small-latest" },
+      ];
+      let llmResponse: Response | null = null;
+      let usedModel = LLM_CHAIN[0].model;
+      for (const link of LLM_CHAIN) {
+        let linkOk = false;
+        for (let attempt = 0; attempt < 2; attempt++) {
+          llmResponse = await fetch(link.url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${link.key}`,
+            },
+            body: JSON.stringify({
+              model: link.model,
+              messages,
+              temperature: 0.3,
+              max_tokens: MAX_RESPONSE_TOKENS,
+              top_p: 0.9,
+            }),
+          });
+          if (llmResponse.ok) { linkOk = true; usedModel = link.model; break; }
+          // 5xx = transitoire → 1 retry court. 429 = quota épuisé → fournisseur suivant.
+          if (attempt === 0 && llmResponse.status >= 500) {
+            await new Promise((r) => setTimeout(r, 600));
+            continue;
+          }
+          break;
+        }
+        if (linkOk) break;
+      }
 
-      if (!llmResponse.ok) {
-        const errText = await llmResponse.text();
-        throw new Error(`Groq error (${llmResponse.status}): ${errText}`);
+      if (!llmResponse || !llmResponse.ok) {
+        const errText = llmResponse ? await llmResponse.text() : "no response";
+        throw new Error(`LLM chain error (${llmResponse?.status}): ${errText}`);
       }
 
       const llmData = await llmResponse.json();
@@ -653,7 +691,7 @@ Utilise le prénom et adapte tes conseils à ce profil.`;
       const detectedIntent = scamSignals.isScamRelated ? `scam:${scamSignals.severity}` : null;
       await saveMessages(
         supabase, convId, session_id, cleanMessage, cleanResponse,
-        detectedIntent, "llama-3.3-70b-versatile",
+        detectedIntent, usedModel,
         sources.length > 0 ? sources : null,
         tokensUsed,
         user_id
@@ -663,7 +701,7 @@ Utilise le prénom et adapte tes conseils à ce profil.`;
         response: cleanResponse,
         conversation_id: convId,
         sources: sources.slice(0, 3), // max 3 sources to display
-        model: "llama-3.3-70b-versatile",
+        model: usedModel,
         ...(suggestions.length > 0 && { suggestions }),
         ...(dailyRemaining !== null && { daily_remaining: dailyRemaining }),
       });

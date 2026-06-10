@@ -7,7 +7,7 @@
 
 import { createServer } from 'http';
 import { spawn } from 'child_process';
-import { readFileSync } from 'fs';
+import { readFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -17,7 +17,19 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = join(__dirname, '..');
 
 const CLAUDE_BIN = process.env.CLAUDE_BIN || 'node';
-const CLAUDE_ARGS_PREFIX = process.env.CLAUDE_BIN ? [] : ['/opt/homebrew/lib/node_modules/@anthropic-ai/.claude-code-2DTsDk1V/cli.js'];
+// Resolve the claude-code cli.js across platforms (Windows / macOS / Linux).
+// Override with CLAUDE_CLI_JS (path to cli.js) or CLAUDE_BIN (full claude binary) if needed.
+const CLI_JS_CANDIDATES = [
+  process.env.CLAUDE_CLI_JS,
+  process.env.APPDATA && join(process.env.APPDATA, 'npm', 'node_modules', '@anthropic-ai', 'claude-code', 'cli.js'),
+  '/opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js',
+  '/usr/local/lib/node_modules/@anthropic-ai/claude-code/cli.js',
+].filter(Boolean);
+const RESOLVED_CLI_JS = CLI_JS_CANDIDATES.find((p) => existsSync(p));
+const CLAUDE_ARGS_PREFIX = process.env.CLAUDE_BIN ? [] : (RESOLVED_CLI_JS ? [RESOLVED_CLI_JS] : []);
+if (!process.env.CLAUDE_BIN && !RESOLVED_CLI_JS) {
+  console.warn('[agent-server] WARNING: claude-code cli.js introuvable — definis CLAUDE_CLI_JS ou CLAUDE_BIN.');
+}
 
 // Load .env
 try {
