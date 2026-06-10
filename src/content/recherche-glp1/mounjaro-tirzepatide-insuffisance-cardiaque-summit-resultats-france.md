@@ -76,7 +76,7 @@ Les résultats, publiés dans le *New England Journal of Medicine* en 2024 et in
 |---------|-------------|---------|-------------------|
 | Aggravation IC ou décès cardiovasculaire | 9,9% | 15,3% | **-38%** |
 | Distance de marche de 6 minutes (gain) | +18 m | +1 m | +17 m |
-| Score KCCQ (qualité de vie) | +10,7 points | +2,4 points | Significatif |
+| Score KCCQ-CSS (qualité de vie) | +19,5 points | +12,7 points | +6,9 (IC 95% 3,3-10,6 ; p<0,001) |
 | Poids corporel | -13,2% | -2,2% | -11 kg en moyenne |
 
 La réduction de 38% du risque d'aggravation de l'insuffisance cardiaque ou de décès cardiovasculaire constitue le résultat principal. Il s'agit d'un bénéfice cliniquement significatif, particulièrement notable dans une pathologie pour laquelle les options thérapeutiques étaient très limitées.

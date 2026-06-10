@@ -6,8 +6,8 @@ keywords: ['remboursement glp1 2026', 'mounjaro remboursement 2026', 'wegovy rem
 seoTitle: "Remboursement GLP-1 2026 : Guide par Médicament et Mutuelle"
 seoDescription: "Remboursement GLP-1 2026 : Ozempic, Trulicity, Victoza remboursés 65% (DT2). Mounjaro et Wegovy remboursés 65% pour l'obésité dès le 15 juin 2026 (arrêté 23 mai). Guide complet."
 publishedAt: '2025-12-27'
-updatedAt: '2026-06-06'
-date: '2026-06-06'
+updatedAt: '2026-06-10'
+date: '2026-06-10'
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -94,15 +94,16 @@ Pour bénéficier du remboursement par l'Assurance Maladie (65% pour Ozempic/Tru
 
 ### Statut Officiel
 
-**Wegovy (sémaglutide 2.4 mg)** n'est **PAS remboursé** par la Sécurité Sociale en 2026. Commercialisé en France depuis octobre 2024, il est indiqué pour la perte de poids (obésité/surpoids) mais reste entièrement à la charge du patient.
+**Wegovy (sémaglutide 2,4 mg)** est **remboursé à 65% par la Sécurité Sociale pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai). Commercialisé en France depuis octobre 2024, il est désormais pris en charge sous conditions : IMC ≥ 35 avec comorbidité (ou ≥ 40), après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée.
 
 ### Coût Patient 2026
 
 **Prix pharmacie :** 169-360€/mois selon dosage
 
-**Aucun remboursement Sécurité Sociale** :
-- Le coût est intégralement à la charge du patient
-- Certaines mutuelles peuvent proposer une participation partielle (vérifier votre contrat)
+**Remboursement à 65% (à partir du 15 juin 2026)** :
+- L'Assurance Maladie prend en charge 65% ; les 35% restants sont à la charge du patient ou de la mutuelle
+- Hors conditions d'éligibilité (ou avant le 15 juin 2026), le coût reste intégralement à la charge du patient
+- Certaines mutuelles complètent le reste à charge (vérifier votre contrat)
 
 [Détails complets prix Wegovy -->](/collections/glp1-cout/prix-wegovy-france/)
 
@@ -414,20 +415,20 @@ Le remboursement est **confirmé pour 2026** : pour le **diabète de type 2** (O
 
 ### Wegovy ou Mounjaro : lequel choisir ?
 
-**Ni Wegovy ni Mounjaro ne sont remboursés** par la Sécurité Sociale. Le coût est intégralement à la charge du patient.
+**Wegovy et Mounjaro sont remboursés à 65% pour l'obésité à partir du 15 juin 2026** (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée). Hors éligibilité, le coût reste à la charge du patient.
 
 **Comparaison de coût :**
 
 **Wegovy (sémaglutide, Novo Nordisk) :**
 - Coût pharmacie : **169-360€/mois**
-- Remboursement : NON remboursé
+- Remboursement : **65% pour l'obésité à partir du 15 juin 2026** (sous conditions)
 - Indication : Obésité principalement
 - Commercialisé depuis octobre 2024
 - Voir aussi le [calendrier de remboursement Wegovy](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/) pour les perspectives
 
 **Mounjaro (tirzépatide, Eli Lilly) :**
 - Coût pharmacie : **230-440€/mois** (prix libre)
-- Remboursement : NON remboursé (voir le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/) pour les conditions attendues)
+- Remboursement : **65% pour l'obésité à partir du 15 juin 2026** (sous conditions ; DT2 également) — voir le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
 - Indication : Obésité / DT2
 - Commercialisé depuis novembre 2024
 
@@ -436,7 +437,7 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 **Choix recommandé :**
 - **Budget limité** --> Wegovy (moins cher)
 - **Efficacité maximale** --> Mounjaro
-- **Remboursement souhaité** --> Ozempic (65% en bithérapie metformine / 30% en trithérapie insuline, DT2 uniquement, principe actif identique à Wegovy)
+- **Remboursement obésité** --> Wegovy ou Mounjaro (65% sous conditions, à partir du 15 juin 2026) ; **remboursement diabète T2** --> Ozempic (65% bithérapie metformine, principe actif identique à Wegovy)
 
 [Comparaison détaillée Wegovy vs Mounjaro →](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
 
