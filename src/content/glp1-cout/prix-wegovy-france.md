@@ -34,7 +34,7 @@ faqSchema:
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Prix Wegovy 2026 : Coût par Dosage et Remboursement en France",
+  "name": "Prix Wegovy 2026 : Coût par Dosage et [Remboursement](/collections/glp1-cout/remboursement-glp1-2026/) en France",
   "description": "Prix Wegovy en pharmacie : 169 à 360€/mois selon dosage. Remboursé à 65% par l'Assurance Maladie depuis le 15 juin 2026 sous conditions.",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-wegovy-france",
   "datePublished": "2025-01-28",
@@ -89,6 +89,8 @@ faqSchema:
   }
 }
 </script>
+
+🔗 Découvrez aussi : [adapter son alimentation à l'index glycémique](/collections/regime-glp1/glp1-index-glycemique/).
 
 ## 💰 Wegovy Prix Pharmacie Moins Cher en France (2026)
 
@@ -455,7 +457,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 - Prix : **~77,60 €/stylo (TTC)**, remboursé à 30% (DT2)
 - Moins cher si diabétique, mais dosage inférieur
 
-**2. Rybelsus (sémaglutide oral)**
+**2. [Rybelsus](/collections/traitements-glp1/wegovy-comprime-oral-pilule-france/) (sémaglutide oral)**
 - Indication : Diabète type 2
 - Forme comprimé (prise quotidienne)
 

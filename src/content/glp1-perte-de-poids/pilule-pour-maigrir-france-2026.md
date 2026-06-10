@@ -153,7 +153,7 @@ Les essais cliniques de Phase III (programme OASIS) ont démontré des résultat
 
 Approuve par la FDA en 2026 pour la perte de poids, le Wegovy oral est la premiere pilule GLP-1 autorisee pour l'obésité. La soumission EMA est en cours pour une mise a disposition en France.
 
-Pour suivre les dernieres informations, consultez : [Wegovy comprimé oral en France](/collections/traitements-glp1/wegovy-comprime-oral-pilule-france-date-ema/).
+Pour suivre les dernieres informations, consultez : [Wegovy comprimé oral en France](/collections/traitements-glp1/wegovy-comprime-oral-pilule-france/).
 
 ---
 
@@ -181,7 +181,7 @@ Les pilules pour maigrir vendues en ligne sans ordonnance représentent un **ris
 - Interactions dangereuses avec d'autres medicaments
 - Plusieurs cas d'hospitalisations et de deces ont ete rapportes en lien avec ces produits
 
-L'ANSM (Agence Nationale de Sécurité du Médicament) publie regulierement des alertes concernant ces produits dangereux. **Aucun médicament pour maigrir ne devrait etre achete sans ordonnance medicale.**
+L'ANSM (Agence Nationale de Sécurité du Médicament) publie regulierement des alertes concernant ces produits dangereux. **Aucun [médicament pour maigrir](/collections/glp1-perte-de-poids/medicament-pour-maigrir-guide-complet-france-2026/) ne devrait etre achete sans ordonnance medicale.**
 
 ---
 

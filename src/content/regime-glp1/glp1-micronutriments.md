@@ -97,6 +97,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **[Carences](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)** : Bilan sanguin recommandé sous traitement GLP-1
 - **Urgences** : Protocoles d'action définis
 
+🔗 Découvrez aussi : [apport calorique journalier sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/).
+
 ### Optimisation résultats
 - **Hygiène de vie** : Alimentation exercice complémentaires
 - **Suivi biologique** : Bilans réguliers programmés pour prévenir les [carences nutritionnelles](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
@@ -140,6 +142,8 @@ Information sécurité basée pharmacovigilance française et surveillance post-
 Protocoles de suivi selon recommandations sociétés savantes françaises (SFD, SFE, etc.).
 
 ## Conclusion
+
+> **À lire aussi** : [apport calorique journalier sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/)
 
 GLP-1 et micronutriments représente une approche thérapeutique importante dans le contexte français. Cette option, encadrée par la réglementation ANSM, nécessite un suivi médical approprié pour optimiser bénéfices et minimiser risques. L'accompagnement professionnel guide la mise en œuvre sécurisée.
 

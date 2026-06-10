@@ -93,7 +93,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ### Priorités nutritionnelles
 - **Protéines** : 1,2-1,6g/kg poids corps
 - **Lipides** : 25-35% calories (oméga-3 prioritaire)
-- **Glucides** : 45-55% (index glycémique bas)
+- **Glucides** : 45-55% ([index glycémique](/collections/regime-glp1/glp1-index-glycemique/) bas)
 - **Fibres** : 25-35g/jour maintenu
 
 ## Produits cosmétiques recommandés
@@ -125,7 +125,7 @@ Non obligatoire grâce à la satiété naturelle. Focus sur qualité nutritionne
 300-500 kcal/jour en moyenne, soit 2100-3500 kcal/semaine → 0,3-0,5 kg perte/semaine théorique.
 
 ### Peut-on descendre sous 1200 kcal/jour ?
-Déconseillé sans supervision médicale. Risque carences nutritionnelles et ralentissement métabolique.
+Déconseillé sans supervision médicale. Risque [carences nutritionnelles](/collections/regime-glp1/glp1-micronutriments/) et ralentissement métabolique.
 
 ### Comment éviter l'effet plateau ?
 Varier activité physique, ajuster macronutriments, consultation nutritionnelle, patience (plateau normal).

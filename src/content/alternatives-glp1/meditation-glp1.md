@@ -134,6 +134,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - [guérir du diabète](/collections/alternatives-glp1/peut-on-guerir-du-diabete/)
 - [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
+👉 Pour en savoir plus, consultez notre guide sur [témoignage de transformation globale](/collections/temoignages/temoignage-sophie-transformation-glp1/).
+
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
 ## FAQ

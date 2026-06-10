@@ -114,7 +114,9 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 | <a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a> | ~81 € | 65% (DT2 uniquement) |
 | [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 € | Non remboursé |
 
-> **À lire aussi** : [témoignages et avis sur Ozempic](/collections/traitements-glp1/ozempic-avis-patients-france-2026/)
+> **À lire aussi** : [témoignages et avis sur Ozempic](/collections/traitements-glp1/ozempic-avis-patients-france-2026/) · [quel traitement GLP-1 choisir](/collections/pages-statiques/quel-traitement-glp1-choisir/) · [baisse de prix Ozempic et Wegovy prévue en 2027](/collections/glp1-cout/baisse-prix-ozempic-wegovy-2027-france/)
+
+👉 Pour en savoir plus, consultez notre guide sur [témoignage d'un patient sous Ozempic](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/).
 
 
 ## 💊 Remboursement Sécurité Sociale

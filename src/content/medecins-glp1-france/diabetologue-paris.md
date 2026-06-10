@@ -40,6 +40,12 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 Paris concentre de nombreux diabétologues et endocrinologues spécialisés dans les traitements GLP-1. Ces experts hospitaliers et libéraux accompagnent l'initiation, le suivi et l'optimisation des thérapeutiques [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)®, Trulicity®, Victoza® selon les recommandations HAS.
 
+👉 Pour en savoir plus, consultez notre guide sur [recherche clinique sur les GLP-1](/collections/recherche-glp1/recherche-clinique-glp1/).
+
+🔗 Découvrez aussi : [retour d'expérience sous GLP-1](/collections/temoignages/temoignage-marie-transformation-glp1/).
+
+👉 Pour en savoir plus, consultez notre guide sur [accompagnement psychologique du comportement alimentaire](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/).
+
 ## Prix, disponibilité et variations en France
 
 ### Tarifs consultations Paris
@@ -85,6 +91,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Historique pondéral** : Évolution poids 5 dernières années
 - **Traitements actuels** : Liste complète médicaments
 - **Objectifs personnels** : Perte de poids, contrôle glycémique
+
+👉 Pour en savoir plus, consultez notre guide sur [témoignage d'un patient diabétique](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/).
 
 ### Questions importantes à poser
 - **Molécule optimale** : Ozempic vs Trulicity vs Victoza

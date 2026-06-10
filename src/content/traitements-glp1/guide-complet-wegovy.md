@@ -156,7 +156,7 @@ Avant de démarrer, vérifiez si vous remplissez les [critères d'éligibilité 
 - **Bupropion/Naltrexone (Mysimba)** : Action centrale sur l'appétit
 
 
-> **À lire aussi** : [prix Wegovy en pharmacie](/collections/glp1-cout/wegovy-prix/)
+> **À lire aussi** : [prix Wegovy en pharmacie](/collections/glp1-cout/wegovy-prix/) · [quel traitement GLP-1 choisir](/collections/pages-statiques/quel-traitement-glp1-choisir/) · [Wegovy chez les adolescents](/collections/traitements-glp1/wegovy-mounjaro-adolescent-obesite-12-ans-france-guide/)
 
 ## FAQ Wegovy
 

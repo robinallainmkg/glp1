@@ -155,4 +155,6 @@ Ces évolutions devraient globalement améliorer l'accessibilité financière de
 
 Ces informations vous aident à mieux comprendre le sujet. Pour un avis personnalisé, consultez toujours un professionnel de santé qualifié.
 
+> **À lire aussi** : [plantes pour le diabète](/collections/alternatives-glp1/plantes-diabete/) · [clinique spécialisée en obésité](/collections/medecins-glp1-france/clinique-pour-obesite/)
+
 *Cet article est mis à jour régulièrement selon les dernières recommandations médicales.*

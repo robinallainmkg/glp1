@@ -35,7 +35,7 @@ mainKeyword: "saxenda guide complet france liraglutide"
 
 ## Qu'est-ce que Saxenda ?
 
-Saxenda est un médicament injectable développé par Novo Nordisk, appartenant à la classe des agonistes des récepteurs GLP-1 (Glucagon-like peptide-1). Saxenda contient du liraglutide, un analogue du GLP-1 humain, spécifiquement indiqué pour la prise en charge de l'obésité.
+Saxenda est un médicament injectable développé par Novo Nordisk, appartenant à la classe des agonistes des récepteurs GLP-1 (Glucagon-like peptide-1). Saxenda contient du [liraglutide](/collections/effets-secondaires-glp1/effets-secondaires-victoza/), un analogue du GLP-1 humain, spécifiquement indiqué pour la prise en charge de l'obésité.
 
 **Nom générique** : Liraglutide  
 **Laboratoire** : Novo Nordisk  

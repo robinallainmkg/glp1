@@ -52,7 +52,7 @@ mainKeyword: "témoignage Laurent Mounjaro perte de poids"
 
 > "Le déclic, ça a été quand mon fils de 8 ans m'a dit qu'il avait honte de moi devant ses copains. Ça m'a anéanti, mais ça m'a aussi donné la force de changer."
 
-> "Mon [médecin](/collections/medecins-glp1-france/endocrinologue-pour-maigrir) m'a proposé Mounjaro. J'avais déjà tout essayé : Weight Watchers, Dukan, <a href="/collections/regime-glp1/glp1-sport-exercice-musculation-guide/">sport</a>... Rien ne tenait sur le long terme. Mais là, dès la première injection, j'ai senti que c'était différent."
+> "Mon [médecin](/collections/medecins-glp1-france/[endocrinologue](/collections/medecins-glp1-france/diabetologue-paris/)-pour-maigrir) m'a proposé Mounjaro. J'avais déjà tout essayé : Weight Watchers, Dukan, <a href="/collections/regime-glp1/glp1-sport-exercice-musculation-guide/">sport</a>... Rien ne tenait sur le long terme. Mais là, dès la première injection, j'ai senti que c'était différent."
 
 ## Son Parcours de Transformation
 
@@ -139,3 +139,6 @@ mainKeyword: "témoignage Laurent Mounjaro perte de poids"
 Pour comparer avec les données cliniques, consultez notre guide sur les [résultats réels avant/après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
 
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*
+
+
+> **À lire aussi** : [compléments alimentaires comme le chrome](/collections/alternatives-glp1/chrome-diabete/)

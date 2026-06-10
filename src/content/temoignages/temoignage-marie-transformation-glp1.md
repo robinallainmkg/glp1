@@ -23,6 +23,8 @@ mainKeyword: "témoignage Ozempic perte de poids femme"
 
 **32 kilos perdus en 12 mois** avec le [traitement GLP-1](/collections/glp1-perte-de-poids/)
 
+👉 Pour en savoir plus, consultez notre guide sur [autre témoignage de transformation sous GLP-1](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/).
+
 ## ⭐ Stats de Transformation
 
 <div class="transformation-stats exceptional">

@@ -28,6 +28,8 @@ affiliateCollection: "glp1-perte-de-poids"
 
 En 2026, la France dispose enfin de plusieurs **medicaments pour maigrir** ayant fait leurs preuves dans des essais cliniques de grande envergure. Fini le temps des regimes miracles et des complements alimentaires inefficaces : les **agonistes du récepteur GLP-1** représentent une véritable revolution dans la prise en charge medicale de l'obésité et du surpoids.
 
+👉 Pour en savoir plus, consultez notre guide sur [pilules amaigrissantes en France](/collections/glp1-perte-de-poids/pilule-pour-maigrir-france-2026/).
+
 Ce guide complet passe en revue **tous les traitements autorisés** pour la perte de poids en France, avec leurs prix, leur efficacité réelle, les conditions de prescription et les perspectives de remboursement. Que vous soyez en situation d'obésité (IMC supérieur ou égal a 30) ou de surpoids avec des comorbidités (IMC supérieur ou égal a 27), vous trouverez ici toutes les informations pour en parler avec votre médecin.
 
 ## Sommaire
@@ -334,7 +336,7 @@ Pour en savoir plus : [remboursement des GLP-1 en 2026](/collections/glp1-cout/r
 Quelques mutuelles haut de gamme commencent a proposer une prise en charge partielle des medicaments anti-obésité, generalement sous forme de forfait annuel (500 a 1 500 euros). Renseignez-vous aupres de votre complémentaire sante.
 
 
-> **À lire aussi** : [injections pour maigrir](/collections/glp1-perte-de-poids/injection-pour-maigrir-guide-complet-france-2026/)
+> **À lire aussi** : [injections pour maigrir](/collections/glp1-perte-de-poids/injection-pour-maigrir-guide-complet-france-2026/) · [pilules pour maigrir en 2026](/collections/glp1-perte-de-poids/pilule-pour-maigrir-france-2026/)
 
 ## FAQ -- Questions Fréquentes
 

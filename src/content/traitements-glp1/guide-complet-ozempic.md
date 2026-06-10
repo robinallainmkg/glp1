@@ -68,11 +68,11 @@ Ozempic est indiqué dans le traitement du diabète de type 2 chez l'adulte, en 
 - Une injection hebdomadaire seulement
 
 ### Efficacité prouvée
-Dans les études cliniques, Ozempic a démontré une supériorité par rapport aux autres traitements oraux, avec un meilleur contrôle glycémique et une tolérance comparable.
+Dans les études cliniques, Ozempic a démontré une supériorité par rapport aux [autres traitements](/collections/pages-statiques/quel-traitement-glp1-choisir/) oraux, avec un meilleur contrôle glycémique et une tolérance comparable.
 
 ## Ozempic et la perte de poids
 
-**⚠️ Important** : En France, Ozempic est **exclusivement indiqué pour le diabète de type 2**. Il ne doit pas être prescrit pour la perte de poids seule. L'[ANSM et l'Assurance Maladie ont renforcé les contrôles](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) depuis février 2025 pour lutter contre le mésusage.
+**⚠️ Important** : En France, Ozempic est **exclusivement indiqué pour le diabète de type 2**. Il ne doit pas être prescrit pour la perte de poids seule. L'[ANSM et l'Assurance Maladie ont renforcé les contrôles](/collections/traitements-glp1/ansm-regles-[prescription](/collections/traitements-glp1/glp1-prescription-generaliste-nouvelles-regles-ansm-2026/)-glp1-france/) depuis février 2025 pour lutter contre le mésusage.
 
 Cependant, une perte de poids est souvent observée comme effet bénéfique chez les patients diabétiques traités par Ozempic :
 

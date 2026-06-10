@@ -110,6 +110,10 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Effets secondaires** : Surveillance symptômes
 - **Urgences** : Protocoles d'action définis
 
+👉 Pour en savoir plus, consultez notre guide sur [effets secondaires d'Insulevel](/collections/effets-secondaires-glp1/insulevel-effet-indesirable/).
+
+👉 Pour en savoir plus, consultez notre guide sur [expérience d'une patiente sous GLP-1](/collections/temoignages/temoignage-marie-transformation-glp1/).
+
 ### Optimisation résultats
 - **Hygiène de vie** : Alimentation exercice complémentaires
 - **Suivi biologique** : Bilans réguliers programmés

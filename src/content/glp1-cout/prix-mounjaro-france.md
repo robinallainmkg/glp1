@@ -316,7 +316,7 @@ L'accès au traitement Mounjaro nécessite une prescription médicale. Une consu
 ### Historique Tarifaire
 - **Novembre 2024** : Commercialisation de Mounjaro en France par Eli Lilly (prix libre)
 - **Décembre 2025** : Avis favorable de la HAS pour le remboursement
-- **Mars 2026** : Toujours non remboursé, négociations CEPS en cours, remboursement envisagé 2e semestre 2026
+- **Mars 2026** : Toujours non remboursé, négociations CEPS en cours, [remboursement envisagé](/collections/glp1-cout/remboursement-mounjaro-france-2026-quand-conditions-ceps/) 2e semestre 2026
 
 ### Comparaison Européenne
 

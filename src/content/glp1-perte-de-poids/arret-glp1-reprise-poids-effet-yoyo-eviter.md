@@ -29,6 +29,8 @@ affiliateConfig:
 
 **Reprise de poids et effet yoyo après l'arrêt d'un GLP-1** : c'est la question n°1 que se posent les patients sous Ozempic, Wegovy ou Mounjaro. Les données chiffrées sont claires — l'étude STEP 1 a montré qu'**à 12 mois après l'arrêt du sémaglutide, les patients récupèrent en moyenne 2/3 du poids perdu**, et l'**effet yoyo** est quasi-complet à 18-24 mois sans accompagnement. Mais cette **reprise de poids yoyo** n'est pas une fatalité : sevrage progressif, accompagnement nutritionnel, activité physique et suivi médical permettent de **limiter le rebond**. Voici les données scientifiques détaillées et les **7 stratégies prouvées** pour maintenir vos résultats durablement. Lire aussi : [reprise de poids 4 fois plus rapide après GLP-1](/collections/glp1-perte-de-poids/reprise-poids-glp1-4-fois-plus-rapide-etude-2026/) et notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
 
+👉 Pour en savoir plus, consultez notre guide sur [relâchement cutané après perte de poids](/collections/effets-secondaires-glp1/glp1-relachement-cutane-peau-corps-perte-poids-solutions/).
+
 ## Sommaire
 
 1. [Ce que disent les études sur la reprise de poids](#donnees)
@@ -134,6 +136,8 @@ Il n'existe pas d'étude randomisée comparant précisément l'arrêt progressif
 En pratique, une réduction progressive de la dose sur 2 à 3 mois avant l'arrêt complet est recommandée par la plupart des spécialistes, même en l'absence de protocole officiel.
 
 ## Alternatives en cas d'arrêt forcé {#alternatives}
+
+> **À lire aussi** : [relâchement cutané après perte de poids](/collections/effets-secondaires-glp1/glp1-relachement-cutane-peau-corps-perte-poids-solutions/)
 
 Si l'arrêt du traitement GLP-1 est imposé (raisons financières, contre-indication médicale, pénurie de médicament), plusieurs alternatives peuvent aider à maintenir les acquis. La [préservation de la masse musculaire lors du sevrage](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un point crucial souvent négligé lors de l'arrêt.
 

@@ -56,6 +56,8 @@ Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? C
 - Suivi psychologique
 - Programmes d'éducation thérapeutique
 
+📖 À lire également : [nouveaux traitements en développement comme CagriSema](/collections/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/).
+
 **Exemples reconnus :**
 - **CHU Pitié-Salpêtrière (Paris)** - Service du Pr Basdevant
 - **CHU de Lyon** - Centre intégré de l'obésité
@@ -88,7 +90,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - Orientation vers un [endocrinologue spécialisé en perte de poids](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/)
 - Bilans biologiques complets
 - Soutien psychologique
-- Programmes d'exercices adaptés
+- Programmes d'[exercice](/collections/regime-glp1/glp1-sport-performance-sportif-composition-corporelle/)s adaptés
 
 **4. Transparence des tarifs :**
 - Coûts clairement annoncés

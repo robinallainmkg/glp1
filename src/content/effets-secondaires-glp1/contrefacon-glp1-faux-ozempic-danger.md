@@ -50,6 +50,8 @@ En 2023 et 2024, plusieurs patients européens ont été hospitalisés après av
 
 Au Royaume-Uni, le NHS (service de santé national) a publié un avertissement explicite après avoir reçu des signalements d'effets indésirables graves liés à des produits contrefaits — à distinguer des [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) normalement attendus avec le produit authentique. Dans plusieurs cas, le produit acheté en ligne contenait une concentration dix fois supérieure au dosage habituel.
 
+> **À lire aussi** : [effets indésirables d'Insulevel](/collections/effets-secondaires-glp1/insulevel-effet-indesirable/)
+
 L'ANSM française suit également des signalements de patients ayant reçu des produits suspects, dans le cadre de la [pharmacovigilance ANSM](/collections/recherche-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/). Elle rappelle que **seule la filière légale — ordonnance et pharmacie agréée — garantit la sécurité du médicament**.
 
 ### Le cas particulier des « compounding pharmacies »

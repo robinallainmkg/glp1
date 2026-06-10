@@ -166,7 +166,7 @@ La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreati
 | [Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/) | ~39% | ~20% | ~14% | Modérée |
 | Trulicity | 10-20% | 5-10% | 3-5% | Bonne |
 
-Si vous souhaitez comparer avec un autre traitement de la même famille, consultez notre guide sur les [effets secondaires de Mounjaro (tirzepatide)](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) ou les [effets secondaires de Rybelsus (sémaglutide oral)](/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/). Pour connaître le coût du traitement, retrouvez le [prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/) avec le détail du remboursement Sécurité Sociale.
+Si vous souhaitez comparer avec un [autre traitement](/collections/pages-statiques/quel-traitement-glp1-choisir/) de la même famille, consultez notre guide sur les [effets secondaires de Mounjaro (tirzepatide)](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) ou les [effets secondaires de Rybelsus (sémaglutide oral)](/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/). Pour connaître le coût du traitement, retrouvez le [prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/) avec le détail du remboursement Sécurité Sociale.
 
 ## 💡 Conseils pour une Bonne Tolérance
 
@@ -195,7 +195,9 @@ Si vous souhaitez comparer avec un autre traitement de la même famille, consult
 
 Pensez également à surveiller les [carences nutritionnelles à surveiller sous Ozempic](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), notamment en vitamine B12, vitamine D et protéines, surtout en cas de perte de poids rapide.
 
-> **À lire aussi** : [retours d'expérience des patients](/collections/traitements-glp1/ozempic-avis-patients-france-2026/)
+👉 Pour en savoir plus, consultez notre guide sur [retour d'expérience Ozempic et diabète](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/).
+
+> **À lire aussi** : [retours d'expérience des patients](/collections/traitements-glp1/ozempic-avis-patients-france-2026/) · [témoignage diabète type 2 et Ozempic](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/)
 
 
 ## 📞 Ressources d'Aide

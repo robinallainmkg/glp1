@@ -42,7 +42,7 @@ La phytothérapie peut compléter efficacement les traitements GLP-1 en optimisa
 
 ## Informations Médicales
 
-Selon les endocrinologues français, la phytothérapie peut constituer un soutien complémentaire à un traitement GLP-1, mais elle n'est pas spécifiquement recommandée par la HAS. Seules les mesures hygiéno-diététiques classiques — alimentation équilibrée et activité physique régulière — font l'objet de recommandations officielles en complément des traitements médicamenteux.
+Selon les [endocrinologue](/collections/medecins-glp1-france/diabetologue-paris/)s français, la phytothérapie peut constituer un soutien complémentaire à un traitement GLP-1, mais elle n'est pas spécifiquement recommandée par la HAS. Seules les mesures hygiéno-diététiques classiques — alimentation équilibrée et activité physique régulière — font l'objet de recommandations officielles en complément des traitements médicamenteux.
 
 ### Points clés validés scientifiquement :
 - **Efficacité clinique** : Études randomisées contrôlées

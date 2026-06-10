@@ -48,6 +48,8 @@ mainKeyword: "témoignage ozempic perte de poids"
 - **Durée :** 14 mois
 - **IMC initial :** 33.1 (obésité modérée)
 
+👉 Pour en savoir plus, consultez notre guide sur [clinique spécialisée en obésité](/collections/medecins-glp1-france/clinique-pour-obesite/).
+
 ## Son Témoignage
 
 > "La ménopause a tout changé. En 3 ans, j'avais pris 25 kilos sans rien changer à mes habitudes. Mon métabolisme s'était complètement déréglé. Je ne me reconnaissais plus dans le miroir."
@@ -73,6 +75,8 @@ mainKeyword: "témoignage ozempic perte de poids"
 > "Les premières semaines ont été difficiles. Les nausées étaient vraiment présentes, surtout le matin. Mais mon médecin m'avait prévenue et m'avait donné des astuces. Et surtout, pour la première fois depuis des années, je n'avais plus envie de grignoter devant la télé le soir."
 
 Sophie a dû gérer les [effets secondaires](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) digestifs pendant les deux premiers mois de traitement, une expérience commune chez les nouveaux patients sous Ozempic.
+
+📖 À lire également : [témoignage de Sophie sous GLP-1](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/).
 
 ### Phase 2 : L'Encouragement (Mois 5-8)
 - **Perte :** 12 kilos supplémentaires
