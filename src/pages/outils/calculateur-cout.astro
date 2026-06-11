@@ -3,7 +3,7 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
 ---
 
 <StaticLayout 
-  title="Calculateur de Coût GLP-1 : Estimez votre Budget Traitement 2026"
+  title="Calculateur Coût GLP-1 : Budget Traitement 2026"
   description="Calculez le coût réel de votre traitement GLP-1 (Ozempic, Wegovy, Mounjaro) avec remboursement. Estimation précise du budget mensuel et annuel."
   keywords="calculateur coût glp1, prix ozempic, budget wegovy, coût traitement"
 >
@@ -21,6 +21,7 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
       </div>
 
       <!-- Calculateur -->
+      <h2 class="sr-only">Paramètres du calcul</h2>
       <div class="bg-white rounded-2xl shadow-2xl p-8 mb-8">
         
         <form id="costCalculator" class="space-y-6">
@@ -200,7 +201,7 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
             <div class="flex items-start gap-3">
               <span class="text-2xl">✅</span>
               <div>
-                <h4 class="font-semibold text-gray-900">Vérifiez votre éligibilité au remboursement</h4>
+                <h3 class="font-semibold text-gray-900">Vérifiez votre éligibilité au remboursement</h3>
                 <p class="text-gray-600 text-sm">Si vous avez un diabète type 2 + IMC > 30, Ozempic peut être remboursé à 65%</p>
               </div>
             </div>
@@ -208,7 +209,7 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
             <div class="flex items-start gap-3">
               <span class="text-2xl">💊</span>
               <div>
-                <h4 class="font-semibold text-gray-900">Demandez une prescription longue durée</h4>
+                <h3 class="font-semibold text-gray-900">Demandez une prescription longue durée</h3>
                 <p class="text-gray-600 text-sm">Certains médecins peuvent prescrire pour 3-6 mois, réduisant les frais de consultation</p>
               </div>
             </div>
@@ -216,7 +217,7 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
             <div class="flex items-start gap-3">
               <span class="text-2xl">🏥</span>
               <div>
-                <h4 class="font-semibold text-gray-900">Comparez les mutuelles</h4>
+                <h3 class="font-semibold text-gray-900">Comparez les mutuelles</h3>
                 <p class="text-gray-600 text-sm">Certaines mutuelles remboursent jusqu'à 100% du ticket modérateur</p>
                 <a href="/collections/glp1-cout/wegovy-remboursement-mutuelle" class="text-blue-600 hover:underline text-sm">
                   → Guide des mutuelles qui remboursent
@@ -227,7 +228,7 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
             <div class="flex items-start gap-3">
               <span class="text-2xl">🔍</span>
               <div>
-                <h4 class="font-semibold text-gray-900">Trouvez un médecin près de chez vous</h4>
+                <h3 class="font-semibold text-gray-900">Trouvez un médecin près de chez vous</h3>
                 <p class="text-gray-600 text-sm">Consultez notre annuaire de médecins qui prescrivent le GLP-1</p>
                 <a href="/annuaire/" class="text-blue-600 hover:underline text-sm">
                   → Rechercher un médecin
@@ -243,7 +244,7 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
         <div class="flex items-start gap-3">
           <span class="text-2xl">⚠️</span>
           <div>
-            <h4 class="font-bold text-gray-900 mb-2">Information Importante</h4>
+            <h3 class="font-bold text-gray-900 mb-2">Information Importante</h3>
             <p class="text-gray-700 text-sm">
               Cette estimation est indicative et peut varier selon votre situation personnelle, votre contrat de mutuelle et les évolutions de prix. 
               Consultez toujours votre médecin et votre mutuelle pour une estimation précise.

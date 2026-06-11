@@ -1,6 +1,6 @@
 ---
-title: "Foundayo (Orforglipron) : Premier GLP-1 Oral Approuvé par la FDA"
-description: "Foundayo orforglipron France : premier GLP-1 oral approuvé par la FDA en 2026. Essais ATTAIN, efficacité, date Europe et comparaison avec les injections."
+title: "Foundayo (Orforglipron) : GLP-1 Oral Approuvé FDA"
+description: "Foundayo orforglipron : premier GLP-1 oral approuvé FDA 2026. Essais ATTAIN, efficacité, date Europe, comparaison injections."
 pubDate: 2026-05-28
 date: "2026-05-28"
 updatedAt: 2026-05-28
