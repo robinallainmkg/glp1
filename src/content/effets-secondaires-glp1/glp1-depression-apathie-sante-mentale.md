@@ -191,6 +191,8 @@ En France, le dispositif **MonPsy** permet d'accéder à 8 séances de psycholog
 
 ---
 
+L'anxiété liée à la [reprise de poids rapide après arrêt](/collections/glp1-perte-de-poids/reprise-poids-glp1-4-fois-plus-rapide-etude-2026/) du traitement est documentée scientifiquement.
+
 ## FAQ {#faq}
 
 **Ozempic peut-il vraiment causer une dépression ?**

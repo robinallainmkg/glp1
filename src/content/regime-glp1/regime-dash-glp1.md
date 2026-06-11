@@ -142,6 +142,8 @@ Non. Le régime DASH peut réduire significativement la tension artérielle mais
 
 > **À lire aussi** : [Régime méditerranéen GLP-1 alimentation santé](/collections/regime-glp1/regime-mediterraneen-glp1/)
 
+Pour combiner régime DASH et tirzepatide, informez-vous sur le [prix de Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) en France.
+
 ## Conclusion
 
 Le régime DASH constitue l'un des meilleurs partenaires alimentaires d'un traitement GLP-1 chez les patients présentant une hypertension associée au diabète de type 2 ou à l'obésité. Sa richesse en potassium, fibres et calcium, combinée à la réduction sodée, agit sur des mécanismes complémentaires de ceux des GLP-1 — dont les [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) sont prouvés — pour améliorer la santé cardiométabolique globale.

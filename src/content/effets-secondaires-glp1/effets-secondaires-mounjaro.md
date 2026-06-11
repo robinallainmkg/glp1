@@ -310,6 +310,8 @@ Consultez nos pages sur le [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-
 
 Limitez à 1-2 verres occasionnels.
 
+Malgré certains effets secondaires, les [bénéfices cardiovasculaires du tirzepatide](/collections/recherche-glp1/mounjaro-tirzepatide-insuffisance-cardiaque-summit-resultats-france/) sont prometteurs.
+
 ## 📋 Ressources Complémentaires
 
 ### Guides pratiques

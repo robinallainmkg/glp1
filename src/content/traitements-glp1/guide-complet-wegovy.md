@@ -158,6 +158,10 @@ Avant de démarrer, vérifiez si vous remplissez les [critères d'éligibilité 
 
 > **À lire aussi** : [prix Wegovy en pharmacie](/collections/glp1-cout/wegovy-prix/) · [quel traitement GLP-1 choisir](/collections/pages-statiques/quel-traitement-glp1-choisir/) · [Wegovy chez les adolescents](/collections/traitements-glp1/wegovy-mounjaro-adolescent-obesite-12-ans-france-guide/)
 
+Les femmes sous Wegovy doivent connaître les données sur la [fertilité et bébés Ozempic](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/).
+
+Votre médecin traitant peut prescrire Wegovy sous certaines [conditions de prescription par le généraliste](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/).
+
 ## FAQ Wegovy
 
 ### Wegovy est-il différent d'Ozempic ?
@@ -179,7 +183,7 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
 
 ---
 
-Pour obtenir une prescription de Wegovy, consultez notre annuaire d'[endocrinologues spécialisés en perte de poids](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/).
+Pour obtenir une prescription [de Wegovy](/collections/glp1-cout/wegovy-remboursement-mutuelle/), consultez notre annuaire d'[endocrinologues spécialisés en perte de poids](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/).
 
 *Ce guide complet sur Wegovy est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*
 

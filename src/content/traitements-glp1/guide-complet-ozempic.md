@@ -64,7 +64,7 @@ Ozempic est indiqué dans le traitement du diabète de type 2 chez l'adulte, en 
 ### Avantages dans le diabète
 - Réduction significative de l'HbA1c (-1,5 à -2%)
 - Perte de poids moyenne de 5-10 kg
-- Réduction du risque cardiovasculaire grâce aux [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) du sémaglutide — voir aussi le [témoignage de Bernard, diabétique type 2, -18 kg sous Ozempic](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/)
+- Réduction du risque cardiovasculaire grâce aux [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) [du sémaglutide](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-resultats/) — voir aussi le [témoignage de Bernard, diabétique type 2, -18 kg sous Ozempic](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/)
 - Une injection hebdomadaire seulement
 
 ### Efficacité prouvée

@@ -136,7 +136,7 @@ La chrono-nutrition au sens du Dr Delabos est une approche nutritionnelle qui n'
 ### Puis-je adapter la chrono-nutrition si je travaille en horaires décalés ?
 Oui. Le principe de base reste le même : le repas le plus copieux doit correspondre à votre "milieu de journée biologique". Si vous travaillez la nuit et dormez le matin, votre "petit-déjeuner" aura lieu l'après-midi. Adaptez-vous à votre propre rythme.
 
-### La chrono-nutrition est-elle compatible avec les injonctions de Mounjaro le soir ?
+### La chrono-nutrition est-elle compatible avec les injonctions [de Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) le soir ?
 Oui. L'injection de Mounjaro (hebdomadaire) peut se faire à n'importe quel moment de la journée. Elle n'a pas d'incidence sur l'organisation horaire des repas.
 
 ## Conclusion

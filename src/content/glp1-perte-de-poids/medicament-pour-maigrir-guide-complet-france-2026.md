@@ -64,8 +64,7 @@ Le **Wegovy** est le médicament phare de Novo Nordisk pour le traitement de l'o
 
 **Prix et remboursement :**
 - Entre **169 et 360 euros par mois** selon le dosage
-- **Non rembourse** par la Sécurité sociale en avril 2026
-- Remboursement attendu au second semestre 2026 après evaluation par la HAS
+- **Remboursé à 65 %** par la Sécurité sociale depuis le 15 juin 2026 pour l'obésité sévère (IMC ≥ 35 avec comorbidité ou ≥ 40), sur prescription spécialisée (CSO, CHU). Prise en charge à 100 % possible via l'ALD.
 
 **Administration :** injection sous-cutanée une fois par semaine, avec titration progressive sur 16 semaines.
 
@@ -86,8 +85,7 @@ Le **Mounjaro** d'Eli Lilly est le médicament le plus efficace actuellement dis
 
 **Prix et remboursement :**
 - Entre **230 et 440 euros par mois** selon le dosage (2.5 mg a 15 mg)
-- **Non rembourse** par la Sécurité sociale en avril 2026 (ni pour le diabète, ni pour l'obésité -- negociations CEPS en cours)
-- Remboursement attendu au second semestre 2026
+- **Remboursé à 65 %** par la Sécurité sociale depuis le 15 juin 2026 pour l'obésité sévère (IMC ≥ 35 avec comorbidité ou ≥ 40), sur prescription spécialisée (CSO, CHU). Prise en charge à 100 % possible via l'ALD.
 
 **Administration :** injection sous-cutanée une fois par semaine, titration progressive sur plusieurs mois.
 
@@ -125,8 +123,8 @@ L'**Ozempic** de Novo Nordisk est officiellement autorisé uniquement pour le tr
 - Dose maximale de 1 mg par semaine (contre 2.4 mg pour le Wegovy)
 
 **Prix et remboursement :**
-- Environ **77 euros par stylo**
-- **Rembourse a 30 %** par la Sécurité sociale pour le diabète de type 2 (jusqu'a 100 % en ALD -- Affection de Longue Duree)
+- Environ **80,18 euros par stylo** (prix fixe)
+- **Remboursé à 65 %** par la Sécurité sociale pour le diabète de type 2 en bithérapie avec metformine (30 % en trithérapie avec insuline basale). Prise en charge jusqu'à 100 % en ALD (Affection de Longue Durée).
 - Non rembourse pour la perte de poids seule
 
 **Attention :** la prescription hors AMM de l'Ozempic pour la perte de poids comporte des risques. En cas d'effet secondaire grave, la responsabilite du médecin est engagee differemment. De plus, les tensions d'approvisionnement liees a la forte demande pour la perte de poids peuvent priver les patients diabetiques de leur traitement. Privilegiez le [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) si votre objectif est la perte de poids.
@@ -152,7 +150,7 @@ Pour en savoir plus : [guide complet Ozempic](/collections/traitements-glp1/guid
       <td>~15 %</td>
       <td>169-360 euros</td>
       <td>1x/semaine</td>
-      <td>Non (prevu S2 2026)</td>
+      <td>65 % (IMC ≥ 35, depuis juin 2026)</td>
       <td>30+ ou 27+ avec comorbidités</td>
     </tr>
     <tr>
@@ -160,7 +158,7 @@ Pour en savoir plus : [guide complet Ozempic](/collections/traitements-glp1/guid
       <td>16-22.5 %</td>
       <td>230-440 euros</td>
       <td>1x/semaine</td>
-      <td>Non (avril 2026)</td>
+      <td>65 % (IMC ≥ 35, depuis juin 2026)</td>
       <td>30+ ou 27+ avec comorbidités</td>
     </tr>
     <tr>
@@ -174,9 +172,9 @@ Pour en savoir plus : [guide complet Ozempic](/collections/traitements-glp1/guid
     <tr>
       <td><strong><a href="/collections/traitements-glp1/guide-complet-ozempic/">Ozempic</a></strong></td>
       <td>5-10 % (hors AMM)</td>
-      <td>~77 euros/stylo</td>
+      <td>~80 euros/stylo</td>
       <td>1x/semaine</td>
-      <td>30 % (diabète uniquement)</td>
+      <td>65 % (diabète, bithérapie)</td>
       <td>Pas d'AMM obésité</td>
     </tr>
   </tbody>
@@ -296,14 +294,14 @@ Le cout reste le principal frein a l'acces aux medicaments pour maigrir en Franc
     <tr>
       <td><strong>Wegovy</strong></td>
       <td>169-360 euros</td>
-      <td>Non (prevu S2 2026)</td>
-      <td>Certaines mutuelles premium</td>
+      <td>65 % (IMC ≥ 35, depuis juin 2026)</td>
+      <td>Complement possible</td>
     </tr>
     <tr>
       <td><strong>Mounjaro</strong></td>
       <td>230-440 euros</td>
-      <td>Partiel (diabète uniquement)</td>
-      <td>Rare</td>
+      <td>65 % (IMC ≥ 35, depuis juin 2026)</td>
+      <td>Complement possible</td>
     </tr>
     <tr>
       <td><strong>Saxenda</strong></td>
@@ -313,8 +311,8 @@ Le cout reste le principal frein a l'acces aux medicaments pour maigrir en Franc
     </tr>
     <tr>
       <td><strong>Ozempic</strong></td>
-      <td>~77 euros/stylo</td>
-      <td>30 % (diabète uniquement)</td>
+      <td>~80 euros/stylo</td>
+      <td>65 % (diabète, bithérapie)</td>
       <td>Complement possible (diabète)</td>
     </tr>
   </tbody>
@@ -322,12 +320,12 @@ Le cout reste le principal frein a l'acces aux medicaments pour maigrir en Franc
 
 ### La question du remboursement
 
-En avril 2026, **aucun médicament GLP-1 n'est rembourse par la Sécurité sociale pour la seule indication de perte de poids**. Seuls l'Ozempic, le Mounjaro et le Trulicity sont partiellement rembourses pour le diabète de type 2.
+Depuis le 15 juin 2026, **Wegovy et Mounjaro sont remboursés à 65 %** par la Sécurité sociale pour le traitement de l'obésité sévère (IMC ≥ 35 avec comorbidité ou ≥ 40), sur prescription spécialisée. L'Ozempic et le Trulicity restent remboursés pour le diabète de type 2.
 
-**Les perspectives sont neanmoins encourageantes :**
-- La HAS (Haute Autorite de Sante) a emis un avis favorable au remboursement du Wegovy pour l'obésité severe
-- Le remboursement du Wegovy et potentiellement du Mounjaro est attendu au **second semestre 2026**
-- Les conditions exactes (IMC minimum, comorbidités requises) seront definies par arrete ministeriel
+**Conditions de remboursement :**
+- IMC ≥ 35 avec au moins une comorbidité (diabète de type 2, hypertension, apnée du sommeil, dyslipidémie) ou IMC ≥ 40
+- Prescription initiale par un spécialiste (CSO, CHU, endocrinologue)
+- Prise en charge à 100 % possible via l'ALD (Affection de Longue Durée)
 
 Pour en savoir plus : [remboursement des GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/) | [remboursement Mounjaro](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
 

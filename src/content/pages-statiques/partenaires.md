@@ -10,7 +10,7 @@ category: "Partenariat"
 featured: false
 ---
 
-# Nos Partenaires de Confiance
+## Nos Partenaires de Confiance
 
 Chez **GLP-1 France**, nous collaborons avec des partenaires de qualité qui partagent notre engagement pour l'information de santé fiable et accessible. Découvrez les plateformes qui nous font confiance et nous accompagnent dans notre mission.
 

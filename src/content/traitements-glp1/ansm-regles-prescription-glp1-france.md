@@ -202,6 +202,8 @@ Oui. Avec l'arrêt programmé de Victoza fin 2026, votre médecin vous proposera
 
 Oui, un bilan biologique préalable est fortement recommandé. Il comprend au minimum : glycémie à jeun, HbA1c, bilan lipidique, créatinine (fonction rénale), transaminases (fonction hépatique). Selon votre profil, votre médecin pourra demander des examens complémentaires.
 
+L'ANSM rappelle les [précautions grossesse sous GLP-1](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/) : arrêt 2 mois avant la conception.
+
 ## Conclusion
 
 Les évolutions réglementaires de 2025 marquent un tournant dans l'accès aux traitements GLP-1 en France. L'ouverture de la prescription aux médecins généralistes facilite considérablement le parcours de soins des patients obèses, tandis que le formulaire obligatoire sécurise l'utilisation des antidiabétiques GLP-1 contre le mésusage. Ces nouvelles règles répondent directement au [phénomène de mésusage des GLP-1](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) documenté par les autorités sanitaires françaises.

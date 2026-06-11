@@ -252,6 +252,10 @@ Pensez également à surveiller les [carences nutritionnelles à surveiller sous
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. La perte de poids rapide peut également entraîner une [fonte musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) et des modifications esthétiques du visage, un phénomène souvent appelé "[Ozempic face](/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/)" (fonte du visage), à connaître avant de commencer le traitement. Consultez votre médecin si vous constatez des changements importants.
 
+Si vous êtes en âge de procréer, informez-vous sur les précautions [GLP-1 et grossesse](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/).
+
+Le passage au [nouveau stylo Ozempic 3ml en 2026](/collections/traitements-glp1/nouveau-stylo-ozempic-3ml-2026-changement-utilisation/) ne modifie pas le profil d'effets secondaires.
+
 ## Sommaire
 
 

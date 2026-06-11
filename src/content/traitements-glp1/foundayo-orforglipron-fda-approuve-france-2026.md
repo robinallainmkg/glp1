@@ -1,6 +1,6 @@
 ---
 title: "Foundayo (Orforglipron) : Premier GLP-1 Oral Approuvé par la FDA"
-description: "Foundayo orforglipron France : premier agoniste GLP-1 oral non-peptidique approuvé par la FDA en 2026. Mécanisme, essais ATTAIN, efficacité, date Europe et comparaison avec les injections."
+description: "Foundayo orforglipron France : premier GLP-1 oral approuvé par la FDA en 2026. Essais ATTAIN, efficacité, date Europe et comparaison avec les injections."
 pubDate: 2026-05-28
 date: "2026-05-28"
 updatedAt: 2026-05-28

@@ -164,6 +164,8 @@ Oui, mais une adaptation des doses d'insuline sera probablement nécessaire car 
 ### Le coût du régime paléo est-il plus élevé ?
 Généralement oui, car il est riche en viandes et poissons de qualité. Pour maîtriser le coût, misez sur les sardines et le thon en boîte (excellents et peu chers), les œufs, les légumineuses si vous faites un paléo modifié, et les fruits et légumes de saison.
 
+Associer régime paléo et GLP-1 nécessite de connaître les [tarifs Ozempic](/collections/glp1-cout/prix-ozempic-france/) actuels.
+
 ## Conclusion
 
 Le régime paléo présente des atouts réels pour les patients sous GLP-1 : faible en sucres rapides, riche en protéines et légumes, il potentialise l'action médicamenteuse sur la glycémie et la perte de poids. Sa version stricte comporte cependant des limites — exclusion des légumineuses, risque d'excès de graisses saturées — qui méritent d'être discutées avec votre médecin ou diététicien.

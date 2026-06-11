@@ -151,6 +151,10 @@ En résumé, si vous constatez une augmentation de votre chute de cheveux sous O
 
 Pour les patients qui s'inquiètent aussi de la perte de masse musculaire qui peut accompagner la perte de poids sous GLP-1, notre article sur la [fonte musculaire et comment préserver ses muscles sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) fournit des stratégies complémentaires.
 
+Comme la chute de cheveux, l'[Ozempic Face et vieillissement cutané](/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/) sont des effets esthétiques du GLP-1.
+
+Les solutions contre la chute de cheveux s'ajoutent au [coût du traitement Ozempic](/collections/glp1-cout/prix-ozempic-france/) lui-même.
+
 ## Questions fréquentes
 
 **La chute de cheveux peut-elle survenir immédiatement après la première injection ?**

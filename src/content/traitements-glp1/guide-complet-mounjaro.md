@@ -383,6 +383,10 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
 
 ---
 
+Après le tirzepatide, la prochaine innovation est [CagriSema en développement](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-resultats/) chez Novo Nordisk.
+
+Le tirzepatide a montré des bénéfices cardiaques dans les [résultats de l'étude SUMMIT](/collections/recherche-glp1/mounjaro-tirzepatide-insuffisance-cardiaque-summit-resultats-france/).
+
 ## 🎯 Pour Aller Plus Loin avec Mounjaro
 
 <div class="next-steps-grid">

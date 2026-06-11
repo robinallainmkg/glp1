@@ -158,6 +158,8 @@ Avec un GLP-1 associé à un régime méditerranéen, les premières pertes de p
 ### Mon médecin traitant peut-il m'aider à adapter mon alimentation ?
 Oui. La plupart des médecins traitants peuvent vous orienter vers un diététicien-nutritionniste dans le cadre d'une prise en charge coordonnée. Certaines mutuelles remboursent des consultations diététiques (3 à 5 par an selon le contrat).
 
+Le régime méditerranéen accompagne efficacement un traitement GLP-1, dont le [prix Ozempic en pharmacie](/collections/glp1-cout/prix-ozempic-france/) reste accessible.
+
 ## Conclusion
 
 L'association du régime méditerranéen et d'un traitement GLP-1 est aujourd'hui la stratégie la mieux étayée scientifiquement pour traiter l'obésité et le diabète de type 2 en France. Ce mode alimentaire riche en légumes, légumineuses, poissons gras et huile d'olive complète naturellement l'action des médicaments en améliorant la sensibilité à l'insuline, en stabilisant la glycémie et en favorisant une perte de poids durable.

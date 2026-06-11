@@ -156,6 +156,8 @@ Pour obtenir le remboursement de votre GLP-1 pour le diabète en 2026 :
 5. **Si vous êtes en ALD diabète**, vérifiez que votre protocole de soins est à jour pour bénéficier du taux 100 %
 6. **En cas de refus inexpliqué**, contactez le 36 46 (Assurance Maladie) pour obtenir des éclaircissements
 
+Pour le sémaglutide en indication obésité, consultez le guide [remboursement mutuelle Wegovy](/collections/glp1-cout/wegovy-remboursement-mutuelle/).
+
 ## Questions fréquentes
 
 **Mon médecin prescrit Ozempic depuis 2 ans. Doit-il refaire le justificatif à chaque renouvellement ?**

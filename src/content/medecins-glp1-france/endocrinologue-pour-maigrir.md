@@ -239,6 +239,8 @@ Idéalement, associez :
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
+Avant de consulter un spécialiste, sachez que la [prescription GLP-1 par le généraliste](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/) est possible sous conditions.
+
 ## Conclusion
 
 Trouver le bon endocrinologue pour maigrir demande du temps et de la recherche, mais c'est un investissement crucial pour votre santé. Privilégiez la compétence à la proximité, n'hésitez pas à changer si vous n'êtes pas satisfait, et gardez en tête que la perte de poids durable nécessite du temps et un suivi médical régulier.

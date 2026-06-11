@@ -136,6 +136,8 @@ Les édulcorants n'ont pas d'impact sur la glycémie et peuvent aider lors de la
 ### La réduction des sucres peut-elle diminuer les nausées du GLP-1 ?
 Oui, dans de nombreux cas. Les aliments sucrés, notamment les boissons sucrées et les confiseries, fermentent rapidement dans un estomac dont la vidange est ralentie par le GLP-1. Les supprimer réduit souvent les nausées, les ballonnements et les éructations fréquentes en début de traitement.
 
+Le régime sans sucre complète bien un traitement GLP-1 — informez-vous sur le [coût de Wegovy](/collections/glp1-cout/prix-wegovy-france/).
+
 ## Conclusion
 
 Réduire les sucres ajoutés est peut-être le changement alimentaire le plus immédiatement impactant pour un patient débutant un traitement GLP-1. Les bénéfices se mesurent rapidement : stabilisation de la glycémie, réduction des nausées, perte de poids accélérée et meilleur confort digestif.

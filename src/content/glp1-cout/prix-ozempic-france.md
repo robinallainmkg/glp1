@@ -472,6 +472,10 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 
 ---
 
+Le conditionnement évolue avec le [nouveau format de stylo 3ml](/collections/traitements-glp1/nouveau-stylo-ozempic-3ml-2026-changement-utilisation/) pour Ozempic.
+
+Le marché évoluera avec l'arrivée de [CagriSema, futur traitement](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-resultats/) combinant sémaglutide et cagrilintide.
+
 ## 🔗 Ressources Complémentaires et Guides Pratiques
 
 **Articles connexes pour optimiser votre traitement Ozempic :**

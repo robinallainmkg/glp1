@@ -136,6 +136,8 @@ Novo Nordisk a annoncé un investissement majeur pour augmenter les capacités d
 
 Les brevets sur certaines formulations de liraglutide (Saxenda) arrivent à expiration, ouvrant la voie aux biosimilaires. Pour le sémaglutide (Ozempic/Wegovy), les premiers [génériques et biosimilaires](/collections/glp1-cout/ozempic-generique-france-semaglutide-biosimilaire-date/) sont attendus vers 2027-2028, ce qui devrait considérablement augmenter l'offre disponible et faire baisser les prix.
 
+En cas de pénurie, les [prix Ozempic actuels](/collections/glp1-cout/prix-ozempic-france/) peuvent varier selon les pharmacies.
+
 ## Questions fréquentes
 
 **Mon pharmacien m'a dit qu'il ne peut pas commander Ozempic. Est-ce normal ?**

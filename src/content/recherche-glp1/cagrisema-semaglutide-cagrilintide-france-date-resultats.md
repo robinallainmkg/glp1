@@ -93,7 +93,7 @@ Aucun signal de sécurité nouveau par rapport aux classes existantes n'a été 
 
 ### La demande d'autorisation FDA (Q1 2026)
 
-Novo Nordisk a annoncé avoir déposé une demande d'autorisation de mise sur le marché (AMM) auprès de la Food and Drug Administration (FDA) américaine au premier trimestre 2026. Le processus d'examen standard de la FDA dure généralement 6 à 12 mois. Si l'autorisation est accordée, on peut espérer une commercialisation aux États-Unis d'ici fin 2026 ou début 2027.
+Novo Nordisk a déposé une demande d'autorisation de mise sur le marché (NDA) auprès de la Food and Drug Administration (FDA) américaine le 18 décembre 2025. Le processus d'examen standard de la FDA dure généralement 6 à 12 mois. Si l'autorisation est accordée, on peut espérer une commercialisation aux États-Unis d'ici fin 2026 ou début 2027.
 
 ### Le dossier EMA pour l'Europe
 
@@ -116,12 +116,12 @@ En tenant compte de ces délais réalistes, CagriSema ne sera pas disponible en 
 
 ### Le point de comparaison : Wegovy et Mounjaro
 
-Pour les patients suivis en France qui s'interrogent sur CagriSema, la référence est Wegovy (sémaglutide 2,4 mg) et Mounjaro (tirzépatide). Ces deux médicaments sont déjà disponibles — et le [remboursement de Mounjaro est en cours de négociation pour 2026](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/) en France.
+Pour les patients suivis en France qui s'interrogent sur CagriSema, la référence est Wegovy (sémaglutide 2,4 mg) et Mounjaro (tirzépatide). Ces deux médicaments sont déjà disponibles — et le [remboursement de Mounjaro est effectif depuis le 15 juin 2026](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/) en France, à hauteur de 65 % pour les patients avec un IMC ≥ 35 avec comorbidité ou ≥ 40.
 
 | Traitement | Perte de poids (étude pivot) | Fréquence | Statut France |
 |-----------|------------------------------|-----------|----------------|
-| Wegovy | ~15 % | Hebdomadaire | Disponible, non remboursé |
-| Mounjaro | ~21 % | Hebdomadaire | Disponible, non remboursé (remboursement en cours) |
+| Wegovy | ~15 % | Hebdomadaire | Disponible, remboursé 65 % depuis le 15 juin 2026 (IMC ≥ 35 avec comorbidité ou ≥ 40) |
+| Mounjaro | ~21 % | Hebdomadaire | Disponible, remboursé 65 % depuis le 15 juin 2026 (IMC ≥ 35 avec comorbidité ou ≥ 40) |
 | CagriSema | ~23 % | Hebdomadaire | Non disponible (AMM non obtenue) |
 
 L'avantage de CagriSema en termes de perte de poids supplémentaire est réel, mais modeste comparé à Mounjaro. La vraie question sera le profil de tolérance à plus long terme et le prix — qui déterminera l'accessibilité pour les patients.

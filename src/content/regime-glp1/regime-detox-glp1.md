@@ -150,6 +150,8 @@ Oui, l'artichaut est un excellent aliment sous Ozempic. Il facilite la digestion
 ### Les probiotiques aident-ils à gérer les effets secondaires digestifs des GLP-1 ?
 Plusieurs études suggèrent que les probiotiques (yaourt nature, kéfir, choucroute lacto-fermentée) peuvent améliorer le confort digestif sous GLP-1. Ils ne traitent pas les nausées mais peuvent réduire les ballonnements et améliorer le transit. Intégrez-les progressivement. Le régime détox peut aider à atténuer certains [effets secondaires digestifs](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) liés aux traitements GLP-1.
 
+Avant de débuter un protocole détox sous GLP-1, renseignez-vous sur le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/).
+
 ## Conclusion
 
 Un programme "détox" adapté aux patients sous GLP-1 n'est pas une cure radicale mais un rééquilibrage alimentaire ciblé : supprimer l'alcool, les produits ultra-transformés et les sucres raffinés ; augmenter les légumes verts, les aliments fermentés et l'hydratation. Ces ajustements soutiennent le foie, les reins et les intestins à un moment où l'organisme traverse une transformation métabolique significative sous l'effet du traitement.

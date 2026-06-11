@@ -417,7 +417,7 @@ Coût à la charge du patient :
 - L'obligation de surveillance pour les traitements anti-diabétiques
 
 **Démarches légales :**
-1. Consultation médicale avec un endocrinologue, diabétologue ou médecin généraliste
+1. Consultation médicale avec un endocrinologue, diabétologue ou [médecin généraliste](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/)
 2. Prescription sur ordonnance sécurisée
 3. Délivrance en pharmacie avec présentation de l'ordonnance
 

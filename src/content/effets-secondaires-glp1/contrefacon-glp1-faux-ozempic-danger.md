@@ -120,6 +120,8 @@ Si vous avez déjà commandé ou reçu un médicament GLP-1 via une source non o
 
 Si vous avez déjà injecté un produit douteux et ressentez des symptômes inhabituels (malaise, hypoglycémie, douleurs abdominales intenses, réaction allergique), **consultez les urgences immédiatement** et signalez ce que vous avez pris.
 
+La contrefaçon s'inscrit dans un contexte plus large de [mésusage documenté des GLP-1](/collections/recherche-glp1/mesusage-glp1-france-etude-nationale-cohorte-resultats-2026/) en France.
+
 ## Ce qu'il faut retenir
 
 Le marché des contrefaçons GLP-1 est une réalité dangereuse, alimentée par la pénurie et le coût élevé des traitements. Les risques vont bien au-delà d'un simple manque d'efficacité : des hospitalisations et des complications graves ont été documentées.

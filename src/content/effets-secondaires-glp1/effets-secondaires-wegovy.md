@@ -249,6 +249,10 @@ mainKeyword: "effets secondaires Wegovy"
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. Si vous vous interrogez sur les conséquences d'un arrêt du traitement, sachez que la [reprise de poids après l'arrêt d'un GLP-1](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) est un phénomène fréquent qui nécessite un accompagnement médical adapté. Parlez-en à votre médecin pour anticiper cette éventualité.
 
+Malgré les effets secondaires, le traitement reste accessible grâce au [remboursement Wegovy et mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/).
+
+Un effet moins connu est le [vieillissement du visage sous sémaglutide](/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/), appelé Ozempic Face.
+
 ## Sommaire
 
 

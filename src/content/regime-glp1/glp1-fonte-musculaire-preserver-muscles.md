@@ -162,7 +162,7 @@ Un sommeil insuffisant (moins de 7 heures par nuit) augmente le catabolisme musc
 
 ### La vitamine D et le calcium
 
-La vitamine D joue un rôle dans la fonction musculaire. Une carence en vitamine D (fréquente en France, surtout en hiver) est associée à une faiblesse musculaire et à un risque accru de sarcopénie. Faites vérifier votre taux de vitamine D et supplémentez si nécessaire (sur avis médical).
+La vitamine D joue un rôle dans la fonction musculaire. Une carence en vitamine D (fréquente [en France](/collections/glp1-cout/prix-ozempic-france/), surtout en hiver) est associée à une faiblesse musculaire et à un risque accru de sarcopénie. Faites vérifier votre taux de vitamine D et supplémentez si nécessaire (sur avis médical).
 
 ### Éviter l'alcool en excès
 
