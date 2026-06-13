@@ -1992,7 +1992,9 @@ import { supabaseConfig } from '../../lib/supabase';
       var subDetails = document.getElementById('subDetails');
       var subActions = document.getElementById('subActions');
       var subStatus = profile.subscription_status || 'free';
-      if (subStatus === 'active' || subStatus === 'trialing') {
+      var subEnd = profile.subscription_period_end ? new Date(profile.subscription_period_end) : null;
+      var subActive = subEnd && subEnd > new Date();
+      if ((subStatus === 'active' || subStatus === 'trialing') && subActive) {
         subBadge.textContent = subStatus === 'trialing' ? 'Premium (essai)' : 'Premium';
         subBadge.style.cssText = 'display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;background:#dcfce7;color:#166534';
         if (profile.subscription_period_end) {
@@ -2000,7 +2002,7 @@ import { supabaseConfig } from '../../lib/supabase';
           subDetails.textContent = 'Renouvellement : ' + pEnd.toLocaleDateString('fr-FR');
         }
         subActions.innerHTML = '<button onclick="openStripePortal()" style="background:#f3f4f6;color:#374151;border:none;padding:8px 16px;border-radius:8px;font-size:0.8rem;cursor:pointer;font-weight:600">G\u00e9rer mon abonnement</button>';
-      } else if (subStatus === 'canceled') {
+      } else if (subStatus === 'canceled' && subActive) {
         subBadge.textContent = 'Premium (annul\u00e9)';
         subBadge.style.cssText = 'display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;background:#fef3c7;color:#92400e';
         if (profile.subscription_period_end) {
