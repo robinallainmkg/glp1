@@ -1262,10 +1262,11 @@ import { supabaseConfig } from '../lib/supabase.js';
     chips.style.cssText = 'display:flex;flex-wrap:wrap;gap:6px;';
     var selected = {};
     var validate = document.createElement('button');
-    options.slice(0, 6).forEach(function(o) {
+    options.slice(0, 6).forEach(function(o, idx) {
       var btn = document.createElement('button');
       btn.type = 'button';
       btn.textContent = o;
+      logSuggestionEvent(o, idx, 'shown');
       btn.style.cssText = 'padding:7px 13px;border-radius:999px;border:1px solid #d1d5db;background:#fff;color:#374151;font-size:0.82rem;cursor:pointer;font-weight:600;';
       btn.addEventListener('click', function() {
         if (selected[o]) { delete selected[o]; btn.style.background='#fff'; btn.style.borderColor='#d1d5db'; btn.style.color='#374151'; }
@@ -1280,6 +1281,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     validate.addEventListener('click', function() {
       var keys = Object.keys(selected);
       if (!keys.length || isSending) return;
+      keys.forEach(function(k){ logSuggestionEvent(k, 0, 'clicked'); });
       wrap.remove();
       handleUserMessage(keys.join(', '));
     });
