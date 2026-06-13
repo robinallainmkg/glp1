@@ -9,10 +9,13 @@ import { supabaseConfig } from '../../lib/supabase';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Espace - Coach GLP-1</title>
   <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style is:inline>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #f8fafc;
       color: #1e293b;
       min-height: 100vh;
@@ -143,31 +146,47 @@ import { supabaseConfig } from '../../lib/supabase';
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      min-height: 80vh;
+      justify-content: flex-start;
+      min-height: 100vh;
       text-align: center;
-      padding: 2rem;
+      padding: 2.5rem 1.25rem 3rem;
+      background: linear-gradient(180deg, #f0fdf4 0%, #f9fafb 260px);
       animation: fadeIn 0.5s ease-out;
     }
-    .auth-screen h1 {
-      font-size: 1.75rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-      color: #0f172a;
+    .auth-kicker {
+      display: inline-block; background: #dcfce7; color: #166534;
+      border-radius: 999px; padding: 5px 14px; font-size: 0.74rem; font-weight: 700;
+      letter-spacing: .02em; margin-bottom: 1rem;
     }
-    .auth-screen p {
-      color: #64748b;
-      margin-bottom: 2rem;
-      max-width: 400px;
-      line-height: 1.5;
+    .auth-screen h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: #1a3c34;
+      max-width: 440px;
+    }
+    .auth-screen h1 .grad-text {
+      background: linear-gradient(135deg, #16a34a, #15803d);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .auth-screen p, .auth-screen .auth-sub {
+      color: #4b5563;
+      margin-bottom: 1.75rem;
+      max-width: 420px;
+      line-height: 1.6;
+      font-size: 1rem;
     }
     .auth-box {
       background: white;
-      border-radius: 16px;
-      padding: 2rem;
+      border-radius: 20px;
+      padding: 1.75rem;
       width: 100%;
       max-width: 400px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.06);
+      border: 1px solid #f3f4f6;
+      text-align: left;
       transition: transform 0.2s;
     }
     .auth-box h2 {
@@ -237,22 +256,23 @@ import { supabaseConfig } from '../../lib/supabase';
     .toggle-password:hover { color: #64748b; }
     .btn-primary {
       width: 100%;
-      padding: 0.75rem;
+      padding: 0.85rem;
       background: #16a34a;
       color: white;
       border: none;
-      border-radius: 8px;
-      font-size: 0.92rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
       font-weight: 700;
       cursor: pointer;
-      margin-top: 0.5rem;
-      transition: background 0.2s, transform 0.1s;
+      margin-top: 0.4rem;
+      box-shadow: 0 4px 14px rgba(22,163,74,0.28);
+      transition: all 0.2s cubic-bezier(.4,0,.2,1);
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
     }
-    .btn-primary:hover { background: #15803d; transform: translateY(-1px); }
+    .btn-primary:hover { background: #15803d; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(22,163,74,0.32); }
     .btn-primary:active { transform: translateY(0); }
     .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
     .btn-google {
@@ -312,6 +332,30 @@ import { supabaseConfig } from '../../lib/supabase';
       color: #64748b;
     }
     .auth-feature .icon { font-size: 1.5rem; margin-bottom: 0.3rem; }
+    .btn-magic {
+      width: 100%; padding: 0.7rem; border: 1px solid #bbf7d0; border-radius: 12px; background: #f0fdf4;
+      color: #15803d; font-size: 0.83rem; font-weight: 700; cursor: pointer; margin-top: 0.6rem;
+      font-family: inherit; transition: all 0.2s;
+    }
+    .btn-magic:hover { background: #dcfce7; }
+    .auth-value {
+      margin-top: 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem;
+      max-width: 400px; width: 100%;
+    }
+    .vcard {
+      background: #fff; border: 1px solid #f3f4f6; border-radius: 14px; padding: 0.85rem 0.5rem;
+      text-align: center; font-size: 0.72rem; font-weight: 600; color: #374151; line-height: 1.3;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+    .vcard .vico { font-size: 1.35rem; display: block; margin-bottom: 0.35rem; }
+    .auth-consult {
+      margin-top: 1.1rem; display: block; max-width: 400px; width: 100%; background: #1a3c34;
+      color: #fff; border-radius: 12px; padding: 0.85rem 1rem; font-size: 0.82rem; text-decoration: none;
+      font-weight: 500; transition: all 0.2s;
+    }
+    .auth-consult:hover { background: #0f2e27; transform: translateY(-1px); }
+    .auth-consult strong { font-weight: 800; }
+    .auth-trust { margin-top: 1.1rem; color: #9ca3af; font-size: 0.72rem; max-width: 400px; line-height: 1.5; }
     .forgot-password {
       text-align: right;
       margin-top: -0.5rem;
@@ -1010,8 +1054,9 @@ import { supabaseConfig } from '../../lib/supabase';
   <!-- ===== SCREEN 1: AUTH ===== -->
   <div class="screen" id="screenAuth">
     <div class="auth-screen">
-      <h1>Votre Coach GLP-1</h1>
-      <p>Suivi personnalisé, rappels d'injection, programme nutrition et sport adapté à votre traitement.</p>
+      <span class="auth-kicker">🩺 Coach GLP-1 · 100% indépendant</span>
+      <h1>Ton bilan GLP-1 <span class="grad-text">personnalisé</span></h1>
+      <p class="auth-sub">En 2 minutes : ton éligibilité au <strong>remboursement 65%</strong>, le traitement adapté à ton profil, le prix réel et la démarche pas à pas.</p>
 
       <div class="auth-box">
         <div class="auth-tabs">
@@ -1043,6 +1088,7 @@ import { supabaseConfig } from '../../lib/supabase';
             </div>
           </div>
           <button type="submit" class="btn-primary" id="btnSignup">Créer mon compte gratuit</button>
+          <button type="button" class="btn-magic" id="btnMagic" onclick="signInMagicLink()">✨ Ou reçois un lien de connexion (sans mot de passe)</button>
         </form>
 
         <form id="authFormLogin" style="display:none;" onsubmit="event.preventDefault(); signInEmail();">
@@ -1066,20 +1112,15 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="auth-error" id="authError"></div>
       </div>
 
-      <div class="auth-features">
-        <div class="auth-feature">
-          <div class="icon">&#128137;</div>
-          Rappels d'injection
-        </div>
-        <div class="auth-feature">
-          <div class="icon">&#128200;</div>
-          Suivi du poids
-        </div>
-        <div class="auth-feature">
-          <div class="icon">&#129367;</div>
-          Plan nutrition
-        </div>
+      <div class="auth-value">
+        <div class="vcard"><span class="vico">✅</span>Éligibilité remboursement</div>
+        <div class="vcard"><span class="vico">💊</span>Traitement adapté</div>
+        <div class="vcard"><span class="vico">📈</span>Suivi perso</div>
       </div>
+
+      <a class="auth-consult" href="/mon-espace/consultation/">🩺 Ou va plus loin : <strong>consultation privée complète — 3€</strong> →</a>
+
+      <p class="auth-trust">Information médicale indépendante · Paiement sécurisé Stripe · Gratuit pour commencer</p>
     </div>
   </div>
 
@@ -1465,6 +1506,23 @@ import { supabaseConfig } from '../../lib/supabase';
         });
         if (result.error) showAuthError(result.error.message);
       } catch(e) { showAuthError('Erreur de connexion. Rechargez la page.'); console.error(e); }
+    }
+
+    async function signInMagicLink() {
+      try {
+        var s = initSb();
+        var email = document.getElementById('signupEmail').value.trim();
+        if (!email) return showAuthError('Entre ton email d\'abord');
+        setButtonLoading('btnMagic', true);
+        var np = new URLSearchParams(window.location.search).get('next');
+        var redirect = window.location.origin + '/mon-espace/' + (np === 'consultation' ? '?next=consultation' : '');
+        var result = await s.auth.signInWithOtp({ email: email, options: { emailRedirectTo: redirect } });
+        setButtonLoading('btnMagic', false);
+        if (result.error) return showAuthError(result.error.message);
+        var box = document.querySelector('.auth-box');
+        if (box) box.insertAdjacentHTML('afterbegin', '<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:14px;margin-bottom:14px;font-size:0.85rem;color:#15803d;text-align:center;font-weight:600;">📬 Vérifie ta boîte mail : clique sur le lien envoyé à <strong>' + email + '</strong>.</div>');
+        showToast('Lien de connexion envoyé !', 'success');
+      } catch(e) { setButtonLoading('btnMagic', false); showAuthError('Erreur. Réessaie.'); console.error(e); }
     }
 
     async function signUpEmail() {
