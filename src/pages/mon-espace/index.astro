@@ -1162,6 +1162,18 @@ import { supabaseConfig } from '../../lib/supabase';
         <p id="greetingSub">Voici votre suivi du jour</p>
       </div>
 
+      <!-- Stage hero (parcours-aware) -->
+      <div class="card animate-in animate-delay-1" id="stageHero" style="padding:1.1rem 1.25rem;">
+        <p style="font-size:0.78rem;color:#6b7280;margin:0 0 0.55rem;font-weight:600;">Où en es-tu dans ton parcours ?</p>
+        <div id="stageChips" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;"></div>
+        <div style="background:linear-gradient(135deg,#1a3c34,#2d5a4e);border-radius:14px;padding:1.1rem 1.2rem;color:#fff;margin-bottom:0.9rem;">
+          <p style="font-size:0.72rem;opacity:.82;margin:0 0 0.35rem;font-weight:700;letter-spacing:.04em;">TA PROCHAINE ÉTAPE</p>
+          <p id="stageNextTitle" style="font-size:1.05rem;font-weight:800;margin:0 0 0.85rem;line-height:1.25;color:#fff;">…</p>
+          <a id="stageNextBtn" href="#" style="display:inline-block;background:#16a34a;color:#fff;padding:.6rem 1.2rem;border-radius:10px;font-weight:700;font-size:.85rem;text-decoration:none;">…</a>
+        </div>
+        <div id="stageTools" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.6rem;"></div>
+      </div>
+
       <!-- Goal progress -->
       <div class="goal-progress animate-in animate-delay-1" id="goalProgress" style="display:none;">
         <div class="goal-progress-header">
@@ -1195,7 +1207,7 @@ import { supabaseConfig } from '../../lib/supabase';
       </div>
 
       <!-- Weight tracking -->
-      <div class="card animate-in animate-delay-2">
+      <div class="card animate-in animate-delay-2" id="weightCard">
         <div class="card-header">
           <h3>&#128201; Mon suivi poids</h3>
           <span class="card-action" id="weightDelta"></span>
@@ -1222,7 +1234,7 @@ import { supabaseConfig } from '../../lib/supabase';
       </div>
 
       <!-- Side effects journal -->
-      <div class="card animate-in animate-delay-2">
+      <div class="card animate-in animate-delay-2" id="sideEffectsCard">
         <div class="card-header">
           <h3>&#9888;&#65039; Effets secondaires du jour</h3>
           <span class="card-action" id="seHistory" onclick="viewSeHistory()">Historique</span>
@@ -1261,7 +1273,7 @@ import { supabaseConfig } from '../../lib/supabase';
       </div>
 
       <!-- Programme -->
-      <div class="card animate-in animate-delay-3">
+      <div class="card animate-in animate-delay-3" id="programmeCard">
         <div class="card-header">
           <h3>&#127919; Mon programme du jour</h3>
         </div>
@@ -1609,6 +1621,55 @@ import { supabaseConfig } from '../../lib/supabase';
       profile = null;
       showScreen('Auth');
       showToast('D\u00e9connect\u00e9', 'info');
+    }
+
+    var STAGE_CFG = {
+      exploring: { label:'Je me renseigne', next:'Vérifie si tu es éligible au remboursement 65%', btn:'Faire le test', act:['coach','Suis-je éligible au remboursement à 65% ?'], tools:[['Comparer les traitements','link','/guides/quel-traitement-glp1-choisir/'],['Voir les prix','link','/collections/glp1-cout/'],['Effets secondaires','link','/collections/effets-secondaires-glp1/']] },
+      starting: { label:'Je vais commencer', next:'Trouve un médecin et prépare ton rendez-vous', btn:'Trouver un médecin', act:['link','/collections/medecins-glp1-france/'], tools:[['Checklist du RDV','coach','Donne-moi la checklist pour préparer mon rendez-vous médecin GLP-1'],['Remboursement 65%','link','/collections/glp1-cout/remboursement-glp1-2026/'],['Annuaire médecins','link','/collections/medecins-glp1-france/']] },
+      ongoing: { label:'Déjà en traitement', next:'Note ton poids de la semaine', btn:'Ajouter une mesure', act:['scroll','weightCard'], tools:[['Suivi du poids','scroll','weightCard'],['Effets secondaires','scroll','sideEffectsCard'],['Programme du jour','scroll','programmeCard']] },
+      paused: { label:"J'ai arrêté", next:'Garde tes résultats sur la durée', btn:'Conseils maintien', act:['coach','Comment garder mes résultats après avoir arrêté le GLP-1 ?'], tools:[['Suivi du poids','scroll','weightCard'],['Reprendre le traitement','coach','Je veux reprendre mon traitement GLP-1, comment faire ?'],['Programme','scroll','programmeCard']] }
+    };
+    function stageDoAction(type, value){
+      if(type==='scroll'){ var el=document.getElementById(value); if(el) el.scrollIntoView({behavior:'smooth',block:'center'}); }
+      else if(type==='coach'){
+        var p=document.getElementById('coach-panel'), t=document.getElementById('coach-toggle');
+        if(p && t && p.classList.contains('coach-hidden')) t.click();
+        var inp=document.getElementById('coach-input');
+        if(inp && value){ inp.value=value; inp.focus(); }
+      }
+      else if(type==='link'){ window.location.href=value; }
+    }
+    function applyStageVisibility(status){
+      var treat = (status==='ongoing'||status==='paused');
+      ['weightCard','sideEffectsCard','programmeCard'].forEach(function(id){
+        var el=document.getElementById(id); if(el) el.style.display = treat ? '' : 'none';
+      });
+    }
+    function renderStageHero(status){
+      if(!STAGE_CFG[status]) status='exploring';
+      var d=STAGE_CFG[status];
+      var chips=document.getElementById('stageChips');
+      if(chips){
+        chips.innerHTML=Object.keys(STAGE_CFG).map(function(k){
+          var on=(k===status);
+          return '<button type="button" data-stage="'+k+'" style="font-size:.78rem;padding:.4rem .85rem;border-radius:999px;cursor:pointer;border:1px solid '+(on?'#16a34a':'#e2e8f0')+';background:'+(on?'#16a34a':'#fff')+';color:'+(on?'#fff':'#475569')+';font-weight:600;">'+STAGE_CFG[k].label+'</button>';
+        }).join('');
+        Array.prototype.forEach.call(chips.querySelectorAll('button'), function(b){ b.addEventListener('click', function(){ setStage(b.dataset.stage); }); });
+      }
+      document.getElementById('stageNextTitle').textContent=d.next;
+      var btn=document.getElementById('stageNextBtn');
+      btn.textContent=d.btn;
+      btn.onclick=function(e){ e.preventDefault(); stageDoAction(d.act[0], d.act[1]); };
+      var tools=document.getElementById('stageTools');
+      tools.innerHTML=d.tools.map(function(t,i){
+        return '<button type="button" data-i="'+i+'" style="text-align:left;background:#f8faf9;border:1px solid #e2e8f0;border-radius:12px;padding:.75rem .85rem;color:#1a3c34;font-weight:600;font-size:.82rem;cursor:pointer;">'+t[0]+' →</button>';
+      }).join('');
+      Array.prototype.forEach.call(tools.querySelectorAll('button'), function(b){ b.addEventListener('click', function(){ var tt=d.tools[+b.dataset.i]; stageDoAction(tt[1], tt[2]); }); });
+      applyStageVisibility(status);
+    }
+    async function setStage(status){
+      renderStageHero(status);
+      try { var s=initSb(); if(currentUser) await s.from('user_profiles').update({ status:status }).eq('user_id', currentUser.id); } catch(e){}
     }
 
     async function onUserReady(prenomHint) {
@@ -1970,6 +2031,7 @@ import { supabaseConfig } from '../../lib/supabase';
       var name = profile.prenom || currentUser.email?.split('@')[0] || '';
       document.getElementById('greetingText').textContent = greet + (name ? ', ' + name : '') + ' !';
       document.getElementById('dashUserName').textContent = name || currentUser.email;
+      renderStageHero(profile.status || 'exploring');
 
       // Trial banner
       if (!profile.is_subscribed) {
