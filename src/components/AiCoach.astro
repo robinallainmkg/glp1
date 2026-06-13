@@ -1047,7 +1047,7 @@ import { supabaseConfig } from '../lib/supabase.js';
       }
 
       // Display response with typewriter effect
-      typewriterMessage(data.response || "D\u00e9sol\u00e9, je n'ai pas pu r\u00e9pondre.", data.sources || [], data.suggestions || [], data.offer_capture ? (data.capture_prompt || '') : null);
+      typewriterMessage(data.response || "D\u00e9sol\u00e9, je n'ai pas pu r\u00e9pondre.", data.sources || [], data.suggestions || [], data.offer_capture ? (data.capture_prompt || '') : null, data.options || []);
 
       // Show signup CTA after 2nd user message
       if (messageCount >= 2 && !ctaShown) {
@@ -1094,7 +1094,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     scrollToBottom();
   }
 
-  function typewriterMessage(text, sources, suggestions, capturePrompt) {
+  function typewriterMessage(text, sources, suggestions, capturePrompt, options) {
     var div = document.createElement('div');
     div.className = 'coach-msg coach-msg-assistant';
     div.style.cssText = 'display:flex;gap:8px;max-width:90%;align-self:flex-start;';
@@ -1126,7 +1126,8 @@ import { supabaseConfig } from '../lib/supabase.js';
           addSources(content, sources);
         }
         addFeedback(content, text);
-        if (suggestions && suggestions.length) addSuggestions(content, suggestions);
+        if (options && options.length) addOptions(content, options);
+        else if (suggestions && suggestions.length) addSuggestions(content, suggestions);
         if (capturePrompt) addCaptureForm(content, capturePrompt);
         scrollToBottom();
         return;
@@ -1252,6 +1253,39 @@ import { supabaseConfig } from '../lib/supabase.js';
       logSuggestionEvent('consultation_cta', 0, 'shown');
     }
     logSuggestionEvent('email_capture', 0, 'shown');
+  }
+
+  function addOptions(parentDiv, options) {
+    var wrap = document.createElement('div');
+    wrap.style.cssText = 'display:flex;flex-direction:column;gap:8px;margin-top:8px;';
+    var chips = document.createElement('div');
+    chips.style.cssText = 'display:flex;flex-wrap:wrap;gap:6px;';
+    var selected = {};
+    var validate = document.createElement('button');
+    options.slice(0, 6).forEach(function(o) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = o;
+      btn.style.cssText = 'padding:7px 13px;border-radius:999px;border:1px solid #d1d5db;background:#fff;color:#374151;font-size:0.82rem;cursor:pointer;font-weight:600;';
+      btn.addEventListener('click', function() {
+        if (selected[o]) { delete selected[o]; btn.style.background='#fff'; btn.style.borderColor='#d1d5db'; btn.style.color='#374151'; }
+        else { selected[o]=true; btn.style.background='#16a34a'; btn.style.borderColor='#16a34a'; btn.style.color='#fff'; }
+        validate.style.display = Object.keys(selected).length ? 'inline-block' : 'none';
+      });
+      chips.appendChild(btn);
+    });
+    validate.type = 'button';
+    validate.textContent = 'Valider ✓';
+    validate.style.cssText = 'display:none;align-self:flex-start;background:#16a34a;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-weight:700;font-size:0.82rem;cursor:pointer;';
+    validate.addEventListener('click', function() {
+      var keys = Object.keys(selected);
+      if (!keys.length || isSending) return;
+      wrap.remove();
+      handleUserMessage(keys.join(', '));
+    });
+    wrap.appendChild(chips);
+    wrap.appendChild(validate);
+    parentDiv.appendChild(wrap);
   }
 
   function addSuggestions(parentDiv, suggestions) {

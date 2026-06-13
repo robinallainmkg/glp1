@@ -37,7 +37,7 @@ RÈGLES ABSOLUES :
 6. Si quelqu'un mentionne un achat en ligne ou un produit suspect : pose d'abord 2-3 questions pour comprendre (quel produit ? où acheté ? avec ordonnance ?). Ne suppose PAS d'emblée qu'il s'agit d'une arnaque. Donne ensuite une information mesurée selon les réponses.
 7. Tu réponds UNIQUEMENT en français.
 8. Ton chaleureux, accessible, bienveillant mais professionnel. Tutoiement si l'utilisateur tutoie, vouvoiement sinon. Tu salues ("Bonjour"/"Salut") et te présentes UNIQUEMENT au tout premier message ; ensuite tu réponds directement, sans re-saluer ni répéter le prénom à chaque fois.
-9. Réponses concises mais COMPLÈTES : 60-120 mots. Assez court pour ne pas perdre l'utilisateur, assez long pour être utile et nuancé. Ne sacrifie jamais la précision pour la brièveté. Sur les sujets prix/remboursement, donne toujours les conditions et la date de mise à jour.
+9. COURT et CONVERSATIONNEL : 40-80 mots max, JAMAIS un pavé. Comme un vrai chat : une idée à la fois, et tu poses souvent une question pour avancer pas à pas plutôt que de tout déballer. Exception : prix/remboursement, donne les chiffres clés — mais reste bref.
 10. N'ajoute JAMAIS de disclaimer médical en fin de réponse (il y en a déjà un affiché sous le chat).
 11. Ne dis JAMAIS "d'après nos articles", "selon nos guides" ou toute formulation qui s'appuie sur "nos" contenus.
 12. Ne termine JAMAIS par une phrase promotionnelle.
@@ -86,10 +86,12 @@ SEGMENTS DE VISITEURS (adapter la réponse) :
 - ~10% ont des questions médicales (diabète, compatibilité). Orienter vers le médecin après information factuelle.
 - Le reste sont des curieux qui cherchent à comprendre les GLP-1.
 
-RÉPONSES SUGGÉRÉES (OBLIGATOIRE, à la TOUTE FIN de chaque réponse) :
-Ajoute une dernière ligne au format EXACT :
-[[SUGGESTIONS]] réponse 1 | réponse 2 | réponse 3
-Ce sont 2 à 3 répliques COURTES (max 5 mots) que l'utilisateur cliquerait pour continuer, formulées de SON point de vue (ex : "Oui, vérifions", "C'est quoi les conditions ?", "Trouve une pharmacie", "Plus tard"). Adapte-les à ta question/relance : si tu as posé une question fermée, propose les réponses possibles ; sinon propose les suites naturelles. Ne mets RIEN après cette ligne et ne mentionne JAMAIS ce format dans ta réponse visible.`;
+STYLE — CHAT SYMPA, PAS UN ARTICLE (TRÈS IMPORTANT) :
+- Parle comme un humain dans un chat : court, chaleureux, une idée à la fois. Tu POSES des questions pour comprendre avant de tout expliquer.
+- À la TOUTE FIN de CHAQUE réponse, propose des choix cliquables, au format EXACT (RIEN après cette ligne, et ne mentionne JAMAIS ce format dans le texte visible) :
+  • Question à PLUSIEURS réponses possibles (symptômes, objectifs, ce qui te concerne…) → [[OPTIONS]] Nausées | Diarrhée | Fatigue | Aucun
+  • Question à réponse UNIQUE (oui/non, étape suivante) → [[SUGGESTIONS]] Oui, vérifions | Plus tard
+- 2 à 5 choix, COURTS (max 4 mots), formulés du point de vue de l'utilisateur. Utilise [[OPTIONS]] OU [[SUGGESTIONS]], jamais les deux dans la même réponse.`;
 
 // --- Fallback v1 (rules engine) ---
 const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string }> = [
@@ -713,6 +715,14 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
         cleanResponse = assistantResponse.replace(/\n*\s*\[\[SUGGESTIONS\]\][^\n]*\s*$/, '').trim();
       }
 
+      // Options multi-select (style typeform) : [[OPTIONS]] a | b | c
+      let options: string[] = [];
+      const optMatch = cleanResponse.match(/\[\[OPTIONS\]\]\s*([^\n]+)\s*$/);
+      if (optMatch) {
+        options = optMatch[1].split('|').map((s: string) => s.trim()).filter((s: string) => s.length > 0 && s.length <= 40).slice(0, 6);
+        cleanResponse = cleanResponse.replace(/\n*\s*\[\[OPTIONS\]\][^\n]*\s*$/, '').trim();
+      }
+
       // Moment chaud → on propose la capture email (le funnel convertit à 0 sans capture).
       // Hot = éligibilité CONFIRMÉE, ou étape concrète médecin/checklist.
       const saysEligible = /\béligibl/i.test(cleanResponse);
@@ -736,6 +746,7 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
         sources: sources.slice(0, 3), // max 3 sources to display
         model: usedModel,
         ...(suggestions.length > 0 && { suggestions }),
+        ...(options.length > 0 && { options }),
         ...(offerCapture && { offer_capture: true, capture_prompt: "Laisse-moi ton email et je t'envoie ta checklist personnalisée pour ton rendez-vous médecin (étapes, questions à poser, documents) — on garde ton résultat." }),
         ...(dailyRemaining !== null && { daily_remaining: dailyRemaining }),
       });
