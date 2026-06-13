@@ -2496,6 +2496,11 @@ import { supabaseConfig } from '../../lib/supabase';
           currentUser = session.user;
           await onUserReady();
 
+          // Flux "compte obligatoire" pour la Consultation privée 3€
+          if (new URLSearchParams(window.location.search).get('next') === 'consultation') {
+            window.location.href = '/mon-espace/consultation/'; return;
+          }
+
           // Handle Stripe return params
           var params = new URLSearchParams(window.location.search);
           if (params.get('subscription') === 'success') {
@@ -2519,6 +2524,9 @@ import { supabaseConfig } from '../../lib/supabase';
         s.auth.onAuthStateChange(function(event, session) {
           if (event === 'SIGNED_IN' && session && session.user) {
             currentUser = session.user;
+            if (new URLSearchParams(window.location.search).get('next') === 'consultation') {
+              window.location.href = '/mon-espace/consultation/'; return;
+            }
             onUserReady(session.user.user_metadata?.prenom);
           }
         });

@@ -1,0 +1,125 @@
+---
+import { supabaseConfig } from '../../../lib/supabase';
+import AiCoach from '../../../components/AiCoach.astro';
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultation privée — Coach GLP-1</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style is:inline>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8faf9;color:#1e293b;min-height:100vh}
+    .wrap{max-width:560px;margin:0 auto;padding:40px 20px}
+    .card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+    .hd{background:linear-gradient(135deg,#059669,#10b981);border-radius:16px 16px 0 0;padding:24px;color:#fff;margin:-28px -28px 22px}
+    h1{font-size:1.35rem;margin-bottom:6px;line-height:1.25}
+    .muted{color:#6b7280;font-size:.92rem;line-height:1.6}
+    .pill{display:inline-block;background:rgba(255,255,255,.22);color:#fff;border-radius:999px;padding:4px 12px;font-size:.72rem;font-weight:700;margin-bottom:12px}
+    ul{margin:16px 0;padding-left:0;list-style:none}
+    li{padding:7px 0 7px 26px;position:relative;font-size:.92rem;line-height:1.5}
+    li:before{content:'✓';position:absolute;left:0;color:#059669;font-weight:800}
+    .btn{display:block;width:100%;background:#059669;color:#fff;border:none;border-radius:10px;padding:15px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:18px;text-align:center}
+    .btn:hover{background:#047857}
+    .btn:disabled{opacity:.6;cursor:default}
+    .price{font-size:1.7rem;font-weight:800;color:#065f46;text-align:center;margin-top:8px}
+    a.back{display:inline-block;margin-top:18px;color:#6b7280;font-size:.85rem;text-decoration:none}
+    .center{text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" id="root"><p class="center muted">Chargement…</p></div>
+    <p class="center"><a class="back" href="/mon-espace/">← Mon espace</a></p>
+  </div>
+
+  <AiCoach />
+
+  <script define:vars={{ supabaseUrl: supabaseConfig.url, SB_KEY: supabaseConfig.anonKey }}>
+  (function(){
+    var root = document.getElementById('root');
+
+    function authToken(){
+      var keys = Object.keys(localStorage);
+      for (var i=0;i<keys.length;i++){
+        if (keys[i].indexOf('sb-')===0 && keys[i].indexOf('-auth-token')>-1){
+          try { var t=JSON.parse(localStorage.getItem(keys[i])); if (t && t.access_token) return t.access_token; } catch(e){}
+        }
+      }
+      return null;
+    }
+    function openCoach(){
+      var t=document.getElementById('coach-toggle'), p=document.getElementById('coach-panel');
+      if (t && p && p.classList.contains('coach-hidden')) t.click();
+    }
+    function hoursLeft(exp){ return Math.max(0, Math.round((new Date(exp).getTime()-Date.now())/3600000)); }
+
+    function renderActive(c){
+      root.innerHTML =
+        '<div class="hd"><span class="pill">● Consultation active</span><h1>Ta consultation privée</h1>'+
+        '<p style="opacity:.92;font-size:.9rem">Accès illimité — il te reste <strong>'+hoursLeft(c.expires_at)+'h</strong>.</p></div>'+
+        '<p class="muted">Le Coach va faire ton <strong>bilan personnalisé</strong> (éligibilité, traitement, prix, parcours) puis répondre à toutes tes questions. Décris-lui ta situation pour démarrer.</p>'+
+        '<button class="btn" id="go">Démarrer / continuer ma consultation</button>';
+      document.getElementById('go').addEventListener('click', openCoach);
+      setTimeout(openCoach, 700);
+    }
+    function renderBuy(){
+      root.innerHTML =
+        '<div class="hd"><span class="pill">Consultation privée</span><h1>Ton bilan GLP-1, comme chez le médecin</h1></div>'+
+        '<p class="muted">En quelques questions, le Coach établit ton bilan personnalisé et reste disponible 48h :</p>'+
+        '<ul><li>Verdict d\'éligibilité au remboursement 65%</li><li>Traitement &amp; dosage adaptés à ton profil</li><li>Prix réel et reste à charge</li><li>Parcours concret + checklist pour ton rendez-vous médecin</li><li>48h de questions illimitées</li></ul>'+
+        '<p class="price">3€ <span style="font-size:.8rem;font-weight:500;color:#6b7280">· paiement unique</span></p>'+
+        '<button class="btn" id="buy">Démarrer ma consultation</button>'+
+        '<p class="center muted" style="font-size:.75rem;margin-top:10px">Paiement sécurisé Stripe · sans engagement</p>';
+      document.getElementById('buy').addEventListener('click', buy);
+    }
+    function renderActivating(){
+      root.innerHTML = '<p class="center muted">✅ Paiement reçu — activation de ta consultation…</p>';
+    }
+
+    async function buy(){
+      var token = authToken();
+      if (!token){ window.location.href='/mon-espace/?next=consultation'; return; }
+      var b=document.getElementById('buy'); b.textContent='…'; b.disabled=true;
+      try{
+        var r=await fetch(supabaseUrl+'/functions/v1/stripe-payment',{method:'POST',headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+token},body:'{}'});
+        var d=await r.json();
+        if (d && d.url){ window.location.href=d.url; return; }
+      }catch(e){}
+      b.textContent='Réessayer'; b.disabled=false;
+    }
+    async function fetchActive(token){
+      try{
+        var now=new Date().toISOString();
+        var r=await fetch(supabaseUrl+'/rest/v1/consultations?select=id,expires_at,status&status=eq.active&expires_at=gt.'+encodeURIComponent(now)+'&order=expires_at.desc&limit=1',{headers:{'apikey':SB_KEY,'Authorization':'Bearer '+token}});
+        var d=await r.json();
+        return (Array.isArray(d)&&d.length)?d[0]:null;
+      }catch(e){ return null; }
+    }
+
+    async function init(){
+      var token = authToken();
+      if (!token){ window.location.href='/mon-espace/?next=consultation'; return; }
+      var params = new URLSearchParams(location.search);
+      var c = await fetchActive(token);
+      if (c){ renderActive(c); return; }
+      if (params.get('status')==='success'){
+        renderActivating();
+        var tries=0;
+        var iv=setInterval(async function(){
+          tries++;
+          var c2=await fetchActive(token);
+          if (c2){ clearInterval(iv); renderActive(c2); }
+          else if (tries>=8){ clearInterval(iv); root.innerHTML='<p class="center muted">Ton paiement est bien reçu. Si ta consultation n\'apparaît pas, patiente quelques instants.</p><button class="btn" onclick="location.reload()">Rafraîchir</button>'; }
+        }, 2500);
+        return;
+      }
+      renderBuy();
+    }
+    init();
+  })();
+  </script>
+</body>
+</html>

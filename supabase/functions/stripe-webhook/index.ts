@@ -91,9 +91,15 @@ serve(async (req: Request) => {
 
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session, eventId: string) {
   const customerId = session.customer as string;
-  const subscriptionId = session.subscription as string;
   const userId = session.metadata?.supabase_user_id;
 
+  // One-shot "Consultation privée" (paiement unique) — pas un abonnement
+  if (session.mode === "payment" && session.metadata?.product === "consultation") {
+    await handleConsultationPurchase(session, eventId);
+    return;
+  }
+
+  const subscriptionId = session.subscription as string;
   if (!userId) {
     // Fallback: find user by stripe_customer_id
     const { data: profile } = await supabase
@@ -109,6 +115,52 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session, eventId
   } else {
     await updateSubscription(userId, subscriptionId, customerId, eventId);
   }
+}
+
+const CONSULTATION_DURATION_HOURS = 48;
+
+async function handleConsultationPurchase(session: Stripe.Checkout.Session, eventId: string) {
+  const customerId = session.customer as string;
+  let userId = session.metadata?.supabase_user_id;
+
+  if (!userId) {
+    const { data: profile } = await supabase
+      .from("user_profiles")
+      .select("user_id")
+      .eq("stripe_customer_id", customerId)
+      .single();
+    userId = profile?.user_id;
+  }
+  if (!userId) {
+    console.error("No user found for consultation purchase, customer:", customerId);
+    return;
+  }
+
+  const now = Date.now();
+  const expiresAt = new Date(now + CONSULTATION_DURATION_HOURS * 3600 * 1000).toISOString();
+
+  // Idempotence via l'index unique sur stripe_session_id
+  const { error } = await supabase.from("consultations").upsert({
+    user_id: userId,
+    stripe_session_id: session.id,
+    stripe_payment_intent_id: (session.payment_intent as string) || null,
+    status: "active",
+    amount_total: session.amount_total ?? 300,
+    started_at: new Date(now).toISOString(),
+    expires_at: expiresAt,
+  }, { onConflict: "stripe_session_id" });
+
+  if (error) {
+    console.error("Consultation insert error:", error);
+    return;
+  }
+
+  await logEvent(userId, eventId, "consultation.purchased", {
+    sessionId: session.id,
+    expiresAt,
+    amount: session.amount_total,
+  });
+  console.log(`Consultation purchased by user ${userId}, active until ${expiresAt}`);
 }
 
 async function updateSubscription(userId: string, subscriptionId: string, customerId: string, eventId: string) {

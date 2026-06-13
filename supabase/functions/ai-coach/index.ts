@@ -370,6 +370,7 @@ serve(async (req) => {
     // --- Daily message limit (anonymous = 5/day by IP, free registered = 3/day, premium = unlimited) ---
     let dailyRemaining: number | null = null;
     let isPremiumUser = false;
+    let hasConsultation = false;
     let premiumProfile: any = null;
 
     if (!user_id && clientIp !== "unknown") {
@@ -421,8 +422,19 @@ serve(async (req) => {
       const isInTrial = userProfile?.trial_end && new Date(userProfile.trial_end) > new Date();
       if (isInTrial) isPremiumUser = true;
 
-      // Fetch full profile for premium personalization
-      if (isPremiumUser) {
+      // Consultation privée active (one-shot 3€) → accès illimité + mode consultation
+      const { data: activeConsult } = await supabase
+        .from("consultations")
+        .select("id")
+        .eq("user_id", user_id)
+        .eq("status", "active")
+        .gt("expires_at", new Date().toISOString())
+        .limit(1)
+        .maybeSingle();
+      hasConsultation = !!activeConsult;
+
+      // Fetch full profile for premium / consultation personalization
+      if (isPremiumUser || hasConsultation) {
         const { data: fullProfile } = await supabase
           .from("user_profiles")
           .select("prenom, treatment, current_dose, weight_current, weight_goal, sport_level, diet_type, height_cm, age, gender")
@@ -431,7 +443,7 @@ serve(async (req) => {
         premiumProfile = fullProfile;
       }
 
-      if (!isPremium && !isInTrial) {
+      if (!isPremium && !isInTrial && !hasConsultation) {
         // Free tier: enforce 3 messages/day
         const today = new Date().toISOString().split("T")[0];
         const { data: dailyCount } = await supabase
@@ -626,6 +638,17 @@ serve(async (req) => {
 Utilise le prénom et adapte tes conseils à ce profil.`;
       }
 
+      // Mode CONSULTATION (achat one-shot 3€) — le Coach joue le rôle d'un médecin en RDV
+      if (hasConsultation) {
+        systemPrompt += `\n\n=== MODE CONSULTATION PRIVÉE (l'utilisateur a PAYÉ une consultation) ===
+Tu mènes une vraie consultation, comme un médecin en rendez-vous. Déroulé :
+1. ACCUEIL bref : explique que tu vas faire un point complet et personnalisé sur sa situation.
+2. INTAKE — pose les questions UNE PAR UNE (n'enchaîne jamais tout d'un coup) : est-il déjà sous traitement ? poids et taille (→ IMC) ? comorbidités (diabète T2, hypertension, apnée du sommeil…) ? objectifs ? une prise en charge nutritionnelle a-t-elle déjà été tentée ?
+3. BILAN — quand tu as assez d'infos, donne un bilan personnalisé STRUCTURÉ : verdict d'éligibilité au remboursement 65% (clair, avec le pourquoi), traitement + dosage de départ adaptés, prix et reste à charge estimés, parcours concret (primo-prescription en CSO/CHU), checklist pour le rendez-vous médecin.
+4. Q&A — réponds ensuite à TOUTES ses questions, en profondeur et de façon personnalisée.
+Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la décision finale revient au médecin. Pas de limite de longueur : sois complet. NE propose NI capture email NI abonnement pendant la consultation (il a déjà payé) ; tu pourras seulement, à la toute fin, suggérer de continuer le suivi avec le Coach Premium.`;
+      }
+
       const messages = [
         { role: "system", content: systemPrompt },
         ...historyMessages,
@@ -695,7 +718,7 @@ Utilise le prénom et adapte tes conseils à ce profil.`;
       const saysEligible = /\béligibl/i.test(cleanResponse);
       const saysNotEligible = /\b(pas|plus)\b[^.]{0,25}éligibl|éligibl[^.]{0,25}\bsi\b/i.test(cleanResponse);
       const doctorStep = /annuaire-sante\.ameli|prendre rendez-vous|checklist personnalisée/i.test(cleanResponse);
-      const offerCapture = (saysEligible && !saysNotEligible) || doctorStep;
+      const offerCapture = !hasConsultation && ((saysEligible && !saysNotEligible) || doctorStep);
 
       // --- 6. Save messages ---
       const detectedIntent = scamSignals.isScamRelated ? `scam:${scamSignals.severity}` : null;
