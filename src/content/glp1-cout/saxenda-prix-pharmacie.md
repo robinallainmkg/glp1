@@ -91,7 +91,7 @@ Certaines mutuelles complémentaires proposent une prise en charge partielle :
 | Critère                 | Saxenda         | Wegovy       |
 | ----------------------- | --------------- | ------------ |
 | **Prix mensuel**        | 240-300 €       | 169-360 €    |
-| **Remboursement SS**    | Non             | Non          |
+| **Remboursement SS**    | Non             | 65% obésité (dès le 15/06/2026, sous conditions) |
 | **Injections/semaine**  | 7 (quotidien)   | 1            |
 | **Perte de poids**      | -8 à 10%        | -15%         |
 | **Durée traitement**    | 6-12 mois       | 12-24 mois   |
@@ -102,11 +102,11 @@ Certaines mutuelles complémentaires proposent une prise en charge partielle :
 
 * 6 mois × 240-300 € = **1 440-1 800 €**
 
-**Wegovy (non remboursé) :**
+**Wegovy (prix avant remboursement) :**
 
 * 6 mois × 169-360 € = **1 014-2 160 €**
 
-*Ni Saxenda ni Wegovy ne sont remboursés par la Sécurité Sociale.*
+*Saxenda n'est pas remboursé par la Sécurité Sociale. Wegovy est remboursé à 65 % pour l'obésité depuis le 15 juin 2026, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel).*
 
 ## Facteurs Influençant le Prix Saxenda
 

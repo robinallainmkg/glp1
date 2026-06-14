@@ -247,7 +247,7 @@ La FDA a approuvé le sémaglutide oral 25 mg en décembre 2025, et le CHMP de l
 
 ### Question du remboursement
 
-Le remboursement sera un facteur clé. Wegovy injectable bénéficie déjà d'un remboursement partiel pour l'indication obésité en France. La version orale, si elle est considérée comme une simple extension de gamme avec le même principe actif, pourrait bénéficier d'un parcours facilité. Toutefois, le prix de la formulation orale haute dose sera probablement différent de celui de l'injection, et les négociations avec le CEPS détermineront le reste à charge pour les patients.
+Le remboursement sera un facteur clé. Wegovy injectable est remboursé à 65% pour l'indication obésité en France depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée). La version orale, si elle est considérée comme une simple extension de gamme avec le même principe actif, pourrait bénéficier d'un parcours facilité. Toutefois, le prix de la formulation orale haute dose sera probablement différent de celui de l'injection, et les négociations avec le CEPS détermineront le reste à charge pour les patients.
 
 ## Ce que les patients peuvent faire aujourd'hui
 

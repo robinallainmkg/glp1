@@ -89,9 +89,9 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 |------------|--------------|---------------|
 | Trulicity | ~81 € | 65% (DT2 uniquement) |
 | [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~80,18 € | 65% (DT2 bithérapie) |
-| Wegovy | 169-360 € | Non remboursé |
+| Wegovy | 169-360 € | Remboursé 65% (obésité, depuis le 15/06/2026, sous conditions) |
 | Saxenda | 240-300 € | Non remboursé |
-| Mounjaro | 230-440 € | Non remboursé |
+| Mounjaro | 230-440 € | Remboursé 65% (obésité, depuis le 15/06/2026, sous conditions) |
 
 ## 💊 Remboursement Sécurité Sociale
 
@@ -207,8 +207,8 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 |---------|---------|--------|---------|
 | Prix mensuel | ~81 € | ~77,60 € | 169-360 € |
 | Perte poids moyenne | -10% | -15% | -20% |
-| Remboursement | 65% (DT2) | 65% (DT2) | Non remboursé |
-| Rapport qualité/prix | Bon | Bon | Coûteux |
+| Remboursement | 65% (DT2) | 65% (DT2) | 65% (obésité, depuis le 15/06/2026, sous conditions) |
+| Rapport qualité/prix | Bon | Bon | Coûteux hors remboursement |
 
 ## 📝 Conclusion
 

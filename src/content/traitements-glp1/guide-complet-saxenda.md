@@ -145,7 +145,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 
 ### Autres GLP-1 pour l'obésité
 - **[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)** : Semaglutide à 2,4 mg/semaine (injection hebdomadaire)
-- [**Mounjaro (tirzépatide)**](/collections/traitements-glp1/guide-complet-mounjaro/) : injection hebdomadaire, double action GLP-1 + GIP, non remboursé à ce jour — avis favorable HAS décembre 2025, [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) envisagé au second semestre 2026 pour IMC ≥ 35 après échec nutritionnel, sous conditions de prescription spécialisée)
+- [**Mounjaro (tirzépatide)**](/collections/traitements-glp1/guide-complet-mounjaro/) : injection hebdomadaire, double action GLP-1 + GIP, [remboursé à 65%](/collections/glp1-cout/remboursement-glp1-2026/) pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée)
 
 ### Traitements alternatifs
 - **Orlistat (Xenical)** : Inhibiteur des lipases

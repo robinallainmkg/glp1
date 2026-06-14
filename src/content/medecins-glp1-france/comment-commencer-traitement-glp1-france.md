@@ -17,8 +17,8 @@ schema: "Article"
 faqSchema:
   - question: "Faut-il obligatoirement passer par un spécialiste pour obtenir un GLP-1 ?"
     answer: "Non. Depuis juin 2025, votre médecin généraliste peut prescrire les GLP-1 pour l'obésité. L'orientation vers un endocrinologue n'est nécessaire que dans les situations complexes."
-  - question: "Combien coûte un traitement GLP-1 non remboursé ?"
-    answer: "Pour Wegovy et Mounjaro (indication obésité), comptez entre 200 et 350 euros par mois en pharmacie. Certaines mutuelles proposent des prises en charge partielles."
+  - question: "Wegovy et Mounjaro sont-ils remboursés pour l'obésité ?"
+    answer: "Oui, depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % dans l'indication obésité, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en centre spécialisé de l'obésité ou CHU). Hors de ces conditions, comptez entre 200 et 350 euros par mois en pharmacie."
   - question: "Peut-on se faire prescrire un GLP-1 en téléconsultation ?"
     answer: "Oui, la télémédecine est une voie d'accès reconnue pour la prescription des GLP-1 en France, à condition que le médecin dispose de vos examens biologiques récents."
   - question: "Les GLP-1 sont-ils dangereux ?"
@@ -195,11 +195,11 @@ La situation du remboursement des GLP-1 en France en 2026 est la suivante :
 | **Ozempic** | Remboursé à 65 % en bithérapie metformine (100 % en ALD) — **uniquement pour le diabète de type 2** |
 | **Trulicity** | Remboursé à 65 % — uniquement DT2 |
 | **Rybelsus** | **Non remboursé** (avis HAS défavorable) |
-| **Wegovy** | **Non remboursé** (indication obésité) |
-| **Mounjaro** | **Non remboursé** pour l'obésité ; prise en charge possible si DT2 |
+| **Wegovy** | **Remboursé à 65 %** pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, échec nutritionnel, primo-prescription en CSO/CHU) |
+| **Mounjaro** | **Remboursé à 65 %** pour l'obésité depuis le 15 juin 2026 (mêmes conditions) ; également remboursé si DT2 |
 | **Saxenda** | **Non remboursé** |
 
-> **Ce que cela signifie concrètement** : si vous êtes diabétique de type 2, votre traitement GLP-1 sera partiellement remboursé par la Sécurité sociale (30 %), et votre mutuelle peut compléter. Si votre indication est l'obésité sans diabète, Wegovy et Mounjaro restent à votre charge intégrale. Comptez entre 200 et 350 euros par mois selon la molécule et le dosage.
+> **Ce que cela signifie concrètement** : si vous êtes diabétique de type 2, votre traitement GLP-1 (Ozempic, Trulicity) est remboursé à 65 % par la Sécurité sociale, et votre mutuelle peut compléter. Pour l'indication obésité, Wegovy et Mounjaro sont désormais remboursés à 65 % depuis le 15 juin 2026, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en centre spécialisé de l'obésité ou CHU). En dehors de ces conditions, le reste à charge peut atteindre 200 à 350 euros par mois selon la molécule et le dosage.
 
 ### En pharmacie
 
@@ -290,9 +290,9 @@ Votre médecin discutera avec vous de la stratégie à long terme : maintien du 
 
 Non. Depuis juin 2025, votre médecin généraliste peut prescrire les GLP-1 pour l'obésité. L'orientation vers un endocrinologue ou un diabétologue n'est nécessaire que dans les situations complexes (obésité morbide, diabète multi-traité, antécédents thyroïdiens).
 
-### Combien coûte un traitement GLP-1 non remboursé ?
+### Wegovy et Mounjaro sont-ils remboursés pour l'obésité ?
 
-Pour Wegovy et Mounjaro (indication obésité), comptez entre 200 et 350 euros par mois en pharmacie. Ce coût peut varier selon le dosage et la pharmacie. Certaines mutuelles commencent à proposer des prises en charge partielles : renseignez-vous auprès de la vôtre.
+Oui. Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % dans l'indication obésité, sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, et primo-prescription en centre spécialisé de l'obésité (CSO) ou CHU. En dehors de ces conditions, le traitement reste à votre charge : comptez entre 200 et 350 euros par mois en pharmacie selon le dosage. Certaines mutuelles proposent des prises en charge partielles.
 
 ### Peut-on se faire prescrire un GLP-1 en téléconsultation ?
 

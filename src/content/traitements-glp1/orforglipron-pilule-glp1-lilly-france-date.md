@@ -162,7 +162,7 @@ L'orforglipron n'arrivera pas en France avant 2027. Si vous avez besoin d'un tra
 
 1. **Consultez votre médecin** pour évaluer votre éligibilité aux traitements actuellement disponibles
 2. **Envisagez Wegovy ou Mounjaro** si votre IMC et vos comorbidités le justifient — leur efficacité est prouvée
-3. **Renseignez-vous sur le [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/)** : Wegovy et Mounjaro pourraient être remboursés dès le 2e semestre 2026
+3. **Renseignez-vous sur le [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/)** : Wegovy et Mounjaro sont remboursés à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel)
 4. **Discutez de Rybelsus** si vous avez un diabète de type 2 et souhaitez une option orale disponible maintenant
 
 ### Suivre l'actualité réglementaire

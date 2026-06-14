@@ -214,7 +214,7 @@ faqSchema:
 
 ### Comparer les prix entre pharmacies en France
 
-En France, le prix de Wegovy n'est pas réglementé (médicament non remboursé) : chaque officine fixe librement son prix. En pratique, les écarts entre pharmacies restent limités (rarement plus de 5 à 10 %) car les grossistes appliquent des tarifs proches. Cependant, quelques pistes permettent de réduire le coût :
+En France, depuis le remboursement du 15 juin 2026, Wegovy dispose d'un prix public (PPTTC) pour les patients éligibles, tandis que les patients hors critères restent au prix libre fixé par chaque officine. En pratique, les écarts entre pharmacies restent limités (rarement plus de 5 à 10 %) car les grossistes appliquent des tarifs proches. Cependant, quelques pistes permettent de réduire le coût :
 
 - **Demandez un devis à plusieurs pharmacies** de votre secteur avant de déposer votre ordonnance
 - **Pharmacies indépendantes vs enseignes** : les pharmacies appartenant à un groupe (Pharmacie Lafayette, CityPharma à Paris) peuvent parfois proposer de légères remises sur les médicaments non remboursés en raison de leur volume d'achat
@@ -235,7 +235,7 @@ Certains patients envisagent de s'approvisionner à l'étranger pour réduire le
 - L'achat en Belgique avec une ordonnance belge est légal, mais nécessite une consultation avec un médecin belge
 
 **Conclusion sur l'achat à l'étranger :**
-Les différences de prix entre la France et les pays voisins sont souvent minimes (5 à 15 %). Le coût et les démarches administratives (consultation médicale étrangère, transport, risques de rupture de stock) dépassent généralement les économies potentielles. La meilleure option reste de vérifier votre contrat mutuelle et d'attendre le remboursement Sécu attendu au second semestre 2026.
+Les différences de prix entre la France et les pays voisins sont souvent minimes (5 à 15 %). Le coût et les démarches administratives (consultation médicale étrangère, transport, risques de rupture de stock) dépassent généralement les économies potentielles. La meilleure option reste de vérifier votre éligibilité au remboursement Sécu (en vigueur depuis le 15 juin 2026, à 65% sous conditions) et la couverture de votre mutuelle.
 
 ## 💡 Conseils pour Réduire les Coûts
 
@@ -463,12 +463,11 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 
 **Alternatives autres molécules :**
 - **Saxenda** (liraglutide) : **240-300 €/mois**, non remboursé
-- **Mounjaro** (tirzépatide) : **230-440 €/mois**, non remboursé, plus efficace
+- **Mounjaro** (tirzépatide) : **230-440 €/mois**, remboursé 65% pour l'obésité (dès le 15/06/2026, sous conditions), plus efficace
 
 **Quand le générique arrivera (2027-2028) :**
 - Prix estimé : **-40 à -50%** par rapport au prix actuel
-- Le coût dépendra de l'éventuel remboursement Sécu (négociations en cours)
-- Si le sémaglutide est remboursé d'ici là, le générique le serait aussi
+- Wegovy étant remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions), un générique remboursé réduirait encore le reste à charge
 
 **Attention aux faux génériques en ligne** : Ce sont des contrefaçons dangereuses et illégales.
 

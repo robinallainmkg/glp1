@@ -104,7 +104,7 @@ Les prix peuvent légèrement varier selon les pharmacies et les régions :
 * **Province** : prix variables selon les pharmacies (à partir de 169 €/mois)
 * Statut actuel du remboursement
 
-**Wegovy n'est actuellement pas remboursé** par l'Assurance Maladie en France. Pour les conditions de [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/), consultez notre guide mis à jour. Cependant, certaines situations particulières peuvent bénéficier d'une prise en charge :
+**Wegovy est remboursé à 65%** pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Pour le détail des conditions de [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/), consultez notre guide mis à jour. En complément, certaines situations particulières peuvent aussi bénéficier d'une prise en charge :
 
 #### Prise en charge hospitalière
 
@@ -119,13 +119,14 @@ Certaines mutuelles commencent à proposer une prise en charge partielle — con
 * **Garantie innovation médicale** : jusqu'à 500 € par an
 * **Contrats spécialisés** : remboursement jusqu'à 50%
 
-### Évolution du remboursement
+### Conditions du remboursement
 
-La HAS a rendu un avis favorable au remboursement de Wegovy. Les négociations de prix entre Novo Nordisk et le CEPS sont en cours, avec un remboursement possible au 2e semestre 2026. Les critères envisagés :
+Wegovy est remboursé à 65% pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026). Les critères d'éligibilité :
 
-* **Efficacité démontrée** : perte de poids > 10%
-* **Suivi médical strict** : consultation mensuelle
-* **Échec des traitements conventionnels**
+* **IMC ≥ 35** avec au moins une comorbidité liée au poids, **ou IMC ≥ 40**
+* **Échec** d'une prise en charge nutritionnelle bien conduite
+* **Primo-prescription** par un professionnel exerçant dans une structure autorisée pour la prise en charge de l'obésité
+* **Suivi médical** en association à un régime hypocalorique et une activité physique adaptée
 
 ## Où acheter Wegovy en France ?
 

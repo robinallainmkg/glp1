@@ -89,7 +89,7 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 |------------|--------------|---------------|
 | Rybelsus | 80-110 € | Non remboursé |
 | [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 € | 30% (DT2 uniquement) |
-| Wegovy | 169-360 € | Non remboursé |
+| Wegovy | 169-360 € | Remboursé 65% (obésité, depuis le 15/06/2026, sous conditions) |
 | Saxenda | 240-300 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale

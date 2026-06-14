@@ -138,7 +138,7 @@ La prescription hors AMM d'Ozempic pour la perte de poids est une pratique medic
       <td>1x/semaine</td>
       <td>-15 a 17%</td>
       <td>169-360 euros</td>
-      <td>Non rembourse (prevu S2 2026)</td>
+      <td>Rembourse 65% (obésité, dès le 15/06/2026, sous conditions)</td>
       <td>IMC 30+ ou 27+ avec comorbidités</td>
     </tr>
     <tr>
@@ -146,7 +146,7 @@ La prescription hors AMM d'Ozempic pour la perte de poids est une pratique medic
       <td>1x/semaine</td>
       <td>-16 a 22.5 %</td>
       <td>230-440 euros</td>
-      <td>Non rembourse (prevu S2 2026)</td>
+      <td>Rembourse 65% (obésité, dès le 15/06/2026, sous conditions)</td>
       <td>IMC 30+ ou 27+ avec comorbidités</td>
     </tr>
     <tr>
@@ -270,14 +270,15 @@ Le cout des injections pour maigrir constitue un facteur important dans la déci
 
 ### Situation actuelle du remboursement
 
-En avril 2026, **aucune injection pour maigrir n'est integralement remboursee** par la Sécurité sociale dans l'indication de l'obésité :
+La prise en charge des injections pour l'obésité a évolué le 15 juin 2026 :
 
 - **Ozempic** : Rembourse a 65% en bithérapie metformine **uniquement pour le diabète de type 2**. La prescription hors AMM pour la perte de poids n'ouvre aucun droit a remboursement.
-- **Wegovy, Mounjaro, Saxenda** : Non rembourses pour le traitement de l'obésité.
+- **Wegovy et Mounjaro** : **rembourses a 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026), sous conditions (voir ci-dessous).
+- **Saxenda** : Non rembourse pour le traitement de l'obésité.
 
-### Remboursement prevu au second semestre 2026
+### Remboursement de Wegovy et Mounjaro depuis le 15 juin 2026
 
-La Haute Autorite de Sante (HAS) a emis un avis favorable au remboursement de **Wegovy et Mounjaro pour le traitement de l'obésité**. Les negociations tarifaires avec le Comite Economique des Produits de Sante (CEPS) sont en cours. Le remboursement est attendu au **second semestre 2026**, ce qui constituera une avancee majeure pour l'accessibilite de ces traitements. Pour suivre l'avancement de ce processus, consultez notre article sur les [conditions de remboursement de Mounjaro](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).
+Apres un avis favorable de la HAS, **Wegovy et Mounjaro sont rembourses a 65% par l'Assurance Maladie pour le traitement de l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai). Les conditions : IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Les 35% restants sont a la charge du patient ou de la mutuelle. Cette avancee majeure ameliore considerablement l'accessibilite de ces traitements pour les patients eligibles. Saxenda reste non rembourse. Pour le detail des conditions, consultez notre article sur les [conditions de remboursement de Mounjaro](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).
 
 ### Les options pour reduire le cout
 

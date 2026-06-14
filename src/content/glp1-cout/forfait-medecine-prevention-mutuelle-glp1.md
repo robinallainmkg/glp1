@@ -49,8 +49,8 @@ Or **la Sécurité Sociale ne rembourse pas** la majorité de ces accompagnement
 
 ## Wegovy / Mounjaro / Ozempic en 2026 : rappel du contexte
 
-- **Wegovy (sémaglutide)** : non remboursé Sécu pour l'obésité en 2026, négociations CEPS en cours, inscription attendue au second semestre 2026. Prix officine : 169–360 €/mois.
-- **Mounjaro (tirzépatide)** : avis HAS favorable nov. 2025 dans l'obésité, négociations CEPS en cours, **non remboursé** en 2026. Prix officine : 230–440 €/mois.
+- **Wegovy (sémaglutide)** : remboursé Sécu **65 %** pour l'obésité à partir du 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée). Prix officine : 169–360 €/mois.
+- **Mounjaro (tirzépatide)** : remboursé Sécu **65 %** pour l'obésité à partir du 15 juin 2026 (sous conditions), et déjà remboursé dans le diabète de type 2. Prix officine : 230–440 €/mois.
 - **Ozempic (sémaglutide)** : remboursé Sécu **65 %** en bithérapie metformine, **30 %** en trithérapie insuline, **uniquement DT2**.
 
 Pour le détail réglementaire, voir notre [page remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
@@ -176,11 +176,11 @@ Avec une mutuelle proposant 400 €/an médicaments non remboursés + 500 €/an
 
 L'écart se creuse encore avec les formules premium ou contrats collectifs.
 
-## Et après l'inscription Sécu de Wegovy ?
+## Et depuis l'inscription Sécu de Wegovy ?
 
-Dès l'inscription Wegovy au remboursement (S2 2026 attendue) :
+Depuis l'inscription de Wegovy au remboursement (effective le 15 juin 2026) :
 
-- Le forfait **médicaments non remboursés** cessera de s'appliquer à Wegovy mais reste utile pour Mounjaro et futurs médicaments hors liste.
+- Le forfait **médicaments non remboursés** ne s'applique plus à Wegovy pour les patients éligibles au remboursement, mais reste utile pour les patients non éligibles et pour les médicaments hors liste.
 - Le forfait **prévention** reste pleinement utile pour l'accompagnement diététique, psy, APA — postes qui ne sont **pas couverts** par le ticket modérateur Sécu.
 
 Conclusion : le forfait prévention est un investissement durable pour tout patient obèse, indépendamment de l'évolution du remboursement médicamenteux.
@@ -211,8 +211,8 @@ Non, vérifiez les conditions (diplôme, numéro ADELI, statut professionnel) su
 **6. Le dispositif Mon Soutien Psy de l'État se cumule-t-il avec le forfait psy mutuelle ?**
 Oui, les 12 séances Sécu et le forfait mutuelle sont cumulables, dans la limite du coût réel total.
 
-**7. Le forfait prévention est-il utile en plus du futur remboursement Sécu de Wegovy ?**
-Oui, pleinement. Il continue à financer l'accompagnement (diététicien, psy, APA) que la Sécu ne rembourse pas dans la plupart des cas.
+**7. Le forfait prévention est-il utile en plus du remboursement Sécu de Wegovy ?**
+Oui, pleinement. Même depuis le remboursement de Wegovy (15 juin 2026), il continue à financer l'accompagnement (diététicien, psy, APA) que la Sécu ne rembourse pas dans la plupart des cas.
 
 ---
 

@@ -132,7 +132,7 @@ Votre médecin généraliste tiendra compte de plusieurs facteurs pour vous reco
 | Critère | Wegovy | Mounjaro |
 |---------|--------|---------|
 | Perte de poids attendue | -15 à -17% | -20 à -22% |
-| Prix mensuel (mars 2026) | 169-360€ | 230-440€ |
+| Prix mensuel (juin 2026) | 169-360€ | 230-440€ |
 | Recul clinique | Plus long (depuis 2021) | Plus récent (depuis 2024) |
 | Bénéfice cardiovasculaire | Prouvé (étude SELECT) | En cours d'évaluation |
 | Diabète associé | Moins ciblé | Double action GLP-1+GIP |
@@ -154,7 +154,7 @@ Même si votre généraliste peut prescrire ces traitements, il pourra vous orie
 
 ### Ce que vous devrez payer
 
-En mars 2026, Wegovy et Mounjaro ne sont **pas remboursés par la Sécurité Sociale** pour l'obésité. Le coût est entièrement à votre charge (sauf aide de votre mutuelle) :
+Depuis le 15 juin 2026, Wegovy et Mounjaro sont **remboursés à 65 % par la Sécurité Sociale** pour l'obésité, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée). Hors éligibilité au remboursement, le coût reste à votre charge (sauf aide de votre mutuelle) :
 
 | Traitement | Coût mensuel estimé |
 |------------|---------------------|
@@ -164,13 +164,13 @@ En mars 2026, Wegovy et Mounjaro ne sont **pas remboursés par la Sécurité Soc
 | Mounjaro (dose cible 15 mg) | ~350-440€/mois |
 | Saxenda (dose cible) | ~200-250€/mois |
 
-### Ce qui pourrait changer en 2026
+### Le remboursement obésité depuis le 15 juin 2026
 
-La HAS (Haute Autorité de Santé) a rendu un avis favorable au remboursement de Wegovy en décembre 2024. Les négociations de prix avec le CEPS sont en cours. Un [remboursement Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/) est possible au **2e semestre 2026**, sous conditions :
+La HAS (Haute Autorité de Santé) a rendu un avis favorable au remboursement de Wegovy (décembre 2024) puis de Mounjaro (décembre 2025). À l'issue des négociations de prix avec le CEPS, l'arrêté du 23 mai 2026 (JO du 28 mai) a rendu effectif le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/) — comme celui de Wegovy — à **65 % à partir du 15 juin 2026**, sous conditions :
 
-- IMC ≥ 35 kg/m²
+- IMC ≥ 35 kg/m² avec comorbidité, ou IMC ≥ 40 kg/m²
 - Échec d'une prise en charge nutritionnelle bien conduite
-- Prescription par tout médecin (confirmant l'accès par le généraliste)
+- Primo-prescription réservée aux structures spécialisées (CSO, CHU, SMR nutrition/endocrinologie)
 
 Consultez notre [guide complet du remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) pour suivre l'évolution de ce dossier.
 

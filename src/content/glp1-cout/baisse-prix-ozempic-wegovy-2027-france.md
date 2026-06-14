@@ -22,9 +22,9 @@ faqSchema:
   - question: "Quand les biosimilaires du sémaglutide seront-ils disponibles ?"
     answer: "Les brevets principaux du sémaglutide expirent entre 2031 et 2032. Les premiers biosimilaires pourraient arriver sur le marché européen à partir de 2032-2033, entraînant une baisse structurelle des prix de l'ordre de 20 à 40% par rapport à l'original."
   - question: "Mounjaro est-il moins cher qu'Ozempic en France ?"
-    answer: "Non, Mounjaro est actuellement plus cher qu'Ozempic en France. Ozempic coûte environ 80€ par stylo, tandis que Mounjaro revient entre 230 et 440€ par mois selon le dosage. Cependant, Mounjaro est en cours de négociation pour un remboursement par la Sécurité Sociale."
-  - question: "La baisse des prix va-t-elle faciliter le remboursement de Wegovy en France ?"
-    answer: "Potentiellement oui. Un prix plus bas réduit l'impact budgétaire pour l'Assurance Maladie, ce qui pourrait faciliter les négociations de remboursement. Toutefois, la décision dépend aussi de l'évaluation médico-économique et de la politique de santé publique française."
+    answer: "Non, Mounjaro est actuellement plus cher qu'Ozempic en France. Ozempic coûte environ 80€ par stylo, tandis que Mounjaro revient entre 230 et 440€ par mois selon le dosage. Mounjaro est désormais remboursé à 65% pour l'obésité à partir du 15 juin 2026 (sous conditions)."
+  - question: "La baisse des prix va-t-elle élargir le remboursement de Wegovy en France ?"
+    answer: "Wegovy est déjà remboursé à 65% pour l'obésité depuis le 15 juin 2026, mais sous conditions strictes. Un prix plus bas réduit l'impact budgétaire pour l'Assurance Maladie, ce qui pourrait à terme faciliter un élargissement des critères d'éligibilité. La décision dépend toutefois de l'évaluation médico-économique et de la politique de santé publique française."
 mainKeyword: "baisse prix Ozempic Wegovy 2027"
 secondaryKeywords: ["prix Ozempic baisse", "Wegovy moins cher 2027", "Novo Nordisk baisse prix", "GLP-1 prix France évolution", "remboursement Ozempic 2027"]
 enableAffiliation: true
@@ -109,7 +109,7 @@ Concrètement, cela pourrait se traduire par :
 - **Ozempic** : passage de ~80€ à 60–72€ par stylo
 - **Wegovy** : passage de 200–320€ à 150–280€ par mois
 
-Pour les patients remboursés (Ozempic dans le cadre du diabète de type 2), la baisse du prix facial se traduirait par une réduction du ticket modérateur. Pour les patients non remboursés (Wegovy pour l'obésité), l'économie serait directement perceptible sur leur facture en pharmacie.
+Pour les patients remboursés (Ozempic dans le diabète de type 2, et désormais Wegovy pour l'obésité depuis le 15 juin 2026 sous conditions), la baisse du prix facial se traduirait par une réduction du ticket modérateur. Pour les patients non éligibles au remboursement, l'économie serait directement perceptible sur leur facture en pharmacie.
 
 ### Scénario 2 : L'arrivée des biosimilaires (horizon 2032–2033)
 
@@ -123,7 +123,7 @@ Plusieurs laboratoires (dont Sandoz, Biocon et Teva) ont déjà annoncé des pro
 
 La concurrence entre Novo Nordisk (Ozempic/Wegovy) et Eli Lilly ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) joue déjà un rôle dans l'évolution des prix. Les deux laboratoires se disputent le marché mondial des GLP-1, estimé à plus de 50 milliards de dollars en 2026.
 
-En France, le remboursement attendu de Mounjaro pour le diabète de type 2 et l'obésité (négociations CEPS en cours, horizon 2e semestre 2026) pourrait accélérer la pression sur les prix du sémaglutide. Si Mounjaro arrive avec un prix remboursé compétitif, Novo Nordisk pourrait être contraint de réviser ses tarifs pour maintenir ses positions.
+En France, le remboursement de Mounjaro à 65% pour l'obésité à partir du 15 juin 2026 (sous conditions), en plus de son remboursement déjà acquis dans le diabète de type 2, pourrait accélérer la pression sur les prix du sémaglutide. Si Mounjaro arrive avec un prix remboursé compétitif, Novo Nordisk pourrait être contraint de réviser ses tarifs pour maintenir ses positions.
 
 ---
 
@@ -133,14 +133,14 @@ En France, le remboursement attendu de Mounjaro pour le diabète de type 2 et l'
 
 - La baisse américaine est effective aux États-Unis
 - Le CEPS prend note de la nouvelle politique tarifaire de Novo Nordisk
-- Les négociations de remboursement de Mounjaro se poursuivent en France
+- Mounjaro et Wegovy deviennent remboursés à 65% pour l'obésité en France à partir du 15 juin 2026 (sous conditions)
 - Pas de baisse immédiate des prix français d'Ozempic ou de Wegovy
 
 ### 2027 : une fenêtre de renégociation
 
 - Le CEPS pourrait initier une **clause de révision de prix** sur Ozempic, comme le permettent les accords-cadres avec les laboratoires
 - Si d'autres pays européens (Allemagne, Espagne) obtiennent des baisses, la pression augmentera sur la France
-- Novo Nordisk pourrait proposer volontairement une baisse pour faciliter les discussions sur le remboursement de Wegovy en France
+- Novo Nordisk pourrait proposer volontairement une baisse pour soutenir un éventuel élargissement des conditions de remboursement de Wegovy en France
 
 ### 2028–2030 : la montée en puissance de la concurrence
 
@@ -158,17 +158,17 @@ En France, le remboursement attendu de Mounjaro pour le diabète de type 2 et l'
 
 ## L'impact sur le remboursement de Wegovy en France
 
-L'un des enjeux majeurs de la baisse des prix est son **effet potentiel sur le remboursement de Wegovy en France**. Aujourd'hui, Wegovy n'est pas remboursé pour l'indication obésité, alors qu'Ozempic l'est pour le diabète de type 2.
+Depuis le **15 juin 2026**, Wegovy est remboursé à 65% pour l'obésité (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle), en application de l'arrêté du 23 mai 2026. Ozempic reste de son côté remboursé dans le diabète de type 2.
 
-L'un des freins au remboursement de Wegovy est son **impact budgétaire** : avec des millions de Français potentiellement éligibles (IMC ≥ 30 ou ≥ 27 avec comorbidités), le coût pour l'Assurance Maladie serait considérable aux prix actuels.
+L'**impact budgétaire** reste un enjeu majeur : avec des millions de Français potentiellement éligibles, le coût pour l'Assurance Maladie est considérable aux prix actuels. C'est précisément pour contenir cette dépense que le remboursement est encadré par des critères stricts.
 
 Une baisse significative du prix de Wegovy pourrait :
 
-- **Réduire l'impact budgétaire estimé**, rendant le dossier plus acceptable pour le CEPS
+- **Réduire l'impact budgétaire** de cette prise en charge pour l'Assurance Maladie
 - **Améliorer le ratio coût-efficacité**, un critère de plus en plus important dans les décisions de remboursement françaises
-- **Accélérer les négociations**, en rapprochant les positions du laboratoire et des autorités
+- **Faciliter un éventuel élargissement** des conditions d'éligibilité à l'avenir
 
-Pour suivre l'évolution du dossier de remboursement, consultez notre article dédié sur le [remboursement des GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/).
+Pour le détail des conditions d'éligibilité, consultez notre article dédié sur le [remboursement des GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ---
 
@@ -206,9 +206,9 @@ Pas avant 2032–2033. Les brevets principaux du sémaglutide (molécule active 
 
 La situation est complexe. Actuellement, Mounjaro est plus cher qu'Ozempic en France (230–440€/mois contre ~80€/stylo). Cependant, les négociations de remboursement de Mounjaro pourraient aboutir à un prix remboursé compétitif. La concurrence entre les deux traitements devrait globalement favoriser les patients en tirant les prix vers le bas.
 
-### La baisse des prix va-t-elle accélérer le remboursement de Wegovy ?
+### La baisse des prix va-t-elle élargir le remboursement de Wegovy ?
 
-C'est un facteur favorable mais pas suffisant. Le remboursement de Wegovy en France dépend de multiples critères : avis HAS, négociations CEPS, impact budgétaire, politique de santé publique. Un prix plus bas améliore le ratio coût-efficacité et réduit l'impact budgétaire estimé, mais la décision finale reste politique et médico-économique.
+Wegovy est déjà remboursé à 65% pour l'obésité depuis le 15 juin 2026, mais sous conditions strictes (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel). Un prix plus bas améliore le ratio coût-efficacité et réduit l'impact budgétaire, ce qui pourrait à terme faciliter un élargissement des critères d'éligibilité. La décision reste toutefois politique et médico-économique.
 
 ### Faut-il attendre la baisse des prix pour commencer un traitement GLP-1 ?
 

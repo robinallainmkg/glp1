@@ -48,16 +48,16 @@ affiliateConfig:
 
 La **Haute Autorité de Santé (HAS)** a rendu un avis favorable au remboursement de Wegovy (sémaglutide 2,4 mg) pour le traitement de l'obésité en France. C'est une étape décisive, car un avis défavorable aurait bloqué tout remboursement pendant plusieurs années. La HAS a reconnu que Wegovy apporte une **amélioration du service médical rendu (ASMR)** par rapport aux traitements existants de l'obésité.
 
-### Les négociations CEPS en cours
+### Les négociations CEPS finalisées
 
-Après l'avis HAS, c'est le **Comité économique des produits de santé (CEPS)** qui prend le relais. Son rôle : négocier le prix de vente du médicament avec Novo Nordisk. Ces négociations sont actuellement en cours et portent sur plusieurs points :
+Après l'avis HAS, c'est le **Comité économique des produits de santé (CEPS)** qui a pris le relais pour négocier le prix de vente du médicament avec Novo Nordisk. Ces négociations sont désormais terminées et ont porté sur plusieurs points :
 
 - **Le prix unitaire** du stylo injecteur
 - **Le volume de patients** attendu et son impact budgétaire
 - **Les engagements de Novo Nordisk** en matière d'approvisionnement et de suivi post-commercialisation
 - **La comparaison internationale** des prix pratiqués dans d'autres pays européens
 
-Ces négociations sont confidentielles, mais les sources proches du dossier indiquent qu'elles avancent à un rythme normal, sans blocage majeur.
+Elles ont abouti à l'arrêté du 23 mai 2026 fixant le remboursement à 65% à compter du 15 juin 2026.
 
 ### La capacité de production : le dernier obstacle levé
 
@@ -116,11 +116,11 @@ Ces conditions sont plus restrictives que les conditions d'accès actuel (prescr
 
 En pratique, si vous pesez 95 kg pour 1,70 m (IMC = 32,9), vous ne serez éligible au remboursement que si vous avez une comorbidité documentée. Si votre IMC est de 36, vous serez éligible même sans comorbidité, à condition d'avoir suivi un parcours de soins diététique pendant au moins 6 mois.
 
-## Combien coûte Wegovy aujourd'hui sans remboursement ? {#cout-actuel}
+## Combien coûte Wegovy hors remboursement ? {#cout-actuel}
 
-### Prix en pharmacie en France (mars 2026)
+### Prix en pharmacie en France
 
-En attendant le remboursement, Wegovy est disponible en pharmacie sur ordonnance au [prix suivant](/collections/glp1-cout/prix-wegovy-france/) :
+Pour les patients non éligibles au remboursement (IMC inférieur aux seuils, hors conditions), Wegovy reste disponible en pharmacie sur ordonnance au [prix suivant](/collections/glp1-cout/prix-wegovy-france/) :
 
 - **Wegovy 0,25 mg** (dose d'initiation) : environ **169 à 200 euros par mois** (prix libre, variable selon les pharmacies)
 - **Wegovy 0,5 mg** : environ 200 à 250 euros par mois
@@ -136,16 +136,16 @@ Certaines [mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/) com
 
 ### Le coût total sur un an
 
-Un traitement complet par Wegovy, en incluant la phase de titration (4 mois) et la dose de maintien, coûte environ **3 200 à 3 600 euros par an** sans aucun remboursement. C'est un investissement significatif, qui explique l'attente forte autour du remboursement.
+Un traitement complet par Wegovy, en incluant la phase de titration (4 mois) et la dose de maintien, coûte environ **3 200 à 3 600 euros par an** hors remboursement. C'est un investissement significatif pour les patients non éligibles, alors que les patients remboursés ne supportent plus que le ticket modérateur de 35% (et 0% en ALD).
 
 > **À lire aussi** : [prix Wegovy en pharmacie](/collections/glp1-cout/wegovy-prix/)
 
 
-## Les alternatives remboursées en attendant {#alternatives}
+## Les alternatives remboursées pour les patients non éligibles {#alternatives}
 
 ### Pour les patients diabétiques
 
-Si vous êtes diabétique de type 2, les traitements GLP-1 suivants sont déjà remboursés et entraînent une perte de poids :
+Si vous êtes diabétique de type 2, les traitements GLP-1 suivants sont remboursés dans l'indication diabète et entraînent une perte de poids :
 
 - **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** (sémaglutide 0,5/1/2 mg) : remboursé à 65 % en bithérapie metformine (100 % en ALD diabète). C'est le même principe actif que Wegovy, à dose plus faible
 - **Trulicity** (dulaglutide) : remboursé à 65 %
@@ -155,7 +155,7 @@ Si vous êtes diabétique de type 2, les traitements GLP-1 suivants sont déjà 
 
 En l'absence de diabète, les options remboursées pour la perte de poids sont plus limitées :
 
-- **[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)** (tirzépatide) : en cours d'évaluation pour le remboursement, également disponible sur ordonnance sans remboursement
+- **[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)** (tirzépatide) : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (mêmes conditions que Wegovy)
 - **Chirurgie bariatrique** : remboursée pour les patients avec IMC >= 40, ou >= 35 avec comorbidité, après un parcours de soins de 6 à 12 mois
 - **Programmes d'éducation thérapeutique** : remboursés dans le cadre des centres spécialisés de l'obésité
 
@@ -163,7 +163,7 @@ En l'absence de diabète, les options remboursées pour la perte de poids sont p
 
 ### Wegovy est-il déjà remboursé en France ?
 
-Non, pas encore en mars 2026. L'avis HAS est favorable, les négociations de prix sont en cours avec le CEPS. Le remboursement effectif est attendu au second semestre 2026.
+Oui. Wegovy est remboursé à 65% par la Sécurité Sociale pour l'obésité depuis le 15 juin 2026, en application de l'arrêté du 23 mai 2026 (publié au Journal officiel le 28 mai), sous conditions d'éligibilité.
 
 ### Quel sera le taux de remboursement ?
 
@@ -177,9 +177,9 @@ Non. Des conditions d'IMC (≥ 35 avec comorbidité ou ≥ 40) et de parcours de
 
 Depuis le 23 juin 2025, tout médecin peut déjà initier une prescription de Wegovy en dehors du remboursement. Pour le remboursement, les conditions de prescription que définira le CEPS pourraient imposer certaines règles, mais elles ne devraient pas exclure les généralistes qui ont désormais toute légitimité à prescrire ces traitements.
 
-### Que faire en attendant le remboursement ?
+### Que faire si je ne suis pas éligible au remboursement ?
 
-Vous pouvez consulter votre médecin pour évaluer votre situation. Si vous êtes diabétique, un GLP-1 remboursé comme Ozempic peut être envisagé. Sinon, vous pouvez commencer le parcours de soins diététique qui sera probablement requis pour le remboursement — ce temps n'est pas perdu.
+Vous pouvez consulter votre médecin pour évaluer votre situation. Si vous êtes diabétique, un GLP-1 remboursé comme Ozempic peut être envisagé. Sinon, vous pouvez engager le parcours de soins diététique de 6 mois requis pour le remboursement (avec un IMC ≥ 35 et comorbidité, ou ≥ 40) — ce temps n'est pas perdu.
 
 ### Wegovy sera-t-il remboursé rétroactivement ?
 

@@ -95,7 +95,7 @@ Saxenda contient la même molécule que Victoza (liraglutide), mais à une dose 
 
 - **Efficacité** : Perte de poids de 15 à 17% en moyenne (études STEP)
 - **Fréquence** : Injection hebdomadaire
-- **Remboursement** : Non remboursé actuellement, en attente pour le 2e semestre 2026
+- **Remboursement** : Remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel)
 
 ## Comment se passe la transition ?
 
@@ -139,7 +139,7 @@ Les premières semaines après le changement de traitement méritent une attenti
 | Trulicity | Diabète type 2 | 65% |
 | Rybelsus | Diabète type 2 | Non |
 | Saxenda | Obésité | Non |
-| Wegovy | Obésité | Non (attendu 2e sem. 2026) |
+| Wegovy | Obésité | 65% (depuis le 15 juin 2026, sous conditions) |
 
 Pour plus d'informations sur le remboursement des GLP-1 en France, consultez notre [guide du remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 

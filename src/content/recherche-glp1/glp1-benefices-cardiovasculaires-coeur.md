@@ -176,7 +176,7 @@ Concrètement, si vous avez un **diabète de type 2 + une maladie coronarienne, 
 
 Ozempic est [remboursé](/collections/glp1-cout/remboursement-glp1-2026/) à **65 %** en bithérapie metformine pour le diabète de type 2 (100 % en ALD). Les bénéfices cardiovasculaires font partie intégrante de l'indication remboursée, sans nécessiter de justification supplémentaire.
 
-Pour les patients obèses sans diabète mais à haut risque cardiovasculaire (étude SELECT), Wegovy n'est pas encore remboursé en France en mars 2026. Les données SELECT ont cependant renforcé le dossier de remboursement, attendu au 2e semestre 2026.
+Pour les patients obèses sans diabète mais à haut risque cardiovasculaire (étude SELECT), Wegovy est remboursé à 65 % pour l'indication obésité depuis le 15 juin 2026, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle). Les données SELECT ont contribué à renforcer ce dossier de remboursement.
 
 ### Consultez un cardiologue si vous avez un risque cardiovasculaire
 
@@ -196,7 +196,7 @@ Oui, en grande partie. Une analyse de médiation du SELECT trial publiée dans *
 Oui, c'est même recommandé pour les patients diabétiques ayant eu un infarctus, selon les dernières recommandations ESC/SFD. Les GLP-1 réduisent le risque de récidive d'environ 20%. Votre cardiologue évaluera la compatibilité avec vos autres traitements.
 
 **Mon cardiologue peut-il me prescrire un GLP-1 ?**
-Oui. En France, les cardiologues peuvent prescrire les GLP-1 remboursés (Ozempic, [Trulicity (dulaglutide)](/collections/traitements-glp1/guide-complet-trulicity/)/) pour le diabète de type 2. Ils peuvent aussi initier un traitement Wegovy (non remboursé) si vous êtes obèse avec antécédent cardiovasculaire, dans l'attente du remboursement.
+Oui. En France, les cardiologues peuvent prescrire les GLP-1 remboursés (Ozempic, [Trulicity (dulaglutide)](/collections/traitements-glp1/guide-complet-trulicity/)/) pour le diabète de type 2. Wegovy est par ailleurs remboursé à 65 % pour l'obésité depuis le 15 juin 2026 (sous conditions) ; la primo-prescription est toutefois réservée aux structures spécialisées.
 
 **GLP-1 et anti-agrégants plaquettaires ou anticoagulants : compatibles ?**
 Oui. Les GLP-1 n'interfèrent pas avec l'aspirine, les thienopyridines (clopidogrel) ou les anticoagulants (warfarine, rivaroxaban, apixaban). Aucun ajustement de dose n'est nécessaire.

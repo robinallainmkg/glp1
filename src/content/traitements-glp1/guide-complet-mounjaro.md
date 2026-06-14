@@ -30,8 +30,8 @@ mainKeyword: "mounjaro guide complet france tirzepatide"
         <p class="text-sm font-semibold mb-1">✅ Situation actuelle :</p>
         <ul class="text-sm space-y-1 text-white/90">
           <li>• <strong>Commercialisé en France</strong> depuis novembre 2024</li>
-          <li>• <strong>Disponible en pharmacie</strong> sur ordonnance, à prix libre</li>
-          <li>• <strong>Non remboursé</strong> — remboursement envisagé au 2e semestre 2026</li>
+          <li>• <strong>Disponible en pharmacie</strong> sur ordonnance</li>
+          <li>• <strong>Remboursé à 65% pour l'obésité dès le 15 juin 2026</strong> (sous conditions)</li>
         </ul>
       </div>
       <p class="text-xs mt-3 text-white/70">
@@ -376,7 +376,7 @@ Oui, Mounjaro peut être prescrit pour la perte de poids chez les personnes obè
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Mounjaro est-il remboursé pour l'obésité ?
-**Non, Mounjaro n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Commercialisé depuis novembre 2024, son prix libre se situe entre 230 € et 440 € par mois selon le dosage. La HAS a émis un avis favorable au [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) en décembre 2025 ; une prise en charge est envisagée pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec d'une prise en charge nutritionnelle.
+**Oui, Mounjaro est remboursé à 65% pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), sous conditions : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, et primo-prescription en centre spécialisé de l'obésité (CSO) ou CHU. Commercialisé depuis novembre 2024, son prix public remboursable se situe entre 176 € et 434 € par mois selon le dosage, avec un reste à charge de 35% (souvent pris en charge par la mutuelle). Voir le détail du [remboursement](/collections/glp1-cout/remboursement-glp1-2026/). Hors critères, le prix libre reste à la charge du patient.
 
 ### Puis-je arrêter Mounjaro brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide. Si vous devez subir une intervention chirurgicale, consultez notre guide sur les [précautions avant chirurgie sous Mounjaro](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) pour connaître le protocole d'arrêt recommandé.

@@ -112,10 +112,10 @@ Lors de l'initiation du traitement, les nausées peuvent perturber les habitudes
 | Traitement | Prix mensuel | Remboursement Sécu |
 |-----------|-------------|-------------------|
 | **Ozempic** (sémaglutide DT2) | ~80 € | 65% (DT2 bithérapie) à 100% (ALD) |
-| **Wegovy** (sémaglutide obésité) | ~270 € | Non remboursé |
-| **Mounjaro** (tirzepatide) | 230 à 440 € | Non remboursé (attendu S2 2026) |
+| **Wegovy** (sémaglutide obésité) | ~270 € | 65% pour l'obésité (depuis le 15 juin 2026, sous conditions) |
+| **Mounjaro** (tirzepatide) | 230 à 440 € | 65% pour l'obésité (depuis le 15 juin 2026, sous conditions) |
 
-**ALD et prise en charge :** L'ALD 30 (diabète de type 2) permet une prise en charge à 100% du ticket modérateur pour Ozempic. L'obésité seule n'est pas une ALD en France en mars 2026. Pour les patients sans diabète sous Wegovy ou Mounjaro, le traitement reste entièrement à la charge du patient ou partiellement couvert par la mutuelle selon le contrat.
+**ALD et prise en charge :** L'ALD 30 (diabète de type 2) permet une prise en charge à 100% du ticket modérateur pour Ozempic. L'obésité seule n'est pas une ALD en France. Depuis le 15 juin 2026, les patients sans diabète sous Wegovy ou Mounjaro bénéficient d'un remboursement à 65% (sous conditions d'éligibilité), le reste à charge pouvant être partiellement couvert par la mutuelle selon le contrat.
 
 ## Conseils pratiques pour réussir la chrono-nutrition sous GLP-1
 

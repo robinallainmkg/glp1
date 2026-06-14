@@ -86,13 +86,13 @@ Les GLP-1 existent dans deux grandes catégories selon leur indication :
 
 *Victoza : arrêt de commercialisation annoncé fin 2026
 
-**Ce qu'il faut retenir** : si vous êtes diabétique de type 2 et traité par Ozempic, Trulicity ou Victoza, vous êtes dans le cadre d'une utilisation remboursée et officielle. Si vous utilisez Wegovy ou Mounjaro pour l'obésité (même si vous avez aussi un diabète), vous êtes dans un cadre non remboursé.
+**Ce qu'il faut retenir** : si vous êtes diabétique de type 2 et traité par Ozempic, Trulicity ou Victoza, vous êtes dans le cadre d'une utilisation remboursée et officielle. Wegovy et Mounjaro sont quant à eux remboursés à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle).
 
 ### La même molécule, des doses différentes
 
 Le sémaglutide est la molécule active aussi bien dans Ozempic (diabète, max 2 mg) que dans Wegovy (obésité, 2,4 mg). C'est la même molécule, mais les doses sont différentes et les indications réglementaires sont distinctes. Ozempic ne peut pas légalement être prescrit pour la perte de poids seule — et Wegovy ne bénéficie pas du remboursement diabète.
 
-Mounjaro (tirzepatide) dispose de son côté d'une AMM à la fois pour le diabète de type 2 et pour l'obésité, mais dans les deux cas, il n'est pas encore remboursé en France au 1er trimestre 2026. Pour plus de détails, consultez notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/).
+Mounjaro (tirzepatide) dispose de son côté d'une AMM à la fois pour le diabète de type 2 et pour l'obésité. Il est remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions). Pour plus de détails, consultez notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/).
 
 ## Les GLP-1 remboursés pour le diabète de type 2 en France {#remboursement}
 
@@ -157,7 +157,7 @@ Dans la pratique, ce formulaire ne change pas grand-chose pour les patients diab
 - Votre remboursement n'est pas affecté si la prescription est conforme
 - Le pharmacien vérifiera la présence du formulaire avant de délivrer le médicament
 
-Ce qui change en revanche : les patients qui cherchaient à obtenir Ozempic pour maigrir sans diabète diagnostiqué ne peuvent plus bénéficier d'une prescription remboursée dans ce cadre. Pour ces patients, les options légitimes sont [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et Mounjaro, disponibles sur ordonnance mais non remboursés.
+Ce qui change en revanche : les patients qui cherchaient à obtenir Ozempic pour maigrir sans diabète diagnostiqué ne peuvent plus bénéficier d'une prescription remboursée dans ce cadre. Pour ces patients, les options légitimes sont [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et Mounjaro, désormais remboursés à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions d'éligibilité).
 
 Pour comprendre l'ensemble du cadre réglementaire, consultez notre article sur les [règles de prescription ANSM pour les GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/).
 

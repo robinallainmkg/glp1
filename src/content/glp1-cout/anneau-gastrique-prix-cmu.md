@@ -90,8 +90,8 @@ Les traitements GLP-1 représentent une alternative moins invasive à l'anneau g
 | Option | Coût mensuel | Remboursement | Perte de poids moyenne |
 |--------|-------------|---------------|----------------------|
 | Anneau gastrique | 6 000-10 000 € (ponctuel) | 100% (ALD) | -20 à -25% |
-| Wegovy (sémaglutide) | 169-360 €/mois | Non remboursé (mars 2026) | -15 à -20% |
-| [Mounjaro (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 €/mois | Non remboursé (mars 2026) | -20 à -25% |
+| Wegovy (sémaglutide) | 169-360 €/mois | Remboursé 65% (obésité, depuis le 15/06/2026, sous conditions) | -15 à -20% |
+| [Mounjaro (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 €/mois | Remboursé 65% (obésité, depuis le 15/06/2026, sous conditions) | -20 à -25% |
 | Ozempic (sémaglutide) | ~80,18 €/stylo | 65% (DT2 bithérapie) | -12 à -15% |
 
 ## Important

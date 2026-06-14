@@ -92,7 +92,7 @@ Pour l'indication **obésité**, le [remboursement GLP-1 en France](/collections
 
 Pour le [prix du sémaglutide oral en France](/collections/glp1-cout/prix-rybelsus-france/), les estimations du marché tablent sur un prix mensuel de **300 à 350 €** pour le comprimé oral haute dose, soit un positionnement proche de Wegovy (169-360 €/mois selon dosage). Une légère prime par rapport à l'injectable serait justifiée par la commodité de la prise orale.
 
-Pour le **remboursement**, les mêmes incertitudes que Wegovy et Mounjaro s'appliquent : la décision dépendra des négociations entre Novo Nordisk et le CEPS (Comité économique des produits de santé).
+Pour le **remboursement**, la décision concernant ce comprimé oral haute dose dépendra des négociations entre Novo Nordisk et le CEPS (Comité économique des produits de santé). À noter que les formes **injectables** Wegovy et Mounjaro sont, elles, déjà remboursées à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions).
 
 ## Quelle différence avec Rybelsus actuel ?
 
@@ -124,9 +124,9 @@ Certains médecins rapportent que des patients refusent de commencer un traiteme
 En attendant l'arrivée du comprimé oral pour l'obésité en France, plusieurs options existent :
 
 1. **Rybelsus** (sémaglutide oral 14 mg max) si vous êtes diabétique de type 2 : non remboursé par la Sécurité Sociale en France (la HAS a rendu un avis défavorable au remboursement), mais déjà disponible en pharmacie
-2. **[Wegovy](/collections/traitements-glp1/wegovy-dosage/)** (sémaglutide injectable 2,4 mg) pour l'obésité : non remboursé, 169-360 €/mois, disponible dès maintenant
+2. **[Wegovy](/collections/traitements-glp1/wegovy-dosage/)** (sémaglutide injectable 2,4 mg) pour l'obésité : remboursé à 65% depuis le 15 juin 2026 (sous conditions), 169-360 €/mois, disponible dès maintenant
 3. **Ozempic** (sémaglutide injectable 2 mg) si vous avez un diabète de type 2 : remboursé à 65% en bithérapie metformine, disponible
-4. **[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)** (tirzepatide injectable, double action GLP-1/GIP) : non remboursé, 230-440 €/mois
+4. **[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)** (tirzepatide injectable, double action GLP-1/GIP) : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions), 230-440 €/mois
 
 ## Questions fréquentes
 

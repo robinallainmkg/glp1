@@ -113,7 +113,7 @@ Cette mesure a eu un **effet dissuasif sur les prescriptions hors AMM** : les do
 
 ### Les limites du formulaire
 
-Cependant, l'étude souligne que le formulaire ne couvre que les prescriptions remboursées. Les patients qui paient leur traitement de leur poche — ce qui est le cas de Wegovy, Mounjaro et Saxenda (non remboursés) — ne sont pas soumis à ce contrôle. Le mésusage dans la population non-remboursée reste difficile à quantifier avec les données du SNDS.
+Cependant, l'étude souligne que le formulaire ne couvre que les prescriptions remboursées. Les patients qui paient leur traitement de leur poche — ce qui reste le cas de Saxenda (non remboursé), et de Wegovy ou Mounjaro pour les patients ne remplissant pas les critères de remboursement obésité (remboursement à 65% effectif depuis le 15 juin 2026, sous conditions) — ne sont pas soumis à ce contrôle. Le mésusage dans la population non-remboursée reste difficile à quantifier avec les données du SNDS.
 
 ## Implications pour les professionnels de santé
 

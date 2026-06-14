@@ -143,7 +143,7 @@ Avant de démarrer, vérifiez si vous remplissez les [critères d'éligibilité 
 ## Alternatives à Wegovy
 
 ### Autres GLP-1 indiqués pour l'obésité
-- [**Mounjaro**](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzepatide) : injection hebdomadaire, double action GLP-1 + GIP, non remboursé (230-440 €/mois) — voir notre [comparatif Wegovy vs Mounjaro 2026](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
+- [**Mounjaro**](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzepatide) : injection hebdomadaire, double action GLP-1 + GIP, remboursé à 65% pour l'obésité dès le 15 juin 2026 (prix libre 230-440 €/mois hors critères) — voir notre [comparatif Wegovy vs Mounjaro 2026](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
 - [**Saxenda**](/collections/traitements-glp1/guide-complet-saxenda/) (liraglutide 3 mg) : injection quotidienne, non remboursé (240-300 €/mois)
 
 ### GLP-1 remboursés pour le diabète de type 2 uniquement
@@ -176,7 +176,7 @@ Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète,
 - **Effets maximum** : 6-12 mois
 
 ### Wegovy est-il remboursé pour l'obésité ?
-**Non, Wegovy n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Pour [acheter Wegovy en France](/collections/glp1-cout/acheter-wegovy-en-france/), son coût se situe [entre 169 € et 360 € par mois](/collections/glp1-cout/prix-wegovy-france/) selon le dosage, entièrement à la charge du patient. Des négociations de prix sont en cours avec le CEPS ; un [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) (probablement à 65 %) est envisagé pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec documenté d'une prise en charge nutritionnelle.
+**Oui, Wegovy est remboursé à 65% pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), sous conditions : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle, et primo-prescription en centre spécialisé de l'obésité (CSO) ou CHU. Pour [acheter Wegovy en France](/collections/glp1-cout/acheter-wegovy-en-france/), son prix se situe [entre 169 € et 360 € par mois](/collections/glp1-cout/prix-wegovy-france/) en prix libre selon le dosage ; pour les patients éligibles au [remboursement](/collections/glp1-cout/remboursement-glp1-2026/), le reste à charge de 35% est souvent pris en charge par la mutuelle. Hors critères, le coût reste à la charge du patient.
 
 ### Puis-je arrêter Wegovy brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide. Parlez-en à votre médecin pour planifier un arrêt adapté.

@@ -30,15 +30,15 @@ La question est sur toutes les lèvres des patients souffrant d'obésité : quan
 
 Wegovy a bénéficié d'un accès précoce en France de juillet 2022 à septembre 2023, puis est commercialisé librement en pharmacie depuis octobre 2024. Il est **remboursé à 65%** par la Sécurité Sociale dans l'indication obésité **à partir du 15 juin 2026** (arrêté du 23 mai 2026), sous conditions. Pour le détail des tarifs par dosage, consultez notre guide sur les [prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/).
 
-La HAS a rendu un **avis favorable au remboursement** de Wegovy, reconnaissant son service médical rendu (SMR) comme important dans les formes sévères d'obésité. Cet avis est une étape nécessaire mais pas suffisante : il doit être suivi de négociations avec le CEPS (Comité Économique des Produits de Santé) sur le prix remboursable.
+La HAS a rendu un **avis favorable au remboursement** de Wegovy, reconnaissant son service médical rendu (SMR) comme important dans les formes sévères d'obésité. Les négociations de prix avec le CEPS (Comité Économique des Produits de Santé) qui ont suivi ont abouti à l'arrêté du 23 mai 2026.
 
 ### Mounjaro (tirzepatide)
 
 Mounjaro a obtenu son AMM européenne initiale en septembre 2022 (diabète de type 2), puis l'extension d'indication à l'obésité en décembre 2024. Il est commercialisé en France depuis novembre 2024. Il est **remboursé à 65% pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026), sous conditions. Retrouvez le détail des tarifs dans notre guide sur les [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/).
 
-La HAS a publié en décembre 2025 un **avis favorable au remboursement** de Mounjaro dans l'obésité, avec un SMR qualifié d'important. Cet avis est désormais entre les mains du CEPS pour la négociation du prix.
+La HAS a publié en décembre 2025 un **avis favorable au remboursement** de Mounjaro dans l'obésité, avec un SMR qualifié d'important. La négociation de prix avec le CEPS qui a suivi a abouti au même arrêté du 23 mai 2026.
 
-## Pourquoi le remboursement tarde-t-il ?
+## Pourquoi le remboursement a-t-il pris du temps ?
 
 ### Le processus réglementaire français
 
@@ -56,17 +56,16 @@ Le principal obstacle au remboursement est **l'impact budgétaire pour l'Assuran
 
 À titre de comparaison, le Royaume-Uni, qui rembourse Wegovy depuis 2023, a dû rationner son accès à 12 semaines maximum par an en raison de contraintes budgétaires. La France cherche à éviter ce type de situation.
 
-### Les conditions d'éligibilité envisagées
+### Les conditions d'éligibilité retenues
 
-D'après les discussions publiques entre la HAS, le CEPS et le ministère de la Santé, le remboursement de Wegovy et Mounjaro en France devrait être conditionné à des critères stricts :
+L'arrêté du 23 mai 2026 conditionne le remboursement de Wegovy et Mounjaro à des critères stricts :
 
-- **IMC ≥ 35 kg/m²** (obésité de classe II ou III)
-- **Présence d'au moins une comorbidité** : diabète de type 2, hypertension artérielle, syndrome d'apnée du sommeil, stéatohépatite non alcoolique (NASH), dyslipidémie
+- **IMC ≥ 35 kg/m²** avec au moins une comorbidité (diabète de type 2, hypertension artérielle, syndrome d'apnée du sommeil, stéatohépatite non alcoolique (NASH), dyslipidémie), **ou IMC ≥ 40 kg/m²**
 - **Échec d'une prise en charge nutritionnelle et comportementale** d'au moins 6 mois documentée
-- **Prescription initiale par un médecin spécialiste** (endocrinologue, nutritionniste, médecin spécialisé en obésité) — bien que cette condition soit en cours d'assouplissement depuis les nouvelles règles ANSM de juin 2025
-- **Suivi régulier** : consultations trimestrielles avec évaluation du poids et des bénéfices
+- **Primo-prescription en structure spécialisée** (CSO/CHU : endocrinologue, nutritionniste, médecin spécialisé en obésité)
+- **Suivi régulier** : consultations avec évaluation du poids et des bénéfices
 
-Les patients avec un IMC entre 27 et 35 sans comorbidité sévère ne devraient **pas** être éligibles au remboursement dans un premier temps.
+Les patients avec un IMC entre 27 et 35 sans comorbidité sévère ne sont **pas** éligibles au remboursement.
 
 ## Le calendrier prévisionnel
 
@@ -78,17 +77,17 @@ Les deux traitements suivent le même calendrier et les mêmes conditions d'éli
 
 ### Ce que cela signifie concrètement
 
-Si le remboursement est accordé dans les conditions envisagées :
+Dans le cadre du remboursement en vigueur depuis le 15 juin 2026 :
 
 - **Taux de remboursement** : 65 % par l'Assurance Maladie (35% à la charge du patient ou de la mutuelle), ou 100 % en ALD si le patient est diabétique de type 2 (ALD 8)
-- **Prix remboursable** : inférieur au prix libre actuel. Basé sur les précédents européens, le prix négocié pourrait être entre 60 % et 75 % du prix libre
+- **Prix remboursable** : inférieur au prix libre antérieur, fixé par l'arrêté du 23 mai 2026
 - **Reste à charge mensuel** : entre 60 € et 120 € par mois pour les patients remboursés, selon le dosage et la couverture mutuelle
 
-## Que faire en attendant le remboursement ?
+## Que faire si vous n'êtes pas éligible au remboursement ?
 
-### Options pour réduire le coût actuel
+### Options pour réduire le coût
 
-En attendant le remboursement officiel, plusieurs pistes permettent de limiter votre reste à charge :
+Si vous ne remplissez pas les conditions d'éligibilité (IMC, comorbidité, parcours de soins), plusieurs pistes permettent de limiter votre reste à charge :
 
 **1. Les mutuelles avec forfait médicaments non remboursés**
 
@@ -100,7 +99,7 @@ Si vos revenus sont inférieurs à 26 000 € annuels, vous pouvez bénéficier 
 
 **3. Comparer les pharmacies**
 
-Wegovy et Mounjaro n'étant pas remboursés, les pharmacies fixent librement leur prix. Des différences de 20 à 40 € par mois peuvent exister entre une pharmacie de quartier et une pharmacie de grande surface. N'hésitez pas à demander un devis à plusieurs officines.
+Hors du cadre remboursé (patients non éligibles), les pharmacies fixent librement le prix de Wegovy et Mounjaro. Des différences de 20 à 40 € par mois peuvent exister entre une pharmacie de quartier et une pharmacie de grande surface. N'hésitez pas à demander un devis à plusieurs officines.
 
 **4. Les alternatives déjà remboursées**
 
@@ -131,7 +130,7 @@ La Haute Autorité de Santé a indiqué dans ses avis publics que ces médicamen
 
 Le Gouvernement, par la voix du ministère de la Santé, a évoqué publiquement la nécessité d'un accès équitable à ces traitements tout en soulignant les contraintes budgétaires de l'Assurance Maladie, qui affiche un déficit croissant.
 
-Les négociations sont donc réelles mais complexes. Le remboursement au second semestre 2026 reste le scénario le plus probable pour Wegovy, mais des retards sont toujours possibles.
+Au terme de ce processus, l'arrêté du 23 mai 2026 a acté le remboursement de Wegovy et Mounjaro à 65% pour l'obésité, en vigueur depuis le 15 juin 2026.
 
 ## FAQ : vos questions sur le remboursement
 
@@ -143,9 +142,9 @@ Oui, un médecin peut prescrire ces médicaments à tout patient pour qui il est
 
 Non, les remboursements ne sont pas rétroactifs en France. La prise en charge commencera à partir de la date officielle de mise sur la liste des remboursables.
 
-**Les patients obèses sans diabète pourront-ils être remboursés ?**
+**Les patients obèses sans diabète peuvent-ils être remboursés ?**
 
-Selon les conditions envisagées, oui — mais uniquement avec un IMC ≥ 35 et au moins une comorbidité. Un IMC entre 27 et 35 sans comorbidité sévère ne serait pas éligible dans un premier temps.
+Oui — mais uniquement avec un IMC ≥ 35 et au moins une comorbidité, ou un IMC ≥ 40, après échec d'une prise en charge nutritionnelle. Un IMC entre 27 et 35 sans comorbidité sévère n'est pas éligible.
 
 **Comment se tenir informé de l'avancée du remboursement ?**
 

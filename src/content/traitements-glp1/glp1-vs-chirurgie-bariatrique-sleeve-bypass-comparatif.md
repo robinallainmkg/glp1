@@ -116,16 +116,16 @@ La chirurgie bariatrique est [remboursée](/collections/glp1-cout/remboursement-
 
 Pour les patients éligibles, la chirurgie est donc **sans reste à charge direct** (hors chambre individuelle, actes non remboursés). Pour une estimation détaillée du [prix de la chirurgie bariatrique](/collections/glp1-cout/operation-pour-maigrir-prix/), c'est un avantage financier considérable.
 
-### Les GLP-1 Wegovy et Mounjaro : pas encore remboursés
+### Les GLP-1 Wegovy et Mounjaro : remboursés à 65% pour l'obésité depuis le 15 juin 2026
 
-Wegovy et Mounjaro ne sont actuellement pas remboursés pour l'obésité en France (mars 2026). Leur coût mensuel est entièrement à la charge du patient :
+**Wegovy et Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée. Les 35% restants sont à la charge du patient ou de la mutuelle. Hors conditions d'éligibilité, le coût mensuel (prix hors remboursement) reste entièrement à la charge du patient :
 
 - **Wegovy** : 169 € à 360 €/mois selon dosage
 - **Mounjaro** : 230 € à 440 €/mois selon dosage — voir [remboursement Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
 
-Sur 2 à 3 ans de traitement (durée recommandée pour une perte de poids optimale), le coût total peut atteindre 5 000 à 12 000 €.
+Pour un patient non éligible, sur 2 à 3 ans de traitement (durée recommandée pour une perte de poids optimale), le coût total à charge peut atteindre 5 000 à 12 000 €.
 
-Un remboursement partiel est prévu pour le second semestre 2026 (sous conditions d'IMC et de comorbidités). Consultez notre guide sur le [remboursement Wegovy et Mounjaro 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/) pour les dernières informations.
+Consultez notre guide sur le [remboursement Wegovy et Mounjaro 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/) pour le détail des conditions.
 
 ## Conditions d'accès et critères d'éligibilité
 

@@ -84,7 +84,7 @@ mainKeyword: "prix Saxenda France"
 |------------|--------------|---------------|
 | Saxenda | 240-300 € | Non remboursé |
 | [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 €/stylo | 65% (DT2, bithérapie metformine) |
-| Wegovy | 169-360 € | Non remboursé |
+| Wegovy | 169-360 € | Remboursé 65% (obésité, depuis le 15/06/2026, sous conditions) |
 | Trulicity | 85 € | 65% (DT2 uniquement) |
 
 ## 💊 Remboursement Sécurité Sociale
@@ -198,12 +198,12 @@ mainKeyword: "prix Saxenda France"
 |---------|---------|--------|---------|
 | Prix mensuel | 240-300 € | ~77,60 €/stylo | 169-360 € |
 | Perte poids moyenne | -8% | -15% | -20% |
-| Remboursement | Non remboursé | 65% (DT2, bithérapie metformine) | Non remboursé |
-| Rapport qualité/prix | Élevé (non remboursé) | Bon (si DT2) | Élevé (non remboursé) |
+| Remboursement | Non remboursé | 65% (DT2, bithérapie metformine) | 65% (obésité, depuis le 15/06/2026, sous conditions) |
+| Rapport qualité/prix | Élevé (non remboursé) | Bon (si DT2) | Bon si remboursement obtenu |
 
 ## 📝 Conclusion
 
-**Saxenda est un traitement GLP-1 non remboursé** dont le coût reste élevé. Contrairement à [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (remboursé pour le DT2), Saxenda et Wegovy sont entièrement à la charge du patient. Pour connaître les options de prise en charge, consultez notre guide sur le [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
+**Saxenda est un traitement GLP-1 non remboursé** dont le coût reste élevé. Contrairement à [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (remboursé pour le DT2) et à Wegovy (remboursé à 65 % pour l'obésité depuis le 15 juin 2026, sous conditions), Saxenda reste entièrement à la charge du patient. Pour connaître les options de prise en charge, consultez notre guide sur le [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ### Points clés à retenir :
 - **Prix moyen** : 240-300 €/mois (prix libre)

@@ -136,7 +136,7 @@ Le prix est libre et varie selon les pharmacies et le dosage :
 - **12,5-15 mg** : environ 400-440 €/mois
 
 ### Remboursement
-Mounjaro **n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). La HAS a émis un avis favorable en décembre 2025 ; un [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) est envisagé au second semestre 2026 pour les patients avec un IMC ≥ 35, après échec d'une prise en charge nutritionnelle.
+Mounjaro **est remboursé à 65%** par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), après un avis favorable de la HAS en décembre 2025. Ce [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) s'applique aux patients avec un IMC ≥ 35 et comorbidité (ou ≥ 40), après échec d'une prise en charge nutritionnelle et primo-prescription en structure spécialisée.
 
 ## Effets secondaires
 

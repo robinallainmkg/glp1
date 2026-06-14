@@ -162,7 +162,7 @@ Votre médecin généraliste assurera le suivi selon les recommandations habitue
 
 La décision de l'ANSM ouvre la prescription aux généralistes. Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance Maladie pour l'indication obésité, sous conditions strictes : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec d'une prise en charge nutritionnelle bien conduite. La prescription initiale est réservée aux structures spécialisées (CSO, CHU, SMR nutrition/endocrinologie). Saxenda n'est pas concerné par ce remboursement.
 
-La HAS a rendu un avis favorable au remboursement de Wegovy (avis CT du 23 octobre 2024, publié le 4 décembre 2024 ; l'avis CEESP économique date de juillet 2025) et de Mounjaro (décembre 2025), mais **uniquement pour les patients avec un IMC initial ≥ 35 kg/m²** en cas d'échec de la prise en charge nutritionnelle. L'avis est défavorable pour les autres situations couvertes par l'AMM (IMC 27-35 avec comorbidité). Les négociations de prix avec le CEPS sont en cours, et un [remboursement est attendu au second semestre 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/).
+La HAS a rendu un avis favorable au remboursement de Wegovy (avis CT du 23 octobre 2024, publié le 4 décembre 2024 ; l'avis CEESP économique date de juillet 2025) et de Mounjaro (décembre 2025), **uniquement pour les patients avec un IMC initial ≥ 35 kg/m²** en cas d'échec de la prise en charge nutritionnelle. L'avis reste défavorable pour les autres situations couvertes par l'AMM (IMC 27-35 avec comorbidité). À l'issue des négociations de prix avec le CEPS, l'arrêté du 23 mai 2026 (JO du 28 mai) a fixé l'entrée en vigueur du [remboursement à 65 % au 15 juin 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/).
 
 ### Pour les patients diabétiques : situation inchangée
 
@@ -201,7 +201,7 @@ Tous les médecins ne sont pas encore à l'aise avec ces nouvelles molécules. S
 
 **Le fait que mon généraliste prescrive plutôt qu'un spécialiste change-t-il le remboursement ?**
 
-Non. Le médicament prescrit est le même. La qualité de la prescription (respect des indications, bilan préalable, suivi) compte davantage que la spécialité du prescripteur. Pour le futur remboursement, les conditions seront définies sur les critères médicaux, pas sur le type de prescripteur.
+Non. Le médicament prescrit est le même. La qualité de la prescription (respect des indications, bilan préalable, suivi) compte davantage que la spécialité du prescripteur. Pour le remboursement (effectif depuis le 15 juin 2026 pour l'obésité), les conditions sont définies sur des critères médicaux ; la primo-prescription doit toutefois être réalisée en structure spécialisée (CSO, CHU, SMR).
 
 **Un généraliste peut-il aussi gérer les effets secondaires si je suis sous Wegovy ?**
 

@@ -304,7 +304,7 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 #### A) Pharmacie de ville (si disponible)
 - Ordonnance sécurisée du spécialiste
 - Vérifiez la disponibilité avant (stock limité en 2026)
-- Prix : 230€ à 440€/mois selon dosage (non remboursé actuellement)
+- Prix : 230€ à 440€/mois selon dosage (remboursé à 65% pour l'obésité depuis le 15 juin 2026, sous conditions)
 
 #### B) Importation nominative
 - Demande spéciale via le pharmacien hospitalier
@@ -320,16 +320,16 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 | Aspect | Détail |
 |--------|--------|
 | **Prix Mounjaro** | 230€ à 440€/mois selon dosage (prix libre en pharmacie) |
-| **Remboursement Sécu** | ⏳ Avis favorable HAS (déc. 2025) — Remboursement prévu 2e semestre 2026 |
+| **Remboursement Sécu** | ✅ Remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions) |
 | **Remboursement Mutuelle** | Selon contrat (variable) |
 | **Prescription** | Sur ordonnance uniquement |
 
 ### Évolution du remboursement
 
-📅 **Décembre 2025** : La HAS a rendu un **avis favorable** au [remboursement de Mounjaro](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/) pour le diabète de type 2.
-- Des négociations de prix avec le CEPS sont en cours
-- Le remboursement à 65% est attendu pour le 2e semestre 2026
-- Critères prévisionnels : Diabète de type 2 insuffisamment contrôlé, IMC ≥ 30 kg/m²
+📅 **Depuis le 15 juin 2026** : Mounjaro (tirzépatide) est **remboursé à 65%** par l'Assurance Maladie dans l'indication obésité (arrêté du 23 mai 2026, JO du 28 mai 2026) — voir le [remboursement de Mounjaro](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/).
+- Conditions : IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40
+- Après échec d'une prise en charge nutritionnelle bien conduite
+- Primo-prescription réservée aux CSO (Centres Spécialisés de l'Obésité) ou CHU
 
 ---
 
@@ -382,7 +382,7 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 2. **Wegovy** (sémaglutide haute dose)
    - ✅ Disponible en France
-   - ❌ Non remboursé
+   - ✅ Remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel)
    - Efficacité : -17% de poids
    - Prix : ~272€/mois
 

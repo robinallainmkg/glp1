@@ -43,7 +43,7 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 - Votre médecin traitant peut vous prescrire [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) pour l'obésité, sous réserve d'un IMC initial >= 35 kg/m² et d'un échec préalable d'une prise en charge nutritionnelle (deuxième intention uniquement)
 - Il n'est plus nécessaire de consulter un spécialiste pour la première prescription
 - Le renouvellement peut également être assuré par le médecin traitant
-- Les conditions médicales d'éligibilité selon l'ANSM pour la prescription (AMM) : IMC >= 30 kg/m² (obésité) ou IMC >= 27 kg/m² avec au moins une comorbidité liée au poids. Les critères IMC >= 35 s'appliquent uniquement aux conditions de remboursement HAS (en cours d'évaluation).
+- Les conditions médicales d'éligibilité selon l'ANSM pour la prescription (AMM) : IMC >= 30 kg/m² (obésité) ou IMC >= 27 kg/m² avec au moins une comorbidité liée au poids. Les critères IMC >= 35 (avec comorbidité) ou >= 40 s'appliquent aux conditions de remboursement, effectif depuis le 15 juin 2026 pour Wegovy et Mounjaro.
 - Ces évolutions concernent aussi la prescription des [GLP-1 pour les adolescents obèses de 12 ans et plus](/collections/traitements-glp1/wegovy-mounjaro-adolescent-obesite-12-ans-france-guide/), un cadre spécifique encadré par l'ANSM
 
 **Ce qui ne change pas** :
@@ -109,7 +109,7 @@ Si vous souffrez d'obésité et souhaitez un traitement GLP-1 :
 - Vous pouvez désormais consulter votre médecin traitant directement, sans passer par un spécialiste — découvrez le [parcours complet pour commencer un traitement GLP-1](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/)
 - Votre médecin évaluera votre éligibilité (IMC, comorbidités, traitements antérieurs) — [vérifiez vos critères d'éligibilité GLP-1](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/)
 - Les traitements approuvés pour l'obésité sont Wegovy et Mounjaro
-- **Attention** : Wegovy et Mounjaro ne sont pas encore remboursés en France (mars 2026). Le coût reste à la charge du patient ou de sa mutuelle. Consultez nos guides sur le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/) et le [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/)
+- **À noter** : Wegovy et Mounjaro sont remboursés à 65% pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée). Hors critères, le coût reste à la charge du patient ou de sa mutuelle. Consultez nos guides sur le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/) et le [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/)
 
 ### Pour les personnes en surpoids sans comorbidité
 
@@ -170,8 +170,8 @@ Si votre IMC est compris entre 25 et 30 sans comorbidité liée au poids :
 
 | Médicament | Molécule | Voie | Fréquence | Remboursement |
 |-----------|----------|------|-----------|---------------|
-| Wegovy | Sémaglutide 2,4 mg | Injection | Hebdomadaire | Non (en attente) |
-| Mounjaro | Tirzépatide | Injection | Hebdomadaire | Non |
+| Wegovy | Sémaglutide 2,4 mg | Injection | Hebdomadaire | Oui (65%, obésité, dès le 15/06/2026, sous conditions) |
+| Mounjaro | Tirzépatide | Injection | Hebdomadaire | Oui (65%, obésité, dès le 15/06/2026, sous conditions) |
 | [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/) | Liraglutide 3 mg | Injection | Quotidienne | Non |
 
 Pour comparer ces traitements en détail, consultez notre [comparatif des GLP-1](/guides/quel-traitement-glp1-choisir/).
@@ -186,9 +186,9 @@ Non. Ozempic est indiqué uniquement pour le diabète de type 2. Pour la perte d
 
 Non. Le formulaire est rapide à remplir pour le médecin et s'intègre dans la consultation habituelle. Il ne crée pas d'étape administrative supplémentaire pour le patient. Son objectif est de vérifier que la prescription correspond bien à l'indication validée.
 
-### Les GLP-1 seront-ils bientôt remboursés pour l'obésité ?
+### Les GLP-1 sont-ils remboursés pour l'obésité ?
 
-La HAS a rendu un avis favorable au remboursement de Wegovy. Les négociations de prix avec le CEPS sont en cours. Un [remboursement GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/) est envisageable au second semestre 2026 pour Wegovy. Mounjaro pourrait suivre un processus similaire.
+Oui. Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65% pour l'obésité (arrêté du 23 mai 2026), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, et primo-prescription en centre spécialisé. Consultez notre guide [remboursement GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/). Saxenda reste non remboursé.
 
 ### L'ANSM a-t-elle identifié de nouveaux risques pour les GLP-1 ?
 

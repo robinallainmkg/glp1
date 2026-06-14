@@ -17,7 +17,7 @@ affiliateCollection: "traitements-glp1"
 
 ## Wegovy Avis 2026 : Ce que Pensent Vraiment les Patients en France
 
-Wegovy (semaglutide 2.4 mg) est devenu l'un des traitements anti-obésité les plus discutes en France. Commercialise par Novo Nordisk et autorisé par l'EMA pour la gestion du poids, il suscite autant d'espoir que d'interrogations. Les patients veulent savoir : est-ce que Wegovy tient ses promesses ? Quels sont les effets secondaires au quotidien ? Et surtout, est-ce que le prix -- encore non rembourse en avril 2026 -- se justifie ?
+Wegovy (semaglutide 2.4 mg) est devenu l'un des traitements anti-obésité les plus discutes en France. Commercialise par Novo Nordisk et autorisé par l'EMA pour la gestion du poids, il suscite autant d'espoir que d'interrogations. Les patients veulent savoir : est-ce que Wegovy tient ses promesses ? Quels sont les effets secondaires au quotidien ? Et surtout, est-ce que le prix -- desormais rembourse a 65% pour l'obésité depuis le 15 juin 2026, sous conditions -- se justifie ?
 
 Nous avons croise les données des essais cliniques STEP, les témoignages de patients francais et les avis recueillis aupres de professionnels de sante pour proposer un bilan complet et transparent.
 
@@ -58,7 +58,7 @@ Wegovy est un médicament injectable a base de **semaglutide**, la même molécu
 - **Fréquence** : une injection sous-cutanée par semaine
 - **Laboratoire** : Novo Nordisk
 - **AMM en France** : oui, autorisé par l'EMA depuis janvier 2022
-- **Remboursement** : Non rembourse en avril 2026 (avis HAS favorable, negociations CEPS en cours)
+- **Remboursement** : Rembourse a 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée)
 
 Pour une presentation complete du traitement, consultez notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
 
@@ -126,7 +126,7 @@ Les avis ci-dessous ont ete recueillis aupres de patients francais ayant utilis�
 **Duree du traitement** : 4 mois | **Perte de poids** : -8 kg (de 89 kg a 81 kg)
 **Note** : 3/5
 
-"L'efficacité est au rendez-vous : j'ai perdu 8 kg en 4 mois, ce que je n'avais jamais reussi avec un régime seul. Mais le prix est un vrai probleme. A 300 euros par mois sans aucun remboursement, j'ai du faire des arbitrages dans mon budget. Ma mutuelle ne prend rien en charge. J'ai demande a mon médecin si je pouvais passer a un dosage plus faible pour economiser, mais il me l'a deconseille. Je vais continuer encore quelques mois en esperant que le remboursement arrive au second semestre 2026 comme annonce, sinon je devrai probablement arreter."
+"L'efficacité est au rendez-vous : j'ai perdu 8 kg en 4 mois, ce que je n'avais jamais reussi avec un régime seul. Mais le prix est un vrai probleme. A 300 euros par mois sans aucun remboursement, j'ai du faire des arbitrages dans mon budget. Ma mutuelle ne prend rien en charge. J'ai demande a mon médecin si je pouvais passer a un dosage plus faible pour economiser, mais il me l'a deconseille. J'attendais le remboursement avec impatience : il est arrive le 15 juin 2026 pour l'obésité severe, ce qui change tout pour mon budget si je remplis les conditions."
 
 ### Témoignage 4 -- Thomas, 47 ans, Toulouse (comparaison avec Mounjaro)
 
@@ -176,9 +176,9 @@ Sur la base des retours patients compiles (forums francophones, avis médecins, 
 
 ## Prix et Remboursement : Le Point de Friction
 
-Le cout de Wegovy est le principal sujet de mecontentement dans les avis patients. En avril 2026, Wegovy n'est **pas rembourse par la Sécurité sociale** en France, et la plupart des mutuelles ne le prennent pas en charge.
+Le cout de Wegovy a longtemps ete le principal sujet de mecontentement dans les avis patients. **Depuis le 15 juin 2026, Wegovy est rembourse a 65% par la Sécurité sociale pour l'obésité** (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée) ; les 35% restants peuvent etre pris en charge par la mutuelle. Hors conditions d'eligibilite, le cout reste a la charge du patient.
 
-### Grille de prix constatee en pharmacie (avril 2026)
+### Grille de prix constatee en pharmacie (prix hors remboursement)
 
 | Dosage | Prix mensuel indicatif |
 |--------|----------------------|
@@ -188,15 +188,15 @@ Le cout de Wegovy est le principal sujet de mecontentement dans les avis patient
 | 1.7 mg | 270 - 310 euros |
 | 2.4 mg (dose cible) | 320 - 360 euros |
 
-**Cout annuel estime a dose cible** : 3 840 a 4 320 euros, entierement a la charge du patient.
+**Cout annuel a dose cible (hors remboursement)** : 3 840 a 4 320 euros. Pour les patients eligibles au remboursement obésité (depuis le 15 juin 2026), 65% de ce cout est pris en charge par l'Assurance Maladie.
 
 Pour un comparatif détaillé des prix, consultez notre page [prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/).
 
-### Perspectives de remboursement
+### Remboursement : ce qui a change le 15 juin 2026
 
-La Haute Autorite de Sante (HAS) a rendu un avis favorable au remboursement de Wegovy pour les patients presentant une obésité severe (IMC supérieur ou égal a 35). L'inscription sur la liste des specialites remboursables depend de l'issue des **negociations en cours avec le CEPS** (Comite economique des produits de sante) sur le prix negocie avec le laboratoire.
+Apres un avis favorable de la HAS, **Wegovy est rembourse a 65% par la Sécurité sociale pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), pour les patients presentant une obésité severe : IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Les 35% restants sont a la charge du patient ou de la mutuelle.
 
-Certaines mutuelles commencent a proposer des forfaits partiels pour les traitements de l'obésité. Pour verifier votre situation, consultez notre guide [Wegovy et remboursement mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/).
+Certaines mutuelles completent ce reste a charge ou proposent des forfaits pour les patients non eligibles. Pour verifier votre situation, consultez notre guide [Wegovy et remboursement mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/).
 
 ---
 
@@ -240,7 +240,7 @@ La comparaison entre Wegovy et Mounjaro (tirzepatide) est l'une des questions le
 | Fréquence d'injection | 1 fois par semaine | 1 fois par semaine |
 | Tolérance digestive | Nausees fréquentes | Nausees legerement moins fréquentes selon les retours |
 | Prix mensuel (dose max) | 320 - 360 euros | ~440 euros |
-| Remboursement (avril 2026) | Non | Non (sauf indication diabète) |
+| Remboursement obésité | Oui, 65% depuis le 15/06/2026 (sous conditions) | Oui, 65% depuis le 15/06/2026 (sous conditions) |
 | Recul clinique | Plus de 5 ans d'etudes | Plus recent (etudes SURMOUNT) |
 
 **Ce que disent les patients** : les patients ayant essaye les deux traitements rapportent globalement une meilleure efficacité de Mounjaro, avec une tolérance digestive parfois supérieure. Cependant, Wegovy beneficie d'un recul clinique plus important et d'un essai cardiovasculaire positif (STEP-HFpEF, SELECT) qui renforce la confiance des prescripteurs.
@@ -266,7 +266,7 @@ Oui. Les essais cliniques STEP, menes sur des milliers de patients, demontrent u
 
 ### Combien coute Wegovy par mois en France en 2026 ?
 
-Le prix de Wegovy varie selon le dosage. A la dose cible de 2.4 mg, comptez entre 320 et 360 euros par mois en pharmacie. En phase d'escalade (doses plus faibles), le cout est inferieur, de l'ordre de 169 a 260 euros par mois. Wegovy n'est pas rembourse par la Sécurité sociale en avril 2026, mais un remboursement est envisage pour le second semestre 2026. Consultez notre page [prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/) pour les tarifs actualises.
+Le prix de Wegovy varie selon le dosage. A la dose cible de 2.4 mg, comptez entre 320 et 360 euros par mois en pharmacie (prix hors remboursement). En phase d'escalade (doses plus faibles), le cout est inferieur, de l'ordre de 169 a 260 euros par mois. **Depuis le 15 juin 2026, Wegovy est rembourse a 65% pour l'obésité severe** (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée), ce qui réduit fortement le reste a charge des patients eligibles. Consultez notre page [prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/) pour les tarifs actualises.
 
 ### Quels sont les effets secondaires les plus courants de Wegovy ?
 
@@ -286,7 +286,7 @@ Les deux traitements sont efficaces. Mounjaro (tirzepatide) montre dans les etud
 
 Wegovy est un traitement efficace et bien documente pour la prise en charge de l'obésité. Les données cliniques et les retours patients convergent : la majorite des utilisateurs obtiennent une perte de poids significative, avec une amélioration notable de leur qualite de vie et de leurs parametres metaboliques.
 
-Le principal frein reste le cout, qui pese lourdement sur les patients tant que le remboursement n'est pas effectif. Si le remboursement se concretise au second semestre 2026, Wegovy pourrait devenir accessible a un nombre bien plus large de patients en France.
+Le cout, longtemps le principal frein, est desormais allege pour de nombreux patients : **depuis le 15 juin 2026, Wegovy est rembourse a 65% pour l'obésité severe** (sous conditions). Cette prise en charge rend Wegovy accessible a un nombre bien plus large de patients eligibles en France ; hors conditions, le cout reste a la charge du patient.
 
 **Avant de commencer un traitement par Wegovy** :
 

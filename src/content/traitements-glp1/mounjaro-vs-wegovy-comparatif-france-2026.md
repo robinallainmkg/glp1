@@ -18,13 +18,13 @@ faqSchema:
   - question: "Mounjaro ou Wegovy : lequel fait perdre le plus de poids ?"
     answer: "Les essais cliniques montrent un avantage pour Mounjaro : le tirzépatide (dose maximale 15 mg) entraîne une perte de poids moyenne d'environ 20 à 22 % du poids initial, contre environ 15 à 16 % pour le sémaglutide 2,4 mg (Wegovy). Cet écart s'explique par le double mécanisme GLP-1 + GIP de Mounjaro."
   - question: "Quel est le prix de Mounjaro et Wegovy en France en 2026 ?"
-    answer: "En 2026, le coût mensuel estimé est de 230 à 440 euros pour Mounjaro (selon le dosage) et de 200 à 320 euros pour Wegovy. Wegovy bénéficie d'un remboursement partiel par l'Assurance maladie pour l'indication obésité, tandis que Mounjaro reste majoritairement non remboursé pour cette indication."
+    answer: "En 2026, le coût mensuel estimé est de 230 à 440 euros pour Mounjaro (selon le dosage) et de 200 à 320 euros pour Wegovy. Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance maladie pour l'indication obésité, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle)."
   - question: "Les effets secondaires sont-ils différents entre Mounjaro et Wegovy ?"
     answer: "Les effets secondaires sont globalement similaires (nausées, vomissements, diarrhée, constipation). Les données cliniques suggèrent des taux de nausées comparables. Mounjaro semble légèrement mieux toléré chez certains patients du fait de sa titration plus progressive, mais cela varie d'un individu à l'autre."
   - question: "Peut-on passer de Wegovy à Mounjaro (ou inversement) ?"
     answer: "Oui, un changement de traitement est possible sous supervision médicale. Les raisons courantes incluent un plateau de perte de poids, une intolérance aux effets secondaires, ou un souhait d'essayer une molécule différente. Votre médecin déterminera le protocole de transition adapté."
   - question: "Mounjaro et Wegovy sont-ils remboursés en France ?"
-    answer: "Wegovy bénéficie d'un remboursement partiel par l'Assurance maladie pour l'indication obésité. Mounjaro est principalement remboursé dans le cadre du diabète de type 2. Pour l'indication perte de poids, la prise en charge de Mounjaro reste limitée en 2026."
+    answer: "Depuis le 15 juin 2026, Wegovy et Mounjaro sont tous deux remboursés à 65 % par l'Assurance maladie pour l'indication obésité, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle). Mounjaro reste par ailleurs remboursé dans le cadre du diabète de type 2."
 mainKeyword: "Mounjaro vs Wegovy"
 secondaryKeywords: ["comparatif Mounjaro Wegovy", "tirzépatide vs sémaglutide", "meilleur GLP-1 perte de poids", "Mounjaro ou Wegovy choisir", "comparaison traitements obésité 2026"]
 enableAffiliation: true
@@ -184,14 +184,14 @@ Le prix est un critère majeur pour de nombreux patients. Voici la situation en 
 | **Coût mensuel estimé** | 230-440 €/mois | 200-320 €/mois |
 | **Variation de prix** | Selon le dosage (2,5 à 15 mg) | Selon le dosage (0,25 à 2,4 mg) |
 | **Coût annuel estimé** | 2 760-5 280 € | 2 400-3 840 € |
-| **Remboursement obésité** | Limité | Partiel (Assurance maladie) |
+| **Remboursement obésité** | Remboursé 65% (dès le 15/06/2026, sous conditions) | Remboursé 65% (dès le 15/06/2026, sous conditions) |
 | **Remboursement diabète** | Oui (indication DT2) | Non applicable (Ozempic pour DT2) |
 
 ### Le point sur le remboursement
 
-**Wegovy** bénéficie d'un remboursement partiel par l'Assurance maladie pour l'indication gestion du poids chez les patients obèses (IMC ≥ 30) ou en surpoids avec comorbidités (IMC ≥ 27). Ce remboursement a considérablement amélioré l'accessibilité du traitement.
+**Wegovy** est remboursé à 65 % par l'Assurance maladie pour l'indication obésité depuis le 15 juin 2026, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée). Ce remboursement a considérablement amélioré l'accessibilité du traitement.
 
-**Mounjaro** est principalement remboursé dans le cadre du diabète de type 2. Pour l'indication perte de poids pure, le remboursement reste limité en 2026, ce qui constitue un frein financier important.
+**Mounjaro** est lui aussi remboursé à 65 % pour l'obésité depuis le 15 juin 2026, sous les mêmes conditions, et reste remboursé dans le cadre du diabète de type 2.
 
 ### Le vrai coût sur la durée
 
@@ -243,11 +243,11 @@ Pour un guide pratique sur les injections, consultez notre article [comment s'in
 - **Diabète de type 2 associé** : le double agonisme GLP-1/GIP offre un contrôle glycémique supérieur, avec des réductions d'HbA1c plus marquées
 - **Plateau avec un autre GLP-1** : si vous avez atteint un plateau sous Wegovy ou Ozempic, le passage à Mounjaro (mécanisme différent) peut relancer la perte de poids
 - **Tolérance digestive fragile** : la titration plus progressive de Mounjaro (6 paliers) peut permettre une meilleure adaptation pour les patients sensibles
-- **Le remboursement n'est pas un critère déterminant** : si vous pouvez assumer le coût sans remboursement, Mounjaro offre l'efficacité maximale
+- **Recherche de l'efficacité maximale** : à conditions de remboursement équivalentes (les deux sont remboursés à 65 % pour l'obésité depuis le 15 juin 2026), Mounjaro offre l'efficacité la plus élevée
 
 ### Quand Wegovy est préférable
 
-- **Budget limité** : Wegovy est légèrement moins coûteux et bénéficie d'un remboursement partiel pour l'indication obésité, ce qui peut faire une différence significative sur un traitement au long cours
+- **Budget limité** : Wegovy est légèrement moins coûteux, ce qui peut faire une différence significative sur un traitement au long cours (les deux molécules sont désormais remboursées à 65 % pour l'obésité depuis le 15 juin 2026)
 - **Objectif de perte de poids modéré** : pour une perte de 10 à 15 % du poids initial, Wegovy est pleinement suffisant et bien validé
 - **Priorité au profil de sécurité à long terme** : le sémaglutide dispose d'un recul clinique plus important (études cardiovasculaires SELECT, données de vie réelle plus abondantes)
 - **Association avec les bénéfices cardiovasculaires** : l'étude SELECT a spécifiquement démontré une réduction du risque d'événements cardiovasculaires majeurs avec le sémaglutide chez les patients en surpoids — consultez notre article sur les [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/)
@@ -283,7 +283,7 @@ Mounjaro et Wegovy ne sont pas les seuls traitements disponibles. Selon votre pr
 |---|---|---|---|
 | **Perte de poids** | ~20-22 % | ~15-16 % | Mounjaro |
 | **Prix mensuel** | 230-440 € | 200-320 € | Wegovy |
-| **Remboursement obésité** | Limité | Partiel | Wegovy |
+| **Remboursement obésité** | Remboursé 65% (dès le 15/06/2026) | Remboursé 65% (dès le 15/06/2026) | Comparable |
 | **Tolérance globale** | Bonne | Bonne | Comparable |
 | **Recul clinique** | Bon | Très bon | Wegovy |
 | **Bénéfice cardiovasculaire prouvé** | Données en cours | Oui (étude SELECT) | Wegovy |
@@ -294,7 +294,7 @@ Mounjaro et Wegovy ne sont pas les seuls traitements disponibles. Selon votre pr
 ## Points clés à retenir
 
 - **En efficacité pure**, Mounjaro (tirzépatide) surpasse Wegovy (sémaglutide) d'environ 5 à 7 points de pourcentage sur la perte de poids moyenne, grâce à son double mécanisme GLP-1/GIP
-- **En accessibilité financière**, Wegovy a l'avantage grâce à un coût légèrement inférieur et un remboursement partiel
+- **En accessibilité financière**, Wegovy a un léger avantage grâce à un coût un peu inférieur (les deux sont remboursés à 65 % pour l'obésité depuis le 15 juin 2026)
 - **En profil de sécurité**, les deux traitements sont comparables, avec un léger avantage au sémaglutide en termes de recul clinique et de données cardiovasculaires (étude SELECT)
 - **Le choix est individuel** et dépend de votre profil médical, de vos objectifs de perte de poids, de votre budget et de la discussion avec votre médecin
 - **Les deux traitements sont efficaces** : que vous choisissiez Mounjaro ou Wegovy, vous bénéficiez d'un outil thérapeutique validé scientifiquement pour la gestion de l'obésité

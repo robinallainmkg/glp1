@@ -89,7 +89,7 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 |------------|--------------|---------------|
 | Victoza | ~48,42 € | 65% (DT2 uniquement) |
 | [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~80,18 € | 65% (DT2 bithérapie metformine) |
-| Wegovy | 169-360 € | Non remboursé |
+| Wegovy | 169-360 € | Remboursé 65% (obésité, depuis le 15/06/2026, sous conditions) |
 | Saxenda | 240-300 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale

@@ -135,14 +135,14 @@ La marche rapide 30 minutes par jour est le minimum recommandé par la HAS pour 
 
 ### Wegovy (sémaglutide 2,4 mg)
 - **Prix** : ~250 à 290 € par mois
-- **Remboursement** : non remboursé en mars 2026 (indication obésité sans diabète)
+- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en CSO/CHU
 
 ### Mounjaro (tirzepatide)
 - **Prix** : 230 à 440 € par mois selon dosage
-- **Remboursement** : non remboursé en mars 2026 — avis HAS favorable décembre 2025, remboursement attendu au 2e semestre 2026
+- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous les mêmes conditions que Wegovy
 
 ### ALD et prise en charge à 100%
-L'Affection de Longue Durée (ALD) permet une prise en charge à 100% du ticket modérateur pour le **diabète de type 2 (ALD 30)**. L'obésité seule n'est pas reconnue comme ALD en France en mars 2026. Les patients obèses sans diabète doivent donc assumer le coût de Wegovy ou Mounjaro.
+L'Affection de Longue Durée (ALD) permet une prise en charge à 100% du ticket modérateur pour le **diabète de type 2 (ALD 30)**. L'obésité seule n'est pas reconnue comme ALD en France. Toutefois, depuis le 15 juin 2026, les patients obèses sans diabète bénéficient d'un remboursement à 65% de Wegovy et Mounjaro (sous conditions d'éligibilité), le reste à charge pouvant être couvert par la mutuelle selon le contrat.
 
 ## Questions fréquentes
 

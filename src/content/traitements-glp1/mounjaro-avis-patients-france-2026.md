@@ -28,7 +28,7 @@ Nous avons recueilli des dizaines de témoignages et analyse les données cliniq
     <li><strong>Efficacité</strong> : 4,7/5 -- perte de poids supérieure aux autres GLP-1</li>
     <li><strong>Tolérance</strong> : 3,9/5 -- effets gastro-intestinaux fréquents les premieres semaines</li>
     <li><strong>Facilite d'utilisation</strong> : 4,5/5 -- une injection hebdomadaire, stylo ergonomique</li>
-    <li><strong>Rapport qualite-prix</strong> : 3,2/5 -- cout eleve en l'absence de remboursement</li>
+    <li><strong>Rapport qualite-prix</strong> : 3,2/5 -- cout eleve, desormais rembourse a 65% pour l'obésité depuis le 15/06/2026 (sous conditions)</li>
   </ul>
 </div>
 
@@ -139,12 +139,12 @@ L'un des aspects les plus demandes dans les avis sur Mounjaro concerne la compar
 | **Fréquence injection** | 1x par semaine | 1x par semaine | 1x par semaine |
 | **Note patients** | 4,4/5 | 4,1/5 | 4,0/5 |
 | **Prix mensuel (estimation)** | 230-440 EUR | 260-300 EUR | ~77-90 EUR |
-| **Remboursement** | Non (attendu 2e semestre 2026) | Non rembourse en avril 2026 | Oui (diabète uniquement) |
+| **Remboursement** | Oui, 65% obésité depuis le 15/06/2026 (sous conditions) ; DT2 aussi | Oui, 65% obésité depuis le 15/06/2026 (sous conditions) | Oui (diabète uniquement) |
 | **Disponibilite France** | Disponible depuis novembre 2024 | Ruptures fréquentes | Disponible |
 
 Le detail des prix est mis a jour regulierement sur nos pages dediees : [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/), [prix Ozempic](/collections/glp1-cout/prix-ozempic-france/), [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/).
 
-**Pourquoi les avis sur Mounjaro sont-ils meilleurs ?** La principale raison avancee par les patients ayant teste plusieurs traitements est l'efficacité supérieure du tirzepatide. Le double mecanisme d'action (GLP-1 + GIP) procure un controle de l'appétit plus puissant et une perte de poids plus importante. En revanche, le profil d'effets secondaires est comparable a celui du semaglutide, et le cout reste un frein majeur tant que le remboursement n'est pas effectif.
+**Pourquoi les avis sur Mounjaro sont-ils meilleurs ?** La principale raison avancee par les patients ayant teste plusieurs traitements est l'efficacité supérieure du tirzepatide. Le double mecanisme d'action (GLP-1 + GIP) procure un controle de l'appétit plus puissant et une perte de poids plus importante. En revanche, le profil d'effets secondaires est comparable a celui du semaglutide, et le cout, longtemps un frein majeur, est desormais allege pour les patients eligibles depuis le remboursement a 65% de l'obésité (15 juin 2026, sous conditions).
 
 Pour un comparatif détaillé des traitements GLP-1 disponibles en France, consultez notre [guide complet des GLP-1 en 2025](/collections/glp1-perte-de-poids/guide-complet-glp1-2025-france/).
 
@@ -178,14 +178,14 @@ Pour une analyse exhaustive de chaque effet secondaire avec les strategies de ge
 
 ## Prix de Mounjaro en France : le principal point de friction
 
-Le cout de Mounjaro est le sujet qui revient le plus frequemment dans les avis negatifs ou mitiges. En avril 2026, le tirzepatide n'est toujours pas rembourse par la Sécurité sociale pour l'indication obésité.
+Le cout de Mounjaro a longtemps ete le sujet qui revenait le plus frequemment dans les avis negatifs ou mitiges. La donne a change : **depuis le 15 juin 2026, le tirzepatide est rembourse a 65% par la Sécurité sociale pour l'obésité** (arrêté du 23 mai 2026), sous conditions.
 
-**Fourchette de prix constatee en pharmacie (avril 2026)** :
+**Fourchette de prix constatee en pharmacie (prix hors remboursement)** :
 - Mounjaro 2,5 mg : ~230 EUR par mois
 - Mounjaro 5 mg : ~275 EUR par mois
 - Mounjaro 7,5 a 15 mg : 395 a 440 EUR par mois
 
-Le remboursement est attendu au second semestre 2026 pour les patients repondant a des criteres precis (IMC supérieur ou égal a 30, ou IMC supérieur ou égal a 27 avec comorbidités). Retrouvez toutes les informations actualisees sur notre page [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) et sur les [conditions de remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
+Le remboursement obésité (65%) s'applique depuis le 15 juin 2026 aux patients repondant a des criteres precis : IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée (les 35% restants sont a la charge du patient ou de la mutuelle). Mounjaro est par ailleurs rembourse a 65% pour le diabète de type 2. Retrouvez toutes les informations actualisees sur notre page [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) et sur les [conditions de remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ## FAQ : les questions les plus posees sur Mounjaro
 
@@ -199,7 +199,7 @@ La plupart des patients rapportent une reduction de l'appétit des la premiere s
 
 ### Mounjaro est-il rembourse par la Sécurité sociale en 2026 ?
 
-En avril 2026, Mounjaro n'est pas encore rembourse pour l'indication perte de poids. Le remboursement est en cours d'evaluation par la HAS et est attendu au second semestre 2026, probablement sous conditions strictes d'IMC et de suivi medical. Pour les patients diabetiques de type 2, un remboursement partiel peut etre obtenu sur prescription d'un diabetologue. Suivez l'actualite sur notre page [remboursement Mounjaro](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).
+Oui. **Depuis le 15 juin 2026, Mounjaro est rembourse a 65% pour l'obésité** (arrêté du 23 mai 2026), sous conditions strictes : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée. Mounjaro est egalement rembourse a 65% pour le diabète de type 2 insuffisamment controle. Suivez l'actualite sur notre page [remboursement Mounjaro](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).
 
 ### Quels sont les effets secondaires les plus courants de Mounjaro ?
 
@@ -213,7 +213,7 @@ Oui, le passage d'un GLP-1 a Mounjaro est possible et regulierement pratique. Il
 
 Mounjaro représente une avancee thérapeutique majeure dans le traitement de l'obésité et du diabète de type 2. Les avis patients recueillis en France confirment ce que les essais cliniques suggeraient : le tirzepatide offre la perte de poids la plus importante parmi les GLP-1 actuellement disponibles, avec un profil d'effets secondaires comparable a celui du semaglutide.
 
-Les principaux atouts identifies par les patients sont l'efficacité supérieure, le controle puissant de l'appétit et l'amélioration globale des parametres metaboliques. Le principal frein reste le cout mensuel en l'absence de remboursement.
+Les principaux atouts identifies par les patients sont l'efficacité supérieure, le controle puissant de l'appétit et l'amélioration globale des parametres metaboliques. Le cout mensuel, longtemps le principal frein, est desormais allege pour les patients eligibles : Mounjaro est rembourse a 65% pour l'obésité depuis le 15 juin 2026 (sous conditions).
 
 Si vous envisagez un traitement par Mounjaro, nous recommandons de :
 

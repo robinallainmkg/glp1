@@ -144,7 +144,7 @@ Certaines mutuelles prennent en charge partiellement le coût. Il est recommand�
 
 ### Perspectives de remboursement
 
-La HAS a rendu un avis favorable sur Wegovy pour les adultes en décembre 2024 et les négociations avec le CEPS sont en cours pour un remboursement prévu au 2e semestre 2026. Le remboursement pour les adolescents suivra probablement avec un délai supplémentaire — une décision spécifique à cette population sera nécessaire.
+Pour les **adultes**, le remboursement à 65% de Wegovy (et de Mounjaro) dans l'obésité est **effectif depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai 2026), sous conditions d'éligibilité. Le remboursement pour les **adolescents**, lui, n'est pas encore acté : il est toujours à l'étude et nécessitera une décision spécifique à cette population, qui suivra probablement avec un délai supplémentaire.
 
 ## Questions fréquentes des parents
 

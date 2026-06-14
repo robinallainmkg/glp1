@@ -37,13 +37,13 @@ La **MGEN** (Mutuelle Générale de l'Éducation Nationale) compte parmi les com
 
 ## Wegovy : statut de remboursement Sécurité sociale en 2026
 
-Avant d'aborder la couverture MGEN, rappelons le contexte global. **Wegovy est remboursé à 65% par l'Assurance Maladie pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026), pour les adultes avec un IMC ≥ 35 avec comorbidité (ou ≥ 40) en échec de prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. La MGEN complète alors le **reste à charge de 35%**. Détails : [conditions d'éligibilité](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
+Avant d'aborder la couverture MGEN, rappelons le contexte global. **Wegovy est remboursé à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026), pour les adultes avec un IMC ≥ 35 avec comorbidité (ou ≥ 40) en échec de prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. La MGEN complète alors le **reste à charge de 35%**. Détails : [conditions d'éligibilité](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
 
 Pour suivre l'évolution réglementaire en temps réel, consultez notre [dossier remboursement Wegovy Sécurité sociale 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ### Le coût réel pour le patient
 
-En l'absence de remboursement de la base, le patient supporte aujourd'hui l'intégralité du prix officine :
+Pour les patients non éligibles au remboursement Sécu (hors conditions d'IMC ou de parcours de soins), le patient supporte l'intégralité du prix officine :
 
 - **Wegovy 0,25 mg** : environ 169 €/mois (phase d'initiation)
 - **Wegovy 0,5 mg / 1 mg** : environ 220 à 270 €/mois
@@ -53,9 +53,7 @@ Sur une année pleine au dosage cible, la facture peut donc dépasser **3 500 à
 
 ## La MGEN rembourse-t-elle Wegovy ?
 
-**Réponse directe : la MGEN ne rembourse pas Wegovy en tant que médicament prescrit pour l'obésité, parce qu'il n'est pas inscrit sur la liste des médicaments pris en charge par l'Assurance Maladie**. Or les complémentaires interviennent traditionnellement en complément du tarif Sécu (ticket modérateur, dépassements).
-
-Toutefois, certaines garanties MGEN peuvent couvrir tout ou partie du coût via des **forfaits dédiés** :
+**Réponse directe : pour les patients éligibles, Wegovy est désormais remboursé à 65% par l'Assurance Maladie (obésité, depuis le 15 juin 2026), et la MGEN intervient alors en complément sur le ticket modérateur de 35%, dans les conditions de droit commun.** Pour les patients non éligibles (Wegovy prescrit hors conditions de remboursement), la MGEN ne peut intervenir qu'au travers de **forfaits dédiés** :
 
 ### 1. Forfait « médicaments prescrits non remboursés »
 
@@ -105,9 +103,9 @@ Le forfait mutuelle seul ne suffit jamais à couvrir Wegovy. Les patients combin
 
 Souscrire une **surcomplémentaire** spécialisée (forfaits médicaments non remboursés étendus, jusqu'à 500-1 000 €/an chez certains assureurs) en complément du contrat MGEN principal. À comparer avec le coût annuel additionnel.
 
-### Anticiper le remboursement Sécu
+### Le passage au remboursement Sécu
 
-Le remboursement Sécu Wegovy étant **attendu au S2 2026**, les contrats MGEN basculeront automatiquement sur le **régime de droit commun** (ticket modérateur, 35 % ou 65 % selon SMR retenu par la HAS) dès l'inscription officielle au Journal Officiel.
+Le remboursement Sécu de Wegovy étant **effectif depuis le 15 juin 2026** (obésité, 65%), les contrats MGEN appliquent automatiquement le **régime de droit commun** (prise en charge du ticket modérateur de 35%) pour les patients éligibles, sans démarche particulière.
 
 ### Suivi médical encadré
 
@@ -128,19 +126,19 @@ Pour une vue d'ensemble comparative incluant d'autres complémentaires, consulte
 
 ## Mounjaro et Ozempic chez MGEN : situation 2026
 
-- **Mounjaro (tirzépatide)** : avis HAS favorable en novembre 2025 pour l'obésité, **pas encore remboursé** en mai 2026 (négo CEPS en cours). Comportement MGEN identique à Wegovy.
+- **Mounjaro (tirzépatide)** : **remboursé à 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026), aux mêmes conditions que Wegovy. Comportement MGEN identique à Wegovy.
 - **Ozempic (sémaglutide)** : remboursé à **65 %** en bithérapie avec metformine et à **30 %** en trithérapie avec insuline, **uniquement pour le diabète de type 2**. La MGEN couvre le ticket modérateur dans les conditions de droit commun. Toute prescription hors AMM (perte de poids sans diabète) reste à la charge du patient.
 
 ## Trouver le bon accompagnement médical
 
 La prescription d'un GLP-1 ne s'improvise pas : elle suppose un bilan complet, un suivi régulier (tolérance digestive, perte de poids, comorbidités) et une stratégie nutritionnelle. Si vous cherchez un **médecin habitué à prescrire les analogues du GLP-1** et un suivi diététique structuré, des plateformes spécialisées proposent ce parcours en téléconsultation.
 
-> Comparer les complémentaires santé adaptées à votre profil (forfaits obésité, médicaments non remboursés) reste la meilleure façon d'optimiser votre reste à charge avant la mise sur la liste Sécu.
+> Comparer les complémentaires santé adaptées à votre profil (forfaits obésité, médicaments non remboursés) reste la meilleure façon d'optimiser votre reste à charge, en particulier si vous n'êtes pas éligible au remboursement Sécu.
 
 ## FAQ — MGEN et Wegovy
 
 **1. La MGEN rembourse-t-elle directement Wegovy en 2026 ?**
-Non, pas en tant que médicament. Mais certains forfaits (médicaments non remboursés, prévention) peuvent couvrir partiellement le coût selon la formule souscrite.
+Pour les patients éligibles, Wegovy est remboursé à 65% par la Sécu (obésité, depuis le 15 juin 2026) et la MGEN complète le ticket modérateur de 35% en droit commun. Pour les patients non éligibles, certains forfaits (médicaments non remboursés, prévention) peuvent couvrir partiellement le coût selon la formule souscrite.
 
 **2. Quel forfait MGEN active pour Wegovy ?**
 Le forfait « médicaments prescrits non remboursés » est le plus pertinent. Vérifiez son plafond annuel sur votre tableau de garanties.
@@ -148,8 +146,8 @@ Le forfait « médicaments prescrits non remboursés » est le plus pertinent. V
 **3. Faut-il un accord préalable MGEN ?**
 Pas obligatoire pour activer un forfait, mais une **demande de prise en charge** préalable est recommandée pour les traitements longs et coûteux.
 
-**4. Que se passe-t-il quand Wegovy sera remboursé par la Sécu ?**
-Dès l'inscription au Journal Officiel, le ticket modérateur est automatiquement pris en charge par votre contrat MGEN dans les conditions de droit commun, sans démarche supplémentaire.
+**4. Comment la MGEN prend-elle en charge Wegovy depuis son remboursement Sécu ?**
+Depuis le 15 juin 2026, le ticket modérateur de 35% est automatiquement pris en charge par votre contrat MGEN dans les conditions de droit commun, sans démarche supplémentaire, pour les patients éligibles.
 
 **5. Puis-je cumuler MGEN et une surcomplémentaire ?**
 Oui, le cumul est légalement possible (sans dépasser le coût réel). Une surcomplémentaire « médicaments non remboursés » peut multiplier la couverture.

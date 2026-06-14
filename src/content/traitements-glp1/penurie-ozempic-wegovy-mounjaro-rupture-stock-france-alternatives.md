@@ -96,7 +96,7 @@ L'ANSM a publié des recommandations spécifiques pour les patients diabétiques
 
 ### Pour les patients traités pour l'obésité
 
-Pour les patients prenant Wegovy ou Mounjaro pour l'obésité (non remboursés), les alternatives en cas de pénurie sont plus limitées :
+Pour les patients prenant Wegovy ou Mounjaro pour l'obésité (remboursés à 65% depuis le 15 juin 2026, sous conditions), les alternatives en cas de pénurie sont plus limitées :
 
 **Alternatives GLP-1 disponibles pour l'obésité :**
 - **Saxenda (liraglutide 3 mg)** : efficacité légèrement inférieure à Wegovy, injection quotidienne, disponible

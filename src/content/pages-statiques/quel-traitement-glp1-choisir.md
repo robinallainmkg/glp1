@@ -107,8 +107,8 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 | Médicament | Molécule | Indication | Perte poids | Fréquence | Prix/mois | Remboursement |
 |------------|----------|------------|-------------|-----------|-----------|---------------|
 | **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~80,18€/stylo | 65% DT2 |
-| **Wegovy** | Sémaglutide HD | Obésité | 10-15% | Hebdomadaire | 169-360€ | Non remboursé |
-| **Mounjaro** | Tirzépatide | Diabète + Obésité | 15-20% | Hebdomadaire | 230-440€ | Non remboursé |
+| **Wegovy** | Sémaglutide HD | Obésité | 10-15% | Hebdomadaire | 169-360€ | 65% obésité (dès le 15/06/2026, sous conditions) |
+| **Mounjaro** | Tirzépatide | Diabète + Obésité | 15-20% | Hebdomadaire | 230-440€ | 65% obésité (dès le 15/06/2026, sous conditions) |
 | **Trulicity** | Dulaglutide | Diabète | 3-8% | Hebdomadaire | ~81€ | 65% DT2 |
 | **Victoza** | Liraglutide | Diabète | 5-8% | Quotidienne | ~60€ | 65% DT2 |
 | **Saxenda** | Liraglutide HD | Obésité | 8-12% | Quotidienne | 240-300€ | Non remboursé |
@@ -153,12 +153,12 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - Trulicity (~81€/mois, remboursé 65% DT2)
 - Rybelsus (80-110€/mois, non remboursé)
 
-#### Budget moyen (non remboursés) :
-- Wegovy (169-360€/mois)
-- Saxenda (240-300€/mois)
+#### Budget moyen :
+- Wegovy (169-360€/mois ; remboursé 65% pour l'obésité depuis le 15/06/2026, sous conditions)
+- Saxenda (240-300€/mois ; non remboursé)
 
-#### Budget élevé (non remboursés) :
-- Mounjaro (230-440€/mois)
+#### Budget élevé :
+- Mounjaro (230-440€/mois ; remboursé 65% pour l'obésité depuis le 15/06/2026, sous conditions)
 
 ## Effets secondaires et tolérance
 
@@ -202,7 +202,8 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 #### Taux de remboursement :
 - **65%** pour Trulicity (dulaglutide) et Victoza (liraglutide) en diabète de type 2.
 - **65%** pour Ozempic (sémaglutide) en diabète de type 2 (en bithérapie metformine).
-- **Non remboursé** : Rybelsus (avis HAS défavorable), Wegovy, Mounjaro, Saxenda.
+- **65%** pour Wegovy et Mounjaro dans l'indication obésité depuis le 15 juin 2026, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée).
+- **Non remboursé** : Rybelsus (avis HAS défavorable) et Saxenda.
 - **Supplément** possible selon mutuelle pour les médicaments remboursés (30-35% restants)
 
 ### Coûts réels après remboursement
@@ -213,13 +214,13 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 | Victoza | ~60€ | 65% (DT2) | ~21€ |
 | Trulicity | ~81€ | 65% (DT2) | ~28€ |
 | Rybelsus | 80-110€ | Non remboursé | 80-110€ (à charge) |
-| Wegovy | 169-360€ | Non remboursé | 169-360€ (à charge) |
-| Mounjaro | 230-440€ | Non remboursé | 230-440€ (à charge) |
+| Wegovy | 169-360€ | 65% (obésité, sous conditions) | ~59-126€ (si éligible) |
+| Mounjaro | 230-440€ | 65% (obésité, sous conditions) | ~81-154€ (si éligible) |
 | Saxenda | 240-300€ | Non remboursé | 240-300€ (à charge) |
 
 ### Aides financières disponibles
 
-1. **Mutuelles** : Renseignez-vous auprès de votre mutuelle pour une éventuelle prise en charge partielle des traitements non remboursés (Wegovy, Mounjaro, Saxenda)
+1. **Mutuelles** : Renseignez-vous auprès de votre mutuelle pour une éventuelle prise en charge du reste à charge (Wegovy et Mounjaro remboursés à 65% pour l'obésité depuis le 15/06/2026, sous conditions) ou des traitements non remboursés (Saxenda)
 2. **Complémentaire santé solidaire (CSS)** : Complète la couverture pour revenus modestes (médicaments remboursés uniquement)
 3. **Aide médicale d'État** : Pour situations précaires
 

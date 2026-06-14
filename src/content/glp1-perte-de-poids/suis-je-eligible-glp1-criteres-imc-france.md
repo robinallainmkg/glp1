@@ -22,7 +22,7 @@ faqSchema:
   - question: "Mon médecin généraliste peut-il prescrire un GLP-1 ?"
     answer: "Oui, dans la plupart des cas. Pour les formes sévères d'obésité ou en présence de comorbidités complexes, il peut vous orienter vers un endocrinologue."
   - question: "Les GLP-1 sont-ils remboursés en France ?"
-    answer: "Seuls les GLP-1 prescrits pour le diabète de type 2 bénéficient d'un remboursement partiel (30 %). Wegovy, Saxenda et Mounjaro pour la perte de poids ne sont pas remboursés."
+    answer: "Les GLP-1 prescrits pour le diabète de type 2 (Ozempic, Trulicity, Victoza) sont remboursés à 65 %. Depuis le 15 juin 2026, Wegovy et Mounjaro sont aussi remboursés à 65 % pour l'obésité, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel). Saxenda reste non remboursé."
   - question: "Combien de temps dure un traitement GLP-1 ?"
     answer: "Il n'y a pas de durée fixe. Le traitement est poursuivi tant que le bénéfice clinique est maintenu. L'arrêt s'accompagne fréquemment d'une reprise de poids."
 mainKeyword: "éligible traitement GLP-1 critères IMC"
@@ -194,7 +194,7 @@ Pour le détail complet de ce parcours, consultez notre article dédié : [Comme
 
 ### Les GLP-1 sont-ils remboursés en France ?
 
-**Cela dépend du traitement et de l'indication.** En France, seuls les GLP-1 prescrits dans le cadre du diabète de type 2 (Ozempic, Trulicity, Victoza) bénéficient d'un remboursement partiel (30 % par la Sécurité sociale). Wegovy, Saxenda et Mounjaro utilisés pour la perte de poids ne sont pas remboursés et restent à la charge du patient.
+**Cela dépend du traitement et de l'indication.** En France, les GLP-1 prescrits dans le cadre du diabète de type 2 (Ozempic, Trulicity, Victoza) bénéficient d'un remboursement à 65 % par la Sécurité sociale. Depuis le 15 juin 2026, Wegovy et Mounjaro sont également remboursés à 65 % pour l'indication obésité, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée). Saxenda, en revanche, reste non remboursé et à la charge du patient.
 
 ### Y a-t-il un âge limite pour recevoir un GLP-1 ?
 
