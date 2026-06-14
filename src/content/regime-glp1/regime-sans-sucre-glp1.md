@@ -105,11 +105,11 @@ La règle simple : si les sucres dépassent **5 g pour 100 g** dans un produit, 
 
 ### Wegovy (sémaglutide 2,4 mg pour l'obésité)
 - **Prix** : ~250 à 290 €/mois
-- **Remboursement** : non remboursé
+- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40)
 
 ### Mounjaro (tirzepatide)
 - **Prix** : 230 à 440 €/mois selon dosage
-- **Remboursement** : non remboursé (avis HAS favorable décembre 2025, attendu S2 2026)
+- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40)
 
 ## Conseils pratiques pour une transition réussie
 

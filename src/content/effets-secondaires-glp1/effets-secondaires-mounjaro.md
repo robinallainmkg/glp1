@@ -70,7 +70,7 @@ Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (
 - **Rash cutané** : Rare, consulter un médecin
 
 ### Troubles métaboliques
-- **Hypoglycémie** : Rare, surtout si associé à d'[autres traitements](/collections/pages-statiques/quel-traitement-glp1-choisir/)
+- **Hypoglycémie** : Rare, surtout si associé à d'[autres traitements](/guides/quel-traitement-glp1-choisir/)
 - **Déshydratation** : Due aux troubles digestifs
 
 ## 🚨 Effets Secondaires Graves (Consulter Immédiatement)

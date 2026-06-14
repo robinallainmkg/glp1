@@ -68,7 +68,7 @@ Ozempic est indiqué dans le traitement du diabète de type 2 chez l'adulte, en 
 - Une injection hebdomadaire seulement
 
 ### Efficacité prouvée
-Dans les études cliniques, Ozempic a démontré une supériorité par rapport aux [autres traitements](/collections/pages-statiques/quel-traitement-glp1-choisir/) oraux, avec un meilleur contrôle glycémique et une tolérance comparable.
+Dans les études cliniques, Ozempic a démontré une supériorité par rapport aux [autres traitements](/guides/quel-traitement-glp1-choisir/) oraux, avec un meilleur contrôle glycémique et une tolérance comparable.
 
 ## Ozempic et la perte de poids
 

@@ -1,5 +1,5 @@
 ---
-title: "Prix Ozempic France 2026 : 80,18€ Remboursé 65%"
+title: "Ozempic Prix 2026 : Tarif Pharmacie, Remboursement et Sans Ordonnance"
 thumbnail: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 description: "Ozempic prix pharmacie 2026 : 80,18€/stylo, remboursé 65% pour le diabète (reste 40€/mois). Ozempic 1 mg prix, sans ordonnance, comparatif dosages."
 keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic 1 mg prix', 'ozempic prix pharmacie', 'ozempic sans ordonnance prix', 'ozempic remboursement', 'ozempic prix sans ordonnance', 'ozempic 1 mg prix sans ordonnance', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'ozempic prix par mois']
@@ -114,7 +114,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 | <a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a> | ~81 € | 65% (DT2 uniquement) |
 | [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 € | Remboursé 65% (obésité, dès le 15/06/2026) |
 
-> **À lire aussi** : [témoignages et avis sur Ozempic](/collections/traitements-glp1/ozempic-avis-patients-france-2026/) · [quel traitement GLP-1 choisir](/collections/pages-statiques/quel-traitement-glp1-choisir/) · [baisse de prix Ozempic et Wegovy prévue en 2027](/collections/glp1-cout/baisse-prix-ozempic-wegovy-2027-france/)
+> **À lire aussi** : [témoignages et avis sur Ozempic](/collections/traitements-glp1/ozempic-avis-patients-france-2026/) · [quel traitement GLP-1 choisir](/guides/quel-traitement-glp1-choisir/) · [baisse de prix Ozempic et Wegovy prévue en 2027](/collections/glp1-cout/baisse-prix-ozempic-wegovy-2027-france/)
 
 👉 Pour en savoir plus, consultez notre guide sur [témoignage d'un patient sous Ozempic](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/).
 

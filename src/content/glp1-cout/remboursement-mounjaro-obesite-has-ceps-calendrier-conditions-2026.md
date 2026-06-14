@@ -27,7 +27,7 @@ Le remboursement de [Mounjaro](/collections/traitements-glp1/guide-complet-mounj
 
 La Commission de la Transparence de la HAS a rendu un **avis favorable le 9 décembre 2025** sur Mounjaro (tirzépatide) dans l'indication obésité. Cet avis est une étape indispensable du processus de remboursement en France : sans lui, aucun médicament ne peut être inscrit sur la liste des médicaments remboursables.
 
-La HAS a reconnu à Mounjaro un **Service Médical Rendu (SMR) important** dans la prise en charge de l'obésité chez l'adulte. Elle a également accordé une **Amélioration du Service Médical Rendu (ASMR)** par rapport aux traitements existants, reconnaissant la supériorité clinique démontrée par les essais SURMOUNT sur la perte de poids.
+La HAS a reconnu à Mounjaro un **Service Médical Rendu (SMR) important** dans la prise en charge de l'obésité chez l'adulte. Elle a également accordé une **Amélioration du Service Médical Rendu de niveau IV (ASMR mineure)** par rapport aux traitements existants, reconnaissant la supériorité clinique démontrée par les essais SURMOUNT sur la perte de poids.
 
 Les conditions d'utilisation précisées par la HAS dans son avis sont les suivantes :
 - IMC ≥ 35 kg/m² avec au moins une comorbidité liée au poids

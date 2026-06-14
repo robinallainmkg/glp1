@@ -122,11 +122,11 @@ Pour une semaine de rééquilibrage alimentaire adapté aux patients GLP-1 :
 
 ### Wegovy (sémaglutide pour l'obésité)
 - **Prix** : ~250 à 290 €/mois
-- **Remboursement** : non remboursé
+- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40)
 
 ### Mounjaro (tirzepatide)
 - **Prix** : 230 à 440 €/mois selon dosage
-- **Remboursement** : non remboursé (avis HAS favorable décembre 2025 — remboursement attendu S2 2026)
+- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40)
 
 ## Précautions importantes
 

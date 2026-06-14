@@ -192,7 +192,7 @@ Ozempic et Wegovy contiennent exactement la même molécule : le semaglutide, fa
 
 - **AMM** : traitement de l'obésité et du surpoids avec comorbidités.
 - **Dosage** : jusqu'a 2,4 mg par semaine (dose thérapeutique pour la perte de poids).
-- **Remboursement** : non rembourse en avril 2026.
+- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée).
 - **Prescription** : tout médecin forme (depuis juin 2025).
 
 ### Quel traitement demander ?

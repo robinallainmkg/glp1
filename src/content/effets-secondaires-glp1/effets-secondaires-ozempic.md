@@ -166,7 +166,7 @@ La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreati
 | [Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/) | ~39% | ~20% | ~14% | Modérée |
 | Trulicity | 10-20% | 5-10% | 3-5% | Bonne |
 
-Si vous souhaitez comparer avec un [autre traitement](/collections/pages-statiques/quel-traitement-glp1-choisir/) de la même famille, consultez notre guide sur les [effets secondaires de Mounjaro (tirzepatide)](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) ou les [effets secondaires de Rybelsus (sémaglutide oral)](/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/). Pour connaître le coût du traitement, retrouvez le [prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/) avec le détail du remboursement Sécurité Sociale.
+Si vous souhaitez comparer avec un [autre traitement](/guides/quel-traitement-glp1-choisir/) de la même famille, consultez notre guide sur les [effets secondaires de Mounjaro (tirzepatide)](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) ou les [effets secondaires de Rybelsus (sémaglutide oral)](/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/). Pour connaître le coût du traitement, retrouvez le [prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/) avec le détail du remboursement Sécurité Sociale.
 
 ## 💡 Conseils pour une Bonne Tolérance
 

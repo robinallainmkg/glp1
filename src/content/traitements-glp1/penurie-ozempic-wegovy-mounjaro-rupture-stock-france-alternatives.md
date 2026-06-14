@@ -1,5 +1,5 @@
 ---
-title: "Pénurie Ozempic et Wegovy : Où en Est-on en 2026 et Où en Trouver ?"
+title: "Pénurie Ozempic/Wegovy/Mounjaro 2026 : Alternatives et Retour de Stock"
 description: "Ozempic, Wegovy ou Mounjaro indisponible en pharmacie ? Point sur les tensions d'approvisionnement en 2026, où en trouver, les alternatives validées par l'ANSM et l'impact de la demande liée au remboursement du 15 juin."
 keywords: ['penurie ozempic', 'rupture stock wegovy', 'penurie mounjaro', 'penurie glp1 pharmacie', 'ozempic indisponible pharmacie', 'alternative penurie glp1', 'rupture approvisionnement semaglutide', 'ozempic wegovy penurie']
 seoTitle: "Pénurie Ozempic Wegovy 2026 : Où en Trouver ?"

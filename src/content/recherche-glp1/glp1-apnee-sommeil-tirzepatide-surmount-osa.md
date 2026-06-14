@@ -182,7 +182,7 @@ Le tirzépatide ne vise pas à remplacer systématiquement la PPC. Les deux appr
 | Observance au long cours | Problématique (30-50 % d'abandon) | Injections hebdomadaires, tolérance variable |
 | Effet sur le poids | Aucun (voire légère prise) | Perte de 18-20 % en moyenne |
 | Bénéfices cardiovasculaires | Modestes | Significatifs (cf. [études GLP-1 et coeur](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/)) |
-| Coût en France | Remboursé (Assurance maladie) | Non remboursé pour l'obésité (à ce jour) |
+| Coût en France | Remboursé (Assurance maladie) | Remboursé 65% (obésité, depuis le 15/06/2026, sous conditions) |
 
 ## Perspectives pour les patients français {#perspectives-france}
 

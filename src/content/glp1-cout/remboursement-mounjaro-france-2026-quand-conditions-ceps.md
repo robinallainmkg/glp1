@@ -29,7 +29,7 @@ Le 9 décembre 2025, la Commission de la Transparence de la **Haute Autorité de
 
 La HAS a reconnu :
 - Un **Service Médical Rendu (SMR) important** : Mounjaro répond à un besoin médical réel et documenté
-- Une **Amélioration du Service Médical Rendu (ASMR)** : la HAS a reconnu la supériorité clinique de Mounjaro par rapport aux traitements existants, notamment grâce aux données des études SURMOUNT
+- Une **Amélioration du Service Médical Rendu de niveau IV (ASMR mineure)** : la HAS a reconnu la supériorité clinique de Mounjaro par rapport aux traitements existants, notamment grâce aux données des études SURMOUNT
 
 Sans cet avis, aucun remboursement n'était possible. Il valide que Mounjaro a sa place dans la prise en charge de l'obésité en France.
 

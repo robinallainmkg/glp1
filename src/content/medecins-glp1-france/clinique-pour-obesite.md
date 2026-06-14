@@ -245,8 +245,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **Wegovy :**
 - **Prix :** 169-360€/mois (selon dose)
-- **Remboursement :** Non remboursé (mars 2026). Négociations CEPS en cours.
-- **Reste à charge :** Intégralité du coût. Certaines mutuelles proposent une prise en charge partielle.
+- **Remboursement :** Remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée).
+- **Reste à charge :** 35% (ticket modérateur) pour les patients éligibles, souvent couvert par la mutuelle ; intégralité du coût pour les patients hors critères.
 
 ## Critères d'Éligibilité et Contre-indications
 

@@ -360,7 +360,7 @@ Pour un parcours complet étape par étape, consultez notre guide [comment déma
 ### GLP-1 oraux
 - **[Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)** : Semaglutide oral (jusqu'à 14 mg/jour)
 
-> **À lire aussi** : [quel traitement GLP-1 choisir](/collections/pages-statiques/quel-traitement-glp1-choisir/) · [GLP-1 chez les seniors de plus de 65 ans](/collections/traitements-glp1/glp1-seniors-plus-65-ans-limites-ansm-alternatives/)
+> **À lire aussi** : [quel traitement GLP-1 choisir](/guides/quel-traitement-glp1-choisir/) · [GLP-1 chez les seniors de plus de 65 ans](/collections/traitements-glp1/glp1-seniors-plus-65-ans-limites-ansm-alternatives/)
 
 ## FAQ Mounjaro
 

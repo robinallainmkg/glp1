@@ -1,5 +1,5 @@
 ---
-title: "Prix Mounjaro France 2026 : Le Moins Cher (230€)"
+title: "Mounjaro Prix France 2026 : Le Moins Cher par Dosage (dès 230€)"
 thumbnail: "/images/thumbnails/mounjaro-blue.webp"
 description: "Mounjaro prix le moins cher en France 2026 : à partir de 230€/mois en pharmacie. Tableau comparatif 2.5mg à 15mg + remboursement Ameli/mutuelle 2026."
 keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounjaro pharmacie prix', 'mounjaro prix le moins cher', 'mounjaro prix le moins cher pharmacie', 'mounjaro pharmacie moins cher', 'mounjaro moins cher', 'mounjaro prix pharmacie en ligne', 'mounjaro remboursement 2026', 'mounjaro remboursement ameli', 'mounjaro 5 mg prix france', 'mounjaro 7 5 mg prix', 'ou trouver le mounjaro le moins cher', 'carte prix mounjaro france', 'mounjaro prix espagne', 'mounjaro prix allemagne', 'mounjaro prix italie']
@@ -227,7 +227,7 @@ Cette prise en charge fait suite à l'**avis favorable de la HAS de décembre 20
 
 ### Conditions d'Accès au Traitement
 
-Bien que non remboursé, Mounjaro reste un médicament soumis à prescription médicale. Les conditions d'accès incluent une prescription par un médecin (endocrinologue, diabétologue ou généraliste), un diagnostic de diabète de type 2 ou d'obésité (IMC supérieur ou égal a 30 kg/m²), et un suivi médical régulier. Pour connaître en détail les [règles de prescription Mounjaro selon l'ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/), consultez notre guide dédié.
+Bien que désormais remboursé sous conditions, Mounjaro reste un médicament soumis à prescription médicale. Les conditions d'accès incluent une prescription par un médecin (endocrinologue, diabétologue ou généraliste), un diagnostic de diabète de type 2 ou d'obésité (IMC supérieur ou égal a 30 kg/m²), et un suivi médical régulier. Pour connaître en détail les [règles de prescription Mounjaro selon l'ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/), consultez notre guide dédié.
 
 ### Détail des Conditions de Remboursement
 
