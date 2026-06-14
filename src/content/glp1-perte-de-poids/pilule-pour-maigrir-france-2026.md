@@ -193,7 +193,7 @@ L'ANSM (Agence Nationale de Sécurité du Médicament) publie regulierement des 
 | **Perte de poids moyenne** | 10-12 % | 3-5 % | 15-22 % |
 | **Fréquence** | 1 comprimé/jour | 1 a 3 comprimes/jour | 1 injection/semaine |
 | **Prix mensuel** | 80-100 euros | 50-70 euros | 170-360 euros |
-| **Remboursement** | 65 % (DT2 uniquement) | Non rembourse | 65 % (DT2 pour Ozempic) |
+| **Remboursement** | 65 % (DT2 uniquement) | Non rembourse | 65 % (DT2 pour Ozempic ; obésité pour Wegovy depuis 15/06/2026) |
 | **Contraintes** | A jeun, 30 min avant repas | Régime pauvre en graisses | Injection a realiser soi-même |
 | **Effets secondaires principaux** | Nausees, diarrhée | Selles grasses, flatulences | Nausees, diarrhée |
 | **Ordonnance requise** | Oui | Oui (Xenical) | Oui |
