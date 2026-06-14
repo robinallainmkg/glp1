@@ -664,8 +664,8 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
       // 2 fournisseurs soient saturés en même temps → dead-end quasi impossible.
       const LLM_CHAIN = [
         { url: "https://api.groq.com/openai/v1/chat/completions", key: groqKey, model: "llama-3.3-70b-versatile" },
-        { url: "https://api.groq.com/openai/v1/chat/completions", key: groqKey, model: "llama-3.1-8b-instant" },
         { url: "https://api.mistral.ai/v1/chat/completions", key: mistralKey, model: "mistral-small-latest" },
+        { url: "https://api.groq.com/openai/v1/chat/completions", key: groqKey, model: "llama-3.1-8b-instant" },
       ];
       let llmResponse: Response | null = null;
       let usedModel = LLM_CHAIN[0].model;
@@ -682,7 +682,7 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
               model: link.model,
               messages,
               temperature: 0.3,
-              max_tokens: hasConsultation ? MAX_RESPONSE_TOKENS : 300,
+              max_tokens: hasConsultation ? MAX_RESPONSE_TOKENS : 220,
               top_p: 0.9,
             }),
           });
