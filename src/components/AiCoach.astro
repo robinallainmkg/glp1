@@ -775,9 +775,10 @@ import { supabaseConfig } from '../lib/supabase.js';
     ctaDiv.className = 'coach-cta-upgrade';
     ctaDiv.innerHTML =
       '<p>Tu as utilis\u00e9 tes messages gratuits du jour.</p>' +
-      '<a href="/tarifs/" class="cta-btn-premium">Passer Premium \u2014 4\u20ac/mois</a>' +
-      '<p class="cta-subtext">\u00c9changes illimit\u00e9s + coach personnalis\u00e9 selon ton traitement' +
-      (loggedIn ? '' : ' \u00b7 <a href="/mon-espace/" style="color:#92400e;text-decoration:underline;">ou cr\u00e9er un compte gratuit</a>') +
+      '<a href="/mon-espace/consultation/" class="cta-btn-premium">Consultation priv\u00e9e \u2014 3\u20ac</a>' +
+      '<p class="cta-subtext">Bilan complet + tes questions illimit\u00e9es pendant 48h \u00b7 paiement unique<br>' +
+      '<a href="/tarifs/" style="color:#92400e;text-decoration:underline;">ou suivi continu Premium 4\u20ac/mois</a>' +
+      (loggedIn ? '' : ' \u00b7 <a href="/mon-espace/" style="color:#92400e;text-decoration:underline;">cr\u00e9er un compte gratuit</a>') +
       '</p>';
     messagesEl.appendChild(ctaDiv);
     scrollToBottom();
