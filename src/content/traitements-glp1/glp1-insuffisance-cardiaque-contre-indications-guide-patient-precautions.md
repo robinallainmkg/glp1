@@ -177,7 +177,7 @@ Si vous êtes insuffisant cardiaque et débutez un GLP-1, voici le suivi recomma
 
 ## Ce que disent les études SUMMIT et FLOW {#etudes}
 
-Deux études majeures récentes ont changé la donne pour les patients cardiaques traités par GLP-1 :
+Deux études majeures récentes ont changé la donne [pour les patients cardiaques](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-benefices/) traités par GLP-1 :
 
 ### SUMMIT (tirzépatide + IC-FEP)
 

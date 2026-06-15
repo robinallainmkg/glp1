@@ -196,7 +196,7 @@ La tolérance aux GLP-1 varie considérablement selon les individus, les dosages
 ### Associations de patients
 
 **Fédération Française des Diabétiques (FFD)**
-- **Site** : afdiabete.fr
+- **Site** : federationdesdiabetiques.org
 - **Téléphone** : 01 42 81 28 81
 - **Support** : Groupes de parole, conseils
 

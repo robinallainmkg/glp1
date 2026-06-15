@@ -37,7 +37,7 @@ Le succès des traitements GLP-1 comme [Wegovy](/collections/traitements-glp1/gu
 1. [Pourquoi la peau se relâche après une perte de poids importante](#pourquoi)
 2. [Les zones du corps les plus touchées](#zones)
 3. [GLP-1 vs chirurgie bariatrique : le relâchement est-il différent ?](#glp1-vs-chirurgie)
-4. [Peut-on prévenir le relâchement cutané ?](#prevention)
+4. [Peut-on [prévenir le relâchement cutané](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) ?](#prevention)
 5. [Les solutions non chirurgicales](#solutions-non-chir)
 6. [Les solutions chirurgicales](#solutions-chir)
 7. [Remboursement et prise en charge en France](#remboursement)

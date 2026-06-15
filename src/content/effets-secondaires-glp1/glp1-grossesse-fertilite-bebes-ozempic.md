@@ -122,7 +122,7 @@ Ces questions font l'objet de registres de suivi internationaux, et les résulta
 
 ### Peut-on allaiter sous GLP-1 ?
 
-Non, les [contre-indications des GLP-1 pendant l'allaitement](/collections/effets-secondaires-glp1/glp1-allaitement-ozempic-wegovy-post-partum-contre-indication/) sont formelles. On sait que le sémaglutide passe dans le lait des animaux, et bien que les données humaines soient insuffisantes, le principe de précaution s'applique.
+Non, les [contre-indications [des GLP-1 pendant l'allaitement](/collections/effets-secondaires-glp1/glp1-allaitement-ozempic-wegovy-post-partum-contre-indication/)](/collections/effets-secondaires-glp1/glp1-allaitement-ozempic-wegovy-post-partum-contre-indication/) sont formelles. On sait que le sémaglutide passe dans le lait des animaux, et bien que les données humaines soient insuffisantes, le principe de précaution s'applique.
 
 Si vous souhaitez allaiter, vous devrez attendre la fin de la période d'allaitement avant de reprendre votre traitement GLP-1. Discutez de ce choix avec votre médecin, qui vous aidera à planifier la reprise du traitement après le sevrage.
 

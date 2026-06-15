@@ -19,7 +19,7 @@ mainKeyword: "Mounjaro remboursement Sécurité Sociale conditions 2026"
 secondaryKeywords: ["mounjaro remboursement 2026", "tirzepatide remboursement france", "mounjaro HAS avis ASMR", "mounjaro CEPS négociations", "mounjaro obesite remboursement conditions"]
 ---
 
-Le remboursement de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide, Eli Lilly) par l'Assurance Maladie française est l'un des sujets les plus attendus de 2026 dans le domaine de la prise en charge de l'obésité. La Haute Autorité de Santé a rendu un **avis favorable le 9 décembre 2025**, et c'est désormais acté : **Mounjaro est remboursé à 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026). Ce guide détaille les conditions exigées, le calendrier officiel et ce que cela signifie concrètement pour les patients concernés.
+Le remboursement de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide, Eli Lilly) par l'Assurance Maladie française est l'un des sujets les plus attendus de 2026 dans le domaine de la prise en charge de l'obésité. La Haute Autorité de Santé a rendu un **avis favorable le 9 décembre 2025**, et c'est désormais acté : **Mounjaro est remboursé à 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 10 juin 2026 (qui abroge et remplace l'arrêté du 23 mai 2026, date d'effet identique au 15 juin 2026)). Ce guide détaille les conditions exigées, le calendrier officiel et ce que cela signifie concrètement pour les patients concernés.
 
 ## Où en est Mounjaro dans le processus de remboursement ?
 

@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Une nouvelle étude publiée début 2026 vient chiffrer avec précision ce que les médecins observaient déjà en pratique : après l'arrêt d'un traitement GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ou [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), la reprise de poids est environ **4 fois plus rapide** qu'après l'arrêt d'un régime alimentaire classique. Ces données soulèvent des questions importantes sur la durée optimale des traitements et sur ce qui se passe dans l'organisme une fois le médicament arrêté.
+Une nouvelle étude publiée début 2026 vient chiffrer avec précision ce que les médecins observaient déjà en pratique : après l'arrêt d'un traitement GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ou [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), [la reprise de poids](/collections/recherche-glp1/arret-glp1-risque-cardiovasculaire-etude-2026/) est environ **4 fois plus rapide** qu'après l'arrêt d'un régime alimentaire classique. Ces données soulèvent des questions importantes sur la durée optimale des traitements et sur ce qui se passe dans l'organisme une fois le médicament arrêté.
 
 👉 Pour en savoir plus, consultez notre guide sur [témoignage sur la gestion du poids post-GLP-1](/collections/temoignages/temoignage-laurent-transformation-glp1/).
 

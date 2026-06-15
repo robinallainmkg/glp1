@@ -113,7 +113,7 @@ Pour une semaine de rééquilibrage alimentaire adapté aux patients GLP-1 :
 - Midi : Salade betterave-mâche-noix + sardines
 - Soir : Soupe de poireaux + fromage blanc nature
 
-## Remboursement et coûts des traitements GLP-1 (France, mars 2026)
+## Remboursement et coûts des traitements GLP-1 (France, juin 2026)
 
 ### Ozempic (sémaglutide pour le diabète de type 2)
 - **Prix** : ~76,58 € par stylo prérempli

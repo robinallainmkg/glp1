@@ -9,7 +9,7 @@ category: "Recherche médicale"
 tags: ["glp1", "apnée du sommeil", "SAOS", "tirzépatide", "mounjaro", "sémaglutide", "recherche", "sommeil"]
 collection: "recherche-glp1"
 thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
-thumbnailAlt: "GLP-1 et apnée du sommeil - traitement du SAOS"
+thumbnailAlt: "GLP-1 [et apnée du sommeil](/collections/glp1-perte-de-poids/glp1-syndrome-metabolique-traitement-composantes/) - traitement du SAOS"
 featured: true
 published: true
 priority: 2
@@ -142,7 +142,7 @@ L'apnée du sommeil pourrait devenir un critère additionnel pour justifier la p
 
 ### Que faire si vous êtes concerné ?
 
-Si vous souffrez d'apnée du sommeil et d'obésité, discutez avec votre médecin de la possibilité d'un traitement GLP-1. Les bénéfices potentiels incluent une amélioration du SAOS, une possible réduction du besoin de PPC, et une perte de poids bénéfique pour l'ensemble de vos comorbidités. Au-delà de l'apnée du sommeil, les GLP-1 offrent des [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) documentés par de grandes études cliniques. Pour connaître les conditions d'accès actuelles, consultez notre guide sur le [remboursement des traitements GLP-1 en France](/collections/glp1-cout/remboursement-glp1-2026/) en 2026.
+Si vous souffrez d'[apnée du sommeil et](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/) d'obésité, discutez avec votre médecin de la possibilité d'un traitement GLP-1. Les bénéfices potentiels incluent une amélioration du SAOS, une possible réduction du besoin de PPC, et une perte de poids bénéfique pour l'ensemble de vos comorbidités. Au-delà de l'apnée du sommeil, les GLP-1 offrent des [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) documentés par de grandes études cliniques. Pour connaître les conditions d'accès actuelles, consultez notre guide sur le [remboursement des traitements GLP-1 en France](/collections/glp1-cout/remboursement-glp1-2026/) en 2026.
 
 **Ne jamais arrêter votre PPC sans avis médical**, même si vous perdez du poids sous GLP-1. La réduction de la PPC doit être progressive et supervisée par un pneumologue, avec une polysomnographie de contrôle.
 

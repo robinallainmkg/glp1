@@ -20,7 +20,7 @@ faqSchema:
   - question: "Mon médecin généraliste peut-il prescrire un GLP-1 pour la perte de poids ?"
     answer: "Oui. Depuis juin 2025, les médecins généralistes peuvent prescrire les GLP-1 pour l'obésité en France, sans obligation de passer par un spécialiste. Toutefois, les cas complexes peuvent nécessiter l'avis d'un endocrinologue."
   - question: "Dois-je apporter des documents à ma première consultation ?"
-    answer: "Idéalement, apportez vos derniers bilans sanguins (moins de 3 mois), la liste de vos médicaments en cours, votre historique de poids et de régimes, et vos éventuels comptes-rendus de spécialistes."
+    answer: "Idéalement, apportez vos derniers bilans sanguins (moins de 3 mois), la liste de [vos médicaments en cours](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/), votre historique de poids et de régimes, et vos éventuels comptes-rendus de spécialistes."
   - question: "Que faire si mon médecin refuse de me prescrire un GLP-1 ?"
     answer: "Demandez-lui les raisons précises de son refus. S'il s'agit d'une contre-indication médicale, respectez-la. S'il n'est pas familier avec ces traitements, vous pouvez demander une orientation vers un endocrinologue ou un médecin nutritionniste spécialisé."
   - question: "Puis-je poser mes questions par écrit au médecin avant la consultation ?"

@@ -53,7 +53,7 @@ Les résultats sont statistiquement significatifs, meme s'ils restent modestes e
 | Indicateur | Patients sous GLP-1 | Groupe temoin | Difference |
 |------------|---------------------|---------------|------------|
 | **Goutte** | 7,4% | 6,6% | +0,8 point (RR 1,12) |
-| **Osteomalacie** | 0,2% | 0,1% | x2 |
+| **Osteomalacie** | 2% | 0,1% | x20 |
 | **Osteoporose diagnostiquee** | Augmentation significative | Ref. | Signal identifie |
 | **Fractures** | Tendance a la hausse | Ref. | En cours d'analyse |
 

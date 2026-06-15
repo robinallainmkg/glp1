@@ -98,7 +98,7 @@ Contrairement à une idée reçue, les patients sous GLP-1 n'ont généralement 
 
 ### À privilégier
 
-**Protéines maigres** (indispensables pour <a href="/glp1-fonte-musculaire-preserver-muscles/">préserver la masse musculaire</a>) :
+**Protéines maigres** (indispensables pour <a href="/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/">préserver la masse musculaire</a>) :
 - Poisson (saumon, cabillaud, sardines) : 2 à 3 fois par semaine
 - Volailles (poulet, dinde) : sans la peau
 - Légumineuses (lentilles, pois chiches) : excellente source de protéines végétales et de fibres

@@ -133,7 +133,7 @@ Dans ce cas, l'objectif du traitement devient le **maintien du poids perdu** —
 
 Il est utile de lire notre article sur l'[arrêt des GLP-1 et la reprise de poids](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) pour comprendre les enjeux du maintien à long terme.
 
-## Questions fréquentes sur le plateau de poids
+## Questions fréquentes sur [le plateau de poids](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/)
 
 **Mon plateau dure depuis 2 mois. Est-ce que le traitement a cessé de fonctionner ?**
 Pas nécessairement. Un plateau de 2 mois à mi-parcours de traitement peut refléter l'adaptation métabolique normale. Consultez votre médecin pour évaluer si une adaptation du traitement est indiquée.

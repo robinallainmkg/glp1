@@ -199,7 +199,7 @@ Des études récentes ont également mis en évidence un [risque de goutte et d'
 
 L'ANSM suit plus de **870 000 patients sous agonistes GLP-1** en France. Entre août 2023 et janvier 2025 :
 - **376 cas graves** rapportés au total
-- **1 décès** par pancréatite dans un contexte de mésusage
+- **19 décès** rapportés chez des patients sous aGLP-1 sur la période août 2023-janvier 2025, sans lien direct établi avec ces médicaments (bilan ANSM oct. 2025)
 - Le profil de sécurité global reste favorable dans le cadre des indications autorisées
 
 ### Surveillance post-marketing

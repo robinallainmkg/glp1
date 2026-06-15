@@ -30,7 +30,7 @@ affiliateConfig:
 
 Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) sont habituellement associés à la prise en charge de l'obésité ou du diabète. Mais une question émerge avec la popularisation de ces traitements : quel est leur impact sur les sportifs — amateurs réguliers, pratiquants de course à pied, cyclistes, nageurs ou même compétiteurs — qui commencent un GLP-1 pour leur poids ou leur santé métabolique ? Composition corporelle, VO2max, récupération, force musculaire : voici ce que les données scientifiques disponibles en 2026 permettent de dire.
 
-## En quoi les sportifs sous GLP-1 sont différents des sédentaires
+## En quoi [les sportifs sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) sont différents des sédentaires
 
 ### Un profil particulier
 
@@ -84,7 +84,7 @@ En pratique, les cyclistes et coureurs sous GLP-1 rapportent souvent une amélio
 
 ### Nutrition périentraînement : adapter la stratégie
 
-La gestion de la nutrition autour de l'entraînement est l'aspect le plus important pour les sportifs sous GLP-1. L'appétit réduit crée un risque de déficit calorique trop important par rapport aux besoins réels :
+La gestion de la nutrition autour de l'entraînement est l'aspect le plus important [[pour les sportifs sous](/collections/effets-secondaires-glp1/glp1-risque-osseux-fractures-tendons-blessures-2026/) GLP-1](/collections/regime-glp1/glp1-proteines/). L'appétit réduit crée un risque de déficit calorique trop important par rapport aux besoins réels :
 
 **Avant l'effort :** consommer des glucides rapidement assimilables 30 à 60 minutes avant la séance reste indispensable pour les séances de plus de 45 minutes. Les GLP-1 ne contre-indiquent pas les glucides péri-entraînement, mais la vidange gastrique ralentie impose de consommer les aliments plus tôt qu'à l'habitude.
 

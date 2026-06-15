@@ -30,7 +30,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Après l'accouchement, la question de la perte de poids revient naturellement pour de nombreuses jeunes mamans. Celles qui prenaient un traitement GLP-1 avant la grossesse — ou qui envisagent d'en commencer un — se posent une question légitime : peut-on prendre [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pendant l'allaitement ? La réponse est claire : non, ces médicaments sont contre-indiqués pendant toute la durée de l'allaitement maternel. Voici pourquoi, et quelles alternatives existent pour perdre du poids en toute sécurité après l'accouchement.
+Après l'accouchement, la question de la perte de poids revient naturellement pour de nombreuses jeunes mamans. Celles qui prenaient un traitement GLP-1 avant la grossesse — ou qui envisagent d'en commencer un — se posent une question légitime : peut-on prendre [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pendant l'allaitement ? La réponse est claire : non, ces médicaments sont contre-indiqués pendant toute la durée de l'allaitement maternel. Voici pourquoi, et quelles alternatives existent [pour perdre du poids en](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) toute sécurité après l'accouchement.
 
 ## Pourquoi les GLP-1 sont contre-indiqués pendant l'allaitement
 
@@ -125,7 +125,7 @@ Si vous souffrez d'obésité (IMC supérieur ou égal à 30) ou de diabète de t
 En France en 2026, les GLP-1 sont [remboursés](/collections/glp1-cout/remboursement-glp1-2026/) uniquement dans deux indications :
 
 - **Diabète de type 2** : Ozempic, Victoza, Trulicity et Rybelsus sont remboursés
-- **Obésité** : le remboursement de Wegovy et Mounjaro est en cours de négociation avec les autorités de santé
+- **Obésité** : Wegovy et Mounjaro sont remboursés à 65% depuis le 15 juin 2026, sous conditions (IMC ≥ 40 kg/m² ou IMC ≥ 35 avec comorbidités, prescription initiale par spécialiste)
 
 La perte de poids post-partum en elle-même n'est pas une indication remboursée. Toutefois, si vous remplissez les critères d'obésité (IMC supérieur ou égal à 30 avec comorbidités), vous pouvez être éligible au traitement et à son remboursement, indépendamment du contexte post-partum.
 

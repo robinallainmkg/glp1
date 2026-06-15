@@ -30,7 +30,7 @@ affiliateConfig:
 
 ## À retenir
 
-Une étude nationale publiée dans *Value in Health* en 2026 révèle que 2,2 % des utilisateurs de GLP-1 en France n'ont ni diabète de type 2 ni obésité — les deux indications autorisées. Ces données précises permettent de mieux comprendre le phénomène de mésusage et ses implications sanitaires.
+Une étude nationale publiée dans *Value in Health* en 2025 révèle que 2,2 % des utilisateurs de GLP-1 en France n'ont ni diabète de type 2 ni obésité — les deux indications autorisées. Ces données précises permettent de mieux comprendre le phénomène de mésusage et ses implications sanitaires.
 
 ---
 

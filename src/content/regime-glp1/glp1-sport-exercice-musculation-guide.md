@@ -48,7 +48,7 @@ Cette perte musculaire a des conséquences concrètes :
 
 Les données combinées des études sur les GLP-1 et l'exercice physique montrent des résultats remarquables. Les patients qui combinent traitement GLP-1 et activité physique régulière obtiennent généralement de meilleurs résultats : une perte de poids amplifiée et une meilleure conservation de la masse musculaire. Certaines études estiment que l'exercice permet de préserver jusqu'à 85-95 % de la masse musculaire, contre 60-75 % sans programme d'entraînement — mais ces chiffres varient selon les études et les populations concernées.
 
-Au-delà de la composition corporelle, l'association GLP-1 et exercice apporte d'autres bénéfices :
+Au-delà [de la composition corporelle](/collections/regime-glp1/suivi-glp1-perte-de-poids-effets-dose/), l'association GLP-1 et exercice apporte d'autres bénéfices :
 
 - **Amélioration de la sensibilité à l'insuline** amplifiée par les effets synergiques
 - **Meilleur maintien du poids à long terme** après réduction de dose ou arrêt du traitement

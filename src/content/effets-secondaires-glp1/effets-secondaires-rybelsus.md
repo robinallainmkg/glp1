@@ -94,7 +94,7 @@ mainKeyword: "effets secondaires Rybelsus sémaglutide oral"
 
 **Particularités** :
 - Classé très rare (jusqu'à 1 cas sur 10 000 patients)
-- Confirmé par l'EMA/PRAC en janvier 2025 pour tous les médicaments à base de sémaglutide (Rybelsus, Ozempic, Wegovy)
+- Confirmé par l'EMA/PRAC en juin 2025 pour tous les médicaments à base de sémaglutide (Rybelsus, Ozempic, Wegovy) — la revue avait été initiée en janvier 2025
 - Peut entraîner une perte de vision dans l'œil atteint
 - Consulter immédiatement en cas de troubles visuels soudains
 
@@ -209,7 +209,7 @@ mainKeyword: "effets secondaires Rybelsus sémaglutide oral"
 ### Associations de patients
 
 **Fédération Française des Diabétiques (FFD)**
-- **Site** : afdiabete.fr
+- **Site** : federationdesdiabetiques.org
 - **Téléphone** : 01 42 81 28 81
 - **Support** : Groupes de parole, conseils
 

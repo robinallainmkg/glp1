@@ -66,7 +66,7 @@ La plupart des nutritionnistes et médecins spécialisés dans l'obésité recom
 
 **Exemple concret** : pour une personne de 90 kg, cela représente entre 108 g et 144 g de protéines par jour — soit environ 3 à 4 portions de protéines animales de bonne taille.
 
-Ces recommandations sont supérieures aux apports journaliers recommandés classiques (0,8 g/kg), car la [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) augmente les besoins en protéines pour préserver les muscles. Pour déterminer vos [calories journalières recommandées](/collections/regime-glp1/glp1-calories-journalieres/) sous traitement, un suivi nutritionnel est conseillé.
+Ces recommandations sont supérieures aux apports journaliers recommandés classiques (0,8 g/kg), car la [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) augmente les besoins en protéines [pour préserver les muscles](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/). Pour déterminer vos [calories journalières recommandées](/collections/regime-glp1/glp1-calories-journalieres/) sous traitement, un suivi nutritionnel est conseillé.
 
 ### Répartir les protéines sur la journée
 

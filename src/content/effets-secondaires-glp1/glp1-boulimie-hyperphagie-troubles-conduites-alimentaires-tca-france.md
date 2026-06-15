@@ -206,7 +206,7 @@ Il n'y a pas de données comparatives directes. Le choix entre les molécules di
 
 ### Existe-t-il des ressources d'aide pour les personnes avec TCA en France ?
 
-Oui. La [FFAB (Fédération Française Anorexie Boulimie)](https://www.ffab.fr/) propose une ligne d'écoute et une liste de professionnels spécialisés. Le numéro national est le **0 810 037 037** (prix d'un appel local).
+Oui. La [FFAB (Fédération Française Anorexie Boulimie)](https://www.ffab.fr/) propose une ligne d'écoute et une liste de professionnels spécialisés. Le numéro national est le **09 69 325 900** (appel non surtaxé, disponible lun-ven 16h-18h hors jours fériés).
 
 ---
 
