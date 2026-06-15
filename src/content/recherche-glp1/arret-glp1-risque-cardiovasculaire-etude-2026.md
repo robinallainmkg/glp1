@@ -194,7 +194,7 @@ Si un arrêt du traitement est envisagé — pour quelque raison que ce soit —
 
 ### Un message clair : ne pas arrêter seul
 
-Le message principal de ces données est qu'un patient sous GLP-1, en particulier s'il présente un risque cardiovasculaire élevé, ne doit jamais arrêter son traitement de manière autonome sans en discuter avec son médecin. L'arrêt brutal peut avoir des conséquences sur la santé cardiaque qui dépassent la simple reprise de poids.
+Le message principal de ces données est qu'un patient sous GLP-1, en particulier s'il présente un risque cardiovasculaire élevé, ne doit jamais arrêter son traitement de manière autonome sans en discuter avec son médecin. Préparez vos [questions à poser à son médecin avant d'arrêter](/collections/medecins-glp1-france/questions-medecin-avant-glp1-checklist/) pour aborder sereinement cet arrêt. L'arrêt brutal peut avoir des conséquences sur la santé cardiaque qui dépassent la simple reprise de poids.
 
 ### L'importance de l'accompagnement médical
 

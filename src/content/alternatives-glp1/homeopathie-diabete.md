@@ -43,7 +43,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## Informations Médicales
 
-Selon les endocrinologues français... Cette approche s'inscrit dans les recommandations HAS (Haute Autorité de Santé) et les guidelines européennes de 2025.
+Selon les endocrinologues français, la prise en charge du diabète repose sur des traitements validés scientifiquement. **La HAS a recommandé en 2018 le déremboursement de l'homéopathie**, concluant à un service médical rendu insuffisant. L'homéopathie n'est PAS inscrite dans les recommandations HAS pour le diabète ou toute autre pathologie — c'est l'inverse qui est vrai.
 
 ### Points clés validés scientifiquement :
 - **Efficacité clinique** : Études randomisées contrôlées

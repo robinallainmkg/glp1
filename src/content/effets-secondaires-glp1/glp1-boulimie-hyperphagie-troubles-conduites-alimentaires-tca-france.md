@@ -61,7 +61,7 @@ Pour comprendre les enjeux des GLP-1 dans les TCA, il faut rappeler leur mode d'
 
 ### Au niveau digestif
 
-Ces médicaments ralentissent la vidange gastrique, ce qui prolonge la sensation de satiété après les repas. Ils réduisent également les sécrétions d'acide gastrique et modulent les hormones intestinales.
+Ces médicaments ralentissent la vidange gastrique, ce qui prolonge la sensation de satiété après les repas. Ils réduisent également les sécrétions d'acide gastrique et modulent les hormones intestinales — et plus largement, le [microbiote et les comportements alimentaires](/collections/recherche-glp1/glp1-microbiote-intestinal-flore-impact-probiotiques/).
 
 ### Au niveau cérébral
 

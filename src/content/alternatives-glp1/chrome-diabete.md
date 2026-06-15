@@ -45,8 +45,8 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 Selon les endocrinologues français... Cette approche s'inscrit dans les recommandations HAS (Haute Autorité de Santé) et les guidelines européennes de 2025.
 
-### Points clés validés scientifiquement :
-- **Efficacité clinique** : Études randomisées contrôlées
+### Ce que dit la science sur le chrome et le diabète :
+- **Efficacité clinique** : Données préliminaires uniquement — les études ont été menées principalement dans des pays en développement où la carence en chrome est fréquente ; aucune étude en France ou dans les pays industrialisés n'a confirmé de bénéfice significatif sur la glycémie (Vidal, EFSA 2014). Non recommandé par la HAS pour le diabète.
 - **Sécurité d'emploi** : Surveillance post-marketing ANSM  
 - **Rapport bénéfice/risque** : Évaluation individuelle nécessaire
 - **Suivi long terme** : Protocoles établis
@@ -63,8 +63,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ## Prix, disponibilité et variations en France
 
 ### Coûts et tarification
-- **Prix principal** : XX-XX€/mois
-- **Alternatives** : XX-XX€/mois  
+- **Chrome picolinate 200 µg** : 8-15€/mois
+- **Chrome GTF (facteur de tolérance au glucose)** : 10-20€/mois  
 - **Consultations spécialisées** : 60-80€/consultation
 - **Suivi complémentaire** : XX€/mois
 

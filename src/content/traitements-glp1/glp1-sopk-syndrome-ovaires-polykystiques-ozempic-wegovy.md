@@ -71,7 +71,7 @@ Le liraglutide (Saxenda), un GLP-1 plus ancien, a fait l'objet d'études plus no
 
 ## GLP-1 et fertilité dans le SOPK : ce qu'on sait
 
-La question de la fertilité est centrale pour de nombreuses femmes atteintes de SOPK. Sur ce point, les données disponibles suggèrent que :
+La question de la [fertilité et grossesse sous GLP-1](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/) est centrale pour de nombreuses femmes atteintes de SOPK. Sur ce point, les données disponibles suggèrent que :
 
 1. **La perte de poids induite par les GLP-1 améliore indirectement la fertilité** : chez les femmes en surpoids avec SOPK, même une perte modeste de poids peut rétablir l'ovulation et améliorer les chances de grossesse spontanée.
 

@@ -1,6 +1,6 @@
 ---
 title: "Wegovy 7,2 mg Haute Dose : Résultats STEP-UP France"
-description: "Wegovy 7,2 mg haute dose STEP-UP : 18,7% de perte de poids vs 15,6% à 2,4 mg. Résultats, calendrier et disponibilité en France en 2026."
+description: "Wegovy 7,2 mg haute dose STEP-UP : 20,7% de perte de poids vs 17,5% à 2,4 mg. Résultats, calendrier et disponibilité en France en 2026."
 pubDate: 2026-03-17
 date: 2026-03-17
 updatedAt: 2026-03-17

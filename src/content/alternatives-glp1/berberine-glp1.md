@@ -58,13 +58,22 @@ Les GLP-1, agonistes GLP-1, diabète type 2 sont des éléments clés dans ce do
 
 ## Introduction
 
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+La **berbérine** est un alcaloïde naturel extrait de plantes comme le Berberis vulgaris. Son mécanisme d'action passe par l'activation de l'**AMPK** (AMP-activated protein kinase), la même voie métabolique que la metformine. Elle stimule l'absorption du glucose par les cellules et réduit la production hépatique de glucose.
+
+**Dosage validé par les études** : 500 mg 3 fois par jour, avant les repas. Sur la glycémie à jeun et l'HbA1c, les études montrent une réduction de HbA1c de -0,3 à -0,7 % aux doses standard, et jusqu'à -1 % à 2 000 mg/j (JAMA 2025).
+
+**Interactions médicamenteuses importantes à connaître** :
+- Anticoagulants (warfarine, AVK) : risque de potentialisation
+- Cyclosporine : augmentation des taux plasmatiques
+- Antidiabétiques (insuline, sulfamides) : risque d'hypoglycémie additive — surveillance glycémique renforcée obligatoire
+
+Les **effets secondaires digestifs** (nausées, diarrhée, ballonnements) sont fréquents, surtout en début de traitement. Ils diminuent en démarrant à 250 mg 3x/j puis en augmentant progressivement. Les données proviennent de sources médicales validées.
 
 ## Prix, disponibilité et variations en France
 
 ### Coûts et tarification
-- **Prix principal** : XX-XX€/mois
-- **Alternatives** : XX-XX€/mois  
+- **Berbérine standard** : 15-25€/mois (500 mg × 3/j, gélules certifiées)
+- **Berbérine haute biodisponibilité** : 25-40€/mois  
 - **Consultations spécialisées** : 60-80€/consultation
 - **Suivi complémentaire** : XX€/mois
 

@@ -55,7 +55,7 @@ Ce protocole est indispensable car le semaglutide est une protéine fragile. San
 
 ### Prix et remboursement
 
-Le Rybelsus coute environ **80 a 100 euros par mois** en France. Il est rembourse a 65 % par la Sécurité sociale uniquement dans le cadre du **diabète de type 2**, et non pour la perte de poids seule. Les patients qui le prennent pour maigrir doivent donc le financer integralement.
+Le Rybelsus coute environ **80 a 100 euros par mois** en France. Il **n'est pas remboursé** par la Sécurité sociale : la HAS a rendu un avis défavorable au remboursement de Rybelsus, estimant qu'il n'a pas de place dans la stratégie thérapeutique du diabète de type 2. Les patients doivent le financer intégralement.
 
 Pour un guide complet sur ce traitement, consultez notre article dedie : [Guide Complet Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/).
 
@@ -137,11 +137,11 @@ Pour suivre l'avancee de ce traitement, consultez notre article : [Orforglipron,
 
 ## 4. Wegovy Oral (Comprimé de Semaglutide Haute Dose) : Approuve par la FDA
 
-Novo Nordisk, le fabricant du Wegovy injectable, a developpe une **version orale a haute dose du semaglutide** spécifiquement concue pour la perte de poids. Approuve par la FDA en 2026, c'est la premiere pilule GLP-1 autorisee pour l'obésité.
+Novo Nordisk, le fabricant du Wegovy injectable, a developpe une **version orale a haute dose du semaglutide** spécifiquement concue pour la perte de poids. Approuvé par la FDA le 22 décembre 2025, c'est la première pilule GLP-1 autorisée pour l'obésité.
 
 ### Differences avec Rybelsus
 
-Le Rybelsus actuel est dose a 3, 7 ou 14 mg et est autorisé pour le diabète de type 2. Le Wegovy oral en developpement ciblerait des **doses supérieures (25 ou 50 mg)** pour atteindre des niveaux d'efficacité comparables a l'injection de Wegovy (2,4 mg/semaine).
+Le Rybelsus actuel est dose a 3, 7 ou 14 mg et est autorisé pour le diabète de type 2. Le Wegovy oral en développement cible des **doses supérieures, notamment 25 mg** (le 50 mg a été étudié en essai clinique mais n'est pas approuvé), pour atteindre des niveaux d'efficacité comparables à l'injection de Wegovy (2,4 mg/semaine).
 
 ### Ou en est le developpement ?
 
@@ -151,7 +151,7 @@ Les essais cliniques de Phase III (programme OASIS) ont démontré des résultat
 - Ces résultats se rapprochent de ceux de l'injection Wegovy
 - Le profil de sécurité est coherent avec ce que l'on connait du semaglutide
 
-Approuve par la FDA en 2026 pour la perte de poids, le Wegovy oral est la premiere pilule GLP-1 autorisee pour l'obésité. La soumission EMA est en cours pour une mise a disposition en France.
+Approuvé par la FDA le 22 décembre 2025 pour la perte de poids, le Wegovy oral est la première pilule GLP-1 autorisée pour l'obésité. La soumission EMA est en cours pour une mise a disposition en France.
 
 Pour suivre les dernieres informations, consultez : [Wegovy comprimé oral en France](/collections/traitements-glp1/wegovy-comprime-oral-pilule-france/).
 
@@ -218,11 +218,11 @@ Un **médicament** (comme le Rybelsus ou le Xenical) a passe des essais clinique
 
 ### Les pilules pour maigrir sont-elles remboursees par la Sécurité sociale ?
 
-La situation du [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) est complexe. Le Rybelsus est rembourse a 65 % uniquement pour le diabète de type 2, pas pour la perte de poids. L'orlistat n'est pas rembourse. Les GLP-1 injectables comme Ozempic sont rembourses pour le diabète, mais pas pour l'obésité seule. Le cout reste donc majoritairement a la charge du patient.
+La situation du [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) est complexe. Le Rybelsus n'est pas remboursé par la Sécurité sociale (avis défavorable de la HAS). L'orlistat n'est pas remboursé non plus. Les GLP-1 injectables comme Ozempic sont rembourses pour le diabète, mais pas pour l'obésité seule. Le cout reste donc majoritairement a la charge du patient.
 
 ### Quand les nouvelles pilules GLP-1 seront-elles disponibles en France ?
 
-Deux molécules orales majeures sont en cours de developpement. L'**orforglipron** (Eli Lilly), approuve par la FDA en avril 2026 sous le nom Foundayo, devrait arriver en Europe courant 2027 (soumission EMA en cours). Le **Wegovy oral** (semaglutide haute dose de Novo Nordisk) a été approuve par la FDA en 2026, et la soumission EMA est en cours pour la France. Ces traitements pourraient offrir une alternative orale aussi efficace que les injections actuelles.
+Deux molécules orales majeures sont en cours de developpement. L'**orforglipron** (Eli Lilly), approuve par la FDA en avril 2026 sous le nom Foundayo, devrait arriver en Europe courant 2027 (soumission EMA en cours). Le **Wegovy oral** (semaglutide haute dose de Novo Nordisk) a été approuvé par la FDA le 22 décembre 2025, et la soumission EMA est en cours pour la France. Ces traitements pourraient offrir une alternative orale aussi efficace que les injections actuelles.
 
 ---
 

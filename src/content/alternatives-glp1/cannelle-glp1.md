@@ -58,13 +58,23 @@ Les GLP-1, agonistes GLP-1, [diabète type 2](/collections/glp1-diabete/glp1-dia
 
 ## Introduction
 
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+La cannelle est utilisée depuis des siècles en médecine traditionnelle, mais **toutes les cannelles ne se valent pas** — une distinction cruciale que les patients diabétiques doivent absolument connaître.
+
+**Cannelle Ceylon (Cinnamomum verum) vs Cannelle Cassia (Cinnamomum cassia)** :
+- La **cannelle Ceylon** (dite "vraie cannelle") est la forme sûre pour un usage thérapeutique régulier. Elle contient peu de coumarine.
+- La **cannelle Cassia** est la plus vendue en supermarché (moins chère). Elle contient de la **coumarine** en quantités importantes, potentiellement **hépatotoxique** à doses élevées.
+- L'**ANSES recommande de ne pas dépasser 0,1 mg/kg/j de coumarine** (source : avis ANSES 2014-SA-0008). Pour une personne de 70 kg, cela correspond à environ 7 mg/j maximum — facilement dépassé avec de la Cassia.
+
+**Pour tout usage thérapeutique : utiliser exclusivement la cannelle Ceylon.**
+
+**Efficacité sur la glycémie** : Les études sont contradictoires. Certaines montrent une légère réduction de la glycémie à jeun, mais les résultats sur l'HbA1c ne sont pas confirmés de façon robuste par les méta-analyses. La cannelle ne se substitue pas à un traitement antidiabétique. Les données proviennent de sources médicales officielles.
 
 ## Prix, disponibilité et variations en France
 
 ### Coûts et tarification
-- **Prix principal** : XX-XX€/mois
-- **Alternatives** : XX-XX€/mois  
+- **Cannelle Ceylon poudre** : 5-10€/mois (1-3 g/j)
+- **Cannelle Ceylon extrait concentré** : 15-25€/mois
+- **À éviter en grande quantité** : Cannelle Cassia (teneur élevée en coumarine potentiellement hépatotoxique)  
 - **Consultations spécialisées** : 60-80€/consultation
 - **Suivi complémentaire** : XX€/mois
 

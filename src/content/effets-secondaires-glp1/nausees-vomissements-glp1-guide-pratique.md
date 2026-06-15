@@ -274,4 +274,6 @@ Les nausées et vomissements sous GLP-1 sont fréquents, parfois désagréables,
 
 Si malgré ces mesures les symptômes restent invalidants, votre médecin dispose de solutions médicamenteuses efficaces. Ne souffrez pas en silence et n'hésitez pas à en parler lors de votre prochaine consultation.
 
+Des nausées persistantes méritent une surveillance nutritionnelle pour prévenir les [carences nutritionnelles sous GLP-1](/collections/effets-secondaires-glp1/carences-nutritionnelles-glp1-vitamines-fer-ansm/) (vitamines B12, D, fer). Vérifiez également les éventuelles [interactions médicamenteuses sous GLP-1](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/) avec vos traitements habituels si les nausées sont inhabituellement sévères.
+
 Enfin, gardez en perspective que cette période d'inconfort est transitoire. Les bénéfices du traitement — sur le contrôle du poids, le métabolisme glucidique et la santé cardiovasculaire — se mesurent sur des mois et des années, bien après que les nausées auront disparu.

@@ -111,7 +111,7 @@ Il est important de noter que cette dimension ne figure dans aucune indication o
 
 Non — pas dans le cadre légal actuel en France. Les médicaments GLP-1 disponibles (Ozempic, Wegovy, Mounjaro, Saxenda) n'ont aucune indication officielle dans le traitement des addictions. Leur prescription doit se faire pour leurs indications actuelles : diabète de type 2 ou obésité.
 
-En revanche, si vous êtes traité pour l'une de ces indications et que vous notez une réduction de votre consommation d'alcool ou de tabac, c'est un bénéfice inattendu qui mérite d'être mentionné à votre médecin. Ces signalements spontanés alimentent la recherche et peuvent contribuer à valider de nouvelles indications.
+En revanche, si vous êtes traité pour l'une de ces indications et que vous notez une réduction de votre consommation d'alcool ou de tabac, c'est un bénéfice inattendu qui mérite d'être mentionné à votre médecin. Ces signalements spontanés alimentent la recherche et peuvent contribuer à valider de nouvelles indications. Si des difficultés comportementales ou émotionnelles persistent, un [accompagnement psychologique sous GLP-1](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) peut compléter l'approche médicale.
 
 ### Les limites à garder en tête
 
@@ -120,7 +120,7 @@ L'enthousiasme autour de cette piste de recherche doit être tempéré par quelq
 - **Les études observationnelles ne prouvent pas la causalité** : il est possible que les patients sous GLP-1 aient d'autres caractéristiques (suivi médical plus attentif, motivation accrue) qui expliquent une partie des différences observées
 - **Les essais randomisés sont en cours** : les résultats définitifs ne sont pas encore disponibles
 - **L'effet varie selon les individus** : certains patients ne rapportent aucun effet sur leurs comportements addictifs
-- **Ce ne sont pas des médicaments sans effets secondaires** : les [effets secondaires des GLP-1](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) doivent être pris en compte dans toute prescription
+- **Ce ne sont pas des médicaments sans effets secondaires** : les [effets secondaires des GLP-1](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/), y compris le [risque sur la santé mentale sous GLP-1](/collections/effets-secondaires-glp1/glp1-idees-suicidaires-risque-semaglutide-etude/), doivent être pris en compte dans toute prescription
 
 ## Perspectives : quand pourrait-on avoir de nouvelles indications ?
 

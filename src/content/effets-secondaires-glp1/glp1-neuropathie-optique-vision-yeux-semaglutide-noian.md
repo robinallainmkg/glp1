@@ -155,7 +155,7 @@ La neuropathie optique ischémique associée aux GLP-1 à base de sémaglutide e
 
 L'essentiel est que chaque patient soit **informé de ce risque**, sache reconnaître les symptômes et sache réagir rapidement en cas de symptôme visuel. Une communication transparente entre le patient et son médecin reste la meilleure protection.
 
-Pour consulter la liste complète des [effets secondaires du sémaglutide](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/), consultez notre guide dédié. Pour en savoir plus sur la surveillance des GLP-1 par l'ANSM, retrouvez notre article sur les [règles de prescription ANSM en France](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/).
+Pour consulter la liste complète des [effets secondaires du sémaglutide](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/), consultez notre guide dédié. Pour en savoir plus sur la surveillance des GLP-1 par l'ANSM, retrouvez notre article sur les [règles de prescription ANSM en France](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/). En cas d'intervention chirurgicale programmée, consultez nos [précautions médicales spécifiques sous GLP-1](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/).
 
 ---
 

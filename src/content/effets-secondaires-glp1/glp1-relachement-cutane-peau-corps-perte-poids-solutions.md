@@ -68,7 +68,7 @@ Plusieurs facteurs déterminent l'ampleur du relâchement cutané après une per
 
 Les traitements GLP-1 entraînent une perte de poids à la fois importante et rapide. Dans les études cliniques, les patients sous Wegovy perdent en moyenne 15 % de leur poids en 68 semaines, et ceux sous Mounjaro jusqu'à 20-22 %. Pour un patient de 120 kg, cela représente 18 à 26 kg en un peu plus d'un an.
 
-Par ailleurs, une partie de la perte de poids sous GLP-1 provient de la masse musculaire (environ 25 à 40 % de la perte pondérale totale, selon les études). Or, le muscle contribue au « remplissage » des tissus sous-cutanés. Une perte musculaire importante aggrave l'apparence de la peau relâchée, car il ne reste plus assez de volume sous-cutané pour « tendre » la peau.
+Par ailleurs, une partie de la perte de poids sous GLP-1 provient de la masse musculaire (environ 25 à 40 % de la perte pondérale totale, selon les études). Or, le muscle contribue au « remplissage » des tissus sous-cutanés. Une perte musculaire importante aggrave l'apparence de la peau relâchée, car il ne reste plus assez de volume sous-cutané pour « tendre » la peau. La perte de poids rapide peut également augmenter les [risques osseux et tendineux après la perte de poids](/collections/effets-secondaires-glp1/glp1-risque-osseux-fractures-tendons-blessures-2026/), un aspect à surveiller en parallèle du relâchement cutané.
 
 ## Les zones du corps les plus touchées {#zones}
 

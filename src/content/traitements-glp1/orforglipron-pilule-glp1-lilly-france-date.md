@@ -194,7 +194,7 @@ Le remboursement dépendra de l'évaluation de la HAS (Haute Autorité de Santé
 
 L'orforglipron représente une avancée potentiellement transformatrice pour l'accès aux traitements anti-obésité. En offrant l'efficacité d'un GLP-1 injectables dans un simple comprimé quotidien, il pourrait changer la donne pour des millions de patients en France et dans le monde.
 
-Mais l'attente sera longue : 2027 au plus tôt pour une commercialisation en France. En attendant, notre [comparatif Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/) vous aide à choisir parmi les excellentes options déjà disponibles. Pour une vision complète de l'innovation dans les GLP-1, consultez notre article sur les [nouveaux traitements GLP-1 attendus en France](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/).
+Mais l'attente sera longue : 2027 au plus tôt pour une commercialisation en France. En attendant, notre [comparatif Wegovy vs Mounjaro](/collections/traitements-glp1/mounjaro-vs-wegovy-comparatif-france-2026/) vous aide à choisir parmi les excellentes options déjà disponibles. Pour une vision complète de l'innovation dans les GLP-1, consultez notre article sur les [nouveaux traitements GLP-1 attendus en France](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/).
 
 ---
 

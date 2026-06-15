@@ -201,7 +201,7 @@ GLP-1 et chirurgie bariatrique ne sont pas concurrents — ils sont complémenta
 
 Pour prendre votre décision, consultez votre médecin traitant qui pourra vous orienter vers un endocrinologue ou vers des [cliniques spécialisées en obésité](/collections/medecins-glp1-france/clinique-pour-obesite/). Un bilan pluridisciplinaire, incluant un avis nutritionnel, psychologique et médical, est la meilleure base pour faire le bon choix.
 
-Pour en savoir plus sur les traitements GLP-1 disponibles, consultez nos guides sur [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), ainsi que notre comparatif [Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/).
+Pour en savoir plus sur les traitements GLP-1 disponibles, consultez nos guides sur [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), ainsi que notre comparatif [Wegovy vs Mounjaro](/collections/traitements-glp1/mounjaro-vs-wegovy-comparatif-france-2026/).
 
 ---
 

@@ -39,7 +39,7 @@ affiliateConfig:
 
 Un traitement GLP-1 ne se limite pas à une injection hebdomadaire. Pour obtenir les meilleurs résultats — et les maintenir — un suivi structuré est indispensable. Que vous preniez de l'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide), du [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou du [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide), savoir quoi mesurer, quand consulter et comment interpréter votre progression vous permettra de tirer le maximum de votre traitement tout en protégeant votre santé.
 
-Ce guide vous accompagne pas à pas : du journal de bord quotidien au bilan sanguin trimestriel, en passant par la gestion des plateaux et l'ajustement des doses.
+Ce guide vous accompagne pas à pas : du journal de bord quotidien au bilan sanguin trimestriel, en passant par la [gestion des plateaux de poids](/collections/glp1-perte-de-poids/plateau-poids-glp1-ozempic-wegovy-causes-solutions/) et l'ajustement des doses.
 
 ## Pourquoi le suivi est-il essentiel sous traitement GLP-1 ?
 
