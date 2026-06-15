@@ -53,7 +53,7 @@ Résultat : le sémaglutide traverse la paroi de l'estomac directement dans la c
 
 ## Le nouveau comprimé oral pour l'obésité : ce qu'annonce 2026
 
-En février 2026, la FDA américaine a approuvé un comprimé oral de sémaglutide à dose plus élevée, spécifiquement étudié pour le traitement de l'obésité (non plus seulement du diabète de type 2). Cette molécule — distincte de Rybelsus par son dosage — est en cours d'évaluation par l'Agence européenne des médicaments (EMA).
+Le 22 décembre 2025, la FDA américaine a approuvé le Wegovy pill (sémaglutide oral 25 mg) à dose plus élevée, spécifiquement étudié pour le traitement de l'obésité (non plus seulement du diabète de type 2). Cette molécule — distincte de Rybelsus par son dosage — est en cours d'évaluation par l'Agence européenne des médicaments (EMA).
 
 ### Quelle efficacité pour cette nouvelle formulation ?
 

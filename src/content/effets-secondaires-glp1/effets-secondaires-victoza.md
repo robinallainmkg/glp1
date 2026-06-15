@@ -46,7 +46,7 @@ thumbnailAlt: "Effets secondaires du traitement victoza"
 ### Autres effets fréquents
 
 **Maux de tête**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Fréquent (1-10% selon RCP EMA)
 - **Intensité** : Généralement modérée
 - **Gestion** : Analgésiques courants si nécessaire
 

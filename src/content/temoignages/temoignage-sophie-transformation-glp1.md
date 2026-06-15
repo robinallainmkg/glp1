@@ -56,7 +56,7 @@ mainKeyword: "témoignage ozempic perte de poids"
 
 > "Les régimes ne marchaient plus comme avant. Mon corps résistait, je reprenais tout dès que j'arrêtais. J'étais découragée, fatiguée, complexée. Mes élèves ne le montraient pas, mais je sentais bien qu'ils me regardaient différemment."
 
-> "Mon gynécologue m'a orientée vers un <a href="/collections/medecins-glp1-france/endocrinologue-pour-maigrir/">endocrinologue</a> qui m'a parlé d'Ozempic. Au début, j'étais réticente : 'encore un régime', je me disais. Mais il m'a expliqué que c'était différent, que ça aidait à réguler l'appétit naturellement."
+> "Mon gynécologue m'a orientée vers un <a href="/collections/medecins-glp1-france/endocrinologue-pour-maigrir/">endocrinologue</a> qui m'a parlé d'Ozempic (ou Wegovy selon prescription). Note : pour la perte de poids sans diabète, Wegovy (sémaglutide 2.4mg) est le produit avec AMM ; Ozempic est approuvé pour le diabète de type 2. Au début, j'étais réticente : 'encore un régime', je me disais. Mais il m'a expliqué que c'était différent, que ça aidait à réguler l'appétit naturellement."
 
 ## Son Parcours Détaillé
 

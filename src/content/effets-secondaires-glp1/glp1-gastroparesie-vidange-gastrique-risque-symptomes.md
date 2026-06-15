@@ -153,7 +153,7 @@ L'ANSM a également contribué à la publication de l'alerte EPI-Phare et recomm
 
 ### L'EMA (Agence européenne des médicaments)
 
-L'EMA a inclus la gastroparésie dans les effets indésirables listés pour Ozempic et Wegovy à la suite d'une réévaluation de la pharmacovigilance. Elle a demandé une surveillance renforcée et des études spécifiques pour mieux quantifier le risque.
+L'EMA a inclus la gastroparésie comme risque sous surveillance (Risk Management Plan) pour Ozempic et Wegovy. La gastroparésie préexistante figure comme précaution dans la SmPC, mais elle n'est pas explicitement listée comme effet indésirable dans la section réactions indésirables. à la suite d'une réévaluation de la pharmacovigilance. Elle a demandé une surveillance renforcée et des études spécifiques pour mieux quantifier le risque.
 
 ## Questions fréquentes
 

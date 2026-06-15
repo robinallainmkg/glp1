@@ -96,7 +96,7 @@ Un accompagnement en nutrition intuitive pendant le traitement permet de :
 
 Si vous avez des antécédents de troubles alimentaires — anorexie, boulimie, hyperphagie, orthorexie — un suivi psychologique avant et pendant le traitement GLP-1 est fortement recommandé. Les GLP-1 ne sont pas contre-indiqués en cas de TCA, mais leur impact sur le circuit de la récompense peut déstabiliser des équilibres fragiles.
 
-Votre médecin ou endocrinologue peut vous orienter vers un psychologue ou un psychiatre spécialisé en troubles des comportements alimentaires. En France, le dispositif **MonPsy** permet d'accéder à 8 séances de psychologue remboursées par an sur prescription médicale.
+Votre médecin ou endocrinologue peut vous orienter vers un psychologue ou un psychiatre spécialisé en troubles des comportements alimentaires. En France, le dispositif **Mon soutien psy** permet d'accéder à 12 séances de psychologue remboursées par an sur prescription médicale (dispositif renommé en 2026).
 
 ### Alimentation émotionnelle et grignotage compulsif
 
@@ -154,7 +154,7 @@ En France, les consultations de diététicien ne sont pas remboursées par la S�
 
 **Mon médecin peut-il m'orienter vers un psychologue ?**
 
-Oui. Depuis 2022, votre médecin traitant peut vous adresser à un psychologue dans le cadre du dispositif MonPsy, qui prend en charge 8 séances par an pour les troubles psychiques d'intensité légère à modérée. Cette voie peut être adaptée si vous traversez des difficultés psychologiques liées à votre traitement ou à votre relation à la nourriture.
+Oui. Depuis 2022, votre médecin traitant peut vous adresser à un psychologue dans le cadre du dispositif Mon soutien psy, qui prend en charge 12 séances par an pour les troubles psychiques d'intensité légère à modérée (dispositif renommé en 2026). Cette voie peut être adaptée si vous traversez des difficultés psychologiques liées à votre traitement ou à votre relation à la nourriture.
 
 **Est-ce que tous les patients sous GLP-1 ont besoin d'un suivi psychologique ?**
 

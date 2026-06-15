@@ -57,7 +57,7 @@ La Société Française d'Anesthésie-Réanimation (SFAR) a publié en 2024 une 
 Les grandes lignes des recommandations SFAR sont les suivantes :
 
 **Pour les GLP-1 à injection hebdomadaire** (sémaglutide / Ozempic, Wegovy ; tirzépatide / [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/) :
-- Arrêt **une semaine avant** une chirurgie programmée (soit sauter la dernière injection hebdomadaire prévue avant l'opération)
+- Arrêt **une semaine avant** selon les recommandations ASA 2023/SFAR 2024. **Mise à jour 2024-2025** : un consensus multi-sociétés international (ASA, AGA, ASMBS) a révisé cette position — pour les patients stables, la poursuite des GLP-1 avant chirurgie élective est envisageable au cas par cas après discussion avec l'anesthésiste.
 
 **Pour les GLP-1 à injection quotidienne** (liraglutide / Victoza, Saxenda ; exénatide / Byetta) :
 - Arrêt **le jour précédant** l'intervention chirurgicale
@@ -67,7 +67,7 @@ Les grandes lignes des recommandations SFAR sont les suivantes :
 
 ### Pourquoi une semaine pour les formes hebdomadaires ?
 
-La demi-vie du sémaglutide est d'environ 7 jours. Cela signifie qu'une semaine après la dernière injection, la concentration du médicament est réduite de moitié — mais des effets sur la vidange gastrique peuvent persister au-delà. La SFAR recommandé donc d'attendre une semaine complète pour minimiser l'impact sur la motricité gastrique au moment de l'anesthésie.
+La demi-vie du sémaglutide est d'environ 7 jours. Cela signifie qu'une semaine après la dernière injection, la concentration du médicament est réduite de moitié — mais des effets sur la vidange gastrique peuvent persister au-delà. La SFAR recommande donc d'attendre une semaine complète pour minimiser l'impact sur la motricité gastrique au moment de l'anesthésie.
 
 Cette durée peut sembler longue, mais elle est justifiée par la pharmacocinétique du médicament et par les cas rapportés de complications survenues même après un seul jour d'arrêt.
 

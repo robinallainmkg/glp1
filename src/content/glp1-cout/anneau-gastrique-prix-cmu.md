@@ -41,7 +41,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 Le coût d'un anneau gastrique varie selon le type d'établissement :
 
 * **En hôpital public** : prise en charge quasi-intégrale par la Sécurité Sociale (reste à charge limité aux dépassements d'honoraires éventuels)
-* **En clinique privée conventionnée** : **6 000 à 10 000 €** avant remboursement, avec un reste à charge variable selon les dépassements
+* **En clinique privée conventionnée** : **1 500 à 3 000 €** (reste à charge variable selon dépassements)
 * **En clinique privée non conventionnée** : **8 000 à 15 000 €**, faible remboursement
 
 Pour une vue d'ensemble, consultez notre comparatif du [prix des opérations pour maigrir](/collections/glp1-cout/operation-pour-maigrir-prix/).

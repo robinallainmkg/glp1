@@ -32,7 +32,7 @@ L'étude STEP 1, publiée dans le New England Journal of Medicine en 2021, reste
 | Résultat | Wegovy | Placebo |
 |----------|--------|---------|
 | Perte de poids moyenne | **-14,9%** | -2,4% |
-| Patients ayant perdu ≥ 5% | 83% | 31% |
+| Patients ayant perdu ≥ 5% | **86%** | 31% |
 | Patients ayant perdu ≥ 10% | 66% | 12% |
 | Patients ayant perdu ≥ 15% | 48% | 5% |
 | Patients ayant perdu ≥ 20% | 32% | 2% |

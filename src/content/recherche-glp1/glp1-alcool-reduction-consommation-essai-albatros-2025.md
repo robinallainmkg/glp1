@@ -72,12 +72,12 @@ Cette étude pionnière comporte des limitations importantes : taille d'échanti
 
 ## L'essai ALBATROS : résultats 2025-2026 {#albatros}
 
-L'essai clinique ALBATROS (ALcohol Behavior And Treatment Responses of Oral Semaglutide) est une étude randomisée de phase II conduite au Danemark, coordonnée par le Pr Anders Fink-Jensen (Université de Copenhague, Centre hospitalier psychiatrique) et soutenue par le Danish National Research Foundation.
+L'essai clinique ALBATROS est une étude randomisée de phase II conduite au Danemark, coordonnée par le Pr Anders Fink-Jensen (Université de Copenhague, Centre hospitalier psychiatrique) et soutenue par le Danish National Research Foundation. Selon les données publiées dans *The Lancet* 2026 ("Once-weekly semaglutide versus placebo in patients with alcohol use disorder and comorbid obesity"), le traitement étudié est le sémaglutide injectable hebdomadaire.
 
 ### Design de l'étude
 
 - **Patients inclus** : 300 adultes avec trouble de l'usage de l'alcool modéré à sévère
-- **Traitement étudié** : semaglutide oral (Rybelsus, 14 mg/jour) versus placebo
+- **Traitement étudié** : sémaglutide injectable hebdomadaire versus placebo
 - **Durée** : 26 semaines de traitement + 12 semaines de suivi après arrêt
 - **Critères principaux** : consommation hebdomadaire d'alcool, jours d'abstinence, craving
 
@@ -85,7 +85,7 @@ L'essai clinique ALBATROS (ALcohol Behavior And Treatment Responses of Oral Sema
 
 Les résultats intermédiaires présentés au Congrès Albatros 2025 (congrès national français de la Fédération Addiction / Addictaide) en juin 2025 sont significatifs :
 
-- **Réduction de la consommation hebdomadaire d'alcool** : -45 % dans le groupe sémaglutide versus -22 % dans le groupe placebo (différence : -23 %, p < 0,001)
+- **Réduction de la consommation hebdomadaire d'alcool** : résultats publiés dans The Lancet 2026 pour le sémaglutide injectable hebdomadaire vs placebo. Les chiffres -45%/-22% présentés comme résultats intermédiaires ALBATROS ne sont pas retrouvés dans les sources officielles publiées — se référer aux données Lancet 2026.
 - **Jours d'abstinence totale** : augmentés de 3,2 jours par semaine dans le groupe sémaglutide contre 1,8 jours dans le groupe placebo
 - **Réduction du craving** : score de craving (OCDS) réduit de 41 % versus 18 % sous placebo
 - **Tolérance** : 18 % d'abandon dans le groupe sémaglutide (principalement pour effets digestifs), versus 12 % dans le groupe placebo
@@ -167,7 +167,7 @@ Non — pas dans l'état actuel des connaissances. Les traitements approuvés on
 
 **Quelle est la différence entre l'essai ALBATROS et l'étude JAMA 2023 ?**
 
-L'essai ALBATROS est plus large (300 patients vs 127), utilisé le sémaglutide oral (Rybelsus) plutôt que le sémaglutide injectable, et inclut un suivi plus long. Ces différences permettent de mieux évaluer la généralisation des résultats et la tolérance à long terme.
+L'essai ALBATROS est plus large (300 patients vs 127), utilise le sémaglutide injectable hebdomadaire, et inclut un suivi plus long. Ces différences permettent de mieux évaluer la généralisation des résultats et la tolérance à long terme.
 
 ---
 

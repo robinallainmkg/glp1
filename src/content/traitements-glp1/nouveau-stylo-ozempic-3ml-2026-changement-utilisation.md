@@ -77,7 +77,7 @@ Le prix de vente en pharmacie a été ajusté pour tenir compte du nouveau condi
 
 ## La dose est-elle la même ? {#dosage}
 
-**Oui, absolument.** La concentration du sémaglutide est identique dans les deux présentations : 2 mg/ml, soit 0,5 mg par injection de 0,25 ml et 1 mg par injection de 0,5 ml. Votre médecin n'a pas besoin de modifier l'ordonnance. La dose que vous injectez chaque semaine reste exactement la même.
+**Oui, absolument.** La concentration du sémaglutide est identique dans les deux présentations : **1,34 mg/ml**, soit 0,5 mg par injection de **0,37 ml** et 1 mg par injection de **0,74 ml** (selon le RCP EMA officiel d'Ozempic). Votre médecin n'a pas besoin de modifier l'ordonnance. La dose que vous injectez chaque semaine reste exactement la même.
 
 Ce qui change, c'est uniquement la quantité de solution disponible dans le stylo — pas la dose par injection, ni le mécanisme d'administration.
 

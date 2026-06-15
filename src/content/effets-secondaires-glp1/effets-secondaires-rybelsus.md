@@ -174,7 +174,7 @@ mainKeyword: "effets secondaires Rybelsus sémaglutide oral"
 
 | Traitement | Nausées | Diarrhée | Maux tête | Tolérance générale |
 |------------|---------|----------|-----------|-------------------|
-| Rybelsus | 15-20% | 3-5% | 5-8% | Bonne |
+| Rybelsus | 15-20% | 10-15% | 5-8% | Bonne |
 | Ozempic | ~24% | 10-15% | 10-12% | Bonne |
 | Wegovy | ~44% | 12-18% | 8-10% | Modérée (début) |
 | Saxenda | ~39% | ~20% | ~14% | Modérée |

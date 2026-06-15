@@ -162,7 +162,7 @@ Pour une vue complète, consultez notre guide sur les [effets secondaires de Mou
 ## Suivi et Ajustements
 
 ### Indicateurs de Réussite
-- **Perte de poids** : 15-22% sur 72 semaines (étude SURMOUNT-1)
+- **Perte de poids** : 15-21% sur 72 semaines (étude SURMOUNT-1) — 5 mg : -15,0 % ; 10 mg : -19,5 % ; 15 mg : -20,9 %
 - **HbA1c** : Amélioration significative
 - **Tour de taille** : Réduction mesurable
 - **Bien-être général** : Énergie, sommeil

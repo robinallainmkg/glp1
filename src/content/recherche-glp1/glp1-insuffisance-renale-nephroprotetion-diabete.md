@@ -66,7 +66,7 @@ L'étude LEADER, publiée dans le New England Journal of Medicine en 2016, a ét
 
 ### Étude SUSTAIN-6 (sémaglutide injectable)
 
-L'étude SUSTAIN-6 a montré une réduction de **36 %** du risque de nouveau début de macroalbuminurie chez les patients traités par sémaglutide injectable (Ozempic) par rapport au placebo.
+L'étude SUSTAIN-6 a montré une réduction de **36 %** du risque composite de néphropathie (macroalbuminurie, doublement créatinine, dialyse, décès rénal) chez les patients traités par sémaglutide injectable par rapport au placebo. La réduction spécifique de la macroalbuminurie était de **46 %**.
 
 ### Étude SOUL (sémaglutide oral)
 

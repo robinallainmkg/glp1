@@ -47,7 +47,7 @@ Ce guide complet passe en revue **tous les traitements autorisés** pour la pert
 
 Les **agonistes du récepteur GLP-1** (Glucagon-Like Peptide-1) agissent en imitant une hormone naturellement produite par l'intestin après les repas. Ils ralentissent la vidange gastrique, augmentent la sensation de satiété et réduisent l'appétit. Certains, comme le tirzepatide, agissent également sur le récepteur GIP, ce qui amplifie encore leur efficacité.
 
-En avril 2026, quatre medicaments de la classe GLP-1 sont utilisés en France pour favoriser la perte de poids. Trois disposent d'une AMM (autorisation de mise sur le marché) spécifique pour l'obésité, et un est prescrit hors AMM.
+En avril 2026, quatre medicaments de la classe GLP-1 sont utilisés en France pour favoriser la perte de poids. Trois disposent d'une AMM (autorisation de mise sur le marché) spécifique pour l'obésité, et un est prescrit hors AMM. Les autorisations sont délivrées et suivies par l'[ANSM](https://ansm.sante.fr) en lien avec la [HAS](https://www.has-sante.fr).
 
 ### 1. Wegovy (Semaglutide 2.4 mg) -- La Référence
 
@@ -322,7 +322,7 @@ Le cout reste le principal frein a l'acces aux medicaments pour maigrir en Franc
 
 Depuis le 15 juin 2026, **Wegovy et Mounjaro sont remboursés à 65 %** par la Sécurité sociale pour le traitement de l'obésité sévère (IMC ≥ 35 avec comorbidité ou ≥ 40), sur prescription spécialisée. L'Ozempic et le Trulicity restent remboursés pour le diabète de type 2.
 
-**Conditions de remboursement :**
+**Conditions de remboursement** (détail sur [ameli.fr](https://www.ameli.fr)) **:**
 - IMC ≥ 35 avec au moins une comorbidité (diabète de type 2, hypertension, apnée du sommeil, dyslipidémie) ou IMC ≥ 40
 - Prescription initiale par un spécialiste (CSO, CHU, endocrinologue)
 - Prise en charge à 100 % possible via l'ALD (Affection de Longue Durée)
@@ -362,7 +362,7 @@ La prescription est possible a partir d'un **IMC de 27** si vous presentez au mo
 
 ### Les GLP-1 sont-ils dangereux ?
 
-Les medicaments GLP-1 sont utilisés depuis plus de 15 ans dans le traitement du diabète et ont accumule un solide dossier de sécurité. Les effets secondaires graves (pancréatite, gastroparésie) sont rares. Le rapport bénéfice/risque est considere comme favorable par les autorites de sante europeennes (EMA) et francaises (ANSM) pour les patients repondant aux criteres de prescription.
+Les medicaments GLP-1 sont utilisés depuis plus de 15 ans dans le traitement du diabète et ont accumule un solide dossier de sécurité. Les effets secondaires graves (pancréatite, gastroparésie) sont rares. Le rapport bénéfice/risque est considere comme favorable par les autorites de sante europeennes (EMA) et francaises ([ANSM](https://ansm.sante.fr)) pour les patients repondant aux criteres de prescription.
 
 ### Peut-on prendre des GLP-1 pendant la grossesse ?
 

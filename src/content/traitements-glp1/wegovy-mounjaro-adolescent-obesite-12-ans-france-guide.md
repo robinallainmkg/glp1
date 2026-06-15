@@ -38,7 +38,7 @@ Depuis juin 2025, conformément à la nouvelle réglementation ANSM, tout médec
 
 ### Et Mounjaro (tirzépatide) chez les adolescents ?
 
-[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide, Eli Lilly) n'a pas encore d'AMM pour les moins de 18 ans en Europe. Des essais cliniques de phase III chez les adolescents sont en cours, avec des résultats attendus courant 2026-2027. En l'état actuel, la prescription [de Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) à un adolescent constituerait une utilisation hors AMM, non recommandée hors contexte d'essai clinique.
+[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide, Eli Lilly) n'a pas d'AMM pour l'obésité chez les moins de 18 ans en Europe. À noter : en décembre 2025, l'EMA a accordé une extension d'indication pour les adolescents de 10 ans et plus atteints de **diabète de type 2** — mais cette indication ne couvre pas l'obésité pédiatrique. Des essais cliniques de phase III chez les adolescents dans l'indication obésité sont en cours, avec des résultats attendus courant 2026-2027. En l'état actuel, la prescription [de Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) à un adolescent pour l'obésité constituerait une utilisation hors AMM, non recommandée hors contexte d'essai clinique.
 
 En pratique, c'est donc **Wegovy** qui reste le seul traitement GLP-1 officiellement disponible pour les adolescents en France en mars 2026.
 
@@ -138,7 +138,7 @@ Cela ne signifie pas que le traitement est inutile — il offre une fenêtre th�
 
 ### Situation actuelle
 
-Depuis le 15 juin 2026, Wegovy est **remboursé à 65 % par l'Assurance Maladie** pour les adultes obèses (IMC ≥ 35 avec comorbidité ou IMC ≥ 40), après échec nutritionnel documenté. Les prix officiels remboursés sont de **146,91 €/mois** pour les premiers dosages. Pour les adolescents, le remboursement spécifique n'a pas encore été confirmé — une décision dédiée à cette population est attendue. En l'absence de remboursement spécifique pour les adolescents, le coût peut rester à la charge des familles.
+Depuis le 15 juin 2026, Wegovy est **remboursé à 65 % par l'Assurance Maladie** pour les adultes obèses (IMC ≥ 35 avec comorbidité ou IMC ≥ 40), après échec nutritionnel documenté. Le prix de vente en pharmacie est d'environ 270–330 €/mois ; après remboursement à 65 %, le reste à charge est d'environ 95–115 €/mois pour les premiers dosages. Pour les adolescents, le remboursement spécifique n'a pas encore été confirmé — une décision dédiée à cette population est attendue. En l'absence de remboursement spécifique pour les adolescents, le coût peut rester à la charge des familles.
 
 Certaines mutuelles prennent en charge partiellement le coût. Il est recommandé de vérifier les conditions de votre contrat.
 

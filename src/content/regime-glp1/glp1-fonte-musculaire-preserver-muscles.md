@@ -49,7 +49,7 @@ Lors de toute perte de poids, qu'elle soit obtenue par régime, chirurgie bariat
 Dans les essais cliniques des GLP-1, les données de composition corporelle montrent que :
 
 - **Sous Wegovy** (études STEP) : environ 60 à 65% de la perte de poids est de la masse grasse, et 35 à 40% de la masse maigre
-- **Sous Mounjaro** (études SURMOUNT) : des proportions similaires ont été observées, avec environ 30 à 35% de masse maigre perdue
+- **Sous Mounjaro** (études SURMOUNT) : environ 25% de la perte de poids est de la masse maigre, soit moins que sous Wegovy. Tirzépatide préserve mieux la masse musculaire que sémaglutide.
 - **En comparaison**, un régime hypocalorique classique entraîne typiquement 25 à 30% de perte de masse maigre, et la chirurgie bariatrique environ 20 à 25%
 
 ### Pourquoi c'est important

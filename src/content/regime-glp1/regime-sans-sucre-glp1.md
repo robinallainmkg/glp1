@@ -7,7 +7,7 @@ description: "Régime sans sucre GLP-1 : contrôlez votre glycémie et amplifiez
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]
 collection: "régime-glp1"
-thumbnail: "/images/thumbnails/régime-sans-sucre-glp1.jpg"
+thumbnail: "/images/thumbnails/regime-sans-sucre-glp1.jpg"
 thumbnailAlt: "Illustration pour l'article régime-sans-sucre-glp1"
 featured: false
 priority: 5
@@ -105,11 +105,11 @@ La règle simple : si les sucres dépassent **5 g pour 100 g** dans un produit, 
 
 ### Wegovy (sémaglutide 2,4 mg pour l'obésité)
 - **Prix** : ~250 à 290 €/mois
-- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40)
+- **Remboursement** : Wegovy : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC initial ≥ 40 kg/m²). Mounjaro : remboursé à 65% depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec échec d'une prise en charge nutritionnelle bien conduite)
 
 ### Mounjaro (tirzepatide)
 - **Prix** : 230 à 440 €/mois selon dosage
-- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40)
+- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec échec d'une prise en charge nutritionnelle bien conduite)
 
 ## Conseils pratiques pour une transition réussie
 

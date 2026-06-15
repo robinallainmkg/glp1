@@ -52,7 +52,7 @@ Ce mécanisme est universel et indépendant du traitement utilisé : il s'observ
 
 Lors d'une perte de poids, une partie du poids perdu est de la masse maigre (muscle). Or le muscle est le tissu le plus consommateur d'énergie au repos. Moins de muscle = moins de dépense de base = poids plus difficile à perdre. La [fonte musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un enjeu majeur du traitement.
 
-Sous GLP-1, cet effet est réel : les études montrent que 20 à 40 % du poids perdu peut être de la masse maigre, contre 60 à 80 % de masse grasse. Ce ratio peut être amélioré par un apport suffisant en [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) (minimum 1,2 g/kg/jour) et par la pratique d'une activité physique avec résistance (musculation, marche avec charges).
+Sous GLP-1, cet effet est réel : les études montrent que 25 à 45 % du poids perdu peut être de la masse maigre selon les études (STEP 1 : 45,2 % ; méta-analyse 2024 : ~25 % en moyenne), contre 60 à 80 % de masse grasse. Ce ratio peut être amélioré par un apport suffisant en [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) (minimum 1,2 g/kg/jour) et par la pratique d'une activité physique avec résistance (musculation, marche avec charges).
 
 ### 3. La tolérance pharmacologique
 

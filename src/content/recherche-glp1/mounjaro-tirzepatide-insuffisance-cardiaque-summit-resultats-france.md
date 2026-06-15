@@ -66,7 +66,7 @@ L'étude SUMMIT (tirzépatide dans l'insuffisance cardiaque avec fraction d'éje
 - Obésité (IMC ≥ 30 kg/m²)
 - Classe fonctionnelle NYHA II ou III (symptômes à l'effort modéré ou léger)
 
-Les patients ont reçu soit le tirzepatide (titration progressive jusqu'à 15 mg/semaine), soit un placebo, pendant **52 semaines**.
+Les patients ont reçu soit le tirzepatide (titration progressive jusqu'à 15 mg/semaine), soit un placebo, avec un suivi médian de **104 semaines** (les critères de qualité de vie ont été mesurés à 52 semaines).
 
 ### Résultats principaux
 

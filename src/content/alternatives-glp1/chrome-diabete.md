@@ -105,7 +105,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Adaptation** : Personnalisation selon réponse
 - **Compliance** : Observance facteur clé succès
 
-- **Contre-indications** : Vérification préalable obligatoire
+- **Contre-indications** : Insuffisance rénale, troubles musculaires — vérification préalable obligatoire
+- **ALERTE SÉCURITÉ** : Chrome picolinate >1200µg/j: risques de problèmes musculaires, rénaux et anémie signalés (Vidal). Ne pas dépasser 400µg/j sans avis médical.
 - **Interactions** : Attention médicaments concomitants
 - **Effets secondaires** : Surveillance symptômes
 - **Urgences** : Protocoles d'action définis

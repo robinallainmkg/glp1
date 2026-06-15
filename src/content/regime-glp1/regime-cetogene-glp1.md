@@ -43,7 +43,7 @@ L'association régime cétogène et agonistes GLP-1 peut être synergique pour l
 ## Prix, disponibilité et variations en France
 
 ### Coûts régime cétogène + GLP-1
-- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)® + suppléments** : ~80,18€/stylo (remboursé 65 % DT2 en bithérapie metformine) + 30-50€/mois
+- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)® + suppléments** : ~100-110€/stylo selon dosage (remboursé 65 % DT2 en bithérapie metformine) + 30-50€/mois
 - **Trulicity® + MCT oil** : ~81€/mois (remboursé 65 % DT2) + 25-40€/mois
 - **Suivi nutritionnel** : 60-80€/consultation
 - **Bandelettes cétones** : 40-60€/mois

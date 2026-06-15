@@ -244,7 +244,9 @@ Certains départements proposent des aides exceptionnelles pour traitements coû
 ### Étape 1 : Consultation Médicale Initiale
 
 **Qui consulter ?**
-- Médecin traitant (première orientation)
+
+Pour un remboursement, la **primo-prescription de Wegovy ou Mounjaro pour l'obésité doit être faite par un médecin spécialiste exerçant en lien avec un Centre Spécialisé de l'Obésité (CSO) ou un CHU** (niveau 2-3). Le médecin généraliste peut renouveler mais ne peut pas initier une prescription remboursable.
+
 - Endocrinologue ou diabétologue
 - Nutritionniste ou médecin spécialisé obésité
 

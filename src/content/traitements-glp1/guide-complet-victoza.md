@@ -159,7 +159,7 @@ Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'ef
 Victoza est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD) **uniquement pour le diabète de type 2** — voir notre guide sur le [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/). Consultez notre guide sur les [prix Victoza en France](/collections/glp1-cout/prix-victoza-france/) pour le détail des tarifs depuis février 2025. Depuis le 1er février 2025, un formulaire de [prescription](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) obligatoire doit accompagner l'ordonnance pour que le remboursement soit effectif.
 
 ### Puis-je arrêter Victoza brutalement ?
-Non, l'arrêt doit être progressif sous surveillance médicale. Attention : Novo Nordisk a annoncé l'[arrêt de commercialisation de Victoza en 2026](/collections/traitements-glp1/victoza-arret-commercialisation-alternative-2026/). Pour comprendre ce qui se passe après l'[arrêt du traitement Victoza et la reprise de poids](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/), consultez notre guide dédié.
+Non, l'arrêt doit être progressif sous surveillance médicale. Attention : Novo Nordisk a annoncé l'[arrêt de commercialisation de Victoza d'ici fin décembre 2026 dans l'UE/EEE](/collections/traitements-glp1/victoza-arret-commercialisation-alternative-2026/). Pour comprendre ce qui se passe après l'[arrêt du traitement Victoza et la reprise de poids](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/), consultez notre guide dédié.
 
 ---
 

@@ -90,7 +90,7 @@ Le **prix de Wegovy en pharmacie** en France varie entre **169€ et 360€ par 
 | 0,5 mg | ~210€ |
 | 1 mg | ~250€ |
 | 1,7 mg | ~310€ |
-| 2,4 mg (dose cible) | ~360€ |
+| 2,4 mg (dose cible) | ~431€ (prix public TTC officiel, remboursé 65% pour patients éligibles) |
 | 7,2 mg (3×2,4 mg) | Prix non encore fixé |
 
 Le prix de Wegovy varie entre 169€ et 360€ par mois selon le dosage. Depuis le 15 juin 2026, Wegovy est remboursé à 65 % pour l'obésité, sous conditions d'éligibilité.
@@ -122,7 +122,7 @@ Cette stabilité s'explique par la position monopolistique de Novo Nordisk et la
 
 ### Wegovy est remboursé à 65% pour l'obésité depuis le 15 juin 2026
 
-Comme Ozempic (remboursé à 65% en bithérapie metformine pour le diabète de type 2), **Wegovy est désormais remboursé à 65% par l'Assurance Maladie** pour l'indication obésité, depuis le 15 juin 2026 (arrêté du 23 mai 2026). Le remboursement est toutefois soumis à des conditions d'éligibilité strictes ; hors éligibilité, le coût reste à la charge du patient.
+Comme Ozempic (remboursé à 65% en bithérapie metformine pour le diabète de type 2), **Wegovy est désormais remboursé à 65% par l'Assurance Maladie** pour l'indication obésité, depuis le 15 juin 2026 (arrêté du 10 juin 2026 (abrogeant celui du 23 mai 2026)). Le remboursement est toutefois soumis à des conditions d'éligibilité strictes ; hors éligibilité, le coût reste à la charge du patient.
 
 **Critères de remboursement :**
 

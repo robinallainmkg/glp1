@@ -100,7 +100,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 | 0.25 mg | 80,18 € | 60 € |
 | 0.5 mg | 80,18 € | 60 € |
 | 1 mg | 80,18 € | 120 € |
-| 2 mg | Non commercialisé en France | — |
+| 2 mg | Autorisé (AMM EMA), disponibilité en pharmacie française à confirmer | — |
 
 **Prix moyen mensuel** : 60-120 € selon la posologie (dosages 0.25-1 mg)
 
@@ -278,7 +278,7 @@ Après remboursement (30% Sécurité Sociale + mutuelle) :
 
 Le coût mensuel d'Ozempic après remboursement dépend de votre dosage et de votre mutuelle :
 
-**Avec remboursement standard (30% Sécu + 50% mutuelle) :**
+**Avec remboursement standard (65% Sécu en bithérapie metformine + mutuelle) :**
 - **Dosage 0.25-0.5 mg** : environ **15-20€/mois**
 - **Dosage 1 mg** : environ **30-40€/mois**
 

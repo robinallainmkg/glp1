@@ -182,7 +182,7 @@ Wegovy est remboursé à 65% par la Sécurité Sociale pour l'obésité depuis l
 
 **Avertissement médical** : Les informations de cet article sont fournies à titre informatif uniquement et ne remplacent pas une consultation médicale. Toute décision thérapeutique doit être prise en concertation avec un professionnel de santé qualifié.
 
-*Dernière mise à jour médicale : Août 2025 - Sources : HAS, ANSM, Sociétés savantes françaises*
+*Dernière mise à jour médicale : Juin 2026 - Sources : HAS, ANSM, Sociétés savantes françaises*
 
 ## Conclusion
 

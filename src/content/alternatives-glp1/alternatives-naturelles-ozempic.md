@@ -68,9 +68,9 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **[Cannelle Ceylon et ses effets sur la glycémie](/collections/alternatives-glp1/cannelle-glp1/)** : 10-18€/mois (extrait concentré)
 
 ### Comparaison coût/efficacité
-- **Ozempic®** : ~80,18€/stylo (remboursé 65 % DT2 en bithérapie metformine) → HbA1c -1,0-1,5%
+- **Ozempic®** : ~80,18€/stylo (remboursé 65 % DT2 — depuis fév. 2025, un document justificatif signé par le médecin prescripteur est obligatoire à chaque dispensation en pharmacie) → HbA1c -1,0-1,5%
 - **Berberine** : 20€/mois → HbA1c -0,3-0,7%
-- **Chrome** : 12€/mois → HbA1c -0,2-0,4%
+- **Chrome** : 12€/mois → Bénéfice glycémique incertain en France (études menées dans pays à carence en chrome, non confirmées en pays industrialisés selon Vidal)
 - **Combinaisons** : 40-60€/mois → Synergie possible
 
 ## Remboursement et prise en charge (France)
@@ -116,12 +116,9 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Bénéfices** : Réduction envies sucré, glycémie post-prandiale
 - **Durée** : Minimum 8-12 semaines pour effets
 
-## Produits cosmétiques recommandés
+## Hygiène de vie complémentaire
 
-### Soutien naturel
-- **Thé vert BIO** : Catéchines, métabolisme
-- **Infusions plantes** : Pissenlit, artichaut (détox)
-- **Huiles essentielles** : Pamplemousse (motivation)
+*Cette section est en cours de mise à jour.*
 
 ### Hygiène de vie
 - **Probiotiques** : Microbiote intestinal équilibré

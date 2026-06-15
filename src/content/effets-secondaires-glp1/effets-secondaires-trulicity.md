@@ -49,7 +49,7 @@ thumbnailAlt: "Effets secondaires du traitement trulicity"
 ### Autres effets fréquents
 
 **Maux de tête**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Fréquent (1-10%)
 - **Intensité** : Généralement modérée
 - **Gestion** : Analgésiques courants si nécessaire
 

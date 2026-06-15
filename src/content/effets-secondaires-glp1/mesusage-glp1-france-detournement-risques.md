@@ -92,7 +92,7 @@ Le détournement des GLP-1 à des fins esthétiques peut s'inscrire dans des tro
 
 L'ANSM a pris plusieurs mesures pour encadrer l'utilisation des GLP-1 en France :
 
-**Depuis juin 2025** : Tout médecin peut prescrire les GLP-1 pour l'obésité (levée de la restriction aux spécialistes), mais un formulaire de prescription spécifique est désormais obligatoire pour les antidiabétiques GLP-1 utilisés hors de leur indication principale.
+**Depuis le 23 juin 2025** : Tout médecin peut prescrire les GLP-1 pour l'obésité (Wegovy, Mounjaro, Saxenda) (levée de la restriction aux spécialistes), mais un formulaire de prescription spécifique est désormais obligatoire pour les antidiabétiques GLP-1 utilisés hors de leur indication principale.
 
 **Depuis le 1er février 2025** : Un formulaire obligatoire doit accompagner toute prescription de GLP-1 antidiabétiques (Ozempic, Trulicity, Victoza). Ce formulaire vise à vérifier que le prescripteur a bien confirmé l'indication de diabète de type 2.
 

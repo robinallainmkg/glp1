@@ -77,7 +77,7 @@ Seuls certains spécialistes peuvent prescrire Wegovy :
 * **Médecins spécialisés en nutrition**
 * **Médecins hospitaliers** en service de médecine interne
 
-*Important* : Les médecins généralistes ne peuvent pas initier un traitement par Wegovy, mais peuvent le renouveler sous certaines conditions.
+*Important* : Les médecins généralistes peuvent prescrire Wegovy depuis juin 2025, mais la prescription initiale n'est prise en charge par l'Assurance Maladie que si elle émane d'un professionnel exerçant dans une structure de niveau 2 ou 3.
 
 ## Prix de Wegovy en France en 2025
 
@@ -227,8 +227,8 @@ Si Wegovy n'est pas disponible ou accessible :
 
 * **Indication première** : diabète de type 2
 * **Effet secondaire** : perte de poids
-* **Prix** : ~77,60 €/stylo (prix public TTC)
-* **Remboursement** : oui, 30% (diabète de type 2 uniquement)
+* **Prix** : ~80,18 €/stylo (prix public 2026)
+* **Remboursement** : 65% en bithérapie avec metformine ; 30% en trithérapie avec insuline basale
 
 **Saxenda** (liraglutide)
 

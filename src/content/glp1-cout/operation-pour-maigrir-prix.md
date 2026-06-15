@@ -100,7 +100,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **Sécurité Sociale (secteur public) :**
 
-* **Remboursement : 70%** de la base tarifaire SS (certains actes ≥ 120 € pris en charge à 100% de la base SS, mais les dépassements d'honoraires restent à charge). La SS rembourse environ 357€ à 608€ pour la sleeve et 575€ à 604€ pour le bypass sur la base de ses tarifs officiels.
+* **Remboursement : 100%** de la base tarifaire SS pour les actes chirurgicaux ≥ 120€ (dont toute chirurgie bariatrique). Les dépassements d'honoraires restent à charge en secteur 2. La SS rembourse environ 357€ à 608€ pour la sleeve et 575€ à 604€ pour le bypass sur la base de ses tarifs officiels.
 * La mutuelle complémentaire couvre généralement le reste à charge, d'où un coût effectif proche de zéro AVEC une bonne mutuelle
 * Forfait journalier hospitalier : 20€/jour (restant à charge sauf ALD ou CSS)
 * Participation forfaitaire : 24 €
@@ -137,7 +137,7 @@ En secteur public, la sleeve gastrectomie est intégralement prise en charge par
 
 | Traitement  | Coût 2 ans    | Perte de poids | Risques     |
 | ----------- | ------------- | -------------- | ----------- |
-| **Sleeve**  | 1 000-4 000 € | -60 à 70%      | Élevés      |
+| **Sleeve**  | 1 000-4 000 € | -60 à 70% de l'excès pondéral (25-35% poids total) | Élevés      |
 | **Bypass**  | 1 500-6 000 € | -60 à 70% de l'excès pondéral (~25-35% du poids total) | Très élevés |
 | **Wegovy**  | 4 000 € à 8 700 € sur 2 ans (169€-360€/mois selon dosage) | -15 à 17% | Faibles |
 | **[Saxenda](/collections/traitements-glp1/guide-complet-saxenda)** | 4 500 €       | -10 à 15%      | Faibles     |

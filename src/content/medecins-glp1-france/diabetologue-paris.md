@@ -49,7 +49,7 @@ Paris concentre de nombreux diabétologues et endocrinologues spécialisés dans
 ## Prix, disponibilité et variations en France
 
 ### Tarifs consultations Paris
-- **Secteur 1** : 30€ (remboursé 70% = 21€)
+- **Secteur 1** : 31,50€ (tarif CS spécialiste 2026, remboursé ~20,05€ net après franchise 2€)
 - **Secteur 2** : 60-120€ (remboursement 21€)
 - **Consultation longue** : 46€ secteur 1, 80-150€ secteur 2
 - **Urgence weekend** : 70-200€ selon praticien

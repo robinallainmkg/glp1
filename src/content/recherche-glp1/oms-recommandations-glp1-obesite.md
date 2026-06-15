@@ -1,5 +1,5 @@
 ---
-title: "OMS Recommandations GLP-1 Obésité 2026 : Changements en"
+title: "OMS Recommandations GLP-1 Obésité 2026 : Ce qui change pour les patients"
 description: "OMS recommandations GLP-1 obésité 2025 : liraglutide, sémaglutide, tirzépatide validés. Impact sur le remboursement en France et accès équitable."
 pubDate: 2026-03-16
 date: 2026-03-16

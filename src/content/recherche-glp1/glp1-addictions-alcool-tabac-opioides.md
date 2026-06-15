@@ -55,7 +55,7 @@ Ces expériences ont permis de confirmer que l'effet ne passe pas uniquement par
 
 Les témoignages de patients sous GLP-1 concernant l'alcool ont été si nombreux et convergents qu'ils ont attiré l'attention de la communauté scientifique. Des études observationnelles ont ensuite confirmé cette tendance.
 
-Une analyse des données de prescription publiée en 2024 dans la revue *Nature Communications* a montré que les patients sous sémaglutide présentaient un taux d'hospitalisation pour troubles liés à l'alcool significativement inférieur à celui des patients sous d'autres traitements antidiabétiques — une différence d'environ 50 % sur deux ans de suivi.
+Une analyse des données de prescription publiée en 2024 dans la revue *Nature Communications* a montré que les patients sous sémaglutide présentaient un taux d'hospitalisation pour troubles liés à l'alcool significativement inférieur à celui des patients sous d'autres traitements antidiabétiques — une différence d'environ 50 à 56 % sur 12 mois de suivi.
 
 ### Les essais cliniques en cours
 

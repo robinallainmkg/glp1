@@ -162,7 +162,7 @@ Pour l'Europe, la procédure passe par l'EMA, qui émet un avis avant que chaque
 En se basant sur les délais habituels, voici un calendrier indicatif :
 
 - **Mars 2026** : FDA a approuvé Wegovy HD (7,2 mg) aux États-Unis
-- **Décembre 2025** : avis positif de l'EMA, Commission européenne a approuvé (administration via 3 injections de 2,4 mg)
+- **Décembre 2025** : La Commission européenne a approuvé l'administration de sémaglutide 7,2 mg via 3 injections de 2,4 mg. La décision EMA pour le **stylo unique 7,2 mg** est attendue pour le **S2 2026**.
 - **S2 2026** : décision réglementaire attendue en UE pour le stylo unique 7,2 mg
 - **2027 (au plus tôt)** : évaluation HAS et remboursement potentiel en France
 

@@ -273,12 +273,12 @@ Le cout des injections pour maigrir constitue un facteur important dans la déci
 La prise en charge des injections pour l'obésité a évolué le 15 juin 2026 :
 
 - **Ozempic** : Rembourse a 65% en bithérapie metformine **uniquement pour le diabète de type 2**. La prescription hors AMM pour la perte de poids n'ouvre aucun droit a remboursement.
-- **Wegovy et Mounjaro** : **rembourses a 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026), sous conditions (voir ci-dessous).
+- **Wegovy et Mounjaro** : **rembourses a 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 10 juin 2026, JO du 12 juin 2026), sous conditions (voir ci-dessous).
 - **Saxenda** : Non rembourse pour le traitement de l'obésité.
 
 ### Remboursement de Wegovy et Mounjaro depuis le 15 juin 2026
 
-Apres un avis favorable de la HAS, **Wegovy et Mounjaro sont rembourses a 65% par l'Assurance Maladie pour le traitement de l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai). Les conditions : IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Les 35% restants sont a la charge du patient ou de la mutuelle. Cette avancee majeure ameliore considerablement l'accessibilite de ces traitements pour les patients eligibles. Saxenda reste non rembourse. Pour le detail des conditions, consultez notre article sur les [conditions de remboursement de Mounjaro](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).
+Apres un avis favorable de la HAS, **Wegovy et Mounjaro sont rembourses a 65% par l'Assurance Maladie pour le traitement de l'obésité depuis le 15 juin 2026** (arrêté du 10 juin 2026, JO du 12 juin 2026). Les conditions : IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Les 35% restants sont a la charge du patient ou de la mutuelle. Cette avancee majeure ameliore considerablement l'accessibilite de ces traitements pour les patients eligibles. Saxenda reste non rembourse. Pour le detail des conditions, consultez notre article sur les [conditions de remboursement de Mounjaro](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).
 
 ### Les options pour reduire le cout
 

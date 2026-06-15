@@ -13,7 +13,7 @@ pubDate: "2025-08-27"
 mainKeyword: "ozempic guide complet france posologie prix"
 ---
 
-## Guide Complet Ozempic : Tout Savoir sur ce Traitement Révolutionnaire
+### Guide Complet Ozempic : Tout Savoir sur ce Traitement Révolutionnaire
 
 <div class="guide-buttons">
   <a href="/collections/glp1-cout/prix-ozempic-france" class="guide-button primary">
@@ -68,11 +68,11 @@ Ozempic est indiqué dans le traitement du diabète de type 2 chez l'adulte, en 
 - Une injection hebdomadaire seulement
 
 ### Efficacité prouvée
-Dans les études cliniques, Ozempic a démontré une supériorité par rapport aux [autres traitements](/guides/quel-traitement-glp1-choisir/) oraux, avec un meilleur contrôle glycémique et une tolérance comparable.
+Dans les études cliniques, Ozempic a démontré une supériorité par rapport aux [autres traitements](/guides/quel-traitement-glp1-choisir/) oraux, avec un meilleur contrôle glycémique et une tolérance comparable. Son évaluation clinique a été conduite par la [HAS](https://www.has-sante.fr) dans le cadre de son dossier d'AMM.
 
 ## Ozempic et la perte de poids
 
-**⚠️ Important** : En France, Ozempic est **exclusivement indiqué pour le diabète de type 2**. Il ne doit pas être prescrit pour la perte de poids seule. L'[ANSM et l'Assurance Maladie ont renforcé les contrôles](/collections/traitements-glp1/ansm-regles-[prescription](/collections/traitements-glp1/glp1-prescription-generaliste-nouvelles-regles-ansm-2026/)-glp1-france/) depuis février 2025 pour lutter contre le mésusage.
+**⚠️ Important** : En France, Ozempic est **exclusivement indiqué pour le diabète de type 2**. Il ne doit pas être prescrit pour la perte de poids seule. L'[ANSM](https://ansm.sante.fr) et l'Assurance Maladie ont renforcé les contrôles depuis février 2025 pour lutter contre le mésusage.
 
 Cependant, une perte de poids est souvent observée comme effet bénéfique chez les patients diabétiques traités par Ozempic :
 
@@ -89,7 +89,7 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 
 **Semaine 1-4** : 0,25 mg
 **Semaine 5-8** : 0,5 mg
-**Semaine 9+** : 1 mg (dose maximale, dose d'entretien)
+**Semaine 9+** : 1 mg (dose d'entretien standard). Pour certains patients nécessitant un meilleur contrôle glycémique, une dose de **2 mg/semaine** est disponible après au moins 4 semaines à 1 mg.
 
 ### Technique d'injection
 - Injection sous-cutanée (abdomen, cuisse ou bras supérieur)
@@ -173,7 +173,7 @@ Non, en France, Ozempic est **exclusivement indiqué pour le diabète de type 2*
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Ozempic est-il remboursé ?
-Ozempic est remboursé à **65 %** en bithérapie metformine par l'Assurance Maladie (100 % en ALD diabète) **uniquement pour le diabète de type 2**. Il n'est pas remboursé pour la perte de poids. Pour toutes les conditions détaillées, consultez notre guide sur le [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) des GLP-1. Depuis le 1er février 2025, le médecin doit remplir un formulaire de prescription obligatoire pour que le remboursement soit effectif. Le [prix en pharmacie est d'environ 80,18 € par stylo](/collections/glp1-cout/prix-ozempic-france/).
+Ozempic est remboursé à **65 %** en bithérapie metformine par l'Assurance Maladie (100 % en ALD diabète) **uniquement pour le diabète de type 2**. Il n'est pas remboursé pour la perte de poids. Pour toutes les conditions détaillées, consultez notre guide sur le [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) des GLP-1. Depuis le 1er février 2025, le médecin doit remplir un formulaire de prescription obligatoire pour que le remboursement soit effectif — les conditions sont précisées sur [ameli.fr](https://www.ameli.fr). Le [prix en pharmacie est d'environ 80,18 € par stylo](/collections/glp1-cout/prix-ozempic-france/).
 
 ### Puis-je arrêter Ozempic brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une [reprise de poids après l'arrêt](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) du traitement. Discutez avec votre médecin d'un plan d'arrêt adapté.

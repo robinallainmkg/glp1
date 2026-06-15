@@ -103,7 +103,7 @@ Un suivi par un diététicien spécialisé en nutrition de la personne âgée es
 
 **Orlistat (Xenical, Alli)** : inhibiteur de la lipase pancréatique, disponible avec ou sans ordonnance selon la dose. Efficacité modérée (perte de 5-7 % du poids en plus du régime), mais bonne tolérance cardiovasculaire. Effets indésirables principalement digestifs. Pas de restriction d'âge officiellement.
 
-**Naltrexone/Bupropion (Mysimba)** : disponible en France sur prescription pour l'obésité. (Note : le nom commercial en Europe est Mysimba, Contrave étant le nom utilisé aux États-Unis.) Moins efficace que les GLP-1 mais peut être prescrit sans restriction d'âge officielle. À utiliser avec prudence en cas d'antécédents cardiovasculaires ou de prise d'autres antidépresseurs.
+**Naltrexone/Bupropion (Mysimba)** : possède une AMM européenne mais **n'est pas commercialisé en France** — l'ANSM a jugé son profil de sécurité insuffisant et bloqué sa mise sur le marché français. Il n'est donc pas disponible comme alternative en France. À utiliser avec prudence en cas d'antécédents cardiovasculaires ou de prise d'autres antidépresseurs.
 
 ### La chirurgie bariatrique : une option pour les cas sévères
 

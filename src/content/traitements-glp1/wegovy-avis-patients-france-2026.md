@@ -58,7 +58,7 @@ Wegovy est un médicament injectable a base de **semaglutide**, la même molécu
 - **Fréquence** : une injection sous-cutanée par semaine
 - **Laboratoire** : Novo Nordisk
 - **AMM en France** : oui, autorisé par l'EMA depuis janvier 2022
-- **Remboursement** : Rembourse a 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée)
+- **Remboursement** : Rembourse a 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 10 juin 2026, JO du 12 juin 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée)
 
 Pour une presentation complete du traitement, consultez notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
 
@@ -194,7 +194,7 @@ Pour un comparatif détaillé des prix, consultez notre page [prix Wegovy en Fra
 
 ### Remboursement : ce qui a change le 15 juin 2026
 
-Apres un avis favorable de la HAS, **Wegovy est rembourse a 65% par la Sécurité sociale pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), pour les patients presentant une obésité severe : IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Les 35% restants sont a la charge du patient ou de la mutuelle.
+Apres un avis favorable de la HAS, **Wegovy est rembourse a 65% par la Sécurité sociale pour l'obésité depuis le 15 juin 2026** (arrêté du 10 juin 2026, JO du 12 juin 2026), pour les patients presentant une obésité severe : IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Les 35% restants sont a la charge du patient ou de la mutuelle.
 
 Certaines mutuelles completent ce reste a charge ou proposent des forfaits pour les patients non eligibles. Pour verifier votre situation, consultez notre guide [Wegovy et remboursement mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/).
 

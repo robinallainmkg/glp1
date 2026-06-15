@@ -61,7 +61,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 **La marche à suivre :**
 - Prenez rendez-vous avec votre médecin généraliste
 - Expliquez vos difficultés de perte de poids
-- Depuis juin 2025, votre généraliste peut prescrire directement les GLP-1 pour l'obésité (Wegovy, [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), Saxenda) — une lettre de recommandation vers un endocrinologue n'est plus obligatoire pour la primo-prescription. Renseignez-vous sur les conditions de [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) selon votre profil. Une consultation d'endocrinologue reste utile pour les cas complexes ou si votre généraliste préfère vous adresser à un spécialiste.
+- Depuis juin 2025, votre généraliste peut prescrire les GLP-1 pour l'obésité (Wegovy, [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), Saxenda) sans référence obligatoire à un spécialiste. **Attention depuis le 15 juin 2026** : pour une prescription **remboursée** à 65%, la primo-prescription doit être faite par un spécialiste (endocrinologue en CSO/CHU). Le généraliste peut renouveler la prescription remboursée, mais ne peut pas l'initier. Renseignez-vous sur les conditions de [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) selon votre profil. Une consultation d'endocrinologue reste utile pour les cas complexes ou si votre généraliste préfère vous adresser à un spécialiste.
 
 **Avantages :** Remboursement optimal, médecin qui connaît votre dossier, accès plus rapide depuis l'ouverture de la prescription aux généralistes
 
@@ -134,9 +134,9 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ## Prix et Remboursement
 
 ### Tarifs conventionnés
-- **Consultation endocrinologue :** 30€
-- **Remboursement Sécurité Sociale :** 70% (21€)
-- **Reste à charge :** 9€ (souvent pris en charge par la mutuelle)
+- **Consultation endocrinologue :** 31,50€ (tarif CS spécialiste secteur 1, jan 2026)
+- **Remboursement Sécurité Sociale :** ~20,05€ net (après franchise 2€)
+- **Reste à charge :** ~11,45€ (souvent pris en charge par la mutuelle)
 
 ### Dépassements d'honoraires
 - **Secteur 2 :** 45-80€ en moyenne

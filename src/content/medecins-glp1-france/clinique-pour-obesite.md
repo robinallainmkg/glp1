@@ -208,9 +208,9 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ### Secteur Public (CHU, Hôpitaux)
 
 **Consultations :**
-- **Médecin hospitalier :** 25€
-- **Remboursement SS :** 70% (17,50€)
-- **Reste à charge :** 7,50€
+- **Médecin spécialiste hospitalier :** 31,50€
+- **Remboursement SS :** ~22,05€ (70%)
+- **Reste à charge :** ~9,45€ (souvent pris en charge par mutuelle)
 
 **Avantages :**
 - Tarifs maîtrisés
@@ -239,13 +239,13 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ### Médicaments GLP-1
 
 **Ozempic :**
-- **Prix :** ~59,90€/stylo
+- **Prix :** ~80,18€/stylo (prix public TTC en pharmacie)
 - **Remboursement :** 65 % si diabète de type 2 (100 % en ALD), formulaire obligatoire depuis fév. 2025
 - **Reste à charge :** ~21€/mois environ (DT2)
 
 **Wegovy :**
 - **Prix :** 169-360€/mois (selon dose)
-- **Remboursement :** Remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée).
+- **Remboursement :** Remboursé à 65% pour l'obésité depuis le 15 juin 2026 (conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, ≥ 6 mois prise en charge diététique documentée, primo-prescription CSO/CHU/endocrinologue lié à un CSO). **Évaluation obligatoire à 4 mois** : maintien du remboursement conditionné à une perte ≥ 5% du poids initial.
 - **Reste à charge :** 35% (ticket modérateur) pour les patients éligibles, souvent couvert par la mutuelle ; intégralité du coût pour les patients hors critères.
 
 ## Critères d'Éligibilité et Contre-indications

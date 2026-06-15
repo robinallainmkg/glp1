@@ -132,7 +132,7 @@ Ces différences de calendrier géographique créent une situation paradoxale : 
 
 ## Ce que le remboursement Wegovy/Mounjaro changera
 
-Si le remboursement de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pour l'obésité se concrétise en France en 2026-2027 (comme attendu), le reste à charge des patients sera considérablement réduit. Un remboursement Sécurité Sociale à 30 % ramènerait le coût mensuel de Wegovy de 250-360 €/mois à environ 175-250 €/mois — significatif mais encore élevé pour beaucoup.
+Le remboursement de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pour l'obésité est effectif depuis le 15 juin 2026 (arrêté du 10 juin 2026), à 65% de prise en charge. Le reste à charge est considérablement réduit.
 
 Le remboursement à 65 % (comme pour Ozempic en bithérapie metformine pour le diabète) rendrait ces traitements accessibles à une bien plus grande partie de la population. Ce débat est au cœur des négociations HAS-CEPS actuellement en cours.
 

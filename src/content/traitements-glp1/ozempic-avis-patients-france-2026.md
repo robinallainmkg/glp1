@@ -242,7 +242,7 @@ De nombreux patients comparent Ozempic aux autres agonistes GLP-1. Voici un comp
 | Critere | Ozempic (semaglutide 1mg) | Wegovy (semaglutide 2.4mg) | Mounjaro (tirzepatide) |
 |---------|--------------------------|---------------------------|----------------------|
 | **Perte de poids moyenne** | 5-10 % | 12-15 % | 15-22 % |
-| **Indication officielle** | Diabète type 2 | Obésité | Diabète type 2 |
+| **Indication officielle** | Diabète type 2 | Obésité | Diabète type 2 et obésité |
 | **Tolérance digestive** | Moderee | Moderee | Legerement meilleure |
 | **Fréquence injection** | 1x/semaine | 1x/semaine | 1x/semaine |
 | **Disponibilite France** | Bonne | Tensions d'approvisionnement | Disponible depuis 2024 |

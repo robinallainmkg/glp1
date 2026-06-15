@@ -32,7 +32,7 @@ mainKeyword: "serena williams glp1"
 
 ## Le coming out de Serena Williams
 
-En février 2024, Serena Williams a fait une révélation surprenante lors d'une interview avec Revolt TV. La légende du tennis, 23 fois championne de Grand Chelem, a admis utiliser des médicaments GLP-1 pour gérer son poids et améliorer sa santé métabolique.
+En août 2025, Serena Williams a révélé pour la première fois publiquement son utilisation d'un médicament GLP-1 lors d'une interview avec le TODAY show (NBC), dans le cadre de son partenariat avec Ro Health. La légende du tennis, 23 fois championne de Grand Chelem, a admis utiliser des médicaments GLP-1 pour gérer son poids et améliorer sa santé métabolique.
 
 *"J'ai pris des médicaments pour perdre du poids. C'est quelque chose que j'ai décidé de faire pour moi-même, pour ma santé."*
 

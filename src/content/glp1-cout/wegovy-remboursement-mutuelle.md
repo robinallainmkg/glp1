@@ -61,14 +61,9 @@ Face à ce coût substantiel, la question du remboursement devient centrale pour
 
 Le Wegovy est **remboursé à 65% par l'Assurance Maladie depuis le 15 juin 2026** (arrêté du 23 mai 2026) pour les adultes avec un IMC ≥ 35 avec comorbidité (ou ≥ 40) en cas d'échec d'une prise en charge nutritionnelle bien conduite, avec primo-prescription en structure spécialisée. Pour le détail des conditions, consultez notre article dédié au [remboursement Wegovy par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/).
 
-### Critères potentiels pour un futur remboursement
+### Conditions effectives de remboursement depuis le 15 juin 2026
 
-Les experts anticipent que les critères suivants pourraient être retenus :
-
-- **IMC ≥ 30 kg/m²** (obésité caractérisée)
-- **IMC ≥ 27 kg/m²** avec comorbidités associées (diabète de type 2, hypertension artérielle, dyslipidémie)
-- **Échec documenté** des mesures diététiques et d'exercice physique sur 6 mois minimum — consultez notre [calendrier de remboursement Wegovy 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/) pour les dernières informations
-- **Prise en charge** dans un centre spécialisé en endocrinologie ou nutrition
+Les conditions effectives de remboursement depuis le 15 juin 2026 sont : IMC ≥ 35 kg/m² avec comorbidité (ou IMC ≥ 40), après échec d'une prise en charge nutritionnelle bien conduite, avec primo-prescription en structure spécialisée (niveau 2-3). Consultez notre [calendrier de remboursement Wegovy 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/) pour les dernières informations.
 
 > **À lire aussi** : [remboursement Mounjaro](/collections/glp1-cout/remboursement-mounjaro-france-2026-quand-conditions-ceps/) · [coût de la chirurgie bariatrique](/collections/glp1-cout/operation-pour-maigrir-prix/)
 
@@ -209,7 +204,7 @@ La première étape consiste à consulter un professionnel habilité :
 **Conseils pratiques :**
 - Débuter par une prescription d'un mois pour test de tolérance
 - Privilégier les pharmacies partenaires de votre mutuelle
-- Surveiller l'arrivée des biosimilaires (attendus fin 2025)
+- Aucun biosimilaire sémaglutide n'est autorisé en France à ce jour (juin 2026).
 - Envisager les achats groupés via associations de patients
 
 ## Perspectives d'évolution 2025-2026

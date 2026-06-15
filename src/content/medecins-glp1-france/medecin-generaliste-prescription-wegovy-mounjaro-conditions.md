@@ -177,7 +177,7 @@ Consultez notre [guide complet du remboursement GLP-1 2026](/collections/glp1-co
 ## Questions fréquentes
 
 **Mon médecin traitant peut-il vraiment me prescrire Wegovy ou Mounjaro ?**
-Oui, depuis juin 2025. Il n'est plus nécessaire de consulter un spécialiste pour la première prescription. Votre médecin traitant est pleinement habilité à initier et renouveler ces traitements.
+Oui, depuis le 23 juin 2025, votre médecin traitant peut prescrire Wegovy et Mounjaro. Précision importante : pour bénéficier du remboursement à 65 % (depuis le 15 juin 2026), la primo-prescription doit être réalisée par un spécialiste en endocrinologie/nutrition dans une structure de niveau 2 ou 3 (CSO, CHU). Le renouvellement peut ensuite être assuré par tout médecin.
 
 **Faut-il plusieurs consultations avant d'obtenir la prescription ?**
 Souvent oui. Une première consultation pour l'évaluation et la prescription du bilan biologique, puis une deuxième pour la prescription du traitement après réception des résultats. Certains médecins qui ont déjà accès à votre dossier médical (bilan récent, suivi régulier) peuvent prescrire en une seule consultation.

@@ -21,7 +21,7 @@ secondaryKeywords: ["mounjaro hôpitaux", "où trouver mounjaro", "mounjaro chu"
 
 <div style="background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 100%); border-left: 5px solid #FF9800; padding: 1.5rem; margin: 2rem 0; border-radius: 12px;">
   
-📢 **Important** : Mounjaro (tirzepatide) a obtenu son autorisation de mise sur le marché (AMM) européenne en septembre 2022 et est commercialisé en France depuis novembre 2024. Cette page recense les centres et spécialistes qui proposent actuellement le traitement.
+📢 **Important** : Mounjaro (tirzepatide) a obtenu son AMM européenne pour le diabète de type 2 en septembre 2022, puis une extension d'indication pour la gestion du poids (obésité/surpoids) en novembre 2023, et est commercialisé en France depuis novembre 2024. Cette page recense les centres et spécialistes qui proposent actuellement le traitement.
 
 </div>
 
@@ -326,7 +326,7 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 ### Évolution du remboursement
 
-📅 **Depuis le 15 juin 2026** : Mounjaro (tirzépatide) est **remboursé à 65%** par l'Assurance Maladie dans l'indication obésité (arrêté du 23 mai 2026, JO du 28 mai 2026) — voir le [remboursement de Mounjaro](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/).
+📅 **Depuis le 15 juin 2026** : Mounjaro (tirzépatide) est **remboursé à 65%** par l'Assurance Maladie dans l'indication obésité (arrêté du 10 juin 2026 (abrogeant l'arrêté du 23 mai 2026)) — voir le [remboursement de Mounjaro](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/).
 - Conditions : IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40
 - Après échec d'une prise en charge nutritionnelle bien conduite
 - Primo-prescription réservée aux CSO (Centres Spécialisés de l'Obésité) ou CHU

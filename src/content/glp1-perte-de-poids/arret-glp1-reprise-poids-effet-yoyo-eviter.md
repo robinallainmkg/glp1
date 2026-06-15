@@ -56,7 +56,7 @@ Ces chiffres sont cohérents avec ce qu'on observe dans d'autres contextes de pe
 
 ### Données sur le tirzépatide (Mounjaro)
 
-Les données de l'extension de l'étude SURMOUNT-4 sur le tirzépatide montrent un profil similaire : après l'arrêt du tirzépatide à la dose de 10 ou 15 mg, les patients ont récupéré environ **la moitié du poids perdu** en 12 mois, et un retour au poids initial était observé chez environ 60 % des patients à 18 mois.
+Les données de l'extension de l'étude SURMOUNT-4 sur le tirzépatide montrent un profil similaire : après l'arrêt du tirzépatide à la dose de 10 ou 15 mg, les patients ont récupéré environ **deux tiers (2/3) du poids perdu** en 12 mois (regain ~14% sur perte initiale ~21%, source SURMOUNT-4 PMC10714284), et un retour au poids initial était observé chez environ 60 % des patients à 18 mois.
 
 ### Un phénomène connu sous d'autres traitements
 
@@ -143,7 +143,7 @@ Si l'arrêt du traitement GLP-1 est imposé (raisons financières, contre-indica
 
 ### Orlistat (Xenical)
 
-L'orlistat est un inhibiteur des lipases intestinales qui réduit l'absorption des graisses alimentaires de 30 %. Son efficacité sur la perte de poids est modeste (3 à 5 % du poids corporel), mais il peut contribuer au maintien du poids après une perte de poids sous GLP-1. Il est remboursé sous conditions en France (IMC ≥ 28 avec comorbidités).
+L'orlistat est un inhibiteur des lipases intestinales qui réduit l'absorption des graisses alimentaires de 30 %. Son efficacité sur la perte de poids est modeste (3 à 5 % du poids corporel), mais il peut contribuer au maintien du poids après une perte de poids sous GLP-1. Il n'est pas remboursé par l'Assurance Maladie en France (avis défavorable HAS - has-sante.fr/jcms/c_443495).
 
 ### Phentermine/topiramate (non disponible en France)
 

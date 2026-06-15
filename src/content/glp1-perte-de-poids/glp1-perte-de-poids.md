@@ -76,7 +76,7 @@ Cet article vous présente les informations essentielles et actualisées. Pour u
 ### [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (Sémaglutide 2,4 mg) - Le Plus Efficace
 
 **Résultats études cliniques :**
-- **Perte moyenne : 15,3%** en 68 semaines
+- **Perte moyenne : 14,9%** en 68 semaines
 - 83% patients perdent ≥5% poids
 - 66% patients perdent ≥10% poids
 - 48% patients perdent ≥15% poids

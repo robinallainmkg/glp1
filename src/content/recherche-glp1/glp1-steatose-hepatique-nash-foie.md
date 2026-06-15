@@ -84,7 +84,7 @@ Le survodutide, développé par Boehringer Ingelheim, est un double agoniste des
 
 L'essai AURORA, publié dans le *New England Journal of Medicine* en 2024, a montré des résultats remarquables chez des patients atteints de MASH avec fibrose de stade F1 à F3 :
 
-- **Résolution de la MASH** chez 47 à 64% des patients selon la dose (contre 14% sous placebo)
+- **Résolution de la MASH** chez 47%, 62% et 43% des patients selon les doses (2,4 mg, 4,8 mg et 6,0 mg) contre 14% sous placebo (essai AURORA, NEJM juin 2024). Fourchette effective : 43-62%.
 - **Amélioration de la fibrose** d'au moins un stade chez 34 à 36 % des patients selon la dose (contre 22 % sous placebo)
 - **Réduction du contenu en graisse hépatique** de 40 à 50% mesurée par IRM
 - **Perte de poids** : 12 à 19% du poids corporel

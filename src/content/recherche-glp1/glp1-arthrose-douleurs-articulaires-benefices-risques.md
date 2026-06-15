@@ -52,9 +52,9 @@ Les GLP-1 permettant des pertes de poids de 10 à 22 % selon la molécule et la 
 
 Le retatrutide est un triple agoniste GLP-1/GIP/glucagon développé par Eli Lilly, actuellement en phase avancée de développement clinique. L'essai TRIUMPH-4 évalue spécifiquement son efficacité dans l'arthrose du genou chez des patients en surpoids ou obèses. En décembre 2025, Eli Lilly a annoncé les résultats topline de cet essai.
 
-Les chiffres sont remarquables : sur 445 participants suivis pendant 68 semaines, le retatrutide à la dose de 12 mg a montré :
+Les chiffres sont remarquables : sur 445 participants suivis pendant 68 semaines, le retatrutide a montré :
 
-- Une réduction de la douleur articulaire de 75,8 % sur l'échelle WOMAC (Western Ontario and McMaster Universities Osteoarthritis Index) — un résultat nettement supérieur au placebo
+- Une réduction de la douleur articulaire allant jusqu'à 75,8 % sur l'échelle WOMAC (dose 9 mg : −4,0 pts / dose 12 mg : −3,7 pts) — la perte de poids de 28,7 % correspond à la dose 12 mg
 - Une perte de poids moyenne de 28,7 %, cohérente avec les résultats observés dans les autres essais sur le retatrutide
 - Une amélioration globale de la fonction articulaire et de la mobilité
 

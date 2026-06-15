@@ -66,7 +66,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ## Prix, disponibilité et variations en France
 
 ### Coûts et tarification
-- **Prix principal** : XX-XX€/mois
+- **Granules homéopathiques** : 3-8€/tube (non remboursés SS depuis 2021)
+- **Consultation homéopathe** : 60-90€/séance (non remboursée SS)
 - **Alternatives** : XX-XX€/mois  
 - **Consultations spécialisées** : 60-80€/consultation
 - **Suivi complémentaire** : XX€/mois

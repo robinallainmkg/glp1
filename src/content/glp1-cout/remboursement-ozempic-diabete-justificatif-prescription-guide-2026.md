@@ -34,7 +34,7 @@ En France en 2026, plusieurs médicaments de la classe des agonistes GLP-1 sont 
 - **Byetta** (exénatide 5 µg, 10 µg biquotidien, AstraZeneca) — remboursé à **65 %** (100 % en ALD diabète)
 - **Bydureon** (exénatide LP 2 mg hebdomadaire, AstraZeneca) — remboursé à **65 %** (100 % en ALD diabète)
 
-**Important** : ces remboursements s'appliquent exclusivement pour le traitement du diabète de type 2. Pour l'obésité, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) et Mounjaro (tirzépatide) sont remboursés à 65% depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée) ; Saxenda (liraglutide 3 mg) reste **non remboursé**.
+**Important** : ces remboursements s'appliquent exclusivement pour le traitement du diabète de type 2. Pour l'obésité, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) et Mounjaro (tirzépatide) sont remboursés à 65% depuis le 15 juin 2026 (arrêté du 10 juin 2026 (en vigueur le 15 juin 2026)), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée) ; Saxenda (liraglutide 3 mg) reste **non remboursé**.
 
 ### Ce qui a changé depuis février 2025
 

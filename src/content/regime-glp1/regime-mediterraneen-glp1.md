@@ -7,7 +7,7 @@ description: "Régime méditerranéen GLP-1 alimentation santé : menu type, ali
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]
 collection: "régime-glp1"
-thumbnail: "/images/thumbnails/régime-mediterraneen-glp1.jpg"
+thumbnail: "/images/thumbnails/regime-mediterraneen-glp1.jpg"
 thumbnailAlt: "Illustration pour l'article régime-mediterraneen-glp1"
 featured: false
 priority: 5
@@ -135,11 +135,11 @@ La marche rapide 30 minutes par jour est le minimum recommandé par la HAS pour 
 
 ### Wegovy (sémaglutide 2,4 mg)
 - **Prix** : ~250 à 290 € par mois
-- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en CSO/CHU
+- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 10 juin 2026), conditions : IMC initial ≥ 40 kg/m², primo-prescription par médecin en CSO, CHU, SMR gastro-endocrino ou endocrinologue en lien avec un CSO. Mounjaro (tirzépatide) : remboursé à 65% depuis le 15 juin 2026, conditions : IMC ≥ 35 après échec nutritionnel, mêmes prescripteurs habilités.
 
 ### Mounjaro (tirzepatide)
 - **Prix** : 230 à 440 € par mois selon dosage
-- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous les mêmes conditions que Wegovy
+- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 10 juin 2026), conditions : IMC ≥ 35 après échec nutritionnel, mêmes prescripteurs habilités que Wegovy
 
 ### ALD et prise en charge à 100%
 L'Affection de Longue Durée (ALD) permet une prise en charge à 100% du ticket modérateur pour le **diabète de type 2 (ALD 30)**. L'obésité seule n'est pas reconnue comme ALD en France. Toutefois, depuis le 15 juin 2026, les patients obèses sans diabète bénéficient d'un remboursement à 65% de Wegovy et Mounjaro (sous conditions d'éligibilité), le reste à charge pouvant être couvert par la mutuelle selon le contrat.

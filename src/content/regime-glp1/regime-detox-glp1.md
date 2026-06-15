@@ -8,7 +8,7 @@ author: "Dr. Émilie Martin"
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]
 collection: "régime-glp1"
-thumbnail: "/images/thumbnails/régime-detox-glp1.jpg"
+thumbnail: "/images/thumbnails/regime-detox-glp1.jpg"
 thumbnailAlt: "Illustration pour l'article régime-detox-glp1"
 featured: false
 priority: 5
@@ -117,7 +117,7 @@ Pour une semaine de rééquilibrage alimentaire adapté aux patients GLP-1 :
 
 ### Ozempic (sémaglutide pour le diabète de type 2)
 - **Prix** : ~76,58 € par stylo prérempli
-- **Remboursement** : 30% pour le diabète de type 2
+- **Remboursement** : 65% pour le diabète de type 2 (SMR Important selon HAS — vérifier sur ameli.fr)
 - **ALD 30 (diabète de type 2)** : prise en charge à 100% du ticket modérateur. L'obésité seule n'est pas reconnue comme ALD en France en mars 2026.
 
 ### Wegovy (sémaglutide pour l'obésité)

@@ -118,7 +118,7 @@ Pour les patients éligibles, la chirurgie est donc **sans reste à charge direc
 
 ### Les GLP-1 Wegovy et Mounjaro : remboursés à 65% pour l'obésité depuis le 15 juin 2026
 
-**Wegovy et Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée. Les 35% restants sont à la charge du patient ou de la mutuelle. Hors conditions d'éligibilité, le coût mensuel (prix hors remboursement) reste entièrement à la charge du patient :
+**Wegovy et Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026** (arrêté du 10 juin 2026 (abrogeant l'arrêté du 23 mai 2026)), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée. Les 35% restants sont à la charge du patient ou de la mutuelle. Hors conditions d'éligibilité, le coût mensuel (prix hors remboursement) reste entièrement à la charge du patient :
 
 - **Wegovy** : 169 € à 360 €/mois selon dosage
 - **Mounjaro** : 230 € à 440 €/mois selon dosage — voir [remboursement Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)

@@ -192,4 +192,4 @@ Non. Chaque indication est differente. Les mecanismes impliques dans Alzheimer (
 
 ---
 
-*Sources : Essais EVOKE et EVOKE+ (présentés au congrès CTAD décembre 2025, 3 808 participants), protocole publié dans Alzheimer's Research & Therapy (janvier 2025), Imperial College London communiqué mars 2026, Science mars 2026, Novo Nordisk résultats phase III.*
+*Sources : Essais EVOKE et EVOKE+ (présentés au congrès CTAD décembre 2025, 3 808 participants), protocole publié dans Alzheimer's Research & Therapy (janvier 2025), Imperial College London communiqué mars 2026, The Lancet (2026), Novo Nordisk résultats phase III.*
