@@ -101,7 +101,7 @@ Le foie est l'organe central du métabolisme lipidique. Les GLP-1 exercent des e
 - **Augmentation de l'oxydation des acides gras** : stimulation de la bêta-oxydation mitochondriale
 - **Réduction de la sécrétion de VLDL** : moins de lipoprotéines riches en triglycérides sont sécrétées dans la circulation
 
-Ces mécanismes expliquent pourquoi les GLP-1 ont également un effet bénéfique sur la stéatose hépatique, comme détaillé dans notre article sur les [GLP-1 et la stéatose hépatique MASH](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/).
+Ces mécanismes expliquent pourquoi les GLP-1 ont également un effet bénéfique sur la stéatose hépatique, comme détaillé dans notre article sur les [GLP-1 et la stéatose hépatique MASH](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/). La réduction de la lipogenèse hépatique contribue par ailleurs à la [protection rénale](/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/) en diminuant le stress métabolique sur les glomérules.
 
 ### Réduction de l'absorption intestinale des lipides
 
@@ -175,7 +175,7 @@ Un **bilan lipidique (EAL)** est recommandé :
 - **À 3 mois** : pour évaluer la réponse initiale
 - **Annuellement** ensuite en association avec le suivi habituel
 
-Les GLP-1 ne nécessitent pas de surveillance lipidique spécifique plus fréquente que les traitements habituels, mais leur effet favorable sur les lipides représente un bénéfice métabolique global non négligeable.
+Les GLP-1 ne nécessitent pas de surveillance lipidique spécifique plus fréquente que les traitements habituels, mais leur effet favorable sur les lipides représente un bénéfice métabolique global non négligeable. Il est important de noter qu'[à l'arrêt du traitement](/collections/recherche-glp1/arret-glp1-risque-cardiovasculaire-etude-2026/), le profil lipidique tend à revenir vers les valeurs initiales, soulignant le caractère chronique de la prise en charge.
 
 ## FAQ {#faq}
 

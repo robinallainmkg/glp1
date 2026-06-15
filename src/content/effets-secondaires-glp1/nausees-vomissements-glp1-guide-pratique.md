@@ -216,7 +216,7 @@ La grande majorité des nausées sous GLP-1 sont bénignes et transitoires. Cepe
 
 **Consultez votre médecin dans la journée si :**
 
-- Les nausées ne diminuent pas après 6-8 semaines sur la même dose
+- Les nausées ne diminuent pas après 6-8 semaines sur la même dose — votre médecin peut ajuster la posologie dans le cadre du [suivi de votre traitement GLP-1](/collections/regime-glp1/suivi-glp1-perte-de-poids-effets-dose/)
 - Les vomissements surviennent plus de 3 fois par jour
 - Vous ne parvenez plus à vous alimenter correctement depuis plus de 48 heures
 - Vous perdez du poids trop rapidement (plus de 1 kg par semaine de manière soutenue)

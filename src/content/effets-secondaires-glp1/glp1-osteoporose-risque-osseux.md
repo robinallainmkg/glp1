@@ -32,7 +32,7 @@ affiliateConfig:
 
 ## A retenir
 
-Une etude presentee en mars 2026 au congres de l'AAOS (American Academy of Orthopaedic Surgeons), portant sur 150 000 patients suivis pendant 5 ans, a mis en evidence une association entre la prise de medicaments GLP-1 et un risque accru d'osteoporose et de [goutte](/collections/effets-secondaires-glp1/glp1-goutte-acide-urique-risque-etude-2026/). Ces résultats ne remettent pas en cause le rapport bénéfice/risque global des GLP-1, mais invitent a une surveillance osseuse renforcée chez les patients traites.
+Une etude presentee en mars 2026 au congres de l'AAOS (American Academy of Orthopaedic Surgeons), portant sur 150 000 patients suivis pendant 5 ans, a mis en evidence une association entre la prise de medicaments GLP-1 et un risque accru d'osteoporose et de [goutte](/collections/effets-secondaires-glp1/glp1-goutte-acide-urique-risque-etude-2026/). Ces résultats ne remettent pas en cause le rapport bénéfice/risque global des GLP-1, mais invitent a une [surveillance osseuse dans le suivi du traitement](/collections/regime-glp1/suivi-glp1-perte-de-poids-effets-dose/) renforcée chez les patients traites.
 
 ---
 

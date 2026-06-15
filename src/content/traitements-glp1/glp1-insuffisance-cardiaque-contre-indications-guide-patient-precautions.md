@@ -196,7 +196,7 @@ Ces études renforcent le profil de sécurité cardiovasculaire globale des GLP-
 3. **IC-FER sévère ou décompensée récente** : contre-indication relative, avis cardiologique obligatoire
 4. **Interactions avec diurétiques** : surveillance renforcée du bilan électrolytique indispensable
 5. **Le suivi cardiologique doit être renforcé** pendant les 3 premiers mois
-6. **Ne décidez jamais seul** : le cardiologue et le prescripteur de GLP-1 doivent coordonner la prise en charge
+6. **Ne décidez jamais seul** : le cardiologue et le prescripteur de GLP-1 doivent coordonner la prise en charge — les données 2026 montrent qu'arrêter un GLP-1 sans encadrement médical peut augmenter le [risque cardiovasculaire à l'arrêt du traitement](/collections/recherche-glp1/arret-glp1-risque-cardiovasculaire-etude-2026/)
 
 ## Questions fréquentes {#faq}
 

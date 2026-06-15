@@ -54,7 +54,7 @@ Les patients obèses présentent souvent une **dysbiose** — un déséquilibre 
 
 Les récepteurs aux GLP-1 sont présents non seulement dans le pancréas et le cerveau, mais aussi directement dans la paroi intestinale — notamment dans les cellules L entéro-endocrines de l'iléon et du côlon. Ces cellules sont elles-mêmes influencées par les métabolites produits par le microbiote, notamment les AGCC.
 
-Il existe donc une **boucle de rétroaction** entre microbiote et système GLP-1 : les bactéries intestinales influencent la production naturelle de GLP-1, et inversement, les médicaments GLP-1 modifient l'environnement intestinal dans lequel vit le microbiote.
+Il existe donc une **boucle de rétroaction** entre microbiote et système GLP-1 : les bactéries intestinales influencent la production naturelle de GLP-1, et inversement, les médicaments GLP-1 modifient l'environnement intestinal dans lequel vit le microbiote. Cet [axe intestin-foie](/collections/recherche-glp1/glp1-steatose-hepatique-nash-masld-traitement/) est également impliqué dans les bénéfices des GLP-1 sur la stéatose hépatique.
 
 ### Le ralentissement du transit : une perturbation de l'écosystème
 
@@ -74,7 +74,7 @@ Les premières études sur des modèles animaux et sur des patients obèses trai
 
 Une hypothèse de recherche intéressante suggère que certains effets gastro-intestinaux des GLP-1 — diarrhées, ballonnements, flatulences — pourraient être partiellement liés à une **dysbiose transitoire** induite par la modification du transit et des substrats disponibles dans le côlon.
 
-Lorsque le microbiote est perturbé, les bactéries moins adaptées au nouvel environnement peuvent produire des gaz en excès, altérer la perméabilité intestinale, ou modifier la composition des acides biliaires secondaires — autant de mécanismes pouvant générer des symptômes digestifs.
+Lorsque le microbiote est perturbé, les bactéries moins adaptées au nouvel environnement peuvent produire des gaz en excès, altérer la perméabilité intestinale, ou modifier la composition des acides biliaires secondaires — autant de mécanismes pouvant générer des symptômes digestifs. Les [nausées et dysbiose intestinale](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/) sont ainsi étroitement liées en début de traitement GLP-1.
 
 Cette hypothèse n'est pas encore validée au niveau clinique, mais elle ouvre la voie à des interventions potentielles sur le microbiote pour améliorer la tolérance au traitement.
 

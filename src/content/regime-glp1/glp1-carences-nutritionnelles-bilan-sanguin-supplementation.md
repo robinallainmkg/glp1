@@ -93,7 +93,7 @@ Une fois le traitement instauré, les carences peuvent se développer progressiv
 
 ### 1. La carence en fer : la plus fréquente
 
-Sous traitement GLP-1, la consommation de viande rouge et d'aliments riches en fer a tendance à chuter en raison des nausées et de la réduction générale des apports. Les femmes en âge de procréer, qui ont déjà des pertes de fer liées aux menstruations, sont particulièrement exposées.
+Sous traitement GLP-1, la consommation de viande rouge et d'aliments riches en fer a tendance à chuter en raison des [nausées comme facteur aggravant des carences](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/) et de la réduction générale des apports. Les femmes en âge de procréer, qui ont déjà des pertes de fer liées aux menstruations, sont particulièrement exposées.
 
 **Signes d'alerte :**
 - Fatigue intense et inhabituelle
@@ -156,7 +156,7 @@ Quand on mange moins, chaque aliment doit "rapporter" le maximum en micronutrime
 - **Légumes à feuilles vertes** (épinards, brocolis, kale) : fer, folates, vitamines K et C
 - **Légumineuses** (lentilles, pois chiches) : fer végétal, protéines, fibres, zinc
 - **Fruits à coque** (noix, amandes) : zinc, magnésium, vitamine E
-- **Produits laitiers** ou fortifiés en calcium : prévention de la déminéralisation osseuse
+- **Produits laitiers** ou fortifiés en calcium : prévention de la [carence en vitamine D et risque osseux](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) et de la déminéralisation osseuse
 
 ### Éviter les "calories vides"
 
@@ -197,7 +197,7 @@ Une carence sévère (ex : ferritine < 10 µg/L, hémoglobine < 10 g/dL) nécess
 
 ## Conclusion : ne pas négliger la surveillance nutritionnelle
 
-Les traitements GLP-1 sont très efficaces, mais ils demandent un suivi nutritionnel rigoureux. La réduction des apports alimentaires qu'ils induisent est une opportunité de perdre du poids — et une contrainte de maintenir une alimentation de qualité pour ne pas créer de déficits qui pourraient fragiliser votre santé sur le long terme.
+Les traitements GLP-1 sont très efficaces, mais ils demandent d'[intégrer les bilans nutritionnels dans le suivi du traitement](/collections/regime-glp1/suivi-glp1-perte-de-poids-effets-dose/) de façon rigoureuse. La réduction des apports alimentaires qu'ils induisent est une opportunité de perdre du poids — et une contrainte de maintenir une alimentation de qualité pour ne pas créer de déficits qui pourraient fragiliser votre santé sur le long terme.
 
 **À retenir :**
 - Demandez un bilan nutritionnel complet avant de commencer votre traitement

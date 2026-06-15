@@ -98,7 +98,7 @@ Les protéines végétales sont moins concentrées et moins complètes individue
 
 ### Compléments protéinés : utiles dans certains cas
 
-Certains patients sous GLP-1 ont du mal à atteindre leurs objectifs protéiques uniquement par l'alimentation, notamment en raison de la réduction importante de l'appétit. Les compléments protéinés peuvent alors être utiles :
+Certains patients sous GLP-1 ont du mal à atteindre leurs objectifs protéiques uniquement par l'alimentation — les [nausées et difficultés à atteindre les apports protéiques](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/) étant fréquentes, notamment en raison de la réduction importante de l'appétit. Les compléments protéinés peuvent alors être utiles :
 
 - **Whey (protéine de lactosérum)** : 20-25 € par kg environ selon la marque, bonne biodisponibilité
 - **Protéines végétales en poudre** (pois, riz, chanvre) : alternative pour les intolérants au lactose

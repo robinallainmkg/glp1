@@ -113,7 +113,7 @@ L'activité physique est le levier le plus efficace pour contrecarrer l'adaptati
 
 ### Étape 4 : Parlez de la dose avec votre médecin
 
-Si le plateau persiste depuis plus de 2 mois et que vous n'avez pas encore atteint la dose maximale autorisée, votre médecin pourra envisager une augmentation de posologie. Pour [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), la dose maximale est de 2,4 mg/semaine ; pour [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), de 15 mg/semaine. Un passage de palier peut relancer la perte de poids, même si l'effet est souvent temporaire.
+Si le plateau persiste depuis plus de 2 mois et que vous n'avez pas encore atteint la dose maximale autorisée, votre médecin pourra envisager un [ajustement de dose lors du plateau de poids](/collections/regime-glp1/suivi-glp1-perte-de-poids-effets-dose/). Pour [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), la dose maximale est de 2,4 mg/semaine ; pour [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), de 15 mg/semaine. Un passage de palier peut relancer la perte de poids, même si l'effet est souvent temporaire.
 
 **Ne modifiez jamais la dose sans avis médical.** Une augmentation prématurée ou trop rapide multiplie le risque d'effets secondaires digestifs.
 

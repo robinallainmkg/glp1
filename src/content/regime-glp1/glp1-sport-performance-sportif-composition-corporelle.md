@@ -77,7 +77,7 @@ Le VO2max — la consommation maximale d'oxygène, indicateur principal de la ca
 
 **Effets potentiellement limitants :**
 - La réduction de l'appétit peut entraîner une diminution des réserves de glycogène si les apports glucidiques ne sont pas maintenus
-- Des nausées en début de traitement peuvent limiter l'intensité des séances
+- Des [nausées pendant l'entraînement](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/) en début de traitement peuvent limiter l'intensité des séances
 - La perte partielle de masse musculaire réduit la production de force maximale pour les épreuves qui en dépendent
 
 En pratique, les cyclistes et coureurs sous GLP-1 rapportent souvent une amélioration de leurs performances dans les premières semaines — principalement attribuable à l'allègement corporel — suivie d'un plateau ou d'une légère baisse si les apports énergétiques sont insuffisants pour soutenir l'entraînement.
@@ -114,7 +114,7 @@ Le risque principal chez le sportif sous GLP-1 est la sous-alimentation chroniqu
 - **Baisse des performances** sur plusieurs semaines consécutives
 - **Récupération allongée** entre les séances (douleurs musculaires prolongées)
 - **Irritabilité et difficultés de concentration** — signes d'hypoglycémie fonctionnelle
-- **Blessures tendineuses répétées** — possiblement liées à un déficit protéique chronique
+- **Blessures tendineuses répétées** — [risque osseux pour les sportifs sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) et possiblement liées à un déficit protéique chronique
 
 Si ces signes apparaissent, il faut revoir les apports nutritionnels avec un diététicien sportif et discuter avec le médecin d'une adaptation posologique.
 

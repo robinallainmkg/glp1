@@ -145,11 +145,11 @@ Malgré des résultats prometteurs, plusieurs questions restent sans réponse :
 - **Durabilité des effets** : les effets persistent-ils à long terme (> 2 ans) ?
 - **Profil de patients répondeurs** : qui bénéficiera le plus de ce traitement ?
 - **Dose optimale** : les doses élevées (dose obésité, 2,4 mg pour le sémaglutide) sont-elles plus efficaces que les doses faibles ?
-- **Association avec les thérapies comportementales** : la combinaison GLP-1 + thérapie cognitivo-comportementale est-elle supérieure au GLP-1 seul ?
+- **Association avec les thérapies comportementales** : la combinaison GLP-1 + thérapie cognitivo-comportementale est-elle supérieure au GLP-1 seul ? L'[accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) reste indispensable pour traiter les comportements addictifs sous-jacents.
 
 ### Autres addictions potentiellement concernées
 
-Les données sur l'alcool s'inscrivent dans un mouvement de recherche plus large sur les GLP-1 et les addictions. L'essai ALBATROS confirme l'action du sémaglutide sur l'alcool — un mécanisme plus large expliqué dans notre article sur les [effets des GLP-1 sur les autres addictions](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/) (tabac, opioïdes). Chaque addiction présente des mécanismes partiellement différents, et les résultats pour l'alcool ne présagent pas nécessairement d'une efficacité identique pour d'autres substances.
+Les données sur l'alcool s'inscrivent dans un mouvement de recherche plus large sur les GLP-1 et les addictions. Ces nouvelles indications potentielles font l'objet d'un suivi par la [pharmacovigilance](/collections/recherche-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/) française, qui surveille notamment les effets psychiatriques et comportementaux des GLP-1. L'essai ALBATROS confirme l'action du sémaglutide sur l'alcool — un mécanisme plus large expliqué dans notre article sur les [effets des GLP-1 sur les autres addictions](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/) (tabac, opioïdes). Chaque addiction présente des mécanismes partiellement différents, et les résultats pour l'alcool ne présagent pas nécessairement d'une efficacité identique pour d'autres substances.
 
 ## FAQ {#faq}
 

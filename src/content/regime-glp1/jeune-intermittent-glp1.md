@@ -109,7 +109,7 @@ Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/coll
 - **Baume lèvres** : Hydratation jeûne
 
 ### Bien-être général
-- **Huiles essentielles** : Menthe poivrée (nausées)
+- **Huiles essentielles** : Menthe poivrée ([nausées pendant le jeûne sous GLP-1](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/))
 - **Crème mains** : Sécheresse liée jeûne
 - **Spray buccal** : Fraîcheur haleine
 
@@ -133,7 +133,7 @@ Non, l'injection de GLP-1 ne rompt pas le jeûne métabolique. Elle peut même f
 Oui, le JI quotidien est compatible. Surveillance médicale recommandée les 3 premiers mois d'association.
 
 ### Que faire en cas d'hypoglycémie pendant le jeûne ?
-Rompre immédiatement le jeûne avec 15g glucose. Revoir posologies avec médecin si récidives.
+Rompre immédiatement le jeûne avec 15g glucose. Revoir posologies avec médecin si récidives — consultez notre guide sur le [suivi et ajustement des doses pendant le jeûne](/collections/regime-glp1/suivi-glp1-perte-de-poids-effets-dose/).
 
 ## Conclusion
 

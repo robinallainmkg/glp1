@@ -80,7 +80,7 @@ Chez les femmes qui ont eu des grossesses avant la perte de poids, le relâcheme
 
 ### Les bras
 
-Le relâchement de la face interne des bras (communément appelé « bras chauve-souris ») est l'un des plus visibles et des plus difficiles à accepter sur le plan esthétique. La peau de cette zone est naturellement fine et peu soutenue par le muscle. Après une perte de poids importante, l'excès cutané pend et bouge à chaque mouvement.
+Le relâchement de la face interne des bras (communément appelé « bras chauve-souris ») est l'un des plus visibles et des plus difficiles à accepter sur le plan esthétique. Les changements corporels importants peuvent impacter l'image de soi — un [accompagnement psychologique face aux changements corporels](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) aide à traverser cette transformation. La peau de cette zone est naturellement fine et peu soutenue par le muscle. Après une perte de poids importante, l'excès cutané pend et bouge à chaque mouvement.
 
 ### Les cuisses
 

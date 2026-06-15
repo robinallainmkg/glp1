@@ -87,7 +87,7 @@ Au-delà de **3 mois**, une autorisation préalable de l'ANSM est requise.
 | **France** | 169-360€ | Référence |
 | **Belgique** | ~270€ | Stable |
 
-L'**Allemagne** offre les tarifs les plus compétitifs, renforcés par l'arrivée du **générique Nevolat® (Zentiva) à 79-129€/mois** depuis début 2026.
+L'**Allemagne** offre les tarifs les plus compétitifs, renforcés par l'arrivée du **générique Nevolat® (Zentiva) à 79-129€/mois** depuis début 2026. Pour comprendre les perspectives de [génériques Semaglutide disponibles en Europe](/collections/glp1-cout/ozempic-generique-france-semaglutide-biosimilaire-date/), consultez notre dossier dédié.
 
 ### Mounjaro (tirzepatide, Eli Lilly) — Diabète + perte de poids hors-AMM
 
@@ -201,7 +201,7 @@ Tous les GLP-1 doivent être **stockés entre 2 et 8°C** avant première utilis
 
 ## Risques et Comment les Éviter
 
-### Risque n°1 : la contrefaçon (très élevé)
+### Risque n°1 : les [risques du mésusage et des achats hors circuit médical](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) et la contrefaçon (très élevé)
 
 L'EMA et l'ANSM ont multiplié les alertes en 2024-2025 sur des **stylos Wegovy et Ozempic contrefaits** circulant via :
 - Marketplaces grand public (Amazon, eBay)
@@ -221,7 +221,7 @@ Les GLP-1 sont des protéines fragiles. Une rupture prolongée de la chaîne du 
 - Affichent un **suivi GPS** ou **indicateur de température**
 - Garantissent une livraison en **48-72h maximum**
 
-### Risque n°3 : absence de suivi médical
+### Risque n°3 : absence de suivi médical et [continuité du traitement lors d'un voyage ou d'une hospitalisation](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/)
 
 Acheter à l'étranger ne dispense pas d'un **suivi médical trimestriel** en France pour :
 - Adapter la posologie

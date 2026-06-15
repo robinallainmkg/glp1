@@ -35,7 +35,7 @@ Des femmes sous GLP-1 qui ne parvenaient pas à concevoir depuis plusieurs anné
 Si vous prenez un médicament GLP-1 à des fins de perte de poids et que vous ne souhaitez pas tomber enceinte, **votre contraception existante peut devenir moins efficace**. Deux raisons à cela :
 
 1. La perte de poids restaure l'ovulation chez des femmes qui pensaient ne plus ovuler
-2. Les nausées et vomissements fréquents au début du traitement peuvent réduire l'efficacité des pilules contraceptives orales (absorption réduite)
+2. Les nausées et vomissements fréquents au début du traitement peuvent réduire l'efficacité des pilules contraceptives orales (absorption réduite) — c'est l'un des aspects des [contraceptifs et GLP-1 : une interaction à connaître](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/)
 
 Il est donc recommandé de discuter de votre contraception avec votre médecin dès le début d'un traitement GLP-1.
 

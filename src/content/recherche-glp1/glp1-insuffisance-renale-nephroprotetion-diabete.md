@@ -100,7 +100,7 @@ Pour les insuffisances rénales légères à modérées (stades 1 à 3b, DFGe �
 
 ### DFGe entre 15 et 30 (stade 4) : prudence et surveillance renforcée
 
-En cas d'insuffisance rénale sévère (DFGe 15-30), l'utilisation des GLP-1 doit être discutée au cas par cas avec le néphrologue. Le principal risque est une aggravation des nausées et vomissements (qui peuvent entraîner une déshydratation et une dégradation rapide de la fonction rénale), mais aussi une hypoglycémie si des antidiabétiques associés sont utilisés.
+En cas d'insuffisance rénale sévère (DFGe 15-30), l'utilisation des GLP-1 doit être discutée au cas par cas avec le néphrologue. Le principal risque est une aggravation des nausées et vomissements (qui peuvent entraîner une déshydratation et une dégradation rapide de la fonction rénale), mais aussi une hypoglycémie si des antidiabétiques associés sont utilisés. Les [interactions médicamenteuses en cas d'insuffisance rénale](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/) méritent une attention particulière lors de la co-prescription avec d'autres traitements.
 
 ### DFGe < 15 (stade 5) et dialyse : déconseillé
 
@@ -128,6 +128,7 @@ Pour les patients sous GLP-1 avec IRC :
 - Microalbuminurie ou protéinurie tous les 6 mois à 1 an
 - Ionogramme sanguin si association avec iSGLT2 ou IEC/ARA2
 - Hydratation suffisante (1,5 à 2 L/jour), particulièrement en cas de nausées
+- [Bilan lipidique dans l'insuffisance rénale sous GLP-1](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-benefices/) : les GLP-1 améliorent également le profil lipidique, un avantage particulièrement pertinent chez les patients IRC dont la dyslipidémie aggrave le risque cardiovasculaire
 
 ## Questions fréquentes {#faq}
 

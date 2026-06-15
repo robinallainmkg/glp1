@@ -154,7 +154,7 @@ Le prix officiel d'Ozempic est négocié avec le CEPS (Comité Économique des P
 
 La question du générique d'Ozempic est légitime — ces traitements coûtent cher et restent inaccessibles pour de nombreux patients qui pourraient en bénéficier. La réalité du système de brevets européens impose une attente jusqu'en 2031-2032 au minimum.
 
-En attendant, les voies pour réduire le coût existent : utiliser les dispositifs de remboursement disponibles, explorer les alternatives thérapeutiques, et rester informé de l'évolution des négociations pour le remboursement Wegovy/Mounjaro.
+En attendant, les voies pour réduire le coût existent : utiliser les dispositifs de remboursement disponibles, explorer les alternatives thérapeutiques, et rester informé de l'évolution des négociations pour le remboursement Wegovy/Mounjaro. Certains patients se tournent aussi vers les [pharmacies européennes comme alternative en attendant le générique](/collections/glp1-cout/glp1-pharmacie-en-ligne-europe-legal/) — voici le cadre légal à respecter.
 
 Consultez notre guide complet sur les [prix des traitements GLP-1 en France](/collections/glp1-cout/remboursement-glp1-2026/) pour une vue d'ensemble actualisée du coût et des remboursements disponibles en 2026.
 

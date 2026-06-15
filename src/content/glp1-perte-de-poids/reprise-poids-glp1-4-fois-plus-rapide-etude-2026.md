@@ -133,6 +133,9 @@ Une pesée hebdomadaire (même jour, même heure, même tenue) permet d'identifi
 **5. Ne pas attendre pour reconsulter si la reprise s'emballe**
 Si le poids remonte de plus de 5 kg en moins de 3 mois, consulter son médecin rapidement. Il peut être justifié de reprendre le traitement ou d'explorer d'autres options.
 
+**6. [Prévenir la reprise de poids avec un accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/)**
+Un travail sur le comportement alimentaire avec un psychologue ou diététicien permet de consolider les nouvelles habitudes et de réduire le risque d'hyperphagie à l'arrêt du médicament.
+
 ## Questions fréquentes
 
 **Est-ce que tous les patients reprennent du poids après l'arrêt des GLP-1 ?**

@@ -52,7 +52,7 @@ L'étude SELECT de 2023 — qui a suivi 17 604 patients prenant du sémaglutide 
 
 **En pratique** : le risque absolu est faible, estimé à environ 1 cas pour 1 000 patients traités sur une année. Il reste néanmoins réel et nécessite une vigilance particulière.
 
-### Le cas particulier du mésusage signalé par l'ANSM
+### Le cas particulier de la [pancréatite et mésusage des GLP-1](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) signalé par l'ANSM
 
 En 2024-2025, l'ANSM a publié un point de pharmacovigilance faisant état d'un décès suite à une pancréatite dans le contexte d'un mésusage d'analogue GLP-1. L'ANSM précise toutefois que les données disponibles ne permettent pas d'établir un lien de causalité direct entre le médicament et ce décès. Cette situation — où le médicament était utilisé hors indication médicale, sans suivi médical approprié — illustre néanmoins l'importance cruciale d'un encadrement médical rigoureux.
 
@@ -127,7 +127,7 @@ Aux urgences, le bilan habituel comprend un dosage des enzymes pancréatiques da
 
 ### La prise en charge hospitalière
 
-La pancréatite aiguë légère à modérée se traite par la mise à jeun temporaire, une hydratation intraveineuse et une surveillance rapprochée. Les formes sévères nécessitent une prise en charge en soins intensifs. La durée d'hospitalisation varie de quelques jours à plusieurs semaines selon la gravité.
+La pancréatite aiguë légère à modérée se traite par la mise à jeun temporaire, une hydratation intraveineuse et une surveillance rapprochée. Les formes sévères nécessitent une prise en charge en soins intensifs — dans ce contexte d'[urgence chirurgicale en cas de pancréatite](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/), les précautions liées à l'anesthésie sous GLP-1 s'appliquent. La durée d'hospitalisation varie de quelques jours à plusieurs semaines selon la gravité.
 
 ## Ce que cela change pour votre traitement au quotidien
 

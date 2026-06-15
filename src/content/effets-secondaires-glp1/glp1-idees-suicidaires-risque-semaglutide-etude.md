@@ -145,7 +145,7 @@ En théorie, une modulation de l'activité dans ces régions pourrait influencer
 
 ### L'hypothèse du « food reward » modifié
 
-Les GLP-1 réduisent le plaisir associé à la nourriture (récompense alimentaire). Or, chez certaines personnes, la nourriture joue un rôle important dans la régulation émotionnelle — c'est ce qu'on appelle l'alimentation émotionnelle. Si un patient utilisé la nourriture comme mécanisme de gestion du stress, de l'anxiété ou de la tristesse, la suppression brutale de ce mécanisme par un GLP-1 pourrait théoriquement déstabiliser l'équilibre émotionnel.
+Les GLP-1 réduisent le plaisir associé à la nourriture (récompense alimentaire). Ces mêmes mécanismes sont liés aux effets des [GLP-1 et addictions : un lien via le circuit dopaminergique](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/). Or, chez certaines personnes, la nourriture joue un rôle important dans la régulation émotionnelle — c'est ce qu'on appelle l'alimentation émotionnelle. Si un patient utilisé la nourriture comme mécanisme de gestion du stress, de l'anxiété ou de la tristesse, la suppression brutale de ce mécanisme par un GLP-1 pourrait théoriquement déstabiliser l'équilibre émotionnel.
 
 Cette hypothèse est plausible sur le plan psychologique mais n'a pas été confirmée par des données cliniques spécifiques.
 
@@ -204,7 +204,7 @@ Les médecins qui prescrivent des GLP-1 sont invités par l'ANSM à :
 - Interroger systématiquement les patients sur leurs antécédents psychiatriques avant la prescription
 - Réévaluer l'état psychologique à chaque consultation de suivi
 - Signaler tout événement indésirable psychiatrique au système de pharmacovigilance
-- Ne pas hésiter à orienter vers un spécialiste en santé mentale en cas de doute
+- Ne pas hésiter à orienter vers un spécialiste en santé mentale en cas de doute — les [risques psychologiques du mésusage des GLP-1](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) sont particulièrement à surveiller
 
 Pour en savoir plus sur les [effets psychologiques des GLP-1 (dépression, apathie)](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/), nous avons consacré un article complet à ce sujet.
 

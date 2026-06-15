@@ -48,7 +48,7 @@ La goutte est fréquemment associée aux mêmes facteurs de risque que l'obésit
 
 ### Méthodologie
 
-L'étude à l'origine du débat a été présentée au congrès de l'AAOS (American Academy of Orthopaedic Surgeons) en mars 2026. Elle portait sur une cohorte de plus de 150 000 patients adultes suivis pendant 5 ans. Les chercheurs ont comparé l'incidence de la goutte et de l'ostéoporose chez des patients traités par GLP-1 à celle de patients non traités par ces médicaments, après ajustement sur les principaux facteurs de confusion (âge, sexe, IMC, diabète, antécédents rénaux).
+L'étude à l'origine du débat a été présentée au congrès de l'AAOS (American Academy of Orthopaedic Surgeons) en mars 2026. Elle portait sur une cohorte de plus de 150 000 patients adultes suivis pendant 5 ans. Les chercheurs ont comparé l'incidence de la goutte et de l'[ostéoporose et goutte : deux risques osseux liés](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) chez des patients traités par GLP-1 à celle de patients non traités par ces médicaments, après ajustement sur les principaux facteurs de confusion (âge, sexe, IMC, diabète, antécédents rénaux).
 
 ### Résultats principaux
 
@@ -86,7 +86,7 @@ Les GLP-1 modifient le flux sanguin rénal et la filtration glomérulaire. Bien 
 
 ### Le rôle de la déshydratation
 
-Les GLP-1 peuvent entraîner des nausées et vomissements en début de traitement, réduisant l'apport hydrique. Or, la déshydratation est un facteur déclenchant classique des crises de goutte (concentration de l'urate dans le sang augmentée).
+Les GLP-1 peuvent entraîner des nausées et vomissements en début de traitement, réduisant l'apport hydrique. Or, la [déshydratation et risque de goutte sous GLP-1](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/) est un facteur déclenchant classique des crises de goutte (concentration de l'urate dans le sang augmentée).
 
 ## Que dit l'ANSM en France ?
 

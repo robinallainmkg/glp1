@@ -154,7 +154,7 @@ Douleur abdominale intense et persistante (risque de pancréatite), vomissements
 
 **18. « Le traitement peut-il provoquer une perte de cheveux ou une fatigue prolongée ? »**
 
-Ces symptômes ne sont pas liés au médicament lui-même mais à la perte de poids rapide et aux éventuelles carences nutritionnelles qui en découlent. Votre médecin devrait planifier des bilans vitaminiques réguliers (B12, D, fer, zinc) pour prévenir ces situations.
+Ces symptômes ne sont pas liés au médicament lui-même mais à la perte de poids rapide et au [risque de carences nutritionnelles à discuter avec votre médecin](/collections/effets-secondaires-glp1/carences-nutritionnelles-glp1-vitamines-fer-ansm/) qui en découlent. Votre médecin devrait planifier des bilans vitaminiques réguliers (B12, D, fer, zinc) pour prévenir ces situations.
 
 **19. « Y a-t-il un risque pour la thyroïde ? »**
 
@@ -172,7 +172,7 @@ Le suivi est la clé du succès à long terme. Clarifiez les modalités dès le 
 
 **21. « À quelle fréquence devrons-nous nous revoir ? »**
 
-En règle générale : un mois après le début du traitement, puis tous les 3 mois la première année. Certains médecins proposent des téléconsultations intermédiaires pour ajuster les doses sans déplacement. Demandez ce qui est prévu dans votre cas.
+En règle générale : un mois après le début du traitement, puis tous les 3 mois la première année. Pour comprendre ce qu'implique le [suivi du traitement après la première consultation](/collections/regime-glp1/suivi-glp1-perte-de-poids-effets-dose/), consultez notre guide dédié. Certains médecins proposent des téléconsultations intermédiaires pour ajuster les doses sans déplacement. Demandez ce qui est prévu dans votre cas.
 
 **22. « Quels bilans sanguins seront nécessaires et à quelle fréquence ? »**
 

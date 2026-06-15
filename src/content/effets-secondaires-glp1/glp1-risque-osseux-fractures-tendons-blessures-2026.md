@@ -46,7 +46,7 @@ Contrairement à ce qui a pu être relayé dans certains médias, il ne s'agit p
 
 **L'étude UTMB** (University of Texas Medical Branch) a analysé les données de **78 590 patients** traités par des agonistes GLP-1, en les comparant à un groupe témoin de profil équivalent. Elle s'est concentrée sur les ruptures tendineuses — coiffe des rotateurs, tendon d'Achille, tendon pectoral — survenues pendant le traitement.
 
-**L'étude Michigan State** a porté sur **73 483 patients** et a exploré un autre versant du risque musculosquelettique : l'ostéoporose et la goutte sous GLP-1.
+**L'étude Michigan State** a porté sur **73 483 patients** et a exploré un autre versant du risque musculosquelettique : l'ostéoporose et l'[association entre risques osseux et goutte sous GLP-1](/collections/effets-secondaires-glp1/glp1-goutte-acide-urique-risque-etude-2026/).
 
 Les deux travaux convergent vers le même constat : les agonistes GLP-1 sont associés à un risque accru de complications musculosquelettiques qu'il convient de surveiller.
 

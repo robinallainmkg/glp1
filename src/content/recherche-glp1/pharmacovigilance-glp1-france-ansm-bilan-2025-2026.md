@@ -66,13 +66,21 @@ L'étude EPI-Phare sur la [gastroparésie](/collections/effets-secondaires-glp1/
 
 #### 2. Idées suicidaires et [troubles psychiatriques](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale)
 
-L'EMA avait lancé en 2023 une évaluation sur le risque d'idées suicidaires sous GLP-1, à la suite de déclarations spontanées. Le bilan de l'ANSM pour 2025-2026 conclut à l'**absence de signal causal établi** entre les GLP-1 et les idées suicidaires dans les données françaises. Les déclarations semblaient liées à d'autres facteurs (pathologies sous-jacentes, comorbidités, arrêts concomitants d'autres traitements). La surveillance reste cependant active.
+L'EMA avait lancé en 2023 une évaluation sur le risque d'[idées suicidaires](/collections/effets-secondaires-glp1/glp1-idees-suicidaires-risque-semaglutide-etude/) sous GLP-1, à la suite de déclarations spontanées. Le bilan de l'ANSM pour 2025-2026 conclut à l'**absence de signal causal établi** entre les GLP-1 et les idées suicidaires dans les données françaises. Les déclarations semblaient liées à d'autres facteurs (pathologies sous-jacentes, comorbidités, arrêts concomitants d'autres traitements). La surveillance reste cependant active.
 
 #### 3. Pancréatite aiguë
 
 Le risque de pancréatite sous GLP-1 fait l'objet d'une surveillance depuis la mise sur le marché, avec des [cas de pancréatite signalés à l'ANSM](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/) régulièrement analysés. Les données françaises d'EPI-Phare ne retrouvent pas de signal significatif supérieur au risque de base dans la population diabétique et obèse — qui est déjà naturellement plus élevé. L'ANSM maintient néanmoins ce risque dans les informations prescripteur.
 
-#### 4. Interactions et carences nutritionnelles
+#### 4. Neuropathie optique et vision
+
+Des cas de [neuropathie optique](/collections/effets-secondaires-glp1/glp1-neuropathie-optique-vision-yeux-semaglutide-noian/) (NOIAN) ont été signalés dans les données de pharmacovigilance internationale, conduisant l'ANSM à surveiller ce signal chez les patients traités par GLP-1 à haute dose.
+
+#### 5. Troubles du comportement alimentaire
+
+Les [troubles du comportement alimentaire](/collections/effets-secondaires-glp1/glp1-boulimie-hyperphagie-troubles-conduites-alimentaires-tca-france/) sous GLP-1 font l'objet d'une surveillance spécifique, certains patients présentant des comportements restrictifs excessifs ou des épisodes de boulimie lors des pauses de traitement.
+
+#### 6. Interactions et carences nutritionnelles
 
 Un [signal ANSM sur les carences nutritionnelles sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) documenté dans le bilan 2025-2026 concerne les **carences nutritionnelles** chez les patients sous GLP-1, particulièrement en fer (anémie), vitamine B1 (thiamine, risque de syndrome de Gayet-Wernicke), et perte de masse musculaire (sarcopénie). Ces carences, liées à la réduction significative des apports alimentaires, peuvent avoir des conséquences cliniques (fatigue, fragilité musculaire, troubles neurologiques). L'ANSM recommandé un bilan biologique annuel chez les patients traités au long cours.
 

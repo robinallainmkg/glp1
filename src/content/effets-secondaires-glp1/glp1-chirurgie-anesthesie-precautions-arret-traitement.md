@@ -91,7 +91,7 @@ Lorsqu'un patient sous GLP-1 doit être opéré en urgence et que l'arrêt du tr
 
 - **Induction à séquence rapide (ISR)** : technique permettant d'intuber rapidement le patient pour protéger les voies aériennes avant toute régurgitation possible
 - **Echographie gastrique préopératoire** : examen rapide pour évaluer le contenu de l'estomac avant l'induction
-- **Antiacides ou prokinétiques** : médicaments réduisant l'acidité gastrique ou accélérant la vidange gastrique
+- **Antiacides ou prokinétiques** : médicaments réduisant l'acidité gastrique ou accélérant la vidange gastrique — voir aussi les [interactions avec les anesthésiques et médicaments péri-opératoires](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/)
 
 Ces adaptations existent et sont efficaces, mais elles ne sont pas systématiquement appliquées si l'équipe soignante n'est pas informée de votre traitement. D'où l'importance capitale de déclarer votre traitement GLP-1.
 
@@ -133,7 +133,7 @@ Si vous prenez un GLP-1 pour le diabète de type 2, l'arrêt temporaire devra s'
 
 Une interruption d'une à deux semaines d'un traitement GLP-1 pour une chirurgie programmée n'a pas d'impact significatif sur les résultats à long terme de la prise en charge de l'obésité. Le traitement reprend ses effets dans les jours suivant la réintroduction.
 
-En revanche, un arrêt prolongé non anticipé — par exemple si des complications postopératoires empêchent la reprise rapide du traitement — peut s'accompagner d'une [reprise partielle du poids](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/). Il est donc important d'informer son médecin de toute complication postopératoire qui retarderait la reprise du traitement.
+En revanche, un arrêt prolongé non anticipé — par exemple si des complications postopératoires empêchent la reprise rapide du traitement — peut s'accompagner d'une [reprise partielle du poids](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/). Des études montrent que le [risque de reprise de poids après arrêt chirurgical](/collections/glp1-perte-de-poids/reprise-poids-glp1-4-fois-plus-rapide-etude-2026/) peut être rapide — planifiez la reprise du traitement avec votre médecin. Il est donc important d'informer son médecin de toute complication postopératoire qui retarderait la reprise du traitement.
 
 ### Particularités de la chirurgie bariatrique
 
@@ -146,7 +146,7 @@ Si vous prenez un GLP-1 et qu'une intervention chirurgicale ou endoscopique est 
 1. **Informez systématiquement votre anesthésiste** lors de la consultation préanesthésique
 2. **Arrêtez le traitement une semaine avant** si vous prenez un GLP-1 hebdomadaire (Ozempic, Wegovy, Mounjaro)
 3. **Arrêtez le traitement la veille** si vous prenez un GLP-1 quotidien (Victoza, Saxenda)
-4. **Consultez votre médecin prescripteur** pour adapter la prise en charge pendant l'arrêt, surtout si vous êtes diabétique
+4. **[Préparer sa chirurgie avec son médecin](/collections/medecins-glp1-france/questions-medecin-avant-glp1-checklist/)** pour adapter la prise en charge pendant l'arrêt, surtout si vous êtes diabétique
 5. **Reprenez le traitement** lorsque vous mangez normalement et que votre médecin vous y autorisé
 6. **En urgence**, signalez toujours votre traitement à l'équipe soignante pour que des mesures adaptées soient prises
 

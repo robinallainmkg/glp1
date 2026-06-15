@@ -56,7 +56,7 @@ Le mésusage emprunte plusieurs canaux :
 
 **La prescription complaisante** : Certains médecins prescrivent des GLP-1 (notamment Ozempic) à des patients qui ne remplissent pas les critères d'indication officiels. L'Assurance Maladie a signalé une augmentation anormale des prescriptions d'Ozempic chez des patients sans diabète de type 2.
 
-**L'achat en ligne** : Des sites internet non autorisés vendent du sémaglutide ou du tirzépatide sans ordonnance. Outre l'illégalité, ces achats exposent à des [risques de contrefaçon graves](/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/).
+**[Achats en ligne et risques de mésusage](/collections/glp1-cout/glp1-pharmacie-en-ligne-europe-legal/)** : Des sites internet non autorisés vendent du sémaglutide ou du tirzépatide sans ordonnance. Outre l'illégalité, ces achats exposent à des [risques de contrefaçon graves](/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/).
 
 **Le partage de traitements** : Des patients sous traitement partagent ou revendent leurs stylos injecteurs à des proches, une pratique dangereuse et illégale. Le [témoignage de Serena Williams sur les GLP-1](/collections/temoignages/serena-williams-glp1/) a par ailleurs contribué à la médiatisation de ces traitements, amplifiant la demande hors indication.
 
@@ -72,7 +72,7 @@ L'ANSM surveille de près les effets gastro-intestinaux graves associés à l'ut
 
 **[Gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/)** : Le ralentissement de la vidange gastrique — un effet recherché pour la perte de poids — peut devenir problématique et évoluer vers une gastroparésie persistante chez certains patients.
 
-Pour une vue complète des effets secondaires, consultez nos guides sur les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et les [effets secondaires de Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/).
+Parmi les [effets rares graves liés au mésusage](/collections/effets-secondaires-glp1/glp1-neuropathie-optique-vision-yeux-semaglutide-noian/), on trouve également des atteintes visuelles comme la neuropathie optique (NOIAN), particulièrement documentées en l'absence de suivi médical. Pour une vue complète des effets secondaires, consultez nos guides sur les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et les [effets secondaires de Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/).
 
 ### Risques nutritionnels et métaboliques
 

@@ -101,7 +101,7 @@ Une ou deux séances de 30-45 minutes par semaine sont un excellent complément.
 
 ### Programme débutant (mois 1-2)
 
-L'objectif des premières semaines est l'adaptation : apprendre les mouvements, habituer le corps à l'effort et éviter les blessures. Les effets secondaires digestifs du GLP-1 (nausées en début de traitement) peuvent nécessiter de modérer l'intensité.
+L'objectif des premières semaines est l'adaptation : apprendre les mouvements, habituer le corps à l'effort et mettre en place un [programme d'exercice adapté pour protéger os et tendons](/collections/effets-secondaires-glp1/glp1-risque-osseux-fractures-tendons-blessures-2026/). Les effets secondaires digestifs du GLP-1 (nausées en début de traitement) peuvent nécessiter de modérer l'intensité.
 
 **Lundi : Bas du corps**
 - Squat gobelet (haltère) : 3 × 12
@@ -195,7 +195,7 @@ La créatine monohydrate (3-5 g/jour) est sûre et efficace pour améliorer la f
 
 **L'exercice rend-il le traitement GLP-1 plus efficace ?**
 
-Oui, dans plusieurs dimensions. L'activité physique améliore la sensibilité à l'insuline, amplifiant l'action du GLP-1 sur la régulation glycémique. Elle maintient le métabolisme de base pendant la perte de poids, ce qui prévient l'effet "plateau". Elle améliore aussi la santé cardiovasculaire et mentale, contribuant à un meilleur suivi du traitement à long terme.
+Oui, dans plusieurs dimensions. L'activité physique améliore la sensibilité à l'insuline, amplifiant l'action du GLP-1 sur la régulation glycémique. Elle maintient le métabolisme de base pendant la perte de poids, ce qui prévient l'effet "plateau". Elle améliore aussi la santé cardiovasculaire et mentale — [combiner sport et soutien psychologique sous GLP-1](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) contribue à un meilleur suivi du traitement à long terme.
 
 ## Conclusion
 

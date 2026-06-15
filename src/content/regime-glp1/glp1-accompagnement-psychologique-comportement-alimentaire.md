@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) transforment le rapport à la nourriture de manière profonde. L'appétit diminue, les envies compulsives s'atténuent, et la perte de poids s'enclenche souvent dès les premières semaines. Mais ce que beaucoup de patients découvrent avec surprise — parfois avec inquiétude — c'est que le médicament seul ne réorganise pas la relation émotionnelle à l'alimentation. Sans accompagnement psychologique et diététique adapté, le risque de rechute après l'arrêt du traitement est réel et documenté.
+Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) transforment le rapport à la nourriture de manière profonde. L'appétit diminue, les envies compulsives s'atténuent, et la perte de poids s'enclenche souvent dès les premières semaines. Mais ce que beaucoup de patients découvrent avec surprise — parfois avec inquiétude — c'est que le médicament seul ne réorganise pas la relation émotionnelle à l'alimentation. Sans accompagnement psychologique et diététique adapté, le risque de [reprise de poids après arrêt du traitement](/collections/glp1-perte-de-poids/reprise-poids-glp1-4-fois-plus-rapide-etude-2026/) est réel et documenté.
 
 ## Pourquoi les GLP-1 modifient le comportement alimentaire
 
@@ -116,7 +116,7 @@ Des études publiées dans *Obesity Reviews* (2025) montrent que jusqu'à **15 %
 
 Le traitement GLP-1 est plus efficace et plus durable quand il s'inscrit dans une prise en charge pluridisciplinaire. L'équipe idéale comprend :
 
-- **Votre médecin traitant ou endocrinologue** : suivi médical, ajustement des doses, bilan biologique régulier
+- **Votre médecin traitant ou endocrinologue** : [suivi structuré pendant le traitement](/collections/regime-glp1/suivi-glp1-perte-de-poids-effets-dose/) — ajustement des doses, bilan biologique régulier
 - **Un diététicien-nutritionniste** spécialisé dans l'obésité ou les traitements GLP-1 : adaptation du régime alimentaire, prévention des carences
 - **Un professionnel du mouvement** (coach sportif, kinésithérapeute, professeur d'EPS) : programme d'activité physique adapté pour préserver la masse musculaire
 - **Un psychologue ou psychothérapeute** (si besoin) : gestion émotionnelle, TCA, adaptation psychologique

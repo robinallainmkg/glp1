@@ -106,7 +106,7 @@ La chaleur est l'ennemi principal de ces médicaments. Voici les erreurs courant
 - **Plage** : l'exposition directe au soleil peut dégrader le médicament. Gardez le stylo dans un sac isotherme ou un endroit ombragé.
 - **Pays chauds** : en cas de voyage dans des pays à forte chaleur (Maghreb, Afrique, Asie du Sud-Est), une pochette réfrigérante médicale est indispensable.
 
-**Comment reconnaître un stylo endommagé par la chaleur** : si la solution change de couleur (coloration jaunâtre), devient trouble ou contient des particules visibles, ne l'utilisez pas et contactez votre pharmacien.
+**Comment reconnaître un stylo endommagé par la chaleur** : si la solution change de couleur (coloration jaunâtre), devient trouble ou contient des particules visibles, ne l'utilisez pas et contactez votre pharmacien. Un stylo mal conservé peut également perdre en efficacité et provoquer des [nausées liées à une mauvaise conservation du stylo](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/) plus marquées lors de l'injection.
 
 ### Froid extrême et activités de montagne
 

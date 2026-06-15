@@ -93,7 +93,7 @@ Si ces effets chondroprotecteurs se confirment dans les études cliniques humain
 
 Si le tableau est globalement positif, il existe une mise en garde importante : la perte de poids rapide induite par les GLP-1 peut s'accompagner d'une réduction de la densité minérale osseuse, comme c'est le cas avec tout amaigrissement important. Les données issues des essais STEP montrent que la perte de masse maigre (incluant la masse osseuse) représente environ 25 à 40 % du poids total perdu — une proportion comparable à celle observée après chirurgie bariatrique ou régimes très restrictifs.
 
-Chez les patients arthrosiques avancés qui souffrent souvent déjà d'ostéopénie ou d'ostéoporose associée, ce risque mérite une surveillance spécifique. Notre article sur le [risque d'ostéoporose sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) détaille les précautions à prendre.
+Chez les patients arthrosiques avancés qui souffrent souvent déjà d'ostéopénie ou d'ostéoporose associée, ce risque mérite une surveillance spécifique. Des études 2026 signalent également des [risques osseux associés aux GLP-1](/collections/effets-secondaires-glp1/glp1-risque-osseux-fractures-tendons-blessures-2026/), notamment un sur-risque de fractures et de blessures tendineuses. Notre article sur le [risque d'ostéoporose sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) détaille les précautions à prendre.
 
 ### Les recommandations pour les patients arthrosiques sous GLP-1
 

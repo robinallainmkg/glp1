@@ -92,7 +92,7 @@ Pour une femme obèse sans infertilité avérée, les GLP-1 n'ont pas d'effet di
 
 ### Étape 1 : Informer son médecin en amont
 
-Dès que vous envisagez une grossesse dans les mois à venir, parlez-en à votre médecin prescripteur. Il faut planifier l'arrêt du traitement et évaluer les alternatives pour maintenir l'équilibre glycémique si vous avez un diabète.
+Dès que vous envisagez une grossesse dans les mois à venir, parlez-en à votre médecin prescripteur. Préparez vos [questions à poser avant d'arrêter pour concevoir](/collections/medecins-glp1-france/questions-medecin-avant-glp1-checklist/) : délais d'arrêt, suivi après l'arrêt, alternatives pendant la conception. Il faut planifier l'arrêt du traitement et évaluer les alternatives pour maintenir l'équilibre glycémique si vous avez un diabète.
 
 ### Étape 2 : Arrêter le GLP-1 au bon moment
 

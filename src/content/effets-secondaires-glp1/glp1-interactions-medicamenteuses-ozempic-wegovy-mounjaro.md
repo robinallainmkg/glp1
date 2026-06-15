@@ -36,7 +36,7 @@ Quand on commence un traitement GLP-1 comme [Ozempic](/collections/traitements-g
 
 Les GLP-1 agissent sur plusieurs fronts pour favoriser la perte de poids et améliorer le contrôle glycémique. L'un de leurs effets majeurs est le **ralentissement significatif de la vidange gastrique** : l'estomac met beaucoup plus de temps à se vider vers l'intestin grêle. Ce délai peut aller de quelques heures supplémentaires à plusieurs heures dans certains cas.
 
-Pourquoi est-ce important pour les médicaments ? Parce que la grande majorité des médicaments oraux sont absorbés dans l'intestin grêle, et non dans l'estomac. Si le contenu gastrique met plus de temps à atteindre l'intestin, le médicament met lui aussi plus de temps à être absorbé dans la circulation sanguine. Cela peut :
+Pourquoi est-ce important pour les médicaments ? Parce que les [nausées et absorption des médicaments oraux](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/) sont liés : la grande majorité des médicaments oraux sont absorbés dans l'intestin grêle, et non dans l'estomac. Si le contenu gastrique met plus de temps à atteindre l'intestin, le médicament met lui aussi plus de temps à être absorbé dans la circulation sanguine. Cela peut :
 - **Retarder le pic d'effet** : le médicament prend plus de temps à agir
 - **Modifier les concentrations sanguines** : le profil pharmacocinétique change
 - **Réduire l'absorption totale** pour certaines molécules dont la fenêtre d'absorption est limitée
@@ -55,7 +55,7 @@ C'est la catégorie qui exige la plus grande vigilance. Les anticoagulants oraux
 La warfarine et ses équivalents ont une pharmacocinétique complexe et sont déjà connus pour leurs nombreuses interactions. Sous GLP-1, le ralentissement de l'absorption peut déstabiliser l'équilibre anticoagulant. Plusieurs cas de déséquilibre de l'INR ont été rapportés en pharmacovigilance. Si vous prenez un AVK et que vous commencez un traitement GLP-1, un contrôle renforcé de l'INR est indispensable dans les premières semaines, avec une adaptation de dose si nécessaire.
 
 **Anticoagulants oraux directs (AOD) : rivaroxaban, apixaban, dabigatran**
-Bien que moins susceptibles d'interactions que les AVK, les AOD peuvent également voir leur absorption modifiée sous GLP-1. Parlez-en à votre cardiologue ou médecin prescripteur.
+Bien que moins susceptibles d'interactions que les AVK, les AOD peuvent également voir leur absorption modifiée sous GLP-1. Les [anticoagulants et patients cardiaques sous GLP-1](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/) nécessitent une vigilance particulière. Parlez-en à votre cardiologue ou médecin prescripteur.
 
 ### Contraceptifs oraux
 

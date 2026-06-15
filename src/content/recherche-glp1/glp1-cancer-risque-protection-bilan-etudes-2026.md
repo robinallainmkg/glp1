@@ -94,9 +94,9 @@ Une grande étude rétrospective de Wang et al. (Case Western Reserve University
 
 Les chercheurs proposent plusieurs mécanismes par lesquels les GLP-1 pourraient protéger contre le cancer colorectal :
 
-- **Réduction de l'insulinorésistance** : L'hyperinsulinémie chronique est un facteur de risque connu du cancer colorectal ; les GLP-1 améliorent la sensibilité à l'insuline
+- **Réduction de l'insulinorésistance** : L'hyperinsulinémie chronique est un facteur de risque connu du cancer colorectal ; les GLP-1 améliorent la sensibilité à l'insuline et traitent le [syndrome métabolique](/collections/glp1-perte-de-poids/glp1-syndrome-metabolique-traitement-composantes/) dans son ensemble
 - **Réduction de l'inflammation intestinale** : Les GLP-1 diminuent les marqueurs inflammatoires systémiques (CRP, IL-6), et l'inflammation chronique favorise la carcinogenèse colorectale
-- **Effet sur le microbiome intestinal** : Des études montrent des modifications du microbiote sous GLP-1, avec une augmentation de bactéries anti-inflammatoires
+- **Effet sur le microbiome intestinal** : Des études montrent des modifications du [microbiote](/collections/recherche-glp1/glp1-microbiote-intestinal-flore-impact-probiotiques/) sous GLP-1, avec une augmentation de bactéries anti-inflammatoires
 - **Perte de poids** : L'obésité abdominale est un facteur de risque du cancer colorectal, et la réduction pondérale peut indirectement réduire ce risque
 
 ### Limites et prudence nécessaire
@@ -107,7 +107,7 @@ Ces données sont **observationnelles** et ne permettent pas d'établir une caus
 
 ### Cancer du foie (hépatocarcinome)
 
-Les GLP-1 réduisent la [stéatose hépatique NASH](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/) et la MASH, qui sont des facteurs de risque du carcinome hépatocellulaire. L'approbation par la FDA du sémaglutide pour la MASH en août 2025 pourrait indirectement réduire l'incidence de ce cancer chez les patients traités à long terme. Des études sont en cours pour évaluer cet effet.
+Les GLP-1 réduisent la [stéatose hépatique NASH](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/) et la [MASH](/collections/recherche-glp1/glp1-steatose-hepatique-nash-masld-traitement/), qui sont des facteurs de risque du carcinome hépatocellulaire. L'approbation par la FDA du sémaglutide pour la MASH en août 2025 pourrait indirectement réduire l'incidence de ce cancer chez les patients traités à long terme. Des études sont en cours pour évaluer cet effet.
 
 ### Cancer du sein
 
@@ -128,7 +128,7 @@ Il est essentiel de replacer le débat GLP-1/cancer dans son contexte : **l'obé
 - Cancer colorectal (+20-30% de risque relatif)
 - Cancer du sein post-ménopausique (+12-18%)
 - Cancer de l'endomètre (+50-60%)
-- Cancer du rein (+70-80%)
+- Cancer du [rein](/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/) (+70-80%)
 - Cancer de l'œsophage (adénocarcinome, +250%)
 - Cancer du foie (+50-80%)
 - Cancer du pancréas (+25-35%)

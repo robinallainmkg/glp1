@@ -46,7 +46,7 @@ Au-delà du manque de données, certains risques sont jugés potentiellement plu
 
 Les GLP-1 entraînent une perte de poids rapide, mais une partie de cette perte provient de la masse musculaire. Chez un adulte de 40 ans en bonne santé, perdre 25 % de poids sous Wegovy avec une proportion musculaire de 20-25 % est gérable avec un programme d'exercice adapté. Chez un patient de 70 ans qui présente déjà une [fonte musculaire liée à l'âge](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) (sarcopénie physiologique), cette perte supplémentaire peut devenir problématique. Elle peut accélérer la dépendance fonctionnelle, augmenter le risque de chutes, et compromettre l'autonomie.
 
-**2. Le risque osseux et les fractures**
+**2. Les [risques osseux et tendineux chez les seniors](/collections/effets-secondaires-glp1/glp1-risque-osseux-fractures-tendons-blessures-2026/)**
 
 La perte de poids rapide réduit les contraintes mécaniques exercées sur les os, ce qui peut accélérer la perte de densité osseuse. Chez les seniors, qui présentent souvent déjà une ostéopénie ou une ostéoporose, ce facteur est particulièrement préoccupant. Notre article sur le [risque d'ostéoporose sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) détaille ce mécanisme.
 
@@ -111,7 +111,7 @@ La chirurgie bariatrique (sleeve, bypass gastrique) n'a pas de limite d'âge abs
 
 ### La prise en charge psychologique
 
-La relation à l'alimentation est souvent plus complexe chez les seniors, notamment après des deuils, une perte d'autonomie ou un isolement social. Un accompagnement psychologique ou une thérapie comportementale peut apporter des résultats durables là où un régime seul échoue.
+La relation à l'alimentation est souvent plus complexe chez les seniors, notamment après des deuils, une perte d'autonomie ou un isolement social. Un [accompagnement psychologique et alimentaire pour les seniors](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) peut apporter des résultats durables là où un régime seul échoue.
 
 ## Les évolutions attendues
 
@@ -135,7 +135,7 @@ Oui. La restriction s'applique uniquement aux GLP-1 dans l'indication obésité 
 
 **Quelle prise en charge puis-je espérer à 70 ans avec un IMC de 35 ?**
 
-Si vous n'avez pas de diabète, la prise en charge passera par le suivi nutritionnel, l'activité physique adaptée, et éventuellement orlistat ou naltrexone/bupropion. Si votre obésité est très sévère (IMC ≥ 40) ou associée à des comorbidités graves (apnée du sommeil sévère, insuffisance cardiaque, arthrose invalidante), une consultation chirurgicale bariatrique peut être envisagée après bilan pluridisciplinaire.
+Si vous n'avez pas de diabète, la prise en charge passera par le suivi nutritionnel, l'activité physique adaptée, et éventuellement orlistat ou naltrexone/bupropion. Si votre obésité est très sévère (IMC ≥ 40) ou associée à des comorbidités graves (apnée du sommeil sévère, insuffisance cardiaque, arthrose invalidante), une consultation chirurgicale bariatrique peut être envisagée après bilan pluridisciplinaire. Les GLP-1 peuvent également soulager l'[arthrose et bénéfices des GLP-1 chez les seniors](/collections/recherche-glp1/glp1-arthrose-douleurs-articulaires-benefices-risques/) du genou et des hanches — un bénéfice précieux dans cette population.
 
 **Les mutuelles couvrent-elles les alternatives aux GLP-1 pour les seniors ?**
 

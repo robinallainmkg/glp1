@@ -156,7 +156,9 @@ L'interet pour les effets cerebraux des GLP-1 depasse largement Alzheimer. Des r
 
 - **Maladie de Parkinson** : Un essai de phase II avec l'exenatide (Byetta) a montre un ralentissement de la progression motrice chez les patients parkinsoniens. Des essais de phase III sont en cours.
 - **Addictions** : Les GLP-1 réduisent les comportements addictifs (alcool, tabac, opioides) en agissant sur le circuit de la recompense. Consultez notre article détaillé sur les [GLP-1 et les addictions](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/). L'[essai ALBATROS sur les GLP-1 et l'alcool](/collections/recherche-glp1/glp1-alcool-reduction-consommation-essai-albatros-2025/) confirme ce mecanisme neurologique pour la reduction de la consommation d'alcool.
-- **Depression** : Des données observationnelles suggerent un effet positif des GLP-1 sur l'humeur, bien que le mecanisme soit complexe. Pour en savoir plus, consultez notre article sur les [GLP-1 et la sante mentale](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/).
+- **Depression** : Des données observationnelles suggerent un effet positif des GLP-1 sur l'humeur, bien que le mecanisme soit complexe. Pour en savoir plus, consultez notre article sur les [GLP-1 et la sante mentale](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/). La question du [risque suicidaire](/collections/effets-secondaires-glp1/glp1-idees-suicidaires-risque-semaglutide-etude/) fait l'objet d'un suivi actif de pharmacovigilance.
+- **Microbiote intestinal** : L'[axe intestin-cerveau via le microbiote intestinal](/collections/recherche-glp1/glp1-microbiote-intestinal-flore-impact-probiotiques/) pourrait jouer un rôle dans les effets neuroprotecteurs des GLP-1, les bactéries intestinales modulant la neuroinflammation.
+- **Apnée du sommeil** : La perte de poids induite par les GLP-1 améliore l'[apnée du sommeil](/collections/recherche-glp1/glp1-apnee-sommeil-saos/), qui est elle-même un facteur de risque de déclin cognitif.
 
 ## L'importance de la rigueur scientifique
 
@@ -172,7 +174,7 @@ Ce n'est pas la premiere fois que des résultats observationnels prometteurs ne 
 
 L'echec d'un essai n'est pas l'echec d'un axe de recherche. L'histoire du lecanemab (Leqembi) — premier traitement anti-amyloide approuve dans Alzheimer — illustre que des decennies de recherche et d'echecs successifs peuvent finalement aboutir a un résultat positif.
 
-La recherche sur les GLP-1 et le cerveau est encore jeune. Les prochaines annees apporteront des données avec de nouvelles formulations, de nouvelles doses et de nouvelles cibles. Les essais EVOKE s'inscrivent dans un vaste programme de [recherche clinique sur les GLP-1](/collections/recherche-glp1/recherche-clinique-glp1/) qui explore de nombreuses nouvelles applications de ces molécules.
+La recherche sur les GLP-1 et le cerveau est encore jeune. Les prochaines annees apporteront des données avec de nouvelles formulations, de nouvelles doses et de nouvelles cibles. Les essais EVOKE s'inscrivent dans un vaste programme de [recherche clinique sur les GLP-1](/collections/recherche-glp1/recherche-clinique-glp1/) qui explore de nombreuses nouvelles applications de ces molécules. La [pharmacovigilance](/collections/recherche-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/) continue de surveiller les effets indésirables neuropsychiatriques des GLP-1 dans la population générale.
 
 ## Questions fréquentes
 

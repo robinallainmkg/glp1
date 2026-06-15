@@ -240,6 +240,8 @@ L'ANSM suit plus de **870 000 patients sous agonistes GLP-1** en France. Entre a
 
 ### Bilan pré-thérapeutique indispensable
 
+La réduction de l'appétit sous Ozempic peut entraîner des [carences nutritionnelles sous Ozempic](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) en fer, vitamines B12, D et protéines — un bilan sanguin régulier est indispensable.
+
 **Examens obligatoires** :
 - Créatinine, DFG
 - Lipase, amylase

@@ -78,7 +78,7 @@ La stéatose hépatique évolue en plusieurs stades de gravité croissante :
 
 ### Les facteurs de risque
 
-Les principaux facteurs de risque de la MASLD sont l'obésité (surtout abdominale), le diabète de type 2, l'hypertension artérielle, l'hypertriglycéridémie, le syndrome métabolique, la sédentarité et une alimentation riche en sucres et en graisses saturées. La prédisposition génétique joue également un rôle, certains variants génétiques (PNPLA3, TM6SF2) augmentant le risque.
+Les principaux facteurs de risque de la MASLD sont l'obésité (surtout abdominale), le diabète de type 2, l'hypertension artérielle, l'hypertriglycéridémie, le syndrome métabolique, la sédentarité et une alimentation riche en sucres et en graisses saturées. Les GLP-1 agissent favorablement sur l'ensemble de ces facteurs, notamment via la réduction des [triglycérides et la protection hépatique](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-benefices/). La prédisposition génétique joue également un rôle, certains variants génétiques (PNPLA3, TM6SF2) augmentant le risque.
 
 ## L'ampleur du problème en France {#epidemiologie}
 
@@ -217,7 +217,7 @@ La prise en charge de la MASH nécessite un suivi médical régulier associant u
 
 ### En attendant les approbations
 
-En attendant une indication spécifique MASH, les patients français obèses ou diabétiques atteints de stéatose hépatique peuvent déjà bénéficier des GLP-1 prescrits pour leurs indications actuelles. La perte de poids et l'amélioration métabolique obtenues contribueront à réduire la surcharge graisseuse hépatique. Les [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) des GLP-1 constituent un avantage supplémentaire chez ces patients à haut risque vasculaire.
+En attendant une indication spécifique MASH, les patients français obèses ou diabétiques atteints de stéatose hépatique peuvent déjà bénéficier des GLP-1 prescrits pour leurs indications actuelles. La perte de poids et l'amélioration métabolique obtenues contribueront à réduire la surcharge graisseuse hépatique. La [protection hépatique et cardiovasculaire](/collections/recherche-glp1/arret-glp1-risque-cardiovasculaire-etude-2026/) est d'autant plus importante que l'arrêt du traitement peut exposer ces patients à un rebond métabolique. Les [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) des GLP-1 constituent un avantage supplémentaire chez ces patients à haut risque vasculaire.
 
 ## Ce qu'il faut retenir
 

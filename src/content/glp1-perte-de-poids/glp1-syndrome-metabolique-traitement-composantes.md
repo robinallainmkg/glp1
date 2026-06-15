@@ -96,6 +96,8 @@ Sous traitement GLP-1, on observe en général :
 
 Ces effets s'expliquent en partie par la perte de poids, mais aussi par l'action directe des GLP-1 sur le métabolisme hépatique des lipides — qui explique également leur action bénéfique sur la [stéatose hépatique et le syndrome métabolique](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/), une comorbidité présente chez une majorité de patients.
 
+Le [syndrome métabolique et insuffisance rénale](/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/) sont souvent liés : l'insulino-résistance au cœur du syndrome métabolique endommage progressivement les reins — les GLP-1 exercent une [protection rénale dans le syndrome métabolique](/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/) documentée.
+
 ## Le profil du patient idéal sous GLP-1 pour syndrome métabolique
 
 Le syndrome métabolique est précisément le type de profil pour lequel les GLP-1 ont le meilleur rapport bénéfice/risque. Le candidat idéal réunit :
@@ -140,7 +142,7 @@ Les GLP-1 sont un outil puissant contre le syndrome métabolique, mais ils fonct
 - **Alimentation** : réduction des sucres raffinés, des graisses saturées et du sel ; augmentation des fibres et des protéines de qualité
 - **Activité physique** : au moins 150 minutes par semaine d'activité modérée ; la [musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) est particulièrement recommandée pour préserver la masse musculaire
 - **Réduction du stress** : stress chronique et syndrome métabolique entretiennent un cercle vicieux via le cortisol
-- **Sommeil** : l'apnée du sommeil, fréquente dans ce profil, aggrave le syndrome métabolique ; les GLP-1 réduisent aussi la sévérité de l'apnée
+- **Sommeil** : l'[apnée du sommeil et syndrome métabolique](/collections/recherche-glp1/glp1-apnee-sommeil-saos/) — fréquente dans ce profil, elle aggrave le syndrome métabolique ; les GLP-1 ont montré une réduction significative des événements obstructifs
 
 ## FAQ
 

@@ -134,6 +134,6 @@ Acidocétose (diabétiques), constipation majorée, calculs rénaux, carences vi
 
 ## Conclusion
 
-L'association [régime cétogène et GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) peut potentialiser la perte de poids et l'amélioration métabolique. Cette stratégie ambitieuse nécessite un encadrement médical et nutritionnel expert pour éviter les complications et optimiser les bénéfices à long terme.
+L'association [régime cétogène et GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) peut potentialiser la perte de poids et l'amélioration métabolique. Cette stratégie ambitieuse nécessite un encadrement médical et nutritionnel expert, ainsi qu'un [soutien psychologique pour maintenir les nouvelles habitudes](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) sur la durée, pour éviter les complications et optimiser les bénéfices à long terme.
 
  Ces informations sont fournies à titre éducatif uniquement. Consultez impérativement votre endocrinologue et un diététicien spécialisé avant d'entreprendre cette combinaison thérapeutique.
