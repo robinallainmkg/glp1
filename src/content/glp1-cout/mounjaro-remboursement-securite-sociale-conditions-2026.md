@@ -37,7 +37,7 @@ Ce niveau d'ASMR influence directement les négociations de prix avec le Comité
 
 ### Les négociations CEPS finalisées en 2026
 
-Après l'avis HAS, la balle est passée dans le camp du CEPS — l'organisme qui fixe le prix des médicaments remboursables en France. Les négociations entre le CEPS et Eli Lilly (fabricant de Mounjaro) ont abouti à l'arrêté du 23 mai 2026.
+Après l'avis HAS, la balle est passée dans le camp du CEPS — l'organisme qui fixe le prix des médicaments remboursables en France. Les négociations entre le CEPS et Eli Lilly (fabricant de Mounjaro) ont abouti à l'arrêté du 10 juin 2026 (qui abroge et remplace l'arrêté du 23 mai 2026, date d'effet identique au 15 juin 2026).
 
 Ces discussions ont porté sur :
 
@@ -46,13 +46,13 @@ Ces discussions ont porté sur :
 - Les éventuelles **clauses de performance** liées aux résultats cliniques
 - Le **périmètre exact** des patients éligibles (indication, critères d'entrée dans le dispositif)
 
-Les négociations avec le CEPS sont terminées : le remboursement de Mounjaro à 65% pour l'obésité **entre en vigueur le 15 juin 2026**, en application de l'arrêté du 23 mai 2026 (publié au Journal officiel le 28 mai). Voir les [conditions d'éligibilité](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
+Les négociations avec le CEPS sont terminées : le remboursement de Mounjaro à 65% pour l'obésité **entre en vigueur le 15 juin 2026**, en application de l'arrêté du 10 juin 2026 (qui abroge et remplace l'arrêté du 23 mai 2026, date d'effet identique au 15 juin 2026). Voir les [conditions d'éligibilité](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
 
 ---
 
 ## Quelles sont les conditions de remboursement de Mounjaro ?
 
-L'arrêté du 23 mai 2026 fixe les critères d'éligibilité au remboursement, conformes aux pratiques habituelles de l'Assurance Maladie.
+L'arrêté du 10 juin 2026 (qui abroge et remplace l'arrêté du 23 mai 2026, date d'effet identique au 15 juin 2026) fixe les critères d'éligibilité au remboursement, conformes aux pratiques habituelles de l'Assurance Maladie.
 
 ### Un IMC ≥ 35 comme seuil d'entrée
 
@@ -92,7 +92,7 @@ Voici l'indication prioritaire retenue par la HAS pour chacun :
 | Remboursement obésité | 65% dès le 15/06/2026 | 65% dès le 15/06/2026 |
 | Prix actuel | 230 à 440€/mois | 169 à 360€/mois |
 
-Mounjaro et Wegovy sont désormais tous deux remboursés à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous les mêmes conditions d'éligibilité. Mounjaro bénéficie en outre du remboursement dans le diabète de type 2.
+Mounjaro et Wegovy sont désormais tous deux remboursés à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 10 juin 2026, abrogeant et remplaçant l'arrêté du 23 mai 2026), sous les mêmes conditions d'éligibilité. Mounjaro bénéficie en outre du remboursement dans le diabète de type 2.
 
 ---
 
@@ -134,7 +134,7 @@ Pour une vue d'ensemble, consultez notre [guide complet remboursement GLP-1 2026
 
 ### Mounjaro est-il remboursé en 2026 ?
 
-Oui. L'avis HAS favorable a été rendu le 9 décembre 2025, et l'arrêté du 23 mai 2026 acte le remboursement à 65% pour l'obésité **depuis le 15 juin 2026**.
+Oui. L'avis HAS favorable a été rendu le 9 décembre 2025, et l'arrêté du 10 juin 2026 (qui abroge et remplace l'arrêté du 23 mai 2026, date d'effet identique au 15 juin 2026) acte le remboursement à 65% pour l'obésité **depuis le 15 juin 2026**.
 
 ### Qui est éligible au remboursement de Mounjaro ?
 
@@ -156,7 +156,7 @@ Oui. Aux États-Unis, Mounjaro est remboursé pour le diabète de type 2 depuis 
 
 ## À retenir
 
-Le remboursement de Mounjaro en France est désormais acté. L'avis HAS favorable du 9 décembre 2025 a été suivi de l'arrêté du 23 mai 2026, qui fixe le remboursement à 65% pour l'obésité **depuis le 15 juin 2026**.
+Le remboursement de Mounjaro en France est désormais acté. L'avis HAS favorable du 9 décembre 2025 a été suivi de l'arrêté du 10 juin 2026 (qui abroge et remplace l'arrêté du 23 mai 2026, date d'effet identique au 15 juin 2026), qui fixe le remboursement à 65% pour l'obésité **depuis le 15 juin 2026**.
 
 Pour les patients concernés — ceux présentant une obésité sévère avec IMC ≥ 35 et des comorbidités (ou IMC ≥ 40), après échec d'une prise en charge nutritionnelle — cette évolution représente une économie de plusieurs centaines d'euros par mois. Pour les patients non éligibles, le traitement reste à leur charge, à un coût mensuel encore élevé.
 

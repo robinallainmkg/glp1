@@ -118,7 +118,7 @@ Selon les nouvelles recommandations françaises :
 
 2. **En deuxième intention ou en association** : les GLP-1 sont recommandés chez les patients avec maladie cardiovasculaire associée, ou lorsque les iSGLT2 sont contre-indiqués ou mal tolérés. Ces bénéfices rénaux sont particulièrement pertinents pour les patients diabétiques — voir notre [guide complet GLP-1 pour les patients diabétiques](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/).
 
-3. **Objectifs thérapeutiques** : une uricémie normale, une pression artérielle contrôlée et une HbA1c ≤ 7 % sont des cibles importantes pour ralentir la progression de la maladie rénale.
+3. **Objectifs thérapeutiques** : une uricémie normale, une pression artérielle contrôlée et une HbA1c ≤ 7 % sont des cibles importantes pour ralentir la progression de la maladie rénale. La prise en charge globale du [syndrome métabolique et insuffisance rénale](/collections/glp1-perte-de-poids/glp1-syndrome-metabolique-traitement-composantes/) est particulièrement importante chez les patients diabétiques avec IRC.
 
 ### Surveillance biologique recommandée
 
