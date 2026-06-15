@@ -40,7 +40,7 @@ La situation s'est globalement améliorée mais reste fragile :
 
 Novo Nordisk a investi dans l'extension de ses capacités de production, notamment sur son site de Chartres (France), pour sécuriser les approvisionnements européens à long terme.
 
-À noter : le **remboursement de Wegovy et Mounjaro pour l'obésité à partir du 15 juin 2026** (à 65%, sous conditions) va élargir l'accès à ces traitements et pourrait accentuer ponctuellement les tensions sur certains dosages. Pour anticiper le coût avant et après remboursement, consultez nos guides du [prix de Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) et du [prix de Wegovy en France](/collections/glp1-cout/prix-wegovy-france/).
+À noter : le **remboursement de Wegovy et Mounjaro pour l'obésité depuis le 15 juin 2026** (à 65%, sous conditions) va élargir l'accès à ces traitements et pourrait accentuer ponctuellement les tensions sur certains dosages. Pour anticiper le coût avant et après remboursement, consultez nos guides du [prix de Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) et du [prix de Wegovy en France](/collections/glp1-cout/prix-wegovy-france/).
 
 ### Pourquoi les pénuries persistent-elles ponctuellement ?
 

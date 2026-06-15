@@ -143,7 +143,7 @@ La Société Française de Cardiologie (SFC) a mis à jour ses recommandations s
 C'est le point qui préoccupe le plus les patients et les médecins. La situation du remboursement de Mounjaro en France est la suivante :
 
 - **Mounjaro dans le diabète de type 2** : remboursé à 65% par l'Assurance Maladie pour le diabète de type 2 insuffisamment contrôlé
-- **Mounjaro dans l'obésité** : **remboursé à 65% pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée
+- **Mounjaro dans l'obésité** : **remboursé à 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée
 - **Mounjaro dans l'ICFEp avec obésité** : le remboursement obésité (dès le 15/06/2026) s'applique aux patients obèses éligibles, mais il n'existe pas de prise en charge spécifique au titre d'une indication cardiaque distincte
 
 Les cardiologues plaident auprès de la HAS pour que l'indication ICFEp avec obésité soit reconnue comme une condition prioritaire, compte tenu de la sévérité de cette association morbide. Pour suivre l'évolution du remboursement, consultez notre [guide complet remboursement Mounjaro 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).

@@ -1,9 +1,9 @@
 ---
 title: "Wegovy Remboursé France 2026 : Calendrier, Conditions"
-description: "Wegovy remboursé à 65% en France à partir du 15 juin 2026 (arrêté 23 mai). Calendrier officiel, conditions IMC et démarches."
+description: "Wegovy remboursé à 65% en France depuis le 15 juin 2026 (arrêté 23 mai). Calendrier officiel, conditions IMC et démarches."
 keywords: ['quand wegovy remboursé france', 'wegovy remboursement 2026', 'wegovy remboursé conditions', 'wegovy remboursement calendrier', 'wegovy HAS CEPS remboursement', 'wegovy sécurité sociale 2026']
 seoTitle: "Quand Wegovy Remboursé France 2026 : Calendrier Conditions"
-seoDescription: "Wegovy remboursé 65% pour l'obésité à partir du 15 juin 2026 (arrêté 23 mai). Calendrier officiel, conditions d'éligibilité IMC, démarches."
+seoDescription: "Wegovy remboursé 65% pour l'obésité depuis le 15 juin 2026 (arrêté 23 mai). Calendrier officiel, conditions d'éligibilité IMC, démarches."
 publishedAt: '2026-03-17'
 date: 2026-06-06
 updatedAt: '2026-06-06'
@@ -31,7 +31,7 @@ affiliateConfig:
 
 ## Quand Wegovy Sera-t-il Remboursé en France ? Calendrier et Conditions 2026
 
-"Quand est-ce que Wegovy sera remboursé ?" C'est probablement la question la plus posée par les patients français en surpoids ou obèses qui envisagent un traitement GLP-1. Et pour cause : [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) est disponible en France depuis 2024. La réponse est désormais officielle : **Wegovy est remboursé à 65% pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026). Voici le point complet sur le calendrier, les conditions d'éligibilité et les démarches.
+"Quand est-ce que Wegovy sera remboursé ?" C'est probablement la question la plus posée par les patients français en surpoids ou obèses qui envisagent un traitement GLP-1. Et pour cause : [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) est disponible en France depuis 2024. La réponse est désormais officielle : **Wegovy est remboursé à 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026). Voici le point complet sur le calendrier, les conditions d'éligibilité et les démarches.
 
 ## Sommaire
 
@@ -42,7 +42,7 @@ affiliateConfig:
 5. [Les alternatives remboursées en attendant](#alternatives)
 6. [FAQ](#faq)
 
-## Wegovy remboursé à 65% à partir du 15 juin 2026 {#etat-des-lieux}
+## Wegovy remboursé à 65% depuis le 15 juin 2026 {#etat-des-lieux}
 
 ### L'avis favorable de la HAS
 
@@ -57,7 +57,7 @@ Après l'avis HAS, c'est le **Comité économique des produits de santé (CEPS)*
 - **Les engagements de Novo Nordisk** en matière d'approvisionnement et de suivi post-commercialisation
 - **La comparaison internationale** des prix pratiqués dans d'autres pays européens
 
-Elles ont abouti à l'arrêté du 23 mai 2026 fixant le remboursement à 65% à compter du 15 juin 2026.
+Elles ont abouti à l'arrêté du 23 mai 2026 fixant le remboursement à 65% depuis le 15 juin 2026.
 
 ### La capacité de production : le dernier obstacle levé
 

@@ -21,7 +21,7 @@ faqSchema:
   - question: "Quel est le prix du Mounjaro en France en 2026 ?"
     answer: "Le prix du Mounjaro en France varie de 230 à 440 euros par mois selon le dosage (2.5 mg à 15 mg). Le prix est libre, mais le remboursement à 65% pour l'obésité entre en vigueur le 15 juin 2026 (arrêté du 23 mai 2026)."
   - question: "Le Mounjaro est-il remboursé par la Sécurité Sociale ?"
-    answer: "Le Mounjaro est remboursé à 65% par l'Assurance Maladie pour le diabète de type 2, et pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, prescription initiale en structure spécialisée)."
+    answer: "Le Mounjaro est remboursé à 65% par l'Assurance Maladie pour le diabète de type 2, et pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, prescription initiale en structure spécialisée)."
   - question: "Où trouver le Mounjaro le moins cher en pharmacie ?"
     answer: "Les prix varient entre pharmacies car le Mounjaro a un prix libre. Utilisez notre carte interactive des pharmacies pour comparer les tarifs près de chez vous. Les pharmacies en ligne agréées proposent parfois des prix plus compétitifs."
   - question: "Mounjaro est-il moins cher en Espagne ou en Allemagne ?"
@@ -74,7 +74,7 @@ faqSchema:
         "name": "Mounjaro est-il remboursé en France en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oui, Mounjaro est remboursé à 65% par la Sécurité Sociale pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée). Il est aussi remboursé pour le diabète de type 2. Commercialisé en France depuis novembre 2024, il reste en prix libre pour les patients hors critères de remboursement."
+          "text": "Oui, Mounjaro est remboursé à 65% par la Sécurité Sociale pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée). Il est aussi remboursé pour le diabète de type 2. Commercialisé en France depuis novembre 2024, il reste en prix libre pour les patients hors critères de remboursement."
         }
       },
       {
@@ -92,14 +92,14 @@ faqSchema:
 
 ## Prix Mounjaro France 2026 : Le Moins Cher en Pharmacie
 
-Vous cherchez **Mounjaro au prix le moins cher en France** ? Voici la réponse claire : le **prix Mounjaro en France** démarre à **230€/mois** pour le dosage 2,5 mg et monte à **440€/mois** pour le 15 mg (mars 2026). Le tirzépatide, commercialisé par **Eli Lilly** sous le nom Mounjaro, est disponible en France depuis **novembre 2024**, vendu en **prix libre** (les tarifs varient selon les pharmacies). Ce traitement révolutionne la gestion du [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et de l'obésité. **Nouveau : Mounjaro est remboursé à 65% par la Sécurité Sociale pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026), sous conditions — voir les [conditions d'éligibilité détaillées](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/). Pour comparer les coûts, consultez aussi notre [comparatif prix Wegovy France](/collections/glp1-cout/prix-wegovy-france/) et le [prix Ozempic en pharmacie](/collections/glp1-cout/prix-ozempic-france/).
+Vous cherchez **Mounjaro au prix le moins cher en France** ? Voici la réponse claire : le **prix Mounjaro en France** démarre à **230€/mois** pour le dosage 2,5 mg et monte à **440€/mois** pour le 15 mg (mars 2026). Le tirzépatide, commercialisé par **Eli Lilly** sous le nom Mounjaro, est disponible en France depuis **novembre 2024**, vendu en **prix libre** (les tarifs varient selon les pharmacies). Ce traitement révolutionne la gestion du [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et de l'obésité. **Nouveau : Mounjaro est remboursé à 65% par la Sécurité Sociale pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026), sous conditions — voir les [conditions d'éligibilité détaillées](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/). Pour comparer les coûts, consultez aussi notre [comparatif prix Wegovy France](/collections/glp1-cout/prix-wegovy-france/) et le [prix Ozempic en pharmacie](/collections/glp1-cout/prix-ozempic-france/).
 
 <div class="price-hero">
   <div class="price-highlight">
     <span class="original-price">230 à 440€/mois selon dosage</span>
-    <span class="final-price">Remboursé 65% dès le 15 juin 2026</span>
+    <span class="final-price">Remboursé 65% depuis le 15 juin 2026</span>
   </div>
-  <p class="price-subtitle">Prix libre en pharmacie — remboursement à 65% pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026, sous conditions)</p>
+  <p class="price-subtitle">Prix libre en pharmacie — remboursement à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026, sous conditions)</p>
 </div>
 
 <div class="info-notice">
@@ -159,7 +159,7 @@ Vous cherchez **Mounjaro au prix le moins cher en France** ? Voici la réponse c
   </div>
 </div>
 
-## Combien Coûte Mounjaro Après Remboursement ? (dès le 15 juin 2026) {#prix-rembourse}
+## Combien Coûte Mounjaro Après Remboursement ? (depuis le 15 juin 2026) {#prix-rembourse}
 
 Depuis le **15 juin 2026**, Mounjaro est **remboursé à 65%** par l'Assurance Maladie pour l'obésité, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée), en application de l'arrêté du 23 mai 2026. Pour les patients éligibles, le **prix public remboursable** et le **reste à charge** (35%, avant mutuelle) sont les suivants :
 
@@ -358,7 +358,7 @@ En prix libre, le coût mensuel de Mounjaro est de **230 à 440€** selon le do
 
 ### Mounjaro est-il remboursé en France en 2026 ?
 
-**Oui, Mounjaro est remboursé à 65% pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), sous conditions : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, et primo-prescription en centre spécialisé de l'obésité (CSO) ou CHU. Mounjaro est aussi remboursé pour le diabète de type 2. Commercialisé en France depuis novembre 2024 par Eli Lilly :
+**Oui, Mounjaro est remboursé à 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), sous conditions : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, et primo-prescription en centre spécialisé de l'obésité (CSO) ou CHU. Mounjaro est aussi remboursé pour le diabète de type 2. Commercialisé en France depuis novembre 2024 par Eli Lilly :
 - Prix public remboursable : 176 à 434 €/mois selon le dosage, reste à charge de 35%
 - Pour les patients hors critères, le prix libre (230-440€/mois) reste à leur charge
 

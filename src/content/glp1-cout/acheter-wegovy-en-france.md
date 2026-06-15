@@ -104,7 +104,7 @@ Les prix peuvent légèrement varier selon les pharmacies et les régions :
 * **Province** : prix variables selon les pharmacies (à partir de 169 €/mois)
 * Statut actuel du remboursement
 
-**Wegovy est remboursé à 65%** pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Pour le détail des conditions de [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/), consultez notre guide mis à jour. En complément, certaines situations particulières peuvent aussi bénéficier d'une prise en charge :
+**Wegovy est remboursé à 65%** pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Pour le détail des conditions de [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/), consultez notre guide mis à jour. En complément, certaines situations particulières peuvent aussi bénéficier d'une prise en charge :
 
 #### Prise en charge hospitalière
 
@@ -121,7 +121,7 @@ Certaines mutuelles commencent à proposer une prise en charge partielle — con
 
 ### Conditions du remboursement
 
-Wegovy est remboursé à 65% pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026). Les critères d'éligibilité :
+Wegovy est remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026). Les critères d'éligibilité :
 
 * **IMC ≥ 35** avec au moins une comorbidité liée au poids, **ou IMC ≥ 40**
 * **Échec** d'une prise en charge nutritionnelle bien conduite

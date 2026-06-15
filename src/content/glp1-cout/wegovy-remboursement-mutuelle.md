@@ -36,7 +36,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## Wegovy Remboursement Mutuelle 2026 : Quelles Mutuelles Remboursent Wegovy ?
 
-Le **remboursement Wegovy par la mutuelle** est devenu la principale option pour alléger la facture de **169 à 360€/mois** des patients traités contre l'obésité en France. Bonne nouvelle : **Wegovy (sémaglutide) est remboursé à 65% par la Sécurité Sociale pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026), chez les adultes IMC ≥ 35 avec comorbidité (ou ≥ 40) après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. La **mutuelle** prend alors le relais sur le **reste à charge de 35%** ; et pour les patients non éligibles, plusieurs **mutuelles santé** (MGEN, Harmonie Mutuelle, Alan, April) proposent un **forfait médicaments non remboursés** de 50 à 200€/an. Découvrez ci-dessous la liste à jour des mutuelles favorables, les montants pris en charge et le calendrier officiel. Pour aller plus loin, comparez aussi les [prix Wegovy en pharmacie](/collections/glp1-cout/prix-wegovy-france/) et le calendrier de [remboursement Wegovy/Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/).
+Le **remboursement Wegovy par la mutuelle** est devenu la principale option pour alléger la facture de **169 à 360€/mois** des patients traités contre l'obésité en France. Bonne nouvelle : **Wegovy (sémaglutide) est remboursé à 65% par la Sécurité Sociale pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026), chez les adultes IMC ≥ 35 avec comorbidité (ou ≥ 40) après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. La **mutuelle** prend alors le relais sur le **reste à charge de 35%** ; et pour les patients non éligibles, plusieurs **mutuelles santé** (MGEN, Harmonie Mutuelle, Alan, April) proposent un **forfait médicaments non remboursés** de 50 à 200€/an. Découvrez ci-dessous la liste à jour des mutuelles favorables, les montants pris en charge et le calendrier officiel. Pour aller plus loin, comparez aussi les [prix Wegovy en pharmacie](/collections/glp1-cout/prix-wegovy-france/) et le calendrier de [remboursement Wegovy/Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/).
 
 🔗 Découvrez aussi : [personnalités ayant utilisé les GLP-1](/collections/temoignages/serena-williams-glp1/).
 
@@ -59,7 +59,7 @@ Face à ce coût substantiel, la question du remboursement devient centrale pour
 
 ### Position officielle en 2025
 
-Le Wegovy est **remboursé à 65% par l'Assurance Maladie à partir du 15 juin 2026** (arrêté du 23 mai 2026) pour les adultes avec un IMC ≥ 35 avec comorbidité (ou ≥ 40) en cas d'échec d'une prise en charge nutritionnelle bien conduite, avec primo-prescription en structure spécialisée. Pour le détail des conditions, consultez notre article dédié au [remboursement Wegovy par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/).
+Le Wegovy est **remboursé à 65% par l'Assurance Maladie depuis le 15 juin 2026** (arrêté du 23 mai 2026) pour les adultes avec un IMC ≥ 35 avec comorbidité (ou ≥ 40) en cas d'échec d'une prise en charge nutritionnelle bien conduite, avec primo-prescription en structure spécialisée. Pour le détail des conditions, consultez notre article dédié au [remboursement Wegovy par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/).
 
 ### Critères potentiels pour un futur remboursement
 
@@ -232,7 +232,7 @@ La première étape consiste à consulter un professionnel habilité :
 ### Innovations thérapeutiques
 
 **Concurrence 2025-2026 :**
-- Mounjaro® (tirzepatide) commercialisé en France depuis novembre 2024 (230-440€/mois, remboursé 65% pour l'obésité à partir du 15 juin 2026)
+- Mounjaro® (tirzepatide) commercialisé en France depuis novembre 2024 (230-440€/mois, remboursé 65% pour l'obésité depuis le 15 juin 2026)
 - Nouvelles formes galéniques en développement (patch, comprimés)
 - Combinaisons thérapeutiques innovantes
 - Programmes d'accompagnement digital
@@ -277,7 +277,7 @@ La première étape consiste à consulter un professionnel habilité :
 
 ## Conclusion
 
-Le paysage du remboursement du Wegovy a basculé en 2026 : la Sécurité Sociale rembourse le Wegovy à **65% pour l'obésité à partir du 15 juin 2026** (sous conditions). La mutuelle complète le **reste à charge de 35%**, et reste utile pour les patients non éligibles. Voir les [conditions d'éligibilité détaillées](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
+Le paysage du remboursement du Wegovy a basculé en 2026 : la Sécurité Sociale rembourse le Wegovy à **65% pour l'obésité depuis le 15 juin 2026** (sous conditions). La mutuelle complète le **reste à charge de 35%**, et reste utile pour les patients non éligibles. Voir les [conditions d'éligibilité détaillées](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
 
 **Points clés à retenir :**
 - La préparation d'un dossier médical solide est essentielle

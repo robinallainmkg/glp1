@@ -48,7 +48,7 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 | **[Mounjaro (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/)** | Eli Lilly | Diabète type 2 + Obésité | 2.5mg à 15mg/semaine | 200-350€ | Remboursé 65% (DT2 ; obésité dès le 15/06/2026)* |
 | **Rybelsus** | Novo Nordisk | Diabète type 2 | 3mg à 14mg/jour | 80-110€ | Non remboursé en France (avis HAS défavorable) |
 
-*\*Wegovy et Mounjaro sont remboursés à 65% pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026, JO du 28 mai), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée. Mounjaro et Ozempic sont aussi remboursés 65% pour le diabète de type 2. Saxenda et Rybelsus restent non remboursés.*
+*\*Wegovy et Mounjaro sont remboursés à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026, JO du 28 mai), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée. Mounjaro et Ozempic sont aussi remboursés 65% pour le diabète de type 2. Saxenda et Rybelsus restent non remboursés.*
 
 **💡 Conseil d'expert :** Pour optimiser votre [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/), combinez votre traitement avec une alimentation équilibrée et de l'activité physique régulière.
 

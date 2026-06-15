@@ -1,12 +1,12 @@
 ---
 title: "Mounjaro et Wegovy Remboursés le 15 Juin 2026 : Qui y a Droit ?"
-description: "Officiel : Mounjaro et Wegovy remboursés à 65% à partir du 15 juin 2026 (arrêté du 23 mai). Conditions d'éligibilité, IMC, prescription et reste à charge."
+description: "Officiel : Mounjaro et Wegovy remboursés à 65% depuis le 15 juin 2026 (arrêté du 23 mai). Conditions d'éligibilité, IMC, prescription et reste à charge."
 keywords: ['mounjaro remboursé', 'wegovy remboursé', 'remboursement mounjaro 2026', 'remboursement wegovy 2026', 'mounjaro remboursement 15 juin', 'wegovy remboursement sécurité sociale', 'mounjaro remboursé conditions', 'remboursement glp1 juin 2026']
 seoTitle: "Mounjaro & Wegovy Remboursés le 15 Juin 2026 : Conditions"
-seoDescription: "Mounjaro et Wegovy remboursés à 65% dès le 15 juin 2026. Qui est éligible, quelles conditions d'IMC, quelle prescription, quel reste à charge ? Le guide complet."
+seoDescription: "Mounjaro et Wegovy remboursés à 65% depuis le 15 juin 2026. Qui est éligible, quelles conditions d'IMC, quelle prescription, quel reste à charge ? Le guide complet."
 publishedAt: '2026-06-04'
 date: 2026-06-04
-updatedAt: '2026-06-04'
+updatedAt: '2026-06-15'
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -25,10 +25,10 @@ secondaryKeywords: ["mounjaro remboursé conditions", "wegovy remboursement 65%"
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Mounjaro et Wegovy Remboursés le 15 Juin 2026 : Conditions et Éligibilité",
-  "description": "Mounjaro (tirzépatide) et Wegovy (sémaglutide) sont remboursés à 65% par l'Assurance Maladie à partir du 15 juin 2026, sous conditions, en application de l'arrêté du 23 mai 2026.",
+  "description": "Mounjaro (tirzépatide) et Wegovy (sémaglutide) sont remboursés à 65% par l'Assurance Maladie depuis le 15 juin 2026, sous conditions, en application de l'arrêté du 23 mai 2026.",
   "url": "https://glp1-france.fr/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026",
   "datePublished": "2026-06-04",
-  "dateModified": "2026-06-04",
+  "dateModified": "2026-06-15",
   "author": { "@type": "Person", "name": "Dr. Marie Dubois" },
   "publisher": { "@type": "Organization", "name": "GLP-1 France", "url": "https://glp1-france.fr" },
   "mainEntity": {
@@ -56,11 +56,11 @@ secondaryKeywords: ["mounjaro remboursé conditions", "wegovy remboursement 65%"
 
 ## Mounjaro et Wegovy Remboursés le 15 Juin 2026 : l'Essentiel
 
-C'est officiel : **Mounjaro (tirzépatide) et Wegovy (sémaglutide) seront remboursés à 65% par l'Assurance Maladie à partir du 15 juin 2026**, sous conditions. Cette prise en charge découle de l'**arrêté du 23 mai 2026**, publié au **Journal officiel le 28 mai 2026**, qui inscrit ces deux traitements de l'obésité sur la liste des spécialités pharmaceutiques remboursables aux assurés sociaux.
+C'est officiel : **Mounjaro (tirzépatide) et Wegovy (sémaglutide) sont remboursés à 65% par l'Assurance Maladie depuis le 15 juin 2026**, sous conditions. Cette prise en charge découle de l'**arrêté du 23 mai 2026**, publié au **Journal officiel le 28 mai 2026**, qui inscrit ces deux traitements de l'obésité sur la liste des spécialités pharmaceutiques remboursables aux assurés sociaux.
 
-Jusqu'ici, ces médicaments étaient vendus en **prix libre** et **intégralement à la charge des patients** (de 169 à 440 €/mois selon le traitement et le dosage). Le remboursement change la donne pour les personnes éligibles — mais l'accès reste **encadré par des critères stricts**. Voici ce qu'il faut savoir avant le 15 juin.
+Jusqu'ici, ces médicaments étaient vendus en **prix libre** et **intégralement à la charge des patients** (de 169 à 440 €/mois selon le traitement et le dosage). Le remboursement change la donne pour les personnes éligibles — mais l'accès reste **encadré par des critères stricts**. Voici ce qu'il faut savoir.
 
-> **À retenir** : remboursement à **65 %** dès le **15 juin 2026**, réservé à l'obésité sévère ou massive, après échec d'une prise en charge nutritionnelle, avec une **primo-prescription en structure spécialisée**.
+> **À retenir** : remboursement à **65 %** depuis le **15 juin 2026**, réservé à l'obésité sévère ou massive, après échec d'une prise en charge nutritionnelle, avec une **primo-prescription en structure spécialisée**.
 
 ## Quels Médicaments sont Concernés ?
 
@@ -97,7 +97,7 @@ Avec un remboursement de **65 %**, le **reste à charge** est de **35 %**, qui p
 | Prise en charge mutuelle | Variable selon le contrat |
 | Date d'effet | **15 juin 2026** |
 
-Le montant exact en euros dépendra du **prix de remboursement** fixé pour chaque dosage. Si vous avez une complémentaire santé, vérifiez vos garanties « médicaments remboursés » — et comparez avec notre dossier sur le [remboursement des GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/).
+Le montant exact en euros dépend du **prix public** de chaque dosage, désormais publié au Journal officiel. Les tarifs TTC s'échelonnent d'environ **147 € à 434 € par boîte** selon le traitement et le dosage (par exemple, pour Mounjaro : 176,10 € à 2,5 mg, 237,68 € à 5 mg, 335,95 € à 7,5 et 10 mg, 433,80 € à 12,5 et 15 mg) ; l'Assurance Maladie en rembourse **65 %**, le reste étant à votre charge ou à celle de votre mutuelle. Si vous avez une complémentaire santé, vérifiez vos garanties « médicaments remboursés » — et comparez avec notre dossier sur le [remboursement des GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ## Ce Qui Change Concrètement le 15 Juin
 
@@ -109,7 +109,7 @@ Le montant exact en euros dépendra du **prix de remboursement** fixé pour chaq
 
 ### Mounjaro est-il vraiment remboursé en juin 2026 ?
 
-Oui. L'**arrêté du 23 mai 2026** (publié au Journal officiel le **28 mai 2026**) inscrit Mounjaro sur la liste des spécialités remboursables, avec une prise en charge à **65 %** à partir du **15 juin 2026**, sous conditions d'éligibilité.
+Oui. L'**arrêté du 23 mai 2026** (publié au Journal officiel le **28 mai 2026**) inscrit Mounjaro sur la liste des spécialités remboursables, avec une prise en charge à **65 %** depuis le **15 juin 2026**, sous conditions d'éligibilité.
 
 ### Le remboursement concerne-t-il la perte de poids « esthétique » ?
 

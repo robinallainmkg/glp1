@@ -189,7 +189,7 @@ Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (
 - **Enfants** : Non étudié chez <18 ans
 - **Chirurgie** : Arrêt temporaire si nécessaire
 
-> **Remboursement** : Mounjaro est remboursé à 65% par l'Assurance Maladie pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en centre spécialisé). Il reste remboursé pour le diabète de type 2. Hors critères, le coût reste à la charge du patient.
+> **Remboursement** : Mounjaro est remboursé à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en centre spécialisé). Il reste remboursé pour le diabète de type 2. Hors critères, le coût reste à la charge du patient.
 
 ## 📈 Tolérance à Long Terme
 

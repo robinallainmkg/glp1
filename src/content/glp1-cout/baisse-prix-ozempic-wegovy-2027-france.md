@@ -22,7 +22,7 @@ faqSchema:
   - question: "Quand les biosimilaires du sémaglutide seront-ils disponibles ?"
     answer: "Les brevets principaux du sémaglutide expirent entre 2031 et 2032. Les premiers biosimilaires pourraient arriver sur le marché européen à partir de 2032-2033, entraînant une baisse structurelle des prix de l'ordre de 20 à 40% par rapport à l'original."
   - question: "Mounjaro est-il moins cher qu'Ozempic en France ?"
-    answer: "Non, Mounjaro est actuellement plus cher qu'Ozempic en France. Ozempic coûte environ 80€ par stylo, tandis que Mounjaro revient entre 230 et 440€ par mois selon le dosage. Mounjaro est désormais remboursé à 65% pour l'obésité à partir du 15 juin 2026 (sous conditions)."
+    answer: "Non, Mounjaro est actuellement plus cher qu'Ozempic en France. Ozempic coûte environ 80€ par stylo, tandis que Mounjaro revient entre 230 et 440€ par mois selon le dosage. Mounjaro est désormais remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions)."
   - question: "La baisse des prix va-t-elle élargir le remboursement de Wegovy en France ?"
     answer: "Wegovy est déjà remboursé à 65% pour l'obésité depuis le 15 juin 2026, mais sous conditions strictes. Un prix plus bas réduit l'impact budgétaire pour l'Assurance Maladie, ce qui pourrait à terme faciliter un élargissement des critères d'éligibilité. La décision dépend toutefois de l'évaluation médico-économique et de la politique de santé publique française."
 mainKeyword: "baisse prix Ozempic Wegovy 2027"
@@ -123,7 +123,7 @@ Plusieurs laboratoires (dont Sandoz, Biocon et Teva) ont déjà annoncé des pro
 
 La concurrence entre Novo Nordisk (Ozempic/Wegovy) et Eli Lilly ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) joue déjà un rôle dans l'évolution des prix. Les deux laboratoires se disputent le marché mondial des GLP-1, estimé à plus de 50 milliards de dollars en 2026.
 
-En France, le remboursement de Mounjaro à 65% pour l'obésité à partir du 15 juin 2026 (sous conditions), en plus de son remboursement déjà acquis dans le diabète de type 2, pourrait accélérer la pression sur les prix du sémaglutide. Si Mounjaro arrive avec un prix remboursé compétitif, Novo Nordisk pourrait être contraint de réviser ses tarifs pour maintenir ses positions.
+En France, le remboursement de Mounjaro à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions), en plus de son remboursement déjà acquis dans le diabète de type 2, pourrait accélérer la pression sur les prix du sémaglutide. Si Mounjaro arrive avec un prix remboursé compétitif, Novo Nordisk pourrait être contraint de réviser ses tarifs pour maintenir ses positions.
 
 ---
 
@@ -133,7 +133,7 @@ En France, le remboursement de Mounjaro à 65% pour l'obésité à partir du 15 
 
 - La baisse américaine est effective aux États-Unis
 - Le CEPS prend note de la nouvelle politique tarifaire de Novo Nordisk
-- Mounjaro et Wegovy deviennent remboursés à 65% pour l'obésité en France à partir du 15 juin 2026 (sous conditions)
+- Mounjaro et Wegovy deviennent remboursés à 65% pour l'obésité en France depuis le 15 juin 2026 (sous conditions)
 - Pas de baisse immédiate des prix français d'Ozempic ou de Wegovy
 
 ### 2027 : une fenêtre de renégociation

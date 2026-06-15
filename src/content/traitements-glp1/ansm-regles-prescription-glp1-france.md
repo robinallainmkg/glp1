@@ -109,7 +109,7 @@ Si vous souffrez d'obésité et souhaitez un traitement GLP-1 :
 - Vous pouvez désormais consulter votre médecin traitant directement, sans passer par un spécialiste — découvrez le [parcours complet pour commencer un traitement GLP-1](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/)
 - Votre médecin évaluera votre éligibilité (IMC, comorbidités, traitements antérieurs) — [vérifiez vos critères d'éligibilité GLP-1](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/)
 - Les traitements approuvés pour l'obésité sont Wegovy et Mounjaro
-- **À noter** : Wegovy et Mounjaro sont remboursés à 65% pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée). Hors critères, le coût reste à la charge du patient ou de sa mutuelle. Consultez nos guides sur le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/) et le [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/)
+- **À noter** : Wegovy et Mounjaro sont remboursés à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée). Hors critères, le coût reste à la charge du patient ou de sa mutuelle. Consultez nos guides sur le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/) et le [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/)
 
 ### Pour les personnes en surpoids sans comorbidité
 

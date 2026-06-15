@@ -166,7 +166,7 @@ Depuis le 15 juin 2026, Wegovy et Mounjaro sont **remboursés à 65 % par la Sé
 
 ### Le remboursement obésité depuis le 15 juin 2026
 
-La HAS (Haute Autorité de Santé) a rendu un avis favorable au remboursement de Wegovy (décembre 2024) puis de Mounjaro (décembre 2025). À l'issue des négociations de prix avec le CEPS, l'arrêté du 23 mai 2026 (JO du 28 mai) a rendu effectif le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/) — comme celui de Wegovy — à **65 % à partir du 15 juin 2026**, sous conditions :
+La HAS (Haute Autorité de Santé) a rendu un avis favorable au remboursement de Wegovy (décembre 2024) puis de Mounjaro (décembre 2025). À l'issue des négociations de prix avec le CEPS, l'arrêté du 23 mai 2026 (JO du 28 mai) a rendu effectif le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/) — comme celui de Wegovy — à **65 % depuis le 15 juin 2026**, sous conditions :
 
 - IMC ≥ 35 kg/m² avec comorbidité, ou IMC ≥ 40 kg/m²
 - Échec d'une prise en charge nutritionnelle bien conduite

@@ -176,7 +176,7 @@ Oui, certaines pathologies nécessitent une évaluation préalable approfondie s
 Les premiers effets peuvent apparaître après quelques semaines, mais l'évaluation complète nécessite généralement 3 à 6 mois.
 
 ### Le traitement est-il remboursé ?
-Wegovy est remboursé à 65% par la Sécurité Sociale pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions strictes : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Son prix en pharmacie varie de 169€ à 360€ par mois selon le dosage, avec un reste à charge de 35% (avant mutuelle) pour les patients éligibles. Pour le détail des conditions, consultez notre guide [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
+Wegovy est remboursé à 65% par la Sécurité Sociale pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions strictes : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Son prix en pharmacie varie de 169€ à 360€ par mois selon le dosage, avec un reste à charge de 35% (avant mutuelle) pour les patients éligibles. Pour le détail des conditions, consultez notre guide [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ---
 

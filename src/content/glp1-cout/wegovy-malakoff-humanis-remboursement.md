@@ -37,7 +37,7 @@ affiliateConfig:
 
 ## Wegovy : statut Sécu en 2026
 
-Avant d'examiner Malakoff Humanis, le rappel est essentiel : **Wegovy est remboursé à 65% par l'Assurance Maladie pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026, publié au Journal officiel le 28 mai 2026), sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée.
+Avant d'examiner Malakoff Humanis, le rappel est essentiel : **Wegovy est remboursé à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, publié au Journal officiel le 28 mai 2026), sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée.
 
 Pour les patients éligibles, Malakoff Humanis intervient désormais dans le cadre du **droit commun** en complétant le ticket modérateur (les 35% restants) selon le contrat. Pour les patients non éligibles au remboursement, la mutuelle ne peut intervenir qu'au travers de **forfaits dédiés**.
 
@@ -124,7 +124,7 @@ Le succès du traitement dépend du suivi médical. Voir notre [guide complet We
 
 ## Mounjaro et Ozempic : situation Malakoff Humanis 2026
 
-- **Mounjaro (tirzépatide)** : remboursé à 65% pour l'obésité à partir du 15 juin 2026 (sous conditions), comme Wegovy, et déjà remboursé dans le diabète de type 2. Prix officine 230–440 €/mois. Comportement Malakoff Humanis identique à Wegovy (complément du ticket modérateur pour les patients éligibles).
+- **Mounjaro (tirzépatide)** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions), comme Wegovy, et déjà remboursé dans le diabète de type 2. Prix officine 230–440 €/mois. Comportement Malakoff Humanis identique à Wegovy (complément du ticket modérateur pour les patients éligibles).
 - **Ozempic (sémaglutide)** : remboursé Sécu **65 %** en bithérapie metformine, **30 %** en trithérapie insuline, **dans le diabète de type 2 uniquement**. Malakoff Humanis complète le ticket modérateur selon contrat (souvent 100 % BR).
 
 ## Comparaison synthétique

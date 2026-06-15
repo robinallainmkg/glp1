@@ -98,7 +98,7 @@ Les risques plus rares (pancréatite, calculs biliaires) sont mentionnés mais c
 
 En France, les décisions de remboursement ne dépendent pas directement de l'OMS mais de la Haute Autorité de Santé (HAS) et du Comité Économique des Produits de Santé (CEPS). Cependant, les recommandations de l'OMS constituent un argument de poids dans les négociations en cours.
 
-À la suite de l'avis favorable de la HAS, Wegovy et Mounjaro sont remboursés à 65% pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions. Pour le détail, voir le [remboursement GLP-1 en France en 2026](/collections/glp1-cout/remboursement-glp1-2026/). Les lignes directrices de l'OMS ont renforcé le dossier médico-économique en faveur de ce remboursement.
+À la suite de l'avis favorable de la HAS, Wegovy et Mounjaro sont remboursés à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions. Pour le détail, voir le [remboursement GLP-1 en France en 2026](/collections/glp1-cout/remboursement-glp1-2026/). Les lignes directrices de l'OMS ont renforcé le dossier médico-économique en faveur de ce remboursement.
 
 Pour connaître les prix actuels des traitements GLP-1 en France, consultez nos guides sur le [prix Ozempic](/collections/glp1-cout/prix-ozempic-france/) et le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/).
 
@@ -146,7 +146,7 @@ Non. Les recommandations ciblent spécifiquement l'obésité (IMC >= 30) ou le s
 
 ### Ces recommandations ont-elles contribué au remboursement en France ?
 
-Oui, en renforçant le dossier médico-économique présenté à la HAS et au CEPS. Wegovy et Mounjaro sont remboursés à 65% pour l'obésité en France à partir du 15 juin 2026 (sous conditions), en application de l'arrêté du 23 mai 2026.
+Oui, en renforçant le dossier médico-économique présenté à la HAS et au CEPS. Wegovy et Mounjaro sont remboursés à 65% pour l'obésité en France depuis le 15 juin 2026 (sous conditions), en application de l'arrêté du 23 mai 2026.
 
 ### Quelle est la différence entre "recommandation conditionnelle" et "recommandation forte" ?
 
@@ -156,7 +156,7 @@ Une recommandation "forte" signifie que les bénéfices l'emportent clairement s
 
 Les lignes directrices de l'OMS sur les GLP-1 et l'obésité marquent un tournant dans la reconnaissance médicale de cette maladie chronique. Pour la première fois, une institution mondiale de référence affirme que les traitements pharmacologiques ont leur place dans la prise en charge de l'obésité — à condition d'être intégrés dans une approche globale incluant alimentation, activité physique et soutien comportemental.
 
-Pour les patients français, cette décision a accompagné l'arrivée du remboursement de Wegovy et Mounjaro pour l'obésité (65%, à partir du 15 juin 2026, sous conditions), facilitant l'accès à ces traitements qui ont déjà transformé la vie de milliers de personnes.
+Pour les patients français, cette décision a accompagné l'arrivée du remboursement de Wegovy et Mounjaro pour l'obésité (65%, depuis le 15 juin 2026, sous conditions), facilitant l'accès à ces traitements qui ont déjà transformé la vie de milliers de personnes.
 
 ---
 

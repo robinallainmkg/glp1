@@ -1,9 +1,9 @@
 ---
 title: "Remboursement Mounjaro Obésité HAS CEPS Calendrier 2026"
-description: "Remboursement Mounjaro obésité : 65% à partir du 15 juin 2026 (arrêté 23 mai). Conditions IMC ≥35, prescription, prix remboursés détaillés."
+description: "Remboursement Mounjaro obésité : 65% depuis le 15 juin 2026 (arrêté 23 mai). Conditions IMC ≥35, prescription, prix remboursés détaillés."
 keywords: ['remboursement mounjaro obesite', 'mounjaro remboursement has', 'mounjaro ceps 2026', 'tirzepatide remboursement france', 'mounjaro quand rembourse', 'mounjaro sécurité sociale obesite', 'mounjaro conditions remboursement imc']
 seoTitle: "Remboursement Mounjaro Obésité 2026 : HAS, CEPS, Date et Conditions"
-seoDescription: "Remboursement Mounjaro obésité : 65% à partir du 15 juin 2026 (arrêté 23 mai). Conditions précises (IMC ≥35), prix remboursés, démarches."
+seoDescription: "Remboursement Mounjaro obésité : 65% depuis le 15 juin 2026 (arrêté 23 mai). Conditions précises (IMC ≥35), prix remboursés, démarches."
 publishedAt: '2026-03-17'
 updatedAt: '2026-06-06'
 date: 2026-06-06
@@ -19,7 +19,7 @@ mainKeyword: "remboursement Mounjaro obésité HAS CEPS calendrier 2026"
 secondaryKeywords: ["mounjaro remboursement 2026", "tirzepatide remboursement france", "mounjaro HAS avis ASMR", "mounjaro CEPS négociations", "mounjaro quand remboursé sécurité sociale"]
 ---
 
-Le remboursement de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide, Eli Lilly) par l'Assurance Maladie pour le traitement de l'obésité est l'un des dossiers les plus scrutés par les patients et les professionnels de santé français en 2026. Après l'avis favorable de la Haute Autorité de Santé en décembre 2025, le remboursement est désormais acté : **Mounjaro est remboursé à 65% pour l'obésité à partir du 15 juin 2026** (arrêté du 23 mai 2026). Ce guide détaille les conditions exigées, les prix remboursés et les démarches.
+Le remboursement de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide, Eli Lilly) par l'Assurance Maladie pour le traitement de l'obésité est l'un des dossiers les plus scrutés par les patients et les professionnels de santé français en 2026. Après l'avis favorable de la Haute Autorité de Santé en décembre 2025, le remboursement est désormais acté : **Mounjaro est remboursé à 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026). Ce guide détaille les conditions exigées, les prix remboursés et les démarches.
 
 ## Où en est le dossier de remboursement de Mounjaro ?
 
@@ -72,11 +72,11 @@ Le processus pour aboutir à un médicament remboursé est le suivant :
 
 ### Date prévisionnelle
 
-Le remboursement de Mounjaro pour l'obésité en France est **effectif à partir du 15 juin 2026** (arrêté publié au Journal Officiel le 28 mai 2026). Le taux de remboursement est de **65 %** par l'Assurance Maladie. Les prix publics TTC sont : 176,10 € (2,5 mg), 237,68 € (5 mg), 335,95 € (7,5 et 10 mg), 433,80 € (12,5 et 15 mg). La prescription initiale est réservée aux CSO, CHU, SMR nutrition/endocrinologie ou endocrinologues liés à un CSO.
+Le remboursement de Mounjaro pour l'obésité en France est **effectif depuis le 15 juin 2026** (arrêté publié au Journal Officiel le 28 mai 2026). Le taux de remboursement est de **65 %** par l'Assurance Maladie. Les prix publics TTC sont : 176,10 € (2,5 mg), 237,68 € (5 mg), 335,95 € (7,5 et 10 mg), 433,80 € (12,5 et 15 mg). La prescription initiale est réservée aux CSO, CHU, SMR nutrition/endocrinologie ou endocrinologues liés à un CSO.
 
 Le remboursement s'applique dans le cadre des conditions d'éligibilité détaillées plus bas.
 
-**À noter** : Wegovy et Mounjaro sont remboursés pour l'obésité selon le même calendrier, à partir du 15 juin 2026 (arrêté du 23 mai 2026). Pour suivre l'ensemble des [remboursements GLP-1 par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/), consultez notre guide global.
+**À noter** : Wegovy et Mounjaro sont remboursés pour l'obésité selon le même calendrier, depuis le 15 juin 2026 (arrêté du 23 mai 2026). Pour suivre l'ensemble des [remboursements GLP-1 par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/), consultez notre guide global.
 
 ## Les conditions précises pour bénéficier du remboursement
 
@@ -127,7 +127,7 @@ En France, le processus de remboursement est rigoureusement encadré par la loi 
 
 **Mounjaro est-il remboursé pour l'obésité ?**
 
-Oui. Mounjaro est remboursé à 65% pour l'obésité à partir du 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée). Il est également remboursé dans le diabète de type 2. Commercialisé en France depuis novembre 2024, il était auparavant vendu en prix libre.
+Oui. Mounjaro est remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée). Il est également remboursé dans le diabète de type 2. Commercialisé en France depuis novembre 2024, il était auparavant vendu en prix libre.
 
 **Je prends déjà Mounjaro pour la perte de poids à mes frais. Que dois-je faire en attendant le remboursement ?**
 

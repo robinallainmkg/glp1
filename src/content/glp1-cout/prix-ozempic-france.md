@@ -310,7 +310,7 @@ Le coût mensuel d'Ozempic après remboursement dépend de votre dosage et de vo
 
 **Wegovy (sémaglutide - obésité) :**
 - Prix pharmacie : **169-360€/mois** (selon dosage)
-- Remboursement : **remboursé à 65%** pour l'obésité à partir du 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée)
+- Remboursement : **remboursé à 65%** pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée)
 - Dosage max : 2.4 mg/semaine
 - Commercialisé en France depuis octobre 2024
 
@@ -452,7 +452,7 @@ Mais en pratique, avec le dosage progressif :
 
 **Mounjaro (tirzépatide - Dual GLP-1/GIP, Eli Lilly) :**
 - Prix pharmacie : **230-440€/mois** (prix libre, non réglementé)
-- Remboursement : **remboursé à 65%** pour l'obésité à partir du 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée)
+- Remboursement : **remboursé à 65%** pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée)
 - Perte de poids moyenne : -21%
 - Commercialisé en France depuis novembre 2024
 
