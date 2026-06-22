@@ -2,8 +2,8 @@
 title: "Mésusage GLP-1 France : Étude Nationale Cohorte 2026"
 description: "Mésusage GLP-1 France 2026 : 2,2% des utilisateurs n'ont ni diabète ni obésité selon étude nationale. Profils, conséquences sanitaires et mesures ANSM."
 pubDate: 2026-03-19
-date: 2026-03-19
-updatedAt: 2026-03-19
+date: 2026-06-22
+updatedAt: 2026-06-22
 author: "Dr. Sophie Dubois"
 category: "Recherche médicale"
 tags: ["glp1", "mésusage", "étude", "cohorte", "france", "ANSM", "recherche", "pharmacovigilance", "2026"]
@@ -30,13 +30,11 @@ affiliateConfig:
 
 ## À retenir
 
-Une étude nationale publiée dans *Value in Health* en 2025 révèle que 2,2 % des utilisateurs de GLP-1 en France n'ont ni diabète de type 2 ni obésité — les deux indications autorisées. Ces données précises permettent de mieux comprendre le phénomène de mésusage et ses implications sanitaires.
+Une étude nationale publiée dans *Value in Health* en 2026 révèle que 2,2 % des utilisateurs de GLP-1 en France n'ont ni diabète de type 2 ni obésité — les deux indications autorisées. Ces données précises permettent de mieux comprendre le phénomène de mésusage et ses implications sanitaires.
 
 ---
 
-La prescription de GLP-1 hors de leurs indications officielles — ce que l'on appelle le [détournement des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) — est un sujet sensible depuis l'explosion de la popularité d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) à partir de 2022. Mais jusqu'à récemment, les données chiffrées sur l'ampleur réelle du phénomène manquaient. Une étude publiée en 2025 dans la revue *Value in Health* apporte des éléments précis issus d'une cohorte nationale de patients français traités par GLP-1.
-
-📖 À lire également : [cas médiatiques de l'utilisation des GLP-1](/collections/temoignages/serena-williams-glp1/).
+La prescription de GLP-1 hors de leurs indications officielles — ce que l'on appelle le [détournement des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) — est un sujet sensible depuis l'explosion de la popularité d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) à partir de 2022. Mais jusqu'à récemment, les données chiffrées sur l'ampleur réelle du phénomène manquaient. Une étude publiée en 2026 dans la revue *Value in Health* apporte des éléments précis issus d'une cohorte nationale de patients français traités par GLP-1.
 
 ## L'étude : méthodologie et données de cohorte
 
@@ -113,7 +111,7 @@ Cette mesure a eu un **effet dissuasif sur les prescriptions hors AMM** : les do
 
 ### Les limites du formulaire
 
-Cependant, l'étude souligne que le formulaire ne couvre que les prescriptions remboursées. Les patients qui paient leur traitement de leur poche — ce qui reste le cas de Saxenda (non remboursé), et de Wegovy ou Mounjaro pour les patients ne remplissant pas les critères de remboursement obésité (remboursement à 65% effectif depuis le 15 juin 2026, sous conditions) — ne sont pas soumis à ce contrôle. Le mésusage dans la population non-remboursée reste difficile à quantifier avec les données du SNDS.
+Cependant, l'étude souligne que le formulaire ne couvre que les prescriptions remboursées. Au moment de la collecte des données, les patients qui payaient leur traitement de leur poche — Wegovy et Mounjaro n'étant pas encore remboursés, et Saxenda restant non remboursé — n'étaient pas soumis à ce contrôle. **Note** : depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40), ce qui étend le périmètre du formulaire obligatoire à ces prescriptions. Saxenda reste non remboursé.
 
 ## Implications pour les professionnels de santé
 
@@ -158,7 +156,7 @@ Un médecin responsable prendra le temps de répondre à ces questions.
 
 ## Conclusion
 
-L'étude nationale de cohorte publiée dans *Value in Health* en 2025 chiffre pour la première fois le mésusage des GLP-1 en France. Avec 2,2 % de prescriptions sans indication validée, le phénomène est réel mais maîtrisé — notamment grâce aux mesures réglementaires de l'ANSM. Ces données montrent aussi que la très grande majorité (97,8 %) des utilisateurs de GLP-1 en France ont une indication médicale légitime, ce qui relativise les discours alarmistes sur un usage généralisé comme médicament de confort.
+L'étude nationale de cohorte publiée dans *Value in Health* en 2026 chiffre pour la première fois le mésusage des GLP-1 en France. Avec 2,2 % de prescriptions sans indication validée, le phénomène est réel mais maîtrisé — notamment grâce aux mesures réglementaires de l'ANSM. Ces données montrent aussi que la très grande majorité (97,8 %) des utilisateurs de GLP-1 en France ont une indication médicale légitime, ce qui relativise les discours alarmistes sur un usage généralisé comme médicament de confort.
 
 ---
 

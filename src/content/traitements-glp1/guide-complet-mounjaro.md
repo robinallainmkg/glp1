@@ -8,14 +8,15 @@ image: "/images/thumbnails/mounjaro-blue.webp"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["mounjaro", "tirzepatide", "perte de poids", "résultats", "avant après", "prix france", "traitement efficace"]
-date: "2025-09-06"
+date: "2026-05-29"
 pubDate: "2025-09-06"
+updatedAt: "2026-05-29"
 featured: true
 priority: 1
 mainKeyword: "mounjaro guide complet france tirzepatide"
 ---
 
-### Mounjaro 2026 : Le Traitement N°1 qui Révolutionne la Perte de Poids
+## Mounjaro 2025 : Le Traitement N°1 qui Révolutionne la Perte de Poids
 
 <div class="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 text-white p-6 rounded-2xl mb-8 shadow-2xl border-2 border-orange-400">
   <div class="flex items-start gap-4">
@@ -30,8 +31,8 @@ mainKeyword: "mounjaro guide complet france tirzepatide"
         <p class="text-sm font-semibold mb-1">✅ Situation actuelle :</p>
         <ul class="text-sm space-y-1 text-white/90">
           <li>• <strong>Commercialisé en France</strong> depuis novembre 2024</li>
-          <li>• <strong>Disponible en pharmacie</strong> sur ordonnance</li>
-          <li>• <strong>Remboursé à 65% pour l'obésité depuis le 15 juin 2026</strong> (sous conditions)</li>
+          <li>• <strong>Disponible en pharmacie</strong> sur ordonnance, à prix libre</li>
+          <li>• <strong>Remboursé à 65 %</strong> depuis le 15 juin 2026 pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel, prescription initiale en CSO/CHU)</li>
         </ul>
       </div>
       <p class="text-xs mt-3 text-white/70">
@@ -93,7 +94,7 @@ mainKeyword: "mounjaro guide complet france tirzepatide"
   </a>
 </div>
 
-## Sommaire : Votre Guide Complet Mounjaro
+## 🚀 Sommaire : Votre Guide Complet Mounjaro
 1. [⚡ Pourquoi Mounjaro SURPASSE Ozempic ?](#pourquoi-mounjaro-surpasse-ozempic)
 2. [🔬 Comment Mounjaro RÉVOLUTIONNE la perte de poids ?](#comment-mounjaro-revolutionne)
 3. [📊 Résultats RÉELS : Témoignages et avant/après](#resultats-avant-apres)
@@ -332,9 +333,6 @@ Pour savoir si vous pouvez bénéficier de Mounjaro, consultez notre page [êtes
 - **Moment** : indifférent par rapport aux repas
 - **Stylo prérempli** : utilisation simple et intuitive
 
-> **À lire aussi** : [avis patients Mounjaro 2026](/collections/traitements-glp1/mounjaro-avis-patients-france-2026/)
-
-
 ## Comment commencer le traitement Mounjaro ?
 
 Pour un parcours complet étape par étape, consultez notre guide [comment démarrer un traitement GLP-1 en France](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/).
@@ -360,8 +358,6 @@ Pour un parcours complet étape par étape, consultez notre guide [comment déma
 ### GLP-1 oraux
 - **[Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)** : Semaglutide oral (jusqu'à 14 mg/jour)
 
-> **À lire aussi** : [quel traitement GLP-1 choisir](/guides/quel-traitement-glp1-choisir/) · [GLP-1 chez les seniors de plus de 65 ans](/collections/traitements-glp1/glp1-seniors-plus-65-ans-limites-ansm-alternatives/)
-
 ## FAQ Mounjaro
 
 ### Puis-je prendre Mounjaro si je ne suis pas diabétique ?
@@ -376,16 +372,12 @@ Oui, Mounjaro peut être prescrit pour la perte de poids chez les personnes obè
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Mounjaro est-il remboursé pour l'obésité ?
-**Oui, Mounjaro est remboursé à 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 10 juin 2026 (en vigueur le 15 juin 2026)), sous conditions : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, et primo-prescription réservée aux professionnels de niveaux de recours 2 et 3 : médecins en CSO, CHU, SSR spécialisés, ou endocrinologues-diabétologues en lien avec un CSO. Commercialisé depuis novembre 2024, son prix public remboursable se situe entre 176 € et 434 € par mois selon le dosage, avec un reste à charge de 35% (souvent pris en charge par la mutuelle). Voir le détail du [remboursement](/collections/glp1-cout/remboursement-glp1-2026/). Hors critères, le prix libre reste à la charge du patient.
+**Oui, Mounjaro est remboursé à 65 %** par l'Assurance Maladie depuis le 15 juin 2026 pour le traitement de l'obésité. Les conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté d'une prise en charge nutritionnelle. La prescription initiale est réservée aux CSO (Centres Spécialisés Obésité), CHU ou services spécialisés ; le renouvellement peut être assuré par le médecin traitant. Le prix officiel se situe entre ~176 € et ~433 € par mois selon le dosage. Consultez notre guide [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) pour les détails.
 
 ### Puis-je arrêter Mounjaro brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide. Si vous devez subir une intervention chirurgicale, consultez notre guide sur les [précautions avant chirurgie sous Mounjaro](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) pour connaître le protocole d'arrêt recommandé.
 
 ---
-
-Après le tirzepatide, la prochaine innovation est [CagriSema en développement](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-resultats/) chez Novo Nordisk.
-
-Le tirzepatide a montré des bénéfices cardiaques dans les [résultats de l'étude SUMMIT](/collections/recherche-glp1/mounjaro-tirzepatide-insuffisance-cardiaque-summit-resultats-france/).
 
 ## 🎯 Pour Aller Plus Loin avec Mounjaro
 

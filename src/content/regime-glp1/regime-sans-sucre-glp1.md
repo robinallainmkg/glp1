@@ -1,13 +1,14 @@
 ---
 title: "Régime Sans Sucre GLP-1 : Guide Glycémie et Perte de Poids"
 pubDate: 2025-08-20
-date: "2025-08-20"
+date: "2026-06-22"
+updatedAt: "2026-06-22"
 author: "Dr. Émilie Martin"
 description: "Régime sans sucre GLP-1 : contrôlez votre glycémie et amplifiez la perte de poids avec votre traitement. Conseils pratiques et menus."
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]
 collection: "régime-glp1"
-thumbnail: "/images/thumbnails/regime-sans-sucre-glp1.jpg"
+thumbnail: "/images/thumbnails/régime-sans-sucre-glp1.jpg"
 thumbnailAlt: "Illustration pour l'article régime-sans-sucre-glp1"
 featured: false
 priority: 5
@@ -96,7 +97,7 @@ Le sucre se cache sous de nombreux noms sur les étiquettes :
 
 La règle simple : si les sucres dépassent **5 g pour 100 g** dans un produit, c'est un produit à consommer avec modération.
 
-## Remboursement et coûts des traitements GLP-1 (France, mars 2026)
+## Remboursement et coûts des traitements GLP-1 (France, juin 2026)
 
 ### Ozempic (sémaglutide pour le diabète de type 2)
 - **Prix** : ~76,58 € par stylo
@@ -104,12 +105,12 @@ La règle simple : si les sucres dépassent **5 g pour 100 g** dans un produit, 
 - **ALD 30 (diabète de type 2)** : prise en charge à 100% du ticket modérateur. L'obésité seule n'est pas une ALD en France en mars 2026.
 
 ### Wegovy (sémaglutide 2,4 mg pour l'obésité)
-- **Prix** : ~250 à 290 €/mois
-- **Remboursement** : Wegovy : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC initial ≥ 40 kg/m²). Mounjaro : remboursé à 65% depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec échec d'une prise en charge nutritionnelle bien conduite)
+- **Prix** : ~147 à 350 €/mois selon dosage
+- **Remboursement** : remboursé à 65 % depuis juin 2026 (conditions d'éligibilité : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle)
 
 ### Mounjaro (tirzepatide)
-- **Prix** : 230 à 440 €/mois selon dosage
-- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec échec d'une prise en charge nutritionnelle bien conduite)
+- **Prix** : 176 à 434 €/mois selon dosage
+- **Remboursement** : remboursé à 65 % depuis juin 2026 (conditions d'éligibilité : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle)
 
 ## Conseils pratiques pour une transition réussie
 
@@ -135,8 +136,6 @@ Les édulcorants n'ont pas d'impact sur la glycémie et peuvent aider lors de la
 
 ### La réduction des sucres peut-elle diminuer les nausées du GLP-1 ?
 Oui, dans de nombreux cas. Les aliments sucrés, notamment les boissons sucrées et les confiseries, fermentent rapidement dans un estomac dont la vidange est ralentie par le GLP-1. Les supprimer réduit souvent les nausées, les ballonnements et les éructations fréquentes en début de traitement.
-
-Le régime sans sucre complète bien un traitement GLP-1 — informez-vous sur le [coût de Wegovy](/collections/glp1-cout/prix-wegovy-france/).
 
 ## Conclusion
 

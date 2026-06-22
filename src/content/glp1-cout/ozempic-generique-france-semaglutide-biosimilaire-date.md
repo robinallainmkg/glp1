@@ -5,8 +5,8 @@ keywords: ['ozempic generique france', 'semaglutide generique', 'ozempic moins c
 seoTitle: "Ozempic Générique en France : Brevet 2031, Biosimilaires et Alternatives Moins Chères"
 seoDescription: "Ozempic générique France : brevet sémaglutide jusqu'en 2031. Différence générique/biosimilaire et alternatives moins chères disponibles."
 publishedAt: '2026-03-17'
-updatedAt: '2026-03-17'
-date: 2026-03-17
+updatedAt: '2026-06-22'
+date: 2026-06-22
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10

@@ -5,8 +5,8 @@ description: "Apicil et Wegovy en 2026 : forfaits santé, médicaments non rembo
 seoDescription: "Apicil et Wegovy 2026 : forfaits, conditions, démarches. Guide complet sur la prise en charge."
 keywords: ['Apicil Wegovy remboursement', 'wegovy Apicil', 'mutuelle Apicil obésité', 'forfait Apicil GLP1']
 publishedAt: '2026-05-02'
-updatedAt: '2026-05-02'
-date: '2026-05-02'
+updatedAt: '2026-06-22'
+date: '2026-06-22'
 pubDate: 2026-05-02
 author: 'Dr. Marie Dubois'
 category: "Économie santé"
@@ -37,9 +37,9 @@ affiliateConfig:
 
 ## Wegovy : statut Sécu en mai 2026
 
-Le rappel essentiel : **Wegovy est remboursé à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026), pour les adultes IMC ≥ 35 avec comorbidité (ou ≥ 40) en échec de prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. La mutuelle complète alors le **reste à charge de 35%**. Détails : [conditions d'éligibilité](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
+**Wegovy est remboursé à 65 % par l'Assurance Maladie depuis le 15 juin 2026** pour les adultes avec un IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté de la prise en charge nutritionnelle. La primo-prescription est réservée aux CSO (Centres Spécialisés Obésité), CHU ou services spécialisés ; le renouvellement peut être assuré par le médecin traitant.
 
-Pour les patients non éligibles à ce remboursement (hors conditions d'IMC ou de parcours de soins), les complémentaires comme Apicil ne peuvent intervenir qu'au travers de **forfaits dédiés**, pas dans le cadre du droit commun.
+Depuis l'inscription au remboursement, les complémentaires comme Apicil interviennent désormais dans le cadre du **droit commun** en complétant le ticket modérateur (35 % restants), selon les garanties du contrat.
 
 ### Coût mensuel et annuel pour le patient
 
@@ -104,9 +104,9 @@ Pour les traitements longs et coûteux, l'envoi d'une **demande de prise en char
 
 Une **surcomplémentaire « médicaments non remboursés »** (forfaits 500–1 000 €/an chez certains assureurs) peut compléter Apicil. À comparer avec le coût additionnel.
 
-### Le complément Sécu
+### Profiter du remboursement Sécu effectif
 
-Depuis l'entrée en vigueur du remboursement Wegovy le 15 juin 2026, Apicil applique **automatiquement** le complément de ticket modérateur (35%) prévu au contrat pour les patients éligibles. Aucune démarche. Suivez l'évolution sur [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
+Depuis l'inscription de Wegovy au remboursement le 15 juin 2026, Apicil applique **automatiquement** le complément de ticket modérateur prévu au contrat. Aucune démarche particulière. Détails sur [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ### Négocier dans le contrat collectif
 
@@ -118,7 +118,7 @@ Voir notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-we
 
 ## Mounjaro et Ozempic chez Apicil en 2026
 
-- **Mounjaro (tirzépatide)** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (mêmes conditions que Wegovy). Comportement Apicil identique à Wegovy : complément du ticket modérateur pour les patients éligibles, forfaits dédiés sinon.
+- **Mounjaro (tirzépatide)** : remboursé à 65 % depuis le 15 juin 2026 pour l'obésité (mêmes conditions que Wegovy : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel). Apicil complète le ticket modérateur selon contrat.
 - **Ozempic (sémaglutide)** : pris en charge Sécu à **65 %** en bithérapie metformine, **30 %** en trithérapie insuline, **uniquement DT2**. Apicil complète le ticket modérateur selon contrat (souvent 100 % BR).
 
 ## Comparaison synthétique
@@ -139,12 +139,12 @@ Pour aller plus loin, voir notre [comparatif mutuelle Wegovy](/collections/glp1-
 
 Wegovy ne se prescrit pas seul : un **médecin formé à l'obésité**, un suivi diététique, un soutien psychologique éventuel et une activité physique adaptée structurent un parcours efficace. Plusieurs plateformes spécialisées proposent ce parcours en téléconsultation avec primo-prescription si éligible et suivi mensuel — utile pour exploiter au mieux les forfaits prévention de votre contrat Apicil.
 
-> Comparer les contrats complémentaires reste la démarche la plus rentable pour réduire le reste à charge en 2026, en particulier pour les patients non éligibles au remboursement Sécu de Wegovy.
+> Depuis le remboursement Sécu de Wegovy (15 juin 2026), comparer les contrats complémentaires reste la démarche la plus rentable pour réduire le reste à charge (ticket modérateur de 35 %).
 
 ## FAQ — Apicil et Wegovy
 
 **1. Apicil rembourse-t-il Wegovy en 2026 ?**
-Pour les patients éligibles, Wegovy est remboursé à 65% par la Sécu (obésité, depuis le 15 juin 2026) et Apicil complète le ticket modérateur de 35% en droit commun. Pour les patients non éligibles, des forfaits dédiés (médicaments non remboursés, prévention) peuvent intervenir partiellement.
+Oui. Depuis le 15 juin 2026, Wegovy est remboursé à 65 % par la Sécurité Sociale. Apicil complète le ticket modérateur (35 % restants) selon les garanties de votre contrat, dans le cadre du droit commun.
 
 **2. Quel forfait Apicil active pour Wegovy ?**
 Le forfait « médicaments prescrits non remboursés » est central. Le forfait prévention finance les consultations associées.
@@ -156,13 +156,13 @@ Souvent oui. Les contrats collectifs négociés par les entreprises incluent fr�
 Pas obligatoire pour activer un forfait simple. Recommandé pour les remboursements proportionnels.
 
 **5. Et Mounjaro ?**
-Même régime que Wegovy : remboursé à 65% par la Sécu pour l'obésité depuis le 15 juin 2026 (sous conditions). Apicil complète le ticket modérateur pour les patients éligibles, forfaits dédiés sinon.
+Même régime que Wegovy : remboursé à 65 % par la Sécu depuis le 15 juin 2026 pour l'obésité. Apicil complète le ticket modérateur selon contrat.
 
 **6. Et Ozempic dans le diabète ?**
 Pris en charge Sécu (65 % bithérapie / 30 % trithérapie). Apicil complète le TM selon contrat.
 
-**7. Apicil rembourse-t-il automatiquement Wegovy ?**
-Oui. Depuis l'entrée en vigueur de l'arrêté Sécu le 15 juin 2026, le complément de ticket modérateur est versé automatiquement, sans démarche, pour les patients éligibles.
+**7. Apicil rembourse-t-il automatiquement Wegovy depuis juin 2026 ?**
+Oui. Depuis la publication au JO de l'arrêté de remboursement (15 juin 2026), le complément de ticket modérateur est versé automatiquement par Apicil, sans démarche.
 
 ---
 

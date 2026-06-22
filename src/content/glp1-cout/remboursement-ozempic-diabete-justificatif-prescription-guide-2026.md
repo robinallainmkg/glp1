@@ -6,8 +6,8 @@ keywords: ['remboursement ozempic diabète justificatif prescription 2026', 'rem
 seoTitle: "Remboursement Ozempic Diabète 2026 : Justificatif Guide"
 seoDescription: "Ozempic, Victoza et Trulicity remboursés pour le diabète de type 2. Justificatif de prescription obligatoire depuis 2025. Guide complet."
 publishedAt: '2026-03-17'
-date: 2026-03-17
-updatedAt: '2026-03-17'
+date: 2026-06-22
+updatedAt: '2026-06-22'
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -30,11 +30,11 @@ En France en 2026, plusieurs médicaments de la classe des agonistes GLP-1 sont 
 - **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** (sémaglutide 0,5 mg, 1 mg, 2 mg hebdomadaire, Novo Nordisk) — remboursé à **65 %** en bithérapie metformine (100 % en ALD diabète)
 - **[Victoza](/collections/traitements-glp1/guide-complet-victoza/)** (liraglutide 0,6 mg, 1,2 mg, 1,8 mg quotidien, Novo Nordisk) — remboursé à **65 %** (100 % en ALD diabète)
 - **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** (dulaglutide 0,75 mg, 1,5 mg, 3 mg, 4,5 mg hebdomadaire, Eli Lilly) — remboursé à **65 %** (100 % en ALD diabète)
-- **Rybelsus** (sémaglutide oral 3 mg, 7 mg, 14 mg quotidien, Novo Nordisk) — **non remboursé** (avis défavorable HAS)
+- **Rybelsus** (sémaglutide oral 3 mg, 7 mg, 14 mg quotidien, Novo Nordisk) — **Remboursé 65 %** (depuis juin 2026, obésité)(avis défavorable HAS)
 - **Byetta** (exénatide 5 µg, 10 µg biquotidien, AstraZeneca) — remboursé à **65 %** (100 % en ALD diabète)
 - **Bydureon** (exénatide LP 2 mg hebdomadaire, AstraZeneca) — remboursé à **65 %** (100 % en ALD diabète)
 
-**Important** : ces remboursements s'appliquent exclusivement pour le traitement du diabète de type 2. Pour l'obésité, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) et Mounjaro (tirzépatide) sont remboursés à 65% depuis le 15 juin 2026 (arrêté du 10 juin 2026 (en vigueur le 15 juin 2026)), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée) ; Saxenda (liraglutide 3 mg) reste **non remboursé**.
+**Important** : ces remboursements s'appliquent exclusivement pour le traitement du diabète de type 2. [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) est remboursé à 65% depuis le 15 juin 2026 pour l'obésité sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Saxenda (liraglutide 3 mg) reste **Remboursé 65 %** (depuis juin 2026, obésité)en France.
 
 ### Ce qui a changé depuis février 2025
 
@@ -123,13 +123,13 @@ Si vous estimez que votre situation médicale justifie le remboursement mais que
 Il est important de ne pas confondre la situation des GLP-1 prescrits pour le diabète et celle des GLP-1 prescrits pour l'obésité :
 
 - **Ozempic pour le diabète** → remboursé (avec justificatif)
-- **[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) pour l'obésité** → remboursé à 65% depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, échec nutritionnel préalable, primo-prescription spécialisée)
+- **[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) pour l'obésité** → remboursé à 65% depuis le 15 juin 2026 (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, prescription initiale réservée aux CSO/CHU)
 - **[Victoza](/collections/traitements-glp1/guide-complet-victoza/) pour le diabète** → remboursé (avec justificatif)
 - **Saxenda pour l'obésité** → non remboursé (entre 240 et 300 €/mois)
 
 Ce point est source de confusion fréquente : un patient sous Ozempic pour son diabète qui perd aussi du poids bénéficie du remboursement. Un patient qui demande Ozempic uniquement pour perdre du poids, sans diabète diagnostiqué, ne bénéficie d'aucun remboursement.
 
-Pour en savoir plus sur le remboursement des GLP-1 pour l'obésité, notre guide sur le [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) détaille les conditions applicables à Wegovy et Mounjaro depuis le 15 juin 2026.
+Pour en savoir plus sur les perspectives de remboursement des GLP-1 pour l'obésité, notre guide sur le [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) détaille les évolutions attendues pour Wegovy et Mounjaro.
 
 ## Situation particulière : diabète sous ALD
 
@@ -156,8 +156,6 @@ Pour obtenir le remboursement de votre GLP-1 pour le diabète en 2026 :
 5. **Si vous êtes en ALD diabète**, vérifiez que votre protocole de soins est à jour pour bénéficier du taux 100 %
 6. **En cas de refus inexpliqué**, contactez le 36 46 (Assurance Maladie) pour obtenir des éclaircissements
 
-Pour le sémaglutide en indication obésité, consultez le guide [remboursement mutuelle Wegovy](/collections/glp1-cout/wegovy-remboursement-mutuelle/).
-
 ## Questions fréquentes
 
 **Mon médecin prescrit Ozempic depuis 2 ans. Doit-il refaire le justificatif à chaque renouvellement ?**
@@ -170,12 +168,12 @@ Si la prescription date d'avant le 31 août 2025, une procédure de régularisat
 Si vous prenez Ozempic uniquement pour la perte de poids (sans diabète diagnostiqué), la Sécurité Sociale ne rembourse pas. Certaines mutuelles proposent des forfaits médicaments non remboursés, mais la prise en charge est généralement partielle et plafonnée.
 
 **Ozempic et Wegovy sont-ils la même molécule ? Ozempic peut-il être prescrit pour l'obésité ?**
-Ozempic et Wegovy contiennent tous deux du sémaglutide, mais à des dosages différents. Ozempic est indiqué et remboursé uniquement pour le diabète de type 2. Wegovy (dosage 2,4 mg) est indiqué pour l'obésité et remboursé à 65% depuis le 15 juin 2026 (sous conditions). Un médecin peut techniquement prescrire Ozempic hors AMM pour l'obésité, mais sans remboursement dans ce cas.
+Ozempic et Wegovy contiennent tous deux du sémaglutide, mais à des dosages différents. Ozempic est indiqué et remboursé uniquement pour le diabète de type 2. Wegovy (dosage 2,4 mg) est indiqué pour l'obésité et est remboursé à 65% par l'Assurance Maladie depuis le 15 juin 2026, sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Un médecin peut techniquement prescrire Ozempic hors AMM pour l'obésité, mais sans remboursement dans ce cas.
 
 **Victoza est-il vraiment remboursé à 65 % (100 % en ALD diabète) ? C'est beaucoup moins cher qu'Ozempic.**
 Oui, Victoza (liraglutide quotidien) est remboursé à 65 % (hors ALD) pour le diabète depuis de nombreuses années. Son prix après remboursement est nettement inférieur à Ozempic. C'est un facteur que votre diabétologue peut prendre en compte pour le choix du traitement.
 
 ---
 
-*Ce guide est destiné à l'information générale des patients. Les règles de remboursement peuvent évoluer. Contactez votre CPAM ou consultez ameli.fr pour les informations les plus récentes. Dernière mise à jour : mars 2026.*
+*Ce guide est destiné à l'information générale des patients. Les règles de remboursement peuvent évoluer. Contactez votre CPAM ou consultez ameli.fr pour les informations les plus récentes. Dernière mise à jour : juin 2026.*
 

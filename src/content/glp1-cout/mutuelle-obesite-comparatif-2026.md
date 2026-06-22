@@ -5,8 +5,8 @@ description: "Comparatif 2026 des meilleures mutuelles santé pour patient obès
 seoDescription: "Comparatif mutuelle obésité 2026 : meilleures complémentaires pour Wegovy, Mounjaro, Ozempic. Méthode et critères."
 keywords: ['mutuelle obésité comparatif 2026', 'meilleure mutuelle GLP-1', 'mutuelle Wegovy comparatif', 'mutuelle obésité 2026']
 publishedAt: '2026-05-02'
-updatedAt: '2026-05-02'
-date: '2026-05-02'
+updatedAt: '2026-06-22'
+date: '2026-06-22'
 pubDate: 2026-05-02
 author: 'Dr. Marie Dubois'
 category: "Économie santé"
@@ -33,7 +33,7 @@ affiliateConfig:
 
 ## Mutuelle obésité comparatif 2026 : choisir la meilleure complémentaire pour un traitement GLP-1
 
-L'arrivée des analogues du GLP-1 (Wegovy, Mounjaro, Ozempic) bouleverse la prise en charge médicale de l'obésité. Depuis le **15 juin 2026**, **Wegovy et Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité** (arrêté du 23 mai 2026), sous conditions strictes (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée). Pour les patients éligibles, la complémentaire santé complète le ticket modérateur (35%) ; pour les autres, son rôle reste central pour réduire le reste à charge. Voici un comparatif pratique des **meilleures mutuelles** pour un patient obèse traité par GLP-1.
+L'arrivée des analogues du GLP-1 (Wegovy, Mounjaro, Ozempic) bouleverse la prise en charge médicale de l'obésité. Depuis le **15 juin 2026**, **Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance Maladie** pour l'obésité sous conditions strictes (IMC ≥ 35 + comorbidité ou IMC ≥ 40, échec nutritionnel, primo-prescription CSO/CHU). Le rôle de la complémentaire santé reste important pour couvrir le **ticket modérateur de 35 %** et les frais d'accompagnement (diététicien, psychologue, APA). Voici un comparatif pratique des **meilleures mutuelles** pour un patient obèse traité par GLP-1.
 
 ## Pourquoi un comparatif spécifique « obésité » en 2026
 
@@ -41,29 +41,29 @@ L'obésité est une maladie chronique reconnue (OMS, HAS). Mais les outils thér
 
 ### Les postes de dépense d'un patient obèse en 2026
 
-- **Médicaments GLP-1** (Wegovy, Mounjaro) : 169 à 440 €/mois — remboursés 65% pour l'obésité depuis le 15/06/2026 sous conditions, intégralement à charge sinon
+- **Ticket modérateur GLP-1** (Wegovy, Mounjaro remboursés à 65 %) : 51 à 152 €/mois de reste à charge (35 % TM)
 - **Consultations diététicien** : 30 à 80 €/séance, rarement remboursées Sécu
 - **Bilans nutritionnels et biologiques** : 50 à 200 €
 - **Accompagnement psychologique** : 50 à 90 €/séance
 - **Activité physique adaptée (APA)** : 200 à 800 €/an selon programme
 - **Chirurgie bariatrique** (cas sévères) : remboursée à 100 % en ALD, mais avec dépassements possibles
 
-Le coût annuel pour un patient suivant un traitement médical GLP-1 sérieux peut donc atteindre **5 000 à 7 000 €** la première année.
+Le coût annuel restant à charge pour un patient suivant un traitement GLP-1 remboursé à 65 %, hors mutuelle, peut atteindre **2 000 à 3 000 €** la première année (ticket modérateur + frais d'accompagnement).
 
 ## Statut des GLP-1 en 2026 : ce qui change pour les mutuelles
 
 | Médicament | Indication | Statut Sécu 2026 | Prix officine | Rôle mutuelle |
 |------------|------------|------------------|----------------|---------------|
-| Wegovy (sémaglutide) | Obésité | Remboursé 65 % (dès le 15/06/2026, sous conditions) | 169–360 €/mois | TM standard (éligibles) / forfait dédié (sinon) |
-| Mounjaro (tirzépatide) | Obésité | Remboursé 65 % (dès le 15/06/2026, sous conditions) | 230–440 €/mois | TM standard (éligibles) / forfait dédié (sinon) |
+| Wegovy (sémaglutide) | Obésité | Remboursé 65 % (depuis 15/06/2026, sous conditions) | 147–350 €/mois | TM 35 % |
+| Mounjaro (tirzépatide) | Obésité | Remboursé 65 % (depuis 15/06/2026, sous conditions) | 176–433 €/mois | TM 35 % |
 | Ozempic (sémaglutide) | DT2 | Remboursé 65 % (bithérapie metformine) / 30 % (trithérapie insuline) | ~85 €/mois TTC | TM standard |
 
 Pour le détail réglementaire, voir notre [page remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ## Les 8 critères pour évaluer une mutuelle obésité en 2026
 
-### 1. Forfait médicaments prescrits non remboursés
-Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés 65% pour l'obésité sous conditions : pour les patients éligibles, c'est le **complément du ticket modérateur** par la mutuelle qui prime. Ce forfait reste le poste **n°1** pour les patients **non éligibles** au remboursement. Visez idéalement **500 €/an minimum**.
+### 1. Ticket modérateur médicaments remboursés
+Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 %. Votre mutuelle doit couvrir le **ticket modérateur de 35 %** sur ces médicaments. Vérifiez que votre contrat prend bien en charge le TM à 100 % du tarif conventionné.
 
 ### 2. Forfait prévention santé
 Couverture diététicien, nutritionniste, coaching alimentaire. Indispensable pour structurer le parcours obésité.
@@ -125,9 +125,9 @@ Dans chaque tableau de garanties, repérer :
 
 Un forfait médicaments non remboursés **étendu** se paie via une cotisation supérieure. Vérifier que le **gain de remboursement annuel > surcoût de cotisation annuel**.
 
-### Étape 4 — tenir compte de l'évolution réglementaire
+### Étape 4 — tirer parti du remboursement actif
 
-Depuis l'inscription de Wegovy et Mounjaro au remboursement Sécu (effective le 15 juin 2026), votre contrat **bascule automatiquement** sur le ticket modérateur de droit commun pour les patients éligibles. Le forfait dédié reste utile pour les patients non éligibles et pour les autres médicaments hors liste.
+Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 %. Votre contrat applique automatiquement le ticket modérateur de droit commun. Le forfait médicaments non remboursés reste utile pour Saxenda et d'éventuels futurs traitements hors liste.
 
 ### Étape 5 — surcomplémentaire si besoin
 
@@ -141,26 +141,26 @@ Une mutuelle se choisit globalement (hospitalisation, optique, dentaire, etc.). 
 ### Piège 2 : ignorer les délais de carence
 Certaines formules premium imposent 3 à 12 mois avant l'activation des forfaits étendus. À anticiper.
 
-### Piège 3 : surestimer le forfait
-Un forfait de 500 €/an ne couvre que **2 mois** de Wegovy au dosage cible. C'est un complément, pas une solution.
+### Piège 3 : négliger le ticket modérateur
+Depuis le remboursement à 65 %, le ticket modérateur de 35 % sur Wegovy au dosage cible (~350 €/mois) représente encore ~123 €/mois. Vérifiez que votre mutuelle couvre bien ce reste à charge.
 
 ### Piège 4 : oublier le suivi médical
 Sans encadrement (médecin, diététicien, psychologue), le traitement perd en efficacité — donc en rentabilité. Voir notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
 
-## Le remboursement Sécu de Wegovy (depuis le 15 juin 2026)
+## Quand bascule-t-on au remboursement Sécu pour Wegovy ?
 
-Depuis la **publication au Journal Officiel** de l'arrêté du 23 mai 2026 inscrivant Wegovy sur la liste des spécialités remboursables (entrée en vigueur le **15 juin 2026**), votre mutuelle applique automatiquement le **ticket modérateur** prévu au contrat pour les patients éligibles — comme pour n'importe quel médicament listé. Aucune démarche.
+Depuis le **15 juin 2026**, Wegovy et Mounjaro sont inscrits sur la liste des spécialités remboursables. Votre mutuelle applique automatiquement le **ticket modérateur** prévu au contrat.
 
 Concrètement :
-- Wegovy est remboursé à **65 %** par la Sécu pour l'obésité (sous conditions)
-- Le ticket modérateur (35 %) est **complété par votre mutuelle** dans les conditions habituelles (souvent 100 % BR)
-- Le forfait médicaments non remboursés ne s'applique plus à Wegovy pour les patients éligibles, mais reste utile pour les patients non éligibles et les autres médicaments hors liste
+- Wegovy et Mounjaro sont remboursés à **65 %** par l'Assurance Maladie (sous conditions)
+- Le ticket modérateur de **35 %** est **complété par votre mutuelle** dans les conditions habituelles (souvent 100 % BR)
+- Le forfait médicaments non remboursés reste utile pour Saxenda et autres médicaments hors liste
 
 ## Trouver un accompagnement médical structuré
 
 Choisir la bonne mutuelle ne suffit pas : un **parcours médical encadré** (médecin formé à l'obésité, diététicien, psychologue, APA) maximise le succès du traitement. Plusieurs plateformes spécialisées proposent ce parcours en téléconsultation avec primo-prescription si éligible et suivi mensuel — utile pour valoriser au mieux votre contrat.
 
-> Comparer les contrats complémentaires en tenant compte spécifiquement des postes obésité reste la démarche la plus rentable pour 2026, en attendant l'inscription Sécu de Wegovy.
+> Comparer les contrats complémentaires en tenant compte spécifiquement des postes obésité reste la démarche la plus rentable pour 2026, notamment pour couvrir le ticket modérateur de 35 % sur Wegovy et Mounjaro et les frais d'accompagnement.
 
 ## FAQ — Mutuelle obésité comparatif 2026
 
@@ -179,11 +179,11 @@ Non. La loi française (Évin) interdit les refus liés à l'état de santé pou
 **5. Mon mutuelle peut-elle augmenter ma cotisation si je commence Wegovy ?**
 Non, les **questionnaires de santé sont interdits** pour les contrats responsables. Aucune surcote individuelle n'est légale.
 
-**6. Depuis quand Wegovy est-il remboursé ?**
-Depuis le **15 juin 2026**, en application de l'arrêté du 23 mai 2026 (publié au Journal officiel le 28 mai 2026) : remboursement à 65% pour l'obésité, sous conditions strictes. Voir le détail sur notre [page remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
+**6. Depuis quand Wegovy et Mounjaro sont-ils remboursés ?**
+Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance Maladie depuis le **15 juin 2026**, sous conditions. Détails sur notre [page remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
-**7. Dois-je conserver le forfait médicaments non remboursés après l'inscription Sécu de Wegovy ?**
-Oui : il reste utile pour les patients **non éligibles** au remboursement (Wegovy comme Mounjaro) et pour les médicaments futurs non encore remboursés.
+**7. Dois-je conserver le forfait médicaments non remboursés ?**
+Ce forfait reste utile pour **Saxenda** (toujours non remboursé) et les médicaments futurs non encore remboursés.
 
 ---
 

@@ -2,7 +2,7 @@
 title: "Prix Zepbound France : Coût et Remboursement 2026"
 description: "Prix Zepbound France 2025 : coût détaillé, remboursement et conseils pour accéder à ce traitement GLP-1. Guide complet mis à jour."
 pubDate: 2025-09-07
-date: '2026-03-17'
+date: '2026-06-22'
 author: "Dr. Sophie Dubois"
 category: "Coût et Accessibilité"
 tags: ["glp1", "traitements", "nutrition"]
@@ -28,7 +28,7 @@ affiliateConfig:
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Prix Zepbound 2025 : Coût par Dosage et Remboursement Mutuelle",
-  "description": "Prix Mounjaro (tirzépatide) en pharmacie : 230-440€ par mois. Remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions).",
+  "description": "Prix Zepbound en pharmacie : le tirzépatide est commercialisé en France sous le nom Mounjaro, remboursé à 65% depuis juin 2026.",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-zepbound-france",
   "datePublished": "2025-12-27",
   "dateModified": "2025-12-27",
@@ -59,7 +59,7 @@ affiliateConfig:
         "name": "Quel est le prix de Zepbound en pharmacie en France ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Zepbound n'existe pas en France. Le tirzépatide est commercialisé sous le nom Mounjaro, au prix libre de 230-440€ par mois selon le dosage. Mounjaro est remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions), et déjà remboursé dans le diabète de type 2."
+          "text": "Zepbound n'existe pas en France. Le tirzépatide est commercialisé sous le nom Mounjaro, au prix de 176-433€ par mois selon le dosage. Mounjaro est remboursé à 65% par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40)."
         }
       },
       {
@@ -67,7 +67,7 @@ affiliateConfig:
         "name": "Zepbound est-il remboursé en 2025 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Zepbound n'existe pas en France. Le tirzépatide est vendu sous le nom Mounjaro et est remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), pour un IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Mounjaro est par ailleurs déjà remboursé dans le diabète de type 2."
+          "text": "Zepbound n'existe pas en France. Le tirzépatide est vendu sous le nom Mounjaro et est remboursé à 65% par l'Assurance Maladie depuis le 15 juin 2026 pour les patients avec un IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté de la prise en charge nutritionnelle. La primo-prescription est réservée aux CSO, CHU ou services spécialisés."
         }
       }
     ]
@@ -77,7 +77,7 @@ affiliateConfig:
 
 ## Prix Zepbound France : Guide Complet 2025
 
-> **ATTENTION : Zepbound n'existe pas en France.** Le tirzépatide est commercialisé en Europe sous le nom **Mounjaro** (par Eli Lilly), pas sous le nom Zepbound (nom utilisé aux États-Unis uniquement). En France, le traitement équivalent est **[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)**, commercialisé depuis novembre 2024 au prix de **230-440 EUR/mois** (prix libre), désormais remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions).
+> **ATTENTION : Zepbound n'existe pas en France.** Le tirzépatide est commercialisé en Europe sous le nom **Mounjaro** (par Eli Lilly), pas sous le nom Zepbound (nom utilisé aux États-Unis uniquement). En France, le traitement équivalent est **[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)**, commercialisé depuis novembre 2024 au prix de **176-433 €/mois** selon le dosage, **remboursé à 65 %** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel documenté).
 
 **Zepbound** est le nom commercial américain du tirzépatide (Eli Lilly). **En France et en Europe, ce même principe actif est commercialisé sous le nom Mounjaro.** Pour le détail des tarifs, consultez le [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/). Les informations ci-dessous concernent donc le Mounjaro (tirzépatide) tel qu'il est disponible en France.
 
@@ -119,10 +119,10 @@ affiliateConfig:
 
 ### Taux de Remboursement
 
-**Situation depuis le 15 juin 2026 :**
-- **Sécurité Sociale** : **Remboursé 65%** pour l'obésité (sous conditions, dès le 15/06/2026) — consultez notre guide sur le [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/)
-- **Mounjaro** (équivalent de Zepbound en France) : **remboursé à 65%** pour l'obésité depuis le 15 juin 2026 (sous conditions), et déjà remboursé dans le diabète de type 2
-- **Reste à charge** : 35% du prix (avant mutuelle) pour les patients éligibles
+**Situation Actuelle (mai 2026) :**
+- **Sécurité Sociale** : **remboursé à 65 %** depuis le 15 juin 2026 pour l'obésité — consultez notre guide sur le [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) pour les conditions détaillées
+- **Mounjaro** (équivalent de Zepbound en France) : **remboursé à 65 %** (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel, primo-prescription en CSO/CHU)
+- **Prix officiel** : 176-433 €/mois selon le dosage
 
 ## Comparaison avec Autres Traitements
 
@@ -130,8 +130,8 @@ affiliateConfig:
 
 | Traitement | Prix/mois | Remboursement | Efficacité Poids |
 |------------|-----------|---------------|------------------|
-| **Mounjaro** (tirzépatide) | 230-440€ | Remboursé 65% (obésité, dès le 15/06/2026) | Très élevée (-21%) |
-| **Wegovy** | 169-360€ | Remboursé 65% (obésité, dès le 15/06/2026) | Élevée (-15 à -20%) |
+| **Mounjaro** (tirzépatide) | 176-433€ | 65% (obésité, depuis juin 2026) | Très élevée (-21%) |
+| **Wegovy** | ~147-350€ | 65% (obésité, depuis juin 2026) | Élevée (-15 à -20%) |
 | **Saxenda** | 240-300€ | Non remboursé | Modérée (-8%) |
 | **Ozempic** | ~76,58€/stylo | 65% (DT2, bithérapie metformine) | Élevée (-15%) |
 
@@ -219,8 +219,8 @@ Mounjaro est disponible **uniquement en pharmacie** sur ordonnance. Les prix peu
 | Année | Prix Mounjaro | Remboursement | Reste à Charge |
 |-------|------------|---------------|----------------|
 | **2025** | 230-440€ | Non remboursé | 230-440€ |
-| **2026** | 230-440€ | Remboursé 65% (obésité, dès le 15/06/2026) | 35% (avant mutuelle) |
-| **2027** | À confirmer | Remboursé 65% (obésité, sous conditions) | 35% (avant mutuelle) |
+| **2026** | 176-433€ | 65% (depuis le 15 juin 2026) | ~62-152 €/mois (reste à charge) |
+| **2027** | À confirmer | Maintenu | À déterminer |
 
 ## Conseils Pratiques
 
@@ -262,7 +262,7 @@ R: Variable selon contrat, vérifier avec sa mutuelle.
 
 ## Conclusion
 
-**Rappel important** : Zepbound n'existe pas en France. Le tirzépatide est commercialisé sous le nom **Mounjaro** (Eli Lilly) depuis novembre 2024, au [prix de 230-440€/mois](/collections/glp1-cout/prix-mounjaro-france/). Ce traitement est **remboursé à 65%** pour l'obésité depuis le 15 juin 2026 (sous conditions), et déjà remboursé dans le diabète de type 2.
+**Rappel important** : Zepbound n'existe pas en France. Le tirzépatide est commercialisé sous le nom **Mounjaro** (Eli Lilly) depuis novembre 2024, au [prix de 176-433€/mois](/collections/glp1-cout/prix-mounjaro-france/). Ce traitement est **remboursé à 65 %** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel documenté, primo-prescription en CSO/CHU).
 
 **L'efficacité supérieure** (-21% de perte de poids) peut justifier ce coût pour certains patients. Une évaluation médico-économique personnalisée est recommandée avec votre médecin.
 

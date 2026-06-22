@@ -6,8 +6,8 @@ keywords: ['prix trulicity', 'trulicity pharmacie', 'remboursement trulicity', '
 seoTitle: "Prix Trulicity France 2026 : Combien coûte Trulicity en pharmacie ?"
 seoDescription: "Prix Trulicity France en pharmacie : remboursé à 65% pour le DT2. Coût réel après remboursement sécurité sociale, couverture mutuelle et aides disponibles."
 publishedAt: '2025-01-28'
-updatedAt: '2025-01-28'
-date: 2025-01-28
+updatedAt: '2026-06-22'
+date: 2026-06-22
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 8
@@ -89,9 +89,9 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 |------------|--------------|---------------|
 | Trulicity | ~81 € | 65% (DT2 uniquement) |
 | [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~80,18 € | 65% (DT2 bithérapie) |
-| Wegovy | 169-360 € | Remboursé 65% (obésité, depuis le 15/06/2026, sous conditions) |
+| Wegovy | 147-350 € | 65 % (depuis 15/06/2026, sous conditions) |
 | Saxenda | 240-300 € | Non remboursé |
-| Mounjaro | 230-440 € | Remboursé 65% (obésité, depuis le 15/06/2026, sous conditions) |
+| Mounjaro | 176-433 € | 65 % (depuis 15/06/2026, sous conditions) |
 
 ## 💊 Remboursement Sécurité Sociale
 
@@ -205,10 +205,10 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 
 | Critère | Trulicity | Ozempic | Wegovy |
 |---------|---------|--------|---------|
-| Prix mensuel | ~81 € | ~77,60 € | 169-360 € |
+| Prix mensuel | ~81 € | ~77,60 € | 147-350 € |
 | Perte poids moyenne | -10% | -15% | -20% |
-| Remboursement | 65% (DT2) | 65% (DT2) | 65% (obésité, depuis le 15/06/2026, sous conditions) |
-| Rapport qualité/prix | Bon | Bon | Coûteux hors remboursement |
+| Remboursement | 65% (DT2) | 65% (DT2) | 65 % (obésité, depuis 15/06/2026, sous conditions) |
+| Rapport qualité/prix | Bon | Bon | Coûteux |
 
 ## 📝 Conclusion
 

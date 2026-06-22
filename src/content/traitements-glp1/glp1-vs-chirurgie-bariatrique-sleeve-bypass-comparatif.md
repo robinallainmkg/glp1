@@ -2,8 +2,8 @@
 title: "GLP-1 vs Chirurgie Bariatrique : Sleeve et Bypass 2026"
 description: "GLP-1 vs chirurgie bariatrique : sleeve ou Wegovy, bypass ou Mounjaro ? Comparatif efficacité, coûts, risques et remboursement pour choisir en 2026."
 pubDate: 2026-03-16
-date: "2026-03-16"
-updatedAt: 2026-03-16
+date: "2026-05-29"
+updatedAt: 2026-05-29
 author: "Dr. Marie Dubois"
 category: "Traitements"
 tags: ["glp1", "chirurgie bariatrique", "sleeve", "bypass", "comparatif", "obesity", "perte de poids", "wegovy", "mounjaro"]
@@ -43,9 +43,6 @@ La chirurgie bariatrique reste le traitement le plus efficace de l'obésité sé
 L'**EWL (Excess Weight Loss)** mesure le pourcentage de l'excès de poids perdu. Un patient de 120 kg dont le poids idéal est 70 kg a un excès de 50 kg. Un EWL de 70 % signifie qu'il perdra environ 35 kg.
 
 La chirurgie agit rapidement (résultats majeurs dans les 12 à 18 premiers mois) et durablement pour la majorité des patients, avec un maintien du poids à long terme supérieur aux régimes classiques.
-
-> **À lire aussi** : [injections GLP-1 pour maigrir](/collections/glp1-perte-de-poids/injection-pour-maigrir-guide-complet-france-2026/)
-
 
 ### Les GLP-1 : révolution sans bistouri
 
@@ -116,16 +113,19 @@ La chirurgie bariatrique est [remboursée](/collections/glp1-cout/remboursement-
 
 Pour les patients éligibles, la chirurgie est donc **sans reste à charge direct** (hors chambre individuelle, actes non remboursés). Pour une estimation détaillée du [prix de la chirurgie bariatrique](/collections/glp1-cout/operation-pour-maigrir-prix/), c'est un avantage financier considérable.
 
-### Les GLP-1 Wegovy et Mounjaro : remboursés à 65% pour l'obésité depuis le 15 juin 2026
+### Les GLP-1 Wegovy et Mounjaro : remboursés depuis juin 2026
 
-**Wegovy et Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026** (arrêté du 10 juin 2026 (abrogeant l'arrêté du 23 mai 2026)), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée. Les 35% restants sont à la charge du patient ou de la mutuelle. Hors conditions d'éligibilité, le coût mensuel (prix hors remboursement) reste entièrement à la charge du patient :
+Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance Maladie pour le traitement de l'obésité, sous conditions :
 
-- **Wegovy** : 169 € à 360 €/mois selon dosage
-- **Mounjaro** : 230 € à 440 €/mois selon dosage — voir [remboursement Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
+- IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m²
+- Après échec documenté d'une prise en charge nutritionnelle
+- Prescription initiale réservée aux CSO (Centres Spécialisés Obésité), CHU ou services spécialisés ; renouvellement possible par le médecin traitant
 
-Pour un patient non éligible, sur 2 à 3 ans de traitement (durée recommandée pour une perte de poids optimale), le coût total à charge peut atteindre 5 000 à 12 000 €.
+**Coûts mensuels après remboursement (reste à charge estimé)** :
+- **Wegovy** : prix officiel ~147 à 350 €/mois selon dosage, reste à charge ~51 à 123 €/mois
+- **Mounjaro** : prix officiel ~176 à 433 €/mois selon dosage, reste à charge ~62 à 152 €/mois — voir [remboursement Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
 
-Consultez notre guide sur le [remboursement Wegovy et Mounjaro 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/) pour le détail des conditions.
+Sur 2 à 3 ans de traitement, le reste à charge (hors mutuelle) peut atteindre 1 800 à 5 500 €, contre 5 000 à 12 000 € avant le remboursement. Consultez notre guide sur le [remboursement Wegovy et Mounjaro 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/) pour les dernières informations.
 
 ## Conditions d'accès et critères d'éligibilité
 
@@ -201,7 +201,7 @@ GLP-1 et chirurgie bariatrique ne sont pas concurrents — ils sont complémenta
 
 Pour prendre votre décision, consultez votre médecin traitant qui pourra vous orienter vers un endocrinologue ou vers des [cliniques spécialisées en obésité](/collections/medecins-glp1-france/clinique-pour-obesite/). Un bilan pluridisciplinaire, incluant un avis nutritionnel, psychologique et médical, est la meilleure base pour faire le bon choix.
 
-Pour en savoir plus sur les traitements GLP-1 disponibles, consultez nos guides sur [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), ainsi que notre comparatif [Wegovy vs Mounjaro](/collections/traitements-glp1/mounjaro-vs-wegovy-comparatif-france-2026/).
+Pour en savoir plus sur les traitements GLP-1 disponibles, consultez nos guides sur [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), ainsi que notre comparatif [Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/).
 
 ---
 

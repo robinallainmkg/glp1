@@ -2,8 +2,8 @@
 title: "Arrêt des GLP-1 et Risque Cardiovasculaire : Ce que Révèle l'Étude 2026"
 description: "Arrêt GLP-1 et risque cardiovasculaire : une étude BMJ 2026 alerte sur la perte de protection cardiaque après l'arrêt du sémaglutide. Données SELECT, recommandations et suivi."
 pubDate: 2026-05-28
-date: "2026-05-28"
-updatedAt: 2026-05-28
+date: "2026-05-29"
+updatedAt: 2026-05-29
 author: "Dr. Marie Dubois"
 category: "Recherche GLP-1"
 tags: ["glp1", "cardiovasculaire", "arrêt traitement", "sémaglutide", "SELECT", "coeur", "risque", "BMJ", "2026", "recherche"]
@@ -166,7 +166,7 @@ La Société Française d'Endocrinologie recommande une approche individualisée
 
 ### Le facteur coût
 
-En France, les GLP-1 prescrits pour l'obésité ne sont pas remboursés, ce qui constitue un frein majeur au traitement au long cours. Le coût mensuel (de l'ordre de 200 à 400 euros) représente une charge financière significative qui conduit certains patients à interrompre leur traitement. La question du remboursement devient un enjeu de santé publique lorsque l'on considère les données sur le risque cardiovasculaire à l'arrêt.
+En France, depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance Maladie pour le traitement de l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle, prescription initiale réservée aux CSO/CHU). Ce remboursement réduit significativement la barrière financière au traitement au long cours. Le coût restant à charge (de l'ordre de 50 à 150 euros par mois selon le dosage et la couverture mutuelle) reste néanmoins un facteur pour certains patients.
 
 ## Recommandations pour un arrêt encadré {#recommandations-arret}
 

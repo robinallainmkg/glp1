@@ -6,8 +6,8 @@ keywords: ['effets secondaires mounjaro', 'mounjaro effet secondaire long terme'
 seoTitle: "Mounjaro Effet Secondaire Long Terme : Liste 2026"
 seoDescription: "Mounjaro effet secondaire long terme : 12 troubles digestifs, risques graves (pancréatite, thyroïde), gestion et solutions concrètes en 2026."
 publishedAt: '2025-08-30'
-updatedAt: '2025-12-27'
-date: 2025-08-30
+updatedAt: '2026-06-22'
+date: 2026-06-22
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
@@ -70,7 +70,7 @@ Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (
 - **Rash cutané** : Rare, consulter un médecin
 
 ### Troubles métaboliques
-- **Hypoglycémie** : Rare, surtout si associé à d'[autres traitements](/guides/quel-traitement-glp1-choisir/)
+- **Hypoglycémie** : Rare, surtout si associé à d'autres traitements
 - **Déshydratation** : Due aux troubles digestifs
 
 ## 🚨 Effets Secondaires Graves (Consulter Immédiatement)
@@ -189,7 +189,7 @@ Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (
 - **Enfants** : Non étudié chez <18 ans
 - **Chirurgie** : Arrêt temporaire si nécessaire
 
-> **Remboursement** : Mounjaro est remboursé à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en centre spécialisé). Il reste remboursé pour le diabète de type 2. Hors critères, le coût reste à la charge du patient.
+> **Remboursement** : Mounjaro est remboursé à 65 % par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel documenté, primo-prescription en CSO/CHU).
 
 ## 📈 Tolérance à Long Terme
 
@@ -309,8 +309,6 @@ Consultez nos pages sur le [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-
 - Diminuer l'efficacité du traitement
 
 Limitez à 1-2 verres occasionnels.
-
-Malgré certains effets secondaires, les [bénéfices cardiovasculaires du tirzepatide](/collections/recherche-glp1/mounjaro-tirzepatide-insuffisance-cardiaque-summit-resultats-france/) sont prometteurs.
 
 ## 📋 Ressources Complémentaires
 

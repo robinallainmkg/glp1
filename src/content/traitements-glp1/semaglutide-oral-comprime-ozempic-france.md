@@ -1,7 +1,7 @@
 ---
 title: "Sémaglutide Oral en Comprimé France 2026 : Rybelsus et Après"
 thumbnail: "/images/thumbnails/guide-complet-ozempic-illus.jpg"
-slug: "semaglutide-oral-comprime-ozempic-france"
+slug: "semaglutide-oral-comprimé-ozempic-france"
 description: "Sémaglutide oral en comprimé France 2026 : Rybelsus, Wegovy comprimé attendu fin 2027. Technologie SNAC, efficacité comparée à l'injectable Ozempic."
 mainKeyword: "semaglutide oral comprimé France 2026"
 secondaryKeywords: ["semaglutide oral comprimé France 2026", "rybelsus sémaglutide oral", "wegovy comprimé oral", "glp1 comprimé sans injection", "sémaglutide oral efficacité", "ozempic comprimé France", "traitement obesite oral glp1"]
@@ -10,8 +10,9 @@ image: "/images/thumbnails/pilule-qui-fait-maigrir-illus.jpg"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["semaglutide oral", "comprimé ozempic", "rybelsus", "traitement oral glp1", "ozempic comprimé france", "glp1 sans injection"]
-date: "2026-03-15"
+date: "2026-05-29"
 pubDate: "2026-03-15"
+updatedAt: "2026-05-29"
 featured: false
 priority: 3
 ---
@@ -19,9 +20,6 @@ priority: 3
 ## Sémaglutide Oral en Comprimé : Ce qui Arrive en France en 2026
 
 Pour des millions de patients qui doivent aujourd'hui s'injecter leur traitement GLP-1 chaque semaine, une alternative de plus en plus attendue se profile à l'horizon : le sémaglutide en comprimé. Cette forme orale du principe actif d'[Ozempic (sémaglutide injectable)](/collections/traitements-glp1/guide-complet-ozempic/) et de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) représente une avancée technologique majeure — et son arrivée en France est désormais une question de mois.
-
-> **À lire aussi** : [pilule pour maigrir en France](/collections/glp1-perte-de-poids/pilule-pour-maigrir-france-2026/)
-
 
 ## Le sémaglutide oral existe déjà : Rybelsus, le précurseur
 
@@ -53,7 +51,7 @@ Résultat : le sémaglutide traverse la paroi de l'estomac directement dans la c
 
 ## Le nouveau comprimé oral pour l'obésité : ce qu'annonce 2026
 
-Le 22 décembre 2025, la FDA américaine a approuvé le Wegovy pill (sémaglutide oral 25 mg) à dose plus élevée, spécifiquement étudié pour le traitement de l'obésité (non plus seulement du diabète de type 2). Cette molécule — distincte de Rybelsus par son dosage — est en cours d'évaluation par l'Agence européenne des médicaments (EMA).
+En février 2026, la FDA américaine a approuvé un comprimé oral de sémaglutide à dose plus élevée, spécifiquement étudié pour le traitement de l'obésité (non plus seulement du diabète de type 2). Cette molécule — distincte de Rybelsus par son dosage — est en cours d'évaluation par l'Agence européenne des médicaments (EMA).
 
 ### Quelle efficacité pour cette nouvelle formulation ?
 
@@ -92,7 +90,7 @@ Pour l'indication **obésité**, le [remboursement GLP-1 en France](/collections
 
 Pour le [prix du sémaglutide oral en France](/collections/glp1-cout/prix-rybelsus-france/), les estimations du marché tablent sur un prix mensuel de **300 à 350 €** pour le comprimé oral haute dose, soit un positionnement proche de Wegovy (169-360 €/mois selon dosage). Une légère prime par rapport à l'injectable serait justifiée par la commodité de la prise orale.
 
-Pour le **remboursement**, la décision concernant ce comprimé oral haute dose dépendra des négociations entre Novo Nordisk et le CEPS (Comité économique des produits de santé). À noter que les formes **injectables** Wegovy et Mounjaro sont, elles, déjà remboursées à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions).
+Pour le **remboursement**, le précédent établi par Wegovy et Mounjaro (remboursés à 65 % depuis juin 2026) est encourageant, mais la décision dépendra des négociations spécifiques entre Novo Nordisk et le CEPS (Comité économique des produits de santé).
 
 ## Quelle différence avec Rybelsus actuel ?
 
@@ -124,9 +122,9 @@ Certains médecins rapportent que des patients refusent de commencer un traiteme
 En attendant l'arrivée du comprimé oral pour l'obésité en France, plusieurs options existent :
 
 1. **Rybelsus** (sémaglutide oral 14 mg max) si vous êtes diabétique de type 2 : non remboursé par la Sécurité Sociale en France (la HAS a rendu un avis défavorable au remboursement), mais déjà disponible en pharmacie
-2. **[Wegovy](/collections/traitements-glp1/wegovy-dosage/)** (sémaglutide injectable 2,4 mg) pour l'obésité : remboursé à 65% depuis le 15 juin 2026 (sous conditions), 169-360 €/mois, disponible dès maintenant
+2. **[Wegovy](/collections/traitements-glp1/wegovy-dosage/)** (sémaglutide injectable 2,4 mg) pour l'obésité : remboursé à 65 % depuis juin 2026 (sous conditions), ~147-350 €/mois, disponible dès maintenant
 3. **Ozempic** (sémaglutide injectable 2 mg) si vous avez un diabète de type 2 : remboursé à 65% en bithérapie metformine, disponible
-4. **[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)** (tirzepatide injectable, double action GLP-1/GIP) : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions), 230-440 €/mois
+4. **[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)** (tirzepatide injectable, double action GLP-1/GIP) : remboursé à 65 % depuis juin 2026 (sous conditions), ~176-433 €/mois
 
 ## Questions fréquentes
 

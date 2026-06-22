@@ -5,8 +5,8 @@ description: "Harmonie Mutuelle et Wegovy en 2026 : forfaits, remboursement prop
 seoDescription: "Harmonie Mutuelle et Wegovy 2026 : forfaits, conditions, démarches. Tout savoir sur la prise en charge."
 keywords: ['Harmonie Mutuelle Wegovy', 'wegovy remboursement Harmonie', 'Harmonie obésité GLP1', 'forfait Harmonie sémaglutide']
 publishedAt: '2026-05-02'
-updatedAt: '2026-05-02'
-date: '2026-05-02'
+updatedAt: '2026-06-22'
+date: '2026-06-22'
 pubDate: 2026-05-02
 author: 'Dr. Marie Dubois'
 category: "Économie santé"
@@ -35,11 +35,11 @@ affiliateConfig:
 
 **Harmonie Mutuelle**, première mutuelle de France par le nombre d'adhérents (groupe VYV), couvre plus de 5 millions de personnes. Beaucoup s'interrogent sur la prise en charge de **Wegovy** — l'analogue du GLP-1 le plus connu pour l'obésité — par cette complémentaire en 2026. Cet article fait le point sur le contexte réglementaire, les forfaits Harmonie applicables et les démarches concrètes.
 
-## Le contexte 2026 : Wegovy remboursé par la Sécu depuis le 15 juin
+## Le contexte 2026 : Wegovy remboursé depuis le 15 juin 2026
 
-Depuis le **15 juin 2026**, **Wegovy est remboursé à 65% par l'Assurance Maladie pour l'obésité** (arrêté du 23 mai 2026, publié au Journal officiel le 28 mai 2026), sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée.
+**Depuis le 15 juin 2026, Wegovy est remboursé à 65% par l'Assurance Maladie** pour le traitement de l'obésité, sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté de prise en charge nutritionnelle. La prescription initiale est réservée aux CSO, CHU ou services spécialisés ; le renouvellement est possible par le médecin traitant.
 
-Conséquence directe : pour les patients éligibles, Harmonie Mutuelle intervient désormais dans le cadre du **droit commun** en complétant le ticket modérateur (les 35% restants) selon le contrat. Pour les patients non éligibles au remboursement, elle ne peut agir que via des **forfaits dédiés** présents dans certaines garanties.
+Harmonie Mutuelle complète désormais le ticket modérateur (35% restant) dans le cadre du droit commun, selon votre contrat. Pour les patients non éligibles au remboursement Sécu, Harmonie Mutuelle peut agir via des **forfaits dédiés** présents dans certaines garanties.
 
 ### Le poste de dépense côté patient
 
@@ -106,9 +106,9 @@ Pour les traitements coûteux et longs, l'envoi de la **demande de prise en char
 
 Une **surcomplémentaire « médicaments non remboursés »** peut compléter Harmonie Mutuelle (forfaits jusqu'à 800–1 000 €/an chez certains spécialistes). Comparer le coût additionnel de la cotisation au gain attendu.
 
-### Le remboursement Sécu (depuis le 15 juin 2026)
+### Anticiper le remboursement Sécu
 
-Depuis l'inscription de Wegovy au remboursement (effective le 15 juin 2026), Harmonie applique automatiquement le **régime de droit commun** pour les patients éligibles : ticket modérateur pris en charge selon votre contrat habituel (souvent 100 % BR), sans démarche. Pour le détail des conditions, consultez notre [page remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
+Wegovy étant inscrit au remboursement depuis le 15 juin 2026, Harmonie a basculé automatiquement sur le **régime de droit commun** : ticket modérateur pris en charge selon votre contrat habituel (souvent 100 % BR), sans démarche. Voir notre [page remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ### Choisir le bon contrat à l'adhésion
 
@@ -120,7 +120,7 @@ Le succès du traitement (et donc sa rentabilité) dépend largement du suivi : 
 
 ## Mounjaro et Ozempic : situation Harmonie Mutuelle 2026
 
-- **Mounjaro** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions), comme Wegovy, et déjà remboursé dans le diabète de type 2. Prix officine 230–440 €/mois. Comportement Harmonie Mutuelle identique à Wegovy : complément du ticket modérateur pour les patients éligibles, forfaits dédiés sinon.
+- **Mounjaro** : **remboursé à 65%** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (mêmes conditions que Wegovy). Prix officiels : 176–433 €/mois. Harmonie Mutuelle complète le ticket modérateur selon votre contrat.
 - **Ozempic** : remboursé à **65 %** par la Sécu en bithérapie metformine et **30 %** en trithérapie insuline, **uniquement dans le diabète de type 2**. Harmonie complète le ticket modérateur dans les conditions de votre contrat (souvent 100 % BR). Toute prescription pour la perte de poids hors diabète reste à la charge du patient.
 
 ## Comparaison synthétique avec d'autres complémentaires
@@ -137,20 +137,20 @@ Le succès du traitement (et donc sa rentabilité) dépend largement du suivi : 
 
 Pour aller plus loin, consultez notre [comparatif mutuelle obésité](/collections/glp1-cout/wegovy-remboursement-mutuelle/).
 
-## Depuis quand Harmonie Mutuelle rembourse-t-elle Wegovy automatiquement ?
+## Quand Harmonie Mutuelle remboursera-t-elle Wegovy automatiquement ?
 
-Depuis la **publication au Journal Officiel** de l'arrêté du 23 mai 2026 inscrivant Wegovy sur la liste des médicaments remboursables (entrée en vigueur le 15 juin 2026), Harmonie Mutuelle applique **automatiquement** le complément de ticket modérateur prévu à votre contrat pour les patients éligibles — comme pour n'importe quel médicament listé. Aucune démarche n'est nécessaire de votre part.
+Depuis la **publication au Journal Officiel** de l'arrêté inscrivant Wegovy sur la liste des médicaments remboursables (15 juin 2026), Harmonie Mutuelle applique **automatiquement** le complément de ticket modérateur prévu à votre contrat — comme pour n'importe quel médicament listé. Aucune démarche n'est nécessaire de votre part.
 
 ## Trouver un parcours médical structuré
 
 Avant et pendant le traitement, l'**encadrement médical** (endocrinologue, nutritionniste, diététicien, psy si besoin) conditionne le succès. Plusieurs plateformes proposent un parcours structuré en téléconsultation, avec primo-prescription si éligible et suivi mensuel — utile pour valoriser au mieux votre couverture mutuelle.
 
-> Pour réduire concrètement le reste à charge, comparer les contrats complémentaires (forfait médicaments non remboursés, prévention obésité) reste la démarche la plus rentable avant le passage au remboursement Sécu.
+> Pour réduire concrètement le reste à charge, comparer les contrats complémentaires (forfait médicaments non remboursés, prévention obésité) reste la démarche la plus rentable pour les patients non éligibles au remboursement Sécu.
 
 ## FAQ — Harmonie Mutuelle et Wegovy
 
 **1. Harmonie Mutuelle rembourse-t-elle Wegovy en 2026 ?**
-Oui. Depuis le 15 juin 2026, Wegovy est remboursé à 65% par la Sécu pour l'obésité (sous conditions). Pour les patients éligibles, Harmonie complète le ticket modérateur selon le contrat. Pour les patients non éligibles, certains forfaits dédiés peuvent intervenir partiellement.
+Oui, depuis le 15 juin 2026, Wegovy est remboursé à 65% par la Sécu. Harmonie Mutuelle complète le ticket modérateur (35%) selon votre contrat.
 
 **2. Quel forfait Harmonie active pour Wegovy ?**
 Le forfait « médicaments prescrits non remboursés », parfois complété d'un forfait prévention/diététique. Les montants vont de 30 à 500 €/an selon la formule.
@@ -159,7 +159,7 @@ Le forfait « médicaments prescrits non remboursés », parfois complété d'un
 Pas obligatoire pour activer un forfait simple. Recommandé voire obligatoire pour les remboursements proportionnels sur devis.
 
 **4. Wegovy et Mounjaro sont-ils traités de la même façon par Harmonie ?**
-Oui : tous deux sont remboursés à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions). Harmonie complète le ticket modérateur pour les patients éligibles, et des forfaits dédiés peuvent intervenir pour les patients non éligibles.
+Oui : tant qu'ils ne sont pas remboursés Sécu, ils sont éligibles aux mêmes forfaits dédiés.
 
 **5. Et Ozempic dans le diabète ?**
 Pris en charge dans les conditions de droit commun (65 % Sécu en bithérapie, 30 % en trithérapie). Harmonie complète le ticket modérateur.
@@ -167,8 +167,8 @@ Pris en charge dans les conditions de droit commun (65 % Sécu en bithérapie, 3
 **6. Puis-je cumuler Harmonie et une surcomplémentaire ?**
 Oui, le cumul est possible. Vérifier que le total des remboursements ne dépasse pas le coût réel du médicament.
 
-**7. Comment Harmonie Mutuelle s'est-elle adaptée au remboursement de Wegovy ?**
-Automatiquement : depuis l'inscription au JO (entrée en vigueur le 15 juin 2026), le complément de ticket modérateur est versé sans démarche pour les patients éligibles, dans les conditions habituelles de votre contrat.
+**7. Harmonie Mutuelle s'est-elle adaptée au remboursement Wegovy ?**
+Oui, automatiquement : depuis l'inscription au JO le 15 juin 2026, le complément de ticket modérateur est versé sans démarche, dans les conditions habituelles de votre contrat.
 
 ---
 

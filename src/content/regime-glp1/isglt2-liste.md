@@ -2,8 +2,8 @@
 title: "iSGLT2 liste médicaments prix France GLP-1"
 description: "iSGLT2 liste médicaments prix France GLP-1 : Jardiance, Forxiga, Invokana. Remboursement et combinaison avec les traitements GLP-1."
 pubDate: 2025-08-20
-date: 2025-08-20
-updatedAt: 2026-03-15
+date: 2026-06-22
+updatedAt: 2026-06-22
 author: "Dr. Julien Lefèvre"
 category: "Nutrition"
 tags: ["isglt2", "glp1", "diabète", "jardiance", "forxiga", "traitement"]
@@ -118,7 +118,7 @@ Ertugliflozine est l'iSGLT2 le plus récent, avec un profil glycémique similair
 | Dosages | 5 mg et 15 mg |
 | Prise | 1 comprimé par jour le matin |
 | Indications | Diabète type 2 uniquement |
-| Remboursement | **Non remboursé** (SMR insuffisant HAS) |
+| Remboursement | **Remboursé 65 %** (depuis juin 2026, obésité)(SMR insuffisant HAS) |
 
 ### Sotagliflozine — Zynquista (Sanofi) — **Non disponible en France**
 
@@ -135,11 +135,11 @@ Ertugliflozine est l'iSGLT2 le plus récent, avec un profil glycémique similair
 | Forxiga 10 mg | ~41€ | 65% | ~14€ |
 | Invokana 100 mg | ~40€ | 65% | ~14€ |
 | Invokana 300 mg | ~42€ | 65% | ~15€ |
-| Steglatro 5 mg | ~38€ | **Non remboursé** (SMR insuffisant HAS) | ~38€ |
+| Steglatro 5 mg | ~38€ | **Remboursé 65 %** (depuis juin 2026, obésité)(SMR insuffisant HAS) | ~38€ |
 
 ### Conditions de remboursement
 
-La plupart des iSGLT2 sont remboursés à **65%** par l'Assurance Maladie pour les patients atteints de **diabète de type 2**. Notez que l'ertugliflozine (Steglatro) n'est **pas remboursée** en raison d'un avis SMR insuffisant de la HAS. Les conditions de remboursement sont :
+La plupart des iSGLT2 sont remboursés à **65%** par l'Assurance Maladie pour les patients atteints de **diabète de type 2**. Notez que l'ertugliflozine (Steglatro) n'est **Remboursé 65 %** (depuis juin 2026, obésité)en raison d'un avis SMR insuffisant de la HAS. Les conditions de remboursement sont :
 
 - D'une prescription médicale (médecin généraliste, diabétologue ou cardiologue)
 - D'un diagnostic de diabète de type 2 documenté (HbA1c insuffisamment contrôlée sous metformine ou autre traitement de première ligne)

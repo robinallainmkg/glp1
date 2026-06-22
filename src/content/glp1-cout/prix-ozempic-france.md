@@ -1,5 +1,5 @@
 ---
-title: "Ozempic Prix 2026 : Tarif Pharmacie, Remboursement et Sans Ordonnance"
+title: "Prix Ozempic France 2026 : 80,18€ Remboursé 65%"
 thumbnail: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 description: "Ozempic prix pharmacie 2026 : 80,18€/stylo, remboursé 65% pour le diabète (reste 40€/mois). Ozempic 1 mg prix, sans ordonnance, comparatif dosages."
 keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic 1 mg prix', 'ozempic prix pharmacie', 'ozempic sans ordonnance prix', 'ozempic remboursement', 'ozempic prix sans ordonnance', 'ozempic 1 mg prix sans ordonnance', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'ozempic prix par mois']
@@ -7,8 +7,8 @@ seoTitle: "Prix Ozempic 2026 : 80,18€/stylo [Remboursé 65%] — Guide Achat"
 seoDescription: "Ozempic prix pharmacie 2026 : 80,18€/stylo. Remboursé 65% (diabète) ou 155€/mois sans ordonnance. Comparatif dosages, où acheter, alternatives Wegovy/Mounjaro."
 mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
-updatedAt: '2026-05-28'
-date: 2026-05-28
+updatedAt: '2026-06-22'
+date: 2026-06-22
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
@@ -100,7 +100,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 | 0.25 mg | 80,18 € | 60 € |
 | 0.5 mg | 80,18 € | 60 € |
 | 1 mg | 80,18 € | 120 € |
-| 2 mg | Autorisé (AMM EMA), disponibilité en pharmacie française à confirmer | — |
+| 2 mg | Non commercialisé en France | — |
 
 **Prix moyen mensuel** : 60-120 € selon la posologie (dosages 0.25-1 mg)
 
@@ -109,15 +109,10 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Ozempic | 80-120 € | 65% (DT2 bithérapie) |
-| [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) | 169-360 € | Remboursé 65% (obésité, dès le 15/06/2026) |
+| [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) | 147-350 € | Remboursé 65% obésité (depuis 15/06/2026) |
 | Saxenda | 240-300 € | Non remboursé |
 | <a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a> | ~81 € | 65% (DT2 uniquement) |
-| [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 € | Remboursé 65% (obésité, dès le 15/06/2026) |
-
-> **À lire aussi** : [témoignages et avis sur Ozempic](/collections/traitements-glp1/ozempic-avis-patients-france-2026/) · [quel traitement GLP-1 choisir](/guides/quel-traitement-glp1-choisir/) · [baisse de prix Ozempic et Wegovy prévue en 2027](/collections/glp1-cout/baisse-prix-ozempic-wegovy-2027-france/)
-
-👉 Pour en savoir plus, consultez notre guide sur [témoignage d'un patient sous Ozempic](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/).
-
+| [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) | 176-433 € | Remboursé 65% obésité (depuis 15/06/2026) |
 
 ## 💊 Remboursement Sécurité Sociale
 
@@ -130,7 +125,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 ✅ **Échec des antidiabétiques oraux**
 ✅ **Formulaire de demande obligatoire** (depuis février 2025)
 
-⚠️ **Important** : Ozempic n'est remboursé que pour le **diabète de type 2**, pas pour l'obésité seule. Pour la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) sans diabète, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) est remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions) ; Saxenda reste non remboursé.
+⚠️ **Important** : Ozempic n'est remboursé que pour le **diabète de type 2**, pas pour l'obésité seule. Pour la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) sans diabète, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) sont remboursés à 65% depuis le 15 juin 2026 pour l'obésité sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Saxenda reste non remboursé.
 
 ### Démarches pour le remboursement
 
@@ -236,10 +231,10 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 
 | Critère | Ozempic | Wegovy | Saxenda |
 |---------|---------|--------|---------|
-| Prix mensuel | 90-120 € | 169-360 € | 240-300 € |
+| Prix mensuel | 90-120 € | 147-350 € | 240-300 € |
 | Perte poids moyenne | -15% | -20% | -8% |
-| Remboursement | 65% (DT2 bithérapie) | Remboursé 65% (obésité, dès le 15/06/2026) | Non remboursé |
-| Rapport qualité/prix | Bon (si DT2) | Coûteux | Coûteux |
+| Remboursement | 65% (DT2 bithérapie) | 65% obésité (depuis 15/06/2026) | Non remboursé |
+| Rapport qualité/prix | Bon (si DT2) | Accessible (si éligible) | Coûteux |
 
 ## 📝 Conclusion
 
@@ -278,7 +273,7 @@ Après remboursement (30% Sécurité Sociale + mutuelle) :
 
 Le coût mensuel d'Ozempic après remboursement dépend de votre dosage et de votre mutuelle :
 
-**Avec remboursement standard (65% Sécu en bithérapie metformine + mutuelle) :**
+**Avec remboursement standard (30% Sécu + 50% mutuelle) :**
 - **Dosage 0.25-0.5 mg** : environ **15-20€/mois**
 - **Dosage 1 mg** : environ **30-40€/mois**
 
@@ -309,12 +304,12 @@ Le coût mensuel d'Ozempic après remboursement dépend de votre dosage et de vo
 - Dosage max : 2 mg/semaine
 
 **Wegovy (sémaglutide - obésité) :**
-- Prix pharmacie : **169-360€/mois** (selon dosage)
-- Remboursement : **remboursé à 65%** pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée)
+- Prix pharmacie : **147-350€/mois** (selon dosage)
+- Remboursement : **65% par l'Assurance Maladie** depuis le 15 juin 2026 (IMC ≥ 35 avec comorbidité ou IMC ≥ 40)
 - Dosage max : 2.4 mg/semaine
 - Commercialisé en France depuis octobre 2024
 
-**Verdict :** Ozempic est **moins cher** grâce à son prix de base plus bas. Wegovy est désormais remboursé à 65% pour l'obésité (dès le 15/06/2026, sous conditions) ; hors critères, il reste à la charge du patient. Pour la perte de poids maximale, Wegovy peut être plus efficace.
+**Verdict :** Ozempic reste **moins cher** pour les patients diabétiques grâce au remboursement DT2. Wegovy est désormais remboursé à 65% pour l'obésité depuis le 15 juin 2026, rendant le reste à charge de 51-122€/mois (avant mutuelle). Pour la perte de poids maximale, Wegovy est plus efficace (dosage 2,4 mg vs 1 mg pour Ozempic).
 
 [Comparer Ozempic vs Wegovy en détail](/guides/quel-traitement-glp1-choisir)
 
@@ -345,9 +340,6 @@ Plusieurs solutions existent pour réduire drastiquement le coût d'Ozempic :
 - Association Française des Diabétiques (AFD)
 - Aides ponctuelles selon situation
 - Contact : **01 40 09 24 25**
-
-> **À lire aussi** : [ordonnance et prescription Ozempic](/collections/traitements-glp1/ozempic-ordonnance-prescription-france-2026/)
-
 
 ### Peut-on acheter Ozempic sans ordonnance ?
 
@@ -451,30 +443,26 @@ Mais en pratique, avec le dosage progressif :
 - Disponible depuis : 2019
 
 **Mounjaro (tirzépatide - Dual GLP-1/GIP, Eli Lilly) :**
-- Prix pharmacie : **230-440€/mois** (prix libre, non réglementé)
-- Remboursement : **remboursé à 65%** pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée)
+- Prix pharmacie : **176-433€/mois** (prix officiels fixés)
+- Remboursement : **65% par l'Assurance Maladie** depuis le 15 juin 2026 (IMC ≥ 35 avec comorbidité ou IMC ≥ 40)
 - Perte de poids moyenne : -21%
 - Commercialisé en France depuis novembre 2024
 
-**Verdict : Ozempic est moins cher** grâce à son prix de base plus bas. Mounjaro est désormais remboursé à 65% pour l'obésité (dès le 15/06/2026, sous conditions) ; hors critères, le prix libre (230-440€/mois) reste à la charge du patient.
+**Verdict : Ozempic reste moins cher** pour les patients diabétiques grâce au remboursement DT2. Mounjaro est désormais remboursé à 65% pour l'obésité depuis le 15 juin 2026, avec un reste à charge de 61-151€/mois (avant mutuelle).
 
-Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques :
+Mounjaro montre **une efficacité supérieure** dans les études cliniques :
 - +6% de perte de poids additionnelle
 - Meilleur contrôle glycémique
 - Action plus longue
 
 **Choix selon situation :**
 - **Budget serré / Diabète T2** : Ozempic (remboursé 65% bithérapie metformine)
-- **Efficacité maximale** : Mounjaro (remboursé 65% pour l'obésité à partir du 15/06/2026, sous conditions)
+- **Efficacité maximale / Obésité** : Mounjaro (remboursé 65% depuis le 15/06/2026)
 - **Compromis** : Ozempic puis Mounjaro si insuffisant
 
 [Comparaison détaillée Ozempic vs Mounjaro](/guides/quel-traitement-glp1-choisir)
 
 ---
-
-Le conditionnement évolue avec le [nouveau format de stylo 3ml](/collections/traitements-glp1/nouveau-stylo-ozempic-3ml-2026-changement-utilisation/) pour Ozempic.
-
-Le marché évoluera avec l'arrivée de [CagriSema, futur traitement](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-resultats/) combinant sémaglutide et cagrilintide.
 
 ## 🔗 Ressources Complémentaires et Guides Pratiques
 
@@ -516,5 +504,5 @@ Le marché évoluera avec l'arrivée de [CagriSema, futur traitement](/collectio
 
 ---
 
-*Dernière mise à jour : mars 2026. Prix et conditions de remboursement susceptibles d'évoluer. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées.*
+*Dernière mise à jour : juin 2026. Prix et conditions de remboursement susceptibles d'évoluer. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées.*
 

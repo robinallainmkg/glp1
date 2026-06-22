@@ -5,8 +5,8 @@ description: "April et Wegovy en 2026 : forfaits santé, médicaments non rembou
 seoDescription: "April et Wegovy 2026 : forfaits, conditions, démarches. Tout ce qu'il faut savoir."
 keywords: ['April mutuelle Wegovy', 'wegovy remboursement April', 'mutuelle April obésité', 'forfait April GLP1']
 publishedAt: '2026-05-02'
-updatedAt: '2026-05-02'
-date: '2026-05-02'
+updatedAt: '2026-06-22'
+date: '2026-06-22'
 pubDate: 2026-05-02
 author: 'Dr. Marie Dubois'
 category: "Économie santé"
@@ -35,11 +35,11 @@ affiliateConfig:
 
 **April** est un courtier-grossiste indépendant, spécialisé notamment dans la santé pour les particuliers, les TNS (travailleurs non salariés), les expatriés et les seniors. Beaucoup de ses adhérents s'interrogent : la mutuelle **April rembourse-t-elle Wegovy** en 2026 ? Cet article fait le point sur le contexte réglementaire, les forfaits April applicables et les démarches concrètes.
 
-## Wegovy : statut Sécu en mai 2026
+## Wegovy : statut Sécu en juin 2026
 
-**Wegovy est remboursé à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026), pour les adultes IMC ≥ 35 avec comorbidité (ou ≥ 40) en échec de prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. La mutuelle complète alors le **reste à charge de 35%**. Détails : [conditions d'éligibilité](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
+**Depuis le 15 juin 2026, Wegovy est remboursé à 65% par l'Assurance Maladie** pour le traitement de l'obésité, sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté de prise en charge nutritionnelle. La prescription initiale est réservée aux CSO, CHU ou services spécialisés ; le renouvellement est possible par le médecin traitant.
 
-Pour les patients non éligibles à ce remboursement (hors conditions d'IMC ou de parcours de soins), les complémentaires comme April n'interviennent qu'au travers de **forfaits dédiés** présents dans certaines garanties.
+April complète désormais le ticket modérateur (35% restant) selon votre formule. Pour les patients non éligibles au remboursement Sécu, April peut intervenir via des **forfaits dédiés** présents dans certaines garanties.
 
 ### Coût supporté par le patient
 
@@ -104,9 +104,9 @@ Pour les traitements longs et coûteux, l'envoi d'une **demande de prise en char
 
 Une **surcomplémentaire « médicaments non remboursés »** (forfaits jusqu'à 800–1 000 €/an chez certains assureurs spécialisés) peut compléter le contrat April principal. Comparer avec le coût additionnel.
 
-### Le complément Sécu
+### Anticiper le remboursement Sécu
 
-Depuis l'entrée en vigueur du remboursement Wegovy le 15 juin 2026, April applique **automatiquement** le complément de ticket modérateur (35%) pour les patients éligibles, sans démarche. Suivez l'évolution sur [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
+Wegovy étant inscrit au remboursement depuis le 15 juin 2026, April applique **automatiquement** le complément de ticket modérateur, sans démarche. Voir [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ### Choisir une formule adaptée à l'adhésion
 
@@ -118,7 +118,7 @@ Voir notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-we
 
 ## Mounjaro et Ozempic chez April en 2026
 
-- **Mounjaro (tirzépatide)** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (mêmes conditions que Wegovy). Comportement April identique à Wegovy : complément du ticket modérateur pour les patients éligibles, forfaits dédiés sinon.
+- **Mounjaro (tirzépatide)** : **remboursé à 65%** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (mêmes conditions que Wegovy). April complète le ticket modérateur selon votre formule.
 - **Ozempic (sémaglutide)** : pris en charge Sécu à **65 %** en bithérapie metformine, **30 %** en trithérapie insuline, **uniquement DT2**. April complète le ticket modérateur selon votre formule (souvent 100 % BR).
 
 ## Comparaison synthétique
@@ -139,12 +139,12 @@ Pour aller plus loin, voir notre [comparatif mutuelle Wegovy](/collections/glp1-
 
 La prescription d'un GLP-1 suppose un bilan complet et un suivi régulier. Plusieurs plateformes spécialisées proposent un parcours en téléconsultation avec primo-prescription si éligible et suivi mensuel — utile pour exploiter au mieux les forfaits prévention de votre contrat April.
 
-> Comparer les contrats complémentaires reste la démarche la plus rentable pour réduire le reste à charge en 2026, en particulier pour les patients non éligibles au remboursement Sécu de Wegovy.
+> Comparer les contrats complémentaires reste la démarche la plus rentable pour réduire le reste à charge en 2026 pour les patients non éligibles au remboursement Sécu.
 
 ## FAQ — April mutuelle et Wegovy
 
 **1. April rembourse-t-il Wegovy en 2026 ?**
-Pour les patients éligibles, Wegovy est remboursé à 65% par la Sécu (obésité, depuis le 15 juin 2026) et April complète le ticket modérateur de 35% en droit commun. Pour les patients non éligibles, des forfaits dédiés (médicaments non remboursés, prévention) peuvent intervenir partiellement.
+Oui, depuis le 15 juin 2026, Wegovy est remboursé à 65% par la Sécu. April complète le ticket modérateur (35%) selon votre formule. Pour les patients non éligibles, des forfaits dédiés peuvent intervenir.
 
 **2. Quels forfaits April active pour Wegovy ?**
 Le forfait « médicaments prescrits non remboursés » est central. Le forfait prévention finance les consultations associées (diététicien, psychologue).
@@ -156,13 +156,13 @@ Pas systématiquement, mais ils permettent de **déduire fiscalement** les cotis
 Pas obligatoire pour activer un forfait simple. Recommandé pour les remboursements proportionnels ou les contrats internationaux.
 
 **5. Et Mounjaro ?**
-Même régime que Wegovy : remboursé à 65% par la Sécu pour l'obésité depuis le 15 juin 2026 (sous conditions). April complète le ticket modérateur pour les patients éligibles, forfaits dédiés sinon.
+Même régime que Wegovy : remboursé à 65% Sécu depuis le 15 juin 2026 pour l'obésité. April complète le ticket modérateur.
 
 **6. Et Ozempic dans le diabète ?**
 Pris en charge Sécu (65 % bithérapie / 30 % trithérapie). April complète le TM selon contrat.
 
 **7. April rembourse-t-il automatiquement Wegovy ?**
-Oui. Depuis l'entrée en vigueur de l'arrêté Sécu le 15 juin 2026, le complément de ticket modérateur est versé automatiquement, sans démarche, pour les patients éligibles.
+Oui, depuis la publication au JO le 15 juin 2026, le complément de ticket modérateur est versé automatiquement, sans démarche.
 
 ---
 

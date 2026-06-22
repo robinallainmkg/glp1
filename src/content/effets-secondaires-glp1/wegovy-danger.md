@@ -2,7 +2,8 @@
 title: "Wegovy Effets Secondaires Danger : Guide et Précautions 2026"
 description: "Wegovy effets secondaires danger : nausées, pancréatite, risques cardiaques. Guide complet sur les dangers de Wegovy et recommandations médicales."
 pubDate: 2025-08-20
-date: 2025-08-20
+date: 2026-06-22
+updatedAt: '2026-06-22'
 author: "Dr. Émilie Martin"
 category: "Effets secondaires"
 tags: ["glp1", "effets-secondaires", "tolérance"]
@@ -176,13 +177,13 @@ Oui, certaines pathologies nécessitent une évaluation préalable approfondie s
 Les premiers effets peuvent apparaître après quelques semaines, mais l'évaluation complète nécessite généralement 3 à 6 mois.
 
 ### Le traitement est-il remboursé ?
-Wegovy est remboursé à 65% par la Sécurité Sociale pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions strictes : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Son prix en pharmacie varie de 169€ à 360€ par mois selon le dosage, avec un reste à charge de 35% (avant mutuelle) pour les patients éligibles. Pour le détail des conditions, consultez notre guide [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
+Oui. Depuis le 15 juin 2026, Wegovy est **remboursé à 65 %** par l'Assurance Maladie pour le traitement de l'obésité, sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté de la prise en charge nutritionnelle. La primo-prescription est réservée aux CSO, CHU ou services spécialisés ; le renouvellement peut être assuré par le médecin traitant. Son prix officiel varie de ~147€ à 350€ par mois selon le dosage. La mutuelle complète le ticket modérateur (35 %). Pour les détails, voir notre guide sur le [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ---
 
 **Avertissement médical** : Les informations de cet article sont fournies à titre informatif uniquement et ne remplacent pas une consultation médicale. Toute décision thérapeutique doit être prise en concertation avec un professionnel de santé qualifié.
 
-*Dernière mise à jour médicale : Juin 2026 - Sources : HAS, ANSM, Sociétés savantes françaises*
+*Dernière mise à jour médicale : Août 2025 - Sources : HAS, ANSM, Sociétés savantes françaises*
 
 ## Conclusion
 

@@ -5,8 +5,8 @@ description: "Malakoff Humanis et Wegovy en 2026 : forfaits santé, prévention 
 seoDescription: "Malakoff Humanis et Wegovy 2026 : forfaits, conditions, démarches et alternatives. Guide complet."
 keywords: ['Malakoff Humanis Wegovy', 'wegovy remboursement Malakoff', 'mutuelle Malakoff obésité', 'forfait Malakoff GLP1']
 publishedAt: '2026-05-02'
-updatedAt: '2026-05-02'
-date: '2026-05-02'
+updatedAt: '2026-06-22'
+date: '2026-06-22'
 pubDate: 2026-05-02
 author: 'Dr. Marie Dubois'
 category: "Économie santé"
@@ -37,9 +37,9 @@ affiliateConfig:
 
 ## Wegovy : statut Sécu en 2026
 
-Avant d'examiner Malakoff Humanis, le rappel est essentiel : **Wegovy est remboursé à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, publié au Journal officiel le 28 mai 2026), sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée.
+**Depuis le 15 juin 2026, Wegovy est remboursé à 65% par l'Assurance Maladie** pour le traitement de l'obésité, sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté de prise en charge nutritionnelle. La prescription initiale est réservée aux CSO, CHU ou services spécialisés ; le renouvellement est possible par le médecin traitant.
 
-Pour les patients éligibles, Malakoff Humanis intervient désormais dans le cadre du **droit commun** en complétant le ticket modérateur (les 35% restants) selon le contrat. Pour les patients non éligibles au remboursement, la mutuelle ne peut intervenir qu'au travers de **forfaits dédiés**.
+Malakoff Humanis complète désormais le ticket modérateur (35% restant) selon votre contrat, dans le cadre du droit commun. Pour les patients non éligibles au remboursement Sécu, Malakoff Humanis peut intervenir via des **forfaits dédiés**.
 
 ### Le coût supporté par le patient
 
@@ -110,9 +110,9 @@ Pour les traitements longs, l'envoi d'une **demande de prise en charge** sécuri
 
 Les **surcomplémentaires « médicaments non remboursés »** (forfaits 500–1 000 €/an chez certains assureurs) peuvent compléter Malakoff Humanis. À comparer avec le coût additionnel.
 
-### Le passage au remboursement Sécu (depuis le 15 juin 2026)
+### Anticiper le passage au remboursement Sécu
 
-Depuis l'inscription de Wegovy sur la liste des spécialités remboursables (effective le 15 juin 2026), Malakoff Humanis applique **automatiquement** le complément de ticket modérateur prévu au contrat pour les patients éligibles. Aucune démarche. Pour le détail des conditions, consultez notre [page remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
+Wegovy étant inscrit au remboursement depuis le 15 juin 2026, Malakoff Humanis applique **automatiquement** le complément de ticket modérateur prévu au contrat. Aucune démarche nécessaire. Voir notre [page remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ### Contrats collectifs : négocier en CSE
 
@@ -124,7 +124,7 @@ Le succès du traitement dépend du suivi médical. Voir notre [guide complet We
 
 ## Mounjaro et Ozempic : situation Malakoff Humanis 2026
 
-- **Mounjaro (tirzépatide)** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions), comme Wegovy, et déjà remboursé dans le diabète de type 2. Prix officine 230–440 €/mois. Comportement Malakoff Humanis identique à Wegovy (complément du ticket modérateur pour les patients éligibles).
+- **Mounjaro (tirzépatide)** : **remboursé à 65%** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (mêmes conditions que Wegovy). Prix officiels : 176–433 €/mois. Malakoff Humanis complète le ticket modérateur selon votre contrat.
 - **Ozempic (sémaglutide)** : remboursé Sécu **65 %** en bithérapie metformine, **30 %** en trithérapie insuline, **dans le diabète de type 2 uniquement**. Malakoff Humanis complète le ticket modérateur selon contrat (souvent 100 % BR).
 
 ## Comparaison synthétique
@@ -145,12 +145,12 @@ Pour comparer plus largement, consultez notre [comparatif mutuelle Wegovy](/coll
 
 Wegovy ne se prescrit pas seul : un **médecin formé à l'obésité**, un suivi diététique, un soutien psychologique éventuel et une activité physique adaptée structurent un parcours efficace. Plusieurs plateformes spécialisées proposent ce parcours en téléconsultation avec primo-prescription si éligible — utile pour exploiter au mieux les forfaits prévention de votre contrat.
 
-> Comparer les contrats complémentaires reste la voie la plus rapide pour réduire le reste à charge en 2026, en attendant l'inscription Sécu de Wegovy.
+> Comparer les contrats complémentaires reste la voie la plus rapide pour réduire le reste à charge en 2026 pour les patients non éligibles au remboursement Sécu.
 
 ## FAQ — Malakoff Humanis et Wegovy
 
 **1. Malakoff Humanis rembourse-t-il Wegovy en 2026 ?**
-Oui. Depuis le 15 juin 2026, Wegovy est remboursé à 65% par la Sécu pour l'obésité (sous conditions). Pour les patients éligibles, Malakoff Humanis complète le ticket modérateur (les 35% restants) selon le contrat. Pour les patients non éligibles, des forfaits dédiés peuvent intervenir partiellement.
+Oui, depuis le 15 juin 2026, Wegovy est remboursé à 65% par la Sécu. Malakoff Humanis complète le ticket modérateur (35%) selon votre contrat.
 
 **2. Quels forfaits Malakoff active pour Wegovy ?**
 Le forfait « médicaments prescrits non remboursés » est central. Le forfait prévention finance les consultations diététicien associées.
@@ -162,13 +162,13 @@ Souvent oui. Les contrats collectifs incluent fréquemment des forfaits relevés
 Pas obligatoire pour les forfaits simples. Recommandé pour les remboursements proportionnels ou les programmes d'accompagnement.
 
 **5. Et Mounjaro ?**
-Même logique que Wegovy : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions). Malakoff complète le ticket modérateur pour les patients éligibles ; sinon, seuls les forfaits dédiés interviennent.
+Même logique que Wegovy : remboursé à 65% Sécu depuis le 15 juin 2026 pour l'obésité. Malakoff Humanis complète le ticket modérateur.
 
 **6. Et Ozempic dans le diabète ?**
 Dans les conditions de droit commun : 65 % Sécu en bithérapie, 30 % en trithérapie. Malakoff complète selon contrat.
 
-**7. Depuis quand Malakoff prend-il automatiquement Wegovy en charge ?**
-Depuis le 15 juin 2026, date d'entrée en vigueur du remboursement Sécu. Pour les patients éligibles, le complément de ticket modérateur est versé automatiquement, sans démarche.
+**7. Malakoff prend-il automatiquement Wegovy en charge ?**
+Oui, depuis la publication au JO le 15 juin 2026, le complément de ticket modérateur est versé automatiquement, sans démarche.
 
 ---
 

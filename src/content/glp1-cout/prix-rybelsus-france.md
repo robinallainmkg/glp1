@@ -5,8 +5,8 @@ keywords: ['prix rybelsus', 'rybelsus pharmacie', 'remboursement rybelsus', 'mut
 seoTitle: "Prix Rybelsus France 2026 : Combien coûte Rybelsus en pharmacie ?"
 seoDescription: "Prix Rybelsus France en pharmacie : non remboursé, coût complet et couverture mutuelle. Tout savoir sur le prix du traitement Rybelsus en 2026."
 publishedAt: '2025-01-28'
-updatedAt: '2025-01-28'
-date: 2025-01-28
+updatedAt: '2026-06-22'
+date: 2026-06-22
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 8
@@ -88,8 +88,8 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Rybelsus | 80-110 € | Non remboursé |
-| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 € | 65% en bithérapie avec la metformine ; 30% en trithérapie avec l'insuline basale |
-| Wegovy | 169-360 € | Remboursé 65% (obésité, depuis le 15/06/2026, sous conditions) |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 € | 30% (DT2 uniquement) |
+| Wegovy | 147-350 € | Remboursé 65% obésité (depuis 15/06/2026) |
 | Saxenda | 240-300 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale
@@ -217,5 +217,5 @@ Rybelsus n'étant pas remboursé par la Sécurité Sociale, le mécanisme classi
 
 
 
-*Prix mis à jour en mars 2026. Les tarifs peuvent varier selon les pharmacies et régions.*
+*Prix mis à jour en juin 2026. Les tarifs peuvent varier selon les pharmacies et régions.*
 

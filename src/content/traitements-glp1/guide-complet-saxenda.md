@@ -8,8 +8,9 @@ image: "/images/thumbnails/guide-complet-saxenda.webp"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["saxenda", "glp-1", "obésité", "perte de poids", "traitement", "injection"]
-date: "2025-08-28"
+date: "2026-05-29"
 pubDate: "2025-08-28"
+updatedAt: "2026-05-29"
 mainKeyword: "saxenda guide complet france liraglutide"
 ---
 
@@ -35,7 +36,7 @@ mainKeyword: "saxenda guide complet france liraglutide"
 
 ## Qu'est-ce que Saxenda ?
 
-Saxenda est un médicament injectable développé par Novo Nordisk, appartenant à la classe des agonistes des récepteurs GLP-1 (Glucagon-like peptide-1). Saxenda contient du [liraglutide](/collections/effets-secondaires-glp1/effets-secondaires-victoza/), un analogue du GLP-1 humain, spécifiquement indiqué pour la prise en charge de l'obésité.
+Saxenda est un médicament injectable développé par Novo Nordisk, appartenant à la classe des agonistes des récepteurs GLP-1 (Glucagon-like peptide-1). Saxenda contient du liraglutide, un analogue du GLP-1 humain, spécifiquement indiqué pour la prise en charge de l'obésité.
 
 **Nom générique** : Liraglutide  
 **Laboratoire** : Novo Nordisk  
@@ -145,7 +146,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 
 ### Autres GLP-1 pour l'obésité
 - **[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)** : Semaglutide à 2,4 mg/semaine (injection hebdomadaire)
-- [**Mounjaro (tirzépatide)**](/collections/traitements-glp1/guide-complet-mounjaro/) : injection hebdomadaire, double action GLP-1 + GIP, [remboursé à 65%](/collections/glp1-cout/remboursement-glp1-2026/) pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée)
+- [**Mounjaro (tirzépatide)**](/collections/traitements-glp1/guide-complet-mounjaro/) : injection hebdomadaire, double action GLP-1 + GIP, remboursé à 65 % depuis le 15 juin 2026 pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel, prescription initiale en CSO/CHU)
 
 ### Traitements alternatifs
 - **Orlistat (Xenical)** : Inhibiteur des lipases
@@ -165,7 +166,7 @@ Oui, Saxenda est spécifiquement indiqué pour l'obésité avec ou sans diabète
 - **Effets maximum** : 6-12 mois
 
 ### Saxenda est-il remboursé pour l'obésité ?
-**Non, Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Consultez notre guide sur le [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) pour les conditions générales. Pour le [prix de Saxenda en pharmacie](/collections/glp1-cout/saxenda-prix-pharmacie/) en détail, son coût se situe entre 170 € et 300 € par mois environ, entièrement à la charge du patient. Certaines mutuelles proposent un forfait annuel pour les médicaments non remboursés, mais la prise en charge reste marginale.
+**Non, Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Consultez notre guide sur le [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) pour les conditions générales. Pour le [prix de Saxenda en pharmacie](/collections/glp1-cout/saxenda-prix-pharmacie/) en détail, son coût se situe entre 240 € et 300 € par mois, entièrement à la charge du patient. Certaines mutuelles proposent un forfait annuel pour les médicaments non remboursés, mais la prise en charge reste marginale.
 
 ### Puis-je arrêter Saxenda brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une [reprise de poids après l'arrêt de Saxenda](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) (effet yoyo). Notre guide dédié vous explique les stratégies pour limiter ce risque.

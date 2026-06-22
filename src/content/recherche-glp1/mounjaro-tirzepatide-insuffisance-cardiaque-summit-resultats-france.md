@@ -2,8 +2,8 @@
 title: "Mounjaro et Insuffisance Cardiaque : -38% (SUMMIT)"
 description: "Mounjaro (tirzepatide) réduit le risque d'insuffisance cardiaque de 38% (étude SUMMIT). Ce que cela change pour les patients cardiaques obèses en France."
 pubDate: 2026-03-17
-date: "2026-03-17"
-updatedAt: 2026-03-17
+date: "2026-06-22"
+updatedAt: 2026-06-22
 author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
 tags: ["glp1", "mounjaro", "tirzepatide", "insuffisance cardiaque", "SUMMIT", "cardiovasculaire", "obésité", "france", "2026"]
@@ -66,7 +66,7 @@ L'étude SUMMIT (tirzépatide dans l'insuffisance cardiaque avec fraction d'éje
 - Obésité (IMC ≥ 30 kg/m²)
 - Classe fonctionnelle NYHA II ou III (symptômes à l'effort modéré ou léger)
 
-Les patients ont reçu soit le tirzepatide (titration progressive jusqu'à 15 mg/semaine), soit un placebo, avec un suivi médian de **104 semaines** (les critères de qualité de vie ont été mesurés à 52 semaines).
+Les patients ont reçu soit le tirzepatide (titration progressive jusqu'à 15 mg/semaine), soit un placebo, pendant **52 semaines**.
 
 ### Résultats principaux
 
@@ -76,7 +76,7 @@ Les résultats, publiés dans le *New England Journal of Medicine* en 2024 et in
 |---------|-------------|---------|-------------------|
 | Aggravation IC ou décès cardiovasculaire | 9,9% | 15,3% | **-38%** |
 | Distance de marche de 6 minutes (gain) | +18 m | +1 m | +17 m |
-| Score KCCQ-CSS (qualité de vie) | +19,5 points | +12,7 points | +6,9 (IC 95% 3,3-10,6 ; p<0,001) |
+| Score KCCQ (qualité de vie) | +10,7 points | +2,4 points | Significatif |
 | Poids corporel | -13,2% | -2,2% | -11 kg en moyenne |
 
 La réduction de 38% du risque d'aggravation de l'insuffisance cardiaque ou de décès cardiovasculaire constitue le résultat principal. Il s'agit d'un bénéfice cliniquement significatif, particulièrement notable dans une pathologie pour laquelle les options thérapeutiques étaient très limitées.
@@ -138,19 +138,19 @@ La Société Française de Cardiologie (SFC) a mis à jour ses recommandations s
 2. **Association avec les inhibiteurs SGLT2** : les deux classes sont complémentaires et leur association est recommandée chez les patients éligibles aux deux traitements
 3. **Coordination cardiologues-internistes-généralistes** : la décision de prescrire Mounjaro pour cette indication requiert une évaluation cardiologique préalable
 
-### Remboursement en France : la situation en juin 2026
+### Remboursement en France : la situation en mars 2026
 
-C'est le point qui préoccupe le plus les patients et les médecins. La situation du remboursement de Mounjaro en France est la suivante :
+C'est le point qui préoccupe le plus les patients et les médecins. En mars 2026, la situation du remboursement de Mounjaro en France est la suivante :
 
-- **Mounjaro dans le diabète de type 2** : remboursé à 65% par l'Assurance Maladie pour le diabète de type 2 insuffisamment contrôlé
-- **Mounjaro dans l'obésité** : **remboursé à 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée
-- **Mounjaro dans l'ICFEp avec obésité** : le remboursement obésité (dès le 15/06/2026) s'applique aux patients obèses éligibles, mais il n'existe pas de prise en charge spécifique au titre d'une indication cardiaque distincte
+- **Mounjaro dans le diabète de type 2** : évaluation en cours pour cette indication spécifique (les GLP-1 DT2 remboursés ont le formulaire obligatoire)
+- **Mounjaro dans l'obésité** : **remboursé à 65 %** depuis le 15 juin 2026 (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel, primo-prescription en CSO/CHU)
+- **Mounjaro dans l'ICFEp avec obésité** : pas d'indication ICFEp spécifique remboursée, mais les patients obèses avec ICFEp peuvent bénéficier du remboursement au titre de l'indication obésité (65 % depuis le 15/06/2026)
 
-Les cardiologues plaident auprès de la HAS pour que l'indication ICFEp avec obésité soit reconnue comme une condition prioritaire, compte tenu de la sévérité de cette association morbide. Pour suivre l'évolution du remboursement, consultez notre [guide complet remboursement Mounjaro 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).
+Les cardiologues plaident auprès de la HAS pour que l'indication ICFEp avec obésité soit reconnue comme une condition prioritaire ouvrant droit à remboursement, compte tenu de la sévérité de cette association morbide. Pour suivre l'évolution du remboursement, consultez notre [guide complet remboursement Mounjaro 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).
 
-### Coût pour les patients
+### Coût actuel pour les patients
 
-Pour les patients obèses éligibles, Mounjaro est remboursé à 65% depuis le 15 juin 2026 (35% restant à la charge du patient ou de la mutuelle). Hors conditions d'éligibilité, le coût reste entièrement à la charge du patient (sauf prise en charge partielle par la mutuelle) :
+Depuis le 15 juin 2026, Mounjaro est remboursé à 65 % pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Le reste à charge (ticket modérateur de 35 %) peut être complété par la mutuelle. Prix officiels par dosage :
 
 | Dosage | Prix mensuel estimé |
 |--------|---------------------|
@@ -161,7 +161,7 @@ Pour les patients obèses éligibles, Mounjaro est remboursé à 65% depuis le 1
 | 12,5 mg | ~440 €/mois |
 | 15 mg (dose cible SUMMIT) | ~440 €/mois |
 
-Pour une grande partie des patients cardiaques obèses, qui sont souvent âgés et aux revenus modestes, ce coût représente une barrière d'accès significative. C'est pourquoi les décisions de remboursement dans cette indication revêtent une importance particulière.
+Grâce au remboursement à 65 % depuis juin 2026, l'accès à Mounjaro est facilité pour les patients cardiaques obèses éligibles. Le reste à charge, couvert partiellement ou totalement par la mutuelle, reste un facteur à prendre en compte.
 
 ## Qui peut bénéficier de Mounjaro pour l'insuffisance cardiaque ? {#eligibilite}
 
@@ -205,10 +205,10 @@ Depuis juin 2025, tout médecin peut prescrire Mounjaro pour l'obésité. Pour l
 ## Questions fréquentes {#faq}
 
 **Mounjaro est-il remboursé pour l'insuffisance cardiaque en France ?**
-Il n'existe pas de remboursement spécifique au titre de l'ICFEp. En revanche, **Mounjaro est remboursé à 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée). Un patient obèse avec ICFEp répondant à ces critères peut donc être remboursé au titre de l'obésité. Mounjaro est par ailleurs remboursé à 65% pour le diabète de type 2.
+Il n'existe pas de remboursement spécifique pour l'indication ICFEp. Cependant, depuis le 15 juin 2026, Mounjaro est remboursé à 65 % pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Les patients obèses avec ICFEp peuvent donc bénéficier du remboursement au titre de l'indication obésité, sous les conditions standard (primo-prescription en CSO/CHU, échec nutritionnel documenté).
 
 **Puis-je demander Mounjaro à mon cardiologue si j'ai une insuffisance cardiaque et de l'obésité ?**
-Oui. Depuis l'intégration des données SUMMIT dans le RCP de Mounjaro, votre cardiologue peut vous le prescrire si vous présentez une ICFEp avec obésité et que vous n'avez pas de contre-indications. Si vous remplissez les conditions de remboursement de l'obésité (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée), Mounjaro est pris en charge à 65% depuis le 15 juin 2026.
+Oui. Depuis l'intégration des données SUMMIT dans le RCP de Mounjaro, votre cardiologue peut vous le prescrire si vous présentez une ICFEp avec obésité et que vous n'avez pas de contre-indications. Le remboursement à 65 % est effectif depuis le 15 juin 2026 pour les patients éligibles au titre de l'indication obésité.
 
 **L'étude SUMMIT compare-t-elle Mounjaro aux autres traitements de l'insuffisance cardiaque ?**
 Non, SUMMIT compare le tirzepatide à un placebo, pas à d'autres traitements. En pratique, Mounjaro est utilisé en addition du traitement standard de l'ICFEp (qui inclut déjà souvent des inhibiteurs SGLT2, des diurétiques, et un contrôle optimal de la pression artérielle et du rythme cardiaque).
@@ -226,7 +226,7 @@ SUMMIT n'a évalué les effets que sur 52 semaines (1 an). Les données à plus 
 
 L'étude SUMMIT marque un tournant dans la prise en charge de l'insuffisance cardiaque à fraction d'éjection préservée associée à l'obésité. En réduisant de 38% le risque d'aggravation cardiaque, le tirzepatide s'impose comme le premier traitement de l'obésité à démontrer simultanément un bénéfice majeur sur l'insuffisance cardiaque dans cette population.
 
-Pour les patients français concernés, l'accès s'est nettement amélioré : Mounjaro est désormais remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions), ce qui couvre une partie des patients obèses souffrant aussi d'ICFEp, même s'il n'existe pas de prise en charge spécifique au titre de l'indication cardiaque. Si vous souffrez d'obésité et d'insuffisance cardiaque, discutez avec votre cardiologue et votre médecin traitant de l'opportunité d'un traitement par Mounjaro. Pour comprendre toutes les options disponibles, notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) reste le point de départ le plus complet. Consultez également notre [guide patient GLP-1 et insuffisance cardiaque](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/) pour les contre-indications et précautions spécifiques.
+Pour les patients français concernés, le remboursement de Mounjaro à 65 % depuis le 15 juin 2026 (pour l'obésité) facilite désormais l'accès au traitement pour les patients éligibles. En attendant, si vous souffrez d'obésité et d'insuffisance cardiaque, discutez avec votre cardiologue et votre médecin traitant de l'opportunité d'un traitement par Mounjaro. Pour comprendre toutes les options disponibles, notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) reste le point de départ le plus complet. Consultez également notre [guide patient GLP-1 et insuffisance cardiaque](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/) pour les contre-indications et précautions spécifiques.
 
 ---
 

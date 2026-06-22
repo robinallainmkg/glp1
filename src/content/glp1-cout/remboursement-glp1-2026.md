@@ -4,10 +4,10 @@ thumbnail: "/images/thumbnails/remboursement-glp1-2026.jpg"
 description: "Remboursement GLP-1 2026 sécurité sociale conditions : Mounjaro, Wegovy, Ozempic. Mutuelles et aides. Guide remboursement GLP-1 2026 mis à jour."
 keywords: ['remboursement glp1 2026', 'mounjaro remboursement 2026', 'wegovy remboursement 2026', 'remboursement ozempic 2026', 'glp1 remboursement mutuelle', 'quelle mutuelle rembourse glp1', 'prise en charge glp1 2026']
 seoTitle: "Remboursement GLP-1 2026 : Guide par Médicament et Mutuelle"
-seoDescription: "Remboursement GLP-1 2026 : Ozempic, Trulicity, Victoza remboursés 65% (DT2). Mounjaro et Wegovy remboursés 65% pour l'obésité depuis le 15 juin 2026 (arrêté 23 mai). Guide complet."
+seoDescription: "Remboursement GLP-1 2026 : Ozempic, Trulicity, Victoza remboursés 65% (DT2). Wegovy et Mounjaro remboursés 65% (obésité, depuis 15/06/2026). Rybelsus et Saxenda non remboursés. Guide complet."
 publishedAt: '2025-12-27'
-updatedAt: '2026-06-10'
-date: '2026-06-10'
+updatedAt: '2026-06-22'
+date: '2026-06-22'
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -22,9 +22,6 @@ mainKeyword: "remboursement GLP-1 2026"
 
 Les traitements GLP-1 représentent une avancée majeure pour le [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et l'obésité. Pour une vue d'ensemble des molécules disponibles, consultez notre [guide complet des traitements GLP-1 disponibles en France](/collections/glp1-perte-de-poids/guide-complet-glp1-2025-france/). En 2026, le remboursement de ces médicaments évolue avec l'arrivée de nouvelles molécules et l'élargissement des conditions de prise en charge. Ce guide complet détaille tout ce qu'il faut savoir sur le remboursement de chaque traitement GLP-1 disponible en France.
 
-> **À lire aussi** : [coût Wegovy en pharmacie](/collections/glp1-cout/wegovy-prix/)
-
-
 ## 📋 Tableau Récapitulatif Remboursement GLP-1 2026
 
 | Médicament | Indication | Remboursement Sécu | Coût patient/mois | Statut 2026 |
@@ -32,12 +29,12 @@ Les traitements GLP-1 représentent une avancée majeure pour le [diabète de ty
 | **Ozempic** | Diabète T2 | **65%** (bithérapie metformine) / 30% (trithérapie insuline) | ~28-56€ | ✅ Maintenu |
 | **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | Diabète T2 | **65%** (DT2 uniquement) | ~33€ | ✅ Maintenu |
 | **Victoza** | Diabète T2 | **65%** (DT2 uniquement) | ~27€ | ✅ Maintenu |
-| **Rybelsus** | Diabète T2 (oral) | **Non remboursé** (avis défavorable HAS) | 80-110€ | ❌ Non remboursé |
-| **Wegovy** | Obésité (IMC ≥35*) | **65%** (dès le 15/06/2026) | 169-360€ | ✅ Remboursé 15/06/2026 |
-| **Mounjaro** | DT2 + Obésité (IMC ≥35*) | **65%** (dès le 15/06/2026) | 230-440€ | ✅ Remboursé 15/06/2026 |
-| **[Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)** | Obésité | **Non remboursé** | 240-300€ | ❌ Non remboursé |
+| **Rybelsus** | Diabète T2 (oral) | **Remboursé 65 %** (depuis juin 2026, obésité)(avis défavorable HAS) | 80-110€ | ❌ Non remboursé |
+| **Wegovy** | Obésité (IMC ≥35) | **65%** (depuis 15/06/2026) | ~147-350€ | ✅ Remboursé |
+| **Mounjaro** | Obésité (IMC ≥35) / DT2 | **65%** (depuis 15/06/2026) | 176-433€ | ✅ Remboursé |
+| **[Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)** | Obésité | **Remboursé 65 %** (depuis juin 2026, obésité)| 240-300€ | ❌ Non remboursé |
 
-> **Mise à jour juin 2026** : **Mounjaro et Wegovy sont remboursés à 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai), sous conditions (*IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée). Saxenda reste non remboursé. Depuis **février 2025**, un **formulaire de demande obligatoire** est requis pour la prescription des GLP-1 remboursés. Détails : [conditions d'éligibilité](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
+> **Mise à jour mai 2026** : Depuis le **15 juin 2026**, **Wegovy** et **Mounjaro** sont **remboursés à 65 %** par l'Assurance Maladie pour le traitement de l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté de la prise en charge nutritionnelle). La primo-prescription est réservée aux CSO (Centres Spécialisés Obésité), CHU ou services spécialisés ; le renouvellement peut être assuré par le médecin traitant. **Saxenda** reste non remboursé. Depuis **février 2025**, un **formulaire de demande obligatoire** est requis pour la prescription de tous les GLP-1 remboursés.
 
 ---
 
@@ -57,7 +54,7 @@ Pour bénéficier du remboursement par l'Assurance Maladie (65% pour Ozempic/Tru
 
 ✅ **Indication médicale validée**
 - **Diabète de type 2** confirmé par analyses (HbA1c, glycémie)
-- ℹ️ **À noter** : depuis le **15 juin 2026**, Mounjaro et Wegovy sont remboursés à 65% pour l'**obésité sévère** (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée). Saxenda reste non remboursé.
+- ⚠️ **Attention** : Pour le diabète de type 2, les conditions de remboursement restent inchangées. Pour l'obésité, **Wegovy et Mounjaro sont remboursés à 65 % depuis le 15 juin 2026** (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, primo-prescription en CSO/CHU). Saxenda n'est PAS remboursé.
 
 ✅ **Échec des traitements de première intention**
 - Essai d'antidiabétiques oraux (metformine, sulfamides)
@@ -74,17 +71,20 @@ Pour bénéficier du remboursement par l'Assurance Maladie (65% pour Ozempic/Tru
 
 ### Statut Officiel
 
-**Mounjaro (tirzépatide, Eli Lilly)** est **remboursé à 65% par la Sécurité Sociale depuis le 15 juin 2026** (arrêté du 23 mai 2026). Commercialisé en France depuis novembre 2024, le tirzépatide a obtenu un **avis favorable de la HAS le 19 novembre 2025** (avis CT21349, ASMR IV), pour le diabète de type 2 insuffisamment contrôlé et l'obésité (IMC ≥ 35 avec comorbidité, ou ≥ 40) après échec des mesures nutritionnelles, avec primo-prescription en structure spécialisée. Voir le [remboursement de Mounjaro en 2026](/collections/glp1-cout/remboursement-mounjaro-france-2026-quand-conditions-ceps/).
+**Mounjaro (tirzépatide, Eli Lilly)** est **remboursé à 65 %** par l'Assurance Maladie depuis le **15 juin 2026** pour le traitement de l'obésité. Commercialisé en France depuis novembre 2024, le tirzépatide avait obtenu un avis favorable de la HAS le 19 novembre 2025 (avis CT21349, ASMR IV). Les conditions de remboursement : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté de la prise en charge nutritionnelle. La primo-prescription est réservée aux CSO, CHU ou services spécialisés ; le renouvellement est possible par le médecin traitant. Pour les détails, voir le [remboursement de Mounjaro en 2026](/collections/glp1-cout/remboursement-mounjaro-france-2026-quand-conditions-ceps/).
 
 ### Ce qu'il faut savoir sur le remboursement Mounjaro
 
-**Prix en pharmacie** :
-- Prix libre : 230 à 440€/mois selon le dosage
+**Situation actuelle (mai 2026)** :
+- Prix officiel : 176 à 433€/mois selon le dosage
+- **Remboursement à 65 %** par la Sécurité Sociale depuis le 15 juin 2026
+- Mutuelle : complète le ticket modérateur (35 % restants) selon contrat
 
-**Remboursement à 65% depuis le 15 juin 2026** (arrêté du 23 mai 2026) :
-- Taux : **65%** par l'Assurance Maladie (35% restant à la charge du patient ou de la mutuelle)
-- Indications : diabète de type 2 insuffisamment contrôlé, et obésité sévère
-- Conditions (obésité) : IMC ≥ 35 avec comorbidité (ou ≥ 40), après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée
+**Conditions de remboursement** :
+- IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m²
+- Échec documenté de la prise en charge nutritionnelle
+- Primo-prescription réservée aux CSO, CHU ou services spécialisés
+- Renouvellement possible par le médecin traitant
 
 [Voir le détail complet des prix Mounjaro -->](/collections/glp1-cout/prix-mounjaro-france/)
 
@@ -94,16 +94,16 @@ Pour bénéficier du remboursement par l'Assurance Maladie (65% pour Ozempic/Tru
 
 ### Statut Officiel
 
-**Wegovy (sémaglutide 2,4 mg)** est **remboursé à 65% par la Sécurité Sociale pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026, JO du 28 mai). Commercialisé en France depuis octobre 2024, il est désormais pris en charge sous conditions : IMC ≥ 35 avec comorbidité (ou ≥ 40), après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée.
+**Wegovy (sémaglutide 2.4 mg)** est **remboursé à 65 %** par l'Assurance Maladie depuis le **15 juin 2026**. Commercialisé en France depuis octobre 2024, il est indiqué pour le traitement de l'obésité et bénéficie désormais d'une prise en charge sous conditions.
 
 ### Coût Patient 2026
 
-**Prix pharmacie :** 169-360€/mois selon dosage
+**Prix officiel :** ~147-350€/mois selon dosage
 
-**Remboursement à 65% (depuis le 15 juin 2026)** :
-- L'Assurance Maladie prend en charge 65% ; les 35% restants sont à la charge du patient ou de la mutuelle
-- Hors conditions d'éligibilité (ou avant le 15 juin 2026), le coût reste intégralement à la charge du patient
-- Certaines mutuelles complètent le reste à charge (vérifier votre contrat)
+**Remboursement Sécurité Sociale à 65 %** (depuis le 15 juin 2026) :
+- Conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec nutritionnel documenté
+- Primo-prescription réservée aux CSO, CHU ou services spécialisés ; renouvellement par le médecin traitant
+- Le ticket modérateur (35 %) peut être complété par la mutuelle
 
 [Détails complets prix Wegovy -->](/collections/glp1-cout/prix-wegovy-france/)
 
@@ -244,9 +244,7 @@ Certains départements proposent des aides exceptionnelles pour traitements coû
 ### Étape 1 : Consultation Médicale Initiale
 
 **Qui consulter ?**
-
-Pour un remboursement, la **primo-prescription de Wegovy ou Mounjaro pour l'obésité doit être faite par un médecin spécialiste exerçant en lien avec un Centre Spécialisé de l'Obésité (CSO) ou un CHU** (niveau 2-3). Le médecin généraliste peut renouveler mais ne peut pas initier une prescription remboursable.
-
+- Médecin traitant (première orientation)
 - Endocrinologue ou diabétologue
 - Nutritionniste ou médecin spécialisé obésité
 
@@ -357,15 +355,15 @@ Pour continuer à être remboursé, vous devez démontrer :
 
 ### Le remboursement GLP-1 sera-t-il maintenu en 2026 ?
 
-Le remboursement est **confirmé pour 2026** : pour le **diabète de type 2** (Ozempic, Trulicity, Victoza), **65% en bithérapie avec metformine** (cas le plus fréquent), 30% en trithérapie avec insuline basale. Et pour l'**obésité**, **Mounjaro et Wegovy sont remboursés à 65% depuis le 15 juin 2026** (sous conditions). Saxenda reste non remboursé.
+Le remboursement est **confirmé pour 2026** pour les GLP-1 indiqués dans le **diabète de type 2** : **65% en bithérapie avec metformine** (cas le plus fréquent), 30% en trithérapie avec insuline basale. **Depuis le 15 juin 2026, Wegovy et Mounjaro sont également remboursés à 65 %** pour le traitement de l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Saxenda reste non remboursé.
 
 **Statut par traitement :**
 - ✅ Ozempic : Maintenu 65% bithérapie metformine / 30% trithérapie insuline (DT2 uniquement)
 - ✅ Trulicity : Maintenu 65% bithérapie metformine / 30% trithérapie insuline (DT2 uniquement)
 - ✅ Victoza : Maintenu 65% bithérapie metformine / 30% trithérapie insuline (DT2 uniquement, **arrêt commercialisation prévu fin 2026**)
 - ❌ Rybelsus : NON remboursé (avis défavorable HAS)
-- ✅ Wegovy : Remboursé **65%** pour l'obésité depuis le **15 juin 2026** (sous conditions)
-- ✅ Mounjaro : Remboursé **65%** (DT2, et obésité depuis le **15 juin 2026** sous conditions)
+- ✅ Wegovy : 65% (obésité, depuis 15/06/2026, IMC ≥ 35 + comorbidité ou IMC ≥ 40)
+- ✅ Mounjaro : 65% (obésité, depuis 15/06/2026, IMC ≥ 35 + comorbidité ou IMC ≥ 40)
 - ❌ Saxenda : NON remboursé
 
 **Rappel** : Depuis février 2025, un formulaire obligatoire est requis pour les prescriptions de GLP-1 remboursés.
@@ -391,13 +389,9 @@ Le remboursement est **confirmé pour 2026** : pour le **diabète de type 2** (O
 
 ### Ma mutuelle peut-elle prendre en charge Mounjaro ou Wegovy ?
 
-**Mounjaro et Wegovy sont remboursés à 65% pour l'obésité depuis le 15 juin 2026** (sous conditions). Pour les patients non éligibles, ou pour le reste à charge de 35%, certaines mutuelles proposent des forfaits complémentaires :
+**Mounjaro et Wegovy sont remboursés à 65 % par la Sécurité Sociale depuis le 15 juin 2026** pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Votre mutuelle complète le ticket modérateur (35 % restants) selon les garanties de votre contrat, dans le cadre du droit commun.
 
-- Vérifiez si votre contrat inclut un **forfait "médecines non remboursées"** ou **"traitements innovants"**
-- Les montants sont généralement limités (100-500€/an)
-- Le reste à charge restera significatif (la majorité du coût mensuel)
-
-**Conseil** : Contactez directement votre mutuelle pour connaître les possibilités de prise en charge partielle.
+**Conseil** : Vérifiez auprès de votre mutuelle le niveau de prise en charge du ticket modérateur prévu dans votre contrat.
 
 ### Les conditions de remboursement vont-elles se durcir en 2026 ?
 
@@ -409,37 +403,37 @@ Le remboursement est **confirmé pour 2026** : pour le **diabète de type 2** (O
 - ✅ Suivi médical régulier
 - ✅ Formulaire obligatoire (depuis février 2025)
 
-**Pour les traitements obésité :** Mounjaro et Wegovy sont **remboursés à 65% depuis le 15 juin 2026** (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée). Saxenda reste non remboursé.
+**Pour les traitements obésité :** **Wegovy et Mounjaro sont remboursés à 65 % depuis le 15 juin 2026** (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel, primo-prescription en CSO/CHU). Saxenda reste non remboursé.
 
 **Évolution possible 2027-2028 :**
-- Possible évaluation HAS pour le remboursement de certains traitements obésité
+- Possible élargissement des conditions de remboursement
 - Arrivée de génériques (baisse des prix)
 
 ### Wegovy ou Mounjaro : lequel choisir ?
 
-**Wegovy et Mounjaro sont remboursés à 65% pour l'obésité depuis le 15 juin 2026** (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée). Hors éligibilité, le coût reste à la charge du patient.
+**Wegovy et Mounjaro sont tous deux remboursés à 65 %** par l'Assurance Maladie depuis le 15 juin 2026 pour le traitement de l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel documenté, primo-prescription en CSO/CHU).
 
 **Comparaison de coût :**
 
 **Wegovy (sémaglutide, Novo Nordisk) :**
-- Coût pharmacie : **169-360€/mois**
-- Remboursement : **65% pour l'obésité depuis le 15 juin 2026** (sous conditions)
-- Indication : Obésité principalement
+- Prix officiel : **~147-350€/mois** selon dosage
+- Remboursement : **65 %** (depuis 15/06/2026)
+- Indication : Obésité
 - Commercialisé depuis octobre 2024
-- Voir aussi le [calendrier de remboursement Wegovy](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/) pour les perspectives
+- Voir aussi le [calendrier de remboursement Wegovy](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/) pour les conditions détaillées
 
 **Mounjaro (tirzépatide, Eli Lilly) :**
-- Coût pharmacie : **230-440€/mois** (prix libre)
-- Remboursement : **65% pour l'obésité depuis le 15 juin 2026** (sous conditions ; DT2 également) — voir le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
+- Prix officiel : **176-433€/mois** selon dosage
+- Remboursement : **65 %** (depuis 15/06/2026, voir le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/) pour les conditions)
 - Indication : Obésité / DT2
 - Commercialisé depuis novembre 2024
 
 Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les études, mais est aussi plus cher.
 
 **Choix recommandé :**
-- **Budget limité** --> Wegovy (moins cher)
+- **Budget limité** --> Wegovy (prix officiel plus bas)
 - **Efficacité maximale** --> Mounjaro
-- **Remboursement obésité** --> Wegovy ou Mounjaro (65% sous conditions, depuis le 15 juin 2026) ; **remboursement diabète T2** --> Ozempic (65% bithérapie metformine, principe actif identique à Wegovy)
+- **Diabète de type 2** --> Ozempic (65% en bithérapie metformine / 30% en trithérapie insuline, DT2 uniquement, principe actif identique à Wegovy)
 
 [Comparaison détaillée Wegovy vs Mounjaro →](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
 

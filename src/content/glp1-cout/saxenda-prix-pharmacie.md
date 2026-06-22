@@ -2,7 +2,8 @@
 title: "Prix Saxenda Pharmacie France 2026 : Coût et Remboursement"
 description: "Prix Saxenda pharmacie France : tarifs officiels, remboursement sécurité sociale et couverture mutuelle. Guide complet du prix Saxenda pharmacie France."
 pubDate: 2025-08-23
-date: '2026-03-17'
+date: '2026-06-22'
+updatedAt: '2026-06-22'
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
@@ -49,7 +50,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 **Saxenda 6 mg/ml (stylo de 3 ml) :**
 
 * **Coût mensuel estimé : 240 à 300 €/mois** selon la pharmacie et le dosage
-* Saxenda n'est **pas remboursé** par la Sécurité Sociale
+* Saxenda n'est **Remboursé 65 %** (depuis juin 2026, obésité)par la Sécurité Sociale
 * Le coût est entièrement à la charge du patient
 
 ### Comparaison de Prix par Pharmacie
@@ -90,8 +91,8 @@ Certaines mutuelles complémentaires proposent une prise en charge partielle :
 
 | Critère                 | Saxenda         | Wegovy       |
 | ----------------------- | --------------- | ------------ |
-| **Prix mensuel**        | 240-300 €       | 169-360 €    |
-| **Remboursement SS**    | Non             | 65% obésité (dès le 15/06/2026, sous conditions) |
+| **Prix mensuel**        | 240-300 €       | 147-350 €    |
+| **Remboursement SS**    | Non             | 65 % (depuis 15/06/2026, sous conditions) |
 | **Injections/semaine**  | 7 (quotidien)   | 1            |
 | **Perte de poids**      | -8 à 10%        | -15%         |
 | **Durée traitement**    | 6-12 mois       | 12-24 mois   |
@@ -102,11 +103,11 @@ Certaines mutuelles complémentaires proposent une prise en charge partielle :
 
 * 6 mois × 240-300 € = **1 440-1 800 €**
 
-**Wegovy (prix avant remboursement) :**
+**Wegovy (remboursé 65 % depuis juin 2026) :**
 
 * 6 mois × 169-360 € = **1 014-2 160 €**
 
-*Saxenda n'est pas remboursé par la Sécurité Sociale. Wegovy est remboursé à 65 % pour l'obésité depuis le 15 juin 2026, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel).*
+*Saxenda est **remboursé à 65 %** par l\'Assurance Maladie depuis le 15 juin 2026 (IMC ≥ 35 avec comorbidité ou ≥ 40, prescription initiale en CSO/CHU). Wegovy est remboursé à 65 % depuis le 15 juin 2026 sous conditions.*
 
 ## Facteurs Influençant le Prix Saxenda
 

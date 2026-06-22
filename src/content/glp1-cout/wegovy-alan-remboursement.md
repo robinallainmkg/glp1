@@ -5,8 +5,8 @@ description: "Alan et Wegovy en 2026 : forfaits médicaments non remboursés, pl
 seoDescription: "Alan et Wegovy 2026 : forfaits, conditions, démarches. Guide complet sur la prise en charge."
 keywords: ['Alan rembourse Wegovy', 'wegovy remboursement Alan', 'Alan mutuelle obésité', 'Alan GLP1 sémaglutide']
 publishedAt: '2026-05-02'
-updatedAt: '2026-05-02'
-date: '2026-05-02'
+updatedAt: '2026-06-22'
+date: '2026-06-22'
 pubDate: 2026-05-02
 author: 'Dr. Marie Dubois'
 category: "Économie santé"
@@ -35,11 +35,11 @@ affiliateConfig:
 
 **Alan** est l'une des mutuelles santé digitales les plus identifiables en France, principalement diffusée via les contrats collectifs d'entreprise. Elle se distingue par son application mobile, son service client réactif et une gamme « Alan Map » qui inclut des programmes de prévention. Avec l'essor de **Wegovy** dans le traitement de l'obésité, beaucoup d'adhérents Alan veulent savoir si la mutuelle prend en charge le sémaglutide en 2026. Voici un état des lieux complet.
 
-## Wegovy : statut Sécu en mai 2026
+## Wegovy : statut Sécu en juin 2026
 
-**Wegovy est remboursé à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026** (arrêté du 23 mai 2026), pour les adultes IMC ≥ 35 avec comorbidité (ou ≥ 40) en échec de prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. La mutuelle prend alors le relais sur le **reste à charge de 35%** ; pour les patients non éligibles, le forfait « médicaments non remboursés » reste utile. Détails : [conditions d'éligibilité](/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/).
+**Depuis le 15 juin 2026, Wegovy est remboursé à 65% par l'Assurance Maladie** pour le traitement de l'obésité, sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté de prise en charge nutritionnelle. La prescription initiale est réservée aux CSO, CHU ou services spécialisés ; le renouvellement est possible par le médecin traitant.
 
-Pour les patients non éligibles à ce remboursement (hors conditions d'IMC ou de parcours de soins), les complémentaires comme Alan ne peuvent intervenir qu'au travers de **forfaits dédiés** présents dans certains contrats.
+Alan complète désormais le ticket modérateur (35% restant) selon votre plan, comme pour tout médicament remboursé. Pour les patients non éligibles au remboursement Sécu, Alan peut intervenir via des **forfaits dédiés** présents dans certains contrats.
 
 ### Coût supporté en 2026
 
@@ -114,9 +114,9 @@ Sur l'app, déposez l'ordonnance + facture officine. Si le forfait s'applique, l
 
 Une **surcomplémentaire santé** spécialisée « médicaments non remboursés » (jusqu'à 800–1 000 €/an chez certains assureurs) peut être souscrite en complément du contrat collectif Alan. À comparer avec le coût additionnel.
 
-### Le passage au remboursement Sécu
+### Anticiper le passage au remboursement Sécu
 
-Depuis l'entrée en vigueur du remboursement Wegovy le 15 juin 2026, Alan applique **automatiquement** le ticket modérateur (35%) selon votre contrat — souvent 100 % BR sans démarche — pour les patients éligibles. Suivez l'évolution sur [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
+Wegovy étant inscrit au remboursement depuis le 15 juin 2026, Alan applique **automatiquement** le ticket modérateur selon votre contrat — souvent 100 % BR sans démarche. Voir [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ### Faire évoluer le contrat collectif
 
@@ -128,7 +128,7 @@ Voir notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-we
 
 ## Mounjaro et Ozempic chez Alan en 2026
 
-- **Mounjaro** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (mêmes conditions que Wegovy). Comportement Alan identique à Wegovy : complément du ticket modérateur pour les patients éligibles, forfaits dédiés sinon.
+- **Mounjaro** : **remboursé à 65%** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (mêmes conditions que Wegovy). Alan complète le ticket modérateur selon votre plan.
 - **Ozempic** : pris en charge Sécu à **65 %** en bithérapie metformine, **30 %** en trithérapie insuline, **uniquement DT2**. Alan complète le ticket modérateur selon votre plan (souvent 100 % BR).
 
 ## Comparaison synthétique
@@ -149,12 +149,12 @@ Pour aller plus loin, voir notre [comparatif mutuelle Wegovy](/collections/glp1-
 
 Avant de viser Wegovy, un bilan complet par un médecin formé à l'obésité s'impose : critères d'éligibilité, contre-indications, comorbidités. Plusieurs plateformes proposent ce parcours en téléconsultation, avec primo-prescription si éligible et suivi mensuel — utile pour valoriser au mieux les forfaits Alan.
 
-> Comparer les contrats complémentaires (Alan inclus) reste la démarche la plus rapide pour réduire le reste à charge en 2026, en particulier pour les patients non éligibles au remboursement Sécu.
+> Comparer les contrats complémentaires (Alan inclus) reste la démarche la plus rapide pour réduire le reste à charge en 2026 pour les patients non éligibles au remboursement Sécu.
 
 ## FAQ — Alan et Wegovy
 
 **1. Alan rembourse-t-il Wegovy en 2026 ?**
-Pour les patients éligibles, Wegovy est remboursé à 65% par la Sécu (obésité, depuis le 15 juin 2026) et Alan complète le ticket modérateur de 35% en droit commun. Pour les patients non éligibles, le forfait « médicaments prescrits non remboursés » du contrat peut intervenir, avec un plafond annuel selon le plan.
+Oui, depuis le 15 juin 2026, Wegovy est remboursé à 65% par la Sécu. Alan complète le ticket modérateur (35%) selon votre plan. Pour les patients non éligibles, le forfait « médicaments prescrits non remboursés » peut intervenir.
 
 **2. Comment activer le forfait Alan pour Wegovy ?**
 Déposer l'ordonnance et la facture officine sur l'app Alan. Si le forfait couvre les médicaments non remboursés, le traitement est automatique.
@@ -169,10 +169,10 @@ Oui, via le CSE et la DRH lors du renouvellement du contrat collectif. Discussio
 Oui, Alan inclut la téléconsultation médicale. La consultation est gratuite, le médicament reste soumis aux forfaits applicables.
 
 **6. Et Mounjaro et Ozempic ?**
-Mounjaro : même régime que Wegovy (remboursé à 65% pour l'obésité depuis le 15 juin 2026, sous conditions). Ozempic : pris en charge dans le DT2 (65 %/30 %), Alan complète le TM.
+Mounjaro : même régime que Wegovy (remboursé 65% Sécu depuis le 15 juin 2026 pour l'obésité). Ozempic : pris en charge dans le DT2 (65 %/30 %). Alan complète le TM pour les deux.
 
 **7. Alan rembourse-t-il automatiquement Wegovy ?**
-Oui. Depuis l'entrée en vigueur de l'arrêté Sécu le 15 juin 2026, Alan applique le complément de ticket modérateur sans démarche, pour les patients éligibles.
+Oui, depuis l'inscription au JO le 15 juin 2026, Alan applique le complément de ticket modérateur automatiquement, sans démarche.
 
 ---
 

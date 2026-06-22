@@ -2,8 +2,8 @@
 title: "GLP-1 et Syndrome Métabolique : Traitement des Composantes"
 description: "GLP-1 et syndrome métabolique : Ozempic, Wegovy et Mounjaro agissent sur l'obésité abdominale, l'HTA, la dyslipidémie et la glycémie."
 pubDate: 2026-03-18
-date: 2026-03-18
-updatedAt: 2026-03-18
+date: 2026-06-22
+updatedAt: 2026-06-22
 author: "Dr. Sophie Dubois"
 category: "Perte de poids GLP-1"
 tags: ["glp1", "syndrome métabolique", "obésité abdominale", "HTA", "dyslipidémie", "glycémie", "ozempic", "wegovy", "mounjaro"]
@@ -96,8 +96,6 @@ Sous traitement GLP-1, on observe en général :
 
 Ces effets s'expliquent en partie par la perte de poids, mais aussi par l'action directe des GLP-1 sur le métabolisme hépatique des lipides — qui explique également leur action bénéfique sur la [stéatose hépatique et le syndrome métabolique](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/), une comorbidité présente chez une majorité de patients.
 
-Le [syndrome métabolique et insuffisance rénale](/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/) sont souvent liés : l'insulino-résistance au cœur du syndrome métabolique endommage progressivement les reins — les GLP-1 exercent une [protection rénale dans le syndrome métabolique](/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/) documentée.
-
 ## Le profil du patient idéal sous GLP-1 pour syndrome métabolique
 
 Le syndrome métabolique est précisément le type de profil pour lequel les GLP-1 ont le meilleur rapport bénéfice/risque. Le candidat idéal réunit :
@@ -129,11 +127,11 @@ Il est important de noter que ces effets sont maintenus tant que le traitement e
 
 ### Wegovy (sémaglutide 2,4 mg) : si obésité sans diabète
 
-[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) à la dose de 2,4 mg est indiqué pour l'**obésité** (IMC ≥ 30) ou le surpoids (IMC ≥ 27) avec comorbidité. C'est le choix pour les patients avec syndrome métabolique mais sans diabète de type 2 diagnostiqué. Remboursé à 65% depuis le 15 juin 2026 pour IMC >=35 avec comorbidité ou >=40.
+[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) à la dose de 2,4 mg est indiqué pour l'**obésité** (IMC ≥ 30) ou le surpoids (IMC ≥ 27) avec comorbidité. C'est le choix pour les patients avec syndrome métabolique mais sans diabète de type 2 diagnostiqué. Depuis le 15 juin 2026, Wegovy est remboursé à 65 % par l'Assurance Maladie sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, échec nutritionnel documenté, primo-prescription en CSO/CHU).
 
 ### Mounjaro (tirzépatide) : double mécanisme d'action
 
-[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) combine l'action GLP-1 et GIP, ce qui lui confère une efficacité supérieure sur la perte de poids et le contrôle glycémique. C'est une option de choix pour les patients avec syndrome métabolique sévère, en particulier ceux avec résistance à l'insuline marquée. Disponible en France pour le diabète de type 2.
+[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) combine l'action GLP-1 et GIP, ce qui lui confère une efficacité supérieure sur la perte de poids et le contrôle glycémique. C'est une option de choix pour les patients avec syndrome métabolique sévère, en particulier ceux avec résistance à l'insuline marquée. Depuis le 15 juin 2026, Mounjaro est remboursé à 65 % par l'Assurance Maladie pour l'obésité sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, échec nutritionnel documenté, primo-prescription en CSO/CHU).
 
 ## Prise en charge globale : les GLP-1 ne remplacent pas l'hygiène de vie
 
@@ -142,13 +140,13 @@ Les GLP-1 sont un outil puissant contre le syndrome métabolique, mais ils fonct
 - **Alimentation** : réduction des sucres raffinés, des graisses saturées et du sel ; augmentation des fibres et des protéines de qualité
 - **Activité physique** : au moins 150 minutes par semaine d'activité modérée ; la [musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) est particulièrement recommandée pour préserver la masse musculaire
 - **Réduction du stress** : stress chronique et syndrome métabolique entretiennent un cercle vicieux via le cortisol
-- **Sommeil** : l'[apnée du sommeil et syndrome métabolique](/collections/recherche-glp1/glp1-apnee-sommeil-saos/) — fréquente dans ce profil, elle aggrave le syndrome métabolique ; les GLP-1 ont montré une réduction significative des événements obstructifs
+- **Sommeil** : l'apnée du sommeil, fréquente dans ce profil, aggrave le syndrome métabolique ; les GLP-1 réduisent aussi la sévérité de l'apnée
 
 ## FAQ
 
 ### Le syndrome métabolique justifie-t-il un remboursement du GLP-1 ?
 
-Le syndrome métabolique en tant que tel n'est pas une indication remboursée pour les GLP-1 en France. Le remboursement dépend de l'indication : diabète de type 2 pour Ozempic (65 % en bithérapie metformine, 100 % en ALD), obésité sévère avec comorbidités dans certains cas. Si vous avez un syndrome métabolique avec diabète de type 2, Ozempic est remboursé. Depuis le 15 juin 2026, Wegovy est remboursé pour les patients obèses sévères même sans diabète.
+Le remboursement dépend de l'indication. Pour le diabète de type 2, Ozempic est remboursé à 65 % en bithérapie metformine (100 % en ALD). Pour l'obésité, depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % sous conditions strictes : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, échec nutritionnel documenté, primo-prescription en CSO/CHU. Si vous avez un syndrome métabolique avec ces critères, vous pouvez bénéficier du remboursement.
 
 ### Mon médecin traitant peut-il prescrire un GLP-1 pour syndrome métabolique ?
 

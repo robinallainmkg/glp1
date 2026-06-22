@@ -1,13 +1,14 @@
 ---
 title: "Régime méditerranéen GLP-1 alimentation santé"
 pubDate: 2025-08-20
-date: 2025-08-20
+date: 2026-06-22
+updatedAt: 2026-06-22
 author: "Dr. Émilie Martin"
 description: "Régime méditerranéen GLP-1 alimentation santé : menu type, aliments clés et conseils pratiques pour allier cuisine méditerranéenne et traitement."
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]
 collection: "régime-glp1"
-thumbnail: "/images/thumbnails/regime-mediterraneen-glp1.jpg"
+thumbnail: "/images/thumbnails/régime-mediterraneen-glp1.jpg"
 thumbnailAlt: "Illustration pour l'article régime-mediterraneen-glp1"
 featured: false
 priority: 5
@@ -126,7 +127,7 @@ Visez 1,5 à 2 litres d'eau par jour. Les tisanes à la camomille, verveine ou m
 
 La marche rapide 30 minutes par jour est le minimum recommandé par la HAS pour les patients sous traitement GLP-1 avec objectif de perte de poids. L'activité physique amplifie la perte de masse grasse tout en préservant la [masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles).
 
-## Remboursement et coûts en France (mars 2026)
+## Remboursement et coûts en France (juin 2026)
 
 ### Ozempic (sémaglutide 0,5 à 1 mg)
 - **Prix** : ~76,58 € par stylo prérempli
@@ -134,15 +135,15 @@ La marche rapide 30 minutes par jour est le minimum recommandé par la HAS pour 
 - **ALD 30** (diabète de type 2) : prise en charge à 100% du ticket modérateur
 
 ### Wegovy (sémaglutide 2,4 mg)
-- **Prix** : ~250 à 290 € par mois
-- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 10 juin 2026), conditions : IMC initial ≥ 40 kg/m², primo-prescription par médecin en CSO, CHU, SMR gastro-endocrino ou endocrinologue en lien avec un CSO. Mounjaro (tirzépatide) : remboursé à 65% depuis le 15 juin 2026, conditions : IMC ≥ 35 après échec nutritionnel, mêmes prescripteurs habilités.
+- **Prix** : ~147 à 350 € par mois selon dosage
+- **Remboursement** : remboursé à 65 % depuis juin 2026 (conditions d'éligibilité : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle)
 
 ### Mounjaro (tirzepatide)
-- **Prix** : 230 à 440 € par mois selon dosage
-- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 10 juin 2026), conditions : IMC ≥ 35 après échec nutritionnel, mêmes prescripteurs habilités que Wegovy
+- **Prix** : 176 à 434 € par mois selon dosage
+- **Remboursement** : remboursé à 65 % depuis juin 2026 (conditions d'éligibilité : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle)
 
 ### ALD et prise en charge à 100%
-L'Affection de Longue Durée (ALD) permet une prise en charge à 100% du ticket modérateur pour le **diabète de type 2 (ALD 30)**. L'obésité seule n'est pas reconnue comme ALD en France. Toutefois, depuis le 15 juin 2026, les patients obèses sans diabète bénéficient d'un remboursement à 65% de Wegovy et Mounjaro (sous conditions d'éligibilité), le reste à charge pouvant être couvert par la mutuelle selon le contrat.
+L'Affection de Longue Durée (ALD) permet une prise en charge à 100% du ticket modérateur pour le **diabète de type 2 (ALD 30)**. L'obésité seule n'est pas reconnue comme ALD en France en juin 2026, mais Wegovy et Mounjaro sont désormais remboursés à 65 % pour les patients éligibles (IMC ≥ 35 avec comorbidité ou IMC ≥ 40).
 
 ## Questions fréquentes
 
@@ -157,8 +158,6 @@ Avec un GLP-1 associé à un régime méditerranéen, les premières pertes de p
 
 ### Mon médecin traitant peut-il m'aider à adapter mon alimentation ?
 Oui. La plupart des médecins traitants peuvent vous orienter vers un diététicien-nutritionniste dans le cadre d'une prise en charge coordonnée. Certaines mutuelles remboursent des consultations diététiques (3 à 5 par an selon le contrat).
-
-Le régime méditerranéen accompagne efficacement un traitement GLP-1, dont le [prix Ozempic en pharmacie](/collections/glp1-cout/prix-ozempic-france/) reste accessible.
 
 ## Conclusion
 

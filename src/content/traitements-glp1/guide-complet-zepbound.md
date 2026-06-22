@@ -8,8 +8,9 @@ image: "/images/thumbnails/zepbound.webp"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["zepbound", "glp-1", "perte de poids", "traitement", "injection", "eli lilly", "tirzepatide"]
-date: "2025-09-01"
+date: "2026-05-29"
 pubDate: "2025-09-01"
+updatedAt: "2026-05-29"
 mainKeyword: "zepbound guide complet france"
 ---
 
@@ -136,7 +137,7 @@ Le prix est libre et varie selon les pharmacies et le dosage :
 - **12,5-15 mg** : environ 400-440 €/mois
 
 ### Remboursement
-Mounjaro **est remboursé à 65%** par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), après un avis favorable de la HAS en décembre 2025. Ce [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) s'applique aux patients avec un IMC ≥ 35 et comorbidité (ou ≥ 40), après échec d'une prise en charge nutritionnelle et primo-prescription en structure spécialisée.
+Mounjaro **est remboursé à 65 %** par l'Assurance Maladie depuis le 15 juin 2026 pour le traitement de l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle, prescription initiale en CSO/CHU). Consultez notre guide [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) pour les conditions détaillées.
 
 ## Effets secondaires
 

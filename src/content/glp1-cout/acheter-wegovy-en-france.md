@@ -2,7 +2,8 @@
 title: "Acheter Wegovy en France en Pharmacie : Guide 2026"
 description: "Comment acheter Wegovy France pharmacie en 2026 : ordonnance obligatoire, prix, disponibilité et démarches pratiques pour obtenir votre traitement."
 pubDate: 2025-08-23
-date: 2025-08-23
+date: 2026-06-22
+updatedAt: 2026-06-22
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
@@ -70,14 +71,14 @@ Pour obtenir une prescription de Wegovy en France, vous devez répondre aux crit
 
 ### Médecins habilités à prescrire
 
-Seuls certains spécialistes peuvent prescrire Wegovy :
+Depuis juin 2025, **tout médecin** peut prescrire Wegovy pour l'obésité en France :
 
-* **Endocrinologues**
-* **Diabétologues**
+* **Médecins généralistes** : peuvent initier et renouveler le traitement
+* **Endocrinologues** et **diabétologues** : pour les cas complexes
 * **Médecins spécialisés en nutrition**
 * **Médecins hospitaliers** en service de médecine interne
 
-*Important* : Les médecins généralistes peuvent prescrire Wegovy depuis juin 2025, mais la prescription initiale n'est prise en charge par l'Assurance Maladie que si elle émane d'un professionnel exerçant dans une structure de niveau 2 ou 3.
+*Note* : Pour le remboursement à 65 % (effectif depuis le 15 juin 2026), la **primo-prescription** doit être faite par un CSO, CHU ou service spécialisé. Le renouvellement peut être assuré par le médecin traitant.
 
 ## Prix de Wegovy en France en 2025
 
@@ -104,7 +105,7 @@ Les prix peuvent légèrement varier selon les pharmacies et les régions :
 * **Province** : prix variables selon les pharmacies (à partir de 169 €/mois)
 * Statut actuel du remboursement
 
-**Wegovy est remboursé à 65%** pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, avec primo-prescription en structure spécialisée. Pour le détail des conditions de [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/), consultez notre guide mis à jour. En complément, certaines situations particulières peuvent aussi bénéficier d'une prise en charge :
+Depuis le **15 juin 2026**, Wegovy est **remboursé à 65 %** par l'Assurance Maladie sous conditions strictes (IMC ≥ 35 + comorbidité ou IMC ≥ 40, échec nutritionnel documenté, primo-prescription CSO/CHU). Pour les conditions détaillées, consultez notre [guide remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/). Certaines situations particulières peuvent aussi bénéficier d'une prise en charge complémentaire :
 
 #### Prise en charge hospitalière
 
@@ -119,14 +120,14 @@ Certaines mutuelles commencent à proposer une prise en charge partielle — con
 * **Garantie innovation médicale** : jusqu'à 500 € par an
 * **Contrats spécialisés** : remboursement jusqu'à 50%
 
-### Conditions du remboursement
+### Le remboursement depuis le 15 juin 2026
 
-Wegovy est remboursé à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026). Les critères d'éligibilité :
+Wegovy est remboursé à 65 % par l'Assurance Maladie depuis le 15 juin 2026. Les conditions d'éligibilité :
 
-* **IMC ≥ 35** avec au moins une comorbidité liée au poids, **ou IMC ≥ 40**
-* **Échec** d'une prise en charge nutritionnelle bien conduite
-* **Primo-prescription** par un professionnel exerçant dans une structure autorisée pour la prise en charge de l'obésité
-* **Suivi médical** en association à un régime hypocalorique et une activité physique adaptée
+* **IMC ≥ 35 kg/m² avec comorbidité** ou **IMC ≥ 40 kg/m²**
+* **Échec documenté** d'une prise en charge nutritionnelle
+* **Primo-prescription** réservée aux CSO, CHU ou services spécialisés
+* **Renouvellement** possible par le médecin traitant
 
 ## Où acheter Wegovy en France ?
 
@@ -227,8 +228,8 @@ Si Wegovy n'est pas disponible ou accessible :
 
 * **Indication première** : diabète de type 2
 * **Effet secondaire** : perte de poids
-* **Prix** : ~80,18 €/stylo (prix public 2026)
-* **Remboursement** : 65% en bithérapie avec metformine ; 30% en trithérapie avec insuline basale
+* **Prix** : ~77,60 €/stylo (prix public TTC)
+* **Remboursement** : oui, 30% (diabète de type 2 uniquement)
 
 **Saxenda** (liraglutide)
 

@@ -2,8 +2,8 @@
 title: "Prescription GLP-1 Télémédecine : Ordonnance en Ligne"
 description: "Prescription GLP-1 en télémédecine France 2026 : plateformes, critères médicaux et comment obtenir une ordonnance Wegovy ou Mounjaro."
 pubDate: 2026-03-17
-date: 2026-03-17
-updatedAt: 2026-03-17
+date: 2026-06-22
+updatedAt: 2026-06-22
 author: "Dr. Marie Dubois"
 category: "Médecins spécialisés"
 tags: ["télémédecine", "prescription", "glp1", "wegovy", "mounjaro", "en ligne", "ordonnance", "france", "2026", "médecin en ligne"]
@@ -41,9 +41,6 @@ Même après l'ouverture de la prescription aux généralistes, de nombreux méd
 ### L'essor des plateformes spécialisées
 
 Des plateformes de télémédecine généralistes (Qare, Doctolib, MaConsultation) et des acteurs spécialisés en santé métabolique (Charles.co, Mia.co, Jardé Médical) proposent désormais des consultations dédiées à la prise en charge de l'obésité et à la prescription des GLP-1. Certains acteurs américains ont également lancé des partenariats avec des fabricants comme Novo Nordisk pour proposer un circuit intégré téléconsultation-ordonnance-livraison.
-
-> **À lire aussi** : [prescription Ozempic en France](/collections/traitements-glp1/ozempic-ordonnance-prescription-france-2026/)
-
 
 ## Les critères médicaux : les mêmes que pour une consultation en présentiel
 
@@ -107,7 +104,7 @@ Les tarifs varient selon les plateformes :
 
 ### Le coût du médicament reste inchangé
 
-La téléconsultation ne change rien au prix du médicament lui-même, qui dépend de la pharmacie et de votre couverture santé. En 2026, [Wegovy coûte entre 169 et 360 €/mois](/collections/glp1-cout/prix-wegovy-france/) selon le dosage, et Mounjaro entre 230 et 440 €/mois (prix hors remboursement). **Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65% par la Sécurité Sociale pour l'obésité** (arrêté du 23 mai 2026), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée. Les 35% restants sont à la charge du patient ou de la mutuelle ; hors conditions d'éligibilité, le coût reste à la charge du patient.
+La téléconsultation ne change rien au prix du médicament lui-même, qui dépend de la pharmacie et de votre couverture santé. En 2026, [Wegovy coûte entre 147 et 350 €/mois](/collections/glp1-cout/prix-wegovy-france/) selon le dosage, et Mounjaro entre 176 et 433 €/mois. Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance Maladie pour le traitement de l'obésité, sous conditions : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle, avec une primo-prescription réservée aux CSO, CHU ou services spécialisés. Le renouvellement peut être assuré par votre médecin traitant.
 
 ## Comment choisir une plateforme sérieuse ?
 

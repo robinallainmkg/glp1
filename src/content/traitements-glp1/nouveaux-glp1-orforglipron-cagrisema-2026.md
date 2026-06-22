@@ -2,8 +2,8 @@
 title: "Orforglipron France : Nouveau Médicament Perte de Poids 2026"
 description: "Orforglipron France, nouveau médicament GLP-1 pour la perte de poids : CagriSema et amycrétine attendus en 2026-2027. Calendrier, efficacité et accès."
 pubDate: 2026-03-15
-date: "2026-03-15"
-updatedAt: 2026-03-15
+date: "2026-05-29"
+updatedAt: 2026-05-29
 author: "Dr. Sophie Dubois"
 category: "Traitements GLP-1"
 tags: ["glp1", "orforglipron", "cagrisema", "nouveaux traitements", "obésité", "2026"]
@@ -137,10 +137,10 @@ L'amycrétine est encore en **phase 3** en mars 2026. Les résultats complets so
 | CagriSema | Novo Nordisk | Injection hebdomadaire | AMM EMA en cours | 2027-2028 |
 | Amycrétine | Novo Nordisk | Comprimé oral quotidien | Phase 3 en cours | 2028-2029 |
 
-**Rappel des traitements déjà disponibles en France (2026) :**
+**Rappel des traitements déjà disponibles en France (mars 2026) :**
 - [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) : sémaglutide injectable, remboursé à 65% en bithérapie metformine pour le DT2
-- [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) : sémaglutide 2,4 mg, remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions)
-- [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) : tirzepatide, remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions), le plus efficace actuellement disponible
+- [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) : sémaglutide 2,4 mg, remboursé à 65 % depuis juin 2026 (sous conditions), pour l'obésité
+- [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) : tirzepatide, remboursé à 65 % depuis juin 2026 (sous conditions), le plus efficace actuellement disponible
 
 ---
 
@@ -158,7 +158,7 @@ En France, la question du remboursement reste entière. La HAS évalue chaque no
 
 - L'orforglipron devra démontrer un avantage par rapport au Wegovy et au Mounjaro pour obtenir un remboursement différencié
 - Le CagriSema, avec ses résultats d'efficacité supérieurs, a de bonnes chances d'obtenir un remboursement, sous réserve d'un prix acceptable
-- Le remboursement de Wegovy et Mounjaro (65% pour l'obésité depuis le 15 juin 2026) constitue un précédent important pour ces nouvelles molécules
+- Le remboursement de Wegovy et Mounjaro, effectif depuis le 15 juin 2026 (65 %, sous conditions d'IMC et de prescription initiale en CSO/CHU), constitue un précédent important pour ces nouvelles molécules
 
 ### Conseils pratiques pour les patients en attente
 
@@ -178,8 +178,8 @@ Pour les traitements actuellement disponibles, consultez notre [guide complet re
 | Traitement | Prix mensuel | Remboursement |
 |-----------|-------------|---------------|
 | Ozempic (DT2) | ~59,90 €/stylo | 30% (DT2 uniquement, sous [conditions de prescription ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) depuis février 2025) |
-| Wegovy (obésité) | 169-360 € | Remboursé 65% (obésité, dès le 15/06/2026, sous conditions) |
-| Mounjaro | 230-440 € | Remboursé 65% (obésité, dès le 15/06/2026, sous conditions) |
+| Wegovy (obésité) | ~147-350 € | Remboursé 65 % depuis juin 2026 (sous conditions) |
+| Mounjaro | ~176-433 € | Remboursé 65 % depuis juin 2026 (sous conditions) |
 | Orforglipron | Non commercialisé | — |
 | CagriSema | Non commercialisé | — |
 

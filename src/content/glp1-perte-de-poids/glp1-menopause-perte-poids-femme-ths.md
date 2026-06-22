@@ -2,8 +2,8 @@
 title: "GLP-1 et Ménopause : Maigrir avec Ozempic"
 description: "GLP-1 et ménopause : Wegovy, Mounjaro, Ozempic pour les femmes ménopausées. Synergie avec le THS et réduction de la graisse viscérale."
 pubDate: 2026-03-18
-date: 2026-03-18
-updatedAt: 2026-03-18
+date: 2026-06-22
+updatedAt: 2026-06-22
 author: "Dr. Marie Dubois"
 category: "Perte de poids"
 tags: ["glp1", "ménopause", "perte de poids", "wegovy", "mounjaro", "ozempic", "THS", "femme", "hormonothérapie", "graisse viscérale", "2026"]
@@ -127,13 +127,13 @@ Les chercheurs de la Mayo Clinic proposent plusieurs mécanismes explicatifs :
 
 Sur la base des données disponibles — notamment l'étude Mayo Clinic 2026 et les essais SURMOUNT — le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/) semble être le GLP-1 le plus efficace pour réduire la graisse viscérale abdominale chez les femmes ménopausées. Son double mécanisme d'action (GLP-1 + GIP) lui confère une efficacité supérieure sur la composition corporelle, avec une réduction de la graisse viscérale de l'ordre de 44 % dans SURMOUNT-1.
 
-**Prix** : 230 à 440 €/mois selon le dosage. Remboursé à 65 % pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel).
+**Prix** : 176 à 433 €/mois selon le dosage. Remboursé à 65 % depuis le 15 juin 2026 sous conditions (IMC ≥ 35 + comorbidité ou IMC ≥ 40, échec nutritionnel, primo-prescription CSO/CHU).
 
 ### Wegovy (sémaglutide 2,4 mg) : la référence bien étudiée
 
 [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) a le plus grand recul clinique pour la perte de poids chez les femmes ménopausées. Les données STEP sont robustes et les résultats sur la graisse viscérale bien documentés. Une perte de poids de 15 à 17 % est attendue chez les femmes ménopausées répondeuses.
 
-**Prix** : 169 à 360 €/mois selon le dosage. Remboursé à 65 % pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel).
+**Prix** : 147 à 350 €/mois selon le dosage. Remboursé à 65 % depuis le 15 juin 2026 sous conditions (IMC ≥ 35 + comorbidité ou IMC ≥ 40, échec nutritionnel, primo-prescription CSO/CHU).
 
 ### Ozempic (sémaglutide 0,5/1/2 mg) : uniquement si diabète de type 2
 
@@ -141,7 +141,7 @@ Sur la base des données disponibles — notamment l'étude Mayo Clinic 2026 et 
 
 ### Saxenda (liraglutide) : une option moins efficace mais disponible
 
-Saxenda est plus ancien et moins efficace que Wegovy ou Mounjaro (–8 % de poids en moyenne), mais il reste disponible et plus accessible dans certaines régions. Saxenda reste toutefois non remboursé : pour les femmes ménopausées qui ne remplissent pas les conditions de remboursement de Wegovy ou Mounjaro (IMC ≥ 35 avec comorbidité ou ≥ 40), c'est une option à discuter avec le médecin.
+Saxenda est plus ancien et moins efficace que Wegovy ou Mounjaro (–8 % de poids en moyenne), mais il reste disponible et plus accessible dans certaines régions. Pour les femmes ménopausées qui souhaitent commencer rapidement sans attendre le remboursement, c'est une option à discuter avec le médecin.
 
 ## Comment démarrer un traitement GLP-1 quand on est ménopausée {#comment-demarrer}
 
@@ -184,7 +184,7 @@ La question du THS et du risque de cancer du sein est indépendante des GLP-1. S
 
 ### Situation actuelle (juin 2026)
 
-Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance Maladie pour l'obésité, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée). La HAS avait rendu un avis favorable pour Wegovy (décembre 2024) et Mounjaro (décembre 2025), et l'arrêté du 23 mai 2026 a acté ce [remboursement entré en vigueur le 15 juin 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/).
+Depuis le **15 juin 2026**, Wegovy et Mounjaro sont **remboursés à 65 %** par l'Assurance Maladie pour le traitement de l'obésité, sous conditions : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, échec documenté d'une prise en charge nutritionnelle, primo-prescription réservée aux CSO/CHU. Le renouvellement peut être fait par votre médecin traitant. Pour le détail, consultez notre [guide remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ### Ce que cela coûte concrètement
 

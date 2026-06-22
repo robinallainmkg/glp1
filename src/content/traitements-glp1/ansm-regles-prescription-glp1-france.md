@@ -2,8 +2,8 @@
 title: "ANSM Prescription GLP-1 : Règles France 2025-2026"
 description: "ANSM prescription GLP-1 règles France 2025-2026 : tout médecin peut désormais prescrire les GLP-1. Formulaire obligatoire et conditions."
 pubDate: 2026-03-16
-date: "2026-03-16"
-updatedAt: 2026-03-16
+date: "2026-05-29"
+updatedAt: 2026-05-29
 author: "Dr. Marie Dubois"
 category: "Traitements"
 tags: ["glp1", "ANSM", "prescription", "réglementation", "France", "obésité", "diabète"]
@@ -40,10 +40,10 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 
 **Ce qui change concrètement** :
 
-- Votre médecin traitant peut vous prescrire [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) pour l'obésité dès un IMC ≥ 30 kg/m² (ou ≥ 27 kg/m² avec comorbidité liée au poids) et après échec d'une prise en charge nutritionnelle (2e intention). Le seuil IMC ≥ 35 s'applique uniquement aux conditions de remboursement à 65 %, pas à la prescription.
+- Votre médecin traitant peut vous prescrire [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) pour l'obésité, sous réserve d'un IMC initial >= 35 kg/m² et d'un échec préalable d'une prise en charge nutritionnelle (deuxième intention uniquement)
 - Il n'est plus nécessaire de consulter un spécialiste pour la première prescription
 - Le renouvellement peut également être assuré par le médecin traitant
-- Les conditions médicales d'éligibilité selon l'ANSM pour la prescription (AMM) : IMC >= 30 kg/m² (obésité) ou IMC >= 27 kg/m² avec au moins une comorbidité liée au poids. Les critères IMC >= 35 (avec comorbidité) ou >= 40 s'appliquent aux conditions de remboursement, effectif depuis le 15 juin 2026 pour Wegovy et Mounjaro.
+- Les conditions médicales d'éligibilité selon l'ANSM pour la prescription (AMM) : IMC >= 30 kg/m² (obésité) ou IMC >= 27 kg/m² avec au moins une comorbidité liée au poids. Les critères IMC >= 35 s'appliquent uniquement aux conditions de remboursement HAS (en cours d'évaluation).
 - Ces évolutions concernent aussi la prescription des [GLP-1 pour les adolescents obèses de 12 ans et plus](/collections/traitements-glp1/wegovy-mounjaro-adolescent-obesite-12-ans-france-guide/), un cadre spécifique encadré par l'ANSM
 
 **Ce qui ne change pas** :
@@ -64,9 +64,6 @@ Ce formulaire s'applique spécifiquement aux GLP-1 ayant une AMM pour le diabèt
 - Le prescripteur a évalué le rapport bénéfice/risque individuel
 
 **Important** : Ce formulaire ne concerne PAS les prescriptions de Wegovy ou Mounjaro pour l'obésité, qui suivent leurs propres conditions de prescription.
-
-> **À lire aussi** : [obtenir une ordonnance Ozempic en 2026](/collections/traitements-glp1/ozempic-ordonnance-prescription-france-2026/)
-
 
 ## Le rapport bénéfice/risque confirmé par l'ANSM
 
@@ -109,7 +106,7 @@ Si vous souffrez d'obésité et souhaitez un traitement GLP-1 :
 - Vous pouvez désormais consulter votre médecin traitant directement, sans passer par un spécialiste — découvrez le [parcours complet pour commencer un traitement GLP-1](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/)
 - Votre médecin évaluera votre éligibilité (IMC, comorbidités, traitements antérieurs) — [vérifiez vos critères d'éligibilité GLP-1](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/)
 - Les traitements approuvés pour l'obésité sont Wegovy et Mounjaro
-- **À noter** : Wegovy et Mounjaro sont remboursés à 65% pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026), sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription spécialisée). Hors critères, le coût reste à la charge du patient ou de sa mutuelle. Consultez nos guides sur le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/) et le [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/)
+- **Remboursement** : depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance Maladie pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel, prescription initiale en CSO/CHU). Consultez nos guides sur le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/) et le [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/)
 
 ### Pour les personnes en surpoids sans comorbidité
 
@@ -170,8 +167,8 @@ Si votre IMC est compris entre 25 et 30 sans comorbidité liée au poids :
 
 | Médicament | Molécule | Voie | Fréquence | Remboursement |
 |-----------|----------|------|-----------|---------------|
-| Wegovy | Sémaglutide 2,4 mg | Injection | Hebdomadaire | Oui (65%, obésité, dès le 15/06/2026, sous conditions) |
-| Mounjaro | Tirzépatide | Injection | Hebdomadaire | Oui (65%, obésité, dès le 15/06/2026, sous conditions) |
+| Wegovy | Sémaglutide 2,4 mg | Injection | Hebdomadaire | Oui, 65% (depuis juin 2026, sous conditions) |
+| Mounjaro | Tirzépatide | Injection | Hebdomadaire | Oui, 65% (depuis juin 2026, sous conditions) |
 | [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/) | Liraglutide 3 mg | Injection | Quotidienne | Non |
 
 Pour comparer ces traitements en détail, consultez notre [comparatif des GLP-1](/guides/quel-traitement-glp1-choisir/).
@@ -186,9 +183,9 @@ Non. Ozempic est indiqué uniquement pour le diabète de type 2. Pour la perte d
 
 Non. Le formulaire est rapide à remplir pour le médecin et s'intègre dans la consultation habituelle. Il ne crée pas d'étape administrative supplémentaire pour le patient. Son objectif est de vérifier que la prescription correspond bien à l'indication validée.
 
-### Les GLP-1 sont-ils remboursés pour l'obésité ?
+### Les GLP-1 seront-ils bientôt remboursés pour l'obésité ?
 
-Oui. Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65% pour l'obésité (arrêté du 23 mai 2026), sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, et primo-prescription en centre spécialisé. Consultez notre guide [remboursement GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/). Saxenda reste non remboursé.
+Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance Maladie pour le traitement de l'obésité, sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel, prescription initiale en CSO/CHU, renouvellement par le médecin traitant). Consultez notre [guide remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) pour tous les détails.
 
 ### L'ANSM a-t-elle identifié de nouveaux risques pour les GLP-1 ?
 
@@ -201,8 +198,6 @@ Oui. Avec l'arrêt programmé de Victoza fin 2026, votre médecin vous proposera
 ### Faut-il un bilan sanguin avant de commencer un GLP-1 ?
 
 Oui, un bilan biologique préalable est fortement recommandé. Il comprend au minimum : glycémie à jeun, HbA1c, bilan lipidique, créatinine (fonction rénale), transaminases (fonction hépatique). Selon votre profil, votre médecin pourra demander des examens complémentaires.
-
-L'ANSM rappelle les [précautions grossesse sous GLP-1](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/) : arrêt 2 mois avant la conception.
 
 ## Conclusion
 

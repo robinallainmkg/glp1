@@ -3,7 +3,8 @@ title: "Régime paléo GLP-1 alimentation ancestrale perte de poids"
 draft: true
 description: "Régime paléo GLP-1 alimentation ancestrale perte de poids : aliments autorisés, recettes et adaptation du paléolithique aux traitements modernes."
 pubDate: 2025-08-20
-date: 2025-08-20
+date: 2026-06-22
+updatedAt: 2026-06-22
 author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]
@@ -127,20 +128,20 @@ Pour tirer le meilleur du paléo sans ses inconvénients, une version adaptée e
 - **Déjeuner** : Filet de dinde + salade composée + noix de cajou
 - **Dîner** : Soupe de légumes mixés + blanc de poisson poché
 
-## Remboursement et coûts des GLP-1 (France, mars 2026)
+## Remboursement et coûts des GLP-1 (France, juin 2026)
 
 ### Ozempic (sémaglutide pour le diabète de type 2)
 - **Prix** : ~76,58 € par stylo
-- **Remboursement** : 65% en bithérapie metformine pour le DT2 (30% en trithérapie insuline basale)
+- **Remboursement** : 30% par l'Assurance Maladie pour le DT2
 - **ALD 30 (diabète de type 2)** : 100% du ticket modérateur. L'obésité seule n'est pas reconnue comme ALD en France en mars 2026.
 
 ### [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide pour l'obésité)
-- **Prix** : ~250 à 290 €/mois
-- **Remboursement** : remboursé à 65% depuis le 15 juin 2026 pour obésité et DT2
+- **Prix** : ~147 à 350 €/mois selon dosage
+- **Remboursement** : remboursé à 65 % depuis juin 2026 (conditions d'éligibilité : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle)
 
 ### Mounjaro (tirzepatide)
-- **Prix** : 230 à 440 €/mois selon dosage
-- **Remboursement** : remboursé à 65% depuis le 15 juin 2026 pour obésité et DT2
+- **Prix** : 176 à 434 €/mois selon dosage
+- **Remboursement** : remboursé à 65 % depuis juin 2026 (conditions d'éligibilité : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle)
 
 ## Conseils pratiques
 
@@ -163,8 +164,6 @@ Oui, mais une adaptation des doses d'insuline sera probablement nécessaire car 
 
 ### Le coût du régime paléo est-il plus élevé ?
 Généralement oui, car il est riche en viandes et poissons de qualité. Pour maîtriser le coût, misez sur les sardines et le thon en boîte (excellents et peu chers), les œufs, les légumineuses si vous faites un paléo modifié, et les fruits et légumes de saison.
-
-Associer régime paléo et GLP-1 nécessite de connaître les [tarifs Ozempic](/collections/glp1-cout/prix-ozempic-france/) actuels.
 
 ## Conclusion
 

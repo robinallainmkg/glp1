@@ -4,7 +4,8 @@ slug: "centres-mounjaro-france"
 description: "Centres Mounjaro France 2026 : liste des centres hospitaliers et spécialistes. Carte interactive, démarches et conseils pour accéder au traitement."
 author: "Dr. Sophie Martin"
 pubDate: 2025-10-09T10:00:00Z
-date: "2025-10-09"
+date: "2026-06-22"
+updatedAt: "2026-06-22"
 category: "Traitements GLP-1"
 tags: ["mounjaro", "accès", "centres", "france", "carte"]
 thumbnail: "/images/thumbnails/mounjaro-blue.webp"
@@ -17,11 +18,11 @@ secondaryKeywords: ["mounjaro hôpitaux", "où trouver mounjaro", "mounjaro chu"
 
 ## Centres Specialises Mounjaro en France 2026
 
-**Mise à jour : mars 2026**
+**Mise à jour : juin 2026**
 
 <div style="background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 100%); border-left: 5px solid #FF9800; padding: 1.5rem; margin: 2rem 0; border-radius: 12px;">
   
-📢 **Important** : Mounjaro (tirzepatide) a obtenu son AMM européenne pour le diabète de type 2 en septembre 2022, puis une extension d'indication pour la gestion du poids (obésité/surpoids) en novembre 2023, et est commercialisé en France depuis novembre 2024. Cette page recense les centres et spécialistes qui proposent actuellement le traitement.
+📢 **Important** : Mounjaro (tirzepatide) a obtenu son autorisation de mise sur le marché (AMM) européenne en septembre 2022 et est commercialisé en France depuis novembre 2024. Cette page recense les centres et spécialistes qui proposent actuellement le traitement.
 
 </div>
 
@@ -304,7 +305,7 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 #### A) Pharmacie de ville (si disponible)
 - Ordonnance sécurisée du spécialiste
 - Vérifiez la disponibilité avant (stock limité en 2026)
-- Prix : 230€ à 440€/mois selon dosage (remboursé à 65% pour l'obésité depuis le 15 juin 2026, sous conditions)
+- Prix : 176€ à 434€/mois selon dosage (remboursé à 65 % depuis juin 2026 sous conditions d'éligibilité)
 
 #### B) Importation nominative
 - Demande spéciale via le pharmacien hospitalier
@@ -319,17 +320,18 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 | Aspect | Détail |
 |--------|--------|
-| **Prix Mounjaro** | 230€ à 440€/mois selon dosage (prix libre en pharmacie) |
-| **Remboursement Sécu** | ✅ Remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions) |
+| **Prix Mounjaro** | 176€ à 434€/mois selon dosage |
+| **Remboursement Sécu** | ✅ Remboursé à 65 % depuis le 15 juin 2026 (IMC ≥ 35 + comorbidité ou IMC ≥ 40) |
 | **Remboursement Mutuelle** | Selon contrat (variable) |
 | **Prescription** | Sur ordonnance uniquement |
 
 ### Évolution du remboursement
 
-📅 **Depuis le 15 juin 2026** : Mounjaro (tirzépatide) est **remboursé à 65%** par l'Assurance Maladie dans l'indication obésité (arrêté du 10 juin 2026 (abrogeant l'arrêté du 23 mai 2026)) — voir le [remboursement de Mounjaro](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/).
-- Conditions : IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40
-- Après échec d'une prise en charge nutritionnelle bien conduite
-- Primo-prescription réservée aux CSO (Centres Spécialisés de l'Obésité) ou CHU
+📅 **Juin 2026** : Mounjaro est **remboursé à 65 %** par l'Assurance Maladie depuis le 15 juin 2026 pour le traitement de l'obésité.
+- Conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m²
+- Après échec documenté d'une prise en charge nutritionnelle
+- Prescription initiale réservée aux CSO/CHU ou services spécialisés d'endocrinologie
+- Renouvellement possible par le médecin traitant
 
 ---
 
@@ -382,9 +384,9 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 2. **Wegovy** (sémaglutide haute dose)
    - ✅ Disponible en France
-   - ✅ Remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel)
+   - ✅ Remboursé à 65 % depuis juin 2026 (mêmes conditions d'éligibilité que Mounjaro)
    - Efficacité : -17% de poids
-   - Prix : ~272€/mois
+   - Prix : ~147 à 350€/mois selon dosage
 
 3. **Importation nominative de Mounjaro**
    - Via pharmacien hospitalier
@@ -445,7 +447,7 @@ Cette page est mise à jour régulièrement avec :
 - ✅ Changements de remboursement
 - ✅ Retours d'expérience des patients
 
-**Dernière mise à jour** : mars 2026
+**Dernière mise à jour** : juin 2026
 
 ---
 
@@ -509,4 +511,4 @@ Vous avez des questions sur l'accès à Mounjaro dans votre région ? Utilisez l
 
 **Auteur** : Dr. Sophie Martin, Endocrinologue
 **Date de publication** : 9 octobre 2025
-**Dernière mise à jour** : mars 2026
+**Dernière mise à jour** : juin 2026

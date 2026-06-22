@@ -2,8 +2,8 @@
 title: "Médecin Généraliste Prescrire Wegovy Mounjaro : Conditions"
 description: "Médecin généraliste prescrire Wegovy Mounjaro : depuis juin 2025, conditions IMC, formulaire Ameli et critères d'éligibilité en France."
 pubDate: 2026-03-16
-date: 2026-03-16
-updatedAt: 2026-03-16
+date: 2026-06-22
+updatedAt: 2026-06-22
 author: "Dr. Marie Dubois"
 category: "Médecins spécialisés"
 tags: ["médecin généraliste", "prescription", "wegovy", "mounjaro", "glp1", "conditions", "imc", "france", "2025"]
@@ -132,7 +132,7 @@ Votre médecin généraliste tiendra compte de plusieurs facteurs pour vous reco
 | Critère | Wegovy | Mounjaro |
 |---------|--------|---------|
 | Perte de poids attendue | -15 à -17% | -20 à -22% |
-| Prix mensuel (juin 2026) | 169-360€ | 230-440€ |
+| Prix mensuel (mars 2026) | 169-360€ | 230-440€ |
 | Recul clinique | Plus long (depuis 2021) | Plus récent (depuis 2024) |
 | Bénéfice cardiovasculaire | Prouvé (étude SELECT) | En cours d'évaluation |
 | Diabète associé | Moins ciblé | Double action GLP-1+GIP |
@@ -154,30 +154,27 @@ Même si votre généraliste peut prescrire ces traitements, il pourra vous orie
 
 ### Ce que vous devrez payer
 
-Depuis le 15 juin 2026, Wegovy et Mounjaro sont **remboursés à 65 % par la Sécurité Sociale** pour l'obésité, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en structure spécialisée). Hors éligibilité au remboursement, le coût reste à votre charge (sauf aide de votre mutuelle) :
+Depuis le **15 juin 2026**, Wegovy et Mounjaro sont **remboursés à 65 % par l'Assurance Maladie** pour le traitement de l'obésité, sous conditions strictes :
 
-| Traitement | Coût mensuel estimé |
-|------------|---------------------|
-| Wegovy (dose initiation) | ~169€/mois |
-| Wegovy (dose cible 2,4 mg) | ~360€/mois |
-| Mounjaro (dose initiation) | ~230-290€/mois |
-| Mounjaro (dose cible 15 mg) | ~350-440€/mois |
-| Saxenda (dose cible) | ~200-250€/mois |
+- **IMC ≥ 35 kg/m² avec comorbidité** ou **IMC ≥ 40 kg/m²**
+- Échec documenté d'une prise en charge nutritionnelle
+- Primo-prescription réservée aux CSO (Centre Spécialisé Obésité), CHU ou services spécialisés
+- Renouvellement possible par le médecin traitant (généraliste)
 
-### Le remboursement obésité depuis le 15 juin 2026
+| Traitement | Prix officiel mensuel | Remboursement |
+|------------|---------------------|---------------|
+| Wegovy (dose initiation) | ~147€/mois | 65 % (sous conditions) |
+| Wegovy (dose cible 2,4 mg) | ~350€/mois | 65 % (sous conditions) |
+| Mounjaro (dose initiation) | ~176€/mois | 65 % (sous conditions) |
+| Mounjaro (dose cible 15 mg) | ~433€/mois | 65 % (sous conditions) |
+| Saxenda (dose cible) | ~200-250€/mois | Non remboursé |
 
-La HAS (Haute Autorité de Santé) a rendu un avis favorable au remboursement de Wegovy (décembre 2024) puis de Mounjaro (décembre 2025). À l'issue des négociations de prix avec le CEPS, l'arrêté du 23 mai 2026 (JO du 28 mai) a rendu effectif le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/) — comme celui de Wegovy — à **65 % depuis le 15 juin 2026**, sous conditions :
-
-- IMC ≥ 35 kg/m² avec comorbidité, ou IMC ≥ 40 kg/m²
-- Échec d'une prise en charge nutritionnelle bien conduite
-- Primo-prescription réservée aux structures spécialisées (CSO, CHU, SMR nutrition/endocrinologie)
-
-Consultez notre [guide complet du remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) pour suivre l'évolution de ce dossier.
+Consultez notre [guide complet du remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) pour le détail des conditions.
 
 ## Questions fréquentes
 
 **Mon médecin traitant peut-il vraiment me prescrire Wegovy ou Mounjaro ?**
-Oui, depuis le 23 juin 2025, votre médecin traitant peut prescrire Wegovy et Mounjaro. Précision importante : pour bénéficier du remboursement à 65 % (depuis le 15 juin 2026), la primo-prescription doit être réalisée par un spécialiste en endocrinologie/nutrition dans une structure de niveau 2 ou 3 (CSO, CHU). Le renouvellement peut ensuite être assuré par tout médecin.
+Oui, depuis juin 2025. Il n'est plus nécessaire de consulter un spécialiste pour la première prescription. Votre médecin traitant est pleinement habilité à initier et renouveler ces traitements.
 
 **Faut-il plusieurs consultations avant d'obtenir la prescription ?**
 Souvent oui. Une première consultation pour l'évaluation et la prescription du bilan biologique, puis une deuxième pour la prescription du traitement après réception des résultats. Certains médecins qui ont déjà accès à votre dossier médical (bilan récent, suivi régulier) peuvent prescrire en une seule consultation.

@@ -3,7 +3,7 @@ title: "Quel traitement GLP-1 choisir ? Guide complet 2026"
 description: "Découvrez comment choisir le bon traitement GLP-1. Comparaison Ozempic, Wegovy, Mounjaro et autres. Guide d'expert pour faire le bon choix."
 pageType: "Guide statique"
 noIndex: false
-date: 2025-08-30
+date: 2026-06-22
 mainKeyword: "quel traitement GLP-1 choisir"
 thumbnail: "/images/thumbnails/quel-traitement-glp1-choisir.svg"
 thumbnailAlt: "Illustration pour l'article quel-traitement-glp1-choisir"
@@ -11,7 +11,7 @@ keywords: ['quel glp1 choisir', 'comparaison glp1', 'meilleur traitement glp1', 
 seoTitle: "Quel traitement GLP-1 choisir en 2025 ? Comparatif Complet"
 seoDescription: "Comparaison détaillée des GLP-1 (Ozempic, Wegovy, Mounjaro, Saxenda) : prix, efficacité, effets secondaires. Trouvez le traitement adapté à votre situation."
 publishedAt: '2025-08-30'
-updatedAt: '2025-12-27'
+updatedAt: '2026-06-22'
 author: 'Dr. Marie Dubois'
 readingTime: 15
 ---
@@ -107,8 +107,8 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 | Médicament | Molécule | Indication | Perte poids | Fréquence | Prix/mois | Remboursement |
 |------------|----------|------------|-------------|-----------|-----------|---------------|
 | **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~80,18€/stylo | 65% DT2 |
-| **Wegovy** | Sémaglutide HD | Obésité | 10-15% | Hebdomadaire | 169-360€ | 65% obésité (dès le 15/06/2026, sous conditions) |
-| **Mounjaro** | Tirzépatide | Diabète + Obésité | 15-20% | Hebdomadaire | 230-440€ | 65% obésité (dès le 15/06/2026, sous conditions) |
+| **Wegovy** | Sémaglutide HD | Obésité | 10-15% | Hebdomadaire | ~147-350€ | Remboursé 65% (obésité, sous conditions) |
+| **Mounjaro** | Tirzépatide | Diabète + Obésité | 15-20% | Hebdomadaire | ~176-433€ | Remboursé 65% (obésité, sous conditions) |
 | **Trulicity** | Dulaglutide | Diabète | 3-8% | Hebdomadaire | ~81€ | 65% DT2 |
 | **Victoza** | Liraglutide | Diabète | 5-8% | Quotidienne | ~60€ | 65% DT2 |
 | **Saxenda** | Liraglutide HD | Obésité | 8-12% | Quotidienne | 240-300€ | Non remboursé |
@@ -153,12 +153,12 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - Trulicity (~81€/mois, remboursé 65% DT2)
 - Rybelsus (80-110€/mois, non remboursé)
 
-#### Budget moyen :
-- Wegovy (169-360€/mois ; remboursé 65% pour l'obésité depuis le 15/06/2026, sous conditions)
-- Saxenda (240-300€/mois ; non remboursé)
+#### Budget moyen (remboursés 65% pour l'obésité depuis juin 2026) :
+- Wegovy (~147-350€/mois, reste à charge ~51-123€)
+- Mounjaro (~176-433€/mois, reste à charge ~62-152€)
 
-#### Budget élevé :
-- Mounjaro (230-440€/mois ; remboursé 65% pour l'obésité depuis le 15/06/2026, sous conditions)
+#### Budget non remboursé :
+- Saxenda (240-300€/mois, entièrement à charge)
 
 ## Effets secondaires et tolérance
 
@@ -202,8 +202,8 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 #### Taux de remboursement :
 - **65%** pour Trulicity (dulaglutide) et Victoza (liraglutide) en diabète de type 2.
 - **65%** pour Ozempic (sémaglutide) en diabète de type 2 (en bithérapie metformine).
-- **65%** pour Wegovy et Mounjaro dans l'indication obésité depuis le 15 juin 2026, sous conditions (IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée).
-- **Non remboursé** : Rybelsus (avis HAS défavorable) et Saxenda.
+- **Remboursé 65%** pour Wegovy et Mounjaro (obésité, depuis le 15 juin 2026, sous conditions : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel, prescription initiale en CSO/CHU).
+- **Remboursé 65 %** (depuis juin 2026, obésité): Rybelsus (avis HAS défavorable), Saxenda.
 - **Supplément** possible selon mutuelle pour les médicaments remboursés (30-35% restants)
 
 ### Coûts réels après remboursement
@@ -214,13 +214,13 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 | Victoza | ~60€ | 65% (DT2) | ~21€ |
 | Trulicity | ~81€ | 65% (DT2) | ~28€ |
 | Rybelsus | 80-110€ | Non remboursé | 80-110€ (à charge) |
-| Wegovy | 169-360€ | 65% (obésité, sous conditions) | ~59-126€ (si éligible) |
-| Mounjaro | 230-440€ | 65% (obésité, sous conditions) | ~81-154€ (si éligible) |
+| Wegovy | ~147-350€ | Remboursé 65% (obésité) | ~51-123€ (après remboursement) |
+| Mounjaro | ~176-433€ | Remboursé 65% (obésité) | ~62-152€ (après remboursement) |
 | Saxenda | 240-300€ | Non remboursé | 240-300€ (à charge) |
 
 ### Aides financières disponibles
 
-1. **Mutuelles** : Renseignez-vous auprès de votre mutuelle pour une éventuelle prise en charge du reste à charge (Wegovy et Mounjaro remboursés à 65% pour l'obésité depuis le 15/06/2026, sous conditions) ou des traitements non remboursés (Saxenda)
+1. **Mutuelles** : Renseignez-vous auprès de votre mutuelle pour la prise en charge du ticket modérateur de Wegovy et Mounjaro (remboursés à 65 % depuis juin 2026), ou une éventuelle prise en charge partielle de Saxenda (non remboursé)
 2. **Complémentaire santé solidaire (CSS)** : Complète la couverture pour revenus modestes (médicaments remboursés uniquement)
 3. **Aide médicale d'État** : Pour situations précaires
 

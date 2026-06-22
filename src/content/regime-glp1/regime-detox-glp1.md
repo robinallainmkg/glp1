@@ -3,12 +3,13 @@ title: "Régime détox GLP-1 purification traitement : Guide"
 draft: true
 description: "Régime détox GLP-1 purification traitement : programme sécurisé pour purifier l'organisme avec des aliments détoxifiants sous traitement."
 pubDate: 2025-08-20
-date: 2025-08-20
+date: 2026-06-22
+updatedAt: 2026-06-22
 author: "Dr. Émilie Martin"
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]
 collection: "régime-glp1"
-thumbnail: "/images/thumbnails/regime-detox-glp1.jpg"
+thumbnail: "/images/thumbnails/régime-detox-glp1.jpg"
 thumbnailAlt: "Illustration pour l'article régime-detox-glp1"
 featured: false
 priority: 5
@@ -117,16 +118,16 @@ Pour une semaine de rééquilibrage alimentaire adapté aux patients GLP-1 :
 
 ### Ozempic (sémaglutide pour le diabète de type 2)
 - **Prix** : ~76,58 € par stylo prérempli
-- **Remboursement** : 65% pour le diabète de type 2 (SMR Important selon HAS — vérifier sur ameli.fr)
+- **Remboursement** : 30% pour le diabète de type 2
 - **ALD 30 (diabète de type 2)** : prise en charge à 100% du ticket modérateur. L'obésité seule n'est pas reconnue comme ALD en France en mars 2026.
 
 ### Wegovy (sémaglutide pour l'obésité)
-- **Prix** : ~250 à 290 €/mois
-- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40)
+- **Prix** : ~147 à 350 €/mois selon dosage
+- **Remboursement** : remboursé à 65 % depuis juin 2026 (conditions d'éligibilité : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle)
 
 ### Mounjaro (tirzepatide)
-- **Prix** : 230 à 440 €/mois selon dosage
-- **Remboursement** : remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40)
+- **Prix** : 176 à 434 €/mois selon dosage
+- **Remboursement** : remboursé à 65 % depuis juin 2026 (conditions d'éligibilité : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec documenté d'une prise en charge nutritionnelle)
 
 ## Précautions importantes
 
@@ -135,9 +136,6 @@ Pour une semaine de rééquilibrage alimentaire adapté aux patients GLP-1 :
 **Les cures de jus et jeûnes prolongés sont contre-indiqués** sous traitement GLP-1. L'absence de nourriture solide peut aggraver les nausées, provoquer des hypoglycémies chez les patients diabétiques et aggraver les [carences nutritionnelles sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) ainsi que compromettre l'apport protéique nécessaire à la préservation musculaire. La HAS déconseille formellement tout jeûne non médical chez les patients sous traitement antidiabétique.
 
 **Les compléments "détox" sans avis médical** (charbon actif, argile, certaines plantes comme la valériane ou la réglisse à forte dose) peuvent interagir avec l'absorption des médicaments ou fatiguer les reins. Demandez toujours l'avis de votre médecin ou pharmacien.
-
-
-> **À lire aussi** : [micronutriments et vitamines](/collections/regime-glp1/glp1-micronutriments/)
 
 ## FAQ
 
@@ -149,8 +147,6 @@ Oui, l'artichaut est un excellent aliment sous Ozempic. Il facilite la digestion
 
 ### Les probiotiques aident-ils à gérer les effets secondaires digestifs des GLP-1 ?
 Plusieurs études suggèrent que les probiotiques (yaourt nature, kéfir, choucroute lacto-fermentée) peuvent améliorer le confort digestif sous GLP-1. Ils ne traitent pas les nausées mais peuvent réduire les ballonnements et améliorer le transit. Intégrez-les progressivement. Le régime détox peut aider à atténuer certains [effets secondaires digestifs](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) liés aux traitements GLP-1.
-
-Avant de débuter un protocole détox sous GLP-1, renseignez-vous sur le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/).
 
 ## Conclusion
 
