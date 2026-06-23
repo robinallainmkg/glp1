@@ -36,37 +36,34 @@ SELECT 'ga_metrics' as tbl, MAX(date) FROM ga_metrics UNION ALL SELECT 'gsc_metr
 - Push sur `main` déclenche le deploy
 - **NE JAMAIS court-circuiter les agents** — toujours passer par le pipeline pour les modifications
 
-## Monetisation — Sinocare + Coach IA
+## Monetisation — Dossier GLP-1 payant + Coach IA (funnel gratuit)
 
-**Politique active depuis 12/05/2026** : Sinocare-only (affiliation produits sante) + Coach IA (abonnement)
+**Politique active depuis 06/2026** : produit payant unique = **Dossier GLP-1 Personnalise (4,99€)**. Le Coach IA reste **gratuit** et sert de funnel. **AUCUNE affiliation** (Sinocare ET Annette desactives, zero revenu d'affiliation).
 
-### Annette.care — DESACTIVE
-- Tous les composants Annette (PartnerCTA, PartnerSidebar, PartnerComparator) sont **neutralises** (rendu vide)
-- Les composants restent dans le code pour compat des imports mais ne rendent RIEN
-- **NE PAS reactiver** sans decision explicite de l'utilisateur
-- Ancien code promo CARE50, ancien lien affilie — ne plus utiliser
+### Dossier GLP-1 Personnalise (4,99€) — produit principal
+- **Landing** : `src/pages/dossier-glp1.astro` → `/dossier-glp1/` (hero + formulaire 6 etapes + FAQ)
+- **Page retour paiement** : `src/pages/mon-espace/dossier/index.astro` (poll du statut + telechargement)
+- **Edge functions** :
+  - `stripe-payment` — cree la session Stripe Checkout (produit `dossier`, 499 cents, guest email OK, pas besoin de compte)
+  - `stripe-webhook` — `handleDossierPurchase` : marque le dossier `paid` puis appelle `generate-dossier`
+  - `generate-dossier` — genere le HTML (verdict eligibilite, CSO par departement, checklist RDV, questions medecin) → stocke dans le bucket Storage `dossiers`
+- **Table Supabase** : `dossiers` (intake + `imc` calcule + verdict + pdf_url + statut `pending`→`paid`→`generated`)
+- **Points d'entree** : bouton "Mon Dossier" (header), `DossierSidebar` (sidebar articles), bloc dedie sur la home, et via le chat (tag `[[DOSSIER_READY]]` parse dans ai-coach)
+- **DA OBLIGATOIRE** : vert fonce `#1a3c34` / vert action `#16a34a` (coherence site) — JAMAIS de bleu
 
-### Sinocare — Affiliation produits sante (actif)
-- **Callouts produits** : glucometres, tensiometres, CGM integres dans les articles pertinents
-- **Tracking** : `affiliate_clicks` table avec `element = 'sinocare_callout'`
-- Pages actives : prix-ozempic, prix-mounjaro, effets-secondaires, traitements
-
-### Coach IA — Monetisation principale (actif)
+### Coach IA — funnel gratuit (PAS un produit payant)
 - **Edge function** : `supabase/functions/ai-coach/index.ts` (Groq/Llama 3.3 70B + RAG Mistral)
 - **Widget** : `src/components/AiCoach.astro` — chat flottant sur toutes les pages
 - **Active dans** : BaseLayout, StaticLayout, UnifiedLayout, DiagnosticLayout
-- **Composants conversion** : `CoachCTA` (inline articles), `CoachSidebar` (sidebar articles)
-- **Injection** : CoachCTA insere avant le 3e H2 dans les articles (client-side)
-- **Metriques** : ~30 sessions/sem, ~1.7 leads/jour depuis activation
+- **Composants** : `CoachCTA` (inline articles), `CoachSidebar` (sidebar articles)
+- **Role** : aide gratuitement, puis propose le Dossier au bon moment (apres collecte IMC + comorbidites)
+- **Style** : sobre, SANS emojis pictographiques (coches `✓` et fleches `→` OK)
 
-### Tracking des clics affilies :
-- **Table Supabase** : `affiliate_clicks` (partner, campaign, page_url, element, session_id, created_at)
-- **JS client** : `AffiliateTracker.astro` intercepte les clics `rel="sponsored"` + liens partenaires
-- **Requete reporting** :
-  ```sql
-  SELECT partner, campaign, element, count(*), date_trunc('day', created_at) as jour
-  FROM affiliate_clicks GROUP BY partner, campaign, element, jour ORDER BY jour DESC;
-  ```
+### Sinocare / Annette — DESACTIVES
+- **Plus aucune affiliation.** Composants Annette (PartnerCTA, PartnerSidebar, PartnerComparator) neutralises (rendu vide).
+- Callouts Sinocare retires. Ancien code promo CARE50, anciens liens affilies — ne plus utiliser.
+- **NE PAS reactiver** sans decision explicite de l'utilisateur.
+- `affiliate_clicks` + `AffiliateTracker.astro` restent en place (historique) mais ne sont plus une source de revenus.
 
 ## Structure du projet
 

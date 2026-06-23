@@ -9,27 +9,27 @@ const { context = 'general' } = Astro.props;
 
 const messages: Record<string, { title: string; text: string; cta: string }> = {
   prix: {
-    title: '💬 Besoin d\'aide pour le remboursement ?',
+    title: 'Besoin d\'aide pour le remboursement ?',
     text: 'Notre Coach IA peut vous guider sur les options de prise en charge et les démarches auprès de votre mutuelle.',
     cta: 'Parler au Coach IA'
   },
   effets: {
-    title: '💬 Des effets secondaires vous inquiètent ?',
+    title: 'Des effets secondaires vous inquiètent ?',
     text: 'Posez vos questions au Coach IA pour des informations personnalisées. Il vous orientera vers un médecin si nécessaire.',
     cta: 'Poser ma question'
   },
   remboursement: {
-    title: '💬 Perdu dans les démarches de remboursement ?',
+    title: 'Perdu dans les démarches de remboursement ?',
     text: 'Le Coach IA connaît les conditions de prise en charge et peut vous guider étape par étape.',
     cta: 'Me faire aider'
   },
   guide: {
-    title: '💬 Des questions sur votre traitement ?',
+    title: 'Des questions sur votre traitement ?',
     text: 'Le Coach IA répond à vos questions sur les GLP-1 en temps réel, gratuitement.',
     cta: 'Parler au Coach IA'
   },
   general: {
-    title: '💬 Une question sur les GLP-1 ?',
+    title: 'Une question sur les GLP-1 ?',
     text: 'Notre Coach IA est disponible 24h/24 pour répondre à vos questions sur les traitements GLP-1 en France.',
     cta: 'Poser ma question'
   }
@@ -39,7 +39,6 @@ const msg = messages[context] || messages.general;
 ---
 
 <div class="coach-cta-block">
-  <div class="coach-cta-icon">🤖</div>
   <div class="coach-cta-content">
     <h3>{msg.title}</h3>
     <p>{msg.text}</p>

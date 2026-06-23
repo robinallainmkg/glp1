@@ -17,7 +17,7 @@ import { supabaseConfig } from '../lib/supabase.js';
   <!-- Bulle teaser (visibilite du Coach) -->
   <div id="coach-teaser" class="coach-teaser" style="display:none;">
     <button class="coach-teaser-close" aria-label="Fermer">&times;</button>
-    <span>👋 Une question sur ton traitement&nbsp;? <strong>Le Coach GLP-1 répond, gratuitement.</strong></span>
+    <span>Une question sur ton traitement&nbsp;? <strong>Le Coach GLP-1 répond, gratuitement.</strong></span>
   </div>
 
   <!-- Panel chat -->
@@ -48,7 +48,7 @@ import { supabaseConfig } from '../lib/supabase.js';
         <div style="display:flex;flex-direction:column;gap:2px;min-width:0;">
           <span style="font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:0 4px;color:#16a34a;">Coach GLP-1</span>
           <div class="coach-bubble coach-bubble-assistant">
-            Bonjour 👋 Je suis le Coach GLP-1. Je réponds en direct sur les prix, le <strong>remboursement à 65%</strong> (nouveau au 15 juin), les effets ou comment obtenir ton traitement.<br><br>
+            Bonjour ! Je suis le Coach GLP-1. Je réponds en direct sur les prix, le <strong>remboursement à 65%</strong> (nouveau au 15 juin), les effets ou comment obtenir ton traitement.<br><br>
             Par quoi veux-tu commencer ?
           </div>
         </div>
@@ -314,7 +314,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     transform: translateX(2px);
   }
   .coach-sources a::before {
-    content: "📄 ";
+    content: "";
     font-size: 0.75rem;
   }
 
@@ -844,52 +844,52 @@ import { supabaseConfig } from '../lib/supabase.js';
 
     if (path.includes('ozempic')) {
       actions = [
-        { q: "Suis-je éligible au remboursement à 65% ?", label: "✅ Suis-je éligible ?" },
+        { q: "Suis-je éligible au remboursement à 65% ?", label: "Suis-je éligible ?" },
         { q: "Quel est le prix d'Ozempic en pharmacie ?", label: "Prix Ozempic" },
         { q: "Quels sont les effets secondaires d'Ozempic ?", label: "Effets secondaires" },
         { q: "Comment obtenir Ozempic ?", label: "Comment l'obtenir ?" }
       ];
     } else if (path.includes('wegovy')) {
       actions = [
-        { q: "Suis-je éligible au remboursement de Wegovy ?", label: "✅ Suis-je éligible ?" },
-        { q: "Combien vais-je payer pour Wegovy avec le remboursement à 65% ?", label: "💰 Combien je paierai ?" },
+        { q: "Suis-je éligible au remboursement de Wegovy ?", label: "Suis-je éligible ?" },
+        { q: "Combien vais-je payer pour Wegovy avec le remboursement à 65% ?", label: "Combien je paierai ?" },
         { q: "Quelle est la différence entre Wegovy et Mounjaro ?", label: "Wegovy vs Mounjaro" },
         { q: "Quels sont les effets secondaires de Wegovy ?", label: "Effets secondaires" }
       ];
     } else if (path.includes('mounjaro')) {
       actions = [
-        { q: "Suis-je éligible au remboursement de Mounjaro ?", label: "✅ Suis-je éligible ?" },
-        { q: "Combien vais-je payer pour Mounjaro avec le remboursement à 65% ?", label: "💰 Combien je paierai ?" },
+        { q: "Suis-je éligible au remboursement de Mounjaro ?", label: "Suis-je éligible ?" },
+        { q: "Combien vais-je payer pour Mounjaro avec le remboursement à 65% ?", label: "Combien je paierai ?" },
         { q: "Quelle différence entre Mounjaro et Wegovy ?", label: "Mounjaro vs Wegovy" },
         { q: "Quels sont les effets secondaires de Mounjaro ?", label: "Effets secondaires" }
       ];
     } else if (path.includes('prix') || path.includes('remboursement') || path.includes('cout')) {
       actions = [
-        { q: "Suis-je éligible au remboursement à 65% ?", label: "✅ Suis-je éligible ?" },
-        { q: "Qu'est-ce qui change avec le remboursement du 15 juin 2026 ?", label: "📅 Remboursement 15 juin" },
-        { q: "Combien je paierai après le remboursement ?", label: "💰 Mon reste à charge" },
-        { q: "Trouve une pharmacie pas chère près de chez moi", label: "📍 Pharmacie près de moi" }
+        { q: "Suis-je éligible au remboursement à 65% ?", label: "Suis-je éligible ?" },
+        { q: "Qu'est-ce qui change avec le remboursement du 15 juin 2026 ?", label: "Remboursement 15 juin" },
+        { q: "Combien je paierai après le remboursement ?", label: "Mon reste à charge" },
+        { q: "Trouve une pharmacie pas chère près de chez moi", label: "Pharmacie près de moi" }
       ];
     } else if (path.includes('effet') || path.includes('secondaire')) {
       actions = [
         { q: "Comment réduire les nausées sous GLP-1 ?", label: "Réduire les nausées" },
         { q: "Les effets secondaires disparaissent-ils avec le temps ?", label: "Ça s'améliore ?" },
         { q: "Que faire en cas d'effet secondaire grave ?", label: "Effets graves" },
-        { q: "Suis-je éligible au remboursement à 65% ?", label: "✅ Suis-je éligible ?" }
+        { q: "Suis-je éligible au remboursement à 65% ?", label: "Suis-je éligible ?" }
       ];
     } else if (path.includes('poids') || path.includes('maigrir') || path.includes('regime')) {
       actions = [
-        { q: "Suis-je éligible à un traitement GLP-1 pour maigrir ?", label: "✅ Suis-je éligible ?" },
+        { q: "Suis-je éligible à un traitement GLP-1 pour maigrir ?", label: "Suis-je éligible ?" },
         { q: "Combien de poids peut-on perdre avec un GLP-1 ?", label: "Perte de poids attendue" },
         { q: "Quel régime alimentaire suivre sous GLP-1 ?", label: "Alimentation" },
         { q: "Comment préserver mes muscles pendant la perte de poids ?", label: "Préserver les muscles" }
       ];
     } else {
       actions = [
-        { q: "Suis-je éligible au remboursement à 65% ?", label: "✅ Suis-je éligible ?" },
-        { q: "Combien coûte un traitement GLP-1 et est-il remboursé ?", label: "💰 Prix & remboursement" },
+        { q: "Suis-je éligible au remboursement à 65% ?", label: "Suis-je éligible ?" },
+        { q: "Combien coûte un traitement GLP-1 et est-il remboursé ?", label: "Prix & remboursement" },
         { q: "Comment obtenir une ordonnance pour un GLP-1 ?", label: "Obtenir une ordonnance" },
-        { q: "Trouve une pharmacie près de chez moi", label: "📍 Pharmacie près de moi" }
+        { q: "Trouve une pharmacie près de chez moi", label: "Pharmacie près de moi" }
       ];
     }
 
@@ -1203,14 +1203,14 @@ import { supabaseConfig } from '../lib/supabase.js';
     wrap.className = 'coach-capture';
     wrap.style.cssText = 'margin-top:10px;padding:14px;border-radius:12px;background:linear-gradient(135deg,#ecfdf5,#d1fae5);border:1px solid #6ee7b7;';
     wrap.innerHTML =
-      '<p style="margin:0 0 8px 0;font-size:0.82rem;color:#065f46;font-weight:600;">📋 ' + escapeHtml(promptText) + '</p>' +
+      '<p style="margin:0 0 8px 0;font-size:0.82rem;color:#065f46;font-weight:600;">' + escapeHtml(promptText) + '</p>' +
       '<div style="display:flex;gap:6px;">' +
         '<input type="email" class="coach-capture-input" placeholder="ton@email.fr" autocomplete="email" style="flex:1;min-width:0;padding:9px 11px;border-radius:8px;border:1px solid #a7f3d0;font-size:0.85rem;" />' +
         '<button class="coach-capture-btn" style="background:#059669;color:white;border:none;border-radius:8px;padding:9px 14px;font-weight:600;font-size:0.82rem;cursor:pointer;white-space:nowrap;">Recevoir ✓</button>' +
       '</div>' +
       '<p class="coach-capture-err" style="display:none;margin:6px 0 0 0;font-size:0.72rem;color:#dc2626;"></p>' +
       '<div style="display:flex;align-items:center;gap:8px;margin:12px 0 8px;color:#9ca3af;font-size:0.72rem;"><span style="flex:1;height:1px;background:#d1fae5;"></span>ou pour aller plus loin<span style="flex:1;height:1px;background:#d1fae5;"></span></div>' +
-      '<button class="coach-consult-btn" style="width:100%;background:#065f46;color:#fff;border:none;border-radius:8px;padding:11px 12px;font-weight:700;font-size:0.84rem;cursor:pointer;line-height:1.35;text-align:left;">🩺 Consultation privée — ton bilan complet + 48h de questions <span style="float:right;">3€</span></button>';
+      '<button class="coach-consult-btn" style="width:100%;background:#065f46;color:#fff;border:none;border-radius:8px;padding:11px 12px;font-weight:700;font-size:0.84rem;cursor:pointer;line-height:1.35;text-align:left;">Consultation privée — ton bilan complet + 48h de questions <span style="float:right;">3€</span></button>';
     parentDiv.appendChild(wrap);
 
     var input = wrap.querySelector('.coach-capture-input');
@@ -1238,7 +1238,7 @@ import { supabaseConfig } from '../lib/supabase.js';
         })
       }).then(function(r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
-        wrap.innerHTML = '<p style="margin:0;font-size:0.85rem;color:#065f46;font-weight:600;">✅ C\'est noté ! Tu vas recevoir ta checklist par email. 📬</p>';
+        wrap.innerHTML = '<p style="margin:0;font-size:0.85rem;color:#065f46;font-weight:600;">C\'est noté ! Tu vas recevoir ta checklist par email.</p>';
         logSuggestionEvent('email_capture', 0, 'captured');
       }).catch(function() {
         btn.disabled = false; btn.textContent = 'Recevoir ✓';
@@ -1321,7 +1321,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     ctaDiv.className = 'coach-msg coach-bot';
     ctaDiv.innerHTML =
       '<div style="background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;border-radius:12px;padding:16px;margin-top:8px;">' +
-        '<div style="font-weight:700;font-size:1.05em;margin-bottom:8px;">📋 Ton Dossier GLP-1 est prêt !</div>' +
+        '<div style="font-weight:700;font-size:1.05em;margin-bottom:8px;">Ton Dossier GLP-1 est prêt !</div>' +
         '<div style="font-size:0.9em;margin-bottom:12px;opacity:0.95;">Verdict d\'éligibilité • Checklist RDV • CSO près de chez toi • Estimation financière</div>' +
         '<div style="display:flex;align-items:center;gap:12px;">' +
           '<button id="coach-buy-dossier" style="background:#fff;color:#1e40af;border:none;border-radius:8px;padding:10px 20px;font-weight:700;font-size:1em;cursor:pointer;transition:transform 0.2s;">Obtenir mon dossier — 4,99€</button>' +
