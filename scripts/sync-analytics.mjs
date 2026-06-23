@@ -72,8 +72,8 @@ async function oauthSetup() {
 
   if (!CLIENT_ID || !CLIENT_SECRET) {
     console.error('❌ Ajoute d\'abord dans .env :');
-    console.error('   GOOGLE_CLIENT_ID=782101309148-1lu425p9rnk480566gmkbt2hj2kt2524.apps.googleusercontent.com');
-    console.error('   GOOGLE_CLIENT_SECRET=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');
+    console.error('   GOOGLE_CLIENT_ID=<ton-client-id>.apps.googleusercontent.com');
+    console.error('   GOOGLE_CLIENT_SECRET=<ton-client-secret>');
     process.exit(1);
   }
 
