@@ -527,11 +527,15 @@ async function main() {
   console.log('📡 Sync Analytics → Supabase');
   console.log('='.repeat(60));
 
-  // Check OAuth credentials
-  if (!CLIENT_ID || !CLIENT_SECRET) {
+  // Service account prioritaire — OAuth n'est requis QUE s'il n'y a pas de SA.
+  const hasServiceAccount = !!resolveServiceAccountPath();
+
+  // Check OAuth credentials (uniquement si pas de service account)
+  if (!hasServiceAccount && (!CLIENT_ID || !CLIENT_SECRET)) {
     console.error('\n❌ Ajoute dans .env :');
     console.error('   GOOGLE_CLIENT_ID=ton-client-id');
     console.error('   GOOGLE_CLIENT_SECRET=ton-client-secret');
+    console.error('   (ou fournis un service account via $GOOGLE_APPLICATION_CREDENTIALS)');
     process.exit(1);
   }
 
@@ -542,8 +546,8 @@ async function main() {
     return;
   }
 
-  // Check refresh token
-  if (!REFRESH_TOKEN) {
+  // Check refresh token (uniquement si pas de service account)
+  if (!hasServiceAccount && !REFRESH_TOKEN) {
     console.error('\n❌ Pas de GOOGLE_REFRESH_TOKEN dans .env');
     console.error('   Lance d\'abord : node scripts/sync-analytics.mjs --setup');
     process.exit(1);
