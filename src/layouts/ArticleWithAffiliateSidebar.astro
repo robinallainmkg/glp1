@@ -8,6 +8,7 @@ import PartnerCTA from '../components/PartnerCTA.astro';
 import MutuelleCTA from '../components/MutuelleCTA.astro';
 import CoachCTA from '../components/CoachCTA.astro';
 import CoachSidebar from '../components/CoachSidebar.astro';
+import DossierSidebar from '../components/DossierSidebar.astro';
 import ArticleSchema from '../components/ArticleSchema.astro';
 import { getPartnerForArticle, oppositePartner, getSidebarOrder, isPartnerDestination } from '../lib/partnerRouter';
 
@@ -175,8 +176,9 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         </div>
       </article>
 
-      <!-- Sidebar : carte Coach IA (sticky desktop, sous l'article sur mobile) -->
+      <!-- Sidebar : Dossier GLP-1 (produit payant) + Coach IA (sticky desktop, sous l'article sur mobile) -->
       <div class="partner-sidebar-stack">
+        <DossierSidebar context={coachContext} />
         <CoachSidebar context={coachContext} />
       </div>
     </div>

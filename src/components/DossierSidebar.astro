@@ -1,0 +1,32 @@
+---
+// Carte "Mon Dossier GLP-1" pour la sidebar des articles (sticky).
+// Renvoie vers la landing /dossier-glp1/ (produit payant 4,99€).
+export interface Props { context?: string; }
+const { context = 'general' } = Astro.props;
+const copy: Record<string, { title: string; text: string }> = {
+  prix: { title: 'Combien ça va vraiment te coûter ?', text: 'Ton estimation après remboursement Sécu + mutuelle, ton verdict d\'éligibilité et le CSO le plus proche — dans un dossier prêt pour ton médecin.' },
+  cout: { title: 'Combien ça va vraiment te coûter ?', text: 'Ton estimation après remboursement Sécu + mutuelle, ton verdict d\'éligibilité et le CSO le plus proche — dans un dossier prêt pour ton médecin.' },
+  remboursement: { title: 'As-tu droit au remboursement 65% ?', text: 'Vérifie ton éligibilité en 1 minute et reçois ton dossier complet : verdict, CSO près de chez toi, checklist RDV médecin.' },
+  effets: { title: 'Prépare ton rendez-vous médecin', text: 'Verdict d\'éligibilité, checklist des documents à apporter et questions à poser — ton dossier personnalisé prêt à imprimer.' },
+  guide: { title: 'Ton dossier GLP-1 personnalisé', text: 'Éligibilité, parcours, CSO le plus proche et estimation financière — tout ce qu\'il faut pour passer à l\'action, prêt en 2 min.' },
+  general: { title: 'Ton dossier GLP-1 personnalisé', text: 'Éligibilité, parcours, CSO le plus proche et estimation financière — tout ce qu\'il faut pour passer à l\'action, prêt en 2 min.' },
+};
+const c = copy[context] || copy.general;
+---
+<aside class="dossier-sb">
+  <div class="dossier-sb-badge">📋 Mon Dossier GLP-1</div>
+  <h3 class="dossier-sb-title">{c.title}</h3>
+  <p class="dossier-sb-text">{c.text}</p>
+  <a href="/dossier-glp1/" class="dossier-sb-btn">Obtenir mon dossier — 4,99€</a>
+  <span class="dossier-sb-trust">Paiement sécurisé · prêt en 2 min</span>
+</aside>
+<style>
+.dossier-sb{position:sticky;top:1.5rem;width:300px;box-sizing:border-box;background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #bfdbfe;border-radius:16px;padding:1.2rem;box-shadow:0 4px 16px rgba(37,99,235,.1);}
+.dossier-sb-badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:800;color:#1e3a8a;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.6rem;}
+.dossier-sb-title{margin:0 0 .5rem;font-size:1.05rem;font-weight:800;color:#0f172a;line-height:1.25;}
+.dossier-sb-text{margin:0 0 .9rem;font-size:.86rem;color:#374151;line-height:1.5;}
+.dossier-sb-btn{display:block;width:100%;box-sizing:border-box;background:#2563eb;color:#fff;border:none;border-radius:10px;padding:.7rem 1rem;font-size:.92rem;font-weight:700;cursor:pointer;transition:background .2s,transform .1s;font-family:inherit;text-align:center;text-decoration:none;}
+.dossier-sb-btn:hover{background:#1d4ed8;transform:translateY(-1px);}
+.dossier-sb-trust{display:block;text-align:center;margin-top:.55rem;font-size:.72rem;color:#6b7280;}
+@media (max-width:1024px){.dossier-sb{position:static;width:100%;max-width:420px;margin:1.5rem auto 0;}}
+</style>

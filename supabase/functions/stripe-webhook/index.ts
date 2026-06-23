@@ -93,9 +93,13 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session, eventId
   const customerId = session.customer as string;
   const userId = session.metadata?.supabase_user_id;
 
-  // One-shot "Consultation privée" (paiement unique) — pas un abonnement
+  // One-shot payments (paiement unique) — pas un abonnement
   if (session.mode === "payment" && session.metadata?.product === "consultation") {
     await handleConsultationPurchase(session, eventId);
+    return;
+  }
+  if (session.mode === "payment" && session.metadata?.product === "dossier") {
+    await handleDossierPurchase(session, eventId);
     return;
   }
 
@@ -161,6 +165,52 @@ async function handleConsultationPurchase(session: Stripe.Checkout.Session, even
     amount: session.amount_total,
   });
   console.log(`Consultation purchased by user ${userId}, active until ${expiresAt}`);
+}
+
+async function handleDossierPurchase(session: Stripe.Checkout.Session, eventId: string) {
+  const dossierId = session.metadata?.dossier_id;
+  if (!dossierId) {
+    console.error("No dossier_id in metadata");
+    return;
+  }
+
+  // Mark dossier as paid
+  const { error } = await supabase.from("dossiers").update({
+    status: "paid",
+    paid_at: new Date().toISOString(),
+  }).eq("id", dossierId);
+
+  if (error) {
+    console.error("Dossier update error:", error);
+    return;
+  }
+
+  // Trigger PDF generation (call the generate-dossier function)
+  try {
+    const genResponse = await fetch(`${SUPABASE_URL}/functions/v1/generate-dossier`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${SUPABASE_SERVICE_KEY}`,
+      },
+      body: JSON.stringify({ dossier_id: dossierId }),
+    });
+
+    if (!genResponse.ok) {
+      console.error("Generate dossier failed:", await genResponse.text());
+    } else {
+      console.log(`Dossier ${dossierId} generated successfully`);
+    }
+  } catch (genErr) {
+    console.error("Generate dossier call failed:", genErr);
+  }
+
+  await logEvent(session.metadata?.supabase_user_id || "anonymous", eventId, "dossier.purchased", {
+    dossierId,
+    sessionId: session.id,
+    amount: session.amount_total,
+  });
+  console.log(`Dossier ${dossierId} purchased and generation triggered`);
 }
 
 async function updateSubscription(userId: string, subscriptionId: string, customerId: string, eventId: string) {

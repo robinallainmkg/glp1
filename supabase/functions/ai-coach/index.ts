@@ -11,7 +11,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 // --- Configuration ---
 const MAX_HISTORY = 6;
 const MAX_RAG_CHUNKS = 3;
-const RAG_THRESHOLD = 0.65;
+const RAG_THRESHOLD = 0.72;
 const MAX_INPUT_LENGTH = 500;
 const MAX_RESPONSE_TOKENS = 700;
 const RATE_LIMIT_WINDOW_MIN = 10;
@@ -60,14 +60,21 @@ ORIENTATION MÉDICALE (PRESCRIPTION / MÉDECIN / SUIVI) :
 PRESTATAIRES EN LIGNE / TÉLÉCONSULTATION (tu CONNAIS le paysage et tu en parles de façon NEUTRE et OBJECTIVE — aucune promotion, aucun dénigrement) :
 - Un vrai GLP-1 injectable ne s'obtient JAMAIS "sans ordonnance" : il faut une prescription d'un médecin inscrit à l'Ordre, après une vraie consultation (en cabinet OU en téléconsultation).
 - Voie classique : médecin traitant, endocrinologue, médecin de l'obésité ; primo-prescription en CSO/CHU pour ouvrir le remboursement obésité.
-- Voie téléconsultation : des plateformes mettent en relation avec des médecins français à distance. Exemples connus du paysage français : Charles.co (et sa version féminine Mia), Annette Care, ou des plateformes généralistes comme Qare, Livi, Hellocare. Cite-les comme EXEMPLES si on te le demande, sans en privilégier une et sans promettre une ordonnance (le médecin peut refuser si ce n'est pas justifié).
+- Voie téléconsultation : des plateformes mettent en relation avec des médecins français à distance. Exemples connus du paysage français : Qare, Livi, Hellocare, Doctolib. Cite-les comme EXEMPLES si on te le demande, sans en privilégier une et sans promettre une ordonnance (le médecin peut refuser si ce n'est pas justifié).
 - Si on te demande "est-ce fiable ?", donne les critères d'un service sérieux : (1) vraie téléconsultation avec un médecin identifiable inscrit à l'Ordre ; (2) ordonnance délivrée seulement si médicalement justifié ; (3) médicament délivré en pharmacie (physique ou en ligne agréée ANSM), jamais par le site lui-même.
 - 🚩 Arnaque (à signaler calmement, sans dramatiser) : un site qui VEND directement de l'Ozempic/Wegovy/Mounjaro, "sans ordonnance", à prix cassé, paiement crypto/virement, sans aucune consultation = illégal et dangereux (contrefaçons). Ce ne sont PAS des prestataires sérieux.
 
 FLUX "SUIS-JE ÉLIGIBLE AU REMBOURSEMENT ?" (à PROPOSER dès qu'on parle de prix, de remboursement, ou de comment commencer) :
 - ⚠️ Si quelqu'un demande "suis-je éligible ?" : ne liste JAMAIS les critères en bloc — LANCE le test tout de suite. Réponse COURTE + demande sa 1re info : "Vérifions ensemble ! Quel est ton poids et ta taille ?" (pour calculer l'IMC). Sinon, propose-le : "Le remboursement à 65% s'applique depuis le 15 juin 2026. Veux-tu qu'on vérifie ton éligibilité en 2-3 questions ?"
 - Si oui, collecte UNE info à la fois, sans tout redemander : (1) poids + taille → calcule l'IMC ; (2) comorbidités (diabète T2, hypertension, apnée du sommeil, etc.) ; (3) un suivi nutritionnel a-t-il déjà été tenté ?
-- Puis donne un verdict CLAIR et nuancé : "éligible", "probablement éligible", ou "à confirmer avec ton médecin" — en rappelant que la décision finale revient au médecin (critères : IMC ≥ 35 avec comorbidité, ou ≥ 40, après échec d'une prise en charge nutritionnelle).
+- ⚠️ SEUILS STRICTS — NE JAMAIS DIRE "ÉLIGIBLE" SI LES CRITÈRES NE SONT PAS REMPLIS :
+  • IMC < 30 → "Le remboursement cible l'obésité (IMC ≥ 35 avec comorbidité ou ≥ 40). Ton IMC est en dessous des seuils. Parles-en à ton médecin pour d'autres options."
+  • IMC 30-34.9 SANS comorbidité confirmée → "Ton IMC est de X, juste en dessous du seuil de 35. Le remboursement nécessite un IMC ≥ 35 avec comorbidité ou ≥ 40. Parles-en à ton médecin — il évaluera ta situation complète."
+  • IMC 30-34.9 AVEC comorbidité → "Pas encore éligible au remboursement (il faut IMC ≥ 35 avec comorbidité), mais ton médecin peut évaluer d'autres options. Consulte en CSO/CHU."
+  • IMC 35-39.9 SANS comorbidité → "Ton IMC est de X. Le remboursement à 65% nécessite aussi au moins une comorbidité (diabète, hypertension, apnée du sommeil…). As-tu un de ces problèmes ?"
+  • IMC 35-39.9 AVEC comorbidité → ÉLIGIBLE. "Tu sembles éligible au remboursement à 65% ! Prochaine étape : prendre RDV dans un CSO ou CHU pour la primo-prescription."
+  • IMC ≥ 40 → ÉLIGIBLE (même sans comorbidité). "Avec un IMC de X, tu es éligible au remboursement à 65%. Prochaine étape : prendre RDV dans un CSO ou CHU."
+- Ne dis JAMAIS "tu es éligible" pour un IMC < 35. C'est une ERREUR GRAVE qui crée de faux espoirs.
 - Termine en proposant le suivi dans le temps (voir CONVERSION).
 
 REQUÊTES LOCALES (prix / pharmacie / médecin près de chez moi) — TRÈS FRÉQUENT :
@@ -75,10 +82,15 @@ REQUÊTES LOCALES (prix / pharmacie / médecin près de chez moi) — TRÈS FRÉ
 - Pour un prix ou une pharmacie proche : oriente vers la carte des prix du site → [Carte des prix en pharmacie](/outils/carte-prix-pharmacies/), et demande la ville pour cibler. Ne dis JAMAIS "je ne peux pas donner une pharmacie spécifique" : donne TOUJOURS le lien de la carte des prix et demande la ville. C'est la 1re cause d'abandon.
 - Pour un médecin proche : annuaire-sante.ameli.fr (+ un CSO/CHU pour la primo-prescription du remboursement).
 
-CONVERSION — CAPTURE EMAIL (PRIORITAIRE) :
-- Aide vraiment d'abord. Puis, dès que tu CONFIRMES une éligibilité au remboursement, OU que tu donnes les étapes concrètes pour obtenir le traitement / trouver un médecin / démarrer, PROPOSE un échange de valeur utile : "Veux-tu que je t'envoie ta checklist personnalisée pour ton rendez-vous médecin (étapes, questions à poser, documents) ? Laisse-moi ton email et je te l'envoie — on garde aussi ton résultat."
-- Formule-le comme un SERVICE concret, jamais comme une pub. UNE proposition, au bon moment. (Un champ email s'affichera automatiquement sous ta réponse.)
-- Pour un suivi dans le temps (perte de poids, patient déjà sous traitement), tu peux mentionner le COACH PREMIUM. N'insère JAMAIS de lien d'affiliation.
+CONVERSION — DOSSIER GLP-1 PERSONNALISÉ (4,99€) :
+- C'est le PRODUIT PRINCIPAL. Aide vraiment d'abord, puis propose le dossier au BON MOMENT.
+- QUAND proposer : dès que tu as collecté poids + taille + comorbidités (= tu peux calculer l'IMC et donner un verdict), OU quand la personne demande les étapes concrètes pour commencer.
+- COMMENT proposer (EXACTEMENT cette formulation, adaptée au tutoiement/vouvoiement) : "D'ailleurs, je peux te préparer ton **Dossier GLP-1 personnalisé** : un document complet avec ton verdict d'éligibilité, la checklist pour ton RDV médecin, les CSO/CHU près de chez toi, et l'estimation de ton reste à charge — tout prêt à imprimer pour ton médecin. C'est 4,99€."
+- Puis ajoute en fin de réponse : [[SUGGESTIONS]] Oui, je veux mon dossier | Plus tard
+- Si la personne dit OUI → réponds : "Super ! Pour générer ton dossier, j'ai besoin de quelques infos. Ton prénom ?" puis collecte UNE info à la fois : (1) prénom, (2) poids + taille (si pas déjà donnés), (3) comorbidités, (4) ville (pour trouver le CSO le plus proche), (5) traitement envisagé. Quand tu as tout, dis "Ton dossier est prêt !" et le système affichera le bouton de paiement.
+- Quand tu as TOUTES les infos, termine ta réponse par ce tag (le front-end le détecte) : [[DOSSIER_READY]] suivi du JSON des données : {"prenom":"X","poids_kg":Y,"taille_cm":Z,"comorbidites":["..."],"ville":"...","suivi_nutritionnel":true/false,"traitement_souhaite":"..."}
+- NE propose le dossier qu'UNE SEULE FOIS par conversation. Si la personne dit "plus tard" ou ignore, n'insiste pas.
+- Formule-le comme un SERVICE utile pour préparer son RDV, jamais comme une pub.
 
 SEGMENTS DE VISITEURS (adapter la réponse) :
 - ~28% sont des victimes d'arnaques (ont acheté de faux GLP-1 en ligne, souvent 29-80 EUR). Être empathique, ne pas juger, proposer les recours.
@@ -585,11 +597,29 @@ serve(async (req) => {
         // rankedChunks reste [] → le bot répond quand même
       }
 
-      const ragContext = rankedChunks
+      const PRODUCT_KEYWORDS: Record<string, RegExp> = {
+        ozempic: /ozempic|s[eé]maglutide.*inject/i,
+        wegovy: /wegovy/i,
+        mounjaro: /mounjaro|tirzepatide/i,
+        saxenda: /saxenda|liraglutide.*poids/i,
+        trulicity: /trulicity|dulaglutide/i,
+        rybelsus: /rybelsus|s[eé]maglutide.*oral/i,
+      };
+      const userProduct = Object.entries(PRODUCT_KEYWORDS).find(([, rx]) => rx.test(cleanMessage))?.[0];
+      const filteredChunks = userProduct
+        ? rankedChunks.filter((c: any) => {
+            const chunkText = `${c.title} ${c.content || ''}`.toLowerCase();
+            const otherProducts = Object.keys(PRODUCT_KEYWORDS).filter(p => p !== userProduct);
+            const isAboutOtherProduct = otherProducts.some(p => chunkText.includes(p) && !chunkText.includes(userProduct));
+            return !isAboutOtherProduct;
+          })
+        : rankedChunks;
+
+      const ragContext = filteredChunks
         .map((c: any) => `---\nArticle: ${c.title} (/collections/${c.collection}/${c.article_slug}/)\nSection: ${c.section_heading || "Introduction"}\n${(c.content || '').slice(0, 600)}\n---`)
         .join("\n\n");
 
-      const sources = rankedChunks.map((c: any) => ({
+      const sources = filteredChunks.map((c: any) => ({
         slug: c.article_slug,
         collection: c.collection,
         title: c.title,
@@ -615,7 +645,7 @@ serve(async (req) => {
       }
 
       // Build article links hint from RAG sources
-      const articleLinks = rankedChunks
+      const articleLinks = filteredChunks
         .filter((c: any, i: number, arr: any[]) => arr.findIndex((x: any) => x.article_slug === c.article_slug) === i)
         .slice(0, 3)
         .map((c: any) => `- [${c.title}](/collections/${c.collection}/${c.article_slug}/)`)
@@ -723,12 +753,19 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
         cleanResponse = cleanResponse.replace(/\n*\s*\[\[OPTIONS\]\][^\n]*\s*$/, '').trim();
       }
 
+      // Dossier GLP-1 ready tag: [[DOSSIER_READY]] {...json...}
+      let dossierData: any = null;
+      const dossierMatch = cleanResponse.match(/\[\[DOSSIER_READY\]\]\s*(\{[^}]+\})\s*$/s);
+      if (dossierMatch) {
+        try { dossierData = JSON.parse(dossierMatch[1]); } catch { /* ignore parse error */ }
+        cleanResponse = cleanResponse.replace(/\n*\s*\[\[DOSSIER_READY\]\]\s*\{[^}]+\}\s*$/s, '').trim();
+      }
+
       // Moment chaud → on propose la capture email (le funnel convertit à 0 sans capture).
-      // Hot = éligibilité CONFIRMÉE, ou étape concrète médecin/checklist.
       const saysEligible = /\béligibl/i.test(cleanResponse);
       const saysNotEligible = /\b(pas|plus)\b[^.]{0,25}éligibl|éligibl[^.]{0,25}\bsi\b/i.test(cleanResponse);
       const doctorStep = /annuaire-sante\.ameli|prendre rendez-vous|checklist personnalisée/i.test(cleanResponse);
-      const offerCapture = !hasConsultation && ((saysEligible && !saysNotEligible) || doctorStep);
+      const offerCapture = !hasConsultation && !dossierData && ((saysEligible && !saysNotEligible) || doctorStep);
 
       // --- 6. Save messages ---
       const detectedIntent = scamSignals.isScamRelated ? `scam:${scamSignals.severity}` : null;
@@ -747,6 +784,7 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
         model: usedModel,
         ...(suggestions.length > 0 && { suggestions }),
         ...(options.length > 0 && { options }),
+        ...(dossierData && { dossier_ready: true, dossier_data: dossierData }),
         ...(offerCapture && { offer_capture: true, capture_prompt: "Laisse-moi ton email et je t'envoie ta checklist personnalisée pour ton rendez-vous médecin (étapes, questions à poser, documents) — on garde ton résultat." }),
         ...(dailyRemaining !== null && { daily_remaining: dailyRemaining }),
       });

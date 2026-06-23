@@ -1050,6 +1050,11 @@ import { supabaseConfig } from '../lib/supabase.js';
       // Display response with typewriter effect
       typewriterMessage(data.response || "D\u00e9sol\u00e9, je n'ai pas pu r\u00e9pondre.", data.sources || [], data.suggestions || [], data.offer_capture ? (data.capture_prompt || '') : null, data.options || []);
 
+      // Dossier GLP-1 ready \u2192 show payment button
+      if (data.dossier_ready && data.dossier_data) {
+        setTimeout(function() { showDossierCTA(data.dossier_data); }, 800);
+      }
+
       // Show signup CTA after 2nd user message
       if (messageCount >= 2 && !ctaShown) {
         setTimeout(function() { showSignupCTA(); }, 1500);
@@ -1309,6 +1314,66 @@ import { supabaseConfig } from '../lib/supabase.js';
     });
     parentDiv.appendChild(wrap);
     scrollToBottom();
+  }
+
+  function showDossierCTA(dossierData) {
+    var ctaDiv = document.createElement('div');
+    ctaDiv.className = 'coach-msg coach-bot';
+    ctaDiv.innerHTML =
+      '<div style="background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;border-radius:12px;padding:16px;margin-top:8px;">' +
+        '<div style="font-weight:700;font-size:1.05em;margin-bottom:8px;">📋 Ton Dossier GLP-1 est prêt !</div>' +
+        '<div style="font-size:0.9em;margin-bottom:12px;opacity:0.95;">Verdict d\'éligibilité • Checklist RDV • CSO près de chez toi • Estimation financière</div>' +
+        '<div style="display:flex;align-items:center;gap:12px;">' +
+          '<button id="coach-buy-dossier" style="background:#fff;color:#1e40af;border:none;border-radius:8px;padding:10px 20px;font-weight:700;font-size:1em;cursor:pointer;transition:transform 0.2s;">Obtenir mon dossier — 4,99€</button>' +
+          '<span style="font-size:0.8em;opacity:0.8;">Paiement sécurisé Stripe</span>' +
+        '</div>' +
+      '</div>';
+    messagesEl.appendChild(ctaDiv);
+    scrollToBottom();
+
+    document.getElementById('coach-buy-dossier').addEventListener('click', async function() {
+      this.disabled = true;
+      this.textContent = 'Redirection...';
+      try {
+        // Ask for email if not logged in
+        var email = null;
+        var authToken = null;
+        var sb = window.__supabaseClient;
+        if (sb) {
+          var sess = (await sb.auth.getSession()).data.session;
+          if (sess) { authToken = sess.access_token; email = sess.user.email; }
+        }
+        if (!email) {
+          email = prompt('Ton email (pour recevoir le dossier) :');
+          if (!email || !email.includes('@')) { this.disabled = false; this.textContent = 'Obtenir mon dossier — 4,99€'; return; }
+        }
+
+        var headers = { 'Content-Type': 'application/json', 'apikey': supabaseAnonKey };
+        if (authToken) headers['Authorization'] = 'Bearer ' + authToken;
+
+        var res = await fetch(supabaseUrl + '/functions/v1/stripe-payment', {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify({
+            product: 'dossier',
+            email: email,
+            session_id: sessionId,
+            conversation_id: conversationId,
+            dossier_data: dossierData
+          })
+        });
+        var result = await res.json();
+        if (result.url) {
+          window.location.href = result.url;
+        } else {
+          this.textContent = 'Erreur — réessayer';
+          this.disabled = false;
+        }
+      } catch (e) {
+        this.textContent = 'Erreur — réessayer';
+        this.disabled = false;
+      }
+    });
   }
 
   function addFeedback(parentDiv, msgContent) {
