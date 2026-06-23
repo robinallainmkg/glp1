@@ -4,217 +4,364 @@ import { supabaseConfig } from '../lib/supabase';
 ---
 
 <StaticLayout
-  title="Mon Dossier GLP-1 Personnalisé — 4,99€ | Éligibilité & Parcours"
-  description="Obtenez votre dossier GLP-1 personnalisé : verdict d'éligibilité au remboursement 65%, checklist RDV médecin, CSO près de chez vous, estimation financière. Prêt en 2 minutes."
+  title="Mon Dossier GLP-1 — Vérifie ton éligibilité au remboursement 65 % | 4,99 €"
+  description="Découvre en 2 minutes si tu as droit au remboursement de ton traitement GLP-1 (Wegovy, Mounjaro). Verdict d'éligibilité, centre près de chez toi, reste à charge estimé et checklist pour ton rendez-vous — dans un dossier PDF prêt à imprimer."
   keywords="dossier glp1, éligibilité remboursement wegovy, remboursement mounjaro, CSO obésité, parcours glp1"
 >
 
 <div class="dossier-page">
-  <!-- HERO -->
+
+  <!-- ===================== HERO ===================== -->
   <section class="hero">
-    <div class="container">
-      <div class="hero-badge">Nouveau</div>
-      <h1>Mon Dossier GLP-1 Personnalise</h1>
-      <p class="hero-sub">Tout ce qu'il faut pour preparer ton rendez-vous medecin — pret en 2 minutes.</p>
-      <div class="hero-features">
-        <span>Verdict d'eligibilite</span>
-        <span>Checklist RDV</span>
-        <span>CSO pres de chez toi</span>
-        <span>Estimation financiere</span>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Dossier personnalisé</span>
+        <h1>Sais-tu si tu as droit au remboursement&nbsp;?</h1>
+        <p class="hero-sub">
+          Depuis juin 2026, Wegovy et Mounjaro sont remboursés à 65&nbsp;% pour l'obésité — sous conditions.
+          Réponds à 6 questions et reçois ton dossier personnalisé&nbsp;: ton verdict d'éligibilité, le centre habilité
+          le plus proche, ton reste à charge estimé et la checklist pour ton rendez-vous médecin.
+        </p>
+        <a href="#commencer" class="btn-primary">Vérifier mon éligibilité — 4,99 €</a>
+        <ul class="hero-trust">
+          <li>Paiement sécurisé Stripe</li>
+          <li>Dossier reçu immédiatement</li>
+          <li>Sans abonnement</li>
+        </ul>
       </div>
-      <a href="#formulaire" class="hero-cta">Obtenir mon dossier — 4,99€</a>
-      <p class="hero-trust">Paiement securise Stripe &bull; Document pret en 2 min &bull; Telechargement immediat</p>
-    </div>
-  </section>
 
-  <!-- WHAT YOU GET -->
-  <section class="what-you-get">
-    <div class="container">
-      <h2>Ce que contient ton dossier</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">&#9989;</div>
-          <h3>Verdict d'eligibilite</h3>
-          <p>Analyse de ton IMC et de tes comorbidites pour savoir si tu as droit au remboursement a 65%.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128176;</div>
-          <h3>Estimation financiere</h3>
-          <p>Cout reel apres remboursement Secu + mutuelle, pour Wegovy et Mounjaro.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#127973;</div>
-          <h3>CSO pres de chez toi</h3>
-          <p>Le centre specialise de l'obesite le plus proche, avec coordonnees et telephone.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128203;</div>
-          <h3>Checklist RDV medecin</h3>
-          <p>Documents a apporter, questions a poser, etapes du parcours — tout est pret.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128105;&#8205;&#9877;&#65039;</div>
-          <h3>Parcours detaille</h3>
-          <p>De la primo-prescription au renouvellement : chaque etape expliquee simplement.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128196;</div>
-          <h3>Pret a imprimer</h3>
-          <p>Formate pour A4, emmene-le directement a ton rendez-vous medecin.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FORM -->
-  <section class="form-section" id="formulaire">
-    <div class="container">
-      <div class="form-card">
-        <h2>Remplis tes informations</h2>
-        <p class="form-sub">6 questions, 1 minute — ton dossier sera genere apres le paiement.</p>
-
-        <form id="dossier-form">
-          <!-- Step 1: Prenom -->
-          <div class="form-step active" data-step="1">
-            <label for="prenom">Ton prenom</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Marie" required autocomplete="given-name">
-            <button type="button" class="btn-next" data-next="2">Continuer</button>
+      <!-- Aperçu visuel du dossier -->
+      <div class="hero-preview" aria-hidden="true">
+        <div class="paper">
+          <div class="paper-head">
+            <span class="paper-logo">GLP-1 France</span>
+            <span class="paper-tag">Dossier personnalisé</span>
           </div>
-
-          <!-- Step 2: Poids + Taille -->
-          <div class="form-step" data-step="2">
-            <label>Ton poids et ta taille</label>
-            <div class="input-row">
-              <div class="input-group">
-                <input type="number" id="poids" name="poids_kg" placeholder="85" required min="30" max="300" step="0.1">
-                <span class="input-suffix">kg</span>
-              </div>
-              <div class="input-group">
-                <input type="number" id="taille" name="taille_cm" placeholder="170" required min="100" max="250" step="1">
-                <span class="input-suffix">cm</span>
-              </div>
+          <div class="paper-title">Dossier GLP-1 — Marie, 34 ans</div>
+          <div class="paper-verdict">
+            <span class="paper-check">✓</span>
+            <div>
+              <strong>Éligible au remboursement 65 %</strong>
+              <span>IMC 37,2 · apnée du sommeil</span>
             </div>
-            <div id="imc-preview" class="imc-preview" style="display:none"></div>
-            <button type="button" class="btn-next" data-next="3">Continuer</button>
           </div>
-
-          <!-- Step 3: Comorbidites -->
-          <div class="form-step" data-step="3">
-            <label>As-tu une ou plusieurs de ces conditions ?</label>
-            <div class="checkbox-grid">
-              <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Diabète T2"><span>Diabete type 2</span></label>
-              <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Hypertension"><span>Hypertension</span></label>
-              <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Apnée du sommeil"><span>Apnee du sommeil</span></label>
-              <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Dyslipidémie"><span>Dyslipidemie</span></label>
-              <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Stéatose hépatique"><span>Steatose hepatique</span></label>
-              <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Arthrose"><span>Arthrose</span></label>
-            </div>
-            <button type="button" class="btn-next" data-next="4">Continuer</button>
+          <div class="paper-rows">
+            <div class="paper-row"><span>Centre le plus proche</span><span>CSO Lyon — 04 78…</span></div>
+            <div class="paper-row"><span>Reste à charge estimé</span><span>≈ 62 €/mois</span></div>
+            <div class="paper-row"><span>Prochaine étape</span><span>RDV en CSO</span></div>
           </div>
-
-          <!-- Step 4: Ville -->
-          <div class="form-step" data-step="4">
-            <label for="ville">Ta ville (pour trouver le CSO le plus proche)</label>
-            <input type="text" id="ville" name="ville" placeholder="Lyon, Paris, Marseille..." autocomplete="address-level2">
-            <button type="button" class="btn-next" data-next="5">Continuer</button>
+          <div class="paper-list">
+            <div class="paper-li"><span class="dot"></span>Documents à apporter</div>
+            <div class="paper-li"><span class="dot"></span>Questions à poser au médecin</div>
+            <div class="paper-li faded"><span class="dot"></span>Parcours étape par étape…</div>
           </div>
-
-          <!-- Step 5: Traitement + Suivi -->
-          <div class="form-step" data-step="5">
-            <label for="traitement">Quel traitement t'interesse ?</label>
-            <select id="traitement" name="traitement_souhaite">
-              <option value="">Je ne sais pas encore</option>
-              <option value="Wegovy">Wegovy (semaglutide)</option>
-              <option value="Mounjaro">Mounjaro (tirzepatide)</option>
-              <option value="Ozempic">Ozempic (semaglutide)</option>
-              <option value="Saxenda">Saxenda (liraglutide)</option>
-            </select>
-            <label class="checkbox-single"><input type="checkbox" id="suivi" name="suivi_nutritionnel"><span>J'ai deja suivi un programme nutritionnel</span></label>
-            <button type="button" class="btn-next" data-next="6">Continuer</button>
-          </div>
-
-          <!-- Step 6: Email + Paiement -->
-          <div class="form-step" data-step="6">
-            <label for="email">Ton email (pour recevoir le dossier)</label>
-            <input type="email" id="email" name="email" placeholder="marie@exemple.fr" required autocomplete="email">
-            <div class="recap" id="recap"></div>
-            <button type="submit" class="btn-pay" id="btn-pay">Obtenir mon dossier — 4,99€</button>
-            <p class="pay-note">Paiement securise par Stripe. Tu recevras ton dossier immediatement.</p>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- ===================== TRUST STRIP ===================== -->
+  <section class="trust-strip">
+    <div class="trust-inner">
+      <span>Basé sur les critères officiels de l'Assurance Maladie</span>
+      <span class="sep">·</span>
+      <span>Information 100 % indépendante</span>
+      <span class="sep">·</span>
+      <span>Aucun lien commercial avec les laboratoires</span>
+    </div>
+  </section>
+
+  <!-- ===================== CE QUE TU REÇOIS ===================== -->
+  <section class="content">
+    <div class="content-inner">
+      <header class="section-head">
+        <h2>Ce que contient ton dossier</h2>
+        <p>Un document clair et personnalisé, conçu pour t'éviter les recherches interminables et les rendez-vous pour rien.</p>
+      </header>
+
+      <div class="features">
+        <article class="feature">
+          <span class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </span>
+          <h3>Ton verdict d'éligibilité</h3>
+          <p>On analyse ton IMC et tes facteurs de risque selon les critères officiels de remboursement. Tu sais où tu en es, noir sur blanc.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <h3>Le centre le plus proche de chez toi</h3>
+          <p>Les coordonnées du centre spécialisé de l'obésité (CSO) ou du CHU habilité à lancer ta prescription, dans ton département.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a2.5 2 0 0 0-2.5-1.5c-1.7 0-2.5.9-2.5 2s.8 1.8 2.5 2 2.5.9 2.5 2-1 2-2.5 2a2.5 2 0 0 1-2.5-1.5"/><path d="M12 6.5v1.5M12 16v1.5"/></svg>
+          </span>
+          <h3>Ce que ça va vraiment te coûter</h3>
+          <p>Une estimation de ton reste à charge après remboursement de la Sécu, selon le traitement envisagé. Plus de mauvaise surprise.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg>
+          </span>
+          <h3>Ta checklist pour le rendez-vous</h3>
+          <p>Les documents à apporter et les bonnes questions à poser, pour ne rien oublier le jour de ta consultation.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18h6M4 12h10M4 6h16"/><circle cx="17.5" cy="17.5" r="3.5"/></svg>
+          </span>
+          <h3>Ton parcours étape par étape</h3>
+          <p>De la première consultation au renouvellement de l'ordonnance, chaque étape expliquée simplement, sans jargon.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6M9 15l3 3 3-3"/></svg>
+          </span>
+          <h3>Un PDF prêt à imprimer</h3>
+          <p>Un dossier clair et soigné que tu peux télécharger, imprimer et remettre directement à ton médecin.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMMENT ÇA MARCHE ===================== -->
+  <section class="how">
+    <div class="content-inner">
+      <header class="section-head">
+        <h2>Comment ça marche</h2>
+      </header>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Réponds à 6 questions</h3>
+          <p>Poids, taille, antécédents, ville… Une minute, pas plus.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Règle 4,99 € en sécurité</h3>
+          <p>Paiement protégé par Stripe. Aucun abonnement, aucun engagement.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Reçois ton dossier</h3>
+          <p>Disponible immédiatement en téléchargement, et envoyé par email.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FORMULAIRE ===================== -->
+  <section class="form-section" id="commencer">
+    <div class="form-card">
+      <h2>Commençons par quelques infos</h2>
+      <p class="form-sub">6 questions, environ une minute. Ton dossier est généré juste après le paiement.</p>
+
+      <form id="dossier-form">
+        <!-- Étape 1 : Prénom -->
+        <div class="form-step active" data-step="1">
+          <label for="prenom">Comment t'appelles-tu&nbsp;?</label>
+          <input type="text" id="prenom" name="prenom" placeholder="Ton prénom" required autocomplete="given-name">
+          <button type="button" class="btn-next" data-next="2">Continuer</button>
+        </div>
+
+        <!-- Étape 2 : Poids + Taille -->
+        <div class="form-step" data-step="2">
+          <label>Ton poids et ta taille</label>
+          <div class="input-row">
+            <div class="input-group">
+              <input type="number" id="poids" name="poids_kg" placeholder="85" required min="30" max="300" step="0.1">
+              <span class="input-suffix">kg</span>
+            </div>
+            <div class="input-group">
+              <input type="number" id="taille" name="taille_cm" placeholder="170" required min="100" max="250" step="1">
+              <span class="input-suffix">cm</span>
+            </div>
+          </div>
+          <div id="imc-preview" class="imc-preview" style="display:none"></div>
+          <button type="button" class="btn-next" data-next="3">Continuer</button>
+        </div>
+
+        <!-- Étape 3 : Comorbidités -->
+        <div class="form-step" data-step="3">
+          <label>As-tu une ou plusieurs de ces conditions&nbsp;?</label>
+          <p class="field-hint">Elles comptent dans les critères de remboursement. Coche celles qui te concernent.</p>
+          <div class="checkbox-grid">
+            <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Diabète de type 2"><span>Diabète de type 2</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Hypertension"><span>Hypertension</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Apnée du sommeil"><span>Apnée du sommeil</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Dyslipidémie"><span>Cholestérol élevé</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Stéatose hépatique"><span>Foie gras (stéatose)</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="comorbidites" value="Arthrose"><span>Arthrose</span></label>
+          </div>
+          <button type="button" class="btn-next" data-next="4">Continuer</button>
+        </div>
+
+        <!-- Étape 4 : Ville -->
+        <div class="form-step" data-step="4">
+          <label for="ville">Dans quelle ville habites-tu&nbsp;?</label>
+          <p class="field-hint">Pour trouver le centre spécialisé le plus proche de chez toi.</p>
+          <input type="text" id="ville" name="ville" placeholder="Lyon, Paris, Marseille…" autocomplete="address-level2">
+          <button type="button" class="btn-next" data-next="5">Continuer</button>
+        </div>
+
+        <!-- Étape 5 : Traitement + Suivi -->
+        <div class="form-step" data-step="5">
+          <label for="traitement">Quel traitement t'intéresse&nbsp;?</label>
+          <select id="traitement" name="traitement_souhaite">
+            <option value="">Je ne sais pas encore</option>
+            <option value="Wegovy">Wegovy (sémaglutide)</option>
+            <option value="Mounjaro">Mounjaro (tirzépatide)</option>
+            <option value="Ozempic">Ozempic (sémaglutide)</option>
+            <option value="Saxenda">Saxenda (liraglutide)</option>
+          </select>
+          <label class="checkbox-single"><input type="checkbox" id="suivi" name="suivi_nutritionnel"><span>J'ai déjà suivi un programme nutritionnel ou un régime encadré</span></label>
+          <button type="button" class="btn-next" data-next="6">Continuer</button>
+        </div>
+
+        <!-- Étape 6 : Email + Paiement -->
+        <div class="form-step" data-step="6">
+          <label for="email">Où veux-tu recevoir ton dossier&nbsp;?</label>
+          <input type="email" id="email" name="email" placeholder="ton@email.fr" required autocomplete="email">
+          <div class="recap" id="recap"></div>
+          <button type="submit" class="btn-pay" id="btn-pay">Obtenir mon dossier — 4,99 €</button>
+          <p class="pay-note">Paiement sécurisé par Stripe · Dossier disponible immédiatement</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
   <section class="faq-section">
-    <div class="container">
-      <h2>Questions frequentes</h2>
+    <div class="faq-inner">
+      <h2>Questions fréquentes</h2>
       <div class="faq-list">
         <details class="faq-item">
-          <summary>C'est quoi exactement ce dossier ?</summary>
-          <p>Un document HTML (imprimable en PDF) personnalise avec tes donnees : verdict d'eligibilite au remboursement a 65%, le CSO le plus proche, une estimation du cout apres remboursement, et une checklist complete pour ton rendez-vous medecin.</p>
+          <summary>Qu'est-ce que je reçois exactement&nbsp;?</summary>
+          <p>Un dossier PDF personnalisé avec tes données&nbsp;: ton verdict d'éligibilité au remboursement à 65&nbsp;%, le centre spécialisé le plus proche de chez toi, une estimation de ton reste à charge et une checklist complète pour ton rendez-vous. Tu peux l'imprimer et l'apporter à ton médecin.</p>
         </details>
         <details class="faq-item">
-          <summary>Est-ce que c'est un avis medical ?</summary>
-          <p>Non. C'est un document d'information qui t'aide a preparer ton rendez-vous. Seul un medecin peut poser un diagnostic et prescrire un traitement.</p>
+          <summary>Est-ce un avis médical&nbsp;?</summary>
+          <p>Non. C'est un document d'information qui t'aide à préparer ton rendez-vous et à comprendre où tu en es. Seul un médecin peut poser un diagnostic et prescrire un traitement.</p>
         </details>
         <details class="faq-item">
-          <summary>Combien de temps pour recevoir mon dossier ?</summary>
-          <p>Immediat. Apres le paiement, tu es redirige vers une page de telechargement. Le dossier est genere en quelques secondes.</p>
+          <summary>Quand est-ce que je le reçois&nbsp;?</summary>
+          <p>Immédiatement après le paiement. Tu es redirigé vers une page de téléchargement, et tu reçois aussi ton dossier par email — tu peux y revenir quand tu veux.</p>
         </details>
         <details class="faq-item">
-          <summary>Et si je ne suis pas eligible ?</summary>
-          <p>Le dossier t'explique pourquoi et te donne les alternatives. C'est aussi utile de savoir ou tu en es avant d'aller chez le medecin.</p>
+          <summary>Et si je ne suis pas éligible&nbsp;?</summary>
+          <p>Le dossier t'explique clairement pourquoi, et quelles sont tes alternatives. Savoir où tu en es avant de consulter, c'est déjà du temps et de l'énergie gagnés.</p>
         </details>
         <details class="faq-item">
-          <summary>C'est quoi le remboursement a 65% ?</summary>
-          <p>Depuis le 15 juin 2026, Wegovy et Mounjaro sont rembourses a 65% par l'Assurance Maladie pour l'obesite (IMC &ge; 35 avec comorbidite ou IMC &ge; 40), avec primo-prescription en CSO/CHU.</p>
+          <summary>Pourquoi 4,99 €&nbsp;?</summary>
+          <p>Pour financer un dossier vraiment personnalisé et garder ce site indépendant&nbsp;: pas de publicité, aucun lien commercial avec les laboratoires.</p>
         </details>
+        <details class="faq-item">
+          <summary>Comment fonctionne le remboursement à 65 %&nbsp;?</summary>
+          <p>Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65&nbsp;% par l'Assurance Maladie pour l'obésité (IMC ≥ 35 avec une comorbidité, ou IMC ≥ 40), avec une première prescription réalisée en centre spécialisé (CSO) ou en CHU.</p>
+        </details>
+      </div>
+
+      <div class="faq-cta">
+        <a href="#commencer" class="btn-primary">Vérifier mon éligibilité — 4,99 €</a>
       </div>
     </div>
   </section>
+
 </div>
 
 <style is:inline>
-  .dossier-page { font-family: 'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-  .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+  .dossier-page { font-family: 'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #0f172a; }
+  .dossier-page h1, .dossier-page h2, .dossier-page h3 { margin: 0; }
+  .dossier-page p { margin: 0; }
+
+  .btn-primary {
+    display: inline-block; background: #fff; color: #1e3a8a; font-weight: 700; font-size: 1.05rem;
+    padding: 15px 34px; border-radius: 12px; text-decoration: none; transition: transform .15s, box-shadow .15s;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.18); }
 
   /* HERO */
-  .hero { background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff; padding: 60px 20px 50px; text-align: center; }
-  .hero-badge { display: inline-block; background: rgba(255,255,255,.18); border-radius: 999px; padding: 4px 14px; font-size: .78rem; font-weight: 700; margin-bottom: 16px; letter-spacing: .04em; }
-  .hero h1 { font-size: clamp(1.6rem, 5vw, 2.4rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; color: #fff; }
-  .hero-sub { font-size: 1.1rem; opacity: .9; margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto; }
-  .hero-features { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 28px; }
-  .hero-features span { background: rgba(255,255,255,.15); border-radius: 8px; padding: 6px 14px; font-size: .82rem; font-weight: 600; }
-  .hero-cta { display: inline-block; background: #fff; color: #1e3a8a; font-weight: 800; font-size: 1.1rem; padding: 16px 40px; border-radius: 12px; text-decoration: none; transition: transform .15s; }
-  .hero-cta:hover { transform: scale(1.04); }
-  .hero-trust { font-size: .78rem; opacity: .7; margin-top: 14px; }
+  .hero { background: linear-gradient(135deg, #172a63 0%, #1e3a8a 45%, #2563eb 100%); color: #fff; padding: 64px 20px 72px; }
+  .hero-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+  .eyebrow { display: inline-block; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: 5px 14px; font-size: .76rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 18px; }
+  .hero h1 { color: #fff; font-size: clamp(1.9rem, 4.2vw, 2.9rem); font-weight: 800; line-height: 1.12; margin-bottom: 18px; letter-spacing: -.02em; }
+  .hero-sub { font-size: 1.06rem; line-height: 1.6; color: rgba(255,255,255,.9); margin-bottom: 28px; max-width: 540px; }
+  .hero-trust { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .hero-trust li { position: relative; padding-left: 22px; font-size: .82rem; color: rgba(255,255,255,.78); }
+  .hero-trust li::before { content: '✓'; position: absolute; left: 0; color: #7dd3fc; font-weight: 800; }
 
-  /* FEATURES */
-  .what-you-get { padding: 60px 20px; background: #f8fafc; }
-  .what-you-get h2 { text-align: center; font-size: 1.6rem; font-weight: 800; margin-bottom: 36px; color: #1e293b; }
-  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-  .feature-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 24px; text-align: center; }
-  .feature-icon { font-size: 2rem; margin-bottom: 10px; }
-  .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: #1e293b; }
-  .feature-card p { font-size: .88rem; color: #64748b; line-height: 1.5; }
+  /* HERO — aperçu dossier */
+  .hero-preview { display: flex; justify-content: center; }
+  .paper { background: #fff; color: #0f172a; width: 320px; border-radius: 16px; padding: 22px; box-shadow: 0 30px 60px rgba(0,0,0,.3); transform: rotate(2deg); }
+  .paper-head { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eef2f7; padding-bottom: 12px; }
+  .paper-logo { font-weight: 800; font-size: .82rem; color: #1e3a8a; }
+  .paper-tag { font-size: .66rem; color: #94a3b8; text-transform: uppercase; letter-spacing: .05em; }
+  .paper-title { font-weight: 800; font-size: .98rem; margin: 14px 0; }
+  .paper-verdict { display: flex; gap: 12px; align-items: center; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 12px 14px; }
+  .paper-check { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: #16a34a; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+  .paper-verdict strong { display: block; color: #15803d; font-size: .88rem; }
+  .paper-verdict span { font-size: .74rem; color: #64748b; }
+  .paper-rows { margin: 16px 0; }
+  .paper-row { display: flex; justify-content: space-between; font-size: .78rem; padding: 7px 0; border-bottom: 1px dashed #eef2f7; }
+  .paper-row span:first-child { color: #94a3b8; }
+  .paper-row span:last-child { color: #1e293b; font-weight: 600; }
+  .paper-list { background: #f8fafc; border-radius: 10px; padding: 12px 14px; }
+  .paper-li { display: flex; align-items: center; gap: 9px; font-size: .78rem; color: #334155; padding: 4px 0; }
+  .paper-li .dot { width: 14px; height: 14px; border-radius: 4px; background: #2563eb; flex-shrink: 0; }
+  .paper-li.faded { opacity: .4; }
+
+  /* TRUST STRIP */
+  .trust-strip { background: #0f172a; padding: 14px 20px; }
+  .trust-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; color: rgba(255,255,255,.72); font-size: .8rem; font-weight: 500; text-align: center; }
+  .trust-inner .sep { color: rgba(255,255,255,.3); }
+
+  /* SECTIONS */
+  .content { padding: 72px 20px; background: #fff; }
+  .content-inner { max-width: 1000px; margin: 0 auto; }
+  .section-head { text-align: center; max-width: 620px; margin: 0 auto 44px; }
+  .section-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: #0f172a; letter-spacing: -.01em; }
+  .section-head p { margin-top: 12px; font-size: 1.02rem; color: #64748b; line-height: 1.6; }
+
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .feature { background: #fff; border: 1px solid #e8edf3; border-radius: 16px; padding: 26px; transition: box-shadow .2s, transform .2s; }
+  .feature:hover { box-shadow: 0 10px 30px rgba(15,23,42,.07); transform: translateY(-2px); }
+  .feat-icon { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 12px; background: #eff6ff; color: #2563eb; margin-bottom: 16px; }
+  .feat-icon svg { width: 24px; height: 24px; }
+  .feature h3 { font-size: 1.04rem; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+  .feature p { font-size: .92rem; color: #64748b; line-height: 1.55; }
+
+  /* HOW */
+  .how { padding: 72px 20px; background: #f8fafc; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .step { background: #fff; border: 1px solid #e8edf3; border-radius: 16px; padding: 28px; text-align: left; }
+  .step-num { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #1e3a8a; color: #fff; font-weight: 800; font-size: 1.05rem; margin-bottom: 16px; }
+  .step h3 { font-size: 1.06rem; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+  .step p { font-size: .92rem; color: #64748b; line-height: 1.55; }
 
   /* FORM */
-  .form-section { padding: 60px 20px; background: #fff; }
-  .form-card { max-width: 520px; margin: 0 auto; }
-  .form-card h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 6px; color: #1e293b; }
-  .form-sub { color: #64748b; font-size: .92rem; margin-bottom: 28px; }
+  .form-section { padding: 72px 20px; background: #fff; }
+  .form-card { max-width: 520px; margin: 0 auto; background: #fff; border: 1px solid #e8edf3; border-radius: 18px; padding: 36px 32px; box-shadow: 0 12px 40px rgba(15,23,42,.06); }
+  .form-card > h2 { font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+  .form-sub { color: #64748b; font-size: .94rem; margin-bottom: 26px; line-height: 1.5; }
   .form-step { display: none; animation: fadeUp .3s ease; }
   .form-step.active { display: block; }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-  .form-step label { display: block; font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; color: #1e293b; }
+  .form-step label { display: block; font-weight: 700; font-size: 1.08rem; margin-bottom: 10px; color: #0f172a; }
+  .field-hint { font-size: .86rem; color: #94a3b8; margin: -4px 0 14px; line-height: 1.45; }
   .form-step input[type=text],
   .form-step input[type=email],
   .form-step input[type=number],
   .form-step select {
     width: 100%; padding: 14px 16px; border: 2px solid #e2e8f0; border-radius: 10px;
-    font-size: 1rem; outline: none; transition: border-color .2s; background: #f8fafc;
+    font-size: 1rem; outline: none; transition: border-color .2s; background: #f8fafc; font-family: inherit;
   }
   .form-step input:focus, .form-step select:focus { border-color: #2563eb; background: #fff; }
   .input-row { display: flex; gap: 12px; }
@@ -223,38 +370,48 @@ import { supabaseConfig } from '../lib/supabase';
   .imc-preview { margin-top: 10px; padding: 10px 14px; border-radius: 8px; font-size: .92rem; font-weight: 600; }
 
   .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .checkbox-label, .checkbox-single { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; transition: border-color .2s, background .2s; font-size: .92rem; }
+  .checkbox-label, .checkbox-single { display: flex; align-items: center; gap: 8px; padding: 12px 14px; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; transition: border-color .2s, background .2s; font-size: .9rem; color: #1e293b; }
   .checkbox-label:has(input:checked), .checkbox-single:has(input:checked) { border-color: #2563eb; background: #eff6ff; }
-  .checkbox-label input, .checkbox-single input { width: 18px; height: 18px; accent-color: #2563eb; }
-  .checkbox-single { margin-top: 12px; }
+  .checkbox-label input, .checkbox-single input { width: 18px; height: 18px; accent-color: #2563eb; flex-shrink: 0; }
+  .checkbox-single { margin-top: 14px; align-items: flex-start; }
 
   .btn-next, .btn-pay {
-    width: 100%; margin-top: 18px; padding: 14px; border: none; border-radius: 10px;
-    font-size: 1rem; font-weight: 700; cursor: pointer; transition: transform .15s, background .2s;
+    width: 100%; margin-top: 22px; padding: 15px; border: none; border-radius: 11px;
+    font-size: 1.02rem; font-weight: 700; cursor: pointer; transition: transform .15s, background .2s; font-family: inherit;
   }
-  .btn-next { background: #1e40af; color: #fff; }
-  .btn-next:hover { background: #1d4ed8; transform: scale(1.02); }
-  .btn-pay { background: linear-gradient(135deg, #1e40af, #3b82f6); color: #fff; font-size: 1.1rem; padding: 16px; }
-  .btn-pay:hover { transform: scale(1.02); }
+  .btn-next { background: #1e3a8a; color: #fff; }
+  .btn-next:hover { background: #1d4ed8; transform: translateY(-1px); }
+  .btn-pay { background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff; font-size: 1.1rem; padding: 17px; box-shadow: 0 8px 22px rgba(37,99,235,.28); }
+  .btn-pay:hover { transform: translateY(-1px); }
   .btn-pay:disabled { opacity: .6; cursor: default; transform: none; }
-  .pay-note { text-align: center; font-size: .8rem; color: #94a3b8; margin-top: 10px; }
-
-  .recap { background: #f0f4ff; border: 1px solid #dbeafe; border-radius: 10px; padding: 14px; margin: 16px 0 4px; font-size: .9rem; line-height: 1.6; color: #1e293b; }
+  .pay-note { text-align: center; font-size: .8rem; color: #94a3b8; margin-top: 12px; }
+  .recap { background: #f0f4ff; border: 1px solid #dbeafe; border-radius: 10px; padding: 14px 16px; margin: 18px 0 4px; font-size: .9rem; line-height: 1.65; color: #1e293b; }
 
   /* FAQ */
-  .faq-section { padding: 60px 20px; background: #f8fafc; }
-  .faq-section h2 { text-align: center; font-size: 1.5rem; font-weight: 800; margin-bottom: 28px; color: #1e293b; }
-  .faq-list { max-width: 600px; margin: 0 auto; }
-  .faq-item { border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 10px; background: #fff; overflow: hidden; }
-  .faq-item summary { padding: 16px 18px; font-weight: 700; cursor: pointer; font-size: .95rem; color: #1e293b; list-style: none; }
-  .faq-item summary::before { content: '+ '; color: #2563eb; font-weight: 800; }
-  .faq-item[open] summary::before { content: '- '; }
-  .faq-item p { padding: 0 18px 16px; font-size: .9rem; color: #64748b; line-height: 1.6; }
+  .faq-section { padding: 72px 20px; background: #f8fafc; }
+  .faq-section h2 { text-align: center; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; margin-bottom: 32px; color: #0f172a; }
+  .faq-inner { max-width: 640px; margin: 0 auto; }
+  .faq-item { border: 1px solid #e8edf3; border-radius: 12px; margin-bottom: 10px; background: #fff; overflow: hidden; }
+  .faq-item summary { padding: 18px 20px; font-weight: 700; cursor: pointer; font-size: .98rem; color: #0f172a; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; color: #2563eb; font-weight: 800; font-size: 1.3rem; line-height: 1; flex-shrink: 0; }
+  .faq-item[open] summary::after { content: '–'; }
+  .faq-item p { padding: 0 20px 18px; font-size: .92rem; color: #64748b; line-height: 1.65; }
+  .faq-cta { text-align: center; margin-top: 32px; }
+  .faq-cta .btn-primary { background: #1e3a8a; color: #fff; }
+  .faq-cta .btn-primary:hover { background: #1d4ed8; }
 
+  @media (max-width: 880px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .hero-copy { display: flex; flex-direction: column; align-items: center; }
+    .hero-trust { justify-content: center; }
+    .features, .steps { grid-template-columns: 1fr; }
+    .hero-preview { order: -1; }
+  }
   @media (max-width: 480px) {
     .input-row { flex-direction: column; }
     .checkbox-grid { grid-template-columns: 1fr; }
-    .hero-features { flex-direction: column; align-items: center; }
+    .form-card { padding: 28px 22px; }
   }
 </style>
 
@@ -266,19 +423,17 @@ import { supabaseConfig } from '../lib/supabase';
   var tailleEl = document.getElementById('taille');
   var imcPreview = document.getElementById('imc-preview');
 
-  // Step navigation
+  // Navigation entre les étapes
   form.querySelectorAll('.btn-next').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var nextStep = parseInt(this.getAttribute('data-next'));
       var currentStep = this.closest('.form-step');
 
-      // Validate current step inputs
       var inputs = currentStep.querySelectorAll('input[required], select[required]');
       var valid = true;
       inputs.forEach(function(inp) { if (!inp.value.trim()) { inp.style.borderColor = '#ef4444'; valid = false; } else { inp.style.borderColor = ''; } });
       if (!valid) return;
 
-      // Show recap on last step
       if (nextStep === 6) buildRecap();
 
       steps.forEach(function(s) { s.classList.remove('active'); });
@@ -286,14 +441,14 @@ import { supabaseConfig } from '../lib/supabase';
     });
   });
 
-  // IMC live preview
+  // Aperçu IMC en direct
   function updateImc() {
     var p = parseFloat(poidsEl.value);
     var t = parseFloat(tailleEl.value);
     if (p > 0 && t > 0) {
       var imc = (p / ((t / 100) * (t / 100))).toFixed(1);
       var color = imc >= 35 ? '#16a34a' : imc >= 30 ? '#f59e0b' : '#64748b';
-      var label = imc >= 40 ? 'Eligible (IMC >= 40)' : imc >= 35 ? 'Seuil atteint (IMC >= 35)' : imc >= 30 ? 'Sous le seuil de 35' : 'IMC < 30';
+      var label = imc >= 40 ? 'Critère IMC rempli (≥ 40)' : imc >= 35 ? 'Seuil de 35 atteint' : imc >= 30 ? 'Juste sous le seuil de 35' : 'IMC sous le seuil';
       imcPreview.style.display = 'block';
       imcPreview.style.background = imc >= 35 ? '#f0fdf4' : imc >= 30 ? '#fffbeb' : '#f8fafc';
       imcPreview.style.color = color;
@@ -310,25 +465,25 @@ import { supabaseConfig } from '../lib/supabase';
     var poids = poidsEl.value;
     var taille = tailleEl.value;
     var imc = (parseFloat(poids) / ((parseFloat(taille) / 100) * (parseFloat(taille) / 100))).toFixed(1);
-    var ville = document.getElementById('ville').value || 'Non precisee';
+    var ville = document.getElementById('ville').value || 'Non précisée';
     var comorbs = [];
     form.querySelectorAll('input[name=comorbidites]:checked').forEach(function(c) { comorbs.push(c.value); });
     document.getElementById('recap').innerHTML =
-      '<strong>' + prenom + '</strong> — ' + poids + 'kg / ' + taille + 'cm (IMC ' + imc + ')<br>' +
+      '<strong>' + prenom + '</strong> — ' + poids + ' kg / ' + taille + ' cm (IMC ' + imc + ')<br>' +
       'Ville : ' + ville + '<br>' +
-      'Comorbidites : ' + (comorbs.length ? comorbs.join(', ') : 'Aucune') + '<br>' +
-      'Traitement : ' + (document.getElementById('traitement').value || 'Non precise');
+      'Conditions : ' + (comorbs.length ? comorbs.join(', ') : 'Aucune') + '<br>' +
+      'Traitement : ' + (document.getElementById('traitement').value || 'Non précisé');
   }
 
-  // Submit → Stripe
+  // Envoi → Stripe
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
     var btn = document.getElementById('btn-pay');
     btn.disabled = true;
-    btn.textContent = 'Redirection vers le paiement...';
+    btn.textContent = 'Redirection vers le paiement…';
 
     var email = document.getElementById('email').value;
-    if (!email || !email.includes('@')) { btn.disabled = false; btn.textContent = 'Obtenir mon dossier — 4,99€'; return; }
+    if (!email || !email.includes('@')) { btn.disabled = false; btn.textContent = 'Obtenir mon dossier — 4,99 €'; return; }
 
     var comorbs = [];
     form.querySelectorAll('input[name=comorbidites]:checked').forEach(function(c) { comorbs.push(c.value); });
@@ -355,11 +510,11 @@ import { supabaseConfig } from '../lib/supabase';
       if (result.url) {
         window.location.href = result.url;
       } else {
-        btn.textContent = 'Erreur — reessayer';
+        btn.textContent = 'Erreur — réessayer';
         btn.disabled = false;
       }
     } catch (err) {
-      btn.textContent = 'Erreur — reessayer';
+      btn.textContent = 'Erreur — réessayer';
       btn.disabled = false;
     }
   });
