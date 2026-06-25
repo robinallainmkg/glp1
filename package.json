@@ -41,7 +41,7 @@
     "@astrojs/node": "^8.3.4",
     "@astrojs/sitemap": "3.5.1",
     "@astrojs/tailwind": "6.0.2",
-    "@supabase/supabase-js": "^2.108.2",
+    "@supabase/supabase-js": "^2.57.2",
     "astro": "4.16.19",
     "dotenv": "^17.2.1",
     "glob": "^11.1.0",
