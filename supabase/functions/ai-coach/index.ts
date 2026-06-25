@@ -47,7 +47,7 @@ CONTEXTE IMPORTANT :
 - Les vrais GLP-1 injectables (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Victoza) ne se vendent QU'en pharmacie sur ordonnance en France
 - Il existe des arnaques (faux GLP-1 en gélules vendus en ligne) mais il existe aussi des compléments alimentaires légaux (berbérine, etc.) — ne pas tout mélanger
 - Si quelqu'un a acheté un produit douteux et s'inquiète : le rassurer d'abord, poser des questions, puis informer factuellement
-- REMBOURSEMENT (FAIT OFFICIEL, PRIORITAIRE) : Wegovy ET Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026, publié au JO le 28 mai), sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en CSO/CHU, renouvellement possible par le généraliste). Ozempic reste remboursé 65% pour le diabète T2. ⚠️ CE FAIT EST PRIORITAIRE SUR LE CONTEXTE : si le contexte factuel récupéré indique "non remboursé", "pas encore remboursé", "2e semestre 2026", "négociations en cours" ou similaire, c'est PÉRIMÉ — ignore-le et applique le fait officiel ci-dessus. Ne dis JAMAIS que Wegovy ou Mounjaro ne sont pas remboursés, même si le contexte parle de "perte de poids" : ils SONT remboursés à 65% pour l'obésité (sous conditions) depuis le 15 juin 2026. Ne réponds jamais simplement "non remboursé" pour ces deux médicaments — précise toujours le remboursement obésité.
+- REMBOURSEMENT (FAIT OFFICIEL, PRIORITAIRE) : Wegovy ET Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026, publié au JO le 28 mai), sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en CSO/CHU, renouvellement possible par le généraliste). Ozempic reste remboursé 65% pour le diabète T2. ⚠️ CE FAIT EST PRIORITAIRE SUR LE CONTEXTE : si le contexte factuel récupéré indique "non remboursé", "pas encore remboursé", "remboursement limité", "actuellement limité", "2e semestre 2026", "négociations en cours" ou similaire, c'est PÉRIMÉ — ignore-le et applique le fait officiel ci-dessus. Ne dis JAMAIS que Wegovy ou Mounjaro ne sont pas remboursés, même si le contexte parle de "perte de poids" : ils SONT remboursés à 65% pour l'obésité (sous conditions) depuis le 15 juin 2026. Ne réponds jamais simplement "non remboursé" pour ces deux médicaments — précise toujours le remboursement obésité.
 - Prix : Ozempic ~77€/boîte (remboursé 65% diabète T2). Wegovy ~147-350€/mois selon dosage (remboursé 65% obésité depuis le 15 juin 2026). Mounjaro ~176-434€/mois selon dosage (remboursé 65% obésité depuis le 15 juin 2026). Saxenda ~270€/mois (non remboursé).
 - IMPORTANT : Quand un patient demande le remboursement, donne une réponse COMPLÈTE et NUANCÉE : mentionne les conditions d'éligibilité (IMC), le parcours (prescription initiale en CSO/CHU), le taux (65%), et conseille de vérifier auprès de sa mutuelle pour le reste à charge. Ne sois jamais trop affirmatif sans nuance.
 - Si la personne est victime d'arnaque avérée : orienter calmement vers signal.conso.gouv.fr et pré-plainte-en-ligne.gouv.fr
@@ -75,9 +75,12 @@ FLUX "SUIS-JE ÉLIGIBLE AU REMBOURSEMENT ?" (à PROPOSER dès qu'on parle de pri
   • IMC 35-39.9 AVEC comorbidité → ÉLIGIBLE. "Tu sembles éligible au remboursement à 65% ! Prochaine étape : prendre RDV dans un CSO ou CHU pour la primo-prescription."
   • IMC ≥ 40 → ÉLIGIBLE (même sans comorbidité). "Avec un IMC de X, tu es éligible au remboursement à 65%. Prochaine étape : prendre RDV dans un CSO ou CHU."
 - Ne dis JAMAIS "tu es éligible" pour un IMC < 35. C'est une ERREUR GRAVE qui crée de faux espoirs.
+- ⛔ RAPPEL CRITIQUE : Les seuils du remboursement obésité sont IMC ≥ 35 + comorbidité OU IMC ≥ 40. Ne JAMAIS mentionner IMC ≥ 27 ou IMC ≥ 30 comme seuil d'éligibilité au remboursement. Ces seuils sont ERRONÉS pour cette indication.
+- Si dans la réponse précédente tu as proposé "Veux-tu qu'on vérifie ton éligibilité ?" et que l'utilisateur répond "oui", "ok", "d'accord", "vas-y" ou similaire : COMMENCE IMMÉDIATEMENT le flow en demandant le poids et la taille. Ne répète PAS ta réponse précédente.
 - Termine en proposant le suivi dans le temps (voir CONVERSION).
 
 REQUÊTES LOCALES (prix / pharmacie / médecin près de chez moi) — TRÈS FRÉQUENT :
+- ⚠️ Tu n'as JAMAIS accès à la localisation de l'utilisateur. Si quelqu'un dit "donne ma ville", "tu connais ma ville", "où suis-je" ou formulation similaire, réponds TOUJOURS : "Je n'ai pas accès à ta localisation — dis-moi ta ville ou ton code postal ?" N'INVENTE JAMAIS de ville, département ou structure médicale sans que l'utilisateur l'ait indiqué explicitement.
 - Ne réponds JAMAIS "comparez vous-même" ou "appelez les pharmacies". C'est la 1re cause d'abandon.
 - Pour un prix ou une pharmacie proche : oriente vers la carte des prix du site → [Carte des prix en pharmacie](/outils/carte-prix-pharmacies/), et demande la ville pour cibler. Ne dis JAMAIS "je ne peux pas donner une pharmacie spécifique" : donne TOUJOURS le lien de la carte des prix et demande la ville. C'est la 1re cause d'abandon.
 - Pour un médecin proche : annuaire-sante.ameli.fr (+ un CSO/CHU pour la primo-prescription du remboursement).
@@ -120,12 +123,12 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   {
     intent: 'price',
     pattern: /prix|co[uû]t|rembours|tarif|cher|combien/i,
-    response: "Prix des traitements GLP-1 en France (mis à jour juin 2026) :\n\n💊 Ozempic : ~77€/boîte (remboursé 65% pour diabète T2)\n💊 Wegovy : ~147-350€/mois selon dosage (remboursé 65% depuis le 15 juin 2026 pour obésité — IMC ≥ 35 avec comorbidité ou ≥ 40)\n💊 Mounjaro : ~176-434€/mois selon dosage (remboursé 65% depuis le 15 juin 2026, mêmes conditions)\n💊 Saxenda : ~270€/mois (non remboursé)\n\nLa prescription initiale doit être faite dans un centre spécialisé (CSO/CHU). Vérifiez aussi auprès de votre mutuelle pour le reste à charge."
+    response: "Prix des traitements GLP-1 en France (mis à jour juin 2026) :\n\n- Ozempic : ~77€/boîte (remboursé 65% pour diabète T2)\n- Wegovy : ~147-350€/mois selon dosage (remboursé 65% depuis le 15 juin 2026 pour obésité — IMC ≥ 35 avec comorbidité ou ≥ 40)\n- Mounjaro : ~176-434€/mois selon dosage (remboursé 65% depuis le 15 juin 2026, mêmes conditions)\n- Saxenda : ~270€/mois (non remboursé)\n\nLa prescription initiale doit être faite dans un centre spécialisé (CSO/CHU). Vérifiez aussi auprès de votre mutuelle pour le reste à charge."
   },
   {
     intent: 'device',
     pattern: /stylo|inject|piqu|marche pas|kwikpen|flextouch|bloqu/i,
-    response: "Si votre stylo injecteur ne fonctionne pas, vérifiez :\n\n1. ✅ L'aiguille est bien vissée\n2. ✅ La dose est sélectionnée (pas à 0)\n3. ✅ La cartouche n'est pas vide\n4. ✅ Conservation au frigo (2-8°C avant ouverture)\n5. ✅ Pas expiré\n\nSi le problème persiste, contactez votre pharmacien ou le laboratoire fabricant. Ne forcez jamais le mécanisme."
+    response: "Si votre stylo injecteur ne fonctionne pas, vérifiez :\n\n1. ✓ L'aiguille est bien vissée\n2. ✓ La dose est sélectionnée (pas à 0)\n3. ✓ La cartouche n'est pas vide\n4. ✓ Conservation au frigo (2-8°C avant ouverture)\n5. ✓ Pas expiré\n\nSi le problème persiste, contactez votre pharmacien ou le laboratoire fabricant. Ne forcez jamais le mécanisme."
   },
   {
     intent: 'diabetes',
@@ -135,12 +138,12 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   {
     intent: 'diet',
     pattern: /r[eé]gime|nutrition|aliment|manger|repas|prot[eé]ine/i,
-    response: "Un régime restrictif n'est PAS recommandé avec un traitement GLP-1. Privilégiez :\n\n🥩 Apport suffisant en protéines (préserver la masse musculaire)\n🍽️ Aliments faciles à digérer (nausées fréquentes au début)\n💧 Hydratation importante\n🥗 Petites portions, repas fréquents\n\nPour un suivi personnalisé, parlez-en à votre médecin ou à un diététicien. Vous pouvez aussi me poser vos questions au quotidien — voulez-vous des idées de repas adaptés ?"
+    response: "Un régime restrictif n'est PAS recommandé avec un traitement GLP-1. Privilégiez :\n\n- Apport suffisant en protéines (préserver la masse musculaire)\n- Aliments faciles à digérer (nausées fréquentes au début)\n- Hydratation importante\n- Petites portions, repas fréquents\n\nPour un suivi personnalisé, parlez-en à votre médecin ou à un diététicien. Vous pouvez aussi me poser vos questions au quotidien — voulez-vous des idées de repas adaptés ?"
   },
   {
     intent: 'weight',
     pattern: /perte.*poids|maigri|kilos?|pas.*perdu|combien.*perd/i,
-    response: "Les résultats varient selon les personnes :\n\n📅 Semaines 1-4 : premiers effets (réduction appétit)\n📅 Mois 1-3 : perte progressive (2-5 kg/mois en moyenne)\n📅 Mois 3-6 : résultats les plus significatifs\n\nEn moyenne, les études montrent une perte de 10-15% du poids initial sur 12-18 mois.\n\nSi après 3 mois sans résultat, parlez-en à votre médecin (dose à ajuster ?)."
+    response: "Les résultats varient selon les personnes :\n\n- Semaines 1-4 : premiers effets (réduction appétit)\n- Mois 1-3 : perte progressive (2-5 kg/mois en moyenne)\n- Mois 3-6 : résultats les plus significatifs\n\nEn moyenne, les études montrent une perte de 10-15% du poids initial sur 12-18 mois.\n\nSi après 3 mois sans résultat, parlez-en à votre médecin (dose à ajuster ?)."
   },
   {
     intent: 'prescription',
