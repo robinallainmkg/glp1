@@ -1,0 +1,110 @@
+# Auto-generated .htaccess for Hostinger (Apache)
+# Source: dist/_redirects + scripts/generate-htaccess.mjs
+# Do not edit by hand — regenerated at each build.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # =========================================================
+  # Redirections prioritaires (pages retirees → equivalents)
+  # =========================================================
+  RewriteRule ^collections/traitements-glp1/guide-complet-zepbound/?$ /collections/traitements-glp1/guide-complet-mounjaro/ [R=301,L,NE]
+  RewriteRule ^traitements-glp1/guide-complet-zepbound/?$ /collections/traitements-glp1/guide-complet-mounjaro/ [R=301,L,NE]
+  RewriteRule ^collections/glp1-cout/prix-zepbound-france/?$ /collections/glp1-cout/prix-mounjaro-france/ [R=301,L,NE]
+  RewriteRule ^glp1-cout/prix-zepbound-france/?$ /collections/glp1-cout/prix-mounjaro-france/ [R=301,L,NE]
+  RewriteRule ^collections/effets-secondaires-glp1/effets-secondaires-zepbound/?$ /collections/effets-secondaires-glp1/effets-secondaires-mounjaro/ [R=301,L,NE]
+  RewriteRule ^effets-secondaires-glp1/effets-secondaires-zepbound/?$ /collections/effets-secondaires-glp1/effets-secondaires-mounjaro/ [R=301,L,NE]
+  RewriteRule ^images/thumbnails/zepbound\.webp$ /images/thumbnails/mounjaro-blue.webp [R=301,L,NE]
+  RewriteRule ^collections/glp1-cout/wegovy-prix/?$ /collections/glp1-cout/prix-wegovy-france/ [R=301,L,NE]
+
+  # =========================================================
+  # Wildcards : anciennes URLs sans /collections/ (preserve SEO)
+  # =========================================================
+  RewriteRule ^glp1-cout/(.*)$ /collections/glp1-cout/$1 [R=301,L,NE]
+  RewriteRule ^glp1-perte-de-poids/(.*)$ /collections/glp1-perte-de-poids/$1 [R=301,L,NE]
+  RewriteRule ^glp1-diabete/(.*)$ /collections/glp1-diabete/$1 [R=301,L,NE]
+  RewriteRule ^effets-secondaires-glp1/(.*)$ /collections/effets-secondaires-glp1/$1 [R=301,L,NE]
+  RewriteRule ^regime-glp1/(.*)$ /collections/regime-glp1/$1 [R=301,L,NE]
+  RewriteRule ^alternatives-glp1/(.*)$ /collections/alternatives-glp1/$1 [R=301,L,NE]
+  RewriteRule ^medecins-glp1-france/(.*)$ /collections/medecins-glp1-france/$1 [R=301,L,NE]
+  RewriteRule ^recherche-glp1/(.*)$ /collections/recherche-glp1/$1 [R=301,L,NE]
+  RewriteRule ^avant-apres-glp1/(.*)$ /collections/avant-apres-glp1/$1 [R=301,L,NE]
+  RewriteRule ^traitements-glp1/(.*)$ /collections/traitements-glp1/$1 [R=301,L,NE]
+  RewriteRule ^collections/medicaments-glp1/(.*)$ /collections/traitements-glp1/$1 [R=301,L,NE]
+  RewriteRule ^temoignages-glp1/?$ /collections/temoignages/ [R=301,L,NE]
+
+  # =========================================================
+  # Redirects exacts (depuis dist/_redirects, 42 entrees)
+  # =========================================================
+  RewriteRule ^collections/medicaments-glp1/wegovy-avis$ /traitements-glp1/guide-complet-wegovy/ [R=301,L,NE]
+  RewriteRule ^collections/medicaments-glp1/saxenda-prix$ /glp1-cout/prix-saxenda-france/ [R=301,L,NE]
+  RewriteRule ^collections/medicaments-glp1/ozempic-injection-prix$ /glp1-cout/prix-ozempic-france/ [R=301,L,NE]
+  RewriteRule ^collections/medicaments-glp1/mounjaro-effet-secondaire$ /traitements-glp1/guide-complet-mounjaro/ [R=301,L,NE]
+  RewriteRule ^collections/medicaments-glp1/mounjaro-injection-pour-maigrir$ /traitements-glp1/guide-complet-mounjaro/ [R=301,L,NE]
+  RewriteRule ^collections/medicaments-glp1/victoza-posologie$ /traitements-glp1/guide-complet-victoza/ [R=301,L,NE]
+  RewriteRule ^collections/medicaments-glp1/victoza-rupture$ /traitements-glp1/guide-complet-victoza/ [R=301,L,NE]
+  RewriteRule ^collections/medicaments-glp1/trulicity-ou-ozempic$ /traitements-glp1/guide-complet-trulicity/ [R=301,L,NE]
+  RewriteRule ^collections/medicaments-glp1/trulicity-danger$ /traitements-glp1/guide-complet-trulicity/ [R=301,L,NE]
+  RewriteRule ^guides/guide-complet-trulicity/$ /traitements-glp1/guide-complet-trulicity/ [R=301,L,NE]
+  RewriteRule ^guides/guide-complet-januvia/$ /traitements-glp1/guide-complet-januvia/ [R=301,L,NE]
+  RewriteRule ^guides/guide-complet-mounjaro/$ /traitements-glp1/guide-complet-mounjaro/ [R=301,L,NE]
+  RewriteRule ^guides/guide-complet-ozempic/$ /traitements-glp1/guide-complet-ozempic/ [R=301,L,NE]
+  RewriteRule ^guides/guide-complet-wegovy/$ /traitements-glp1/guide-complet-wegovy/ [R=301,L,NE]
+  RewriteRule ^guides/guide-complet-saxenda/$ /traitements-glp1/guide-complet-saxenda/ [R=301,L,NE]
+  RewriteRule ^index-backup-original/$ / [R=301,L,NE]
+  RewriteRule ^diagnostic-live-content-backup/$ / [R=301,L,NE]
+  RewriteRule ^quel-traitement-glp1-choisir-backup/$ / [R=301,L,NE]
+  RewriteRule ^quel-traitement-glp1-choisir-fixed/$ / [R=301,L,NE]
+  RewriteRule ^test-affiliation/$ / [R=301,L,NE]
+  RewriteRule ^admin-stats-new/$ / [R=301,L,NE]
+  RewriteRule ^experts/$ / [R=301,L,NE]
+  RewriteRule ^produits-recommandes/$ / [R=301,L,NE]
+  RewriteRule ^guide-debutant/$ / [R=301,L,NE]
+  RewriteRule ^guide-glp1-perte-de-poids/$ / [R=301,L,NE]
+  RewriteRule ^guide-beaute-perte-de-poids-glp1/$ / [R=301,L,NE]
+  RewriteRule ^qu-est-ce-que-glp1/$ / [R=301,L,NE]
+  RewriteRule ^glp1-diabete$ /glp1-diabete/ [R=301,L,NE]
+  RewriteRule ^medecins-glp1-france$ /medecins-glp1-france/ [R=301,L,NE]
+  RewriteRule ^avant-apres-glp1$ /avant-apres-glp1/ [R=301,L,NE]
+  RewriteRule ^recherche-glp1$ /recherche-glp1/ [R=301,L,NE]
+  RewriteRule ^glp1-cout$ /glp1-cout/ [R=301,L,NE]
+  RewriteRule ^temoignage-marie-transformation-glp1/$ /temoignages/ [R=301,L,NE]
+  RewriteRule ^temoignage-sophie-transformation-glp1/$ /temoignages/ [R=301,L,NE]
+  RewriteRule ^temoignage-laurent-transformation-glp1/$ /temoignages/ [R=301,L,NE]
+  RewriteRule ^pages-statiques/serena-williams-glp1/$ /temoignages/ [R=301,L,NE]
+  RewriteRule ^legal/confidentialite/$ /politique-confidentialite/ [R=301,L,NE]
+  RewriteRule ^legal/cgu/$ /mentions-legales/ [R=301,L,NE]
+  RewriteRule ^medicaments-glp1/mounjaro-prix-france/$ /glp1-cout/prix-mounjaro-france/ [R=301,L,NE]
+  RewriteRule ^mounjaro-prix/$ /glp1-cout/prix-mounjaro-france/ [R=301,L,NE]
+  RewriteRule ^mounjaro/$ /traitements-glp1/guide-complet-mounjaro/ [R=301,L,NE]
+  RewriteRule ^produits-recommandes/$ /outils/produits-recommandes/ [R=301,L,NE]
+</IfModule>
+
+# =========================================================
+# Cache static assets (images, CSS, JS, fonts)
+# =========================================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Compression GZIP
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# Sécurité : bloquer l'accès aux fichiers sensibles
+<FilesMatch "^\.(env|git|htaccess|htpasswd)|^(\.git|node_modules|src)">
+  Require all denied
+</FilesMatch>

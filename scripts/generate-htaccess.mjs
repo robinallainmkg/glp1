@@ -34,6 +34,20 @@ const WILDCARD_REDIRECTS = [
   ['^temoignages-glp1/?$', '/collections/temoignages/'],
 ];
 
+// Redirections prioritaires — evaluees AVANT les wildcards (1 seul saut).
+// Pages retirees (conformite marque, 06/2026) → equivalents Mounjaro (meme molecule),
+// + regle legacy reprise de l'ancien .htaccess racine.
+const PRIORITY_REDIRECTS = [
+  ['^collections/traitements-glp1/guide-complet-zepbound/?$', '/collections/traitements-glp1/guide-complet-mounjaro/'],
+  ['^traitements-glp1/guide-complet-zepbound/?$', '/collections/traitements-glp1/guide-complet-mounjaro/'],
+  ['^collections/glp1-cout/prix-zepbound-france/?$', '/collections/glp1-cout/prix-mounjaro-france/'],
+  ['^glp1-cout/prix-zepbound-france/?$', '/collections/glp1-cout/prix-mounjaro-france/'],
+  ['^collections/effets-secondaires-glp1/effets-secondaires-zepbound/?$', '/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/'],
+  ['^effets-secondaires-glp1/effets-secondaires-zepbound/?$', '/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/'],
+  ['^images/thumbnails/zepbound\\.webp$', '/images/thumbnails/mounjaro-blue.webp'],
+  ['^collections/glp1-cout/wegovy-prix/?$', '/collections/glp1-cout/prix-wegovy-france/'],
+];
+
 function escapeRegex(s) {
   return s.replace(/[.+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -72,6 +86,11 @@ function buildHtaccess(redirects, wildcards) {
   # Force HTTPS
   RewriteCond %{HTTPS} !=on
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # =========================================================
+  # Redirections prioritaires (pages retirees → equivalents)
+  # =========================================================
+${PRIORITY_REDIRECTS.map(([p, d]) => `  RewriteRule ${p} ${d} [R=301,L,NE]`).join('\n')}
 
   # =========================================================
   # Wildcards : anciennes URLs sans /collections/ (preserve SEO)
