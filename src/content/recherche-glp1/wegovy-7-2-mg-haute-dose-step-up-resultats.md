@@ -60,7 +60,7 @@ C'est une approche dose-réponse classique en pharmacologie : si la courbe d'eff
 
 ### La pression concurrentielle
 
-L'arrivée du [tirzépatide (Mounjaro/Zepbound)](/collections/traitements-glp1/guide-complet-mounjaro/), qui a montré des pertes de poids atteignant 20 à 22 % dans les études SURMOUNT, et le développement du [CagriSema](/collections/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/) (combinaison sémaglutide + cagrilintide) avec des résultats proches de 23 %, ont poussé Novo Nordisk à explorer le plein potentiel de sa molécule phare en monothérapie.
+L'arrivée du [tirzépatide (Mounjaro)](/collections/traitements-glp1/guide-complet-mounjaro/), qui a montré des pertes de poids atteignant 20 à 22 % dans les études SURMOUNT, et le développement du [CagriSema](/collections/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/) (combinaison sémaglutide + cagrilintide) avec des résultats proches de 23 %, ont poussé Novo Nordisk à explorer le plein potentiel de sa molécule phare en monothérapie.
 
 ## Le programme STEP-UP : conception et objectifs {#programme-step-up}
 

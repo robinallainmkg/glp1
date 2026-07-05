@@ -49,7 +49,7 @@ Plusieurs facteurs ont convergé pour pousser Novo Nordisk à agir :
 
 - **La pression du Congrès américain** : des auditions parlementaires ont mis en lumière l'écart entre le coût de production estimé du sémaglutide (quelques dizaines de dollars par mois) et son prix de vente
 - **Le programme Medicare** : les négociations directes entre le gouvernement fédéral et les laboratoires pharmaceutiques, autorisées par l'Inflation Reduction Act, ont forcé la main des industriels
-- **La concurrence de Mounjaro et Zepbound** : Eli Lilly a agressivement positionné ses traitements à base de tirzépatide à des prix inférieurs, captant des parts de marché significatives
+- **La concurrence de Mounjaro** : Eli Lilly a agressivement positionné ses traitements à base de tirzépatide à des prix inférieurs, captant des parts de marché significatives
 - **L'opinion publique** : des millions de patients américains ont reporté ou abandonné leur traitement en raison du coût, créant une pression sociale considérable
 
 ### L'annonce de Novo Nordisk : 50% de réduction

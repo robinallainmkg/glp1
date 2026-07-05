@@ -37,7 +37,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-L'apnée obstructive du sommeil (SAOS) est l'un des troubles respiratoires les plus fréquents en France, touchant environ 4 millions de personnes. Son lien avec l'obésité est étroit : plus de 60 % des patients souffrant de SAOS modéré à sévère présentent un excès pondéral significatif. Les résultats de l'étude SURMOUNT-OSA, évaluant le tirzépatide (Mounjaro/Zepbound) chez des patients apnéiques obèses, ont marqué un tournant dans la prise en charge de cette pathologie. Avec une réduction de la sévérité de l'apnée estimée entre 50 et 60 %, le tirzépatide est devenu le premier médicament GLP-1 approuvé par la FDA pour cette indication. Que signifient ces résultats pour les patients français ?
+L'apnée obstructive du sommeil (SAOS) est l'un des troubles respiratoires les plus fréquents en France, touchant environ 4 millions de personnes. Son lien avec l'obésité est étroit : plus de 60 % des patients souffrant de SAOS modéré à sévère présentent un excès pondéral significatif. Les résultats de l'étude SURMOUNT-OSA, évaluant le tirzépatide (Mounjaro) chez des patients apnéiques obèses, ont marqué un tournant dans la prise en charge de cette pathologie. Avec une réduction de la sévérité de l'apnée estimée entre 50 et 60 %, le tirzépatide est devenu le premier médicament GLP-1 approuvé par la FDA pour cette indication. Que signifient ces résultats pour les patients français ?
 
 > **Avertissement médical** : cet article est informatif et ne remplace pas une consultation médicale. Le diagnostic et le traitement du SAOS doivent être supervisés par un médecin spécialisé.
 
@@ -124,7 +124,7 @@ Ces résultats suggèrent que les bénéfices du tirzépatide dépassent la simp
 
 ## Approbation FDA : une première pour un GLP-1 {#approbation-fda}
 
-Sur la base de ces résultats, la Food and Drug Administration américaine a approuvé le tirzépatide (sous le nom commercial Zepbound) pour le traitement de l'apnée obstructive du sommeil modérée à sévère chez les adultes obèses. Cette décision marque une première : jamais un traitement GLP-1 n'avait obtenu d'indication pour une pathologie respiratoire.
+Sur la base de ces résultats, la Food and Drug Administration américaine a approuvé le tirzépatide pour le traitement de l'apnée obstructive du sommeil modérée à sévère chez les adultes obèses. Cette décision marque une première : jamais un traitement GLP-1 n'avait obtenu d'indication pour une pathologie respiratoire.
 
 ### Ce que signifie cette approbation
 
@@ -222,7 +222,7 @@ Dans les essais cliniques SURMOUNT-OSA, les améliorations de l'IAH ont été me
 
 ### Le tirzépatide est-il déjà approuvé pour traiter l'apnée du sommeil en France ?
 
-Non. En France, le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) est approuvé pour le diabète de type 2 et fait l'objet d'une évaluation pour l'obésité. La FDA américaine a accordé l'indication SAOS pour le Zepbound, mais l'EMA n'a pas encore étendu cette indication à l'Europe. Les médecins français peuvent néanmoins prescrire le tirzépatide pour ses indications existantes chez les patients obèses souffrant de SAOS.
+Non. En France, le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) est approuvé pour le diabète de type 2 et fait l'objet d'une évaluation pour l'obésité. La FDA américaine a accordé l'indication SAOS pour le tirzépatide, mais l'EMA n'a pas encore étendu cette indication à l'Europe. Les médecins français peuvent néanmoins prescrire le tirzépatide pour ses indications existantes chez les patients obèses souffrant de SAOS.
 
 ### Faut-il être obèse pour bénéficier du tirzépatide contre l'apnée ?
 

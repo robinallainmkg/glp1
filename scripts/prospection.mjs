@@ -508,7 +508,7 @@ function getTemplate(prospect, campaign, variant) {
 
   <p>Je me permets de vous contacter car j'ai découvert ${prospect.company || 'votre pharmacie en ligne'}${prospect.website ? ' (' + prospect.website + ')' : ''} et votre gamme liée aux traitements de perte de poids.</p>
 
-  <p>Je suis le fondateur de <a href="${siteLink}" style="color: #2563eb; text-decoration: none; font-weight: 600;">GLP-1 France</a>, le site de référence francophone sur les traitements GLP-1 (Ozempic, Wegovy, Mounjaro, Zepbound...).</p>
+  <p>Je suis le fondateur de <a href="${siteLink}" style="color: #2563eb; text-decoration: none; font-weight: 600;">GLP-1 France</a>, le site de référence francophone sur les traitements GLP-1 (Ozempic, Wegovy, Mounjaro, ...).</p>
 
   <p><strong>Quelques chiffres :</strong></p>
   <ul style="padding-left: 1.2em;">

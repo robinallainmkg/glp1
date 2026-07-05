@@ -82,7 +82,7 @@ En avril 2024, le PRAC a publié ses premières conclusions après analyse de l'
 
 ### L'extension de l'enquête au tirzépatide
 
-En 2025, le PRAC a étendu sa surveillance au tirzépatide (Mounjaro, Zepbound). Les données préliminaires n'ont pas non plus montré de signal clair, mais le suivi se poursuit.
+En 2025, le PRAC a étendu sa surveillance au tirzépatide (Mounjaro). Les données préliminaires n'ont pas non plus montré de signal clair, mais le suivi se poursuit.
 
 Il est important de noter que l'EMA n'a pas « blanchi » définitivement les GLP-1 sur ce sujet. L'agence a simplement conclu que les données actuelles ne justifient pas une modification des RCP (résumés des caractéristiques du produit) ni une restriction d'usage, tout en maintenant une vigilance active. **Mise à jour avril 2026** : aux États-Unis, la FDA a retiré en janvier 2026 l'avertissement relatif au risque suicidaire des notices du sémaglutide, après analyse approfondie des données post-commercialisation et des études épidémiologiques, concluant à l'absence de lien causal établi.
 

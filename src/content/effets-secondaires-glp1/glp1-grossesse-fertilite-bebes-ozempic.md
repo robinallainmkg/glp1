@@ -72,7 +72,7 @@ Les délais recommandés varient selon le médicament :
 | Médicament | Demi-vie | Délai d'arrêt recommandé avant grossesse |
 |---|---|---|
 | Ozempic / Wegovy (sémaglutide) | ~1 semaine | **2 mois minimum** |
-| Mounjaro / Zepbound (tirzépatide) | ~5 jours | **1 mois minimum** |
+| Mounjaro (tirzépatide) | ~5 jours | **1 mois minimum** |
 | [Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/) | ~13 heures | **72 heures** |
 | Victoza (liraglutide) | ~13 heures | **72 heures** |
 

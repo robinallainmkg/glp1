@@ -35,6 +35,7 @@ SELECT 'ga_metrics' as tbl, MAX(date) FROM ga_metrics UNION ALL SELECT 'gsc_metr
 - Le déploiement se fait via FTP dans `.github/workflows/deploy-hostinger.yml`
 - Push sur `main` déclenche le deploy
 - **NE JAMAIS court-circuiter les agents** — toujours passer par le pipeline pour les modifications
+- **MARQUE "ZEPBOUND" INTERDITE SUR LE SITE** (réclamation DMCA Eli Lilly, juin 2026 — condition de réactivation Hostinger) : aucun texte, image, lien, meta ou URL ne doit mentionner Zepbound. Utiliser "tirzépatide" ou "Mounjaro". Toute occurrence détectée = suppression immédiate.
 
 ## Monetisation — Dossier GLP-1 payant + Coach IA (funnel gratuit)
 

@@ -39,7 +39,7 @@ L'étude STEP 1, publiée dans le New England Journal of Medicine en 2021, reste
 
 Ce qui signifie concrètement : pour une personne pesant 100 kg au départ, la perte de poids moyenne sous Wegovy est d'environ 15 kg sur 16 mois. Un tiers des patients en perdent 20 kg ou plus.
 
-### [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) / [Zepbound](/collections/traitements-glp1/guide-complet-zepbound) (tirzépatide) — L'étude SURMOUNT-1
+### [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) — L'étude SURMOUNT-1
 
 Mounjaro (tirzépatide) a produit des résultats encore plus impressionnants dans l'étude SURMOUNT-1, qui a suivi 2 539 patients pendant 72 semaines (18 mois) :
 

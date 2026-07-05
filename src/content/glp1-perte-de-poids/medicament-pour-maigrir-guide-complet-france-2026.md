@@ -76,7 +76,7 @@ Le **Mounjaro** d'Eli Lilly est le médicament le plus efficace actuellement dis
 
 **Indications officielles :**
 - Diabète de type 2 (AMM initiale)
-- Obésité et surpoids avec comorbidités (AMM obtenue en 2025 sous le nom Zepbound dans certains pays, prescription possible en France)
+- Obésité et surpoids avec comorbidités (AMM obtenue en 2025 dans certains pays, prescription possible en France)
 
 **Efficacité clinique :**
 - Perte de poids moyenne de **16 a 22.5 %** du poids corporel selon le dosage (etude SURMOUNT-1 : 22.5 % a la dose de 15 mg)

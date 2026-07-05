@@ -203,7 +203,6 @@ function extractTreatmentName(slug) {
     'trulicity': 'Trulicity',
     'victoza': 'Victoza',
     'rybelsus': 'Rybelsus',
-    'zepbound': 'Zepbound'
   };
   
   for (const [key, name] of Object.entries(treatments)) {

@@ -271,7 +271,6 @@ Mounjaro et Wegovy ne sont pas les seuls traitements disponibles. Selon votre pr
 
 - **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** : sémaglutide 1 mg, indiqué pour le diabète de type 2, avec une perte de poids modérée comme effet secondaire bénéfique
 - **[Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)** : liraglutide 3 mg, injection quotidienne, moins efficace que Mounjaro et Wegovy mais avec un bon recul de sécurité
-- **[Zepbound](/collections/traitements-glp1/guide-complet-zepbound/)** : tirzépatide (même molécule que Mounjaro), spécifiquement commercialisé pour l'indication perte de poids aux États-Unis
 - **[Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)** : sémaglutide oral 14 mg, pour les patients diabétiques préférant un comprimé aux injections
 - **[Chirurgie bariatrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/)** : pour les obésités sévères ne répondant pas suffisamment aux traitements médicamenteux
 

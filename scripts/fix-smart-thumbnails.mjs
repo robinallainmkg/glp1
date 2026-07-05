@@ -22,7 +22,6 @@ const thumbnailMappings = {
   'guide-complet-trulicity.md': '/images/thumbnails/trulicity.jpg',
   'guide-complet-victoza.md': '/images/thumbnails/victoza-medical-guide.jpg',
   'guide-complet-rybelsus.md': '/images/thumbnails/rybelsus-medical-guide.jpg',
-  'guide-complet-zepbound.md': '/images/thumbnails/zepbound.webp',
   
   // Prix par traitement
   'prix-wegovy-france.md': '/images/thumbnails/prix-wegovy-france-illus.jpg',
@@ -31,7 +30,6 @@ const thumbnailMappings = {
   'prix-trulicity-france.md': '/images/thumbnails/prix-trulicity-france-illus.jpg',
   'prix-victoza-france.md': '/images/thumbnails/prix-victoza-france-illus.jpg',
   'prix-rybelsus-france.md': '/images/thumbnails/prix-rybelsus-france-illus.jpg',
-  'prix-zepbound-france.md': '/images/thumbnails/zepbound.webp',
   'prix-mounjaro-france.md': '/images/thumbnails/mounjaro-blue.webp',
   
   // Effets secondaires
@@ -41,7 +39,6 @@ const thumbnailMappings = {
   'effets-secondaires-trulicity.md': '/images/thumbnails/effets-secondaires-trulicity-illus.jpg',
   'effets-secondaires-victoza.md': '/images/thumbnails/effets-secondaires-victoza-illus.jpg',
   'effets-secondaires-rybelsus.md': '/images/thumbnails/effets-secondaires-rybelsus-illus.jpg',
-  'effets-secondaires-zepbound.md': '/images/thumbnails/zepbound.webp',
   'effets-secondaires-mounjaro.md': '/images/thumbnails/mounjaro-blue.webp',
   
   // Régimes spécialisés

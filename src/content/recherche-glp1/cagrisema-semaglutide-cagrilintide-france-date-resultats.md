@@ -47,7 +47,7 @@ La logique de cette combinaison est de cibler deux voies de régulation de l'app
 Pour comprendre l'ambition de CagriSema, il faut replacer les chiffres dans leur contexte. Les meilleures données actuelles sur la perte de poids médicale sont :
 
 - **Wegovy (sémaglutide 2,4 mg)** : environ 14 à 16 % de perte de poids à 68 semaines dans l'étude STEP 1
-- **Mounjaro/Zepbound (tirzépatide 15 mg)** : environ 20 à 22 % de perte de poids dans les études SURMOUNT
+- **Mounjaro (tirzépatide 15 mg)** : environ 20 à 22 % de perte de poids dans les études SURMOUNT
 - **CagriSema (dose maximale)** : 22,7 % de perte de poids à 68 semaines dans REDEFINE 1
 
 Ces différences peuvent sembler faibles en pourcentage, mais se traduisent par des kilos supplémentaires perdus pour des millions de patients. Pour une personne pesant 110 kg, la différence entre 16 % et 22 % représente environ 6 kg supplémentaires.

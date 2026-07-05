@@ -1,6 +1,6 @@
 ---
 title: "CagriSema : Résultats Essais Cliniques France 2026"
-description: "CagriSema résultats essais cliniques France 2026 : -22,7% dans REDEFINE 1. Dossier FDA déposé. Quand arrivera-t-il en France ? Comparatif Zepbound."
+description: "CagriSema résultats essais cliniques France 2026 : -22,7% dans REDEFINE 1. Dossier FDA déposé. Quand arrivera-t-il en France ? Comparatif tirzépatide."
 pubDate: 2026-03-17
 date: 2026-05-29
 updatedAt: 2026-05-29
@@ -15,7 +15,7 @@ published: true
 priority: 2
 schema: "Article"
 mainKeyword: "CagriSema résultats essais cliniques France 2026"
-secondaryKeywords: ["cagrisema REDEFINE résultats", "cagrilintide semaglutide combinaison", "nouveau médicament obésité 2026", "cagrisema vs Zepbound", "cagrisema arrivée France", "novo nordisk poids 2026"]
+secondaryKeywords: ["cagrisema REDEFINE résultats", "cagrilintide semaglutide combinaison", "nouveau médicament obésité 2026", "cagrisema vs tirzépatide", "cagrisema arrivée France", "novo nordisk poids 2026"]
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Après les succès spectaculaires de [Wegovy (sémaglutide)](/collections/traitements-glp1/guide-complet-wegovy/) et de [Mounjaro/Zepbound (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/), Novo Nordisk parie sur une nouvelle combinaison pour détrôner Eli Lilly dans la course à l'anti-obésité : le CagriSema. Ce médicament inédit associe deux principes actifs — le sémaglutide (déjà connu dans Ozempic et Wegovy) et le cagrilintide, un analogue de l'amyline. Les résultats des essais de phase 3 publiés en 2025 et début 2026 sont prometteurs. Voici ce qu'on sait, et quand les patients français pourraient y avoir accès.
+Après les succès spectaculaires de [Wegovy (sémaglutide)](/collections/traitements-glp1/guide-complet-wegovy/) et de [Mounjaro (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/), Novo Nordisk parie sur une nouvelle combinaison pour détrôner Eli Lilly dans la course à l'anti-obésité : le CagriSema. Ce médicament inédit associe deux principes actifs — le sémaglutide (déjà connu dans Ozempic et Wegovy) et le cagrilintide, un analogue de l'amyline. Les résultats des essais de phase 3 publiés en 2025 et début 2026 sont prometteurs. Voici ce qu'on sait, et quand les patients français pourraient y avoir accès.
 
 ## Qu'est-ce que le CagriSema ?
 
@@ -61,7 +61,7 @@ L'essai REDEFINE 1, publié en 2025 et présenté dans sa version complète au c
 | Sémaglutide seul 2,4 mg | -16,1% | 26% |
 | Placebo | -2,3% | 2% |
 
-Ces résultats sont significatifs à plusieurs égards. CagriSema fait mieux que Wegovy (sémaglutide seul) de plus de 6 points de pourcentage. Et surtout, il se rapproche des résultats de Mounjaro/Zepbound obtenus dans l'étude SURMOUNT-1 (-20,9%), tout en les dépassant légèrement.
+Ces résultats sont significatifs à plusieurs égards. CagriSema fait mieux que Wegovy (sémaglutide seul) de plus de 6 points de pourcentage. Et surtout, il se rapproche des résultats de Mounjaro obtenus dans l'étude SURMOUNT-1 (-20,9%), tout en les dépassant légèrement.
 
 ### REIMAGINE 2 : résultats chez les patients diabétiques
 
@@ -104,20 +104,20 @@ Pour les patients français, la chaîne d'approbation est plus longue :
 
 > **Note importante** : Ces délais sont des estimations basées sur les procédures habituelles. Des accélérations sont possibles (procédure d'évaluation accélérée) tout comme des retards (demandes de données supplémentaires, questions de sécurité).
 
-## CagriSema vs Zepbound/Mounjaro : qui gagne ?
+## CagriSema vs Mounjaro : qui gagne ?
 
-La question que tout le monde se pose : CagriSema est-il vraiment meilleur que Mounjaro/Zepbound (tirzépatide) ?
+La question que tout le monde se pose : CagriSema est-il vraiment meilleur que Mounjaro (tirzépatide) ?
 
 | Médicament | Mécanisme | Perte poids max étude | Statut France |
 |---|---|---|---|
 | Wegovy (sémaglutide) | GLP-1 | ~16% | Disponible |
 | Mounjaro (tirzépatide) | GLP-1 + GIP | ~22% | Disponible (DT2) |
-| Zepbound (tirzépatide) | GLP-1 + GIP | ~22,5% | Non disponible |
+| Tirzépatide (Mounjaro) | GLP-1 + GIP | ~22,5% | Disponible |
 | **CagriSema** | **GLP-1 + amyline** | **~22,7%** | **Attendu 2027-2028** |
 
-Les résultats bruts semblaient proches dans les comparaisons indirectes, mais l'étude tête-à-tête REDEFINE 4 (publiée début 2026) a montré que **Zepbound surpasse CagriSema** : -25,5 % de perte de poids pour Zepbound 15 mg contre -23,0 % pour CagriSema à 84 semaines. CagriSema n'a donc pas démontré de supériorité sur le tirzépatide.
+Les résultats bruts semblaient proches dans les comparaisons indirectes, mais l'étude tête-à-tête REDEFINE 4 (publiée début 2026) a montré que **le tirzépatide surpasse CagriSema** : -25,5 % de perte de poids pour le tirzépatide 15 mg contre -23,0 % pour CagriSema à 84 semaines. CagriSema n'a donc pas démontré de supériorité sur le tirzépatide.
 
-Ce qui distingue CagriSema de Mounjaro/Zepbound, c'est le mécanisme d'action. Agoniser le récepteur GIP (comme le fait le tirzépatide) versus analoguer l'amyline sont deux approches différentes. En cas d'échec ou d'effets indésirables avec un mécanisme, l'autre pourrait constituer une alternative utile.
+Ce qui distingue CagriSema de Mounjaro, c'est le mécanisme d'action. Agoniser le récepteur GIP (comme le fait le tirzépatide) versus analoguer l'amyline sont deux approches différentes. En cas d'échec ou d'effets indésirables avec un mécanisme, l'autre pourrait constituer une alternative utile.
 
 ## L'impact sur l'écosystème des traitements anti-obésité
 

@@ -55,7 +55,6 @@ export async function GET() {
     { url: '/collections/traitements-glp1/guide-complet-trulicity/', priority: '0.8', changefreq: 'monthly' },
     { url: '/collections/traitements-glp1/guide-complet-victoza/', priority: '0.8', changefreq: 'monthly' },
     { url: '/collections/traitements-glp1/guide-complet-rybelsus/', priority: '0.8', changefreq: 'monthly' },
-    { url: '/collections/traitements-glp1/guide-complet-zepbound/', priority: '0.8', changefreq: 'monthly' },
     { url: '/collections/traitements-glp1/centres-mounjaro-france/', priority: '0.7', changefreq: 'monthly' },
     { url: '/collections/traitements-glp1/wegovy-dosage/', priority: '0.7', changefreq: 'monthly' },
 
@@ -67,7 +66,6 @@ export async function GET() {
     { url: '/collections/glp1-cout/prix-trulicity-france/', priority: '0.8', changefreq: 'monthly' },
     { url: '/collections/glp1-cout/prix-victoza-france/', priority: '0.8', changefreq: 'monthly' },
     { url: '/collections/glp1-cout/prix-rybelsus-france/', priority: '0.8', changefreq: 'monthly' },
-    { url: '/collections/glp1-cout/prix-zepbound-france/', priority: '0.8', changefreq: 'monthly' },
     { url: '/collections/glp1-cout/acheter-wegovy-en-france/', priority: '0.8', changefreq: 'monthly' },
     { url: '/collections/glp1-cout/remboursement-glp1-2026/', priority: '0.8', changefreq: 'monthly' },
     { url: '/collections/glp1-cout/wegovy-remboursement-mutuelle/', priority: '0.7', changefreq: 'monthly' },
@@ -84,7 +82,6 @@ export async function GET() {
     { url: '/collections/effets-secondaires-glp1/effets-secondaires-trulicity/', priority: '0.7', changefreq: 'monthly' },
     { url: '/collections/effets-secondaires-glp1/effets-secondaires-victoza/', priority: '0.7', changefreq: 'monthly' },
     { url: '/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/', priority: '0.7', changefreq: 'monthly' },
-    { url: '/collections/effets-secondaires-glp1/effets-secondaires-zepbound/', priority: '0.7', changefreq: 'monthly' },
     { url: '/collections/effets-secondaires-glp1/ozempic-danger/', priority: '0.7', changefreq: 'monthly' },
     { url: '/collections/effets-secondaires-glp1/wegovy-danger/', priority: '0.7', changefreq: 'monthly' },
     { url: '/collections/effets-secondaires-glp1/insulevel-effet-indesirable/', priority: '0.6', changefreq: 'monthly' },

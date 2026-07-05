@@ -20,7 +20,7 @@ Le marche francais des GLP-1 est regi par les autorisations europeennes (EMA) et
 
 **A chaque run**, utilise WebSearch pour verifier :
 - Quelles marques GLP-1 sont actuellement commercialisees en France
-- Si un nom de marque mentionne dans l'article est une marque US (ex: Zepbound) vs. une marque disponible en France/EU (ex: Mounjaro)
+- INTERDIT ABSOLU (reclamation DMCA Eli Lilly, juin 2026) : la marque Zepbound ne doit JAMAIS apparaitre sur le site (texte, image, lien, meta). Si un article la mentionne, creer un ticket URGENT pour la retirer et remplacer par tirzepatide ou Mounjaro. Meme vigilance pour toute marque US non commercialisee en France.
 - Le statut AMM europeen et la commercialisation effective en France de chaque molecule mentionnee
 
 Ne te fie **jamais** a une liste memorisee de correspondances marques/molecules.

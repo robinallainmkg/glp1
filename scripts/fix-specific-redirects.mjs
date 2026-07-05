@@ -52,9 +52,6 @@ const medicamentRedirects = {
   'rybelsus-prix': '/glp1-cout/prix-rybelsus-france/',
   'rybelsus-avis': '/traitements-glp1/guide-complet-rybelsus/',
   
-  // Zepbound
-  'zepbound-prix': '/glp1-cout/prix-zepbound-france/',
-  'zepbound-avis': '/traitements-glp1/guide-complet-zepbound/'
 };
 
 let fixed = 0;

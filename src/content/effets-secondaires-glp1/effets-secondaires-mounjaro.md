@@ -321,7 +321,6 @@ Limitez à 1-2 verres occasionnels.
 - [Quel traitement GLP-1 choisir ?](/guides/quel-traitement-glp1-choisir/) - Comparatif détaillé
 - [Effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/)
 - [Effets secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
-- [Effets secondaires de Zepbound (tirzepatide)](/collections/effets-secondaires-glp1/effets-secondaires-zepbound/)
 
 ### Remboursement et accès
 - [Remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) - Toutes les options

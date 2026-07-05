@@ -40,13 +40,6 @@ const files = [
     ingredient: 'Semaglutide oral',
     price: '80-100€',
     reimbursement: '65%'
-  },
-  {
-    path: 'src/content/glp1-cout/prix-zepbound-france.md',
-    drug: 'Zepbound',
-    ingredient: 'Tirzepatide',
-    price: '312€',
-    reimbursement: 'En cours'
   }
 ];
 

@@ -141,7 +141,7 @@ De **230€ à 440€ par mois** selon le dosage, à la charge du patient. Retro
 
 ### Mounjaro est-il déjà remboursé dans d'autres pays ?
 
-Oui. Aux États-Unis, Mounjaro est remboursé pour le diabète de type 2 depuis 2022 et pour l'obésité (sous le nom Zepbound) depuis 2023. En Europe, plusieurs pays ont déjà intégré Mounjaro dans leur système de remboursement national, notamment au Royaume-Uni (NICE, 2024).
+Oui. Aux États-Unis, Mounjaro est remboursé pour le diabète de type 2 depuis 2022 et pour l'obésité depuis 2023. En Europe, plusieurs pays ont déjà intégré Mounjaro dans leur système de remboursement national, notamment au Royaume-Uni (NICE, 2024).
 
 ---
 

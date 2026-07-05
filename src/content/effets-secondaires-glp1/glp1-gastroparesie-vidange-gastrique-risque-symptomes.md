@@ -38,7 +38,7 @@ En temps normal, après un repas, l'estomac effectué des contractions réguliè
 
 ### Le mécanisme d'action des GLP-1 sur l'estomac
 
-Les agonistes des récepteurs GLP-1 (sémaglutide dans Ozempic/Wegovy, tirzépatide dans [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/Zepbound, liraglutide dans Saxenda/Victoza) agissent sur plusieurs niveaux pour réduire l'appétit. L'un des mécanismes clés est le ralentissement délibéré de la vidange gastrique. En retardant le passage des aliments de l'estomac vers l'intestin, le médicament prolonge la sensation de satiété après le repas.
+Les agonistes des récepteurs GLP-1 (sémaglutide dans Ozempic/Wegovy, tirzépatide dans [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), liraglutide dans Saxenda/Victoza) agissent sur plusieurs niveaux pour réduire l'appétit. L'un des mécanismes clés est le ralentissement délibéré de la vidange gastrique. En retardant le passage des aliments de l'estomac vers l'intestin, le médicament prolonge la sensation de satiété après le repas.
 
 C'est précisément ce qui explique la réduction de l'appétit : on a moins faim parce que l'estomac est "encore plein" plus longtemps.
 

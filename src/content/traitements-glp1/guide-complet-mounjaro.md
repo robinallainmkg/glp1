@@ -415,7 +415,6 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
     <ul>
       <li><a href="/collections/traitements-glp1/guide-complet-ozempic">Guide Complet Ozempic vs Mounjaro</a></li>
       <li><a href="/collections/traitements-glp1/guide-complet-wegovy">Wegovy ou Mounjaro : Lequel Choisir ?</a></li>
-      <li><a href="/collections/traitements-glp1/guide-complet-zepbound">Zepbound : La Version Renforcée de Mounjaro</a></li>
     </ul>
   </div>
   
