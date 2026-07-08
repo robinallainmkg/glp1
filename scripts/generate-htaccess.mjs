@@ -44,7 +44,7 @@ const PRIORITY_REDIRECTS = [
   ['^glp1-cout/prix-zepbound-france/?$', '/collections/glp1-cout/prix-mounjaro-france/'],
   ['^collections/effets-secondaires-glp1/effets-secondaires-zepbound/?$', '/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/'],
   ['^effets-secondaires-glp1/effets-secondaires-zepbound/?$', '/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/'],
-  ['^images/thumbnails/zepbound\\.webp$', '/images/thumbnails/mounjaro-blue.webp'],
+  ['^images/thumbnails/zepbound\\.webp$', '/images/thumbnails/guide-complet-mounjaro-illus.svg'],
   ['^collections/glp1-cout/wegovy-prix/?$', '/collections/glp1-cout/prix-wegovy-france/'],
 ];
 

@@ -14,7 +14,7 @@ collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 mainKeyword: "effets secondaires Trulicity"
 image: "/images/thumbnails/effets-secondaires-trulicity-illus.jpg"
-thumbnail: "/images/thumbnails/trulicity.jpg"
+thumbnail: "/images/thumbnails/effets-secondaires-trulicity-illus.jpg"
 thumbnailAlt: "Effets secondaires du traitement trulicity"
 ---
 

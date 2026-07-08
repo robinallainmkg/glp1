@@ -4,7 +4,7 @@ thumbnail: "/images/thumbnails/guide-complet-wegovy-illus.jpg"
 slug: "guide-complet-wegovy"
 description: "Wegovy guide complet France semaglutide sémaglutide : traitement GLP-1 obésité, perte de poids. Prix, effets secondaires et posologie."
 author: "Dr. Martin"
-image: "/images/thumbnails/wegovy.jpg"
+image: "/images/thumbnails/guide-complet-wegovy-illus.jpg"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["wegovy", "glp-1", "obésité", "perte de poids", "traitement", "injection"]

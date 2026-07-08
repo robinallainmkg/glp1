@@ -7,7 +7,7 @@ author: "Dr. Émilie Martin"
 category: "Traitements"
 tags: ["glp1", "traitements", "dosage"]
 collection: "traitements-glp1"
-thumbnail: "/images/thumbnails/wegovy.jpg"
+thumbnail: "/images/thumbnails/wegovy-dosage-illus.svg"
 thumbnailAlt: "Illustration pour l'article Wegovy Dosage"
 featured: false
 priority: 5

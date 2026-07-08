@@ -11,7 +11,7 @@ featured: true
 priority: 2
 author: 'Dr. Marie Dubois'
 readingTime: 9
-thumbnail: "/images/thumbnails/mounjaro-blue.webp"
+thumbnail: "/images/thumbnails/remboursement-mounjaro-ceps-2026-illus.svg"
 thumbnailAlt: "Remboursement Mounjaro France 2026 - conditions et calendrier"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"

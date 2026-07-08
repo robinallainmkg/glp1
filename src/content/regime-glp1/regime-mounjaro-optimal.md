@@ -8,7 +8,7 @@ author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "traitements", "nutrition"]
 collection: "régime-glp1"
-thumbnail: "/images/thumbnails/mounjaro-blue.webp"
+thumbnail: "/images/thumbnails/regime-mounjaro-optimal-illus.svg"
 thumbnailAlt: "Illustration pour l'article régime-mounjaro-optimal"
 featured: false
 priority: 5

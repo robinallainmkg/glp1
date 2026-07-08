@@ -1,10 +1,10 @@
 ---
 title: "Mounjaro Guide Complet : Prix et Résultats"
-thumbnail: "/images/thumbnails/mounjaro-blue.webp"
+thumbnail: "/images/thumbnails/guide-complet-mounjaro-illus.svg"
 slug: "guide-complet-mounjaro"
 description: "Mounjaro (tirzepatide) guide complet France : perdez 15-20% de poids. Prix, posologie, effets secondaires et témoignages 2026."
 author: "Dr. Martin"
-image: "/images/thumbnails/mounjaro-blue.webp"
+image: "/images/thumbnails/guide-complet-mounjaro-illus.svg"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["mounjaro", "tirzepatide", "perte de poids", "résultats", "avant après", "prix france", "traitement efficace"]

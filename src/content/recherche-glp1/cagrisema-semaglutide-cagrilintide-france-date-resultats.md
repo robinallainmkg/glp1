@@ -8,7 +8,7 @@ author: "Dr. Marie Dubois"
 category: "Recherche médicale"
 tags: ["glp1", "cagrisema", "cagrilintide", "semaglutide", "novo nordisk", "REDEFINE", "obesite", "nouveaux traitements", "france", "2026"]
 collection: "recherche-glp1"
-thumbnail: "/images/thumbnails/mounjaro-blue.webp"
+thumbnail: "/images/thumbnails/cagrisema-france-illus.svg"
 thumbnailAlt: "CagriSema combinaison cagrilintide sémaglutide résultats REDEFINE France"
 featured: true
 published: true

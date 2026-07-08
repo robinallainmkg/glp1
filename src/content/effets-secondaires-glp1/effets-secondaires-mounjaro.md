@@ -11,7 +11,7 @@ date: 2026-06-22
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
-image: "/images/thumbnails/mounjaro-blue.webp"
+image: "/images/thumbnails/effets-secondaires-mounjaro-illus.svg"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 mainKeyword: "effets secondaires mounjaro tirzepatide"

@@ -7,7 +7,7 @@ author: "Dr. Émilie Martin"
 category: "Traitements"
 tags: ["mounjaro", "tirzepatide", "dosage", "glp1", "traitements"]
 collection: "traitements-glp1"
-thumbnail: "/images/thumbnails/mounjaro-blue.webp"
+thumbnail: "/images/thumbnails/mounjaro-dosage-illus.svg"
 thumbnailAlt: "Guide dosage Mounjaro tirzépatide"
 featured: true
 priority: 2

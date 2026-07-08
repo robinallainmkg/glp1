@@ -1,6 +1,6 @@
 ---
 title: "Wegovy Prix Pharmacie Moins Cher 2026 : 169€/mois"
-thumbnail: "/images/thumbnails/wegovy.jpg"
+thumbnail: "/images/thumbnails/prix-wegovy-france-illus.jpg"
 thumbnailAlt: "Prix et coût du traitement wegovy-france"
 description: "Wegovy prix pharmacie moins cher 2026 : à partir de 169€/mois. Tarifs par dosage 0,25 à 2,4 mg, où l'acheter en France et remboursement S2 2026."
 keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy prix pharmacie moins cher', 'wegovy pharmacie moins cher', 'wegovy pharmacie', 'wegovy prix pharmacie', 'remboursement wegovy', 'wegovy prix 2026', 'coût wegovy', 'wegovy non remboursé', 'prix wegovy 2.4 mg']
@@ -271,7 +271,7 @@ Les différences de prix entre la France et les pays voisins sont souvent minime
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire. Avant d'acheter, vérifiez les [conditions de prescription du Wegovy en France](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) fixées par l'ANSM en 2025.
 
-thumbnail: "/images/thumbnails/wegovy.jpg"
+thumbnail: "/images/thumbnails/prix-wegovy-france-illus.jpg"
 thumbnailAlt: "Prix et coût du traitement wegovy-france"
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: "Trulicity Guide Complet France : Dulaglutide, Prix et Effets"
-thumbnail: "/images/thumbnails/trulicity.jpg"
+thumbnail: "/images/thumbnails/guide-complet-trulicity-illus.svg"
 slug: "guide-complet-trulicity"
 description: "Trulicity guide complet France dulaglutide : traitement GLP-1 pour le diabète. Prix, effets secondaires, posologie et alternatives disponibles."
 author: "Dr. Martin"
-image: "/images/thumbnails/trulicity.jpg"
+image: "/images/thumbnails/guide-complet-trulicity-illus.svg"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["trulicity", "glp-1", "diabète", "perte de poids", "traitement", "injection"]

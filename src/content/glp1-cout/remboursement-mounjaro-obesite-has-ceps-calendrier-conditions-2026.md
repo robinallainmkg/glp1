@@ -11,7 +11,7 @@ featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
 readingTime: 11
-thumbnail: "/images/thumbnails/mounjaro-blue.webp"
+thumbnail: "/images/thumbnails/mounjaro-obesite-has-2026-illus.svg"
 thumbnailAlt: "Remboursement Mounjaro obésité 2026 : décision HAS et calendrier CEPS France"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"

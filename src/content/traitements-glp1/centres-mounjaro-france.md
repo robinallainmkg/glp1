@@ -8,7 +8,7 @@ date: "2026-06-22"
 updatedAt: "2026-06-22"
 category: "Traitements GLP-1"
 tags: ["mounjaro", "accès", "centres", "france", "carte"]
-thumbnail: "/images/thumbnails/mounjaro-blue.webp"
+thumbnail: "/images/thumbnails/centres-mounjaro-france-illus.svg"
 imageAlt: "Carte des centres Mounjaro en France"
 published: true
 featured: true

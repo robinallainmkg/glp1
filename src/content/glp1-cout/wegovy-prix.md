@@ -8,7 +8,7 @@ author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement", "wegovy prix pharmacie"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/wegovy.jpg"
+thumbnail: "/images/thumbnails/wegovy-prix-illus.svg"
 thumbnailAlt: "Prix Wegovy en pharmacie France 2026"
 featured: false
 priority: 5
