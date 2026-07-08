@@ -768,7 +768,8 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
       const offerCapture = !hasConsultation && !dossierData && ((saysEligible && !saysNotEligible) || doctorStep);
 
       // --- 6. Save messages ---
-      const detectedIntent = scamSignals.isScamRelated ? `scam:${scamSignals.severity}` : null;
+      const patternIntent = INTENT_PATTERNS.find(({ pattern }) => pattern.test(cleanMessage))?.intent || "general";
+      const detectedIntent = scamSignals.isScamRelated ? `scam:${scamSignals.severity}` : patternIntent;
       await saveMessages(
         supabase, convId, session_id, cleanMessage, cleanResponse,
         detectedIntent, usedModel,
