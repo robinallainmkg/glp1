@@ -5,18 +5,105 @@
 //
 // Cible : dossiers "pending" crees il y a plus de 4h et moins de 7 jours,
 // avec email, jamais relances (relance_sent_at IS NULL). Une seule relance par dossier.
+//
+// SMTP implemente en direct (Deno.connectTls) : denomailer produisait un
+// MAIL FROM rejete par le Postfix de Hostinger (553 sender address rejected).
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
 const MIN_AGE_HOURS = 4;
 const MAX_AGE_DAYS = 7;
 const SITE = "https://glp1-france.fr";
 const CAMPAIGN = "dossier_relance";
 const FROM_EMAIL = "robin@glp1-france.fr";
-const FROM = `GLP1 France <${FROM_EMAIL}>`;
+const SMTP_HOST = "smtp.hostinger.com";
+const SMTP_PORT = 465;
 
+// --- Client SMTP minimal (TLS implicite port 465) ---
+class SmtpError extends Error {
+  constructor(message: string, public transcript: string[]) {
+    super(message);
+  }
+}
+
+async function smtpSend(opts: {
+  username: string;
+  password: string;
+  to: string;
+  subject: string;
+  html: string;
+}) {
+  const conn = await Deno.connectTls({ hostname: SMTP_HOST, port: SMTP_PORT });
+  const reader = conn.readable.getReader();
+  const writer = conn.writable.getWriter();
+  const enc = new TextEncoder();
+  const dec = new TextDecoder();
+  const transcript: string[] = [];
+  let buffer = "";
+
+  async function readReply(): Promise<string> {
+    // Une reponse se termine par une ligne "NNN " (espace apres le code)
+    while (true) {
+      const lines = buffer.split("\r\n");
+      for (const line of lines) {
+        if (/^\d{3} /.test(line)) {
+          const reply = buffer;
+          buffer = "";
+          transcript.push(`S: ${reply.trim()}`);
+          return reply;
+        }
+      }
+      const { value, done } = await reader.read();
+      if (done) throw new SmtpError("connexion fermee par le serveur", transcript);
+      buffer += dec.decode(value);
+    }
+  }
+
+  async function cmd(command: string, expect: number[], redact = false): Promise<string> {
+    transcript.push(`C: ${redact ? "[redacted]" : command}`);
+    await writer.write(enc.encode(command + "\r\n"));
+    const reply = await readReply();
+    const code = parseInt(reply.slice(0, 3), 10);
+    if (!expect.includes(code)) {
+      throw new SmtpError(`"${redact ? "[redacted]" : command}" -> ${reply.trim()}`, transcript);
+    }
+    return reply;
+  }
+
+  try {
+    await readReply(); // banniere 220
+    await cmd(`EHLO ${SMTP_HOST}`, [250]);
+    await cmd("AUTH LOGIN", [334]);
+    await cmd(btoa(opts.username), [334], true);
+    await cmd(btoa(opts.password), [235], true);
+    await cmd(`MAIL FROM:<${FROM_EMAIL}>`, [250]);
+    await cmd(`RCPT TO:<${opts.to}>`, [250, 251]);
+    await cmd("DATA", [354]);
+
+    const subjectB64 = btoa(String.fromCharCode(...new TextEncoder().encode(opts.subject)));
+    const headers = [
+      `From: "GLP1 France" <${FROM_EMAIL}>`,
+      `To: <${opts.to}>`,
+      `Subject: =?utf-8?B?${subjectB64}?=`,
+      `Date: ${new Date().toUTCString()}`,
+      `MIME-Version: 1.0`,
+      `Content-Type: text/html; charset=utf-8`,
+      `Content-Transfer-Encoding: base64`,
+    ].join("\r\n");
+
+    // Corps en base64 (evite le dot-stuffing et les soucis d'encodage)
+    const htmlB64 = btoa(String.fromCharCode(...new TextEncoder().encode(opts.html)))
+      .replace(/(.{76})/g, "$1\r\n");
+
+    await cmd(`${headers}\r\n\r\n${htmlB64}\r\n.`, [250]);
+    await cmd("QUIT", [221]);
+  } finally {
+    try { reader.releaseLock(); writer.releaseLock(); conn.close(); } catch { /* deja fermee */ }
+  }
+}
+
+// --- Email de relance ---
 function wrap(body: string): string {
   return `<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a2e;">
   <div style="background: #1a3c34; padding: 24px; border-radius: 12px 12px 0 0;">
@@ -103,25 +190,16 @@ serve(async (req) => {
     });
   }
 
-  const client = new SMTPClient({
-    connection: {
-      hostname: "smtp.hostinger.com",
-      port: 465,
-      tls: true,
-      auth: { username: FROM_EMAIL, password: smtpPass },
-    },
-  });
-
-  const results: Array<{ id: string; email: string; ok: boolean; error?: string }> = [];
+  const results: Array<{ id: string; email: string; ok: boolean; error?: string; transcript?: string[] }> = [];
 
   for (const dossier of dossiers) {
     const { subject, html } = buildEmail(dossier);
     try {
-      await client.send({
-        from: FROM,
+      await smtpSend({
+        username: FROM_EMAIL,
+        password: smtpPass,
         to: dossier.email,
         subject,
-        content: "auto",
         html,
       });
 
@@ -145,12 +223,11 @@ serve(async (req) => {
       results.push({ id: dossier.id, email: dossier.email, ok: true });
       console.log(`Relance envoyee a ${dossier.email} (dossier ${dossier.id})`);
     } catch (err) {
-      results.push({ id: dossier.id, email: dossier.email, ok: false, error: (err as Error).message });
+      const transcript = err instanceof SmtpError ? err.transcript : undefined;
+      results.push({ id: dossier.id, email: dossier.email, ok: false, error: (err as Error).message, transcript });
       console.error(`Erreur envoi ${dossier.email}:`, err);
     }
   }
-
-  try { await client.close(); } catch { /* ignore */ }
 
   const sent = results.filter((r) => r.ok).length;
   return new Response(JSON.stringify({ sent, total: dossiers.length, results }), {
