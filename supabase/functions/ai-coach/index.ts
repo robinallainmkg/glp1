@@ -65,6 +65,7 @@ PRESTATAIRES EN LIGNE / TÉLÉCONSULTATION (tu CONNAIS le paysage et tu en parle
 - 🚩 Arnaque (à signaler calmement, sans dramatiser) : un site qui VEND directement de l'Ozempic/Wegovy/Mounjaro, "sans ordonnance", à prix cassé, paiement crypto/virement, sans aucune consultation = illégal et dangereux (contrefaçons). Ce ne sont PAS des prestataires sérieux.
 
 FLUX "SUIS-JE ÉLIGIBLE AU REMBOURSEMENT ?" (à PROPOSER dès qu'on parle de prix, de remboursement, ou de comment commencer) :
+- ⚠️ Ne propose ce flux QU'UNE SEULE FOIS par conversation. Si l'utilisateur a dit "non", "plus tard" ou l'a ignoré, ne répète JAMAIS la proposition.
 - ⚠️ Si quelqu'un demande "suis-je éligible ?" : ne liste JAMAIS les critères en bloc — LANCE le test tout de suite. Réponse COURTE + demande sa 1re info : "Vérifions ensemble ! Quel est ton poids et ta taille ?" (pour calculer l'IMC). Sinon, propose-le : "Le remboursement à 65% s'applique depuis le 15 juin 2026. Veux-tu qu'on vérifie ton éligibilité en 2-3 questions ?"
 - Si oui, collecte UNE info à la fois, sans tout redemander : (1) poids + taille → calcule l'IMC ; (2) comorbidités (diabète T2, hypertension, apnée du sommeil, etc.) ; (3) un suivi nutritionnel a-t-il déjà été tenté ?
 - ⚠️ SEUILS STRICTS — NE JAMAIS DIRE "ÉLIGIBLE" SI LES CRITÈRES NE SONT PAS REMPLIS :
@@ -631,10 +632,15 @@ serve(async (req) => {
       let doctorContext = '';
 
       if (isDoctorSearch) {
+        // Check if eligibility check was already proposed in this conversation
+        const eligibilityAlreadyProposed = historyMessages.some(
+          (m: any) => m.role === 'assistant' && /éligibilit|suis-je éligible|vérifions.*éligib|éligib.*vérifions/i.test(m.content)
+        );
         doctorContext = `\n\n🩺 INSTRUCTION : L'utilisateur cherche un médecin ou spécialiste. Oriente-le calmement, sans aucun service commercial :
 - Médecin traitant, endocrinologue ou médecin de l'obésité. Pour la primo-prescription ouvrant droit au remboursement obésité : centre spécialisé de l'obésité (CSO) ou CHU.
 - Annuaire officiel : annuaire-sante.ameli.fr.
-- Si la personne donne sa ville, aide à cibler. Puis propose : "Veux-tu qu'on vérifie d'abord si tu es éligible au remboursement ?"`;
+- ⚠️ NE DIS JAMAIS qu'il n'y a pas de CSO ou de spécialiste dans une ville française. Toutes les grandes villes ont un CHU avec un service de nutrition/obésité (ex : CHU Purpan à Toulouse, CHU de Nantes, AP-HP à Paris, CHU de Lyon, CHU Bordeaux, CHU Marseille, CHU Lille, CHU Strasbourg, CHU Rennes, CHU Montpellier, CHU Grenoble, CHU Nice). Si tu n'as pas les coordonnées exactes d'un CSO, dis : "Tu peux trouver le CSO le plus proche sur [annuaire-sante.ameli.fr](https://annuaire-sante.ameli.fr/) → filtre 'Centres spécialisés de l'obésité'." Ne propose jamais un hôpital dans une autre ville que celle demandée.
+- Si la personne donne sa ville, confirme qu'un spécialiste y existe, donne le nom du CHU local si tu le connais, oriente vers l'annuaire pour les coordonnées exactes.${eligibilityAlreadyProposed ? '\n- La vérification d\'éligibilité a DÉJÀ été proposée dans cette conversation : ne la propose plus, réponds directement.' : '\n- Puis propose UNE SEULE FOIS : "Veux-tu qu\'on vérifie d\'abord si tu es éligible au remboursement ?"'}`;
       }
 
       // --- 4. Build messages for LLM ---
