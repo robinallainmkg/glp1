@@ -80,9 +80,9 @@ Dans les études cliniques PIONEER, Rybelsus a démontré une efficacité compar
 ### Schéma posologique
 Rybelsus doit être pris à jeun, au moins 30 minutes avant le premier repas de la journée, avec un verre d'eau (120 ml maximum).
 
-**Semaine 1-4** : 3 mg/jour  
-**Semaine 5-8** : 7 mg/jour  
-**Semaine 9+** : 14 mg/jour (dose maximale)
+**Mois 1** : 3 mg/jour (dose d'initiation, non thérapeutique)  
+**À partir du 2e mois** : 7 mg/jour (dose d'entretien)  
+**Optionnel** : passage à 14 mg/jour uniquement si le contrôle glycémique est insuffisant après au moins 1 mois à 7 mg
 
 ### Modalités d'administration
 - **À jeun** : Prendre 30 minutes avant le petit-déjeuner
@@ -108,14 +108,15 @@ Rybelsus doit être pris à jeun, au moins 30 minutes avant le premier repas de 
 
 ### Étape 3 : Période d'adaptation (4-8 semaines)
 **Augmentation progressive** :
-- Semaine 1-4 : 3 mg/jour
-- Semaine 5-8 : 7 mg/jour
+- Mois 1 : 3 mg/jour (dose d'initiation)
+- À partir du 2e mois : 7 mg/jour (dose d'entretien)
 - Surveillance des effets secondaires
 - Respect strict des modalités d'administration
 
-### Étape 4 : Traitement d'entretien (à partir de 8 semaines)
+### Étape 4 : Traitement d'entretien
 **Stabilisation** :
-- Dose maximale : 14 mg/jour
+- Dose d'entretien : 7 mg/jour
+- Passage optionnel à 14 mg/jour si le contrôle glycémique reste insuffisant après au moins 1 mois à 7 mg
 - Contrôles réguliers mensuels
 - Surveillance glycémique
 - Réajustement si nécessaire
@@ -157,7 +158,7 @@ Oui, Rybelsus contient la même molécule (semaglutide) et a démontré une effi
 Non, Rybelsus doit être pris à jeun, 30 minutes avant le premier repas, et il ne faut rien manger pendant 30 minutes après.
 
 ### Combien de temps faut-il pour voir les effets ?
-- **Contrôle glycémique** : 1-2 semaines
+- **Contrôle glycémique** : premiers effets sur la glycémie dès les premières semaines, mais l'effet plein sur l'HbA1c n'est mesurable qu'à 8-12 semaines
 - **Perte de poids** : 4-8 semaines
 - **Effets maximum** : 3-6 mois
 
@@ -165,10 +166,10 @@ Non, Rybelsus doit être pris à jeun, 30 minutes avant le premier repas, et il 
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Rybelsus est-il remboursé ?
-Rybelsus **n'est pas [remboursé](/collections/glp1-cout/remboursement-glp1-2026/)** par l'Assurance Maladie en France. La Haute Autorité de Santé (HAS) a rendu un avis défavorable au remboursement, considérant que Rybelsus n'a pas de place démontrée dans la stratégie thérapeutique du diabète de type 2. Pour le détail du [prix de Rybelsus en France](/collections/glp1-cout/prix-rybelsus-france/), le coût est intégralement à la charge du patient, soit environ 80 à 130 €/mois selon le dosage (à vérifier en pharmacie, disponibilité fluctuante en 2026). Contrairement à Ozempic, Trulicity et Victoza qui sont remboursés à 65 % (100 % en ALD diabète) pour le diabète de type 2, Rybelsus ne bénéficie d'aucun remboursement.
+Rybelsus **n'est pas [remboursé](/collections/glp1-cout/remboursement-glp1-2026/)** par l'Assurance Maladie en France. La Haute Autorité de Santé (HAS) a rendu un avis défavorable au remboursement, considérant que Rybelsus n'a pas de place démontrée dans la stratégie thérapeutique du diabète de type 2. Pour le détail du [prix de Rybelsus en France](/collections/glp1-cout/prix-rybelsus-france/), le coût est intégralement à la charge du patient, soit environ 80 à 130 €/mois selon le dosage (à vérifier en pharmacie, disponibilité fluctuante en 2026). Contrairement à Ozempic (remboursé à 30 %) et à Trulicity et Victoza (remboursés à 65 %) — tous pris en charge à 100 % en ALD diabète — Rybelsus ne bénéficie d'aucun remboursement.
 
 ### Puis-je arrêter Rybelsus brutalement ?
-Non, l'arrêt doit être progressif sous surveillance médicale.
+L'arrêt ne nécessite pas de diminution progressive de la dose. Parlez-en toutefois à votre médecin avant d'arrêter : l'interruption du traitement expose à un risque de reprise de poids et de déséquilibre glycémique.
 
 ---
 
