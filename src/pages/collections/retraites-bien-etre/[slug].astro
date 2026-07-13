@@ -1,0 +1,40 @@
+---
+import ArticleWithAffiliateSidebar from '../../../layouts/ArticleWithAffiliateSidebar.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('retraites-bien-etre');
+  return entries.map((entry: any) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const entryAny: any = entry;
+const { Content } = await entryAny.render();
+const content = entryAny.body;
+
+const collectionName = "retraites-bien-etre";
+
+// Pas d'affiliation sur cette collection (politique 06/2026 : aucune affiliation)
+const affiliateProducts: any[] = [];
+---
+
+<ArticleWithAffiliateSidebar showAffiliateSidebar={false} title={entryAny.data.title}
+  description={entryAny.data.description || ""}
+  image={entryAny.data.image || entryAny.data.thumbnail || `/images/thumbnails/retraites-bien-etre.svg`}
+  author={entryAny.data.author || "Équipe GLP-1 France"}
+  category={collectionName}
+  articleContent={content}
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={{
+    enableAutoInjection: false,
+    mobileStrategy: 'none',
+    maxInlineProducts: 0,
+    injectionStrategy: 'none'
+  }}
+  frontmatter={entryAny.data}
+>
+  <Content />
+</ArticleWithAffiliateSidebar>

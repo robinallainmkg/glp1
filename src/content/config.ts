@@ -44,6 +44,7 @@ const regimeGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
 const pagesStatiques = defineCollection({ type: 'content', schema: unifiedSchema });
 const temoignages = defineCollection({ type: 'content', schema: unifiedSchema });
 const avantApresGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
+const retraitesBienEtre = defineCollection({ type: 'content', schema: unifiedSchema });
 
 export const collections = {
   'alternatives-glp1': alternativesGlp1,
@@ -58,4 +59,5 @@ export const collections = {
   'pages-statiques': pagesStatiques,
   'temoignages': temoignages,
   'avant-apres-glp1': avantApresGlp1,
+  'retraites-bien-etre': retraitesBienEtre,
 };

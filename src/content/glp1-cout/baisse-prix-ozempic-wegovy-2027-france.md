@@ -22,7 +22,7 @@ faqSchema:
   - question: "Quand les biosimilaires du sémaglutide seront-ils disponibles ?"
     answer: "Les brevets principaux du sémaglutide expirent entre 2031 et 2032. Les premiers biosimilaires pourraient arriver sur le marché européen à partir de 2032-2033, entraînant une baisse structurelle des prix de l'ordre de 20 à 40% par rapport à l'original."
   - question: "Mounjaro est-il moins cher qu'Ozempic en France ?"
-    answer: "Non, Mounjaro est actuellement plus cher qu'Ozempic en France. Ozempic coûte environ 80€ par stylo, tandis que Mounjaro revient entre 176 et 433€ par mois selon le dosage. Mounjaro est remboursé à 65% par la Sécurité Sociale depuis le 15 juin 2026 pour l'obésité."
+    answer: "Non, Mounjaro est actuellement plus cher qu'Ozempic en France. Ozempic coûte 77,60€ par stylo, tandis que Mounjaro revient entre 176,10 et 433,80€ par mois selon le dosage. Mounjaro est remboursé à 65% par la Sécurité Sociale depuis le 15 juin 2026 pour l'obésité."
   - question: "La baisse des prix va-t-elle faciliter le remboursement de Wegovy en France ?"
     answer: "Wegovy est déjà remboursé à 65% depuis le 15 juin 2026 pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Une baisse de prix pourrait faciliter un élargissement des conditions de remboursement à des IMC plus bas."
 mainKeyword: "baisse prix Ozempic Wegovy 2027"
@@ -52,12 +52,12 @@ Plusieurs facteurs ont convergé pour pousser Novo Nordisk à agir :
 - **La concurrence de Mounjaro** : Eli Lilly a agressivement positionné ses traitements à base de tirzépatide à des prix inférieurs, captant des parts de marché significatives
 - **L'opinion publique** : des millions de patients américains ont reporté ou abandonné leur traitement en raison du coût, créant une pression sociale considérable
 
-### L'annonce de Novo Nordisk : 50% de réduction
+### L'annonce de Novo Nordisk : deux mesures successives
 
-L'engagement de Novo Nordisk porte sur une **réduction de 50% du prix catalogue** (list price) d'Ozempic et de Wegovy aux États-Unis. En pratique, cela ramènerait :
+L'engagement de Novo Nordisk s'est concrétisé en deux temps :
 
-- **Ozempic** : d'environ 900 $ à 450 $ par mois (prix catalogue, avant assurance)
-- **Wegovy** : d'environ 1 300 $ à 650 $ par mois (prix catalogue, avant assurance)
+- **Novembre 2025** : accord avec l'administration américaine (programme TrumpRx/NovoCare) instaurant un **prix direct-consommateur de 349 $ par mois** pour Ozempic et Wegovy, en vente directe sans intermédiaire d'assurance
+- **À partir de 2027** : un **prix catalogue unique de 675 $ par mois** pour les deux médicaments — soit environ **-50 % pour Wegovy** (auparavant ~1 300 $) mais seulement **-35 % environ pour Ozempic** (auparavant ~1 000 $)
 
 Il faut noter que ces prix catalogue ne reflètent pas toujours le prix réellement payé par les patients américains, qui bénéficient souvent de remises négociées par leur assurance (PBM — Pharmacy Benefit Manager). La baisse du prix catalogue réduit néanmoins significativement le coût pour les patients sans couverture ou avec une couverture partielle.
 
@@ -78,9 +78,9 @@ Ce mécanisme explique pourquoi les prix français sont déjà très inférieurs
 
 | Médicament | Prix France (mensuel) | Prix USA (mensuel, avant assurance) |
 |---|---|---|
-| **Ozempic** | ~80€ par stylo | ~900 $ (~830€) |
-| **Wegovy** | 200–320€/mois | ~1 300 $ (~1 200€) |
-| **Mounjaro** | 230–440€/mois | ~1 000 $ (~920€) |
+| **Ozempic** | 77,60€ par stylo | ~1 000 $ (~920€) |
+| **Wegovy** | 146,91–195,10€/mois | ~1 300 $ (~1 200€) |
+| **Mounjaro** | 176,10–433,80€/mois | ~1 000 $ (~920€) |
 
 Pour connaître le détail des prix en France, consultez nos guides dédiés : [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/), [prix Wegovy France](/collections/glp1-cout/prix-wegovy-france/) et [prix Mounjaro France](/collections/glp1-cout/prix-mounjaro-france/).
 
@@ -106,8 +106,8 @@ Le scénario le plus probable à court terme est une **renégociation partielle 
 
 Concrètement, cela pourrait se traduire par :
 
-- **Ozempic** : passage de ~80€ à 60–72€ par stylo
-- **Wegovy** : passage de 200–320€ à 150–280€ par mois
+- **Ozempic** : passage de 77,60€ à environ 60–70€ par stylo
+- **Wegovy** : passage de 146,91–195,10€ à environ 120–170€ par mois
 
 Pour les patients remboursés (Ozempic dans le cadre du diabète de type 2), la baisse du prix facial se traduirait par une réduction du ticket modérateur. Pour les patients remboursés à 65 % (Wegovy pour l'obésité, depuis juin 2026), la baisse réduirait le ticket modérateur restant.
 
@@ -123,7 +123,7 @@ Plusieurs laboratoires (dont Sandoz, Biocon et Teva) ont déjà annoncé des pro
 
 La concurrence entre Novo Nordisk (Ozempic/Wegovy) et Eli Lilly ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) joue déjà un rôle dans l'évolution des prix. Les deux laboratoires se disputent le marché mondial des GLP-1, estimé à plus de 50 milliards de dollars en 2026.
 
-En France, le remboursement de Mounjaro et de Wegovy pour l'obésité (effectif depuis le 15 juin 2026, à 65 %) a confirmé la pression concurrentielle sur les prix du sémaglutide. Avec un prix remboursé officiel pour Mounjaro (176-433 €/mois) et Wegovy (~147-350 €/mois), la concurrence entre les deux molécules devrait continuer à tirer les prix vers le bas.
+En France, le remboursement de Mounjaro et de Wegovy pour l'obésité (effectif depuis le 15 juin 2026, à 65 %) a confirmé la pression concurrentielle sur les prix du sémaglutide. Avec un prix remboursé officiel pour Mounjaro (176,10–433,80 €/mois) et Wegovy (146,91–195,10 €/mois), la concurrence entre les deux molécules devrait continuer à tirer les prix vers le bas.
 
 ---
 
@@ -174,7 +174,7 @@ Pour les conditions détaillées du remboursement, consultez notre article dédi
 
 ### Vérifier son éligibilité au remboursement actuel
 
-Ozempic est déjà remboursé à 65% (100% en ALD) pour les patients diabétiques de type 2 en bithérapie avec la metformine. Si vous êtes dans cette situation, vous bénéficiez déjà d'un prix régulé et d'une prise en charge.
+Ozempic est remboursé à 30% (100% en ALD) pour les patients diabétiques de type 2. Si vous êtes dans cette situation, vous bénéficiez déjà d'un prix régulé et d'une prise en charge.
 
 ### Explorer les options de couverture complémentaire
 
@@ -202,7 +202,7 @@ Pas avant 2032–2033. Les brevets principaux du sémaglutide (molécule active 
 
 ### Mounjaro sera-t-il moins cher qu'Ozempic après la baisse ?
 
-La situation est complexe. Actuellement, Mounjaro est plus cher qu'Ozempic en France (230–440€/mois contre ~80€/stylo). Cependant, les négociations de remboursement de Mounjaro pourraient aboutir à un prix remboursé compétitif. La concurrence entre les deux traitements devrait globalement favoriser les patients en tirant les prix vers le bas.
+La situation est complexe. Actuellement, Mounjaro est plus cher qu'Ozempic en France (176,10–433,80€/mois contre 77,60€/stylo). La concurrence entre les deux traitements devrait globalement favoriser les patients en tirant les prix vers le bas.
 
 ### La baisse des prix va-t-elle élargir le remboursement de Wegovy ?
 
