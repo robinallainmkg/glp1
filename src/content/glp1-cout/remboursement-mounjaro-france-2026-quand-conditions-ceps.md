@@ -19,17 +19,17 @@ mainKeyword: "remboursement Mounjaro France 2026 quand conditions CEPS"
 secondaryKeywords: ["mounjaro remboursé quand", "tirzepatide remboursement 2026", "mounjaro HAS conditions", "mounjaro sécurité sociale date", "quand mounjaro sera remboursé", "mounjaro mutuelle remboursement"]
 ---
 
-**[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) est remboursé en France depuis le 15 juin 2026.** Après un avis favorable de la HAS en décembre 2025 et des négociations abouties avec le CEPS, l'Assurance Maladie prend désormais en charge Mounjaro à 65 % pour le traitement de l'obésité, sous conditions d'éligibilité. Voici tout ce que vous devez savoir sur les conditions, les démarches et le reste à charge en juin 2026.
+**[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) est remboursé en France depuis le 15 juin 2026.** Après un avis favorable de la HAS fin 2025 (Commission de la Transparence le 19 novembre, complété le 18 décembre) et des négociations abouties avec le CEPS, l'Assurance Maladie prend désormais en charge Mounjaro à 65 % pour le traitement de l'obésité, sous conditions d'éligibilité. Voici tout ce que vous devez savoir sur les conditions, les démarches et le reste à charge en juin 2026.
 
 ## Le parcours vers le remboursement : de décembre 2025 à juin 2026
 
 ### L'avis favorable de la HAS (décembre 2025)
 
-Le 9 décembre 2025, la Commission de la Transparence de la **Haute Autorité de Santé (HAS)** a rendu un avis positif sur Mounjaro (tirzépatide, Eli Lilly) pour le traitement de l'obésité.
+Le 19 novembre 2025, la Commission de la Transparence de la **Haute Autorité de Santé (HAS)** a rendu un avis positif sur Mounjaro (tirzépatide, Eli Lilly) pour le traitement de l'obésité, complété le 18 décembre 2025 par un avis du collège de la HAS précisant les sous-populations concernées.
 
-La HAS a reconnu :
+La HAS a attribué :
 - Un **Service Médical Rendu (SMR) important** : Mounjaro répond à un besoin médical réel et documenté
-- Une **Amélioration du Service Médical Rendu (ASMR)** : la HAS a reconnu la supériorité clinique de Mounjaro par rapport aux traitements existants, notamment grâce aux données des études SURMOUNT
+- Une **Amélioration du Service Médical Rendu (ASMR) de niveau IV** (amélioration mineure) par rapport à la prise en charge existante, sur la base notamment des données des études SURMOUNT
 
 ### Les négociations CEPS : abouties en juin 2026
 
@@ -44,7 +44,7 @@ Après l'avis HAS, le dossier est passé au **Comité Économique des Produits d
 
 | Étape | Date |
 |-------|------|
-| Avis HAS favorable | Décembre 2025 ✅ |
+| Avis HAS favorable | Novembre-décembre 2025 ✅ |
 | Négociations CEPS | Janvier-mai 2026 ✅ |
 | Arrêté de remboursement au Journal Officiel | Juin 2026 ✅ |
 | **Remboursement effectif en pharmacie** | **15 juin 2026 ✅** |
@@ -62,7 +62,8 @@ La HAS a précisé dans son avis les conditions dans lesquelles le remboursement
 
 **En complément :**
 - Échec d'une prise en charge nutritionnelle, diététique et d'activité physique bien conduite pendant au moins 6 mois
-- Traitement prescrit et renouvelé par un médecin (généraliste autorisé depuis juin 2025, ou spécialiste)
+- Primo-prescription par un spécialiste de recours (CSO, CHU, endocrinologue exerçant en lien avec un CSO) ; renouvellement possible ensuite par le médecin traitant
+- Document justificatif d'indication rempli par le prescripteur via le téléservice de l'Assurance Maladie (ameli), à présenter en pharmacie avec l'ordonnance
 - Suivi médical régulier pendant toute la durée du traitement
 
 ### Ce qui ne sera probablement pas remboursé
@@ -117,7 +118,7 @@ Mounjaro et Wegovy sont les premiers traitements GLP-1 indiqués pour l'obésit�
 
 **Mon médecin traitant pourra-t-il prescrire Mounjaro remboursé ?**
 
-Oui. Depuis juin 2025, tout médecin généraliste peut prescrire les GLP-1 indiqués dans l'obésité, dont Mounjaro. Pour le remboursement, il faudra probablement remplir un formulaire de prescription conforme aux conditions définies par la HAS — mais la consultation chez un spécialiste ne sera pas obligatoire pour la majorité des patients.
+Non pour la primo-prescription remboursée : l'initiation du traitement remboursé est réservée aux spécialistes de recours de niveaux 2-3 (centres spécialisés de l'obésité — CSO —, CHU, endocrinologues exerçant en lien avec un CSO). Votre médecin traitant peut en revanche prescrire Mounjaro en prix libre (non remboursé) et **renouveler** une prescription remboursée initiée par un spécialiste.
 
 **Ma mutuelle peut-elle rembourser Mounjaro avant le remboursement Sécu ?**
 
@@ -141,5 +142,5 @@ Le remboursement de Mounjaro en France est effectif depuis le 15 juin 2026 : l'A
 
 ---
 
-*Sources : Haute Autorité de Santé — Avis Commission de la Transparence Mounjaro/tirzépatide pour l'obésité (décembre 2025) ; Journal Officiel — Arrêté de remboursement Mounjaro (juin 2026) ; Eli Lilly — Conditions de prescription Mounjaro France (2026) ; ANSM — Pharmacovigilance GLP-1 2026. Mise à jour juin 2026.*
+*Sources : Haute Autorité de Santé — Avis Commission de la Transparence Mounjaro/tirzépatide pour l'obésité (19 novembre 2025, complété le 18 décembre 2025) ; Journal Officiel — Arrêté de remboursement Mounjaro (juin 2026) ; Eli Lilly — Conditions de prescription Mounjaro France (2026) ; ANSM — Pharmacovigilance GLP-1 2026. Mise à jour juin 2026.*
 

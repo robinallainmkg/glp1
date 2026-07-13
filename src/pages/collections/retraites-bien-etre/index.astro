@@ -1,0 +1,36 @@
+---
+import CollectionLayout from '../../../layouts/CollectionLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Récupérer tous les articles de cette collection
+const articles = await getCollection('retraites-bien-etre');
+
+// Créer l'objet collection attendu par le layout
+const collection = {
+  id: 'retraites-bien-etre',
+  name: 'Retraites Bien-Être',
+  slug: 'retraites-bien-etre',
+  description: 'Retraites perte de poids, cures thermales, jeûne et randonnée, séjours minceur : comparatifs, prix réels et compatibilité avec les traitements GLP-1',
+  icon: '🌿',
+  color: '#1a3c34',
+  seoTitle: 'Retraites Bien-Être et Perte de Poids — Comparatifs et Prix',
+  seoDescription: 'Comparatifs des retraites perte de poids en France : cures thermales remboursées, jeûne et randonnée, séjours minceur. Prix réels et conseils pour les patients sous GLP-1.',
+  keywords: ["retraite perte de poids", "cure thermale minceur", "jeûne et randonnée", "séjour minceur", "retraite bien-être", "glp-1"],
+  image: '/images/thumbnails/retraites-bien-etre.svg'
+};
+
+// Formater les articles pour le layout (wordCount sécurisé)
+const formattedArticles = articles.map((article: any) => ({
+  slug: article.slug,
+  title: article.data.title,
+  description: article.data.description || '',
+  author: article.data.author || 'Équipe GLP-1 France',
+  url: `/collections/retraites-bien-etre/${article.slug}`,
+  wordCount: (article.body || '').split(/\s+/).filter(Boolean).length,
+  readingTime: Math.ceil(((article.body || '').split(/\s+/).filter(Boolean).length) / 200) || 1,
+  thumbnail: article.data.thumbnail || article.data.image,
+  pubDate: article.data.pubDate || article.data.date,
+}));
+---
+
+<CollectionLayout collection={collection} articles={formattedArticles} />

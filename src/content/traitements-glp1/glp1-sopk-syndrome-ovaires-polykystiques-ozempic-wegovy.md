@@ -3,7 +3,7 @@ title: "GLP-1 et SOPK : Ozempic, Wegovy, Mounjaro pour le SOPK"
 description: "GLP-1 et SOPK syndrome ovaires polykystiques : Ozempic, Wegovy, Mounjaro améliorent la résistance à l'insuline et les symptômes du SOPK. Guide 2026."
 pubDate: 2026-03-17
 date: "2026-03-17"
-updatedAt: 2026-03-17
+updatedAt: 2026-07-13
 author: "Dr. Marie Dubois"
 category: "Traitements"
 tags: ["glp1", "SOPK", "syndrome ovaires polykystiques", "ozempic", "wegovy", "mounjaro", "résistance insuline", "fertilité"]
@@ -52,14 +52,9 @@ Les [médicaments GLP-1 comme Ozempic](/collections/traitements-glp1/guide-compl
 
 Plusieurs études cliniques ont évalué l'impact du sémaglutide — la molécule active d'Ozempic et Wegovy — chez des femmes atteintes de SOPK.
 
-Une étude publiée en 2023 dans *JCEM* (Journal of Clinical Endocrinology & Metabolism) a suivi des femmes atteintes de SOPK et surpoids pendant 12 semaines sous sémaglutide. Les résultats ont montré :
+Une étude publiée en 2023 par Carmina et al. a évalué le sémaglutide à faible dose (0,5 mg par semaine) chez 27 femmes atteintes de SOPK en surpoids ou obésité, pendant 6 mois. Résultat principal : **environ 80 % des participantes ont perdu au moins 5 % de leur poids initial** — un seuil cliniquement significatif dans le SOPK, associé à une amélioration de la sensibilité à l'insuline et des paramètres métaboliques.
 
-- Une **perte de poids de 9,1 % en moyenne** par rapport au poids initial
-- Une **amélioration significative de la résistance à l'insuline** (baisse de l'index HOMA-IR)
-- Une **réduction des taux de testostérone totale** de 20 à 30 %
-- Une **régularisation partielle des cycles menstruels** chez une majorité des participantes
-
-Ces résultats sont encourageants, même si les études restent de petite taille et nécessitent une confirmation à plus grande échelle.
+Ces résultats sont encourageants, même si les études restent de petite taille et nécessitent une confirmation à plus grande échelle, notamment sur les critères hormonaux (androgènes) et la régularité des cycles.
 
 ### Tirzépatide (Mounjaro) et SOPK
 
@@ -67,7 +62,7 @@ Le tirzépatide, molécule active de [Mounjaro](/collections/traitements-glp1/gu
 
 ### Liraglutide ([Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)/) : les données les plus anciennes
 
-Le liraglutide (Saxenda), un GLP-1 plus ancien, a fait l'objet d'études plus nombreuses dans le SOPK. Un essai randomisé publié dans *Fertility and Sterility* (2019) a comparé liraglutide à la metformine chez des femmes en surpoids avec SOPK. Le liraglutide a obtenu de meilleurs résultats sur la perte de poids et s'est montré aussi efficace sur la résistance à l'insuline. La fréquence des ovulations s'est également améliorée.
+Le liraglutide (Saxenda), un GLP-1 plus ancien, a fait l'objet d'études plus nombreuses dans le SOPK. Un essai randomisé mené par Elkind-Hirsch et al., publié dans *Fertility and Sterility* en 2022, a comparé le liraglutide 3 mg à un placebo chez 82 femmes en surpoids ou obésité avec SOPK, pendant 32 semaines. Le liraglutide a obtenu une perte de poids significativement supérieure au placebo, avec une amélioration de la résistance à l'insuline et des paramètres métaboliques.
 
 ## GLP-1 et fertilité dans le SOPK : ce qu'on sait
 
@@ -87,7 +82,7 @@ Il est important de bien distinguer les indications officielles des usages "off-
 
 En France en 2026, les GLP-1 sont [remboursés](/collections/glp1-cout/remboursement-glp1-2026/) uniquement dans deux cadres :
 - **Diabète de type 2** (Ozempic, [Victoza](/collections/traitements-glp1/guide-complet-victoza/), [Trulicity](/collections/traitements-glp1/guide-complet-trulicity/), [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)/)
-- **Obésité avec IMC ≥ 30** et comorbidité, ou IMC ≥ 35 (Wegovy et Mounjaro sont remboursés à 65% depuis le 15 juin 2026 sous conditions)
+- **Obésité** : Wegovy et Mounjaro sont remboursés à 65 % depuis le 15 juin 2026, sous conditions strictes : **IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40**, après échec d'une prise en charge nutritionnelle bien conduite d'au moins 6 mois. Attention : l'IMC ≥ 30 est le seuil de prescription de l'AMM, pas celui du remboursement
 
 Le SOPK en lui-même n'est pas une indication officielle pour la prescription de GLP-1.
 
@@ -134,7 +129,7 @@ Pour une vue complète, consultez les [effets secondaires des GLP-1](/collection
 ## GLP-1 et SOPK : les questions fréquentes
 
 **Mon médecin peut-il me prescrire Ozempic pour mon SOPK si je suis en surpoids ?**
-Oui. Si votre IMC est supérieur à 30, votre médecin peut prescrire un GLP-1 pour l'obésité. Le bénéfice sur le SOPK est un effet additionnel bienvenu, même si ce n'est pas l'indication officielle.
+Oui. Si votre IMC est supérieur à 30, votre médecin peut prescrire un GLP-1 pour l'obésité (seuil de prescription de l'AMM). Le bénéfice sur le SOPK est un effet additionnel bienvenu, même si ce n'est pas l'indication officielle. Attention toutefois : le remboursement obéit à des critères plus stricts (IMC ≥ 35 avec comorbidité, ou IMC ≥ 40).
 
 **Les GLP-1 peuvent-ils remplacer la metformine dans le SOPK ?**
 Les données actuelles ne permettent pas de recommander les GLP-1 comme substituts systématiques de la metformine dans le SOPK. Les deux molécules ont des mécanismes complémentaires et peuvent être utilisées conjointement, selon l'avis de votre médecin. La metformine reste moins coûteuse et bénéficie d'un recul plus important dans cette indication.
@@ -143,7 +138,7 @@ Les données actuelles ne permettent pas de recommander les GLP-1 comme substitu
 Oui, absolument. Les GLP-1 doivent être arrêtés au moins 2 mois avant toute tentative de conception. Il est essentiel d'en parler à votre médecin et de [planifier cet arrêt](/collections/effets-secondaires-glp1/glp1-grossesse-preconception-arret-traitement-fertilite/).
 
 **Les GLP-1 sont-ils remboursés pour le SOPK ?**
-Non. Le SOPK n'est pas une indication remboursée. Le remboursement ne s'applique que si vous avez également un diabète de type 2 ou une obésité (IMC ≥ 30 avec comorbidité). À plein tarif, le coût mensuel d'Ozempic est d'environ 80,18 €/stylo TTC (remboursé à 65 % en bithérapie metformine pour le diabète de type 2, soit environ 28 €/mois après prise en charge) et celui de Wegovy de 169 à 360 € selon le dosage.
+Non. Le SOPK n'est pas une indication remboursée. Le remboursement ne s'applique que si vous avez également un diabète de type 2, ou une obésité répondant aux critères stricts : IMC ≥ 35 avec au moins une comorbidité, ou IMC ≥ 40. À plein tarif, le coût mensuel d'Ozempic est de 77,60 € TTC par stylo (remboursé à 30 % pour le diabète de type 2, et à 100 % en ALD) et celui de Wegovy de 146,91 à 195,10 € selon le dosage.
 
 ## Conclusion : une piste prometteuse mais à encadrer
 
@@ -155,4 +150,4 @@ Si vous êtes atteinte de SOPK et que vous souhaitez explorer cette piste théra
 
 ---
 
-*Sources : Berni Canani R et al., JCEM 2023 ; Elkind-Hirsch KE, Fertility and Sterility 2019 ; Medscape France 2026 ; Centre de l'Obésité et du SOPK, Paris. Dernière mise à jour : mars 2026.*
+*Sources : Carmina E et al., 2023 (PMC10531549) ; Elkind-Hirsch KE et al., Fertility and Sterility 2022 ; Medscape France 2026 ; Centre de l'Obésité et du SOPK, Paris. Dernière mise à jour : juillet 2026.*

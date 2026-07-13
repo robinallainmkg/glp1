@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('retraites-bien-etre');
+const formatted = articles.map((a: any) => ({
+  title: a.data.title,
+  href: `/collections/retraites-bien-etre/${a.slug}/`,
+  desc: a.data.description || '',
+})).sort((a: any, b: any) => a.title.localeCompare(b.title));
+---
+
+<BaseLayout
+  title="Retraites Perte de Poids en France : le Guide Complet 2026"
+  description="Cures thermales remboursées, jeûne et randonnée, séjours minceur, retraites médicalisées GLP-1 : comparatif des vraies options en France, avec les prix réels."
+>
+  <div style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+    <header style="text-align: center; margin-bottom: 2.5rem;">
+      <h1 style="color: #1a3c34; font-size: 2.2rem; margin-bottom: 1rem;">Retraites perte de poids en France : le guide complet</h1>
+      <p style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+        Cure thermale conventionnée, jeûne et randonnée, séjour minceur ou retraite médicalisée compatible avec un traitement GLP-1 :
+        les options sont nombreuses, les prix vont de 455 € à plus de 5 000 € la semaine, et certaines formules sont
+        <strong>partiellement remboursées par l'Assurance Maladie</strong>. Ce guide compare les vraies options, sans langue de bois.
+      </p>
+    </header>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="color: #1a3c34; border-bottom: 3px solid #16a34a; padding-bottom: 0.5rem;">Nos guides retraites &amp; séjours</h2>
+      <div style="display: grid; gap: 1rem; margin-top: 1.5rem;">
+        {formatted.map((g) => (
+          <a href={g.href} style="display: block; padding: 1.25rem; border: 1px solid #e5e7eb; border-radius: 12px; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+            <strong style="color: #1a3c34; font-size: 1.15rem;">{g.title}</strong>
+            <p style="margin: 0.5rem 0 0; color: #555; font-size: 0.95rem;">{g.desc}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="color: #1a3c34; border-bottom: 3px solid #16a34a; padding-bottom: 0.5rem;">Les 4 grandes familles de retraites minceur</h2>
+      <div style="line-height: 1.7; color: #333;">
+        <p><strong>1. La cure thermale conventionnée</strong> — la seule option partiellement remboursée par la Sécurité sociale (65 à 70 % du forfait thermal, sur prescription médicale). 14 stations sont conventionnées pour le surpoids et l'obésité, Brides-les-Bains en tête. Reste à charge typique : 1 100 à 1 500 € pour 3 semaines, hébergement compris.</p>
+        <p><strong>2. Le jeûne et randonnée</strong> — une centaine d'organisateurs en France, environ 455 à 1 500 € la semaine. Attention si vous êtes sous traitement GLP-1 ou antidiabétique : un avis médical est indispensable avant de jeûner.</p>
+        <p><strong>3. Le séjour minceur / thalasso</strong> — non remboursé, de 500 € à 5 000 € la semaine selon le standing (Quiberon, Saint-Malo, villages sportifs).</p>
+        <p><strong>4. La retraite médicalisée « longevity »</strong> — la grande tendance 2026 : des programmes qui intègrent l'accompagnement des traitements GLP-1 (bilan médical, nutrition, préservation musculaire). Les pionniers européens (Lanserhof, SHA Wellness) facturent 4 500 à 15 000 € la semaine. Aucune offre grand public n'existe encore en France.</p>
+      </div>
+    </section>
+
+    <section style="background: #f0fdf4; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
+      <h2 style="color: #1a3c34; margin-top: 0;">Sous Wegovy, Mounjaro ou Ozempic ?</h2>
+      <p style="line-height: 1.6; color: #333;">
+        Les traitements GLP-1 changent la donne pour les retraites minceur : certaines pratiques (jeûne prolongé, restriction sévère)
+        demandent des précautions particulières, et l'enjeu n°1 devient la <strong>préservation de la masse musculaire</strong>.
+        Nos guides indiquent pour chaque formule ce qui est compatible avec votre traitement — et posez la question à notre
+        Coach IA (bulle en bas de page) pour votre situation précise.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

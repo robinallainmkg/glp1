@@ -19,11 +19,11 @@ mainKeyword: "effets secondaires mounjaro tirzepatide"
 
 ## Effets Secondaires Mounjaro à Long Terme : Guide Complet 2026
 
-Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (Mounjaro) provoque chez **45 à 55% des patients** des troubles digestifs (nausées, vomissements, diarrhée, constipation), généralement transitoires les 8 premières semaines. À **long terme** (au-delà de 6-12 mois), les principaux risques surveillés sont la **pancréatite aiguë** (rare, 0,1-0,2%), la **gastroparésie** persistante, des **troubles thyroïdiens** (cancer médullaire chez l'animal, contre-indication MEN-2) et une **fonte musculaire** liée à la perte de poids rapide. Voici la liste complète des **effets indésirables Mounjaro** classés par fréquence et gravité, avec les solutions concrètes pour les gérer. Lire aussi notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) et le [comparatif effets secondaires GLP-1](/collections/effets-secondaires-glp1/).
+Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (Mounjaro) provoque des troubles digestifs (nausées, vomissements, diarrhée, constipation) chez **56 à 61% des patients traités en gestion du poids** (essais SURMOUNT ; fréquences plus basses dans les essais diabète), généralement transitoires les 8 premières semaines. À **long terme** (au-delà de 6-12 mois), les principaux risques surveillés sont la **pancréatite aiguë** (peu fréquente : 0,1 à 1% selon le RCP), la **gastroparésie** persistante, des **troubles thyroïdiens** (signal surveillé sur la base de données animales — tumeurs des cellules C chez le rongeur —, mentionné dans l'étiquetage américain, mais sans contre-indication dans l'AMM européenne, dont le RCP ne retient que l'hypersensibilité comme contre-indication) et une **fonte musculaire** liée à la perte de poids rapide. Voici la liste complète des **effets indésirables Mounjaro** classés par fréquence et gravité, avec les solutions concrètes pour les gérer. Lire aussi notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) et le [comparatif effets secondaires GLP-1](/collections/effets-secondaires-glp1/).
 
 ## ⚠️ Effets Secondaires Fréquents Mounjaro
 
-### Troubles digestifs (45-55% des patients)
+### Troubles digestifs (56-61% des patients en gestion du poids)
 
 **Nausées et vomissements**
 - **Fréquence** : Très fréquent (>10%)
@@ -112,6 +112,8 @@ Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (
 | Maux de tête | 6-8% | 4% |
 | Fatigue | 4-6% | 3% |
 
+*Chiffres issus des essais SURPASS (diabète de type 2). Dans l'indication gestion du poids (essais SURMOUNT), les fréquences sont plus élevées : nausées 24,6 à 33,3% selon la dose, troubles digestifs globaux 55,6 à 60,8%.*
+
 ### Comparaison avec autres GLP-1
 
 | Traitement | Nausées | Diarrhée | Maux de tête |
@@ -186,7 +188,7 @@ Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (
 ### Précautions particulières
 - **Grossesse** : Contre-indiqué (arrêter le traitement au moins 1 mois avant une grossesse planifiée, conformément au RCP EMA)
 - **Allaitement** : Déconseillé
-- **Enfants** : Non étudié chez <18 ans
+- **Enfants et adolescents** : AMM européenne dans le diabète de type 2 dès 10 ans ; non recommandé avant 18 ans dans l'obésité (gestion du poids)
 - **Chirurgie** : Arrêt temporaire si nécessaire
 
 > **Remboursement** : Mounjaro est remboursé à 65 % par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel documenté, primo-prescription en CSO/CHU).
@@ -243,7 +245,7 @@ Les **nausées durent généralement 2-4 semaines** puis diminuent progressiveme
 
 ### Mounjaro provoque-t-il plus d'effets secondaires qu'Ozempic ?
 
-**Mounjaro peut entraîner légèrement plus de nausées** (15-20% vs 10-15% pour Ozempic) en raison de sa double action GLP-1/GIP. Cependant, la plupart des patients tolèrent bien les deux traitements. Comparez les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/).
+**Mounjaro peut entraîner légèrement plus de nausées** (15-20% dans les essais diabète, jusqu'à 25-33% en gestion du poids, contre 10-15% pour Ozempic) en raison de sa double action GLP-1/GIP. Cependant, la plupart des patients tolèrent bien les deux traitements. Comparez les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/).
 
 ### Que faire si je vomis après l'injection de Mounjaro ?
 
@@ -251,7 +253,7 @@ Si vous vomissez **dans les 30 minutes** après l'injection, contactez votre mé
 
 ### Les effets secondaires de Mounjaro sont-ils dangereux ?
 
-La plupart des effets secondaires sont **bénins et temporaires** (nausées, diarrhée). Les effets graves ([pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/), insuffisance rénale) sont **rares (<1%)**. Surveillance médicale régulière recommandée. Consultez immédiatement en cas de douleurs abdominales intenses ou signes allergiques.
+La plupart des effets secondaires sont **bénins et temporaires** (nausées, diarrhée). Les effets graves comme la [pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/) sont **peu fréquents (0,1 à 1% selon la terminologie du RCP)**, et l'insuffisance rénale est rare. Surveillance médicale régulière recommandée. Consultez immédiatement en cas de douleurs abdominales intenses ou signes allergiques.
 
 ### Comment éviter les nausées avec Mounjaro ?
 
@@ -266,7 +268,7 @@ Voir notre [guide alimentation sous GLP-1](/collections/regime-glp1/).
 
 ### Mounjaro cause-t-il la perte de cheveux ?
 
-**Non**, la perte de cheveux n'est pas un effet secondaire direct de Mounjaro. Si elle survient, c'est généralement lié à la perte de poids rapide (stress métabolique) ou carences nutritionnelles. Complétez votre alimentation en protéines, fer et vitamines B.
+**Oui**, la chute de cheveux (alopécie) est un effet indésirable **fréquent** listé au RCP européen de Mounjaro dans l'indication obésité/gestion du poids. Elle est généralement liée à la perte de poids rapide (effluvium télogène) et le plus souvent **transitoire**. Complétez votre alimentation en protéines, fer et vitamines B, et consultez si elle persiste.
 
 ### Puis-je arrêter Mounjaro si j'ai trop d'effets secondaires ?
 

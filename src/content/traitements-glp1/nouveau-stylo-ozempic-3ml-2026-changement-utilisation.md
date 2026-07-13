@@ -3,7 +3,7 @@ title: "Nouveau Stylo Ozempic 3ml 2026 : Guide Patients"
 description: "Nouveau stylo Ozempic 3ml lancé en 2026 : conservation, utilisation et équivalence des doses. Ce que les patients doivent savoir."
 pubDate: 2026-03-17
 date: "2026-03-17"
-updatedAt: 2026-03-17
+updatedAt: 2026-07-13
 author: "Dr. Marie Dubois"
 category: "Traitements GLP-1"
 tags: ["ozempic", "sémaglutide", "stylo injecteur", "2026", "nouveau stylo", "glp1", "france"]
@@ -42,44 +42,40 @@ Depuis le 2 février 2026, les pharmacies françaises distribuent une nouvelle p
 
 ## Pourquoi Novo Nordisk change-t-il le conditionnement ? {#pourquoi}
 
-Le passage du stylo 1,5 ml au stylo 3 ml s'inscrit dans une stratégie d'optimisation industrielle et de sécurité d'approvisionnement menée par Novo Nordisk depuis la crise de pénurie de 2022-2024. Un stylo de plus grande capacité permet :
+Novo Nordisk justifie officiellement ce changement par une « optimisation de son portefeuille en lien avec ses capacités de production ». Concrètement, le laboratoire harmonise ses présentations pour fluidifier sa chaîne industrielle ; il ne s'agit ni d'une nouvelle formule ni d'un changement thérapeutique.
 
-- **Une meilleure efficacité de fabrication** : le remplissage de grandes cartouches est plus rapide et génère moins de pertes industrielles
-- **Une réduction des risques de rupture de stock** : en réduisant le nombre de changements de cartouche nécessaires, la chaîne de production est plus fluide
-- **Plus de flexibilité logistique** : un seul format de stylo peut couvrir plusieurs durées de traitement selon la dose prescrite
+L'ancienne présentation de 1,5 ml a d'ailleurs fait l'objet d'une déclaration d'arrêt de commercialisation le 22 juin 2026 : elle est appelée à disparaître progressivement des pharmacies au profit du stylo 3 ml.
 
-Ce changement de conditionnement est purement logistique et ne modifie en rien la formulation chimique d'Ozempic. La molécule active — le sémaglutide — est identique dans les deux présentations.
+Ce changement de conditionnement ne modifie en rien la molécule active : le sémaglutide est identique dans les deux présentations. Ce qui change, c'est la concentration de la solution — un point important pour les patients, détaillé plus bas.
 
 ## Qu'est-ce qui change concrètement ? {#changements}
 
-### La taille du stylo
+### La concentration de la solution — le vrai changement
 
-Le nouveau stylo est légèrement plus grand que l'ancien, puisqu'il contient deux fois plus de solution (3 ml contre 1,5 ml). Pour la plupart des patients, cette différence de taille est minime et ne modifie pas significativement la manipulation du dispositif.
+C'est ici que la différence est la plus importante. Le nouveau stylo contient un volume de solution doublé (3 ml contre 1,5 ml), mais la **même quantité totale de sémaglutide : 2 mg**. La concentration est donc **divisée par deux** :
 
-### Le nombre de doses par stylo
+| Présentation | Volume | Concentration | Sémaglutide total | Doses disponibles (0,5 mg/semaine) |
+|-------------|--------|---------------|-------------------|-------------------------------------|
+| Ancien stylo 1,5 ml | 1,5 ml | 1,34 mg/ml | 2 mg | 4 injections de 0,5 mg |
+| **Nouveau stylo 3 ml** | **3 ml** | **0,68 mg/ml** | **2 mg** | **4 injections de 0,5 mg** |
 
-C'est ici que la différence est la plus importante :
-
-| Présentation | Volume | Doses disponibles (0,5 mg/semaine) |
-|-------------|--------|-------------------------------------|
-| Ancien stylo 1,5 ml | 1,5 ml | 4 injections de 0,5 mg |
-| **Nouveau stylo 3 ml** | **3 ml** | **8 injections de 0,5 mg** |
-
-Autrement dit, **un seul stylo 3 ml dure deux mois** au lieu d'un mois pour le stylo 1,5 ml à la dose de 0,5 mg par semaine. Pour un patient en phase d'escalade de dose, le calcul peut varier.
+Autrement dit, **le nouveau stylo 3 ml délivre exactement le même nombre de doses que l'ancien : 4 injections de 0,5 mg, soit un mois de traitement**. Ce qui change, c'est le volume injecté à chaque dose : **0,74 ml au lieu de 0,37 ml** pour une dose de 0,5 mg. L'injection peut donc vous sembler un peu plus longue ou plus « remplie » — c'est normal, le stylo n'est pas défectueux.
 
 ### Le conditionnement en pharmacie
 
-L'ancienne boîte contenait généralement 1 stylo 1,5 ml avec 4 aiguilles. La nouvelle présentation contient 1 stylo 3 ml avec davantage d'aiguilles. Vérifiez le contenu de la boîte lors du retrait en pharmacie.
+Comme avant, la boîte contient 1 stylo et **4 aiguilles NovoFine Plus** — de quoi couvrir les 4 injections hebdomadaires du mois. Vérifiez le contenu de la boîte lors du retrait en pharmacie.
 
 ### Le prix
 
-Le prix de vente en pharmacie a été ajusté pour tenir compte du nouveau conditionnement. Le prix au traitement mensuel reste comparable. Pour les détails tarifaires actualisés, consultez notre [guide des prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/).
+Le prix est **inchangé** : 76,58 € auxquels s'ajoute l'honoraire de dispensation de 1,02 €, soit **77,60 € TTC** la boîte, comme pour l'ancienne présentation. Pour les détails tarifaires actualisés, consultez notre [guide des prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/).
 
 ## La dose est-elle la même ? {#dosage}
 
-**Oui, absolument.** La concentration du sémaglutide est identique dans les deux présentations : **1,34 mg/ml**, soit 0,5 mg par injection de **0,37 ml** et 1 mg par injection de **0,74 ml** (selon le RCP EMA officiel d'Ozempic). Votre médecin n'a pas besoin de modifier l'ordonnance. La dose que vous injectez chaque semaine reste exactement la même.
+**Oui, absolument.** La dose de sémaglutide injectée chaque semaine reste exactement la même : 0,5 mg. Votre médecin n'a pas besoin de modifier l'ordonnance.
 
-Ce qui change, c'est uniquement la quantité de solution disponible dans le stylo — pas la dose par injection, ni le mécanisme d'administration.
+En revanche, la **concentration** de la solution a changé : elle est de **0,68 mg/ml** dans le nouveau stylo 3 ml, contre **1,34 mg/ml** dans l'ancien stylo 1,5 ml. Pour délivrer la même dose de 0,5 mg, le stylo injecte donc un volume doublé : **0,74 ml au lieu de 0,37 ml**. Le sélecteur de dose du stylo gère cela automatiquement — vous n'avez rien à recalculer.
+
+**Point clé pour les patients** : si vous trouvez que l'injection délivre « plus de liquide » qu'avant, c'est parfaitement normal. Le stylo n'est ni défectueux ni surdosé : c'est la conséquence directe de la concentration divisée par deux.
 
 ## Comment utiliser le nouveau stylo 3ml ? {#utilisation}
 
@@ -90,12 +86,12 @@ Le nouveau stylo 3 ml fonctionne selon le même principe que l'ancien :
 1. **Vissez une nouvelle aiguille** sur le stylo avant chaque injection — n'utilisez jamais la même aiguille deux fois
 2. **Vérifiez le flux** (test d'air) : pointez le stylo vers le haut, sélectionnez la dose minimale et appuyez pour faire sortir quelques gouttes
 3. **Sélectionnez votre dose** : tournez le bouton de sélection jusqu'à 0,5 mg (ou 1 mg selon votre prescription)
-4. **Injectez** dans l'abdomen, la cuisse ou le haut du bras. Maintenez l'aiguille en place 6 secondes après avoir appuyé sur le bouton d'injection
+4. **Injectez** dans l'abdomen, la cuisse ou le haut du bras. Maintenez l'aiguille en place 6 secondes après avoir appuyé sur le bouton d'injection. Le volume injecté étant plus important qu'avant (0,74 ml au lieu de 0,37 ml pour 0,5 mg), l'injection peut sembler légèrement plus longue : c'est normal
 5. **Retirez et éliminez l'aiguille** dans un conteneur DASRI
 
 ### Attention à la "nouvelle aiguille à chaque injection"
 
-Cette règle est particulièrement importante avec le stylo 3 ml, qui sera utilisé sur une durée plus longue. Les aiguilles s'émoussent et peuvent se contaminer après une utilisation. Utilisez toujours une aiguille neuve.
+Cette règle reste essentielle : les aiguilles s'émoussent et peuvent se contaminer après une utilisation. Utilisez toujours une aiguille neuve — la boîte contient 4 aiguilles NovoFine Plus, une par injection hebdomadaire.
 
 ### Que faire si je ne vois plus de liquide ?
 
@@ -110,7 +106,7 @@ Les règles de conservation sont identiques à celles de l'ancien stylo :
 - **À l'abri de la chaleur et de la lumière** : ne laissez pas le stylo en plein soleil ou dans une voiture en été
 - **Durée de vie** : vérifiez la date de péremption imprimée sur le stylo. N'utilisez jamais un stylo périmé
 
-Pour la [conservation du stylo en voyage](/collections/traitements-glp1/conservation-injection-glp1-stylo-voyage-guide-pratique/), des précautions supplémentaires s'appliquent. Le stylo 3 ml étant utilisé sur deux mois (à la dose de 0,5 mg/semaine), il est impératif de noter la date de la **première injection** sur le stylo ou dans un agenda. Le stylo entamé ne doit pas être utilisé au-delà de 6 semaines, même s'il contient encore de la solution.
+Pour la [conservation du stylo en voyage](/collections/traitements-glp1/conservation-injection-glp1-stylo-voyage-guide-pratique/), des précautions supplémentaires s'appliquent. À la dose de 0,5 mg/semaine, le stylo est utilisé sur 4 semaines : la limite de conservation de 6 semaines après ouverture est donc largement compatible avec un usage normal. Notez tout de même la date de la **première injection** sur le stylo ou dans un agenda : le stylo entamé ne doit pas être utilisé au-delà de 6 semaines, même s'il contient encore de la solution.
 
 ## Transition entre les deux stylos {#transition}
 
@@ -132,9 +128,9 @@ Si vous avez un doute sur la présentation reçue, n'hésitez pas à demander co
 
 La substitution du stylo 1,5 ml par le stylo 3 ml n'a aucune conséquence sur l'efficacité du traitement, son profil de sécurité ou les effets secondaires. Vous continuez votre traitement sans interruption.
 
-### Un impact logistique positif
+### Un impact logistique quasi nul
 
-Pour de nombreux patients, passer à un stylo qui dure deux mois représente un avantage pratique : moins de visites en pharmacie, moins de gestion des déchets (aiguilles, emballages), et une sensation de simplification de la routine de traitement.
+Le rythme de votre traitement ne change pas : un stylo couvre toujours un mois de traitement à 0,5 mg/semaine, et le passage en pharmacie reste mensuel. La seule différence perceptible au quotidien est le volume injecté, plus important qu'avant (0,74 ml au lieu de 0,37 ml pour une dose de 0,5 mg) — un point de vigilance à connaître pour ne pas croire à tort que le stylo est défectueux.
 
 ## Questions fréquentes {#faq}
 
@@ -142,7 +138,7 @@ Pour de nombreux patients, passer à un stylo qui dure deux mois représente un 
 Oui, bien sûr. Terminez votre stylo actuel normalement. La transition vers le nouveau conditionnement se fait naturellement lorsque vous commencez un nouveau stylo.
 
 **Le prix a-t-il changé avec le nouveau stylo ?**
-Le prix du boîtier peut différer légèrement du fait du nouveau conditionnement, mais le coût mensuel du traitement reste comparable. Renseignez-vous auprès de votre pharmacien ou consultez notre [guide des prix Ozempic](/collections/glp1-cout/prix-ozempic-france/) pour les tarifs actualisés.
+Non. Le prix reste identique à celui de l'ancienne présentation : 76,58 € plus 1,02 € d'honoraire de dispensation, soit 77,60 € TTC la boîte. Consultez notre [guide des prix Ozempic](/collections/glp1-cout/prix-ozempic-france/) pour les tarifs actualisés.
 
 **Est-ce que je dois stocker différemment le nouveau stylo ?**
 Non, les règles de conservation sont identiques : réfrigérateur avant ouverture, et 6 semaines maximum à température ambiante après la première utilisation. Notez simplement la date de première utilisation pour ne pas dépasser la limite de 6 semaines.
@@ -155,11 +151,11 @@ Votre pharmacien peut vous montrer le fonctionnement du nouveau stylo lors du re
 
 ## Conclusion
 
-Le passage au stylo Ozempic 3 ml en 2026 est une évolution purement logistique qui ne modifie ni la molécule active, ni la dose thérapeutique, ni l'efficacité du traitement. La principale différence pratique est qu'un seul stylo dure désormais deux mois au lieu d'un. Les règles d'utilisation et de conservation restent identiques.
+Le passage au stylo Ozempic 3 ml en 2026 est une évolution de conditionnement qui ne modifie ni la molécule active, ni la dose thérapeutique, ni l'efficacité du traitement, ni le prix, ni la durée d'un stylo (toujours un mois de traitement à 0,5 mg/semaine). La principale différence pratique à retenir : la concentration étant divisée par deux (0,68 mg/ml), le volume injecté à chaque dose est doublé (0,74 ml pour 0,5 mg) — c'est normal et attendu. Les règles d'utilisation et de conservation restent identiques.
 
 Si vous avez des questions spécifiques sur votre traitement par Ozempic, consultez notre [guide complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ou notre article sur les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) pour une information exhaustive. Et comme toujours, en cas de doute, parlez-en à votre médecin ou à votre pharmacien.
 
 ---
 
-*Sources : Novo Nordisk France — Communiqué sur le nouveau conditionnement Ozempic 3 ml (février 2026). ANSM — Surveillance des médicaments antidiabétiques. RCP Ozempic (sémaglutide) — version actualisée 2026. Dernière mise à jour : mars 2026.*
+*Sources : Vidal — Ozempic 0,5 mg solution injectable en stylo prérempli 3 ml (nouvelle présentation 2026). Base de données publique des médicaments (BDPM). ANSM — déclaration d'arrêt de commercialisation de la présentation 1,5 ml (22 juin 2026). RCP Ozempic (sémaglutide) — version actualisée 2026. Dernière mise à jour : juillet 2026.*
 
