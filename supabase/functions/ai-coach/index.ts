@@ -42,6 +42,8 @@ RÈGLES ABSOLUES :
 11. Ne dis JAMAIS "d'après nos articles", "selon nos guides" ou toute formulation qui s'appuie sur "nos" contenus.
 12. Ne termine JAMAIS par une phrase promotionnelle.
 13. Réponds TOUJOURS à la question directement dans le chat. Ne renvoie JAMAIS uniquement vers un article sans répondre — ça fait quitter le chat. Donne d'abord ta réponse, puis si un article est pertinent, ajoute-le en complément : "Pour aller plus loin : [Titre](URL)". Utilise UNIQUEMENT les URLs fournies dans le contexte RAG. Ne fabrique JAMAIS d'URL.
+14. Ne répète JAMAIS une réponse déjà donnée dans la conversation. Si l'utilisateur repose la même question ou insiste, c'est que ta réponse précédente ne l'a pas aidé : apporte un élément NOUVEAU, reformule autrement, ou reconnais honnêtement la limite ("Je n'ai pas le prix pharmacie par pharmacie, mais voici comment le trouver…"). Recopier ta réponse précédente est la pire chose à faire.
+15. Quand la personne donne son prénom, recopie-le EXACTEMENT comme elle l'a écrit (même orthographe, ne modifie ni n'ajoute JAMAIS de lettres).
 
 CONTEXTE IMPORTANT :
 - Les vrais GLP-1 injectables (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Victoza) ne se vendent QU'en pharmacie sur ordonnance en France
@@ -61,7 +63,8 @@ PRESTATAIRES EN LIGNE / TÉLÉCONSULTATION (tu CONNAIS le paysage et tu en parle
 - Un vrai GLP-1 injectable ne s'obtient JAMAIS "sans ordonnance" : il faut une prescription d'un médecin inscrit à l'Ordre, après une vraie consultation (en cabinet OU en téléconsultation).
 - Voie classique : médecin traitant, endocrinologue, médecin de l'obésité ; primo-prescription en CSO/CHU pour ouvrir le remboursement obésité.
 - Voie téléconsultation : des plateformes mettent en relation avec des médecins français à distance. Exemples connus du paysage français : Qare, Livi, Hellocare, Doctolib. Cite-les comme EXEMPLES si on te le demande, sans en privilégier une et sans promettre une ordonnance (le médecin peut refuser si ce n'est pas justifié).
-- Si on te demande "est-ce fiable ?", donne les critères d'un service sérieux : (1) vraie téléconsultation avec un médecin identifiable inscrit à l'Ordre ; (2) ordonnance délivrée seulement si médicalement justifié ; (3) médicament délivré en pharmacie (physique ou en ligne agréée ANSM), jamais par le site lui-même.
+- Si on te demande "est-ce fiable ?", donne les critères d'un service sérieux : (1) vraie téléconsultation avec un médecin identifiable inscrit à l'Ordre ; (2) ordonnance délivrée seulement si médicalement justifié ; (3) médicament retiré en pharmacie PHYSIQUE, jamais vendu par le site lui-même.
+- ⚠️ VENTE EN LIGNE INTERDITE : en France, les pharmacies en ligne (même agréées) ne peuvent vendre QUE des médicaments SANS ordonnance. Les GLP-1 sont à prescription obligatoire → ils ne peuvent JAMAIS être achetés en ligne légalement. Ne suggère JAMAIS une "pharmacie en ligne", une "liste de pharmacies en ligne" ou un achat sur internet pour un GLP-1. Tout site qui en vend en ligne est illégal (contrefaçons probables).
 - 🚩 Arnaque (à signaler calmement, sans dramatiser) : un site qui VEND directement de l'Ozempic/Wegovy/Mounjaro, "sans ordonnance", à prix cassé, paiement crypto/virement, sans aucune consultation = illégal et dangereux (contrefaçons). Ce ne sont PAS des prestataires sérieux.
 
 FLUX "SUIS-JE ÉLIGIBLE AU REMBOURSEMENT ?" (à PROPOSER dès qu'on parle de prix, de remboursement, ou de comment commencer) :
@@ -88,7 +91,7 @@ CONVERSION — DOSSIER GLP-1 PERSONNALISÉ (4,99€) :
 - QUAND proposer : dès que tu as collecté poids + taille + comorbidités (= tu peux calculer l'IMC et donner un verdict), OU quand la personne demande les étapes concrètes pour commencer.
 - COMMENT proposer (EXACTEMENT cette formulation, adaptée au tutoiement/vouvoiement) : "D'ailleurs, je peux te préparer ton **Dossier GLP-1 personnalisé** : un document complet avec ton verdict d'éligibilité, la checklist pour ton RDV médecin, les CSO/CHU près de chez toi, et l'estimation de ton reste à charge — tout prêt à imprimer pour ton médecin. C'est 4,99€."
 - Puis ajoute en fin de réponse : [[SUGGESTIONS]] Oui, je veux mon dossier | Plus tard
-- Si la personne dit OUI → réponds : "Super ! Pour générer ton dossier, j'ai besoin de quelques infos. Ton prénom ?" puis collecte UNE info à la fois : (1) prénom, (2) poids + taille (si pas déjà donnés), (3) comorbidités, (4) ville (pour trouver le CSO le plus proche), (5) traitement envisagé. Quand tu as tout, dis "Ton dossier est prêt !" et le système affichera le bouton de paiement.
+- Si la personne dit OUI → collecte UNIQUEMENT ce qui MANQUE. La plupart des infos (poids, taille, comorbidités) ont déjà été données pendant le test d'éligibilité : NE LES REDEMANDE JAMAIS. En général il ne manque que : (1) prénom, (2) ville (pour le CSO le plus proche). Pose ces 2 questions EN UNE SEULE FOIS : "Super ! Il me faut juste ton prénom et ta ville, et ton dossier est prêt." Le traitement envisagé est OPTIONNEL (déduis-le de la conversation, sinon "non précisé"). Quand tu as prénom + ville, dis "Ton dossier est prêt !" et le système affichera le bouton de paiement. OBJECTIF : passer du OUI au dossier prêt en 1-2 échanges MAXIMUM.
 - Quand tu as TOUTES les infos, termine ta réponse par ce tag (le front-end le détecte) : [[DOSSIER_READY]] suivi du JSON des données : {"prenom":"X","poids_kg":Y,"taille_cm":Z,"comorbidites":["..."],"ville":"...","suivi_nutritionnel":true/false,"traitement_souhaite":"..."}
 - NE propose le dossier qu'UNE SEULE FOIS par conversation. Si la personne dit "plus tard" ou ignore, n'insiste pas.
 - Formule-le comme un SERVICE utile pour préparer son RDV, jamais comme une pub.
@@ -212,6 +215,57 @@ function extractDepartmentCode(message: string): string | null {
   const domMatch = message.match(/\b(97[1-6])\b/);
   if (domMatch) return domMatch[1];
   return null;
+}
+
+// --- IMC extraction (garde-fou éligibilité) ---
+// Le LLM a déjà annoncé "éligible" à des IMC < 35 malgré les seuils du prompt.
+// On calcule donc l'IMC côté serveur à partir des messages user et on injecte
+// le verdict correct dans le contexte : le modèle n'a plus à faire le calcul.
+function extractImc(userTexts: string[]): { imc: number; poids: number; taille: number } | null {
+  let poids: number | null = null;
+  let taille: number | null = null;
+  for (const t of userTexts) {
+    if (taille === null) {
+      // "1m75", "1,75", "1.75", "1 m 75"
+      const m1 = t.match(/\b[12]\s*[m,.]\s*(\d{2})\b/i);
+      // "175 cm"
+      const m2 = t.match(/\b(1[2-9]\d|2[0-2]\d)\s*cm\b/i);
+      if (m1) taille = (t.match(/\b(2)\s*[m,.]/) ? 200 : 100) + parseInt(m1[1], 10);
+      else if (m2) taille = parseInt(m2[1], 10);
+    }
+    if (poids === null) {
+      // "135 kg", "105 kilos"
+      const p1 = t.match(/\b(\d{2,3})(?:[,.]\d)?\s*(?:kg|kilos?)\b/i);
+      if (p1) poids = parseInt(p1[1], 10);
+      else if (taille !== null) {
+        // "1m75 135" — nombre nu après la taille (exclut âges "46 ans" et la taille elle-même)
+        const stripped = t.replace(/\b[12]\s*[m,.]\s*\d{2}\b/i, ' ').replace(/\b\d{2,3}\s*(ans|cm)\b/gi, ' ');
+        const p2 = stripped.match(/\b(\d{2,3})\b/);
+        if (p2) {
+          const n = parseInt(p2[1], 10);
+          if (n >= 40 && n <= 300) poids = n;
+        }
+      }
+    }
+    if (poids !== null && taille !== null) break;
+  }
+  if (poids === null || taille === null || taille < 120 || taille > 230) return null;
+  const imc = poids / Math.pow(taille / 100, 2);
+  if (imc < 10 || imc > 90) return null;
+  return { imc, poids, taille };
+}
+
+function buildImcVerdictContext(imcData: { imc: number; poids: number; taille: number }): string {
+  const { imc, poids, taille } = imcData;
+  let verdict: string;
+  if (imc >= 40) {
+    verdict = "ÉLIGIBLE au remboursement 65% (IMC ≥ 40, comorbidité non requise), sous réserve d'un échec de prise en charge nutritionnelle. Prochaine étape : primo-prescription en CSO/CHU.";
+  } else if (imc >= 35) {
+    verdict = "éligible UNIQUEMENT si au moins une comorbidité est confirmée (diabète T2, hypertension, apnée du sommeil…). Sans comorbidité → NON éligible. Demande d'abord les comorbidités avant tout verdict.";
+  } else {
+    verdict = "NON ÉLIGIBLE au remboursement (IMC < 35, seuils : IMC ≥ 35 avec comorbidité ou IMC ≥ 40). INTERDICTION ABSOLUE de dire \"tu es éligible\" ou \"vous êtes éligible\". Dis-le avec tact et oriente vers le médecin pour évaluer d'autres options.";
+  }
+  return `\n\n⚠️ VERDICT CALCULÉ PAR LE SYSTÈME (fiable, PRIORITAIRE sur tout autre calcul) : poids ${poids} kg, taille ${taille} cm → IMC = ${imc.toFixed(1)}. Verdict remboursement : ${verdict} Ta réponse DOIT être cohérente avec ce verdict — ne recalcule pas toi-même.`;
 }
 
 // --- Scam signal detection ---
@@ -389,8 +443,11 @@ serve(async (req) => {
     let premiumProfile: any = null;
 
     if (!user_id && clientIp !== "unknown") {
-      // Anonymous users: 5 messages/day by IP
-      const ANON_DAILY_LIMIT = 5;
+      // Anonymous users: 12 messages/day by IP.
+      // ⚠️ Ne PAS redescendre sous ~10 : le flux éligibilité + collecte Dossier
+      // demande 8-10 messages user — à 5/jour le funnel Dossier était
+      // mathématiquement impossible à compléter (0 [[DOSSIER_READY]] en 30 jours).
+      const ANON_DAILY_LIMIT = 12;
       const today = new Date().toISOString().split("T")[0];
       const ipDailyKey = `daily:${clientIp}:${today}`;
       const { data: ipDaily } = await supabase
@@ -658,9 +715,14 @@ serve(async (req) => {
         .join('\n');
       const linksHint = articleLinks ? `\n\nLiens d'articles disponibles (utilise-les si pertinent dans ta réponse) :\n${articleLinks}` : '';
 
+      // Garde-fou éligibilité : IMC calculé côté serveur, verdict injecté
+      const userTexts = [cleanMessage, ...historyMessages.filter((m: any) => m.role === 'user').map((m: any) => m.content).reverse()];
+      const imcData = extractImc(userTexts);
+      const imcContext = imcData ? buildImcVerdictContext(imcData) : '';
+
       const userMessageWithContext = ragContext
-        ? `Contexte factuel (utilise ces informations pour répondre sans mentionner leur source) :\n\n${ragContext}${linksHint}${scamContext}${doctorContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
-        : `${cleanMessage}${scamContext}${doctorContext}`;
+        ? `Contexte factuel (utilise ces informations pour répondre sans mentionner leur source) :\n\n${ragContext}${linksHint}${scamContext}${doctorContext}${imcContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
+        : `${cleanMessage}${scamContext}${doctorContext}${imcContext}`;
 
       // Build system prompt with premium personalization
       let systemPrompt = SYSTEM_PROMPT;
@@ -760,11 +822,13 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
       }
 
       // Dossier GLP-1 ready tag: [[DOSSIER_READY]] {...json...}
+      // Regex tolérante : capture tout après le tag jusqu'à la fin (le JSON peut
+      // contenir des objets/tableaux imbriqués que l'ancien [^}]+ cassait).
       let dossierData: any = null;
-      const dossierMatch = cleanResponse.match(/\[\[DOSSIER_READY\]\]\s*(\{[^}]+\})\s*$/s);
+      const dossierMatch = cleanResponse.match(/\[\[DOSSIER_READY\]\]\s*(\{[\s\S]*\})\s*$/);
       if (dossierMatch) {
         try { dossierData = JSON.parse(dossierMatch[1]); } catch { /* ignore parse error */ }
-        cleanResponse = cleanResponse.replace(/\n*\s*\[\[DOSSIER_READY\]\]\s*\{[^}]+\}\s*$/s, '').trim();
+        cleanResponse = cleanResponse.replace(/\n*\s*\[\[DOSSIER_READY\]\][\s\S]*$/, '').trim();
       }
 
       // Moment chaud → on propose la capture email (le funnel convertit à 0 sans capture).
