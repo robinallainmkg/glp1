@@ -265,7 +265,7 @@ En attendant l'arrivée du Wegovy oral, les patients éligibles disposent de plu
 
 Si vous êtes éligible à un traitement GLP-1, vous n'avez pas besoin d'attendre le Wegovy oral. Depuis les [nouvelles règles ANSM de juin 2025](/collections/traitements-glp1/glp1-prescription-generaliste-nouvelles-regles-ansm-2026/), votre médecin généraliste peut initier directement la prescription de Wegovy, Mounjaro ou Saxenda pour l'obésité.
 
-Des services comme [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) proposent un accompagnement diététique avec accès à des médecins partenaires pour la prescription GLP-1. Ce parcours structuré — évaluation médicale, prescription si éligible, suivi nutritionnel personnalisé — est particulièrement adapté aux patients qui souhaitent être accompagnés dans leur démarche (code promo **CARE50** pour 50 % sur le premier mois).
+Un parcours structuré — évaluation médicale, prescription si éligible, suivi nutritionnel personnalisé — est particulièrement adapté aux patients qui souhaitent être accompagnés dans leur démarche. Parlez-en à votre médecin traitant ou à un endocrinologue.
 
 Pour un guide étape par étape, consultez notre article [comment commencer un traitement GLP-1 en France](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/).
 

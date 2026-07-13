@@ -261,7 +261,7 @@ Le choix entre Mounjaro et Wegovy n'est pas un choix que vous devez faire seul. 
 4. **Votre situation financière** : le reste à charge est un facteur réel et légitime dans le choix thérapeutique
 5. **Vos antécédents médicaux** : certaines contre-indications ou précautions d'emploi sont spécifiques à chaque molécule
 
-Des services comme [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) proposent un accompagnement diététique avec accès à des médecins partenaires pour la prescription GLP-1. Ce type de parcours structuré permet d'évaluer votre éligibilité, de discuter du choix de la molécule et de bénéficier d'un suivi nutritionnel adapté (code promo **CARE50** pour 50 % sur le premier mois).
+Un parcours structuré avec votre médecin permet d'évaluer votre éligibilité, de discuter du choix de la molécule et de bénéficier d'un suivi nutritionnel adapté.
 
 Depuis les [nouvelles règles ANSM de juin 2025](/collections/traitements-glp1/glp1-prescription-generaliste-nouvelles-regles-ansm-2026/), votre médecin généraliste peut initier la prescription de Wegovy et de Mounjaro pour l'obésité, sans passer par un spécialiste.
 

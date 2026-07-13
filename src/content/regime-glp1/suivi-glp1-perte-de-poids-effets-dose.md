@@ -297,7 +297,7 @@ Voici un calendrier de suivi recommandé pour les 12 premiers mois de traitement
 | M9 | Consultation + mesures | Bilan trimestriel | Évaluation poursuite/ajustement |
 | M12 | Bilan annuel complet | Bilan complet + DEXA si indiqué | Stratégie long terme, prévention rechute |
 
-Pour un premier accompagnement, [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) propose des consultations avec des médecins spécialisés GLP-1. Code CARE50 : 50 % sur le premier mois.
+Pour un premier accompagnement, votre médecin traitant ou un endocrinologue peut vous orienter (annuaire officiel : annuaire-sante.ameli.fr).
 
 ## Que se passe-t-il à l'arrêt du traitement ?
 

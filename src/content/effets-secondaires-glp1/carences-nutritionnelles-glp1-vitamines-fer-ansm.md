@@ -265,7 +265,7 @@ La supplémentation doit être **guidée par les résultats biologiques**, et no
 
 ### Règle n°5 : se faire accompagner
 
-Un accompagnement diététique professionnel est fortement recommandé sous GLP-1. [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) propose un suivi personnalisé avec des diététiciens spécialisés, avec le code CARE50 pour 50% sur le premier mois. Ce suivi permet d'adapter l'alimentation aux contraintes du traitement, de prévenir les carences et d'optimiser la composition corporelle (maximiser la perte de graisse tout en préservant la masse musculaire).
+Un accompagnement diététique professionnel est fortement recommandé sous GLP-1. Ce suivi permet d'adapter l'alimentation aux contraintes du traitement, de prévenir les carences et d'optimiser la composition corporelle (maximiser la perte de graisse tout en préservant la masse musculaire).
 
 ---
 

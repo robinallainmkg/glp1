@@ -182,7 +182,7 @@ Certaines mutuelles proposent des forfaits couvrant tout ou partie du coût des 
 
 ### Se faire accompagner par un professionnel
 
-Un accompagnement diététique professionnel est fortement recommandé sous GLP-1. [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) propose un suivi personnalisé avec des diététiciens spécialisés, avec le code CARE50 pour 50% sur le premier mois. Ce suivi permet d'optimiser les résultats du traitement et de prévenir les carences nutritionnelles, ce qui peut réduire les coûts de santé à long terme.
+Un accompagnement diététique professionnel est fortement recommandé sous GLP-1. Un suivi personnalisé par un diététicien spécialisé permet d'optimiser les résultats du traitement et de prévenir les carences nutritionnelles, ce qui peut réduire les coûts de santé à long terme. Votre médecin peut vous orienter vers un professionnel conventionné.
 
 ### Ne pas acheter sur des circuits non autorisés
 
