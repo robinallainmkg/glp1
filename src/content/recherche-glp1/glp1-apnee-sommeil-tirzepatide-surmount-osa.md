@@ -198,7 +198,7 @@ Ces résultats renforcent l'importance d'un dépistage systématique du SAOS che
 
 ### Le suivi médical, pilier de la prise en charge
 
-Que ce soit pour la PPC, le [tirzépatide](/collections/traitements-glp1/guide-complet-mounjaro/) ou une combinaison des deux, un suivi médical régulier est essentiel pour ajuster le traitement et surveiller l'évolution du SAOS. Des plateformes comme [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) proposent un accompagnement personnalisé avec des médecins spécialisés, incluant la gestion du poids et des comorbidités comme l'apnée du sommeil.
+Que ce soit pour la PPC, le [tirzépatide](/collections/traitements-glp1/guide-complet-mounjaro/) ou une combinaison des deux, un suivi médical régulier est essentiel pour ajuster le traitement et surveiller l'évolution du SAOS.
 
 ### Les autres GLP-1 et le SAOS
 

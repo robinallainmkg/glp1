@@ -216,7 +216,7 @@ Le liraglutide (Saxenda) peut être une option moins onéreuse dans certains cas
 
 Certains laboratoires pharmaceutiques proposent des programmes de soutien aux patients. Par ailleurs, des plateformes spécialisées offrent un suivi diététique et médical à distance.
 
-Pour un premier accompagnement, [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) propose des consultations avec des médecins spécialisés GLP-1. Code CARE50 : 50 % sur le premier mois.
+Pour un premier accompagnement, votre médecin traitant ou un endocrinologue peut vous orienter (annuaire officiel : annuaire-sante.ameli.fr).
 
 ## Thème 7 : Durée et arrêt — Combien de temps vais-je suivre ce traitement ?
 

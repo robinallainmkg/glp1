@@ -97,7 +97,7 @@ Le remboursement est conditionné à un **échec documenté d'une prise en charg
 - Un accompagnement psychologique si nécessaire
 - La documentation des résultats insuffisants (poids, tour de taille, comorbidités)
 
-Un accompagnement diététique professionnel est fortement recommandé sous GLP-1. [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) propose un suivi personnalisé avec des diététiciens spécialisés, avec le code CARE50 pour 50% sur le premier mois. Ce type de suivi peut notamment permettre de documenter la prise en charge nutritionnelle préalable requise pour accéder au remboursement.
+Un accompagnement diététique professionnel est fortement recommandé sous GLP-1. Ce type de suivi peut notamment permettre de documenter la prise en charge nutritionnelle préalable requise pour accéder au remboursement.
 
 ### Primo-prescription réservée aux structures spécialisées
 

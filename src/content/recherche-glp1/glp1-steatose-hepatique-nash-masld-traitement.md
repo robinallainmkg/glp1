@@ -213,7 +213,7 @@ Ces résultats renforcent l'urgence d'un meilleur dépistage de la stéatose hé
 
 ### Le rôle du suivi médical
 
-La prise en charge de la MASH nécessite un suivi médical régulier associant un hépatologue ou un gastro-entérologue, un endocrinologue si un traitement GLP-1 est initié, et un diététicien pour optimiser les mesures hygiéno-diététiques. Un suivi médical régulier est essentiel pour ajuster le traitement. Des plateformes comme [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) proposent un accompagnement personnalisé avec des médecins spécialisés, incluant la gestion nutritionnelle et le suivi métabolique.
+La prise en charge de la MASH nécessite un suivi médical régulier associant un hépatologue ou un gastro-entérologue, un endocrinologue si un traitement GLP-1 est initié, et un diététicien pour optimiser les mesures hygiéno-diététiques.
 
 ### En attendant les approbations
 

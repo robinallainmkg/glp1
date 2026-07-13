@@ -223,7 +223,7 @@ En attendant l'arrivée de Foundayo en France, les patients éligibles disposent
 
 Si vous êtes éligible et souhaitez initier un traitement GLP-1 sans attendre Foundayo, votre médecin traitant peut désormais vous prescrire directement Wegovy, Mounjaro ou Saxenda depuis les [nouvelles règles ANSM de juin 2025](/collections/traitements-glp1/glp1-prescription-generaliste-nouvelles-regles-ansm-2026/).
 
-Des services comme [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) proposent un accompagnement diététique avec accès à des médecins partenaires pour la prescription GLP-1. Ce type de suivi global — consultation médicale, prescription si éligible, accompagnement nutritionnel — est particulièrement pertinent pour les patients qui souhaitent un parcours structuré.
+Un suivi global — consultation médicale, prescription si éligible, accompagnement nutritionnel — est particulièrement pertinent pour les patients qui souhaitent un parcours structuré. Votre médecin traitant ou un endocrinologue peut coordonner ce parcours.
 
 Pour un guide étape par étape, consultez notre article [comment commencer un traitement GLP-1 en France](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/).
 
@@ -307,7 +307,7 @@ Des essais cliniques ont également évalué l'orforglipron dans le diabète de 
 
 ### Que faire en attendant Foundayo en France ?
 
-Si vous êtes éligible à un traitement GLP-1 et ne souhaitez pas attendre, consultez votre médecin pour discuter des options déjà disponibles en France. Les traitements injectables (Wegovy, Mounjaro, Ozempic) ont démontré leur efficacité et leur sécurité depuis plusieurs années. Pour un parcours accompagné, des services spécialisés comme [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) permettent de bénéficier d'un suivi diététique et médical structuré (code promo **CARE50** pour 50 % sur le premier mois).
+Si vous êtes éligible à un traitement GLP-1 et ne souhaitez pas attendre, consultez votre médecin pour discuter des options déjà disponibles en France. Les traitements injectables (Wegovy, Mounjaro, Ozempic) ont démontré leur efficacité et leur sécurité depuis plusieurs années.
 
 ## Points clés à retenir
 

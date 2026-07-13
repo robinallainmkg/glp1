@@ -198,7 +198,7 @@ Le message principal de ces données est qu'un patient sous GLP-1, en particulie
 
 ### L'importance de l'accompagnement médical
 
-Un suivi médical régulier est essentiel, tant pendant le traitement qu'en cas d'arrêt. Des plateformes comme [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article) proposent un accompagnement personnalisé avec des médecins spécialisés, permettant un suivi régulier de l'évolution pondérale et métabolique.
+Un suivi médical régulier est essentiel, tant pendant le traitement qu'en cas d'arrêt, permettant de surveiller l'évolution pondérale et métabolique avec votre médecin.
 
 ### Les implications pour la politique de santé
 
