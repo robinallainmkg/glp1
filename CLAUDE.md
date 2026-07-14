@@ -77,7 +77,10 @@ SELECT 'ga_metrics' as tbl, MAX(date) FROM ga_metrics UNION ALL SELECT 'gsc_metr
 ## Verticale Retraites Bien-Etre (lancee 13/07/2026)
 
 - **Collection** : `retraites-bien-etre` (13e collection, dans src/content/config.ts + routes /collections/retraites-bien-etre/)
-- **Hub** : `src/pages/retraites/index.astro` → `/retraites/` (page pilier SEO, lie depuis le footer) — **futur landing de l'offre premium** (retraites medicalisees GLP-1, projet de Robin : peptides/Morpheus8, cadre reglementaire FR a valider)
+- **Hub** : `src/pages/retraites/index.astro` → `/retraites/` (page pilier SEO, lie depuis le footer, cible la requete tete "retraite perte de poids france")
+- **PAS de landing offre premium pour le moment** (decision Robin 14/07/2026) : strategie 100% SEO/contenu d'abord. L'offre retraites medicalisees (peptides/Morpheus8) reste un projet a moyen terme — ne rien publier de commercial sans decision explicite.
+- **Roadmap contenu restante** : pages stations thermales individuelles (Vittel, Capvern, Contrexeville avis/prix), cure thermale obesite 14 stations (article dedie liste complete + procedure remboursement), jeune et randonnee comparatif organisateurs FFJR, retraite yoga perte de poids. Ne PAS faire de fausse experience personnelle ("j'ai teste").
+- **Maillage** : chaque nouvel article de n'importe quelle collection qui mentionne cure/sejour/repos/vacances doit lier vers /retraites/ ou un article du cluster
 - **Articles publies** : protocole Wegovy+cure thermale rembourses, retraites GLP-1 europeennes (Lanserhof etc.), jeune sous GLP-1, top 10 retraites perte de poids France
 - **Regles** : prix TOUJOURS sources et verifiables, zero invention ; pas d'affiliation ; thumbnails SVG uniques (DA verte #1a3c34/#16a34a) dans public/images/thumbnails/
 - **Strategie** : first-mover sur "GLP-1 x retraite" (desert editorial FR) ; clusters cibles : cure thermale minceur (remboursee Secu), jeune et randonnee, sejour minceur, longevity/medical wellness
