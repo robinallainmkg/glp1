@@ -1,0 +1,254 @@
+---
+import StaticLayout from '../../layouts/StaticLayout.astro';
+---
+
+<StaticLayout
+  title="Test d'Éligibilité Remboursement Wegovy & Mounjaro 2026 (2 min)"
+  description="Êtes-vous éligible au remboursement à 65% de Wegovy ou Mounjaro ? Testez en 2 minutes avec les critères officiels 2026 : IMC, comorbidités, parcours nutritionnel."
+  keywords="test éligibilité wegovy, remboursement mounjaro conditions, suis-je éligible glp1, imc remboursement obésité"
+>
+  <div class="min-h-screen py-12" style="background: linear-gradient(160deg, #f0fdf4 0%, #ffffff 60%);">
+    <div class="container mx-auto px-4 max-w-2xl">
+
+      <div class="text-center mb-10">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4" style="color: #1a3c34;">
+          Suis-je éligible au remboursement Wegovy / Mounjaro ?
+        </h1>
+        <p class="text-lg text-gray-600">
+          Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à <strong>65 %</strong> par l'Assurance Maladie, sous conditions.
+          Vérifiez votre situation en 3 questions — critères officiels (arrêtés du 23 mai 2026).
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8" id="testCard">
+
+        <!-- Étape 1 : IMC -->
+        <div class="test-step" id="step1">
+          <p class="text-sm font-semibold mb-4" style="color:#16a34a;">Étape 1/3 — Votre IMC</p>
+          <div class="grid grid-cols-2 gap-4 mb-2">
+            <div>
+              <label for="taille" class="block text-sm font-medium text-gray-700 mb-1">Taille (cm)</label>
+              <input type="number" id="taille" min="120" max="230" placeholder="ex : 170"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none" style="accent-color:#16a34a;" />
+            </div>
+            <div>
+              <label for="poids" class="block text-sm font-medium text-gray-700 mb-1">Poids (kg)</label>
+              <input type="number" id="poids" min="35" max="350" placeholder="ex : 105"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none" />
+            </div>
+          </div>
+          <p id="imcLive" class="text-sm text-gray-500 mb-4 min-h-5"></p>
+          <button id="btnStep1" class="w-full text-white font-semibold py-3 rounded-lg text-lg" style="background:#16a34a;">Continuer →</button>
+        </div>
+
+        <!-- Étape 2 : comorbidités -->
+        <div class="test-step hidden" id="step2">
+          <p class="text-sm font-semibold mb-1" style="color:#16a34a;">Étape 2/3 — Vos comorbidités</p>
+          <p class="text-gray-600 mb-4">Avez-vous l'un de ces problèmes de santé diagnostiqués ? (plusieurs choix possibles)</p>
+          <div class="space-y-2 mb-5" id="comorbList">
+            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50"><input type="checkbox" value="Diabète de type 2" class="comorb w-5 h-5" style="accent-color:#16a34a;"/> Diabète de type 2</label>
+            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50"><input type="checkbox" value="Hypertension artérielle" class="comorb w-5 h-5" style="accent-color:#16a34a;"/> Hypertension artérielle</label>
+            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50"><input type="checkbox" value="Apnée du sommeil" class="comorb w-5 h-5" style="accent-color:#16a34a;"/> Apnée du sommeil (SAHOS)</label>
+            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50"><input type="checkbox" value="Dyslipidémie" class="comorb w-5 h-5" style="accent-color:#16a34a;"/> Cholestérol / triglycérides élevés</label>
+            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50"><input type="checkbox" value="Stéatose hépatique" class="comorb w-5 h-5" style="accent-color:#16a34a;"/> Foie gras (stéatose / NASH)</label>
+            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50"><input type="checkbox" value="Maladie cardiovasculaire" class="comorb w-5 h-5" style="accent-color:#16a34a;"/> Maladie cardiovasculaire</label>
+            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50"><input type="checkbox" value="aucune" id="comorbNone" class="w-5 h-5" style="accent-color:#16a34a;"/> Aucune de ces situations</label>
+          </div>
+          <button id="btnStep2" class="w-full text-white font-semibold py-3 rounded-lg text-lg" style="background:#16a34a;">Continuer →</button>
+        </div>
+
+        <!-- Étape 3 : suivi nutritionnel -->
+        <div class="test-step hidden" id="step3">
+          <p class="text-sm font-semibold mb-1" style="color:#16a34a;">Étape 3/3 — Parcours nutritionnel</p>
+          <p class="text-gray-600 mb-4">Avez-vous déjà suivi une prise en charge nutritionnelle encadrée (médecin, diététicien) pendant au moins 6 mois ?</p>
+          <div class="space-y-2 mb-5">
+            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50"><input type="radio" name="nutri" value="oui" class="w-5 h-5" style="accent-color:#16a34a;"/> Oui, sans perte de poids suffisante</label>
+            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50"><input type="radio" name="nutri" value="encours" class="w-5 h-5" style="accent-color:#16a34a;"/> C'est en cours</label>
+            <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50"><input type="radio" name="nutri" value="non" class="w-5 h-5" style="accent-color:#16a34a;"/> Non, pas encore</label>
+          </div>
+          <button id="btnStep3" class="w-full text-white font-semibold py-3 rounded-lg text-lg" style="background:#16a34a;">Voir mon résultat →</button>
+        </div>
+
+        <!-- Résultat -->
+        <div class="test-step hidden" id="resultStep">
+          <div id="verdictBox" class="rounded-xl p-5 mb-5"></div>
+          <div id="nextSteps" class="text-gray-700 space-y-3 mb-6"></div>
+
+          <!-- Capture email -->
+          <div class="rounded-xl p-5 mb-5" style="background:#f0fdf4; border: 1px solid #bbf7d0;">
+            <p class="font-semibold mb-1" style="color:#1a3c34;">📩 Recevez votre résultat par email</p>
+            <p class="text-sm text-gray-600 mb-3">Votre verdict + les 3 grandes étapes du parcours remboursement, pour le garder sous la main.</p>
+            <form id="captureForm" class="flex flex-col sm:flex-row gap-2">
+              <input type="email" id="captureEmail" required placeholder="votre@email.fr"
+                class="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none" />
+              <button type="submit" class="text-white font-semibold px-6 py-3 rounded-lg" style="background:#16a34a;">Recevoir</button>
+            </form>
+            <p id="captureMsg" class="text-sm mt-2 min-h-5"></p>
+          </div>
+
+          <!-- Upsell Dossier -->
+          <div id="dossierUpsell" class="hidden rounded-xl p-5 text-white" style="background:#1a3c34;">
+            <p class="font-bold text-lg mb-1">Passez à l'action : votre Dossier GLP-1 personnalisé — 4,99 €</p>
+            <p class="text-sm opacity-90 mb-3">Ce que le test gratuit ne vous donne pas : <strong>les centres CSO/CHU près de chez vous</strong>, la checklist personnalisée pour le rendez-vous (documents à apporter, questions à poser), et <strong>votre reste à charge chiffré</strong> selon votre dosage et votre mutuelle — le tout dans un document prêt à imprimer pour votre médecin.</p>
+            <a href="/dossier-glp1/?src=test-eligibilite" class="inline-block font-semibold px-6 py-3 rounded-lg" style="background:#16a34a; color:white;">Préparer mon dossier →</a>
+          </div>
+
+          <button id="btnRestart" class="w-full mt-4 text-sm text-gray-500 underline">Refaire le test</button>
+        </div>
+      </div>
+
+      <div class="mt-8 text-sm text-gray-500 leading-relaxed">
+        <p><strong>Critères officiels du remboursement à 65 %</strong> (arrêtés du 23 mai 2026, en vigueur depuis le 15 juin 2026) :
+        IMC ≥ 40, ou IMC ≥ 35 avec au moins une comorbidité liée au poids, après échec d'une prise en charge nutritionnelle
+        d'au moins 6 mois (perte &lt; 5 %). La première prescription remboursée doit être faite par un spécialiste de l'obésité
+        (CSO, CHU, endocrinologue en lien avec un CSO) ; le renouvellement peut ensuite se faire chez votre médecin traitant.
+        Ce test est informatif : seule l'évaluation d'un médecin fait foi.</p>
+        <p class="mt-2">Pour aller plus loin : <a href="/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/" style="color:#16a34a;">les conditions détaillées du remboursement</a> ·
+        <a href="/collections/glp1-cout/prix-wegovy-france/" style="color:#16a34a;">prix Wegovy</a> ·
+        <a href="/collections/glp1-cout/prix-mounjaro-france/" style="color:#16a34a;">prix Mounjaro</a> ·
+        <a href="/outils/carte-prix-pharmacies/" style="color:#16a34a;">carte des prix en pharmacie</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script is:inline>
+    (function () {
+      var supabaseUrl = 'https://ywekaivgjzsmdocchvum.supabase.co';
+      var supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY';
+      var sb = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+      var state = { imc: null, taille: null, poids: null, comorbidites: [], nutri: null, verdict: null };
+
+      function show(id) {
+        document.querySelectorAll('.test-step').forEach(function (el) { el.classList.add('hidden'); });
+        document.getElementById(id).classList.remove('hidden');
+        document.getElementById('testCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function computeImc() {
+        var t = parseFloat(document.getElementById('taille').value);
+        var p = parseFloat(document.getElementById('poids').value);
+        if (t >= 120 && t <= 230 && p >= 35 && p <= 350) {
+          var imc = p / Math.pow(t / 100, 2);
+          return { imc: imc, taille: t, poids: p };
+        }
+        return null;
+      }
+
+      ['taille', 'poids'].forEach(function (id) {
+        document.getElementById(id).addEventListener('input', function () {
+          var r = computeImc();
+          document.getElementById('imcLive').textContent = r ? 'Votre IMC : ' + r.imc.toFixed(1) : '';
+        });
+      });
+
+      document.getElementById('btnStep1').addEventListener('click', function () {
+        var r = computeImc();
+        if (!r) { document.getElementById('imcLive').textContent = 'Merci d\'indiquer une taille et un poids valides.'; return; }
+        state.imc = r.imc; state.taille = r.taille; state.poids = r.poids;
+        show('step2');
+      });
+
+      document.getElementById('comorbNone').addEventListener('change', function () {
+        if (this.checked) document.querySelectorAll('.comorb').forEach(function (c) { c.checked = false; });
+      });
+      document.querySelectorAll('.comorb').forEach(function (c) {
+        c.addEventListener('change', function () { if (this.checked) document.getElementById('comorbNone').checked = false; });
+      });
+
+      document.getElementById('btnStep2').addEventListener('click', function () {
+        state.comorbidites = Array.prototype.map.call(document.querySelectorAll('.comorb:checked'), function (c) { return c.value; });
+        show('step3');
+      });
+
+      document.getElementById('btnStep3').addEventListener('click', function () {
+        var sel = document.querySelector('input[name="nutri"]:checked');
+        if (!sel) return;
+        state.nutri = sel.value;
+        renderVerdict();
+        show('resultStep');
+      });
+
+      function renderVerdict() {
+        var imc = state.imc, hasComorb = state.comorbidites.length > 0;
+        var box = document.getElementById('verdictBox');
+        var steps = document.getElementById('nextSteps');
+        var upsell = document.getElementById('dossierUpsell');
+        var html = '', stepsHtml = '', eligible = false;
+
+        if (imc >= 40 || (imc >= 35 && hasComorb)) {
+          if (state.nutri === 'oui') {
+            eligible = true;
+            state.verdict = 'eligible';
+            html = '<p class="text-xl font-bold" style="color:#15803d;">✓ Vous semblez éligible au remboursement à 65 %</p>' +
+              '<p class="mt-1 text-gray-700">IMC ' + imc.toFixed(1) + (imc >= 40 ? ' (≥ 40)' : ' (≥ 35) avec comorbidité') + ' et parcours nutritionnel déjà tenté : vous cochez les critères officiels.</p>';
+            stepsHtml = '<p><strong>Vos prochaines étapes :</strong></p><ol class="list-decimal ml-5 space-y-1">' +
+              '<li>Prendre rendez-vous dans un <strong>CSO ou CHU</strong> (ou avec un endocrinologue en lien avec un CSO) pour la première prescription remboursée — annuaire : annuaire-sante.ameli.fr</li>' +
+              '<li>Apporter les justificatifs de votre suivi nutritionnel (comptes rendus, courbes de poids)</li>' +
+              '<li>Le renouvellement pourra ensuite se faire chez votre médecin traitant</li></ol>';
+            box.style.background = '#f0fdf4'; box.style.border = '1px solid #86efac';
+          } else {
+            state.verdict = 'eligible_apres_suivi';
+            html = '<p class="text-xl font-bold" style="color:#b45309;">⏳ Presque : il manque le parcours nutritionnel</p>' +
+              '<p class="mt-1 text-gray-700">Avec un IMC de ' + imc.toFixed(1) + (hasComorb ? ' et une comorbidité' : '') + ', vous remplissez le critère de poids. Mais le remboursement exige d\'abord <strong>6 mois de prise en charge nutritionnelle encadrée</strong> (avec une perte &lt; 5 %).</p>';
+            stepsHtml = '<p><strong>Vos prochaines étapes :</strong></p><ol class="list-decimal ml-5 space-y-1">' +
+              '<li>Parlez-en à votre médecin traitant pour démarrer (ou documenter) un suivi nutritionnel</li>' +
+              '<li>Dans 6 mois, si la perte de poids reste insuffisante, direction CSO/CHU pour la prescription remboursée</li></ol>';
+            box.style.background = '#fffbeb'; box.style.border = '1px solid #fcd34d';
+            eligible = true;
+          }
+        } else if (imc >= 35) {
+          state.verdict = 'non_eligible_comorbidite';
+          html = '<p class="text-xl font-bold" style="color:#b45309;">Pas éligible en l\'état — il manque une comorbidité confirmée</p>' +
+            '<p class="mt-1 text-gray-700">Avec un IMC de ' + imc.toFixed(1) + ', le remboursement nécessite au moins une comorbidité liée au poids (diabète, hypertension, apnée du sommeil…). Certaines passent inaperçues : parlez-en à votre médecin (un dépistage d\'apnée du sommeil, par exemple, change la donne).</p>';
+          stepsHtml = '<p>Un bilan chez votre médecin traitant peut révéler une comorbidité non diagnostiquée — c\'est l\'étape n°1.</p>';
+          box.style.background = '#fffbeb'; box.style.border = '1px solid #fcd34d';
+        } else if (imc >= 30) {
+          state.verdict = 'non_eligible_imc30';
+          html = '<p class="text-xl font-bold" style="color:#b91c1c;">Non éligible au remboursement (IMC ' + imc.toFixed(1) + ')</p>' +
+            '<p class="mt-1 text-gray-700">Le remboursement à 65 % exige un IMC ≥ 35 avec comorbidité, ou ≥ 40. Avec un IMC entre 30 et 35, un traitement reste <strong>médicalement possible sur prescription</strong> (non remboursé, à votre charge : Wegovy 146,91–195,10 €/mois).</p>';
+          stepsHtml = '<p>Parlez-en à votre médecin : lui seul peut évaluer l\'intérêt d\'un traitement dans votre situation, remboursé ou non.</p>';
+          box.style.background = '#fef2f2'; box.style.border = '1px solid #fecaca';
+        } else {
+          state.verdict = 'non_eligible';
+          html = '<p class="text-xl font-bold" style="color:#b91c1c;">Non éligible (IMC ' + imc.toFixed(1) + ')</p>' +
+            '<p class="mt-1 text-gray-700">Les traitements GLP-1 de l\'obésité ciblent un IMC ≥ 30. Votre médecin peut vous conseiller d\'autres approches adaptées à votre objectif.</p>';
+          stepsHtml = '';
+          box.style.background = '#fef2f2'; box.style.border = '1px solid #fecaca';
+        }
+
+        box.innerHTML = html;
+        steps.innerHTML = stepsHtml;
+        if (eligible) upsell.classList.remove('hidden'); else upsell.classList.add('hidden');
+      }
+
+      document.getElementById('captureForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = document.getElementById('captureEmail').value.trim();
+        var msg = document.getElementById('captureMsg');
+        if (!email) return;
+        sb.from('contacts').insert({
+          email: email,
+          contact_type: 'eligibility_test',
+          subject: 'Test éligibilité remboursement',
+          message: 'IMC ' + state.imc.toFixed(1) + ' (' + state.poids + ' kg / ' + state.taille + ' cm) — verdict: ' + state.verdict +
+            ' — comorbidités: ' + (state.comorbidites.join(', ') || 'aucune') + ' — suivi nutritionnel: ' + state.nutri,
+          newsletter: true,
+          created_at: new Date().toISOString()
+        }).then(function (r) {
+          if (r.error) { msg.textContent = 'Une erreur est survenue, réessayez.'; msg.style.color = '#b91c1c'; }
+          else { msg.textContent = '✓ C\'est noté ! Vous recevrez votre plan d\'action très vite.'; msg.style.color = '#15803d'; document.getElementById('captureEmail').value = ''; }
+        });
+      });
+
+      document.getElementById('btnRestart').addEventListener('click', function () {
+        state = { imc: null, taille: null, poids: null, comorbidites: [], nutri: null, verdict: null };
+        document.getElementById('taille').value = ''; document.getElementById('poids').value = '';
+        document.querySelectorAll('.comorb, #comorbNone').forEach(function (c) { c.checked = false; });
+        document.querySelectorAll('input[name="nutri"]').forEach(function (c) { c.checked = false; });
+        show('step1');
+      });
+    })();
+  </script>
+</StaticLayout>
