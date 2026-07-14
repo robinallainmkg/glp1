@@ -92,7 +92,7 @@ CONVERSION — DOSSIER GLP-1 PERSONNALISÉ (4,99€) :
 - COMMENT proposer (EXACTEMENT cette formulation, adaptée au tutoiement/vouvoiement) : "D'ailleurs, je peux te préparer ton **Dossier GLP-1 personnalisé** : un document complet avec ton verdict d'éligibilité, la checklist pour ton RDV médecin, les CSO/CHU près de chez toi, et l'estimation de ton reste à charge — tout prêt à imprimer pour ton médecin. C'est 4,99€."
 - Puis ajoute en fin de réponse : [[SUGGESTIONS]] Oui, je veux mon dossier | Plus tard
 - Si la personne dit OUI → collecte UNIQUEMENT ce qui MANQUE. La plupart des infos (poids, taille, comorbidités) ont déjà été données pendant le test d'éligibilité : NE LES REDEMANDE JAMAIS. En général il ne manque que : (1) prénom, (2) ville (pour le CSO le plus proche). Pose ces 2 questions EN UNE SEULE FOIS : "Super ! Il me faut juste ton prénom et ta ville, et ton dossier est prêt." Le traitement envisagé est OPTIONNEL (déduis-le de la conversation, sinon "non précisé"). Quand tu as prénom + ville, dis "Ton dossier est prêt !" et le système affichera le bouton de paiement. OBJECTIF : passer du OUI au dossier prêt en 1-2 échanges MAXIMUM.
-- Quand tu as TOUTES les infos, termine ta réponse par ce tag (le front-end le détecte) : [[DOSSIER_READY]] suivi du JSON des données : {"prenom":"X","poids_kg":Y,"taille_cm":Z,"comorbidites":["..."],"ville":"...","suivi_nutritionnel":true/false,"traitement_souhaite":"..."}
+- Quand tu as TOUTES les infos réelles, termine ta réponse par ce tag (le front-end le détecte) : [[DOSSIER_READY]] suivi du JSON avec les VRAIES valeurs de la conversation. Exemple de format : [[DOSSIER_READY]] {"prenom":"Marie","poids_kg":85,"taille_cm":168,"comorbidites":["diabète T2"],"ville":"Lyon","suivi_nutritionnel":true,"traitement_souhaite":"Wegovy"}. RÈGLES ABSOLUES POUR CE TAG : (1) N'émets [[DOSSIER_READY]] QUE si le prénom a été LITTÉRALEMENT ÉCRIT par l'utilisateur dans la conversation — s'il n'a pas encore donné son prénom, demande-le d'abord sans déclencher le tag. (2) poids_kg et taille_cm doivent être des NOMBRES issus de la conversation (ex: 85, 168) — jamais une variable, une lettre seule ou un point d'interrogation. (3) ville doit être le nom de la ville réelle dite par l'utilisateur. (4) Si l'une de ces valeurs est inconnue → NE PAS déclencher le tag, demander l'info manquante d'abord.
 - NE propose le dossier qu'UNE SEULE FOIS par conversation. Si la personne dit "plus tard" ou ignore, n'insiste pas.
 - Formule-le comme un SERVICE utile pour préparer son RDV, jamais comme une pub.
 
@@ -829,6 +829,18 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
       if (dossierMatch) {
         try { dossierData = JSON.parse(dossierMatch[1]); } catch { /* ignore parse error */ }
         cleanResponse = cleanResponse.replace(/\n*\s*\[\[DOSSIER_READY\]\][\s\S]*$/, '').trim();
+        // Reject if placeholder values remain (prenom="X", poids_kg not a number, etc.)
+        if (dossierData) {
+          const isValid =
+            typeof dossierData.prenom === 'string' && dossierData.prenom.length > 0 && dossierData.prenom !== 'X' &&
+            typeof dossierData.poids_kg === 'number' && !isNaN(dossierData.poids_kg) &&
+            typeof dossierData.taille_cm === 'number' && !isNaN(dossierData.taille_cm) &&
+            typeof dossierData.ville === 'string' && dossierData.ville.length > 0 && dossierData.ville !== '...';
+          if (!isValid) {
+            console.warn("[[DOSSIER_READY]] rejeté : données incomplètes ou placeholders", JSON.stringify(dossierData));
+            dossierData = null;
+          }
+        }
       }
 
       // Moment chaud → on propose la capture email (le funnel convertit à 0 sans capture).
@@ -893,44 +905,40 @@ async function saveMessages(
   tokensUsed?: number | null,
   userId?: string | null,
 ) {
-  // Batch insert both messages + update conversation in parallel
-  await Promise.all([
-    supabase.from("coach_messages").insert([
-      {
-        conversation_id: conversationId,
-        session_id: sessionId,
-        role: "user",
-        content: userMessage,
-        intent,
-        model: null,
-        rag_sources: null,
-        tokens_used: null,
-        user_id: userId || null,
-      },
-      {
-        conversation_id: conversationId,
-        session_id: sessionId,
-        role: "assistant",
-        content: assistantMessage,
-        intent,
-        model,
-        rag_sources: ragSources,
-        tokens_used: tokensUsed || null,
-        user_id: userId || null,
-      },
-    ]),
-    supabase
+  // Insert user then assistant sequentially so created_at timestamps are distinct,
+  // ensuring correct ordering when history is loaded (ORDER BY created_at ASC).
+  await supabase.from("coach_messages").insert({
+    conversation_id: conversationId,
+    session_id: sessionId,
+    role: "user",
+    content: userMessage,
+    intent,
+    model: null,
+    rag_sources: null,
+    tokens_used: null,
+    user_id: userId || null,
+  });
+  await supabase.from("coach_messages").insert({
+    conversation_id: conversationId,
+    session_id: sessionId,
+    role: "assistant",
+    content: assistantMessage,
+    intent,
+    model,
+    rag_sources: ragSources,
+    tokens_used: tokensUsed || null,
+    user_id: userId || null,
+  });
+  // Update conversation message count
+  const { data: conv } = await supabase
+    .from("coach_conversations")
+    .select("message_count")
+    .eq("id", conversationId)
+    .single();
+  if (conv) {
+    await supabase
       .from("coach_conversations")
-      .select("message_count")
-      .eq("id", conversationId)
-      .single()
-      .then(({ data: conv }: any) => {
-        if (conv) {
-          return supabase
-            .from("coach_conversations")
-            .update({ message_count: (conv.message_count || 0) + 2 })
-            .eq("id", conversationId);
-        }
-      }),
-  ]);
+      .update({ message_count: (conv.message_count || 0) + 2 })
+      .eq("id", conversationId);
+  }
 }
