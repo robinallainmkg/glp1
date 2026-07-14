@@ -67,7 +67,7 @@ La région pèse lourd : la Côte d'Azur et l'Île-de-France affichent des prix 
 
 ### Séjour sportif / perte de poids : dès 790 € la semaine tout compris
 
-Les stages de remise en forme encadrés par des coachs diplômés affichent des tarifs étonnamment contenus grâce à l'hébergement partagé. Exemple vérifié : **790 € la semaine tout compris** (hébergement, pension complète, 2 séances de coaching par jour, bilan initial) chez Coaching Village, avec tarif dégressif à **613 €/semaine** pour un séjour de 3 semaines ([coaching-village.com](https://www.coaching-village.com/pages/sejours-et-tarifs/stage-perte-de-poids.html)) — soit environ **113 € par jour**. D'autres opérateurs (Vercors Fitness Camp, RVR Training) proposent des formats comparables d'une à deux semaines.
+Les stages de remise en forme encadrés par des coachs diplômés affichent des tarifs étonnamment contenus grâce à l'hébergement partagé. Exemple vérifié : **790 € la semaine tout compris** (hébergement, pension complète, 2 séances de coaching par jour, bilan initial) chez Coaching Village, avec tarif dégressif à **750 €/semaine** pour un séjour de 3 semaines, soit 2 250 € ([coaching-village.com](https://www.coaching-village.com/stage-perte-de-poids)) — soit environ **113 € par jour**. À noter : ce stage se déroule à Essaouira, au Maroc. D'autres opérateurs (Vercors Fitness Camp, RVR Training) proposent des formats comparables d'une à deux semaines.
 
 Pour un panorama complet des séjours orientés perte de poids, consultez notre [comparatif des meilleures retraites minceur en France](/collections/retraites-bien-etre/meilleures-retraites-perte-de-poids-france-prix/).
 
@@ -114,7 +114,7 @@ Pour la cure thermale, l'aide à l'hébergement (65 % d'un forfait de 150,01 €
 1. **Partez hors saison** : printemps et automne, les hébergements curistes et les thalassos baissent de 10 à 15 %, et les retraites yoga hors juillet-août sont nettement plus négociables ;
 2. **Dissociez cure et hébergement** : en cure thermale comme en jeûne et rando, réserver le stage d'un côté et un studio ou une chambre partagée de l'autre revient souvent moins cher que la formule packagée en résidence ;
 3. **Choisissez la chambre partagée** : c'est 30 à 50 % d'économie sur les séjours jeûne, yoga et sport — et un moteur de motivation collective en bonus ;
-4. **Jouez les tarifs dégressifs** : 790 €/semaine mais 613 €/semaine sur 3 semaines chez Coaching Village ; même logique de 4e semaine remisée chez les loueurs de Brides-les-Bains ;
+4. **Jouez les tarifs dégressifs** : 790 €/semaine mais 750 €/semaine sur 3 semaines chez Coaching Village ; même logique de 4e semaine remisée chez les loueurs de Brides-les-Bains ;
 5. **Activez toutes les aides** : prescription médicale pour la cure thermale (remboursement 65/70 %), aides CPAM transport/hébergement sous conditions de ressources, forfaits « cure » de votre mutuelle, et aides des caisses de retraite pour les retraités.
 
 Pour choisir la formule adaptée à votre objectif (perte de poids, détox, remise en forme, accompagnement d'un traitement GLP-1), explorez notre [hub des retraites et séjours bien-être](/retraites/) et notre [comparatif des retraites perte de poids en France](/collections/retraites-bien-etre/meilleures-retraites-perte-de-poids-france-prix/).
