@@ -60,11 +60,41 @@ SELECT 'ga_metrics' as tbl, MAX(date) FROM ga_metrics UNION ALL SELECT 'gsc_metr
 - **Role** : aide gratuitement, puis propose le Dossier au bon moment (apres collecte IMC + comorbidites)
 - **Style** : sobre, SANS emojis pictographiques (coches `✓` et fleches `→` OK)
 
+### Test d'eligibilite (funnel d'entree du Dossier) — depuis 14/07/2026
+- **Page** : `src/pages/outils/test-eligibilite.astro` → `/outils/test-eligibilite/`
+- 3 etapes client-side : IMC → comorbidites → suivi nutritionnel → verdict selon les criteres officiels (IMC >= 40, ou >= 35 + comorbidite, apres 6 mois de prise en charge nutritionnelle)
+- **Capture email** → table `contacts` avec `contact_type: 'eligibility_test'` (verdict + IMC dans `message`)
+- **Upsell Dossier 4,99 EUR** affiche si eligible ou presque eligible
+- Cible SEO : "suis-je eligible wegovy remboursement", "test eligibilite mounjaro"
+- Lie depuis le footer ("Test d'eligibilite 65%")
+
 ### Sinocare / Annette — DESACTIVES
 - **Plus aucune affiliation.** Composants Annette (PartnerCTA, PartnerSidebar, PartnerComparator) neutralises (rendu vide).
 - Callouts Sinocare retires. Ancien code promo CARE50, anciens liens affilies — ne plus utiliser.
 - **NE PAS reactiver** sans decision explicite de l'utilisateur.
 - `affiliate_clicks` + `AffiliateTracker.astro` restent en place (historique) mais ne sont plus une source de revenus.
+
+## Verticale Retraites Bien-Etre (lancee 13/07/2026)
+
+- **Collection** : `retraites-bien-etre` (13e collection, dans src/content/config.ts + routes /collections/retraites-bien-etre/)
+- **Hub** : `src/pages/retraites/index.astro` → `/retraites/` (page pilier SEO, lie depuis le footer) — **futur landing de l'offre premium** (retraites medicalisees GLP-1, projet de Robin : peptides/Morpheus8, cadre reglementaire FR a valider)
+- **Articles publies** : protocole Wegovy+cure thermale rembourses, retraites GLP-1 europeennes (Lanserhof etc.), jeune sous GLP-1, top 10 retraites perte de poids France
+- **Regles** : prix TOUJOURS sources et verifiables, zero invention ; pas d'affiliation ; thumbnails SVG uniques (DA verte #1a3c34/#16a34a) dans public/images/thumbnails/
+- **Strategie** : first-mover sur "GLP-1 x retraite" (desert editorial FR) ; clusters cibles : cure thermale minceur (remboursee Secu), jeune et randonnee, sejour minceur, longevity/medical wellness
+- Idees d'articles restantes (recherche 13/07) : Brides-les-Bains avis, combien coute une retraite, cure detox arnaque ?, peau relachee post-GLP-1 (pont Morpheus8), camp perte de poids adulte, comparatif thalasso, j'ai teste jeune et rando, retraites longevite
+
+## Routine quotidienne — MANDAT ELARGI (demande Robin 14/07/2026)
+
+La routine quotidienne ne se limite PAS au rapport SEO recovery + Coach IA. A chaque run, elle doit AUSSI :
+1. **Checker les resultats de chaque projet actif** :
+   - SEO recovery (baseline fixe : 922 sessions GA/jour, 106 clics GSC/jour — moyenne 15-23 juin)
+   - Coach IA : volume, qualite, emissions `[[DOSSIER_READY]]` (1re emission le 13/07 apres fix v46)
+   - Funnel Dossier 4,99 EUR : visites landing, dossiers pending/paid/generated
+   - Test d'eligibilite : leads `contact_type='eligibility_test'` dans contacts, taux de capture
+   - Verticale retraites : impressions/clics GSC des pages /retraites/ et /collections/retraites-bien-etre/ (indexation d'abord, positions ensuite)
+2. **Ameliorer** : si un chiffre stagne ou regresse, diagnostiquer et proposer/appliquer un fix (tickets, ajustement prompt Coach, maillage, title/meta). Les corrections de contenu passent par correction_tickets (statut approved).
+3. **Chercher des opportunites** : nouvelles requetes GSC en positions 5-20 avec impressions (quick wins), tendances (WebSearch si pertinent), gaps de contenu — alimenter content_opportunities et proposer les 2-3 meilleures actions du jour dans le rapport.
+4. **Alerter Robin** (PushNotification) seulement si : anomalie critique (site down, deindexation, erreur medicale du Coach, violation Zepbound), 1re conversion payante du Dossier, ou action bloquante cote Robin (ex : sync IMAP morte depuis le 20/05 — a relancer en local).
 
 ## Structure du projet
 
