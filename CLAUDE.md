@@ -94,6 +94,7 @@ La routine quotidienne ne se limite PAS au rapport SEO recovery + Coach IA. A ch
    - Verticale retraites : impressions/clics GSC des pages /retraites/ et /collections/retraites-bien-etre/ (indexation d'abord, positions ensuite)
 2. **Ameliorer** : si un chiffre stagne ou regresse, diagnostiquer et proposer/appliquer un fix (tickets, ajustement prompt Coach, maillage, title/meta). Les corrections de contenu passent par correction_tickets (statut approved).
 3. **Chercher des opportunites** : nouvelles requetes GSC en positions 5-20 avec impressions (quick wins), tendances (WebSearch si pertinent), gaps de contenu — alimenter content_opportunities et proposer les 2-3 meilleures actions du jour dans le rapport.
+3bis. **Indexation des pages manquantes** : detecter les pages publiees mais non indexees (page dans le sitemap / recemment publiee MAIS 0 impression dans gsc_metrics depuis 3+ jours). La soumission GSC est MANUELLE (aucune API Google pour "demander une indexation" de pages classiques) : la routine produit la liste d'URLs prete a coller dans l'inspection GSC, en tete de rapport, et notifie Robin si la liste est non vide (max ~10 URLs/jour, prioriser par potentiel de trafic). Verifier aussi que le sitemap est a jour apres chaque publication.
 4. **Alerter Robin** (PushNotification) seulement si : anomalie critique (site down, deindexation, erreur medicale du Coach, violation Zepbound), 1re conversion payante du Dossier, ou action bloquante cote Robin (ex : sync IMAP morte depuis le 20/05 — a relancer en local).
 
 ## Structure du projet
@@ -261,6 +262,11 @@ Les tickets sont **auto-approuves** (pas de validation humaine) :
 - `scripts/agent-server.mjs` — Serveur HTTP pour orchestrer les agents (port 7854)
 - `scripts/routine.mjs` — Script bloquant de routine (preferer le pipeline du serveur)
 - `scripts/sync-analytics.mjs` — Sync GA4 + GSC → Supabase (`--days 7`, `--setup` pour OAuth)
+
+## Preference de Robin (14/07/2026)
+
+- **Franc-parler attendu** : signaler sans hesiter ce qui semble bizarre, contreproductif ou risque, et proposer des idees — meme non sollicitees. Ne pas se contenter d'executer.
+- Points ouverts signales le 14/07 : (1) byline "Dr. Marie Dubois" probablement fictive = risque E-E-A-T/legal, recommandation : vrai relecteur credite ; (2) trop de micro-produits (Dossier 4,99 + consultation 3 EUR + Premium) → focus Dossier seul ; (3) pas de build check sur les PR avant deploy prod ; (4) a la reactivation de la creation auto : chaque chiffre source ou supprime.
 
 ## Conventions
 
