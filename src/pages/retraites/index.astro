@@ -8,12 +8,26 @@ const formatted = articles.map((a: any) => ({
   href: `/collections/retraites-bien-etre/${a.slug}/`,
   desc: a.data.description || '',
 })).sort((a: any, b: any) => a.title.localeCompare(b.title));
+
+const faq = [
+  { q: "Quelle est la seule retraite perte de poids remboursée par la Sécurité sociale ?", a: "La cure thermale conventionnée (orientation affections digestives et maladies métaboliques) : sur prescription médicale, l'Assurance Maladie prend en charge 65 % du forfait thermal et 70 % de la surveillance médicale. Le reste à charge typique est de 1 100 à 1 500 € pour 3 semaines, hébergement compris. Brides-les-Bains est la station de référence." },
+  { q: "Combien coûte une retraite perte de poids en France ?", a: "De 299 € (mini-cure thermale 6 jours, hors hébergement) à plus de 5 000 € la semaine (programmes premium). Les fourchettes courantes : jeûne et randonnée 455-1 500 €/semaine, séjour sportif encadré 460-1 530 €, thalasso minceur 950-2 400 €, cure thermale conventionnée ~1 100-1 500 € de reste à charge pour 3 semaines." },
+  { q: "Peut-on faire une retraite minceur sous Wegovy, Mounjaro ou Ozempic ?", a: "Oui, avec des précautions : le jeûne prolongé est déconseillé sans avis médical (risque d'hypoglycémie si antidiabétiques associés, de fonte musculaire et de calculs biliaires), et l'enjeu principal devient la préservation de la masse musculaire (protéines suffisantes + renforcement). Les cures thermales avec encadrement médical sont les plus adaptées." },
+  { q: "Quelle retraite choisir pour perdre du poids durablement ?", a: "Aucun séjour ne fait maigrir durablement à lui seul : les études montrent une perte modeste (environ 4 kg à 14 mois pour la cure thermale, étude Maâthermes). Le bon usage d'une retraite est de lancer une dynamique — le résultat durable dépend du suivi médical et nutritionnel derrière, éventuellement avec un traitement GLP-1 si vous y êtes éligible." },
+];
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+});
 ---
 
 <BaseLayout
   title="Retraites Perte de Poids en France : le Guide Complet 2026"
   description="Cures thermales remboursées, jeûne et randonnée, séjours minceur, retraites médicalisées GLP-1 : comparatif des vraies options en France, avec les prix réels."
 >
+  <script type="application/ld+json" set:html={faqJsonLd} />
   <div style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
     <header style="text-align: center; margin-bottom: 2.5rem;">
       <h1 style="color: #1a3c34; font-size: 2.2rem; margin-bottom: 1rem;">Retraites perte de poids en France : le guide complet</h1>
@@ -43,6 +57,41 @@ const formatted = articles.map((a: any) => ({
         <p><strong>2. Le jeûne et randonnée</strong> — une centaine d'organisateurs en France, environ 455 à 1 500 € la semaine. Attention si vous êtes sous traitement GLP-1 ou antidiabétique : un avis médical est indispensable avant de jeûner.</p>
         <p><strong>3. Le séjour minceur / thalasso</strong> — non remboursé, de 500 € à 5 000 € la semaine selon le standing (Quiberon, Saint-Malo, villages sportifs).</p>
         <p><strong>4. La retraite médicalisée « longevity »</strong> — la grande tendance 2026 : des programmes qui intègrent l'accompagnement des traitements GLP-1 (bilan médical, nutrition, préservation musculaire). Les pionniers européens (Lanserhof, SHA Wellness) facturent 4 500 à 15 000 € la semaine. Aucune offre grand public n'existe encore en France.</p>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="color: #1a3c34; border-bottom: 3px solid #16a34a; padding-bottom: 0.5rem;">Comparatif rapide des formules</h2>
+      <div style="overflow-x: auto; margin-top: 1rem;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+          <thead>
+            <tr style="background: #1a3c34; color: white;">
+              <th style="padding: 0.75rem; text-align: left;">Formule</th>
+              <th style="padding: 0.75rem; text-align: left;">Budget indicatif</th>
+              <th style="padding: 0.75rem; text-align: left;">Remboursement</th>
+              <th style="padding: 0.75rem; text-align: left;">Compatible GLP-1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 0.75rem;"><strong>Cure thermale conventionnée</strong></td><td style="padding: 0.75rem;">1 100-1 500 € / 3 sem (reste à charge)</td><td style="padding: 0.75rem;">✓ 65 % Sécu</td><td style="padding: 0.75rem;">✓ encadrement médical</td></tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 0.75rem;"><strong>Jeûne et randonnée</strong></td><td style="padding: 0.75rem;">455-1 500 € / semaine</td><td style="padding: 0.75rem;">✗</td><td style="padding: 0.75rem;">⚠ avis médical obligatoire</td></tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 0.75rem;"><strong>Séjour sportif / camp</strong></td><td style="padding: 0.75rem;">460-1 530 € / semaine</td><td style="padding: 0.75rem;">✗</td><td style="padding: 0.75rem;">✓ avec vigilance protéines</td></tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 0.75rem;"><strong>Thalasso minceur</strong></td><td style="padding: 0.75rem;">950-2 400 € / semaine</td><td style="padding: 0.75rem;">✗ (depuis 1998)</td><td style="padding: 0.75rem;">✓</td></tr>
+            <tr><td style="padding: 0.75rem;"><strong>Retraite longévité / premium</strong></td><td style="padding: 0.75rem;">4 000-15 000 € / semaine</td><td style="padding: 0.75rem;">✗</td><td style="padding: 0.75rem;">✓ certains programmes dédiés</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="color: #1a3c34; border-bottom: 3px solid #16a34a; padding-bottom: 0.5rem;">Questions fréquentes</h2>
+      <div style="margin-top: 1rem;">
+        {faq.map((f) => (
+          <details style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem; margin-bottom: 0.75rem;">
+            <summary style="font-weight: 600; color: #1a3c34; cursor: pointer;">{f.q}</summary>
+            <p style="margin: 0.75rem 0 0; color: #444; line-height: 1.6;">{f.a}</p>
+          </details>
+        ))}
       </div>
     </section>
 
