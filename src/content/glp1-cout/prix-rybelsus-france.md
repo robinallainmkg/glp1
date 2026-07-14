@@ -37,13 +37,8 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
   },
   "specialty": "Endocrinology",
   "about": {
-    "@type": "Drug",
-    "name": "Rybelsus",
-    "activeIngredient": "Semaglutide oral",
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "Novo Nordisk"
-    }
+    "@type": "Thing",
+    "name": "Rybelsus (Semaglutide oral)"
   },
   "mainEntity": {
     "@type": "FAQPage",

@@ -37,13 +37,8 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
   },
   "specialty": "Endocrinology",
   "about": {
-    "@type": "Drug",
-    "name": "Victoza",
-    "activeIngredient": "Liraglutide",
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "Novo Nordisk"
-    }
+    "@type": "Thing",
+    "name": "Victoza (Liraglutide)"
   },
   "mainEntity": {
     "@type": "FAQPage",

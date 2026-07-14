@@ -36,13 +36,8 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
   },
   "specialty": "Endocrinology",
   "about": {
-    "@type": "Drug",
-    "name": "Trulicity",
-    "activeIngredient": "Dulaglutide",
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "Eli Lilly"
-    }
+    "@type": "Thing",
+    "name": "Trulicity (Dulaglutide)"
   },
   "mainEntity": {
     "@type": "FAQPage",

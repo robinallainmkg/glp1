@@ -49,13 +49,8 @@ faqSchema:
   },
   "specialty": "Endocrinology",
   "about": {
-    "@type": "Drug",
-    "name": "Ozempic",
-    "activeIngredient": "Semaglutide",
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "Novo Nordisk"
-    }
+    "@type": "Thing",
+    "name": "Ozempic (Semaglutide)"
   },
   "mainEntity": {
     "@type": "FAQPage",
