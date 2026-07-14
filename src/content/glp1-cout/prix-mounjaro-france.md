@@ -50,13 +50,8 @@ faqSchema:
   },
   "specialty": "Endocrinology",
   "about": {
-    "@type": "Drug",
-    "name": "Mounjaro",
-    "activeIngredient": "Tirzepatide",
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "Eli Lilly"
-    }
+    "@type": "Thing",
+    "name": "Mounjaro (Tirzepatide)"
   },
   "mainEntity": {
     "@type": "FAQPage",

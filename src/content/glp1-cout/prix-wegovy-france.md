@@ -50,13 +50,8 @@ faqSchema:
   },
   "specialty": "Endocrinology",
   "about": {
-    "@type": "Drug",
-    "name": "Wegovy",
-    "activeIngredient": "Semaglutide",
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "Novo Nordisk"
-    }
+    "@type": "Thing",
+    "name": "Wegovy (Semaglutide)"
   },
   "mainEntity": {
     "@type": "FAQPage",

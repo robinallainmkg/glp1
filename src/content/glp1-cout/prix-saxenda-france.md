@@ -36,13 +36,8 @@ mainKeyword: "prix Saxenda France"
   },
   "specialty": "Endocrinology",
   "about": {
-    "@type": "Drug",
-    "name": "Saxenda",
-    "activeIngredient": "Liraglutide",
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "Novo Nordisk"
-    }
+    "@type": "Thing",
+    "name": "Saxenda (Liraglutide)"
   },
   "mainEntity": {
     "@type": "FAQPage",
