@@ -191,11 +191,12 @@ const DEPT_PATTERNS: Array<{ pattern: RegExp; code: string }> = [
 function detectDoctorIntent(message: string, history: Array<{ role: string; content: string }>): boolean {
   // Check current message
   if (DOCTOR_PATTERNS.some(p => p.test(message))) return true;
-  // Check if last assistant message asked for department (follow-up)
+  // Check if last assistant message asked for location (department OR city name)
   const lastAssistant = history.filter(m => m.role === 'assistant').pop();
-  if (lastAssistant && /d[eé]partement|code postal|r[eé]gion|localisation/.test(lastAssistant.content)) {
-    // User might be replying with just a number
+  if (lastAssistant && /d[eé]partement|code postal|r[eé]gion|localisation|quelle ville|dans quelle/i.test(lastAssistant.content)) {
+    // Accept numeric dept code OR a city/place name (letters, spaces, hyphens, apostrophes)
     if (/^\d{2,5}$/.test(message.trim())) return true;
+    if (/^[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ\s\-']{1,40}$/.test(message.trim())) return true;
   }
   return false;
 }
@@ -612,6 +613,17 @@ serve(async (req) => {
       //     est indisponible, on répond quand même via Groq, sans contexte RAG. ---
       let rankedChunks: any[] = [];
       try {
+        // Enrichir la requête RAG si le message est une confirmation courte ("Oui", "Ok"…)
+        // pour éviter d'embedder hors contexte et d'injecter un article sans rapport.
+        const isShortConfirmation = cleanMessage.length <= 12
+          || /^(oui|non|ok|ouais|si|d'accord|dacord|yes|no|peut-être|peut etre|bah|bien|super|parfait|voilà|voila)$/i.test(cleanMessage.trim());
+        const ragQueryText = isShortConfirmation
+          ? (() => {
+              const lastAssistantMsg = historyMessages.filter((m: any) => m.role === 'assistant').pop();
+              return lastAssistantMsg ? `${lastAssistantMsg.content.slice(0, 200)} ${cleanMessage}` : cleanMessage;
+            })()
+          : cleanMessage;
+
         const embedResponse = await fetch("https://api.mistral.ai/v1/embeddings", {
           method: "POST",
           headers: {
@@ -620,7 +632,7 @@ serve(async (req) => {
           },
           body: JSON.stringify({
             model: "mistral-embed",
-            input: [cleanMessage],
+            input: [ragQueryText],
           }),
         });
 
@@ -693,7 +705,17 @@ serve(async (req) => {
         const eligibilityAlreadyProposed = historyMessages.some(
           (m: any) => m.role === 'assistant' && /éligibilit|suis-je éligible|vérifions.*éligib|éligib.*vérifions/i.test(m.content)
         );
-        doctorContext = `\n\n🩺 INSTRUCTION : L'utilisateur cherche un médecin ou spécialiste. Oriente-le calmement, sans aucun service commercial :
+
+        // Détecter si le message est une réponse ville (suite à "dans quelle ville es-tu ?")
+        const lastAssistantForCity = historyMessages.filter((m: any) => m.role === 'assistant').pop();
+        const isCityReply = lastAssistantForCity
+          && /quelle ville|dans quelle/i.test(lastAssistantForCity.content)
+          && /^[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ\s\-']{1,40}$/.test(cleanMessage.trim());
+        const cityHint = isCityReply
+          ? `\n- L'utilisateur répond à ta question sur sa ville : sa ville est "${cleanMessage.trim()}". Aide-le directement pour cette ville. Ne dis JAMAIS "je ne comprends pas" — c'est le nom de sa ville.`
+          : '';
+
+        doctorContext = `\n\n🩺 INSTRUCTION : L'utilisateur cherche un médecin ou spécialiste. Oriente-le calmement, sans aucun service commercial :${cityHint}
 - Médecin traitant, endocrinologue ou médecin de l'obésité. Pour la primo-prescription ouvrant droit au remboursement obésité : centre spécialisé de l'obésité (CSO) ou CHU.
 - Annuaire officiel : annuaire-sante.ameli.fr.
 - ⚠️ NE DIS JAMAIS qu'il n'y a pas de CSO ou de spécialiste dans une ville française. Toutes les grandes villes ont un CHU avec un service de nutrition/obésité (ex : CHU Purpan à Toulouse, CHU de Nantes, AP-HP à Paris, CHU de Lyon, CHU Bordeaux, CHU Marseille, CHU Lille, CHU Strasbourg, CHU Rennes, CHU Montpellier, CHU Grenoble, CHU Nice). Si tu n'as pas les coordonnées exactes d'un CSO, dis : "Tu peux trouver le CSO le plus proche sur [annuaire-sante.ameli.fr](https://annuaire-sante.ameli.fr/) → filtre 'Centres spécialisés de l'obésité'." Ne propose jamais un hôpital dans une autre ville que celle demandée.

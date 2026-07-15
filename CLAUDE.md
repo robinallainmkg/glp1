@@ -102,6 +102,43 @@ La routine quotidienne ne se limite PAS au rapport SEO recovery + Coach IA. A ch
 3bis. **Indexation des pages manquantes** : detecter les pages publiees mais non indexees (page dans le sitemap / recemment publiee MAIS 0 impression dans gsc_metrics depuis 3+ jours). La soumission GSC est MANUELLE (aucune API Google pour "demander une indexation" de pages classiques) : la routine produit la liste d'URLs prete a coller dans l'inspection GSC, en tete de rapport, et notifie Robin si la liste est non vide (max ~10 URLs/jour, prioriser par potentiel de trafic). Verifier aussi que le sitemap est a jour apres chaque publication.
 4. **Alerter Robin** (PushNotification) seulement si : anomalie critique (site down, deindexation, erreur medicale du Coach, violation Zepbound), 1re conversion payante du Dossier, ou action bloquante cote Robin (ex : sync IMAP morte depuis le 20/05 — a relancer en local).
 
+### Phase C — Actions a executer a chaque run (OBLIGATOIRE, apres le rapport)
+
+Apres avoir ecrit le rapport, la routine **execute directement** les ameliorations identifiees. Ne pas se contenter de lister — faire. Voici les types d'actions par categorie :
+
+**C1. Quick wins SEO (frontmatter MD)** — a executer si un CTR < 1.5% sur 500+ impressions/semaine :
+- Lire le fichier `src/content/<collection>/<slug>.md`
+- Modifier `seoTitle` (max 65 cars) et `seoDescription` (max 155 cars) pour le rendre plus cliquable
+- Criteres d'un bon title : inclure le mot-cle principal en debut, chiffre ou date si pertinent, hook benefice (ex: "comparez", "carte", "remboursement")
+- Criteres d'une bonne description : 1 phrase benefit + 1 detail differenciateur + CTA implicite. JAMAIS de placeholders ni de verbes vagues.
+- Mettre `updatedAt` a la date du jour
+
+**C2. Bugs Coach IA (edge function)** — a executer si un bug est detecte dans les conversations :
+- Lire `supabase/functions/ai-coach/index.ts`
+- Corriger le comportement defaillant (prompt systeme, detection d'intent, logique RAG, garde-fous)
+- Deployer via `mcp__Supabase__deploy_edge_function` (project_id: ywekaivgjzsmdocchvum, verify_jwt: false)
+- NE PAS modifier les constantes de rate-limit ou le schema DB sans decision explicite
+
+**C3. Correction tickets Supabase** — pour les ameliorations qui necessitent un contenu long (article complet, maillage interne) :
+```sql
+INSERT INTO correction_tickets (article_id, type, urgency, description, before_content, after_content, status)
+VALUES (..., 'approved');
+```
+Le statut `approved` permet a l'agent editorial de les consommer au prochain pipeline.
+
+**C4. Content opportunities** — si une requete GSC en pos 5-20 avec 200+ impressions n'a pas encore de page dediee :
+```sql
+INSERT INTO content_opportunities (title, keyword, search_volume_estimate, priority_score, notes, status)
+VALUES (...);
+```
+
+**Regles d'execution** :
+- Max 3 actions par run (ne pas sur-corriger)
+- Privilegier dans l'ordre : bugs Coach > CTR pages cle > content opportunities
+- Toujours committer a la fin du run : `git add -A && git commit -m "fix/feat: [description]"`
+- Pusher sur main pour deployer l'edge function et les fichiers statiques
+- Ajouter un volet "C. ACTIONS EXECUTEES" dans le rapport daily avec la liste de ce qui a ete fait, pourquoi, et le diff en 1 ligne
+
 ## Structure du projet
 
 ```
