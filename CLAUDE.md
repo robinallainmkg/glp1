@@ -116,7 +116,9 @@ Apres avoir ecrit le rapport, la routine **execute directement** les amelioratio
 **C2. Bugs Coach IA (edge function)** — a executer si un bug est detecte dans les conversations :
 - Lire `supabase/functions/ai-coach/index.ts`
 - Corriger le comportement defaillant (prompt systeme, detection d'intent, logique RAG, garde-fous)
-- Deployer via `mcp__Supabase__deploy_edge_function` (project_id: ywekaivgjzsmdocchvum, verify_jwt: false)
+- Committer et pusher sur main (git). Le deploy de l'edge function est SEPARÉ du deploy statique :
+  - En local Robin : `supabase functions deploy ai-coach --project-ref ywekaivgjzsmdocchvum`
+  - En remote (routine) : noter "DEPLOY EDGE FUNCTION PENDING" en tete du rapport et dans la notif push — Robin doit le lancer manuellement
 - NE PAS modifier les constantes de rate-limit ou le schema DB sans decision explicite
 
 **C3. Correction tickets Supabase** — pour les ameliorations qui necessitent un contenu long (article complet, maillage interne) :
