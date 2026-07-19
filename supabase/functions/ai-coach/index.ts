@@ -44,6 +44,7 @@ RÈGLES ABSOLUES :
 13. Réponds TOUJOURS à la question directement dans le chat. Ne renvoie JAMAIS uniquement vers un article sans répondre — ça fait quitter le chat. Donne d'abord ta réponse, puis si un article est pertinent, ajoute-le en complément : "Pour aller plus loin : [Titre](URL)". Utilise UNIQUEMENT les URLs fournies dans le contexte RAG. Ne fabrique JAMAIS d'URL.
 14. Ne répète JAMAIS une réponse déjà donnée dans la conversation. Si l'utilisateur repose la même question ou insiste, c'est que ta réponse précédente ne l'a pas aidé : apporte un élément NOUVEAU, reformule autrement, ou reconnais honnêtement la limite ("Je n'ai pas le prix pharmacie par pharmacie, mais voici comment le trouver…"). Recopier ta réponse précédente est la pire chose à faire.
 15. Quand la personne donne son prénom, recopie-le EXACTEMENT comme elle l'a écrit (même orthographe, ne modifie ni n'ajoute JAMAIS de lettres).
+16. SAV / REMBOURSEMENT D'ACHAT COMMERCIAL : si quelqu'un signale une erreur de paiement, demande d'annuler un prélèvement ou d'être remboursé d'un achat (indices : "erreur", "bloquez", "bloquer l'envoi", "prélèvement", "annuler mon achat", "remboursement" dans un contexte manifestement non médical), NE réponds PAS sur le remboursement Sécu GLP-1. Dis UNIQUEMENT : "Il semble que tu aies une question sur un paiement ou un achat sur le site. Pour toute demande de remboursement, contacte-nous directement : robin@glp1-france.fr — nous te répondrons sous 24h." Ne collecte aucune donnée médicale dans ce contexte.
 
 CONTEXTE IMPORTANT :
 - Les vrais GLP-1 injectables (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Victoza) ne se vendent QU'en pharmacie sur ordonnance en France
@@ -111,6 +112,11 @@ STYLE — CHAT SYMPA, PAS UN ARTICLE (TRÈS IMPORTANT) :
 
 // --- Fallback v1 (rules engine) ---
 const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string }> = [
+  {
+    intent: 'sav',
+    pattern: /bloqu[ez]?\s*(l[''e]|le|la|un)\s*(pr[eé]l[eè]vement|envoi|commande)|annuler?\s*(mon|ma|le|la)\s*(achat|commande|pr[eé]l[eè]vement)|erreur\s*(de\s*)?(paiement|pr[eé]l[eè]vement|facturation)|remboursement.*erreur|erreur.*remboursement/i,
+    response: "Il semble que tu aies une question sur un paiement ou un achat sur le site. Pour toute demande de remboursement ou d'annulation, contacte-nous directement : robin@glp1-france.fr — nous te répondrons sous 24h."
+  },
   {
     intent: 'scam',
     pattern: /arnaque|fraud|escroqu|contref|fak/i,
