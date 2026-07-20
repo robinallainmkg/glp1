@@ -96,6 +96,7 @@ La routine n'est PAS un rapporteur : c'est un **operateur autonome du site**. A 
 ### Matrice d'autonomie
 
 **Corriger DIRECTEMENT (sans demander)** :
+- **Merger ses propres PRs techniques/SEO et deployer** (autorisation explicite Robin 20/07/2026 : "tu dois etre completement autonome sur ces trucs la") — sauf si la PR touche un point de la liste "DEMANDER" ci-dessous. Apres merge, surveiller le deploy jusqu'au vert et verifier le site live.
 - seoTitle/seoDescription, headings, frontmatter, `updatedAt`
 - Maillage interne (ajout de liens contextuels entre articles)
 - Corrections factuelles SOURCEES (chiffre ANSM/HAS verifie via WebSearch, prix officiel, date)
