@@ -86,7 +86,7 @@ La concurrence sera forte une fois les brevets levés, ce qui laisse espérer un
 
 À titre de comparaison, les biosimilaires de l'insuline (molécule de structure similaire) ont permis des réductions de prix de **20 à 50 %** dans les années suivant leur mise sur le marché. Les biosimilaires des anti-TNF (traitement de rhumatismes) ont quant à eux engendré des baisses de **30 à 70 %**.
 
-Pour le sémaglutide, les projections varient selon les analystes. Une réduction de **30 à 60 %** du prix actuel (76,58 € PFHT/stylo Ozempic selon Vidal, environ 80,18 € TTC avec honoraires de dispensation) est envisageable une fois la concurrence installée, soit un prix potentiel de **30 à 55 € par stylo**.
+Pour le sémaglutide, les projections varient selon les analystes. Une réduction de **30 à 60 %** du prix actuel (76,58 € PFHT/stylo Ozempic selon Vidal, environ 77,60 € TTC avec honoraires de dispensation) est envisageable une fois la concurrence installée, soit un prix potentiel de **30 à 55 € par stylo**.
 
 Cela ne rendrait Ozempic complètement "abordable" pour tous que si le remboursement Sécurité Sociale progressait en parallèle.
 
@@ -142,7 +142,7 @@ Le remboursement à 65 % (comme pour Ozempic en bithérapie metformine pour le d
 Non. L'achat de médicaments non autorisés par l'EMA en France est illégal. Des sites vendent du "sémaglutide" sans prescription et sans AMM européenne : ces produits ne sont pas contrôlés et présentent des risques sérieux pour la santé.
 
 **Le Rybelsus est-il moins cher qu'Ozempic ?**
-Le prix facial est similaire (80-110 €/mois), mais contrairement à Ozempic (remboursé à 65 % en bithérapie metformine pour le diabète de type 2), Rybelsus n'est pas remboursé en France (avis HAS défavorable). Pour les patients diabétiques, Ozempic est donc financièrement plus avantageux malgré l'injection.
+Le prix facial est similaire (80-110 €/mois), mais contrairement à Ozempic (remboursé à 30 % pour le diabète de type 2), Rybelsus n'est pas remboursé en France (avis HAS défavorable). Pour les patients diabétiques, Ozempic est donc financièrement plus avantageux malgré l'injection.
 
 **Un biosimilaire sera-t-il aussi efficace qu'Ozempic ?**
 Les biosimilaires approuvés par l'EMA sont soumis à des études de comparabilité rigoureuses. Leur efficacité et leur sécurité doivent être démontrées comme équivalentes à celles de l'original. Ils ne seront pas "moins bons" — simplement fabriqués par un concurrent.

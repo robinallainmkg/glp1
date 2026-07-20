@@ -239,7 +239,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ### Médicaments GLP-1
 
 **Ozempic :**
-- **Prix :** ~80,18€/stylo (prix public TTC en pharmacie)
+- **Prix :** ~77,60€/stylo (prix public TTC en pharmacie)
 - **Remboursement :** 65 % si diabète de type 2 (100 % en ALD), formulaire obligatoire depuis fév. 2025
 - **Reste à charge :** ~21€/mois environ (DT2)
 

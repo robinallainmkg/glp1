@@ -123,7 +123,7 @@ L'**Ozempic** de Novo Nordisk est officiellement autorisé uniquement pour le tr
 - Dose maximale de 1 mg par semaine (contre 2.4 mg pour le Wegovy)
 
 **Prix et remboursement :**
-- Environ **80,18 euros par stylo** (prix fixe)
+- Environ **77,60 euros par stylo** (prix fixe)
 - **Remboursé à 65 %** par la Sécurité sociale pour le diabète de type 2 en bithérapie avec metformine (30 % en trithérapie avec insuline basale). Prise en charge jusqu'à 100 % en ALD (Affection de Longue Durée).
 - Non rembourse pour la perte de poids seule
 

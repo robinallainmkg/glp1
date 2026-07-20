@@ -36,7 +36,7 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 
 | Médicament | Laboratoire | Indications | Posologie | Prix/mois | Remboursement |
 |------------|-------------|-------------|-----------|-----------|---------------|
-| **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** | Novo Nordisk | Diabète type 2 | 0.25mg à 2mg/semaine | ~80,18€/stylo | 65% DT2 (100% en ALD) |
+| **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** | Novo Nordisk | Diabète type 2 | 0.25mg à 2mg/semaine | ~77,60€/stylo | 65% DT2 (100% en ALD) |
 | **[Wegovy (sémaglutide)](/collections/traitements-glp1/guide-complet-wegovy/)** | Novo Nordisk | Obésité (IMC ≥30) | 0.25mg à 2.4mg/semaine | 147-350€ | 65 % (depuis 15/06/2026, sous conditions) |
 | **<a href="/collections/traitements-glp1/guide-complet-saxenda/">Saxenda</a>** | Novo Nordisk | Obésité | 0.6mg à 3mg/jour | 240-300€ | Non remboursé |
 | **<a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** | Lilly | Diabète type 2 | 0.75mg à 4.5mg/semaine | ~81€ | 65% DT2 (100% en ALD) |
@@ -142,7 +142,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 | Médicament | Prix Public/mois | Remboursement SS | Prix Final/mois |
 |------------|------------------|------------------|-----------------|
-| **Ozempic** | ~80,18€/stylo | 65% DT2 (bithérapie) | ~28€ (DT2) |
+| **Ozempic** | ~77,60€/stylo | 65% DT2 (bithérapie) | ~28€ (DT2) |
 | **Wegovy** | 147-350€ | 65 % (depuis 15/06/2026, sous conditions) | Variable selon mutuelle |
 | **Saxenda** | 240-300€ | Non remboursé | 240-300€ (à charge) |
 | **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | ~81€ | 65% DT2 | ~28€ (DT2) |

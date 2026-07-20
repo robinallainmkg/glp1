@@ -122,7 +122,7 @@ Cette stabilité s'explique par la position monopolistique de Novo Nordisk et la
 
 ### Wegovy est remboursé à 65 % depuis juin 2026
 
-Comme Ozempic (remboursé à 65 % en bithérapie metformine pour le diabète de type 2), **Wegovy est remboursé à 65 % par l'Assurance Maladie** depuis le 15 juin 2026 pour le traitement de l'obésité, sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté de la prise en charge nutritionnelle. La primo-prescription est réservée aux CSO, CHU ou services spécialisés ; le renouvellement peut être assuré par le médecin traitant.
+Comme Ozempic (remboursé à 30 % pour le diabète de type 2), **Wegovy est remboursé à 65 % par l'Assurance Maladie** depuis le 15 juin 2026 pour le traitement de l'obésité, sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté de la prise en charge nutritionnelle. La primo-prescription est réservée aux CSO, CHU ou services spécialisés ; le renouvellement peut être assuré par le médecin traitant.
 
 **Critères de prescription :**
 
@@ -175,7 +175,7 @@ Le laboratoire Novo Nordisk propose plusieurs aides :
 |------------|-------------|-------------|------------|---------------|
 | **Wegovy** | ~147-350€ | ~882-2 100€ | -15% du poids | 65% (depuis 06/2026) |
 | Saxenda | 240-300€ | 1 440-1 800€ | -8% du poids | Non |
-| Ozempic (hors indication) | ~80,18€/stylo | ~480€ | -12% du poids | 65% (DT2 bithérapie) |
+| Ozempic (hors indication) | ~77,60€/stylo | ~480€ | -12% du poids | 65% (DT2 bithérapie) |
 | Mounjaro | 176-433€ | 1 056-2 598€ | -20% du poids | 65% (depuis 06/2026) |
 | Mysimba | 70€ | 420€ | -5% du poids | Non |
 

@@ -55,7 +55,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - **Perte de poids** : 5-10% du poids corporel
 - **Posologie** : 1 injection par semaine
 - **Avantages** : Efficace sur le diabète, [protection cardiovasculaire](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/)
-- **Prix** : ~80,18€/stylo (prix public 2026)
+- **Prix** : ~77,60€/stylo (prix public 2026)
 
 #### Wegovy (sémaglutide 0,25-2,4 mg)
 - **Indications** : Obésité (IMC ≥30) ou surpoids (IMC ≥27 avec comorbidité)
@@ -106,7 +106,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 | Médicament | Molécule | Indication | Perte poids | Fréquence | Prix/mois | Remboursement |
 |------------|----------|------------|-------------|-----------|-----------|---------------|
-| **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~80,18€/stylo | 65% DT2 |
+| **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~77,60€/stylo | 65% DT2 |
 | **Wegovy** | Sémaglutide HD | Obésité | 10-15% | Hebdomadaire | ~147-350€ | Remboursé 65% (obésité, sous conditions) |
 | **Mounjaro** | Tirzépatide | Diabète + Obésité | 15-20% | Hebdomadaire | ~176-433€ | Remboursé 65% (obésité, sous conditions) |
 | **Trulicity** | Dulaglutide | Diabète | 3-8% | Hebdomadaire | ~81€ | 65% DT2 |
@@ -148,7 +148,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 ### 4. Votre tolérance budgétaire
 
 #### Budget limité (remboursés SS pour DT2) :
-- Ozempic (~80,18€/stylo, remboursé 65% DT2 en bithérapie metformine)
+- Ozempic (~77,60€/stylo, remboursé 65% DT2 en bithérapie metformine)
 - Victoza (~60€/mois, remboursé 65% DT2)
 - Trulicity (~81€/mois, remboursé 65% DT2)
 - Rybelsus (80-110€/mois, non remboursé)
@@ -210,7 +210,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 | Médicament | Prix brut/mois | Remboursement SS | Coût net estimé |
 |------------|----------------|------------------|-----------------|
-| Ozempic | ~80,18€/stylo | 65% (DT2) | ~28,06€/stylo |
+| Ozempic | ~77,60€/stylo | 65% (DT2) | ~28,06€/stylo |
 | Victoza | ~60€ | 65% (DT2) | ~21€ |
 | Trulicity | ~81€ | 65% (DT2) | ~28€ |
 | Rybelsus | 80-110€ | Non remboursé | 80-110€ (à charge) |

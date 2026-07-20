@@ -125,7 +125,7 @@ Pour bénéficier du remboursement par l'Assurance Maladie (65% pour Ozempic/Tru
 
 ### Coût Réel Patient 2026
 
-**Prix pharmacie :** ~80,18€/stylo (hors honoraires de dispensation)
+**Prix pharmacie :** ~77,60€/stylo (hors honoraires de dispensation)
 
 **Selon dosage :**
 - 0.25-0.5 mg : 1 stylo/mois = **~28€/mois** (bithérapie 65%) ou **~56€/mois** (trithérapie 30%)
