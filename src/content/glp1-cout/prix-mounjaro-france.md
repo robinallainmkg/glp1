@@ -3,11 +3,11 @@ title: "Prix Mounjaro France 2026 : Le Moins Cher (176€)"
 thumbnail: "/images/thumbnails/prix-mounjaro-france-illus.svg"
 description: "Mounjaro prix en France 2026 : à partir de 176€/mois en pharmacie (prix réglementé). Tableau comparatif 2.5mg à 15mg + remboursement Ameli/mutuelle 2026."
 keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounjaro pharmacie prix', 'mounjaro prix le moins cher', 'mounjaro prix le moins cher pharmacie', 'mounjaro pharmacie moins cher', 'mounjaro moins cher', 'mounjaro prix pharmacie en ligne', 'mounjaro remboursement 2026', 'mounjaro remboursement ameli', 'mounjaro 5 mg prix france', 'mounjaro 7 5 mg prix', 'ou trouver le mounjaro le moins cher', 'carte prix mounjaro france', 'mounjaro prix espagne', 'mounjaro prix allemagne', 'mounjaro prix italie']
-seoTitle: "Mounjaro Prix 2026 : 176€/mois [Prix Réglementé] Pharmacie France"
-seoDescription: "Mounjaro prix France 2026 : 176 à 433€/mois selon dosage, prix réglementé identique partout. Remboursement Ameli 65% depuis le 15/06/2026. Mis à jour."
+seoTitle: "Prix Mounjaro 2026 : 176-433€/mois, Remboursement 65% Sécu — Guide complet"
+seoDescription: "Prix Mounjaro 2026 : 176 à 433€/mois selon dosage, remboursé à 65% par la Sécu depuis juin 2026. Carte des pharmacies, critères d'éligibilité et 4 étapes pour obtenir le remboursement. Mis à jour juillet 2026."
 publishedAt: '2025-09-06'
 updatedAt: '2026-07-20'
-date: 2026-06-22
+date: 2026-07-20
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -208,7 +208,7 @@ Mounjaro est un médicament soumis à prescription médicale. Depuis le 15 juin 
 
 ### Détails du remboursement
 
-Le remboursement de Mounjaro est effectif depuis le 15 juin 2026. Pour les détails complets sur les [conditions de remboursement de Mounjaro](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/), consultez notre guide dédié. Renseignez-vous auprès de votre médecin ou pharmacien pour connaître votre éligibilité.
+Le remboursement de Mounjaro est effectif depuis le 15 juin 2026. Pour les détails complets sur le parcours, lisez notre [guide accord préalable Mounjaro étape par étape](/collections/glp1-cout/remboursement-mounjaro-accord-prealable-etapes-2026/) : qui peut prescrire, quels documents préparer, délais CPAM. Consultez aussi les [conditions de remboursement de Mounjaro selon la HAS](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/) pour le détail réglementaire. Renseignez-vous auprès de votre médecin ou pharmacien pour connaître votre éligibilité.
 
 ## Couverture par les Mutuelles Complémentaires {#cout-reel}
 
@@ -281,6 +281,60 @@ L'accès au traitement Mounjaro nécessite une prescription médicale. Pour bén
 ### Comparaison Européenne
 
 Les prix du tirzépatide varient d'un pays à l'autre selon les systèmes nationaux de fixation des prix et de prise en charge. En France, le prix réglementé (176,10 à 433,80€/mois), associé au remboursement à 65% depuis le 15 juin 2026, place le coût réel pour le patient parmi les plus bas d'Europe.
+
+## Trouver Mounjaro en Pharmacie : Carte des Prix {#carte-prix}
+
+### Prix identique partout — mais la disponibilité varie
+
+Depuis le 15 juin 2026, le prix de Mounjaro est **réglementé et identique dans toutes les pharmacies françaises**. Le levier n'est donc plus le prix affiché, mais la **disponibilité locale** et votre éligibilité au remboursement à 65%.
+
+→ **[Consulter la carte des pharmacies disponibles près de chez vous](/outils/carte-prix-pharmacies/)**
+
+La carte recense les pharmacies ayant du Mounjaro en stock, classées par département et par dosage. Elle est mise à jour régulièrement par notre équipe.
+
+### Rappel des prix par dosage
+
+| Dosage | Prix pharmacie | Reste à charge (65% remboursé) |
+|--------|---------------|-------------------------------|
+| 2,5 mg | 176,10 € | ~61 €/mois |
+| 5 mg | 237,68 € | ~83 €/mois |
+| 7,5-10 mg | 335,95 € | ~117 €/mois |
+| 12,5-15 mg | 433,80 € | ~151 €/mois |
+
+*Tous les dosages sont remboursés à 65% par l'Assurance Maladie pour les patients éligibles (depuis le 15 juin 2026). Ticket modérateur de 35% complété par la mutuelle selon votre contrat.*
+
+## Obtenir le Remboursement Mounjaro : 4 Étapes Concrètes {#remboursement-etapes}
+
+Depuis le 15 juin 2026, le remboursement de Mounjaro à 65% suit un parcours balisé. Voici les 4 étapes à suivre :
+
+### Étape 1 — Vérifier votre éligibilité (5 minutes)
+
+Vous êtes éligible si vous répondez à l'un de ces critères :
+- **IMC ≥ 35 kg/m² avec au moins une comorbidité** : diabète de type 2, apnée du sommeil, HTA, dyslipidémie, SOPK
+- **OU IMC ≥ 40 kg/m²** (obésité sévère, sans comorbidité requise)
+- **ET** prise en charge nutritionnelle documentée depuis au moins 6 mois
+
+Pas sûr de votre éligibilité ? Utilisez notre [test d'éligibilité gratuit](/outils/test-eligibilite/) (3 minutes, verdict immédiat).
+
+### Étape 2 — Consultation initiale en CSO ou CHU (obligatoire)
+
+La primo-prescription doit venir d'un **spécialiste de l'obésité** : Centre Spécialisé Obésité (CSO), CHU ou endocrinologue en lien avec un CSO. Votre médecin traitant seul ne peut pas initier le traitement remboursé.
+
+→ [Trouver un CSO ou spécialiste de l'obésité près de chez vous](/collections/medecins-glp1-france/)
+
+Le spécialiste établit le dossier d'indication, prescrit Mounjaro et renseigne le formulaire Accord Préalable à soumettre à votre CPAM.
+
+### Étape 3 — Accord préalable Assurance Maladie (3 à 10 jours)
+
+Le médecin spécialiste soumet le formulaire d'Accord Préalable à votre caisse. Délai habituel : 3 à 10 jours ouvrés (accord tacite au bout de 15 jours en l'absence de réponse). Vous êtes notifié par courrier ou via votre espace ameli.fr.
+
+### Étape 4 — Délivrance en pharmacie avec remboursement 65%
+
+Présentez à votre pharmacien l'ordonnance sécurisée du spécialiste + l'accord préalable CPAM + votre carte Vitale. Mounjaro est délivré avec remboursement immédiat à 65%. Le ticket modérateur restant (35%) peut être soumis à votre mutuelle pour complément éventuel.
+
+**Renouvellement** : possible par votre médecin traitant sans retourner au CSO.
+
+> Besoin d'aide pour préparer votre dossier d'éligibilité et les questions à poser en consultation CSO ? Notre [Dossier GLP-1 Personnalisé (4,99 €)](/dossier-glp1/) inclut la liste des CSO de votre département, une checklist de la consultation initiale et les questions clés pour votre médecin.
 
 ## Recommandations Pratiques
 
@@ -431,5 +485,5 @@ Le reste à charge (35%) peut être complété par la mutuelle selon votre contr
 
 ---
 
-*Dernière mise à jour : 22 juin 2026. Mounjaro est remboursé à 65% par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité sous conditions. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées et vérifier votre éligibilité.*
+*Dernière mise à jour : 19 juillet 2026. Mounjaro est remboursé à 65% par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité sous conditions. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées et vérifier votre éligibilité.*
 

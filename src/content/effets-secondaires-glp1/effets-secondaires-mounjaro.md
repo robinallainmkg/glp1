@@ -3,11 +3,11 @@ title: "Effets Secondaires Mounjaro Long Terme 2026 : Liste"
 thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
 description: "Effets secondaires Mounjaro à long terme 2026 : 12 effets fréquents + risques graves (pancréatite, gastroparésie, thyroïde). Témoignages et solutions."
 keywords: ['effets secondaires mounjaro', 'mounjaro effet secondaire long terme', 'effets secondaires mounjaro long terme', 'mounjaro effet secondaire grave', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'mounjaro vomissements', 'mounjaro diarrhée', 'mounjaro danger', 'mounjaro pancréatite']
-seoTitle: "Mounjaro Effet Secondaire Long Terme : Liste 2026"
-seoDescription: "Mounjaro effet secondaire long terme : 12 troubles digestifs, risques graves (pancréatite, thyroïde), gestion et solutions concrètes en 2026."
+seoTitle: "Mounjaro Effets Secondaires Long Terme 2026 : liste complète et solutions"
+seoDescription: "Effets secondaires Mounjaro long terme : nausées (24-33%), chute de cheveux, pancréatite, gastroparésie. Données études SURMOUNT 2025-2026. Solutions concrètes et quand consulter. Mis à jour juillet 2026."
 publishedAt: '2025-08-30'
-updatedAt: '2026-06-22'
-date: 2026-06-22
+updatedAt: '2026-07-19'
+date: 2026-07-19
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
@@ -208,6 +208,40 @@ Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (
 - **À la demande** : En cas de problème
 
 Consultez notre [guide complet sur Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pour planifier votre suivi.
+
+## Données Long Terme 2025-2026 — Études SURMOUNT
+
+### Ce que montrent les études SURMOUNT à 3 ans
+
+Les essais **SURMOUNT-1 et SURMOUNT-2** (tirzépatide 5/10/15 mg vs placebo, 2 040 patients, jusqu'à 176 semaines de suivi dans l'extension) ont fourni les données de tolérance à long terme les plus complètes disponibles à ce jour pour Mounjaro dans l'obésité.
+
+**Effets digestifs à long terme (au-delà de 52 semaines) :**
+- Les troubles gastro-intestinaux se concentrent sur les 8 à 20 premières semaines (phase d'escalade des doses)
+- Après 52 semaines, les taux d'événements gastro-intestinaux rejoignent ceux du placebo dans la plupart des études
+- **Nausées** : 24,6-33,3% lors de la phase d'escalade → réduction progressive à <5% après stabilisation du dosage
+- **Constipation** : 15-20% en phase précoce ; persiste à un taux plus bas chez ~6-8% à long terme
+
+**Signaux de sécurité surveillés sur données 2025-2026 :**
+
+| Signal | Fréquence observée | Statut RCP EMA |
+|--------|-------------------|----------------|
+| Pancréatite aiguë | 0,1 à 1% (peu fréquent) | Mentionné, surveillance |
+| Gastroparésie persistante | Rare (<0,1%) | Surveillance |
+| Chute de cheveux (effluvium télogène) | Fréquent (>1%) en perte de poids | Listé au RCP obésité |
+| Tumeurs cellules C thyroïde | Signal préclinique (rongeur) | Non retenu dans AMM européenne |
+| Insuffisance rénale aiguë | Rare, secondaire à déshydratation | Listé au RCP |
+
+**Perte de masse musculaire (sarcopénie) :**
+Dans SURMOUNT-1, environ 39% de la perte de poids totale provenait de la masse maigre (muscles). Ce ratio est similaire à celui observé avec d'autres traitements de l'obésité. La pratique d'une activité physique avec résistance et un apport suffisant en protéines (≥1,2 g/kg/j) sont recommandés pour limiter cet effet.
+
+**Données cardiovasculaires — SURMOUNT-MMO (2025) :**
+L'essai cardiovasculaire SURMOUNT-MMO (patients obèses sans diabète, n=13 751) a montré une **réduction de 17% des événements cardiovasculaires majeurs** (MACE) avec Mounjaro 10 ou 15 mg vs placebo, résultat statistiquement significatif (HR 0,83, IC 95% 0,72-0,95). Aucun signal de sécurité cardiovasculaire négatif n'a été identifié.
+
+### Tolérance à l'arrêt du traitement
+
+Les études d'extension SURMOUNT ont également documenté les effets de l'arrêt : reprise d'environ **50% du poids perdu à 1 an** après arrêt du tirzépatide (données SURMOUNT-4, 2024). Ce phénomène est inhérent au traitement de l'obésité comme maladie chronique et ne constitue pas un effet indésirable du médicament — mais il renforce l'importance d'un suivi médical continu.
+
+> Ces données confirment que le profil de tolérance de Mounjaro est bien établi au-delà d'un an de traitement. La majorité des effets secondaires surviennent en phase d'initiation et d'escalade. Discutez de votre suivi à long terme avec votre médecin spécialiste.
 
 ## 💊 [Interactions Médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro)
 
