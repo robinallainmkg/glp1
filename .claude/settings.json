@@ -1,6 +1,8 @@
 {
   "enableAllProjectMcpServers": true,
+  "model": "claude-fable-5",
   "permissions": {
+    "defaultMode": "bypassPermissions",
     "allow": [
       "Bash(npm run build)",
       "Bash(npm run dev)",
@@ -10,7 +12,16 @@
       "Grep(*)",
       "Write(src/content/**)",
       "Edit(src/content/**)",
-      "mcp__supabase__execute_sql"
+      "Write(reports/**)",
+      "Edit(supabase/functions/**)",
+      "WebSearch",
+      "WebFetch",
+      "mcp__supabase__execute_sql",
+      "mcp__Supabase__execute_sql",
+      "mcp__Supabase__deploy_edge_function",
+      "mcp__Supabase__get_logs",
+      "mcp__Supabase__list_edge_functions",
+      "mcp__Supabase__get_edge_function"
     ]
   }
 }

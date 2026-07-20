@@ -86,9 +86,36 @@ SELECT 'ga_metrics' as tbl, MAX(date) FROM ga_metrics UNION ALL SELECT 'gsc_metr
 - **Strategie** : first-mover sur "GLP-1 x retraite" (desert editorial FR) ; clusters cibles : cure thermale minceur (remboursee Secu), jeune et randonnee, sejour minceur, longevity/medical wellness
 - Idees d'articles restantes (recherche 13/07) : Brides-les-Bains avis, combien coute une retraite, cure detox arnaque ?, peau relachee post-GLP-1 (pont Morpheus8), camp perte de poids adulte, comparatif thalasso, j'ai teste jeune et rando, retraites longevite
 
-## Routine quotidienne — MANDAT ELARGI (demande Robin 14/07/2026)
+## Routine quotidienne — OPERATEUR AUTONOME (maj 20/07/2026, demande Robin)
 
-La routine quotidienne ne se limite PAS au rapport SEO recovery + Coach IA. A chaque run, elle doit AUSSI :
+**Modele : `claude-fable-5` obligatoire** (configure dans `.claude/settings.json` ; verifier aussi le modele choisi dans la tache planifiee cote claude.ai/code).
+**Permissions : mode bypass** (`defaultMode: bypassPermissions` dans settings) — la routine ne doit JAMAIS rester bloquee sur une demande de permission d'outil.
+
+La routine n'est PAS un rapporteur : c'est un **operateur autonome du site**. A chaque run elle observe, analyse, DECIDE et CORRIGE elle-meme. Elle ne demande l'avis de Robin que pour les actions sensibles (matrice ci-dessous).
+
+### Matrice d'autonomie
+
+**Corriger DIRECTEMENT (sans demander)** :
+- seoTitle/seoDescription, headings, frontmatter, `updatedAt`
+- Maillage interne (ajout de liens contextuels entre articles)
+- Corrections factuelles SOURCEES (chiffre ANSM/HAS verifie via WebSearch, prix officiel, date)
+- Bugs Coach IA : prompt systeme, detection d'intent, garde-fous + **deploy direct via l'outil MCP `mcp__Supabase__deploy_edge_function`** (valide le 20/07, v49 — plus besoin de Robin)
+- Fixes techniques : liens casses, redirects, sitemap, images manquantes, schema.org, meta robots
+- Tickets correction_tickets + content_opportunities (INSERT Supabase)
+- Emails leads (sequence J0/J+3/J+7 definie plus bas)
+- Toute occurrence Zepbound detectee = suppression IMMEDIATE (jamais d'attente)
+
+**DEMANDER l'avis de Robin avant (AskUserQuestion si interactif, sinon PushNotification + section "EN ATTENTE DE DECISION" en tete de rapport)** :
+- Supprimer/desindexer/rediriger une page existante
+- Toucher aux prix, a l'offre, a la monetisation, a Stripe
+- Modifier le schema DB, les rate-limits, les workflows CI/CD
+- Refonte structurelle (navigation, layouts, home)
+- Reecrire plus de ~30% d'un article, ou publier un nouvel article
+- Tout sujet medical/legal incertain (si la source officielle est introuvable → ticket + question, pas d'invention)
+
+### Phase A — Etat des lieux (collecte, chaque run)
+
+Verifier fraicheur GA4/GSC (regle critique en tete de fichier), site live (home 200, redirect zepbound→mounjaro, sitemap), puis :
 1. **Checker les resultats de chaque projet actif** :
    - SEO recovery (baseline fixe : 922 sessions GA/jour, 106 clics GSC/jour — moyenne 15-23 juin)
    - Coach IA : volume, qualite, emissions `[[DOSSIER_READY]]` (1re emission le 13/07 apres fix v46)
@@ -100,7 +127,29 @@ La routine quotidienne ne se limite PAS au rapport SEO recovery + Coach IA. A ch
 2ter. **Sequence email leads** : au-dela de l'email J0 (recap), relancer les leads eligibility_test a J+3 ("avez-vous pris rendez-vous ? comment choisir son CSO") et J+7 (proposition Dossier 4,99 EUR) — un seul theme par email, se desinscrire possible, tracer dans email_replies. Ne relancer que les leads n'ayant pas achete.
 2bis. **Envoyer les emails "plan d'action" du test d'eligibilite** (ENGAGEMENT UTILISATEUR, sous 24h) : chaque run, recuperer les nouveaux leads `contacts` avec `contact_type='eligibility_test'` sans reponse envoyee, et leur envoyer leur recapitulatif par email (verdict + 3 etapes du parcours, stocke dans le champ `message`) via SMTP Hostinger (robin@glp1-france.fr, meme canal que scripts/send-email-replies.mjs). Contenu : verdict personnalise, 3 etapes generiques (medecin traitant → CSO/CHU → pharmacie), lien vers le Dossier 4,99 EUR. PAS de checklist detaillee ni de liste CSO (exclusivite du Dossier payant). Tracer l'envoi dans email_replies ou marquer le contact.
 3bis. **Indexation des pages manquantes** : detecter les pages publiees mais non indexees (page dans le sitemap / recemment publiee MAIS 0 impression dans gsc_metrics depuis 3+ jours). La soumission GSC est MANUELLE (aucune API Google pour "demander une indexation" de pages classiques) : la routine produit la liste d'URLs prete a coller dans l'inspection GSC, en tete de rapport, et notifie Robin si la liste est non vide (max ~10 URLs/jour, prioriser par potentiel de trafic). Verifier aussi que le sitemap est a jour apres chaque publication.
-4. **Alerter Robin** (PushNotification) seulement si : anomalie critique (site down, deindexation, erreur medicale du Coach, violation Zepbound), 1re conversion payante du Dossier, ou action bloquante cote Robin (ex : sync IMAP morte depuis le 20/05 — a relancer en local).
+4. **Alerter Robin** (PushNotification) seulement si : anomalie critique (site down, deindexation, erreur medicale du Coach, violation Zepbound), 1re conversion payante du Dossier, action bloquante cote Robin (ex : sync IMAP morte depuis le 20/05 — a relancer en local), ou decision sensible en attente (matrice d'autonomie).
+
+### Phase B — Analyse du trafic & decisions (chaque run, avant les actions)
+
+Ne pas se contenter des scores de recovery. Chaque run doit produire une **analyse decisionnelle** :
+1. **Pages gagnantes / perdantes** : comparer clics+impressions GSC 7 derniers jours vs 7 precedents, lister le top 5 en hausse et le top 5 en baisse avec hypothese de cause pour chaque.
+2. **Requetes montantes** : nouvelles requetes GSC (absentes il y a 14 jours) avec 50+ impressions — decider : page existante a renforcer, ou content_opportunity.
+3. **CTR outliers** : toute page avec CTR < 1.5% sur 300+ impressions/7j = candidate C1 immediate.
+4. **Cannibalisation** : si 2 pages rankent sur la meme requete avec positions instables, decider laquelle est canonique et renforcer son maillage.
+5. **Funnel Dossier bout en bout** : sessions landing → dossiers pending → paid → generated. Identifier l'etape qui fuit et decider d'un fix (CTA, prix visible, reassurance, formulaire).
+6. Chaque decision est consignee dans le rapport, section "B. DECISIONS" : constat → decision → action (faite ou en attente Robin).
+
+### Phase D — Audit rotatif du site (1 dimension par jour)
+
+Chaque run audite EN PROFONDEUR une dimension (rotation sur 7 jours, noter dans le rapport laquelle) :
+- **J1 Technique** : 404, chaines de redirects, sitemap vs pages reelles, robots.txt, canonicals
+- **J2 On-page SEO** : titles/descriptions dupliques ou trop longs, H1 manquants, pages orphelines
+- **J3 Maillage** : pages a moins de 3 liens entrants internes, ancres sur-optimisees, liens casses
+- **J4 Contenu** : articles non mis a jour depuis 90+ jours sur requetes a volume, spot fact-check de 3 articles (chiffres, dates, prix vs sources officielles via WebSearch)
+- **J5 Conversion** : parcours Dossier 4,99 EUR complet, test eligibilite, CTAs Coach, points de friction
+- **J6 Performance/UX** : poids images, thumbnails manquants ou dupliques, mobile, Core Web Vitals (PageSpeed si accessible)
+- **J7 Concurrence** : WebSearch sur les 5 requetes tete (prix ozempic, prix mounjaro, penurie, remboursement wegovy, test eligibilite) — qui ranke au-dessus de nous, avec quoi, et quoi ameliorer pour les passer
+Les findings alimentent directement la Phase C (fix immediat si autonome, ticket ou question sinon).
 
 ### Phase C — Actions a executer a chaque run (OBLIGATOIRE, apres le rapport)
 
@@ -116,9 +165,9 @@ Apres avoir ecrit le rapport, la routine **execute directement** les amelioratio
 **C2. Bugs Coach IA (edge function)** — a executer si un bug est detecte dans les conversations :
 - Lire `supabase/functions/ai-coach/index.ts`
 - Corriger le comportement defaillant (prompt systeme, detection d'intent, logique RAG, garde-fous)
-- Committer et pusher sur main (git). Le deploy de l'edge function est SEPARÉ du deploy statique :
-  - En local Robin : `supabase functions deploy ai-coach --project-ref ywekaivgjzsmdocchvum`
-  - En remote (routine) : noter "DEPLOY EDGE FUNCTION PENDING" en tete du rapport et dans la notif push — Robin doit le lancer manuellement
+- Committer et pusher (git). Le deploy de l'edge function est SEPARÉ du deploy statique :
+  - **En remote (routine) : deployer DIRECTEMENT via l'outil MCP `mcp__Supabase__deploy_edge_function`** (project_id `ywekaivgjzsmdocchvum`, valide le 20/07/2026 — v49 deployee ainsi). Noter la version deployee dans le rapport.
+  - En local Robin (fallback) : `supabase functions deploy ai-coach --project-ref ywekaivgjzsmdocchvum`
 - NE PAS modifier les constantes de rate-limit ou le schema DB sans decision explicite
 
 **C3. Correction tickets Supabase** — pour les ameliorations qui necessitent un contenu long (article complet, maillage interne) :
@@ -135,11 +184,13 @@ VALUES (...);
 ```
 
 **Regles d'execution** :
-- Max 3 actions par run (ne pas sur-corriger)
-- Privilegier dans l'ordre : bugs Coach > CTR pages cle > content opportunities
+- **Max 6 actions autonomes par run** (au-dela : tickets pour le pipeline editorial). Une action = 1 fichier corrige, 1 bug Coach fixe+deploye, ou 1 lot de tickets/opportunites insere.
+- Privilegier dans l'ordre : violation Zepbound > bugs Coach (erreur medicale d'abord) > findings de l'audit Phase D > CTR pages cle > content opportunities
 - Toujours committer a la fin du run : `git add -A && git commit -m "fix/feat: [description]"`
-- Pusher sur main pour deployer l'edge function et les fichiers statiques
+- Pusher sur la branche de travail de la session (en remote) ou main (en local) pour deployer
 - Ajouter un volet "C. ACTIONS EXECUTEES" dans le rapport daily avec la liste de ce qui a ete fait, pourquoi, et le diff en 1 ligne
+- Ajouter un volet "D. AUDIT DU JOUR" (dimension auditee + findings) et "B. DECISIONS" (constat → decision → action)
+- Terminer par un volet "EN ATTENTE DE DECISION ROBIN" si des actions sensibles ont ete identifiees (vide = le dire explicitement)
 
 ## Structure du projet
 
