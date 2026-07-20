@@ -25,7 +25,7 @@ faqSchema:
   - question: "Où trouver le Wegovy le moins cher près de chez moi ?"
     answer: "Depuis le 15 juin 2026, le prix du Wegovy est réglementé et identique dans toutes les pharmacies françaises (146,91 à 195,10 euros par mois selon le dosage). Il n'y a donc plus d'écart de prix entre officines."
   - question: "Le Wegovy est-il disponible en pharmacie Lafayette ?"
-    answer: "Oui, le Wegovy est disponible dans les pharmacies Lafayette et autres grandes pharmacies en France. Le prix peut varier selon l'officine. Vérifiez la disponibilité auprès de votre pharmacie."
+    answer: "Oui, le Wegovy est disponible dans les pharmacies Lafayette et autres grandes pharmacies en France, au même prix réglementé que partout (146,91 à 195,10 euros selon le dosage). Vérifiez simplement la disponibilité auprès de votre pharmacie."
   - question: "Peut-on se faire rembourser le Wegovy par sa mutuelle ?"
     answer: "Depuis le 15 juin 2026, Wegovy est remboursé à 65 % par l'Assurance Maladie sous conditions. Votre mutuelle intervient sur le ticket modérateur de 35 %. Vérifiez les conditions de votre contrat pour connaître votre reste à charge."
 ---
