@@ -175,8 +175,8 @@ const updatedFr = stats.updated_at
     <!-- Disclaimer -->
     <section class="map-disclaimer">
       <p>
-        <strong>Source&nbsp;:</strong> Référentiel FINESS (data.gouv.fr / Atlasanté — mis à jour bimensuel) · Prix officiels Ozempic = CEPS (80,18&nbsp;€/stylo, remboursé 65&nbsp;% en bithérapie metformine / 30&nbsp;% en trithérapie insuline pour le diabète de type 2) · Prix Wegovy / Mounjaro / Saxenda = <strong>prix libéré</strong>, varie selon pharmacie et n'est pas remboursé.
-        Les prix soumis par la communauté sont modérés avant affichage. Cette page est informative et ne remplace pas un avis médical.
+        <strong>Source&nbsp;:</strong> Référentiel FINESS (data.gouv.fr / Atlasanté — mis à jour bimensuel) · Prix Ozempic (77,60&nbsp;€, remboursé 30&nbsp;% diabète type 2, 100&nbsp;% en ALD), Wegovy (146,91–195,10&nbsp;€) et Mounjaro (176,10–433,80&nbsp;€) <strong>réglementés</strong> depuis le 15 juin 2026 (remboursés 65&nbsp;% dans l'obésité sous conditions) — identiques dans toutes les pharmacies · Saxenda = prix libre, non remboursé.
+        Cette page est informative et ne remplace pas un avis médical.
       </p>
     </section>
   </div>
@@ -193,9 +193,7 @@ const updatedFr = stats.updated_at
       <div class="drawer-body" id="drawer-body"></div>
       <div class="drawer-footer">
         <div class="drawer-legend">
-          <span class="pop-src-off">Officiel</span> prix CEPS légal ·
-          <span class="pop-src-usr">Communauté</span> prix user ·
-          <span class="pop-src-est">Estimation</span> moyenne marché
+          <span class="pop-src-off">Officiel</span> prix réglementé, identique dans toutes les pharmacies
         </div>
         <button type="button" class="drawer-cta" id="drawer-submit-btn">Vous avez vu un prix ici ? Partagez-le</button>
       </div>
@@ -287,72 +285,48 @@ const updatedFr = stats.updated_at
       saxenda: 'Saxenda',
     };
 
-    // Prix médians marché FR — servent de base pour la synthèse par pharmacie.
-    // Ozempic = CEPS officiel (80,18€ identique partout, pas de variance).
-    // Wegovy / Mounjaro / Saxenda = médiane fourchette marché FR avril 2026, variée par pharmacie.
+    // Prix officiels réglementés depuis le 15/06/2026 (arrêtés JO du 28/05/2026) —
+    // identiques dans toutes les pharmacies françaises. Sources : BDPM, Vidal, Légifrance.
+    // Saxenda reste en prix libre : aucun prix affiché (zéro estimation).
     const DRUG_REF = {
       ozempic: {
-        note: 'Remboursé 30% (diabète type 2) · prix CEPS identique France entière',
+        note: 'Remboursé 30% (diabète type 2) · 100% en ALD · prix officiel identique France entière',
         fixed: true,
         doses: [
-          { dose: '0,25 mg', price: 80.18 },
-          { dose: '0,5 mg', price: 80.18 },
-          { dose: '1 mg', price: 80.18 },
-          { dose: '2 mg', price: 80.18 },
+          { dose: '0,25 mg', price: 77.60 },
+          { dose: '0,5 mg', price: 77.60 },
+          { dose: '1 mg', price: 77.60 },
         ],
       },
       wegovy: {
-        note: 'Prix libéré · non remboursé · estimation par pharmacie',
+        note: 'Remboursé 65% depuis le 15/06/2026 (obésité, sous conditions) · prix réglementé identique partout',
+        fixed: true,
         doses: [
-          { dose: '0,25 mg', price: 135 },
-          { dose: '0,5 mg', price: 135 },
-          { dose: '1 mg', price: 170 },
-          { dose: '1,7 mg', price: 230 },
-          { dose: '2,4 mg', price: 270 },
+          { dose: '0,25 mg', price: 146.91 },
+          { dose: '0,5 mg', price: 146.91 },
+          { dose: '1 mg', price: 146.91 },
+          { dose: '1,7 mg', price: 169.31 },
+          { dose: '2,4 mg', price: 195.10 },
         ],
       },
       mounjaro: {
-        note: 'Prix libéré · non remboursé · estimation par pharmacie',
+        note: 'Remboursé 65% depuis le 15/06/2026 (obésité, sous conditions) · prix réglementé identique partout',
+        fixed: true,
         doses: [
-          { dose: '2,5 mg', price: 220 },
-          { dose: '5 mg', price: 260 },
-          { dose: '7,5 mg', price: 320 },
-          { dose: '10 mg', price: 375 },
-          { dose: '12,5 mg', price: 420 },
-          { dose: '15 mg', price: 470 },
+          { dose: '2,5 mg', price: 176.10 },
+          { dose: '5 mg', price: 237.68 },
+          { dose: '7,5 mg', price: 335.95 },
+          { dose: '10 mg', price: 335.95 },
+          { dose: '12,5 mg', price: 433.80 },
+          { dose: '15 mg', price: 433.80 },
         ],
       },
       saxenda: {
-        note: 'Prix libéré · non remboursé · estimation par pharmacie',
-        doses: [
-          { dose: '6 mg/ml', price: 280 },
-        ],
+        note: 'Prix libre · non remboursé · demandez le tarif à la pharmacie',
+        fixed: true,
+        doses: [],
       },
     };
-
-    // Départements "premium" (tarifs généralement plus élevés en France)
-    const PREMIUM_DEPTS = new Set(['75', '92', '78', '06', '69', '13', '74', '77', '93', '94', '91', '95']);
-    // Départements "ruraux" (tarifs souvent plus bas)
-    const RURAL_DEPTS = new Set(['23', '15', '48', '19', '46', '55', '39', '52', '58', '43', '04']);
-
-    // Hash déterministe simple (djb2 variant) — sert de graine pour la variance par pharmacie
-    function pharmaSeed(finess, drug, dose) {
-      const s = String(finess) + '|' + drug + '|' + dose;
-      let h = 5381;
-      for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) & 0xffffffff;
-      return Math.abs(h);
-    }
-
-    // Variance basée sur le profil tarifaire de la pharmacie (département + hash finess)
-    function estimatePrice(basePrice, finess, department, drug, dose) {
-      // Variance de base ±8% depuis le hash
-      const seed = pharmaSeed(finess, drug, dose);
-      let factor = 0.92 + ((seed % 161) / 1000); // 0.920 → 1.080
-      // Ajustement département
-      if (PREMIUM_DEPTS.has(department)) factor += 0.05 + ((seed % 101) / 1000); // +5 à +15%
-      else if (RURAL_DEPTS.has(department)) factor -= 0.06 + ((seed % 41) / 1000); // -6 à -10%
-      return Math.round(basePrice * factor * 100) / 100;
-    }
 
     let currentDrug = 'all';
     let currentLayer = 'pharmacies';
@@ -731,33 +705,14 @@ const updatedFr = stats.updated_at
         const highlight = d === currentDrug ? ' pop-drug-active' : '';
 
         const rows = ref.doses.map((ds) => {
-          const key = d + '|' + ds.dose;
-          const sub = submitted[key];
-          let priceHtml, srcPill, rowClass = '';
-          if (sub) {
-            priceHtml = Number(sub.p).toFixed(2);
-            srcPill = sub.s === 'user'
-              ? '<span class="pop-dose-src pop-src-usr">Communauté</span>'
-              : sub.s === 'scraped'
-                ? '<span class="pop-dose-src pop-src-scr">Vérifié</span>'
-                : '<span class="pop-dose-src pop-src-off">Officiel</span>';
-          } else if (ref.fixed) {
-            priceHtml = ds.price.toFixed(2);
-            srcPill = '<span class="pop-dose-src pop-src-off">Officiel</span>';
-          } else {
-            priceHtml = estimatePrice(ds.price, finess, dept, d, ds.dose).toFixed(2);
-            srcPill = '<span class="pop-dose-src pop-src-est">Estimation</span>';
-            rowClass = ' pop-dose-est';
-          }
-          return `<div class="pop-dose-row${rowClass}"><span class="pop-dose">${escapeHtml(ds.dose)}</span><strong>${priceHtml}&nbsp;€</strong>${srcPill}</div>`;
+          // Prix réglementés depuis le 15/06/2026 : le prix officiel prime toujours
+          // sur les anciennes soumissions communautaires (potentiellement obsolètes).
+          const priceHtml = ds.price.toFixed(2);
+          const srcPill = '<span class="pop-dose-src pop-src-off">Officiel</span>';
+          return `<div class="pop-dose-row"><span class="pop-dose">${escapeHtml(ds.dose)}</span><strong>${priceHtml}&nbsp;€</strong>${srcPill}</div>`;
         }).join('');
 
-        const hasReal = ref.doses.some((ds) => submitted[d + '|' + ds.dose]);
-        const globalBadge = ref.fixed
-          ? '<span class="pop-src-off">Officiel CEPS</span>'
-          : hasReal
-            ? '<span class="pop-src-usr">Données communauté</span>'
-            : '<span class="pop-src-est">Estimation</span>';
+        const globalBadge = '<span class="pop-src-off">Prix officiel</span>';
 
         return `
           <div class="pop-drug${highlight}">

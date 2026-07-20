@@ -1,0 +1,130 @@
+---
+import StaticLayout from '../../../layouts/StaticLayout.astro';
+import { getPriceCityPaths, titleCaseCity } from '../../../lib/pharmacyCityData';
+
+// SEO local (top 200 villes) — cible "ozempic [ville]", "prix ozempic [ville]", "pharmacie ozempic [ville]".
+// Ozempic = diabète type 2 uniquement : angle différent des pages Wegovy/Mounjaro (obésité).
+
+export async function getStaticPaths() {
+  return getPriceCityPaths();
+}
+
+const { city: rawCity, department, pharmacies, csos } = Astro.props;
+const city = titleCaseCity(rawCity);
+const nb = pharmacies.length;
+const shown = pharmacies.slice(0, 25);
+
+const faq = [
+  { q: `Quel est le prix d'Ozempic à ${city} ?`, a: `Ozempic coûte 77,60 € TTC par stylo, prix officiel identique dans toutes les pharmacies de ${city} comme partout en France (dosages 0,25, 0,5 et 1 mg). Il est remboursé à 30 % par l'Assurance Maladie pour le diabète de type 2, et à 100 % pour les patients en ALD.` },
+  { q: `Ozempic est-il remboursé pour maigrir à ${city} ?`, a: `Non. Ozempic n'est remboursé que pour le diabète de type 2. Pour la perte de poids, ce sont Wegovy et Mounjaro qui sont remboursés à 65 % depuis le 15 juin 2026, sous conditions (IMC ≥ 40, ou ≥ 35 avec comorbidité, après 6 mois de prise en charge nutritionnelle). Faites notre test d'éligibilité pour vérifier vos critères.` },
+  { q: `Comment savoir si une pharmacie de ${city} a Ozempic en stock ?`, a: `Appelez avant de vous déplacer avec votre ordonnance. La pharmacie peut aussi commander auprès de son grossiste, généralement sous 24 à 48 h. La pénurie d'Ozempic est terminée : l'ANSM a levé toutes les restrictions en juin 2025 et ne signale aucune tension en 2026.` },
+  { q: `Quel est le reste à charge sur Ozempic à ${city} ?`, a: `Hors ALD, le reste à charge est d'environ 54 € par stylo (remboursement 30 % sur 77,60 €), souvent réduit par la mutuelle. Les patients diabétiques en ALD (affection longue durée) sont pris en charge à 100 % : aucun reste à charge.` },
+];
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+});
+---
+
+<StaticLayout
+  title={`Prix Ozempic à ${city} 2026 : 77,60 € (officiel) — Pharmacies et Disponibilité`}
+  description={`Prix d'Ozempic à ${city} : 77,60 € TTC le stylo, identique dans les ${nb} pharmacies de la ville. Remboursé 30 % (diabète type 2), 100 % en ALD. Où le trouver et vérifier la disponibilité.`}
+  keywords={`ozempic ${city.toLowerCase()}, prix ozempic ${city.toLowerCase()}, pharmacie ozempic ${city.toLowerCase()}`}
+>
+  <script type="application/ld+json" set:html={faqJsonLd} />
+  <div class="min-h-screen py-10" style="background: linear-gradient(160deg, #f0fdf4 0%, #ffffff 50%);">
+    <div class="container mx-auto px-4 max-w-3xl">
+
+      <h1 class="text-3xl md:text-4xl font-bold mb-4" style="color:#1a3c34;">Prix Ozempic à {city} : 77,60 € dans toutes les pharmacies</h1>
+
+      <p class="text-lg text-gray-700 mb-6">
+        Le prix d'Ozempic (sémaglutide) est <strong>officiel et identique</strong> dans les {nb} pharmacies
+        de {city} comme partout en France : <strong>77,60 € TTC par stylo</strong>, quel que soit le dosage
+        (0,25, 0,5 ou 1 mg). Inutile de comparer les officines — la seule chose à vérifier, c'est la
+        <strong>disponibilité en stock</strong>.
+      </p>
+
+      <h2 class="text-2xl font-bold mb-3" style="color:#1a3c34;">Prix et remboursement 2026</h2>
+      <div class="overflow-x-auto mb-2">
+        <table class="w-full bg-white rounded-xl shadow border border-gray-100 text-left">
+          <thead><tr style="background:#1a3c34; color:white;"><th class="p-3">Situation</th><th class="p-3">Prix du stylo</th><th class="p-3">Reste à charge</th></tr></thead>
+          <tbody>
+            <tr class="border-t border-gray-100">
+              <td class="p-3 font-medium">Diabète type 2 (remboursé 30 %)</td>
+              <td class="p-3">77,60 €</td>
+              <td class="p-3 text-gray-600">~54,32 € avant mutuelle</td>
+            </tr>
+            <tr class="border-t border-gray-100">
+              <td class="p-3 font-medium">Diabète type 2 en ALD (100 %)</td>
+              <td class="p-3">77,60 €</td>
+              <td class="p-3 text-gray-600">0 €</td>
+            </tr>
+            <tr class="border-t border-gray-100">
+              <td class="p-3 font-medium">Hors indication (non remboursé)</td>
+              <td class="p-3">77,60 €</td>
+              <td class="p-3 text-gray-600">77,60 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-gray-500 mb-6">Ozempic est indiqué et remboursé uniquement pour le diabète de type 2. Pour la perte de poids,
+        voir <a href={`/pharmacies/${Astro.params.ville}/prix-wegovy/`} style="color:#16a34a; font-weight:600;">Wegovy</a> et
+        <a href={`/pharmacies/${Astro.params.ville}/prix-mounjaro/`} style="color:#16a34a; font-weight:600;">Mounjaro</a>, remboursés à 65 % depuis le 15 juin 2026 —
+        <a href="/outils/test-eligibilite/" style="color:#16a34a; font-weight:600;">testez votre éligibilité en 2 minutes →</a></p>
+
+      <h2 class="text-2xl font-bold mb-3" style="color:#1a3c34;">Trouver Ozempic en stock à {city}</h2>
+      <p class="text-gray-700 mb-4">
+        La pénurie est terminée : l'ANSM a levé toutes les restrictions en juin 2025 et aucun GLP-1 ne figure sur la
+        liste des tensions d'approvisionnement en 2026. Toutes les pharmacies peuvent délivrer Ozempic sur ordonnance,
+        et commander sous 24-48 h si besoin. Quelques adresses parmi les {nb} pharmacies de {city} :
+      </p>
+      <div class="bg-white rounded-xl shadow border border-gray-100 p-4 mb-3">
+        <ul class="grid md:grid-cols-2 gap-x-6 gap-y-1 text-sm text-gray-700">
+          {shown.map((p) => <li>• {p.name} <span class="text-gray-400">({p.postal})</span></li>)}
+        </ul>
+      </div>
+      <p class="mb-8"><a href={`/pharmacies/${Astro.params.ville}/`} style="color:#16a34a; font-weight:600;">Voir les {nb} pharmacies de {city} sur la carte →</a></p>
+
+      {csos.length > 0 && (
+        <>
+          <h2 class="text-2xl font-bold mb-3" style="color:#1a3c34;">Suivi spécialisé dans le département {department}</h2>
+          <p class="text-gray-700 mb-4">
+            Ozempic peut être prescrit par tout médecin (généraliste ou spécialiste) pour le diabète de type 2.
+            Pour un accompagnement spécialisé — diabète complexe ou obésité associée — voici
+            {csos.length > 1 ? ' les centres hospitaliers spécialisés' : ' le centre hospitalier spécialisé'} du département :
+          </p>
+          <div class="bg-white rounded-xl shadow border border-gray-100 p-4 mb-8">
+            <ul class="space-y-2 text-sm text-gray-700">
+              {csos.map((c) => (
+                <li>
+                  <strong>{c.name}</strong>{c.parent_hospital ? ` — ${c.parent_hospital}` : ''}<br />
+                  <span class="text-gray-500">{c.postal_code} {c.city}{c.phone ? ` · ${c.phone}` : ''}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
+      )}
+
+      <h2 class="text-2xl font-bold mb-3" style="color:#1a3c34;">Questions fréquentes</h2>
+      <div class="space-y-4 mb-8">
+        {faq.map((f) => (
+          <details class="bg-white rounded-lg border border-gray-100 p-4">
+            <summary class="font-semibold cursor-pointer" style="color:#1a3c34;">{f.q}</summary>
+            <p class="mt-2 text-gray-700">{f.a}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="text-sm text-gray-500">
+        Pour aller plus loin : <a href="/collections/glp1-cout/prix-ozempic-france/" style="color:#16a34a;">prix Ozempic en France (guide complet)</a> ·
+        <a href="/collections/glp1-cout/remboursement-glp1-2026/" style="color:#16a34a;">remboursement GLP-1 2026</a> ·
+        <a href={`/pharmacies/${Astro.params.ville}/prix-wegovy/`} style="color:#16a34a;">prix Wegovy à {city}</a> ·
+        <a href={`/pharmacies/${Astro.params.ville}/prix-mounjaro/`} style="color:#16a34a;">prix Mounjaro à {city}</a> ·
+        <a href="/outils/carte-prix-pharmacies/" style="color:#16a34a;">carte des pharmacies</a>
+      </div>
+    </div>
+  </div>
+</StaticLayout>
