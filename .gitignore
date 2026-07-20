@@ -30,5 +30,5 @@ supabase/.temp/
 .claude/worktrees/
 .tmp_agent/
 
-# Claude Code local settings (peut contenir des cles dans les permissions)
+# Claude Code local settings (permissions locales, peut contenir des cles — jamais commit)
 .claude/settings.local.json
