@@ -45,10 +45,13 @@ export async function getStaticPaths() {
     c.centerLng = c.pharmacies.reduce((a, p) => a + Number(p.lng), 0) / c.pharmacies.length;
   }
 
-  // Top 100 villes seulement (budget build time)
-  const topCities = Object.values(byCity)
-    .sort((a, b) => b.pharmacies.length - a.pharmacies.length)
-    .slice(0, 100);
+  // Top 500 villes (palier 2 du rollout programmatique — était 100)
+  const allCitiesSorted = Object.values(byCity)
+    .sort((a, b) => b.pharmacies.length - a.pharmacies.length);
+  const topCities = allCitiesSorted.slice(0, 500);
+  // Villes disposant de pages prix dédiées (/pharmacies/[ville]/prix-*) — doit rester
+  // synchronisé avec PRICE_CITIES_LIMIT dans prix-mounjaro/wegovy/ozempic.astro
+  const priceCitySlugs = new Set(allCitiesSorted.slice(0, 200).map((c) => c.slug));
 
   // Calcule les "villes proches" pour chaque ville : même département d'abord, puis top global
   const sameDeptByCity = {};
@@ -94,11 +97,12 @@ export async function getStaticPaths() {
       sameDept: sameDeptByCity[c.slug] || [],
       topGlobal: topGlobalForOthers.filter((o) => o.slug !== c.slug).slice(0, 10),
       zipcodes: zipcodesByCity[c.slug] || [],
+      hasPricePages: priceCitySlugs.has(c.slug),
     },
   }));
 }
 
-const { city, sameDept = [], topGlobal = [], zipcodes = [] } = Astro.props;
+const { city, sameDept = [], topGlobal = [], zipcodes = [], hasPricePages = false } = Astro.props;
 const ville = city.slug;
 
 // Pharmacies sérialisées pour la mini-map (limitées à 1000 pour la perf)
@@ -130,12 +134,12 @@ const DEPT_NAMES = {
 };
 const villeCap = titleCase(city.city);
 
-// Stats par drug : prix moyen, min, max, pharmacies qui ont un prix
+// Prix officiels (BDPM / arrêtés JO du 28/05/2026, en vigueur 15/06/2026) — identiques dans toute la France
 const DRUGS = [
-  { slug: 'ozempic', name: 'Ozempic', note: 'remboursé 65% bithérapie metformine / 30% trithérapie insuline (DT2) — prix CEPS 80,18 €' },
-  { slug: 'wegovy', name: 'Wegovy', note: 'prix libéré, non remboursé' },
-  { slug: 'mounjaro', name: 'Mounjaro', note: 'prix libéré, non remboursé (avis HAS favorable nov. 2025, négociation CEPS en cours)' },
-  { slug: 'saxenda', name: 'Saxenda', note: 'prix libéré, non remboursé' },
+  { slug: 'ozempic', name: 'Ozempic', official: '77,60 €', officialMeta: 'TTC par stylo · identique France entière', note: 'remboursé 30% (diabète type 2) · 100% en ALD' },
+  { slug: 'wegovy', name: 'Wegovy', official: '146,91 – 195,10 €', officialMeta: 'selon dosage · prix réglementé identique partout', note: 'remboursé 65% depuis le 15/06/2026 (obésité, sous conditions)' },
+  { slug: 'mounjaro', name: 'Mounjaro', official: '176,10 – 433,80 €', officialMeta: 'selon dosage · prix réglementé identique partout', note: 'remboursé 65% depuis le 15/06/2026 (obésité, sous conditions)' },
+  { slug: 'saxenda', name: 'Saxenda', official: null, note: 'prix libre, non remboursé' },
 ];
 
 const drugStats = DRUGS.map((d) => {
@@ -163,31 +167,31 @@ const drugStats = DRUGS.map((d) => {
 
 const hasUserPrices = drugStats.some((d) => d.count > 0 && d.slug !== 'ozempic');
 
-// Top 10 pharmacies par prix Ozempic (80,18€ uniforme CEPS, donc tri alphabétique)
+// Prix réglementés identiques partout, donc tri alphabétique
 const topPharmacies = [...city.pharmacies]
   .sort((a, b) => a.name.localeCompare(b.name))
   .slice(0, 20);
 
 const title = `Pharmacies GLP-1 à ${villeCap} — Prix Ozempic, Wegovy, Mounjaro 2026`;
-const description = `${city.pharmacies.length} pharmacies référencées à ${villeCap} (${city.department}). Prix Ozempic officiel CEPS 80,18 € (remboursé 65% DT2 bithérapie), prix Wegovy et Mounjaro variables. Carte interactive + contributions communautaires.`;
+const description = `${city.pharmacies.length} pharmacies référencées à ${villeCap} (${city.department}). Prix officiels 2026 : Ozempic 77,60 €, Wegovy 146,91–195,10 €, Mounjaro 176,10–433,80 € (réglementés, remboursables sous conditions). Carte interactive.`;
 
 // FAQ schema
 const faq = [
   {
     q: `Combien de pharmacies vendent Ozempic, Wegovy ou Mounjaro à ${villeCap} ?`,
-    a: `Nous avons référencé ${city.pharmacies.length} pharmacies d'officine à ${villeCap}. Toutes peuvent potentiellement délivrer Ozempic (remboursé pour diabète type 2) sur ordonnance. Wegovy et Mounjaro sont également disponibles sur ordonnance mais leur prix varie selon l'officine.`,
+    a: `Nous avons référencé ${city.pharmacies.length} pharmacies d'officine à ${villeCap}. Toutes peuvent délivrer Ozempic, Wegovy ou Mounjaro sur ordonnance, et commander sous 24-48 h auprès de leur grossiste si le produit n'est pas en stock. Les prix sont réglementés et identiques dans toutes les officines.`,
   },
   {
     q: `Quel est le prix d'Ozempic à ${villeCap} ?`,
-    a: `Ozempic est vendu au prix public CEPS de **80,18 € par stylo**, identique dans toutes les pharmacies de France, y compris à ${villeCap}. En 2026, il est remboursé à **65 %** par l'Assurance Maladie en bithérapie avec metformine (et 30 % en trithérapie avec insuline) pour les patients atteints de diabète de type 2 — 100 % en ALD. Détails : [Prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/).`,
+    a: `Ozempic est vendu **77,60 € TTC par stylo**, prix identique dans toutes les pharmacies de France, y compris à ${villeCap}. Il est remboursé à **30 %** par l'Assurance Maladie pour le diabète de type 2 (et à **100 %** pour les patients en ALD). Détails : [Prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/).`,
   },
   {
     q: `Wegovy et Mounjaro sont-ils remboursés à ${villeCap} ?`,
-    a: `Non. Wegovy et Mounjaro ne sont pas remboursés par l'Assurance Maladie en France (avril 2026). Leur prix est libéré, ce qui signifie que chaque pharmacie fixe son propre tarif. Les prix observés varient généralement entre 169 et 360 € pour Wegovy et entre 230 et 440 € pour Mounjaro selon le dosage.`,
+    a: `Oui, depuis le **15 juin 2026**, Wegovy et Mounjaro sont remboursés à **65 %** par l'Assurance Maladie dans l'obésité, sous conditions : IMC ≥ 40, ou IMC ≥ 35 avec comorbidité, après 6 mois de prise en charge nutritionnelle, avec primo-prescription par un spécialiste de l'obésité (CSO/CHU). Leurs prix sont réglementés et identiques partout : Wegovy 146,91 à 195,10 € et Mounjaro 176,10 à 433,80 € selon le dosage.`,
   },
   {
     q: `Comment obtenir une ordonnance pour ces traitements ?`,
-    a: `Tous les traitements GLP-1 nécessitent une prescription médicale. Pour Ozempic et Wegovy, la restriction aux endocrinologues a été levée en juin 2025 : tout médecin peut désormais prescrire. Pour une téléconsultation rapide, vous pouvez passer par des plateformes comme Charles ou Annette.`,
+    a: `Tous les traitements GLP-1 nécessitent une prescription médicale. Pour Ozempic (diabète de type 2), tout médecin peut prescrire. Pour Wegovy et Mounjaro remboursés dans l'obésité, la première prescription doit venir d'un spécialiste (CSO, CHU) — le renouvellement peut ensuite être fait par votre médecin traitant. Vérifiez d'abord vos critères avec notre [test d'éligibilité](/outils/test-eligibilite/).`,
   },
 ];
 ---
@@ -343,27 +347,25 @@ const faq = [
                 <h3>{d.name}</h3>
                 <span class="drug-note">{d.note}</span>
               </div>
-              {d.count > 0 ? (
+              {d.official ? (
                 <div class="drug-stats">
-                  {d.slug === 'ozempic' ? (
-                    <div class="drug-price-row">
-                      <div class="price-label">Prix officiel</div>
-                      <div class="price-big">80,18 €</div>
-                      <div class="price-meta">par stylo · identique France entière</div>
-                    </div>
-                  ) : (
-                    <>
-                      <div class="drug-price-row">
-                        <div class="price-label">Prix le plus bas</div>
-                        <div class="price-big">{d.min.toFixed(2)} €</div>
-                      </div>
-                      <div class="drug-price-row">
-                        <div class="price-label">Prix moyen</div>
-                        <div class="price-mid">{d.avg.toFixed(2)} €</div>
-                        <div class="price-meta">{d.count} prix soumis</div>
-                      </div>
-                    </>
-                  )}
+                  <div class="drug-price-row">
+                    <div class="price-label">Prix officiel</div>
+                    <div class="price-big">{d.official}</div>
+                    <div class="price-meta">{d.officialMeta}</div>
+                  </div>
+                </div>
+              ) : d.count > 0 ? (
+                <div class="drug-stats">
+                  <div class="drug-price-row">
+                    <div class="price-label">Prix le plus bas</div>
+                    <div class="price-big">{d.min.toFixed(2)} €</div>
+                  </div>
+                  <div class="drug-price-row">
+                    <div class="price-label">Prix moyen</div>
+                    <div class="price-mid">{d.avg.toFixed(2)} €</div>
+                    <div class="price-meta">{d.count} prix soumis</div>
+                  </div>
                 </div>
               ) : (
                 <div class="drug-empty">
@@ -376,7 +378,7 @@ const faq = [
         </div>
 
         <p class="prices-note">
-          Les prix Wegovy, Mounjaro et Saxenda sont <strong>libérés</strong> (non remboursés) : chaque pharmacie fixe son tarif. Les valeurs ci-dessus proviennent des soumissions communautaires vérifiées. Pour une information temps réel, <a href="/outils/carte-prix-pharmacies/">consultez la carte</a>.
+          Depuis le <strong>15 juin 2026</strong>, les prix d'Ozempic, Wegovy et Mounjaro sont <strong>réglementés</strong> : identiques dans toutes les pharmacies, inutile de comparer. Seul Saxenda reste en prix libre. La vraie question est la <strong>disponibilité en stock</strong> — appelez avant de vous déplacer, ou <a href="/outils/carte-prix-pharmacies/">consultez la carte</a>.
         </p>
       </div>
     </section>
@@ -467,6 +469,13 @@ const faq = [
           <div class="interlinks-col">
             <h2>Ressources GLP-1</h2>
             <ul class="interlinks-list interlinks-simple">
+              {hasPricePages && (
+                <>
+                  <li><a href={`/pharmacies/${ville}/prix-mounjaro/`}>Prix Mounjaro à {villeCap}</a></li>
+                  <li><a href={`/pharmacies/${ville}/prix-wegovy/`}>Prix Wegovy à {villeCap}</a></li>
+                  <li><a href={`/pharmacies/${ville}/prix-ozempic/`}>Prix Ozempic à {villeCap}</a></li>
+                </>
+              )}
               <li><a href="/outils/carte-prix-pharmacies/">🗺️ Carte des prix pharmacies</a></li>
               <li><a href="/pharmacies/">Annuaire pharmacies par ville</a></li>
               <li><a href="/collections/glp1-cout/prix-ozempic-france/">Prix Ozempic</a></li>
@@ -484,8 +493,8 @@ const faq = [
     <!-- Disclaimer -->
     <section class="ville-disclaimer">
       <p>
-        <strong>Avertissement médical :</strong> cette page est informative et ne remplace pas un avis médical. Tous les traitements GLP-1 nécessitent une prescription médicale. Les prix indiqués (hors Ozempic) sont des contributions communautaires, vérifiez le tarif directement auprès de la pharmacie.
-        Sources : référentiel FINESS (Atlasanté / data.gouv.fr), CEPS.
+        <strong>Avertissement médical :</strong> cette page est informative et ne remplace pas un avis médical. Tous les traitements GLP-1 nécessitent une prescription médicale. Les prix d'Ozempic, Wegovy et Mounjaro sont réglementés (arrêtés JO du 28 mai 2026, en vigueur au 15 juin 2026) et identiques dans toutes les pharmacies ; Saxenda reste en prix libre.
+        Sources : référentiel FINESS (Atlasanté / data.gouv.fr), Base de données publique des médicaments, Légifrance.
       </p>
     </section>
   </div>

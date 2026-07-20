@@ -35,14 +35,14 @@ export async function getStaticPaths() {
     });
   }
 
-  // Top 100 villes (même seuil que [ville].astro)
+  // Top 500 villes (même seuil que [ville].astro)
   const cityCounts = new Map<string, number>();
   for (const row of pharmacies.rows) {
     const slug = row[iSlug];
     if (slug) cityCounts.set(slug, (cityCounts.get(slug) || 0) + 1);
   }
   const validCitySlugs = new Set(
-    [...cityCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 100).map(([s]) => s)
+    [...cityCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 500).map(([s]) => s)
   );
 
   // Génère une page par zipcode ayant >=3 pharmacies (évite les pages 1-row sans valeur)
@@ -72,7 +72,7 @@ function titleCase(s) { return (s || '').toLowerCase().replace(/\b\w/g, (c) => c
 const cityCap = titleCase(city);
 
 const title = `Pharmacies GLP-1 ${zip} (${cityCap}) — Prix Ozempic, Wegovy, Mounjaro`;
-const description = `${pharmas.length} pharmacies au code postal ${zip} à ${cityCap}. Prix Ozempic officiel 80,18 €, prix Wegovy / Mounjaro / Saxenda estimés par pharmacie.`;
+const description = `${pharmas.length} pharmacies au code postal ${zip} à ${cityCap}. Prix officiels 2026 : Ozempic 77,60 €, Wegovy 146,91–195,10 €, Mounjaro 176,10–433,80 € (réglementés, identiques partout).`;
 
 // Autres codes postaux de la même ville
 import fs2 from 'node:fs';
@@ -121,7 +121,7 @@ const mapPharmas = pharmas.slice(0, 500).map((p) => ({ id: p.id, name: p.name, l
           <strong>{zip}</strong>
         </nav>
         <h1>Pharmacies code postal {zip} — {cityCap}</h1>
-        <p class="zip-hero-sub"><strong>{pharmas.length} pharmacies</strong> référencées dans le secteur {zip} ({cityCap}, {dept}). Prix Ozempic officiel CEPS, estimations Wegovy/Mounjaro/Saxenda.</p>
+        <p class="zip-hero-sub"><strong>{pharmas.length} pharmacies</strong> référencées dans le secteur {zip} ({cityCap}, {dept}). Prix Ozempic, Wegovy et Mounjaro réglementés, identiques dans toutes les officines.</p>
         <div class="zip-ctas">
           <a href="/outils/carte-prix-pharmacies/" class="btn-primary">Carte interactive complète →</a>
           {hasCityPage && <a href={`/pharmacies/${citySlug}/`} class="btn-secondary">Retour à {cityCap}</a>}
@@ -209,7 +209,7 @@ const mapPharmas = pharmas.slice(0, 500).map((p) => ({ id: p.id, name: p.name, l
     )}
 
     <section class="zip-disclaimer">
-      <p>Source : référentiel FINESS (data.gouv.fr / Atlasanté). Cette page est informative ; consultez la pharmacie pour confirmer les prix des traitements en prix libéré (Wegovy, Mounjaro, Saxenda).</p>
+      <p>Source : référentiel FINESS (data.gouv.fr / Atlasanté). Cette page est informative. Les prix d'Ozempic, Wegovy et Mounjaro sont réglementés et identiques dans toutes les pharmacies (arrêtés en vigueur au 15 juin 2026) ; seul Saxenda reste en prix libre.</p>
     </section>
   </div>
 

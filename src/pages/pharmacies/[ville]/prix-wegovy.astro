@@ -2,8 +2,8 @@
 import StaticLayout from '../../../layouts/StaticLayout.astro';
 import { getPriceCityPaths, titleCaseCity } from '../../../lib/pharmacyCityData';
 
-// SEO local (top 200 villes) — cible "mounjaro [ville]", "pharmacie mounjaro [ville]".
-// Prix réglementés depuis le 15/06/2026 : la page mise sur l'annuaire + la dispo + le parcours CSO.
+// SEO local (top 200 villes) — cible "wegovy [ville]", "prix wegovy [ville]", "pharmacie wegovy [ville]".
+// Prix réglementés depuis le 15/06/2026 : annuaire + disponibilité + parcours CSO.
 
 export async function getStaticPaths() {
   return getPriceCityPaths();
@@ -15,17 +15,16 @@ const nb = pharmacies.length;
 const shown = pharmacies.slice(0, 25);
 
 const DOSES = [
-  { dose: '2,5 mg (initiation)', prix: '176,10 €' },
-  { dose: '5 mg', prix: '237,68 €' },
-  { dose: '7,5 – 10 mg', prix: '335,95 €' },
-  { dose: '12,5 – 15 mg', prix: '433,80 €' },
+  { dose: '0,25 – 1 mg (initiation et titration)', prix: '146,91 €' },
+  { dose: '1,7 mg', prix: '169,31 €' },
+  { dose: '2,4 mg (dose d’entretien)', prix: '195,10 €' },
 ];
 
 const faq = [
-  { q: `Quel est le prix de Mounjaro à ${city} ?`, a: `Le prix de Mounjaro est réglementé et identique dans toutes les pharmacies de ${city} comme partout en France depuis le 15 juin 2026 : de 176,10 € (2,5 mg) à 433,80 € (15 mg) par mois selon le dosage. Il est remboursé à 65 % par l'Assurance Maladie sous conditions.` },
-  { q: `Quelle pharmacie de ${city} vend Mounjaro le moins cher ?`, a: `Aucune : depuis l'inscription au remboursement (15 juin 2026), le prix est fixé par l'État et identique dans toutes les pharmacies. Inutile de comparer les prix — la vraie question est la disponibilité en stock.` },
-  { q: `Comment savoir si une pharmacie de ${city} a Mounjaro en stock ?`, a: `Appelez avant de vous déplacer avec votre ordonnance. La pharmacie peut aussi commander auprès de son grossiste, généralement sous 24 à 48 h. Aucune tension d'approvisionnement n'est signalée par l'ANSM en 2026.` },
-  { q: `Mounjaro est-il remboursé à ${city} ?`, a: `Oui, comme partout en France : 65 % par l'Assurance Maladie si IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après 6 mois de prise en charge nutritionnelle, avec une première prescription par un spécialiste de l'obésité (CSO, CHU). Votre mutuelle peut couvrir les 35 % restants.` },
+  { q: `Quel est le prix de Wegovy à ${city} ?`, a: `Le prix de Wegovy est réglementé et identique dans toutes les pharmacies de ${city} comme partout en France depuis le 15 juin 2026 : de 146,91 € (dosages d'initiation 0,25 à 1 mg) à 195,10 € (2,4 mg, dose d'entretien) par mois. Il est remboursé à 65 % par l'Assurance Maladie sous conditions.` },
+  { q: `Quelle pharmacie de ${city} vend Wegovy le moins cher ?`, a: `Aucune : depuis l'inscription au remboursement (15 juin 2026), le prix est fixé par l'État et identique dans toutes les pharmacies. Inutile de comparer les prix — la vraie question est la disponibilité en stock.` },
+  { q: `Comment savoir si une pharmacie de ${city} a Wegovy en stock ?`, a: `Appelez avant de vous déplacer avec votre ordonnance. La pharmacie peut aussi commander auprès de son grossiste, généralement sous 24 à 48 h. Aucune tension d'approvisionnement n'est signalée par l'ANSM en 2026.` },
+  { q: `Wegovy est-il remboursé à ${city} ?`, a: `Oui, comme partout en France : 65 % par l'Assurance Maladie si IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après 6 mois de prise en charge nutritionnelle, avec une première prescription par un spécialiste de l'obésité (CSO, CHU). Votre mutuelle peut couvrir les 35 % restants.` },
 ];
 
 const faqJsonLd = JSON.stringify({
@@ -36,18 +35,18 @@ const faqJsonLd = JSON.stringify({
 ---
 
 <StaticLayout
-  title={`Prix Mounjaro à ${city} 2026 : 176,10 € (réglementé) — Pharmacies et Disponibilité`}
-  description={`Prix de Mounjaro à ${city} : 176,10 à 433,80 €/mois, identique dans les ${nb} pharmacies de la ville (prix réglementé). Remboursé 65 %. Où le trouver et vérifier la disponibilité.`}
-  keywords={`mounjaro ${city.toLowerCase()}, prix mounjaro ${city.toLowerCase()}, pharmacie mounjaro ${city.toLowerCase()}`}
+  title={`Prix Wegovy à ${city} 2026 : 146,91 € (réglementé) — Pharmacies et Disponibilité`}
+  description={`Prix de Wegovy à ${city} : 146,91 à 195,10 €/mois, identique dans les ${nb} pharmacies de la ville (prix réglementé). Remboursé 65 %. Où le trouver et vérifier la disponibilité.`}
+  keywords={`wegovy ${city.toLowerCase()}, prix wegovy ${city.toLowerCase()}, pharmacie wegovy ${city.toLowerCase()}`}
 >
   <script type="application/ld+json" set:html={faqJsonLd} />
   <div class="min-h-screen py-10" style="background: linear-gradient(160deg, #f0fdf4 0%, #ffffff 50%);">
     <div class="container mx-auto px-4 max-w-3xl">
 
-      <h1 class="text-3xl md:text-4xl font-bold mb-4" style="color:#1a3c34;">Prix Mounjaro à {city} : le même dans toutes les pharmacies (et c'est une bonne nouvelle)</h1>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4" style="color:#1a3c34;">Prix Wegovy à {city} : le même dans toutes les pharmacies (et c'est une bonne nouvelle)</h1>
 
       <p class="text-lg text-gray-700 mb-6">
-        Vous cherchez la pharmacie la moins chère de {city} pour Mounjaro (tirzépatide) ? Depuis le
+        Vous cherchez la pharmacie la moins chère de {city} pour Wegovy (sémaglutide) ? Depuis le
         <strong>15 juin 2026</strong>, la question ne se pose plus : le prix est <strong>réglementé par l'État</strong> et
         identique dans les {nb} pharmacies de la ville. Fini les écarts de prix — la seule chose à vérifier, c'est la
         <strong>disponibilité en stock</strong>.
@@ -71,9 +70,9 @@ const faqJsonLd = JSON.stringify({
       <p class="text-sm text-gray-500 mb-6">* Si éligible au remboursement (IMC ≥ 35 avec comorbidité ou ≥ 40) ; votre mutuelle peut couvrir ce reste à charge.
         <a href="/outils/test-eligibilite/" style="color:#16a34a; font-weight:600;">Vérifiez votre éligibilité en 2 minutes →</a></p>
 
-      <h2 class="text-2xl font-bold mb-3" style="color:#1a3c34;">Trouver Mounjaro en stock à {city}</h2>
+      <h2 class="text-2xl font-bold mb-3" style="color:#1a3c34;">Trouver Wegovy en stock à {city}</h2>
       <p class="text-gray-700 mb-4">
-        Toutes les pharmacies peuvent délivrer Mounjaro sur ordonnance, et commander sous 24-48 h si besoin.
+        Toutes les pharmacies peuvent délivrer Wegovy sur ordonnance, et commander sous 24-48 h si besoin.
         L'ANSM ne signale aucune tension d'approvisionnement en 2026. Appelez avant de vous déplacer. Quelques adresses parmi les {nb} pharmacies de {city} :
       </p>
       <div class="bg-white rounded-xl shadow border border-gray-100 p-4 mb-3">
@@ -87,7 +86,7 @@ const faqJsonLd = JSON.stringify({
         <>
           <h2 class="text-2xl font-bold mb-3" style="color:#1a3c34;">Où obtenir la première prescription (département {department})</h2>
           <p class="text-gray-700 mb-4">
-            Pour être remboursé, Mounjaro doit d'abord être prescrit par un <strong>spécialiste de l'obésité</strong> —
+            Pour être remboursé, Wegovy doit d'abord être prescrit par un <strong>spécialiste de l'obésité</strong> —
             en pratique un Centre Spécialisé Obésité (CSO) ou un service hospitalier. Le renouvellement peut ensuite être
             fait par votre médecin traitant. Voici {csos.length > 1 ? 'les centres' : 'le centre'} du département :
           </p>
@@ -115,9 +114,9 @@ const faqJsonLd = JSON.stringify({
       </div>
 
       <div class="text-sm text-gray-500">
-        Pour aller plus loin : <a href="/collections/glp1-cout/prix-mounjaro-france/" style="color:#16a34a;">prix Mounjaro en France (guide complet)</a> ·
+        Pour aller plus loin : <a href="/collections/glp1-cout/prix-wegovy-france/" style="color:#16a34a;">prix Wegovy en France (guide complet)</a> ·
         <a href="/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/" style="color:#16a34a;">conditions du remboursement</a> ·
-        <a href={`/pharmacies/${Astro.params.ville}/prix-wegovy/`} style="color:#16a34a;">prix Wegovy à {city}</a> ·
+        <a href={`/pharmacies/${Astro.params.ville}/prix-mounjaro/`} style="color:#16a34a;">prix Mounjaro à {city}</a> ·
         <a href={`/pharmacies/${Astro.params.ville}/prix-ozempic/`} style="color:#16a34a;">prix Ozempic à {city}</a> ·
         <a href="/outils/carte-prix-pharmacies/" style="color:#16a34a;">carte des pharmacies</a>
       </div>
