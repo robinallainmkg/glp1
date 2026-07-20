@@ -7,7 +7,7 @@ keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy prix phar
 seoTitle: "Wegovy Prix Pharmacie Moins Cher 2026 : dès 146,91€, remboursé 65%"
 seoDescription: "Wegovy prix pharmacie juillet 2026 : 146,91 à 195,10€/mois (prix réglementé, identique partout). Remboursé 65% Sécu depuis juin 2026. Carte des pharmacies disponibles, éligibilité et reste à charge. Mis à jour."
 publishedAt: '2025-01-28'
-updatedAt: '2026-07-19'
+updatedAt: '2026-07-20'
 date: '2026-07-19'
 featured: true
 author: 'Dr. Marie Dubois'
@@ -218,6 +218,8 @@ Depuis le 15 juin 2026, le prix de Wegovy est **réglementé et identique dans t
   <br><br>
   <a href="/outils/carte-prix-pharmacies/" class="cta-button">→ Voir la carte des pharmacies Wegovy disponibles</a>
 </div>
+
+Retrouvez aussi nos pages locales avec la liste des pharmacies et les centres de primo-prescription (CSO/CHU) de votre département : [Wegovy à Paris](/pharmacies/paris/prix-wegovy/), [Marseille](/pharmacies/marseille/prix-wegovy/), [Lyon](/pharmacies/lyon/prix-wegovy/), [Toulouse](/pharmacies/toulouse/prix-wegovy/), [Nice](/pharmacies/nice/prix-wegovy/), [Nantes](/pharmacies/nantes/prix-wegovy/), [Bordeaux](/pharmacies/bordeaux/prix-wegovy/), [Lille](/pharmacies/lille/prix-wegovy/) — ou l'[annuaire complet des pharmacies par ville](/pharmacies/).
 
 ### Prix Wegovy en Espagne et en Belgique (mars 2026)
 
