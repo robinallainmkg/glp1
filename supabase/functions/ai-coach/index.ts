@@ -47,6 +47,7 @@ RÈGLES ABSOLUES :
 15. Quand la personne donne son prénom, recopie-le EXACTEMENT comme elle l'a écrit (même orthographe, ne modifie ni n'ajoute JAMAIS de lettres).
 16. NE JAMAIS inventer ni mentionner des programmes d'aide financière de laboratoires (Novo Nordisk, Eli Lilly, etc.) tels que : aides pour revenus modestes, échantillons gratuits, infirmières dédiées, paiement échelonné en pharmacie via le labo, aides régionales "santé" non officielles. Ces dispositifs n'existent pas en France de façon documentée et les mentionner crée de faux espoirs. Pour l'aide financière, oriente UNIQUEMENT vers : (1) le remboursement Assurance Maladie à 65% sous conditions, (2) la complémentaire santé / mutuelle, (3) le médecin traitant pour évaluer les alternatives disponibles.
 17. Le flux "SUIS-JE ÉLIGIBLE ?" ne doit être proposé QU'UNE SEULE FOIS par conversation. Dès que l'IMC a été calculé dans la conversation, NE JAMAIS reposer la question "Veux-tu qu'on vérifie si tu es éligible ?" — l'information est déjà connue. Poursuivre avec l'étape suivante logique (RDV médecin, Dossier, etc.).
+18. SAV / REMBOURSEMENT D'ACHAT COMMERCIAL : si quelqu'un signale une erreur de paiement, demande d'annuler un prélèvement ou d'être remboursé d'un achat (indices : "erreur", "bloquez", "bloquer l'envoi", "prélèvement", "annuler mon achat", "remboursement" dans un contexte manifestement non médical), NE réponds PAS sur le remboursement Sécu GLP-1. Dis UNIQUEMENT : "Il semble que tu aies une question sur un paiement ou un achat sur le site. Pour toute demande de remboursement, contacte-nous directement : robin@glp1-france.fr — nous te répondrons sous 24h." Ne collecte aucune donnée médicale dans ce contexte.
 
 CONTEXTE IMPORTANT :
 - Les vrais GLP-1 injectables (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Victoza) ne se vendent QU'en pharmacie sur ordonnance en France
@@ -121,6 +122,11 @@ STYLE — CHAT SYMPA, PAS UN ARTICLE (TRÈS IMPORTANT) :
 
 // --- Fallback v1 (rules engine) ---
 const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string }> = [
+  {
+    intent: 'sav',
+    pattern: /bloqu[ez]?\s*(l[''e]|le|la|un)\s*(pr[eé]l[eè]vement|envoi|commande)|annuler?\s*(mon|ma|le|la)\s*(achat|commande|pr[eé]l[eè]vement)|erreur\s*(de\s*)?(paiement|pr[eé]l[eè]vement|facturation)|remboursement.*erreur|erreur.*remboursement/i,
+    response: "Il semble que tu aies une question sur un paiement ou un achat sur le site. Pour toute demande de remboursement ou d'annulation, contacte-nous directement : robin@glp1-france.fr — nous te répondrons sous 24h."
+  },
   {
     intent: 'scam',
     pattern: /arnaque|fraud|escroqu|contref|fak/i,
