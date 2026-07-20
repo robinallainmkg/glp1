@@ -249,7 +249,9 @@ Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo
 
 
 
-*Prix mis à jour en mars 2026. Les tarifs peuvent varier selon les pharmacies et régions.*
+*Prix mis à jour en juillet 2026. Le prix d'Ozempic est officiel et identique dans toutes les pharmacies françaises.*
+
+Retrouvez nos pages locales avec la liste des pharmacies de votre ville : [Ozempic à Paris](/pharmacies/paris/prix-ozempic/), [Marseille](/pharmacies/marseille/prix-ozempic/), [Lyon](/pharmacies/lyon/prix-ozempic/), [Toulouse](/pharmacies/toulouse/prix-ozempic/), [Nice](/pharmacies/nice/prix-ozempic/), [Nantes](/pharmacies/nantes/prix-ozempic/), [Bordeaux](/pharmacies/bordeaux/prix-ozempic/), [Lille](/pharmacies/lille/prix-ozempic/) — ou l'[annuaire complet des pharmacies par ville](/pharmacies/).
 
 ## ❓ Questions Fréquentes sur le Prix d'Ozempic
 

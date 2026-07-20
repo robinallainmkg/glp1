@@ -292,6 +292,8 @@ Depuis le 15 juin 2026, le prix de Mounjaro est **réglementé et identique dans
 
 La carte recense les pharmacies ayant du Mounjaro en stock, classées par département et par dosage. Elle est mise à jour régulièrement par notre équipe.
 
+Retrouvez aussi nos pages locales avec la liste des pharmacies et les centres de primo-prescription (CSO/CHU) de votre département : [Mounjaro à Paris](/pharmacies/paris/prix-mounjaro/), [Marseille](/pharmacies/marseille/prix-mounjaro/), [Lyon](/pharmacies/lyon/prix-mounjaro/), [Toulouse](/pharmacies/toulouse/prix-mounjaro/), [Nice](/pharmacies/nice/prix-mounjaro/), [Nantes](/pharmacies/nantes/prix-mounjaro/), [Bordeaux](/pharmacies/bordeaux/prix-mounjaro/), [Lille](/pharmacies/lille/prix-mounjaro/) — ou l'[annuaire complet des pharmacies par ville](/pharmacies/).
+
 ### Rappel des prix par dosage
 
 | Dosage | Prix pharmacie | Reste à charge (65% remboursé) |
