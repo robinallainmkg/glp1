@@ -7,7 +7,7 @@ seoTitle: "Prix Ozempic France 2026 : 77,60€/stylo pharmacie, remboursé diab�
 seoDescription: "Prix Ozempic 2026 : 77,60€ TTC/stylo en pharmacie. Remboursé pour le diabète T2. Dosages, reste à charge mutuelle, comparatif Wegovy/Mounjaro."
 mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
-updatedAt: '2026-07-18'
+updatedAt: '2026-07-20'
 date: 2026-06-22
 featured: true
 author: 'Dr. Marie Dubois'
@@ -37,7 +37,7 @@ faqSchema:
   "description": "Prix Ozempic en pharmacie : 77,60€ TTC par stylo. Remboursé à 30% par l'Assurance Maladie (100% en ALD) : reste à charge d'environ 54€/mois avant mutuelle.",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-ozempic-france",
   "datePublished": "2025-01-28",
-  "dateModified": "2025-12-27",
+  "dateModified": "2026-07-20",
   "author": {
     "@type": "Person",
     "name": "Dr. Marie Dubois"
@@ -124,7 +124,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo
 
 ### Démarches pour le remboursement
 
-1. **Ordonnance médicale** : Prescription par endocrinologue ou diabétologue
+1. **Ordonnance médicale** : Prescription par tout médecin (médecin traitant, endocrinologue ou diabétologue)
 2. **Formulaire obligatoire** : Remplir le formulaire de demande (obligatoire depuis février 2025)
 3. **Carte Vitale** : Présentation en pharmacie
 4. **Remboursement automatique** : 30% du prix réglementé (100% en ALD)
@@ -166,8 +166,8 @@ Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo
 
 ### Associations de patients
 
-- **Association Française des Diabétiques (AFD)** : Aide financière ponctuelle
-- **Contact** : 01 42 81 28 81
+- **Fédération Française des Diabétiques (FFD)** : Aide et accompagnement des patients
+- **Contact** : 01 40 09 24 25
 
 ## 🛒 Ozempic Sans Ordonnance : Prix et Risques en 2026
 
@@ -227,7 +227,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo
 | Critère | Ozempic | Wegovy | Saxenda |
 |---------|---------|--------|---------|
 | Prix mensuel | 77,60 € | 146,91-195,10 € | 240-300 € |
-| Perte poids moyenne | -15% | -20% | -8% |
+| Perte poids moyenne | -6 à -7% | -15% | -8% |
 | Remboursement | 30% (DT2, 100% en ALD) | 65% obésité (depuis 15/06/2026) | Non remboursé |
 | Rapport qualité/prix | Bon (si DT2) | Accessible (si éligible) | Coûteux |
 
@@ -327,11 +327,7 @@ Plusieurs solutions existent pour réduire drastiquement le coût d'Ozempic :
 - Demande : Votre médecin remplit le protocole ALD
 - Validation : Par le médecin conseil de l'Assurance Maladie
 
-**4. Programme patient Novo Nordisk**
-- Réductions pour les premiers mois
-- Numéro gratuit : **0 800 80 16 05**
-
-**5. Associations de patients**
+**4. Associations de patients**
 - Association Française des Diabétiques (AFD)
 - Aides ponctuelles selon situation
 - Contact : **01 40 09 24 25**
@@ -418,7 +414,7 @@ En pratique, avec le dosage progressif, le coût reste identique :
 **Ozempic (sémaglutide - GLP-1 simple) :**
 - Prix pharmacie : 77,60€ TTC/mois (1 stylo = 4 doses)
 - Après remboursement (30%) : **~54€/mois** avant mutuelle, 0€ en ALD
-- Perte de poids moyenne : -15%
+- Perte de poids moyenne : -6 à -7% (essais SUSTAIN/STEP-2, sémaglutide 1 mg)
 - Disponible depuis : 2019
 
 **Mounjaro (tirzépatide - Dual GLP-1/GIP, Eli Lilly) :**

@@ -5,7 +5,7 @@ description: "Wegovy est remboursé à 65% par l'Assurance Maladie depuis le 15 
 seoDescription: "Wegovy remboursement 2026 : 65% Sécu depuis le 15/06/2026, la mutuelle complète le ticket modérateur de 35% (~51-68€/mois). Conditions, démarches, aides."
 pubDate: 2025-08-23
 date: '2026-06-22'
-updatedAt: '2026-06-22'
+updatedAt: '2026-07-20'
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
@@ -46,7 +46,7 @@ Le Wegovy (semaglutide) représente une avancée majeure dans le traitement de l
 ### Le défi financier
 
 - **Coût mensuel** : 146,91 à 195,10€ par mois selon le dosage (prix réglementé)
-- **Coût annuel** : environ 1 900 à 2 300€ par an (prix brut, avant remboursement)
+- **Coût annuel** : environ 1 760 à 2 340€ par an (prix brut, avant remboursement)
 
 Depuis le 15 juin 2026, le remboursement à 65 % par l'Assurance Maladie réduit fortement ce coût pour les patients éligibles : le reste à charge (ticket modérateur de 35 %) est d'environ 51 à 68€/mois avant intervention de la mutuelle.
 
@@ -83,11 +83,13 @@ Il n'existe pas de classement officiel des mutuelles pour Wegovy : la prise en c
 
 ### Étape 1 : Consultation médicale spécialisée
 
-La première étape consiste à consulter un professionnel habilité :
+Pour la **première prescription ouvrant droit au remboursement**, seuls certains prescripteurs sont habilités (arrêtés du 10 juin 2026) :
 
-- Endocrinologue ou diabétologue
-- Médecin nutritionniste
-- Médecin généraliste formé en diabétologie
+- Endocrinologue-diabétologue-nutritionniste exerçant en centre spécialisé de l'obésité (CSO), en SMR spécialisé ou en CHU
+- Chirurgien bariatrique titulaire du DIU
+- Médecin coordinateur d'un parcours « obésité complexe », ou endocrinologue en lien formalisé avec un CSO
+
+Votre médecin traitant ne peut pas initier la prescription remboursable, mais il peut vous orienter vers un CSO/CHU — et c'est lui qui assurera ensuite les **renouvellements**.
 
 **Documents à préparer :**
 - Historique de poids sur 2 ans

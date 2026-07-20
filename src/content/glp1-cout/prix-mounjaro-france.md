@@ -6,7 +6,7 @@ keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounj
 seoTitle: "Mounjaro Prix 2026 : 176€/mois [Prix Réglementé] Pharmacie France"
 seoDescription: "Mounjaro prix France 2026 : 176 à 433€/mois selon dosage, prix réglementé identique partout. Remboursement Ameli 65% depuis le 15/06/2026. Mis à jour."
 publishedAt: '2025-09-06'
-updatedAt: '2026-06-22'
+updatedAt: '2026-07-20'
 date: 2026-06-22
 featured: true
 priority: 1
@@ -38,7 +38,7 @@ faqSchema:
   "description": "Prix Mounjaro en pharmacie : 176 à 433€/mois selon dosage. Remboursé à 65% par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité sous conditions.",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-mounjaro-france",
   "datePublished": "2025-09-06",
-  "dateModified": "2026-03-08",
+  "dateModified": "2026-07-20",
   "author": {
     "@type": "Person",
     "name": "Dr. Marie Dubois"
@@ -274,7 +274,8 @@ L'accès au traitement Mounjaro nécessite une prescription médicale. Pour bén
 
 ### Historique Tarifaire
 - **Novembre 2024** : Commercialisation de Mounjaro en France par Eli Lilly
-- **Novembre 2025** : Avis favorable de la Commission de la Transparence (HAS) pour le remboursement
+- **Septembre 2024** : Premier avis favorable de la Commission de la Transparence (HAS) pour le remboursement
+- **Novembre-décembre 2025** : Réévaluation HAS — feu vert confirmé et ASMR revalorisée (avis du 19/11/2025, publié en décembre)
 - **15 juin 2026** : Remboursement effectif à 65% par l'Assurance Maladie pour l'obésité
 
 ### Comparaison Européenne
@@ -426,7 +427,7 @@ Le reste à charge (35%) peut être complété par la mutuelle selon votre contr
 
 **Besoin d'aide ?**
 - 🏥 Assurance Maladie : **36 46** ou [ameli.fr](https://www.ameli.fr)
-- 💊 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
+- 💊 **Lilly France** (fabricant de Mounjaro) : [lilly.com/fr](https://www.lilly.com/fr) — rubrique contact
 
 ---
 
