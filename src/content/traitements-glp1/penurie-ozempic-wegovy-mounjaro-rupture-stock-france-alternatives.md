@@ -146,7 +146,7 @@ Oui. L'ANSM a acté la remise à disposition normale d'Ozempic en mai 2025 et le
 
 **Puis-je commander mes GLP-1 sur Internet ?**
 
-Non. Les médicaments sur ordonnance ne peuvent légalement être commandés que dans des pharmacies agréées. Les sites proposant des GLP-1 sans ordonnance ou à prix cassé sont illégaux et peuvent proposer des [contrefaçons et faux Ozempic](/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/) — certains cas ont été documentés avec des séquelles graves.
+Non. Les médicaments sur ordonnance ne peuvent légalement être commandés que dans des pharmacies agréées. Les sites proposant des GLP-1 sans ordonnance ou à prix cassé sont illégaux et peuvent proposer des [contrefaçons et faux Ozempic](/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/) — certains cas ont été documentés avec des séquelles graves. Nous expliquons en détail [pourquoi acheter Ozempic sans ordonnance est impossible et dangereux](/collections/traitements-glp1/ozempic-sans-ordonnance-achat-en-ligne-france/).
 
 **Les patients diabétiques sont-ils toujours prioritaires sur Ozempic ?**
 
