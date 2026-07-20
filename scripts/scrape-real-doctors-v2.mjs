@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { createClient } from '@supabase/supabase-js';
 import puppeteer from 'puppeteer';
 import fs from 'fs';
@@ -5,7 +6,7 @@ import fs from 'fs';
 // Configuration Supabase
 const supabase = createClient(
   'https://ywekaivgjzsmdocchvum.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY'
+  process.env.SUPABASE_ANON_KEY
 );
 
 // Villes principales à scraper

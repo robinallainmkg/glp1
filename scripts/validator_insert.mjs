@@ -1,6 +1,7 @@
+import 'dotenv/config';
 // Validator: insert correction tickets only (validation results already inserted)
 const SUPABASE_URL = "https://ywekaivgjzsmdocchvum.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NTM2NDQwNywiZXhwIjoyMDcwOTQwNDA3fQ.ryMev0CT2nnLWLG-5dtEeUEvWysi1dsa2e2yoq3w7Fs";
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const RUN_ID = "fe805da8-bf9b-47af-b001-2a3677f7317a";
 
 async function insert(table, data) {

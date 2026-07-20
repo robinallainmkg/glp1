@@ -1,10 +1,11 @@
+import 'dotenv/config';
 import { createClient } from '@supabase/supabase-js';
 import { readFileSync, writeFileSync } from 'fs';
 import { glob } from 'glob';
 import { execSync } from 'child_process';
 
 const SUPABASE_URL = 'https://ywekaivgjzsmdocchvum.supabase.co';
-const SERVICE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NTM2NDQwNywiZXhwIjoyMDcwOTQwNDA3fQ.ryMev0CT2nnLWLG-5dtEeUEvWysi1dsa2e2yoq3w7Fs';
+const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
 const CONTENT_DIR = 'C:/Users/robin/glp1/glp1/src/content';
 const PROJECT_DIR = 'C:/Users/robin/glp1/glp1';

@@ -43,6 +43,11 @@ jobs:
 
     - name: Build Astro site
       run: npm run astro:build
+      env:
+        SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
 
     # Détecte le scope du commit pour éviter le full sync (22k pharmacies)
     # quand aucun fichier "partagé" ou pharmacy-related n'a changé.

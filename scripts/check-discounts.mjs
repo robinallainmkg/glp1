@@ -1,8 +1,9 @@
+import 'dotenv/config';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
   'https://zvwmztqebfnykdkgdgwj.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp2d216dHFlYmZueWtka2dkZ3dqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5NDcyOTYsImV4cCI6MjA0OTUyMzI5Nn0.LQy-pQOGOQ1SL8D6z_sJQcUVoM_KH29aaJ7rGU_FKSE'
+  process.env.SUPABASE_ANON_KEY
 );
 
 async function checkDiscounts() {

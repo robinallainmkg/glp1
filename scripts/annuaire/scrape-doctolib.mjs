@@ -1,3 +1,4 @@
+import 'dotenv/config';
 #!/usr/bin/env node
 
 import { createClient } from '@supabase/supabase-js';
@@ -6,7 +7,7 @@ import fs from 'fs/promises';
 
 // Configuration Supabase
 const supabaseUrl = 'https://ywekaivgjzsmdocchvum.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY';
+const supabaseKey = process.env.SUPABASE_ANON_KEY;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 

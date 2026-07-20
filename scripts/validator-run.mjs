@@ -1,3 +1,4 @@
+import 'dotenv/config';
 /**
  * Validator Agent — Run complet
  * Effectue les 12 types de checks + Supabase + deploy
@@ -9,7 +10,7 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 const SUPABASE_URL = 'https://ywekaivgjzsmdocchvum.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NTM2NDQwNywiZXhwIjoyMDcwOTQwNDA3fQ.ryMev0CT2nnLWLG-5dtEeUEvWysi1dsa2e2yoq3w7Fs';
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 const ROOT = process.env.INIT_CWD || process.cwd();

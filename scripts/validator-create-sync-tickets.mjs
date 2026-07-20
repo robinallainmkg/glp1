@@ -1,3 +1,4 @@
+import 'dotenv/config';
 /**
  * Validator — Create sync tickets for ghost articles
  * Uses the validation_results from the latest run to create correction_tickets
@@ -7,7 +8,7 @@ import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
   'https://ywekaivgjzsmdocchvum.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NTM2NDQwNywiZXhwIjoyMDcwOTQwNDA3fQ.ryMev0CT2nnLWLG-5dtEeUEvWysi1dsa2e2yoq3w7Fs'
+  process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
 function log(msg) { console.log(`[validator-sync] ${msg}`); }
