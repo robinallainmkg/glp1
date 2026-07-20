@@ -3,8 +3,8 @@ title: "Prix Ozempic France 2026 : 77,60€ TTC Remboursé 30%"
 thumbnail: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 description: "Ozempic prix pharmacie 2026 : 77,60€ TTC/stylo, remboursé 30% pour le diabète (100% en ALD), reste ~54€/mois avant mutuelle. Ozempic 1 mg prix, comparatif dosages."
 keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic 1 mg prix', 'ozempic prix pharmacie', 'ozempic sans ordonnance prix', 'ozempic remboursement', 'ozempic prix sans ordonnance', 'ozempic 1 mg prix sans ordonnance', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'ozempic prix par mois']
-seoTitle: "Prix Ozempic France 2026 : 77,60€/stylo pharmacie, remboursé diabète"
-seoDescription: "Prix Ozempic 2026 : 77,60€ TTC/stylo en pharmacie. Remboursé pour le diabète T2. Dosages, reste à charge mutuelle, comparatif Wegovy/Mounjaro."
+seoTitle: "Prix Ozempic 2026 : 77,60€/stylo, remboursé 30% diabète (100% ALD)"
+seoDescription: "Ozempic prix pharmacie juillet 2026 : 77,60€ TTC/stylo, identique tous dosages. Remboursé 30% diabète type 2, 100% en ALD. Reste à charge ~54€/mois. Carte des pharmacies. Mis à jour."
 mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
 updatedAt: '2026-07-20'

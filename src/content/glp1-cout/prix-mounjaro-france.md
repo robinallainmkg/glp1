@@ -208,7 +208,7 @@ Mounjaro est un médicament soumis à prescription médicale. Depuis le 15 juin 
 
 ### Détails du remboursement
 
-Le remboursement de Mounjaro est effectif depuis le 15 juin 2026. Pour les détails complets sur les [conditions de remboursement de Mounjaro](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/), consultez notre guide dédié. Renseignez-vous auprès de votre médecin ou pharmacien pour connaître votre éligibilité.
+Le remboursement de Mounjaro est effectif depuis le 15 juin 2026. Pour les détails complets sur le parcours, lisez notre [guide accord préalable Mounjaro étape par étape](/collections/glp1-cout/remboursement-mounjaro-accord-prealable-etapes-2026/) : qui peut prescrire, quels documents préparer, délais CPAM. Consultez aussi les [conditions de remboursement de Mounjaro selon la HAS](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/) pour le détail réglementaire. Renseignez-vous auprès de votre médecin ou pharmacien pour connaître votre éligibilité.
 
 ## Couverture par les Mutuelles Complémentaires {#cout-reel}
 

@@ -13,6 +13,9 @@ thumbnailAlt: "Illustration pour l'article régime-mounjaro-optimal"
 featured: false
 priority: 5
 schema: "Article"
+seoTitle: "Régime Mounjaro Optimal 2026 : aliments, menus et protéines (guide complet)"
+seoDescription: "Régime sous Mounjaro (tirzépatide) : 30-35% protéines, aliments à privilégier, menus par phase d'escalade. 7 conseils pour maximiser la perte de poids. Mis à jour juillet 2026."
+updatedAt: '2026-07-20'
 mainKeyword: "régime Mounjaro alimentation optimale tirzepatide"
 
 # Configuration Affiliation

@@ -2,8 +2,8 @@
 title: "Pénurie Ozempic, Wegovy, Mounjaro : C'est Fini — Historique et Réflexes Utiles"
 description: "La pénurie d'Ozempic, Wegovy et Mounjaro est terminée : l'ANSM a levé toutes les restrictions en juin 2025 et aucun GLP-1 ne figure sur la liste des tensions en 2026. Retour sur la crise 2023-2025 et les bons réflexes à garder."
 keywords: ['penurie ozempic', 'rupture stock wegovy', 'penurie mounjaro', 'penurie glp1 pharmacie', 'ozempic indisponible pharmacie', 'alternative penurie glp1', 'rupture approvisionnement semaglutide']
-seoTitle: "Pénurie Ozempic Wegovy Mounjaro : Terminée en 2026 + Réflexes"
-seoDescription: "L'ANSM a levé toutes les restrictions en 2025. Ozempic, Wegovy et Mounjaro disponibles en 2026 — historique de la crise 2022-2025 et bons réflexes si une rupture de stock survenait."
+seoTitle: "Rupture Stock Ozempic / Wegovy / Mounjaro 2026 : trouver votre pharmacie"
+seoDescription: "Votre pharmacie n'a plus de Ozempic, Wegovy ou Mounjaro ? La pénurie nationale est résolue mais des ruptures locales persistent. Carte des pharmacies disponibles + que faire en attendant."
 publishedAt: '2026-03-17'
 updatedAt: '2026-07-20'
 date: 2026-07-20
@@ -48,9 +48,13 @@ Plusieurs facteurs ont alimenté les tensions pendant la crise :
 3. **Les lancements successifs dans de nouveaux pays**, qui ont créé des ajustements de distribution
 4. **Les détournements d'usage** : dans certains pays, l'utilisation cosmétique non médicale a aggravé artificiellement les pénuries. Certains patients s'étaient alors tournés vers des [alternatives naturelles au sémaglutide](/collections/alternatives-glp1/semaglutide-naturel/) en attendant le rétablissement des stocks
 
-## Les bons réflexes si une nouvelle tension survenait
+## Ma pharmacie n'a plus de stock — que faire maintenant ?
 
-La pénurie est résolue, mais une indisponibilité ponctuelle en pharmacie reste toujours possible pour n'importe quel médicament. Voici les réflexes utiles à connaître.
+La pénurie nationale est résolue, mais votre pharmacie de quartier peut ponctuellement être en rupture de stock sur un dosage spécifique. La première chose à faire : consulter notre **[carte des pharmacies avec GLP-1 disponible](/outils/carte-prix-pharmacies/)**, mise à jour régulièrement, qui localise les officines ayant signalé du stock dans votre région. Changer de pharmacie — y compris une pharmacie hospitalière ou une grande pharmacie de centre commercial — suffit souvent à résoudre le problème en 24-48h.
+
+## Les bons réflexes si votre pharmacie est en rupture
+
+Une indisponibilité ponctuelle en pharmacie reste toujours possible pour n'importe quel médicament, même hors pénurie nationale. Voici les réflexes utiles à connaître.
 
 ### Étape 1 : Ne pas interrompre brutalement si possible
 
