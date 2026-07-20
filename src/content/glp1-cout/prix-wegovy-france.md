@@ -4,11 +4,11 @@ thumbnail: "/images/thumbnails/prix-wegovy-france-illus.jpg"
 thumbnailAlt: "Prix et coût du traitement wegovy-france"
 description: "Wegovy prix pharmacie 2026 : à partir de 146,91€/mois (prix réglementé). Tarifs par dosage 0,25 à 2,4 mg, où l'acheter en France et remboursement 65 %."
 keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy prix pharmacie moins cher', 'wegovy pharmacie moins cher', 'wegovy pharmacie', 'wegovy prix pharmacie', 'remboursement wegovy', 'wegovy prix 2026', 'coût wegovy', 'wegovy non remboursé', 'prix wegovy 2.4 mg']
-seoTitle: "Wegovy Prix Pharmacie Moins Cher 2026 : dès 146,91€"
-seoDescription: "Wegovy prix pharmacie en France 2026 : 146,91 à 195,10€/mois selon dosage (prix réglementé). Achat en pharmacie, remboursement 65 % depuis le 15/06/2026."
+seoTitle: "Wegovy Prix Pharmacie Moins Cher 2026 : dès 146,91€, remboursé 65%"
+seoDescription: "Wegovy prix pharmacie juillet 2026 : 146,91 à 195,10€/mois (prix réglementé, identique partout). Remboursé 65% Sécu depuis juin 2026. Carte des pharmacies disponibles, éligibilité et reste à charge. Mis à jour."
 publishedAt: '2025-01-28'
-updatedAt: '2026-06-22'
-date: '2026-06-22'
+updatedAt: '2026-07-19'
+date: '2026-07-19'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
@@ -38,7 +38,7 @@ faqSchema:
   "description": "Prix Wegovy en pharmacie : 146,91 à 195,10€/mois selon dosage (prix réglementé). Remboursé à 65 % par l'Assurance Maladie depuis le 15 juin 2026 sous conditions.",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-wegovy-france",
   "datePublished": "2025-01-28",
-  "dateModified": "2026-03-08",
+  "dateModified": "2026-07-19",
   "author": {
     "@type": "Person",
     "name": "Dr. Marie Dubois"
@@ -212,6 +212,13 @@ Depuis le 15 juin 2026, le prix de Wegovy est **réglementé et identique dans t
 - **Interrogez votre mutuelle** sur la prise en charge du ticket modérateur de 35 %
 - **Pharmacies hospitalières** : si vous suivez votre traitement en centre hospitalier, renseignez-vous sur les modalités de délivrance
 
+<div class="cta-card">
+  <strong>Trouver une pharmacie avec Wegovy disponible près de chez vous</strong><br>
+  Wegovy peut être en rupture ponctuelle dans certaines officines malgré la forte demande. Consultez notre carte régulièrement mise à jour pour localiser une pharmacie avec du stock dans votre région et votre dosage.
+  <br><br>
+  <a href="/outils/carte-prix-pharmacies/" class="cta-button">→ Voir la carte des pharmacies Wegovy disponibles</a>
+</div>
+
 ### Prix Wegovy en Espagne et en Belgique (mars 2026)
 
 Certains patients envisagent de s'approvisionner à l'étranger pour réduire le coût. Voici les réalités du marché européen :
@@ -270,7 +277,7 @@ Les différences de prix entre la France et les pays voisins sont souvent minime
 
 
 
-*Prix mis à jour en mai 2026. Les tarifs peuvent varier selon les pharmacies et régions. Wegovy est remboursé à 65 % depuis le 15 juin 2026 sous conditions.*
+*Prix mis à jour en juillet 2026. Wegovy est remboursé à 65 % depuis le 15 juin 2026 sous conditions. Prix réglementés, identiques dans toutes les pharmacies françaises.*
 
 ## ❓ Questions Fréquentes sur le Prix de Wegovy
 
@@ -536,5 +543,5 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 
 ---
 
-*Dernière mise à jour : 29 mai 2026. Wegovy est remboursé à 65 % par l'Assurance Maladie depuis le 15 juin 2026 sous conditions. Consultez toujours votre médecin et pharmacien pour des informations personnalisées et actualisées.*
+*Dernière mise à jour : 19 juillet 2026. Wegovy est remboursé à 65 % par l'Assurance Maladie depuis le 15 juin 2026 sous conditions. Consultez toujours votre médecin et pharmacien pour des informations personnalisées et actualisées.*
 
