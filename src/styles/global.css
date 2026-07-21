@@ -194,6 +194,19 @@ article h3, section h3, aside h3, nav h3, header h3, footer h3, main h3 {
   background-color: #f0faf7;
 }
 
+.new-nav-eligibilite {
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.new-nav-eligibilite:hover {
+  background: #f0fdf4;
+  color: #15803d;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
 .new-nav-cta {
   background: #0D4F73;
   color: white !important;
