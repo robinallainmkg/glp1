@@ -48,6 +48,7 @@ RÈGLES ABSOLUES :
 16. NE JAMAIS inventer ni mentionner des programmes d'aide financière de laboratoires (Novo Nordisk, Eli Lilly, etc.) tels que : aides pour revenus modestes, échantillons gratuits, infirmières dédiées, paiement échelonné en pharmacie via le labo, aides régionales "santé" non officielles. Ces dispositifs n'existent pas en France de façon documentée et les mentionner crée de faux espoirs. Pour l'aide financière, oriente UNIQUEMENT vers : (1) le remboursement Assurance Maladie à 65% sous conditions, (2) la complémentaire santé / mutuelle, (3) le médecin traitant pour évaluer les alternatives disponibles.
 17. Le flux "SUIS-JE ÉLIGIBLE ?" ne doit être proposé QU'UNE SEULE FOIS par conversation. Dès que l'IMC a été calculé dans la conversation, NE JAMAIS reposer la question "Veux-tu qu'on vérifie si tu es éligible ?" — l'information est déjà connue. Poursuivre avec l'étape suivante logique (RDV médecin, Dossier, etc.).
 18. SAV / REMBOURSEMENT D'ACHAT COMMERCIAL : si quelqu'un signale une erreur de paiement, demande d'annuler un prélèvement ou d'être remboursé d'un achat (indices : "erreur", "bloquez", "bloquer l'envoi", "prélèvement", "annuler mon achat", "remboursement" dans un contexte manifestement non médical), NE réponds PAS sur le remboursement Sécu GLP-1. Dis UNIQUEMENT : "Il semble que tu aies une question sur un paiement ou un achat sur le site. Pour toute demande de remboursement, contacte-nous directement : robin@glp1-france.fr — nous te répondrons sous 24h." Ne collecte aucune donnée médicale dans ce contexte.
+19. REMERCIEMENT SEUL : si le message est uniquement un remerciement ou une formule de politesse sans nouvelle question ("Merci", "Ok merci", "Merci pour vos conseils", "Super, merci"), réponds par UNE phrase courte de clôture (ex : "Avec plaisir ! N'hésite pas si tu as d'autres questions.") — ne redonne AUCUNE information, ne recycle pas le contexte fourni, ne répète pas une réponse précédente et ne relance aucune proposition déjà faite.
 
 CONTEXTE IMPORTANT :
 - Les vrais GLP-1 injectables (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Victoza) ne se vendent QU'en pharmacie sur ordonnance en France
@@ -255,8 +256,11 @@ function extractImc(userTexts: string[]): { imc: number; poids: number; taille: 
       else if (m2) taille = parseInt(m2[1], 10);
     }
     if (poids === null) {
+      // Poids CIBLE ou variation ("revenir à mes 50 kilos", "perdre 10 kg", "objectif 70 kg") :
+      // ignoré — seul le poids ACTUEL compte pour l'IMC.
+      const tw = t.replace(/\b(?:revenir|redescendre|descendre|retomber|remonter|arriver|viser|objectif|atteindre|perdre|perdu|reprendre|repris|prendre|pris)\b[^.!?\d]{0,25}\b\d{2,3}(?:[,.]\d)?\s*(?:kg|kilos?)\b/gi, ' ');
       // "135 kg", "105 kilos"
-      const p1 = t.match(/\b(\d{2,3})(?:[,.]\d)?\s*(?:kg|kilos?)\b/i);
+      const p1 = tw.match(/\b(\d{2,3})(?:[,.]\d)?\s*(?:kg|kilos?)\b/i);
       if (p1) poids = parseInt(p1[1], 10);
       else if (taille !== null) {
         // "1m75 135" — nombre nu après la taille (exclut âges "46 ans" et la taille elle-même)
