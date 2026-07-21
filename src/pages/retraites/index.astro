@@ -7,6 +7,8 @@ const formatted = articles.map((a: any) => ({
   title: a.data.title,
   href: `/collections/retraites-bien-etre/${a.slug}/`,
   desc: a.data.description || '',
+  thumbnail: a.data.thumbnail || `/images/thumbnails/${a.slug}.svg`,
+  thumbnailAlt: a.data.thumbnailAlt || a.data.title,
 })).sort((a: any, b: any) => a.title.localeCompare(b.title));
 
 const faq = [
@@ -40,11 +42,14 @@ const faqJsonLd = JSON.stringify({
 
     <section style="margin-bottom: 2.5rem;">
       <h2 style="color: #1a3c34; border-bottom: 3px solid #16a34a; padding-bottom: 0.5rem;">Nos guides retraites &amp; séjours</h2>
-      <div style="display: grid; gap: 1rem; margin-top: 1.5rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
         {formatted.map((g) => (
-          <a href={g.href} style="display: block; padding: 1.25rem; border: 1px solid #e5e7eb; border-radius: 12px; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
-            <strong style="color: #1a3c34; font-size: 1.15rem;">{g.title}</strong>
-            <p style="margin: 0.5rem 0 0; color: #555; font-size: 0.95rem;">{g.desc}</p>
+          <a href={g.href} style="display: flex; flex-direction: column; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; transition: box-shadow 0.2s; background: #fff;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,.08)'" onmouseout="this.style.boxShadow='none'">
+            <img src={g.thumbnail} alt={g.thumbnailAlt} loading="lazy" width="1200" height="630" style="width: 100%; aspect-ratio: 1200/630; object-fit: cover; display: block; border-bottom: 1px solid #e5e7eb;" />
+            <div style="padding: 1rem 1.15rem 1.15rem;">
+              <strong style="color: #1a3c34; font-size: 1.05rem; line-height: 1.35; display: block;">{g.title}</strong>
+              <p style="margin: 0.5rem 0 0; color: #555; font-size: 0.9rem; line-height: 1.5;">{g.desc}</p>
+            </div>
           </a>
         ))}
       </div>
