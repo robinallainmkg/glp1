@@ -1,0 +1,30 @@
+---
+import StaticLayout from '../../../../layouts/StaticLayout.astro';
+import PrixDeptContent from '../../../../components/pharmacies/PrixDeptContent.astro';
+import { getPriceDeptPaths } from '../../../../lib/pharmacyCityData';
+
+export async function getStaticPaths() {
+  return getPriceDeptPaths();
+}
+
+const { deptLabel, totalPharmas, topCities, csos } = Astro.props;
+const dept = Astro.params.dept;
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: `Quel est le prix de Wegovy en ${deptLabel} ?`, acceptedAnswer: { '@type': 'Answer', text: `Le prix de Wegovy est réglementé et identique dans toutes les pharmacies du département ${deptLabel} (${dept}) : de 146,91 € (0,25 à 1 mg) à 195,10 € (2,4 mg) par mois selon le dosage. Il est remboursé à 65 % par l'Assurance Maladie sous conditions.` } },
+    { '@type': 'Question', name: `Où obtenir une prescription de Wegovy en ${deptLabel} ?`, acceptedAnswer: { '@type': 'Answer', text: `La première prescription remboursable doit être faite par un spécialiste de l'obésité (CSO, CHU). Le renouvellement peut être fait par votre médecin traitant.` } },
+  ],
+});
+---
+
+<StaticLayout
+  title={`Prix Wegovy ${deptLabel} (${dept}) 2026 : 146,91 € réglementé — Pharmacies`}
+  description={`Prix de Wegovy en ${deptLabel} : 146,91 à 195,10 €/mois, identique dans les ${totalPharmas} pharmacies du département (prix réglementé). Remboursé 65 %. Villes et centres de primo-prescription.`}
+  keywords={`wegovy ${deptLabel.toLowerCase()}, prix wegovy ${dept}, pharmacie wegovy ${deptLabel.toLowerCase()}`}
+>
+  <script type="application/ld+json" set:html={faqJsonLd} />
+  <PrixDeptContent drug="wegovy" deptCode={dept} deptLabel={deptLabel} totalPharmas={totalPharmas} topCities={topCities} csos={csos} />
+</StaticLayout>
