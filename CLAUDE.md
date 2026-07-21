@@ -123,6 +123,7 @@ Verifier fraicheur GA4/GSC (regle critique en tete de fichier), site live (home 
    - Funnel Dossier 4,99 EUR : visites landing, dossiers pending/paid/generated
    - Test d'eligibilite : leads `contact_type='eligibility_test'` dans contacts, taux de capture
    - Verticale retraites : impressions/clics GSC des pages /retraites/ et /collections/retraites-bien-etre/ (indexation d'abord, positions ensuite)
+   - SEO programmatique pharmacies (voir section dediee plus bas) : impressions/clics GSC sur /pharmacies/*/prix-* et /pharmacies/dept/*/prix-*, progression de l'indexation du cluster
 2. **Ameliorer** : si un chiffre stagne ou regresse, diagnostiquer et proposer/appliquer un fix (tickets, ajustement prompt Coach, maillage, title/meta). Les corrections de contenu passent par correction_tickets (statut approved).
 3. **Chercher des opportunites** : nouvelles requetes GSC en positions 5-20 avec impressions (quick wins), tendances (WebSearch si pertinent), gaps de contenu — alimenter content_opportunities et proposer les 2-3 meilleures actions du jour dans le rapport.
 2ter. **Sequence email leads** : au-dela de l'email J0 (recap), relancer les leads eligibility_test a J+3 ("avez-vous pris rendez-vous ? comment choisir son CSO") et J+7 (proposition Dossier 4,99 EUR) — un seul theme par email, se desinscrire possible, tracer dans email_replies. Ne relancer que les leads n'ayant pas achete.
@@ -192,6 +193,31 @@ VALUES (...);
 - Ajouter un volet "C. ACTIONS EXECUTEES" dans le rapport daily avec la liste de ce qui a ete fait, pourquoi, et le diff en 1 ligne
 - Ajouter un volet "D. AUDIT DU JOUR" (dimension auditee + findings) et "B. DECISIONS" (constat → decision → action)
 - Terminer par un volet "EN ATTENTE DE DECISION ROBIN" si des actions sensibles ont ete identifiees (vide = le dire explicitement)
+
+## Projet SEO programmatique pharmacies (lance 20/07/2026, valide Robin "20 000 pages")
+
+**Etat au 20/07/2026 (tout deploye et verifie live)** :
+- ~20 145 pages pharmacie individuelles (`/pharmacies/[ville]/[pharmacie]/`) — TOUTES les pharmacies FINESS, en prod depuis juin
+- 500 hubs villes (`/pharmacies/[ville]/`, top 500 par nb de pharmacies) + ~1 950 pages codes postaux (`/pharmacies/cp/[cp]/`, tous les CP >= 3 pharmacies)
+- 600 pages prix ville (`/pharmacies/[ville]/prix-{mounjaro,wegovy,ozempic}/`, top 200 villes) — helper `src/lib/pharmacyCityData.ts` (`PRICE_CITIES_LIMIT = 200`)
+- 306 pages prix departement (`/pharmacies/dept/[dept]/prix-*/`, 102 depts) — composant `PrixDeptContent.astro`
+- Total site : 23 920 pages buildees (~2,2 GB dist, build ~4 min 30)
+
+**Regles du cluster** :
+- **Prix UNIQUEMENT officiels** (BDPM/arretes 15/06/2026) : Ozempic 77,60 EUR (30%, 100% ALD), Wegovy 146,91-195,10 EUR (65%), Mounjaro 176,10-433,80 EUR (65%). L'ancienne logique d'"estimations" par hash FINESS a ete SUPPRIMEE le 20/07 (`pharmacyPricing.ts`) — ne JAMAIS la reintroduire.
+- Angle editorial : prix identiques partout → le contenu mise sur la DISPONIBILITE + le parcours CSO (primo-prescription), pas la comparaison de prix
+- Data : `public/data/pharmacies.json` (20 040 pharmacies) + `cso.json` — refresh auto hebdo via `.github/workflows/refresh-pharmacies-data.yml` (lundi 06:47 Paris)
+- Deploy : toucher `src/pages/pharmacies/` ou `pharmacies.json` declenche le full sync FTP (~16-40 min) ; les merges pendant un deploy en cours l'ANNULENT (`cancel-in-progress`) — toujours attendre le vert avant de merger un 2e lot
+
+**Prochains paliers (dans l'ordre, chacun conditionne au precedent)** :
+1. **Attendre l'indexation** : verifier a chaque routine les impressions GSC sur `/pharmacies/.*/prix-` ; premiere evaluation serieuse ~24-25/07
+2. Si l'indexation demarre : palier hubs villes 500 → 1000 (`[ville].astro` + `cp/[zipcode].astro`, slice 500 → 1000) et pages prix ville 200 → 500 (`PRICE_CITIES_LIMIT`, garder les 3 fichiers prix + `[ville].astro` synchronises)
+3. Si ca continue : envisager l'angle "disponibilite/stock communautaire" (retourner l'outil de soumission prix en signalement de stock) — DEMANDER a Robin avant (produit)
+
+**Signaux en surveillance (20/07)** :
+- "ozempic wegovy penurie" : 901 imp/14j, position 3.6, **0 clic** — anormal ; re-checker apres le nouveau title (deploye 20/07). Si toujours 0 clic vers le 24-25/07, investiguer la SERP.
+- "ozempic prix" (3 457 imp, pos 13.2) : pas de cannibalisation, probleme de position — le maillage local doit la faire remonter, suivre la position hebdo
+- Article "ozempic sans ordonnance" (cible 4 400 imp/14j) et "wegovy espagne" : suivre premieres impressions
 
 ## Structure du projet
 
