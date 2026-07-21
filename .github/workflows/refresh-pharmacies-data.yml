@@ -1,0 +1,47 @@
+name: Refresh pharmacies data
+
+# Rafraîchit public/data/pharmacies.json + latest-prices.json depuis Supabase
+# chaque semaine. Un commit sur main déclenche ensuite le deploy (full sync,
+# pharmacies.json étant dans les SHARED_PATTERNS du workflow deploy).
+on:
+  workflow_dispatch:
+  schedule:
+    # Lundi 04:47 UTC (06:47 Paris) — hors pic, avant la routine quotidienne
+    - cron: '47 4 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Export pharmacies + prices from Supabase
+        run: node scripts/pharmacy-map/export-pharmacies-json.mjs
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+
+      - name: Commit and push if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/pharmacies.json public/data/latest-prices.json
+          if git diff --cached --quiet; then
+            echo "No data changes — skipping commit"
+            exit 0
+          fi
+          git commit -m "chore(data): weekly pharmacies + prices refresh from Supabase"
+          git push

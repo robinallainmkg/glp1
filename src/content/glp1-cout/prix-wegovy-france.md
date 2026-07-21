@@ -226,9 +226,10 @@ Retrouvez aussi nos pages locales avec la liste des pharmacies et les centres de
 Certains patients envisagent de s'approvisionner à l'étranger pour réduire le coût. Voici les réalités du marché européen :
 
 **Espagne :**
-- Prix constaté : environ **220 à 280 € par stylo** selon les dosages, prix libre (non remboursé en Espagne pour l'obésité)
+- Prix constaté après la baisse Novo Nordisk de mars 2026 : environ **136 à 224 €/mois** selon le dosage (200,19 € en 1,7 mg, 223,64 € en 2,4 mg), non remboursé en Espagne pour l'obésité
 - Disponibilité variable selon les communautés autonomes
 - **Important** : l'importation personnelle de médicaments depuis l'Espagne avec une ordonnance française n'est pas reconnue en pharmacie française. Il s'agit d'un usage à titre personnel soumis à déclaration douanière.
+- Notre comparatif détaillé : [Prix Wegovy en Espagne 2026 : pourquoi ça ne vaut plus le coup](/collections/glp1-cout/wegovy-espagne-prix-comparatif-france/)
 
 **Belgique :**
 - Prix constaté : **160 à 340 €/mois** selon dosage (remboursement partiel possible pour les patients belges avec certaines conditions)

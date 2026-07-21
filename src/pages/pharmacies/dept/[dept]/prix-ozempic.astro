@@ -1,0 +1,30 @@
+---
+import StaticLayout from '../../../../layouts/StaticLayout.astro';
+import PrixDeptContent from '../../../../components/pharmacies/PrixDeptContent.astro';
+import { getPriceDeptPaths } from '../../../../lib/pharmacyCityData';
+
+export async function getStaticPaths() {
+  return getPriceDeptPaths();
+}
+
+const { deptLabel, totalPharmas, topCities, csos } = Astro.props;
+const dept = Astro.params.dept;
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: `Quel est le prix d'Ozempic en ${deptLabel} ?`, acceptedAnswer: { '@type': 'Answer', text: `Ozempic coûte 77,60 € TTC par stylo, prix officiel identique dans toutes les pharmacies du département ${deptLabel} (${dept}). Il est remboursé à 30 % pour le diabète de type 2, et à 100 % pour les patients en ALD.` } },
+    { '@type': 'Question', name: `Ozempic est-il remboursé pour maigrir en ${deptLabel} ?`, acceptedAnswer: { '@type': 'Answer', text: `Non. Ozempic n'est remboursé que pour le diabète de type 2. Pour la perte de poids, Wegovy et Mounjaro sont remboursés à 65 % depuis le 15 juin 2026, sous conditions.` } },
+  ],
+});
+---
+
+<StaticLayout
+  title={`Prix Ozempic ${deptLabel} (${dept}) 2026 : 77,60 € officiel — Pharmacies`}
+  description={`Prix d'Ozempic en ${deptLabel} : 77,60 € TTC le stylo, identique dans les ${totalPharmas} pharmacies du département. Remboursé 30 % (diabète type 2), 100 % en ALD. Villes et disponibilité.`}
+  keywords={`ozempic ${deptLabel.toLowerCase()}, prix ozempic ${dept}, pharmacie ozempic ${deptLabel.toLowerCase()}`}
+>
+  <script type="application/ld+json" set:html={faqJsonLd} />
+  <PrixDeptContent drug="ozempic" deptCode={dept} deptLabel={deptLabel} totalPharmas={totalPharmas} topCities={topCities} csos={csos} />
+</StaticLayout>
