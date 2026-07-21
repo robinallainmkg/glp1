@@ -37,6 +37,14 @@ SELECT 'ga_metrics' as tbl, MAX(date) FROM ga_metrics UNION ALL SELECT 'gsc_metr
 - **NE JAMAIS court-circuiter les agents** — toujours passer par le pipeline pour les modifications
 - **MARQUE "ZEPBOUND" INTERDITE SUR LE SITE** (réclamation DMCA Eli Lilly, juin 2026 — condition de réactivation Hostinger) : aucun texte, image, lien, meta ou URL ne doit mentionner Zepbound. Utiliser "tirzépatide" ou "Mounjaro". Toute occurrence détectée = suppression immédiate.
 
+## OBJECTIFS BUSINESS (hierarchie fixee par Robin, 21/07/2026)
+
+1. **OBJECTIF PRINCIPAL : vendre des Dossiers GLP-1** (4,99 EUR). Toute session/routine doit d'abord se demander : qu'est-ce qui a bouge sur ce funnel, et qu'est-ce qui peut l'ameliorer ?
+2. Objectif secondaire n°1 : **beaucoup de trafic autour des GLP-1** (SEO recovery + croissance).
+3. Objectif secondaire n°2 : **devenir leader sur les retraites longevite** et y attirer un trafic croissant.
+
+Consequence pour la routine quotidienne : le rapport s'ouvre TOUJOURS par le volet MONETISATION (voir plus bas) — un rapport sans ce volet est incomplet.
+
 ## Monetisation — Dossier GLP-1 payant + Coach IA (funnel gratuit)
 
 **Politique active depuis 06/2026** : produit payant unique = **Dossier GLP-1 Personnalise (4,99€)**. Le Coach IA reste **gratuit** et sert de funnel. **AUCUNE affiliation** (Sinocare ET Annette desactives, zero revenu d'affiliation).
@@ -113,6 +121,16 @@ La routine n'est PAS un rapporteur : c'est un **operateur autonome du site**. A 
 - Refonte structurelle (navigation, layouts, home)
 - Reecrire plus de ~30% d'un article, ou publier un nouvel article
 - Tout sujet medical/legal incertain (si la source officielle est introuvable → ticket + question, pas d'invention)
+
+### Phase A0 — MONETISATION (PREMIER volet du rapport, OBLIGATOIRE chaque run)
+
+C'est l'objectif principal du site (voir OBJECTIFS BUSINESS). Chaque rapport quotidien S'OUVRE par ce volet, avec ces metriques :
+1. **Visites funnel** (ga_metrics) : sessions/pageviews sur `/dossier-glp1/`, `/outils/test-eligibilite/`, `/mon-espace/dossier/` — jour + cumul 7j, avec **sources** (`source` dans ga_metrics : organic/direct/referral).
+2. **Dossiers** (table `dossiers`) : crees (24h + 7j), **tentatives de checkout** (`stripe_session_id IS NOT NULL`), payes (`paid_at`), generes, via chat (`conversation_id IS NOT NULL`) vs formulaire. Toute tentative de checkout non payee = **relance email** (si email present, tracer dans `relance_sent_at`).
+3. **Contribution du Coach** : nb de reponses assistant proposant le Dossier (`content ILIKE '%dossier glp-1 personnalis%'`) sur 7j, nb de verdicts eligibles rendus, nb de `[[DOSSIER_READY]]` emis.
+4. **Leads test d'eligibilite** : nouveaux `contacts` avec `contact_type='eligibility_test'` (si 0 depuis plusieurs jours ET la page a du trafic → bug de capture a investiguer ; si 0 trafic → probleme d'exposition).
+5. **Diagnostic de fuite** : identifier l'etape qui bloque (exposition → visite landing → formulaire/chat → checkout → paiement) et proposer/appliquer 1 a 3 ameliorations concretes (dans la matrice d'autonomie).
+Si un dossier est PAYE : PushNotification immediate a Robin (1re conversion = evenement).
 
 ### Phase A — Etat des lieux (collecte, chaque run)
 
