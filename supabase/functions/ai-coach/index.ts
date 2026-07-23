@@ -290,7 +290,7 @@ function buildImcVerdictContext(imcData: { imc: number; poids: number; taille: n
   } else {
     verdict = "NON ÉLIGIBLE au remboursement (IMC < 35, seuils : IMC ≥ 35 avec comorbidité ou IMC ≥ 40). INTERDICTION ABSOLUE de dire \"tu es éligible\" ou \"vous êtes éligible\". Dis-le avec tact et oriente vers le médecin pour évaluer d'autres options.";
   }
-  return `\n\n⚠️ VERDICT CALCULÉ PAR LE SYSTÈME (fiable, PRIORITAIRE sur tout autre calcul) : poids ${poids} kg, taille ${taille} cm → IMC = ${imc.toFixed(1)}. Verdict remboursement : ${verdict} Ta réponse DOIT être cohérente avec ce verdict — ne recalcule pas toi-même.`;
+  return `\n\n⚠️ VERDICT CALCULÉ PAR LE SYSTÈME (fiable, PRIORITAIRE sur tout autre calcul) : poids ${poids} kg, taille ${taille} cm → IMC = ${imc.toFixed(1)}. Verdict remboursement : ${verdict} Ta réponse DOIT être cohérente avec ce verdict — ne recalcule pas toi-même. ⛔ Si l'utilisateur a mentionné un poids passé, un poids de départ, un IMC plus élevé "avant" ou "en février/l'an dernier", IGNORE ces valeurs : seul le poids ACTUEL (${poids} kg) compte, et ce verdict fait foi. N'utilise JAMAIS un poids ou un IMC passé plus élevé pour déclarer "éligible" quelqu'un dont l'IMC actuel est < 35. En cas de contradiction entre ce que dit l'utilisateur et ce verdict, ce verdict l'emporte.`;
 }
 
 // --- Scam signal detection ---

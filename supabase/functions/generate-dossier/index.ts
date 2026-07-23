@@ -125,15 +125,93 @@ function generateDossierHTML(d: any, verdict: any, csoList: string[]): string {
        </ul>
        <p>Certaines mutuelles proposent un forfait "médicaments non remboursés" — vérifiez votre contrat.</p>`;
 
+  // Intro CSO adaptée : pour un non-éligible, on ne parle pas de "primo-prescription
+  // ouvrant droit au remboursement" (ça ne le concerne pas), mais de repère utile.
+  const csoIntro = verdict.eligible
+    ? "Pour la primo-prescription ouvrant droit au remboursement, rendez-vous dans un CSO ou CHU :"
+    : "Si votre situation évolue vers l'éligibilité, ou pour une évaluation spécialisée de l'obésité, voici les centres de référence de votre région :";
+  const csoIntroNoList = verdict.eligible
+    ? "La primo-prescription doit être faite dans un Centre Spécialisé de l'Obésité (CSO) ou un CHU."
+    : "Pour une évaluation spécialisée (ou si votre situation évolue vers l'éligibilité), les Centres Spécialisés de l'Obésité (CSO) et CHU sont les structures de référence.";
   const csoSection = csoList.length > 0
     ? `<h2>🏥 Centre(s) spécialisé(s) près de chez vous</h2>
-       <p>Pour la primo-prescription ouvrant droit au remboursement, rendez-vous dans un CSO ou CHU :</p>
+       <p>${csoIntro}</p>
        <ul>${csoList.map(c => `<li>${c}</li>`).join("")}</ul>
        <p>Annuaire complet : <strong>annuaire-sante.ameli.fr</strong></p>`
     : `<h2>🏥 Trouver un centre spécialisé</h2>
-       <p>La primo-prescription doit être faite dans un Centre Spécialisé de l'Obésité (CSO) ou un CHU.</p>
+       <p>${csoIntroNoList}</p>
        <p>Trouvez le plus proche sur : <strong>annuaire-sante.ameli.fr</strong></p>
        <p>Vous pouvez aussi appeler votre ARS régionale pour être orienté(e).</p>`;
+
+  // Parcours / checklist / questions : adaptés au verdict.
+  // Un acheteur NON éligible ne doit PAS recevoir un guide "primo-prescription CSO/CHU"
+  // qui contredit son verdict — on l'oriente vers son médecin traitant et les bonnes étapes.
+  const parcoursSection = verdict.eligible
+    ? `<h2>📝 Parcours concret — les étapes</h2>
+<ol>
+  <li><strong>Prendre RDV</strong> dans un CSO/CHU (voir ci-dessus) pour la primo-prescription</li>
+  <li><strong>Consultation initiale</strong> : le médecin évalue votre dossier et décide du traitement adapté</li>
+  <li><strong>Ordonnance</strong> délivrée si médicalement justifié</li>
+  <li><strong>Pharmacie</strong> : achat du médicament avec votre ordonnance et carte Vitale</li>
+  <li><strong>Suivi</strong> : contrôle à 1 mois, puis tous les 3 mois. Le renouvellement peut se faire chez votre médecin traitant</li>
+</ol>`
+    : `<h2>📝 Parcours concret — les étapes pour votre situation</h2>
+<p>En l'état, votre profil n'ouvre pas le remboursement à 65% (voir verdict ci-dessus). Voici les étapes utiles et honnêtes pour avancer :</p>
+<ol>
+  <li><strong>Consultez votre médecin traitant</strong> pour faire le point sur votre poids, vos comorbidités et vos objectifs</li>
+  <li><strong>Bilan de santé</strong> : il peut prescrire un bilan (glycémie, bilan lipidique, hépatique…) pour évaluer précisément votre situation et d'éventuelles comorbidités non diagnostiquées</li>
+  <li><strong>Prise en charge nutritionnelle structurée</strong> : c'est la première étape recommandée — et un prérequis si votre situation évolue vers l'éligibilité</li>
+  <li><strong>Options de traitement</strong> : un GLP-1 reste possible sur prescription médicale <em>à votre charge</em> (voir estimation ci-dessus) ; discutez-en avec votre médecin, ainsi que des autres approches</li>
+  <li><strong>Réévaluation</strong> : si votre IMC ou vos comorbidités évoluent, votre éligibilité au remboursement peut changer — refaites le point avec votre médecin</li>
+</ol>`;
+
+  const checklistSection = verdict.eligible
+    ? `<div class="checklist">
+  <h2>✅ Checklist pour votre rendez-vous</h2>
+  <p>Apportez ces documents à votre consultation en CSO/CHU :</p>
+  <ul>
+    <li>Carte Vitale et attestation de mutuelle</li>
+    <li>Lettre du médecin traitant (si vous en avez une)</li>
+    <li>Résultats de prise de sang récents (glycémie, HbA1c, bilan lipidique, bilan hépatique)</li>
+    <li>Historique des régimes / suivis nutritionnels tentés (dates, durées, résultats)</li>
+    <li>Liste de vos traitements en cours</li>
+    <li>Carnet de poids si vous en tenez un</li>
+    <li>Résultats d'examens liés aux comorbidités (polysomnographie pour apnée, etc.)</li>
+  </ul>
+</div>`
+    : `<div class="checklist">
+  <h2>✅ Checklist pour votre rendez-vous chez le médecin</h2>
+  <p>Apportez ces éléments à votre consultation (médecin traitant) :</p>
+  <ul>
+    <li>Carte Vitale et attestation de mutuelle</li>
+    <li>Historique de votre poids et des régimes / suivis nutritionnels déjà tentés</li>
+    <li>Liste de vos traitements en cours</li>
+    <li>Résultats de prise de sang récents, si vous en avez</li>
+    <li>Vos objectifs et vos questions notés à l'avance</li>
+  </ul>
+</div>`;
+
+  const questionsSection = verdict.eligible
+    ? `<h2>❓ Questions à poser au médecin</h2>
+<ul class="questions">
+  <li>Quel traitement GLP-1 est le plus adapté à ma situation (Wegovy, Mounjaro, autre) ?</li>
+  <li>Quel dosage de départ et quel protocole d'escalade ?</li>
+  <li>Quels effets secondaires dois-je anticiper et comment les gérer ?</li>
+  <li>Quel suivi nutritionnel recommandez-vous en parallèle ?</li>
+  <li>À quelle fréquence dois-je revenir en consultation ?</li>
+  <li>Mon médecin traitant pourra-t-il renouveler l'ordonnance ?</li>
+  <li>Y a-t-il des contre-indications avec mes traitements actuels ?</li>
+  <li>Que se passe-t-il si j'arrête le traitement ?</li>
+</ul>`
+    : `<h2>❓ Questions à poser au médecin</h2>
+<ul class="questions">
+  <li>Quelles approches sont adaptées à ma situation actuelle (IMC ${d.imc}) ?</li>
+  <li>Un suivi nutritionnel structuré est-il recommandé dans mon cas, et par qui ?</li>
+  <li>Quels examens permettraient de mieux évaluer ma situation et mes comorbidités ?</li>
+  <li>Dans quelles conditions pourrais-je devenir éligible au remboursement d'un GLP-1 ?</li>
+  <li>Un traitement GLP-1 est-il pertinent pour moi même sans remboursement, et à quel coût ?</li>
+  <li>Comment surveiller au mieux ma santé et mes facteurs de risque ?</li>
+</ul>`;
 
   return `<!DOCTYPE html>
 <html lang="fr">
@@ -143,8 +221,8 @@ function generateDossierHTML(d: any, verdict: any, csoList: string[]): string {
 <style>
   @page { size: A4; margin: 2cm; }
   body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1a1a1a; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
-  h1 { color: #1e40af; border-bottom: 3px solid #1e40af; padding-bottom: 10px; }
-  h2 { color: #1e40af; margin-top: 30px; }
+  h1 { color: #1a3c34; border-bottom: 3px solid #16a34a; padding-bottom: 10px; }
+  h2 { color: #1a3c34; margin-top: 30px; }
   .header { text-align: center; margin-bottom: 30px; }
   .header img { width: 60px; }
   .header p { color: #666; font-size: 0.9em; }
@@ -153,7 +231,7 @@ function generateDossierHTML(d: any, verdict: any, csoList: string[]): string {
   .profil-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
   .profil-table td { padding: 8px 12px; border-bottom: 1px solid #e5e7eb; }
   .profil-table td:first-child { font-weight: bold; width: 40%; color: #374151; }
-  .checklist { background: #eff6ff; border-radius: 12px; padding: 20px; margin: 20px 0; }
+  .checklist { background: #f0fdf4; border-radius: 12px; padding: 20px; margin: 20px 0; }
   .checklist li { margin: 8px 0; }
   .checklist li::marker { content: "✅ "; }
   .questions li { margin: 8px 0; }
@@ -193,40 +271,11 @@ ${prixEstimation}
 
 ${csoSection}
 
-<h2>📝 Parcours concret — les étapes</h2>
-<ol>
-  <li><strong>Prendre RDV</strong> dans un CSO/CHU (voir ci-dessus) pour la primo-prescription</li>
-  <li><strong>Consultation initiale</strong> : le médecin évalue votre dossier et décide du traitement adapté</li>
-  <li><strong>Ordonnance</strong> délivrée si médicalement justifié</li>
-  <li><strong>Pharmacie</strong> : achat du médicament avec votre ordonnance et carte Vitale</li>
-  <li><strong>Suivi</strong> : contrôle à 1 mois, puis tous les 3 mois. Le renouvellement peut se faire chez votre médecin traitant</li>
-</ol>
+${parcoursSection}
 
-<div class="checklist">
-  <h2>✅ Checklist pour votre rendez-vous</h2>
-  <p>Apportez ces documents à votre consultation en CSO/CHU :</p>
-  <ul>
-    <li>Carte Vitale et attestation de mutuelle</li>
-    <li>Lettre du médecin traitant (si vous en avez une)</li>
-    <li>Résultats de prise de sang récents (glycémie, HbA1c, bilan lipidique, bilan hépatique)</li>
-    <li>Historique des régimes / suivis nutritionnels tentés (dates, durées, résultats)</li>
-    <li>Liste de vos traitements en cours</li>
-    <li>Carnet de poids si vous en tenez un</li>
-    <li>Résultats d'examens liés aux comorbidités (polysomnographie pour apnée, etc.)</li>
-  </ul>
-</div>
+${checklistSection}
 
-<h2>❓ Questions à poser au médecin</h2>
-<ul class="questions">
-  <li>Quel traitement GLP-1 est le plus adapté à ma situation (Wegovy, Mounjaro, autre) ?</li>
-  <li>Quel dosage de départ et quel protocole d'escalade ?</li>
-  <li>Quels effets secondaires dois-je anticiper et comment les gérer ?</li>
-  <li>Quel suivi nutritionnel recommandez-vous en parallèle ?</li>
-  <li>À quelle fréquence dois-je revenir en consultation ?</li>
-  <li>Mon médecin traitant pourra-t-il renouveler l'ordonnance ?</li>
-  <li>Y a-t-il des contre-indications avec mes traitements actuels ?</li>
-  <li>Que se passe-t-il si j'arrête le traitement ?</li>
-</ul>
+${questionsSection}
 
 <div class="disclaimer">
   <strong>⚠️ Avertissement</strong> : Ce dossier est un document d'information basé sur les données que vous avez fournies. Il ne constitue pas un avis médical. Seul un médecin peut poser un diagnostic et prescrire un traitement. Les critères d'éligibilité au remboursement sont vérifiés par le médecin prescripteur.
