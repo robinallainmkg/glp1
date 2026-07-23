@@ -258,7 +258,10 @@ function extractImc(userTexts: string[]): { imc: number; poids: number; taille: 
     if (poids === null) {
       // Poids CIBLE ou variation ("revenir à mes 50 kilos", "perdre 10 kg", "objectif 70 kg") :
       // ignoré — seul le poids ACTUEL compte pour l'IMC.
-      const tw = t.replace(/\b(?:revenir|redescendre|descendre|retomber|remonter|arriver|viser|objectif|atteindre|perdre|perdu|reprendre|repris|prendre|pris)\b[^.!?\d]{0,25}\b\d{2,3}(?:[,.]\d)?\s*(?:kg|kilos?)\b/gi, ' ');
+      const tw = t.replace(/\b(?:revenir|redescendre|descendre|retomber|remonter|arriver|viser|objectif|atteindre|perdre|perdu|reprendre|repris|prendre|pris)\b[^.!?\d]{0,25}\b\d{2,3}(?:[,.]\d)?\s*(?:kg|kilos?)\b/gi, ' ')
+        // Poids PASSÉ / historique ("je faisais 96 kg", "je pesais 100 kg", "au départ 110 kg",
+        // "en février je faisais X", "il y a 6 mois 105 kg") : ignoré, seul le poids ACTUEL compte.
+        .replace(/\b(?:faisais|faisait|pesais|pesait|commenc[ée]e?s?\s+[àa]|au\s+d[ée]part|au\s+d[ée]but|il\s+y\s+a\s+\d+\s+(?:mois|ans?|semaines?)|en\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|d[ée]cembre))\b[^.!?\d]{0,25}\b\d{2,3}(?:[,.]\d)?\s*(?:kg|kilos?)\b/gi, ' ');
       // "135 kg", "105 kilos"
       const p1 = tw.match(/\b(\d{2,3})(?:[,.]\d)?\s*(?:kg|kilos?)\b/i);
       if (p1) poids = parseInt(p1[1], 10);
