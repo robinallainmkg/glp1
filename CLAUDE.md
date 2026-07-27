@@ -112,6 +112,7 @@ La routine n'est PAS un rapporteur : c'est un **operateur autonome du site**. A 
 - Fixes techniques : liens casses, redirects, sitemap, images manquantes, schema.org, meta robots
 - Tickets correction_tickets + content_opportunities (INSERT Supabase)
 - Emails leads (sequence J0/J+3/J+7 definie plus bas)
+- **Rediger et publier 1 article/run depuis `content-plan.md`** (autorisation Robin 27/07/2026 : "todolist de nouveaux contenus qui suit un plan SEO calibre"). UNIQUEMENT les sujets du plan (file prioritaire, ou backlog present depuis >= 1 run = fenetre de veto 24h). Regles de redaction non negociables dans content-plan.md (chaque chiffre source ou supprime, byline honnete, pas de fausse experience).
 - Toute occurrence Zepbound detectee = suppression IMMEDIATE (jamais d'attente)
 
 **DEMANDER l'avis de Robin avant (AskUserQuestion si interactif, sinon PushNotification + section "EN ATTENTE DE DECISION" en tete de rapport)** :
@@ -119,7 +120,7 @@ La routine n'est PAS un rapporteur : c'est un **operateur autonome du site**. A 
 - Toucher aux prix, a l'offre, a la monetisation, a Stripe
 - Modifier le schema DB, les rate-limits, les workflows CI/CD
 - Refonte structurelle (navigation, layouts, home)
-- Reecrire plus de ~30% d'un article, ou publier un nouvel article
+- Reecrire plus de ~30% d'un article existant, ou publier un article HORS content-plan.md (les sujets du plan sont autonomes, voir ci-dessus)
 - Tout sujet medical/legal incertain (si la source officielle est introuvable → ticket + question, pas d'invention)
 
 ### Phase A0 — MONETISATION (PREMIER volet du rapport, OBLIGATOIRE chaque run)
@@ -204,8 +205,14 @@ INSERT INTO content_opportunities (title, keyword, search_volume_estimate, prior
 VALUES (...);
 ```
 
+**C5. Redaction d'un article du plan (content-plan.md)** — CHAQUE run, sauf urgence critique qui consomme le temps :
+- Prendre le premier sujet non coche de `content-plan.md` (ou un sujet du backlog present depuis >= 1 run), rediger selon les regles du plan (WebSearch obligatoire pour chaque chiffre, byline "Rédaction GLP-1 France", thumbnail SVG unique, FAQ schema, maillage entrant ET sortant dans le meme commit).
+- Publier (commit + PR + merge + deploy vert + verif live), cocher l'item avec date + URL, l'ajouter a la liste de soumission GSC du rapport.
+- Boucle de calibrage : a J+7 et J+30, noter les impressions GSC de chaque article publie dans la colonne Suivi du plan. 2 articles consecutifs invisibles a J+30 sur un meme cluster = stopper le cluster et re-prioriser (le dire dans le rapport).
+- Detecter de nouvelles opportunites (requetes GSC montantes, questions clients/Coach) et les ajouter au backlog du plan avec preuve chiffree.
+
 **Regles d'execution** :
-- **Max 6 actions autonomes par run** (au-dela : tickets pour le pipeline editorial). Une action = 1 fichier corrige, 1 bug Coach fixe+deploye, ou 1 lot de tickets/opportunites insere.
+- **Max 6 actions autonomes par run** (au-dela : tickets pour le pipeline editorial). Une action = 1 fichier corrige, 1 bug Coach fixe+deploye, 1 article du plan redige, ou 1 lot de tickets/opportunites insere.
 - Privilegier dans l'ordre : violation Zepbound > bugs Coach (erreur medicale d'abord) > findings de l'audit Phase D > CTR pages cle > content opportunities
 - Toujours committer a la fin du run : `git add -A && git commit -m "fix/feat: [description]"`
 - Pusher sur la branche de travail de la session (en remote) ou main (en local) pour deployer
@@ -241,6 +248,7 @@ VALUES (...);
 ## Structure du projet
 
 ```
+content-plan.md            — Todolist de contenu SEO (source de verite de la creation, Phase C5)
 config/astro.config.mjs    — Configuration Astro (redirige depuis astro.config.mjs racine)
 src/pages/                 — Pages Astro (statiques)
 src/pages/admin/           — Dashboards admin (fact-check, editorial, integration, agents)
