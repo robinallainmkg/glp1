@@ -16,6 +16,15 @@ const unifiedSchema = z.object({
   // Champs SEO ajoutés
   mainKeyword: z.string().optional(),
   secondaryKeywords: z.array(z.string()).optional(),
+  // SEO title/description : presents dans les frontmatters depuis des mois mais
+  // strippes par zod car non declares — les templates ne les recevaient JAMAIS.
+  seoTitle: z.string().optional(),
+  seoDescription: z.string().optional(),
+  keywords: z.array(z.string()).optional(),
+  publishedAt: z.union([z.string(), z.date()]).optional(),
+  updatedAt: z.union([z.string(), z.date()]).optional(),
+  priority: z.number().optional(),
+  affiliateCollection: z.string().optional(),
   // Nouveaux champs pour l'amélioration
   thumbnail: z.string().optional(), // Alternative pour image
   relatedArticles: z.array(z.string()).optional(), // Articles similaires manuels

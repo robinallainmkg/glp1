@@ -30,8 +30,8 @@ const faqItems = entryAny.data.faqSchema || [];
 // Tina props removed (not used in production)
 ---
 
-<ArticleWithAffiliateSidebar title={entryAny.data.title}
-  description={entryAny.data.description || entryAny.data.metaDescription || ""}
+<ArticleWithAffiliateSidebar title={entryAny.data.seoTitle || entryAny.data.title}
+  description={entryAny.data.seoDescription || entryAny.data.description || entryAny.data.metaDescription || ""}
   image={entryAny.data.image || entryAny.data.thumbnail || `/images/thumbnails/${entryAny.collection}.svg`}
   author={entryAny.data.author || "Équipe GLP-1 France"}
   category={collectionName}

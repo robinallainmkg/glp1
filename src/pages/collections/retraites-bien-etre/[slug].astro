@@ -21,8 +21,8 @@ const collectionName = "retraites-bien-etre";
 const affiliateProducts: any[] = [];
 ---
 
-<ArticleWithAffiliateSidebar showAffiliateSidebar={false} title={entryAny.data.title}
-  description={entryAny.data.description || ""}
+<ArticleWithAffiliateSidebar showAffiliateSidebar={false} title={entryAny.data.seoTitle || entryAny.data.title}
+  description={entryAny.data.seoDescription || entryAny.data.description || ""}
   image={entryAny.data.image || entryAny.data.thumbnail || `/images/thumbnails/retraites-bien-etre.svg`}
   author={entryAny.data.author || "Équipe GLP-1 France"}
   category={collectionName}

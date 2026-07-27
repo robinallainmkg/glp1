@@ -63,8 +63,8 @@ const relatedArticles = [
 ---
 
 <ArticleWithAffiliateSidebar
-  title={article.data.title}
-  description={article.data.description}
+  title={article.data.seoTitle || article.data.title}
+  description={article.data.seoDescription || article.data.description}
   author={article.data.author}
   image={article.data.image}
   availableProducts={affiliateProducts}
