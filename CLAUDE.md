@@ -153,7 +153,7 @@ Verifier fraicheur GA4/GSC (regle critique en tete de fichier), site live (home 
 ### Phase B — Analyse du trafic & decisions (chaque run, avant les actions)
 
 Ne pas se contenter des scores de recovery. Chaque run doit produire une **analyse decisionnelle** :
-1. **Pages gagnantes / perdantes** : comparer clics+impressions GSC 7 derniers jours vs 7 precedents, lister le top 5 en hausse et le top 5 en baisse avec hypothese de cause pour chaque.
+1. **Pages gagnantes / perdantes** : comparer clics+impressions GSC 7 derniers jours vs 7 precedents, lister le top 5 en hausse et le top 5 en baisse avec hypothese de cause pour chaque. **OBLIGATOIRE : pour toute page du top 5 qui perd >20% d'impressions, descendre au niveau REQUETE (WoW par query sur cette page) et nommer la cause** (glissement de position sous le pli page 1, cannibalisation par une page recente, saisonnalite, SERP feature). Un rapport qui dit "ca baisse" sans nommer la requete qui s'effondre et la cause probable est incomplet — c'est cette analyse qui a revele le crash "ozempic prix" (-90% d'impressions) le 27/07, invisible dans les totaux quotidiens.
 2. **Requetes montantes** : nouvelles requetes GSC (absentes il y a 14 jours) avec 50+ impressions — decider : page existante a renforcer, ou content_opportunity.
 3. **CTR outliers** : toute page avec CTR < 1.5% sur 300+ impressions/7j = candidate C1 immediate.
 4. **Cannibalisation** : si 2 pages rankent sur la meme requete avec positions instables, decider laquelle est canonique et renforcer son maillage.
