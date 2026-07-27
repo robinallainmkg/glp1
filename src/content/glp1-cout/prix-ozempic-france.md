@@ -2,27 +2,27 @@
 title: "Prix Ozempic France 2026 : 77,60€ TTC Remboursé 30%"
 thumbnail: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 description: "Ozempic prix pharmacie 2026 : 77,60€ TTC/stylo, remboursé 30% pour le diabète (100% en ALD), reste ~54€/mois avant mutuelle. Ozempic 1 mg prix, comparatif dosages."
-keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic 1 mg prix', 'ozempic prix pharmacie', 'ozempic sans ordonnance prix', 'ozempic remboursement', 'ozempic prix sans ordonnance', 'ozempic 1 mg prix sans ordonnance', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'ozempic prix par mois']
-seoTitle: "Prix Ozempic 2026 : 77,60€/stylo, remboursé 30% diabète (100% ALD)"
-seoDescription: "Ozempic prix pharmacie juillet 2026 : 77,60€ TTC/stylo, identique tous dosages. Remboursé 30% diabète type 2, 100% en ALD. Reste à charge ~54€/mois. Carte des pharmacies. Mis à jour."
+keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic 1 mg prix', 'ozempic prix pharmacie', 'ozempic remboursement', 'remboursement ozempic', 'ozempic remboursement ald', 'ozempic prix france 2026', 'coût ozempic', 'ozempic prix par mois', 'ozempic prix pharmacie france']
+seoTitle: "Prix Ozempic 2026 : 77,60 €/stylo — remboursé 30%, 100% en ALD"
+seoDescription: "Prix officiel Ozempic : 77,60 € TTC le stylo (1 mois), identique dans toutes les pharmacies. Remboursé 30% diabète type 2, 100% en ALD. Point juillet 2026."
 mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
-updatedAt: '2026-07-20'
+updatedAt: '2026-07-27'
 date: 2026-06-22
 featured: true
-author: 'Dr. Marie Dubois'
+author: 'Rédaction GLP-1 France'
 readingTime: 12
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
-secondaryKeywords: ["ozempic prix", "ozempic prix pharmacie", "ozempic 1 mg prix", "ozempic prix sans ordonnance", "ozempic achat en ligne", "prix ozempic france", "ozempic sans ordonnance en ligne", "ozempic prix france 2026"]
+secondaryKeywords: ["ozempic prix", "ozempic prix pharmacie", "ozempic 1 mg prix", "prix ozempic france", "ozempic remboursement ald", "ozempic prix france 2026", "ozempic reste à charge", "ozempic prix par mois"]
 faqSchema:
   - question: "Quel est le prix de l'Ozempic en pharmacie en 2026 ?"
     answer: "Le prix de l'Ozempic est de 77,60 euros TTC par stylo injecteur en pharmacie (76,58 euros + 1,02 euro d'honoraire de dispensation), identique pour tous les dosages (0,25 mg, 0,5 mg et 1 mg). Ce prix est fixé par le CEPS."
   - question: "L'Ozempic est-il remboursé en France ?"
     answer: "Oui, l'Ozempic est remboursé à 30% par l'Assurance Maladie pour le diabète de type 2 (100% dans le cadre d'une ALD). Le reste à charge est d'environ 54 euros par mois avant intervention de la mutuelle, et de 0 euro en ALD."
-  - question: "Peut-on acheter l'Ozempic sans ordonnance ?"
-    answer: "Non, l'Ozempic est un médicament sur ordonnance obligatoire en France. Les sites qui proposent de l'Ozempic sans ordonnance sont illégaux et dangereux."
+  - question: "Le prix d'Ozempic est-il le même dans toutes les pharmacies ?"
+    answer: "Oui. Le prix d'Ozempic est réglementé par le CEPS : 77,60 euros TTC par stylo, identique dans toutes les pharmacies françaises, quel que soit le dosage. Il est donc inutile de comparer les pharmacies sur le prix — seule la disponibilité varie."
   - question: "L'Ozempic 2 mg est-il disponible en France ?"
     answer: "Non. L'Ozempic 2 mg dispose d'une AMM européenne mais n'est pas commercialisé en France. Seuls les dosages 0,25 mg, 0,5 mg et 1 mg sont disponibles, avec un nouveau stylo 3 ml en 0,5 mg depuis février 2026."
   - question: "Combien coûte l'Ozempic par mois sans remboursement ?"
@@ -37,10 +37,11 @@ faqSchema:
   "description": "Prix Ozempic en pharmacie : 77,60€ TTC par stylo. Remboursé à 30% par l'Assurance Maladie (100% en ALD) : reste à charge d'environ 54€/mois avant mutuelle.",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-ozempic-france",
   "datePublished": "2025-01-28",
-  "dateModified": "2026-07-20",
+  "dateModified": "2026-07-27",
   "author": {
-    "@type": "Person",
-    "name": "Dr. Marie Dubois"
+    "@type": "Organization",
+    "name": "GLP-1 France",
+    "url": "https://glp1-france.fr"
   },
   "publisher": {
     "@type": "Organization",
@@ -73,10 +74,10 @@ faqSchema:
       },
       {
         "@type": "Question",
-        "name": "Peut-on acheter Ozempic sans ordonnance ?",
+        "name": "Le prix d'Ozempic est-il le même dans toutes les pharmacies ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Non, il est strictement interdit d'acheter Ozempic sans ordonnance en France. Ozempic est classé médicament de prescription obligatoire (liste I) en raison des risques médicaux, du suivi nécessaire et des contre-indications. Les sites internet vendant sans ordonnance sont illégaux et vendent des contrefaçons dangereuses."
+          "text": "Oui. Le prix d'Ozempic est réglementé par le CEPS : 77,60 euros TTC par stylo, identique dans toutes les pharmacies françaises, quel que soit le dosage. Inutile de comparer les pharmacies sur le prix — seule la disponibilité varie d'une officine à l'autre."
         }
       }
     ]
@@ -86,7 +87,13 @@ faqSchema:
 
 ## 💰 Prix Ozempic Pharmacie : 77,60€ TTC/stylo en 2026
 
-Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo, honoraire de dispensation compris** (76,58€ + 1,02€), pour tous les dosages commercialisés (0,25 mg, 0,5 mg et 1 mg) en 2026. Pour le diabète de type 2, **Ozempic est remboursé à 30%** par l'Assurance Maladie (100% dans le cadre d'une ALD), soit un reste à charge d'environ **54€/mois** avant mutuelle (0€ en ALD). Chaque stylo contient **4 doses**, soit **1 stylo par mois** quel que soit le dosage : le **prix Ozempic 1 mg** est donc identique aux autres dosages. La vente sans ordonnance est illégale. Pour bien comparer, lisez notre [guide complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et le [comparatif prix Wegovy](/collections/glp1-cout/prix-wegovy-france/).
+Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo, honoraire de dispensation compris** (76,58€ + 1,02€), pour tous les dosages commercialisés (0,25 mg, 0,5 mg et 1 mg) en 2026. Pour le diabète de type 2, **Ozempic est remboursé à 30%** par l'Assurance Maladie (100% dans le cadre d'une ALD), soit un reste à charge d'environ **54€/mois** avant mutuelle (0€ en ALD). Chaque stylo contient **4 doses**, soit **1 stylo par mois** quel que soit le dosage : le **prix Ozempic 1 mg** est donc identique aux autres dosages. Pour bien comparer, lisez notre [guide complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et le [comparatif prix Wegovy](/collections/glp1-cout/prix-wegovy-france/).
+
+### Le point au 27 juillet 2026
+
+- **Prix inchangé** : 77,60 € TTC par stylo (76,58 € + 1,02 € d'honoraire de dispensation), fixé par le CEPS — aucun changement depuis les arrêtés de juin 2026.
+- **Disponibilité** : la situation s'est normalisée par rapport aux pénuries de 2023-2024 ; l'[ANSM](https://ansm.sante.fr/actualites/ozempic-semaglutide-un-medicament-a-utiliser-uniquement-dans-le-traitement-du-diabete-de-type-2) rappelle qu'Ozempic est réservé au diabète de type 2 et surveille les tensions. Des ruptures ponctuelles restent possibles selon les officines : vérifiez la disponibilité près de chez vous via la [carte des pharmacies](/outils/carte-prix-pharmacies/).
+- **Remboursement** : 30 % pour le diabète de type 2, **100 % en ALD** (affection longue durée). Pour la perte de poids, ce sont [Wegovy](/collections/glp1-cout/prix-wegovy-france/) et [Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) qui sont remboursés à 65 % depuis le 15 juin 2026 — [vérifiez votre éligibilité en 2 minutes](/outils/test-eligibilite/).
 
 ### Tarifs Ozempic selon le dosage (2026)
 
@@ -169,9 +176,9 @@ Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo
 - **Fédération Française des Diabétiques (FFD)** : Aide et accompagnement des patients
 - **Contact** : 01 40 09 24 25
 
-## 🛒 Ozempic Sans Ordonnance : Prix et Risques en 2026
+## Ozempic exige une ordonnance
 
-**Peut-on acheter Ozempic sans ordonnance en France ?** Non. **Ozempic est un médicament délivré uniquement sur prescription médicale** (liste I) en pharmacie. Les sites proposant **Ozempic sans ordonnance** sont **illégaux** (article L.5125-25 CSP) et exposent à des **contrefaçons dangereuses** signalées par l'ANSM. Le **prix Ozempic sans ordonnance** affiché sur ces sites (parfois 60-90€) ne couvre aucune garantie de traçabilité ni de stérilité. La voie légale : consulter un médecin (généraliste, endocrinologue) ou une plateforme de **téléconsultation agréée** pour obtenir une ordonnance valide. En pharmacie, le prix est réglementé : **77,60€ TTC par stylo** (soit environ 77,60€/mois, 1 stylo = 4 doses), même sans remboursement Sécu (usage hors diabète). Il n'existe aucune voie légale d'achat sans ordonnance — notre article dédié [Ozempic sans ordonnance : pourquoi c'est impossible et dangereux](/collections/traitements-glp1/ozempic-sans-ordonnance-achat-en-ligne-france/) détaille les risques et les alternatives légales remboursées.
+Ozempic est un médicament de **prescription obligatoire** (liste I) : il n'existe aucune voie légale d'achat sans ordonnance en France, et les sites qui en proposent vendent des contrefaçons dangereuses. Tout le sujet (risques, recours si vous avez déjà acheté, alternatives légales remboursées) est traité dans notre article dédié : [Ozempic sans ordonnance : pourquoi c'est impossible et dangereux](/collections/traitements-glp1/ozempic-sans-ordonnance-achat-en-ligne-france/). En pharmacie, avec ordonnance, le prix reste réglementé : **77,60 € TTC par stylo**.
 
 ## 🛒 Acheter Ozempic en France
 
@@ -334,25 +341,14 @@ Plusieurs solutions existent pour réduire drastiquement le coût d'Ozempic :
 - Aides ponctuelles selon situation
 - Contact : **01 40 09 24 25**
 
-### Peut-on acheter Ozempic sans ordonnance ?
+### Comment obtenir une ordonnance pour Ozempic ?
 
-**Non, il est strictement interdit d'acheter Ozempic sans ordonnance** en France. Ozempic est classé **médicament de prescription obligatoire** (liste I) car :
-
-⚠️ **Risques médicaux** : Hypoglycémie, pancréatite, effets secondaires graves
-⚠️ **Suivi nécessaire** : Adaptation du dosage, surveillance médicale
-⚠️ **Contre-indications** : Certaines pathologies incompatibles
-
-**Sites internet vendant sans ordonnance :**
-- ❌ **Illégaux** en France
-- ❌ **Produits contrefaits** (risque sanitaire)
-- ❌ **Pas de remboursement** possible
-- ❌ **Risque pénal** pour l'acheteur
-
-**Comment obtenir une ordonnance légalement :**
 1. Consultation médecin traitant, endocrinologue ou diabétologue
-2. Diagnostic et vérification des critères
+2. Diagnostic et vérification des critères (diabète de type 2)
 3. Prescription sur ordonnance sécurisée
 4. Délivrance en pharmacie agréée
+
+L'achat sans ordonnance est illégal et dangereux — voir notre [article dédié](/collections/traitements-glp1/ozempic-sans-ordonnance-achat-en-ligne-france/).
 
 [Trouver un médecin prescripteur près de chez vous](/collections/medecins-glp1-france/)
 
