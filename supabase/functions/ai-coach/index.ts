@@ -904,6 +904,22 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
         }
       }
 
+      // --- Garde-fou prix (déterministe) ---
+      // Le garde-fou prompt-only ajouté le 28/07 (v60) a été ignoré par mistral-small
+      // dès le 29/07 : fourchettes Wegovy inventées (169-200€ à 295-360€/mois) alors que
+      // le prix public plafonne à 195,10€. Un modèle de repli ne respecte pas toujours une
+      // consigne de prompt → on vérifie le texte APRÈS génération, en code.
+      const priceCheck = checkPriceCeiling(cleanResponse);
+      if (priceCheck.violated) {
+        console.warn(
+          `[price-guard] ${usedModel} a cité ${priceCheck.amounts.join("/")}€ > plafond ${priceCheck.ceiling}€ ` +
+          `(${priceCheck.drugs.join(",")}) — réponse remplacée par les prix officiels`,
+        );
+        cleanResponse = OFFICIAL_PRICE_BLOCK;
+        suggestions = [];
+        options = [];
+      }
+
       // Moment chaud → on propose la capture email (le funnel convertit à 0 sans capture).
       const saysEligible = /\béligibl/i.test(cleanResponse);
       const saysNotEligible = /\b(pas|plus)\b[^.]{0,25}éligibl|éligibl[^.]{0,25}\bsi\b/i.test(cleanResponse);
@@ -952,6 +968,52 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
     return jsonResponse({ error: (err as Error).message }, 500);
   }
 });
+
+// --- Garde-fou prix : plafonds publics officiels (BDPM, arrêtés du 15/06/2026) ---
+// On ne contrôle QUE le dépassement. Un montant inférieur au prix public est le plus
+// souvent un reste à charge légitime (65% remboursé) ; un montant supérieur au prix
+// public, lui, est toujours une invention — c'est le cas observé en prod le 29/07.
+const PRICE_CEILINGS: Record<string, { pattern: RegExp; max: number }> = {
+  ozempic: { pattern: /ozempic/i, max: 80 },
+  wegovy: { pattern: /wegovy/i, max: 200 },
+  mounjaro: { pattern: /mounjaro/i, max: 440 },
+  saxenda: { pattern: /saxenda/i, max: 290 },
+};
+
+const OFFICIAL_PRICE_BLOCK = `Les prix des GLP-1 sont réglementés : ils sont identiques dans toutes les pharmacies de France (source BDPM).
+
+- **Ozempic** : 77,60 €/stylo (1 stylo = 1 mois) — remboursé 30% pour le diabète T2, 100% en ALD
+- **Wegovy** : 146,91 à 195,10 €/mois selon le dosage — remboursé 65% pour l'obésité
+- **Mounjaro** : 176,10 à 433,80 €/mois selon le dosage — remboursé 65% pour l'obésité
+- **Saxenda** : environ 270 €/mois — non remboursé
+
+Le remboursement à 65% suppose un IMC ≥ 35 avec comorbidité ou ≥ 40, après une prise en charge nutritionnelle, avec une primo-prescription en CSO/CHU.
+
+Veux-tu qu'on vérifie si tu es éligible au remboursement à 65% ?`;
+
+function checkPriceCeiling(
+  text: string,
+): { violated: boolean; amounts: number[]; ceiling: number; drugs: string[] } {
+  const drugs = Object.keys(PRICE_CEILINGS).filter((d) => PRICE_CEILINGS[d].pattern.test(text));
+  if (drugs.length === 0) return { violated: false, amounts: [], ceiling: 0, drugs: [] };
+  // Plusieurs médicaments cités (comparatif) → on retient le plafond le plus élevé,
+  // sinon le prix légitime du plus cher serait signalé à tort.
+  const ceiling = Math.max(...drugs.map((d) => PRICE_CEILINGS[d].max));
+
+  const amounts: number[] = [];
+  // Montants explicitement libellés en euros : les mg, kg, %, IMC et dates sont exclus.
+  const re = /(\d{1,4}(?:[.,]\d{1,2})?)\s*(?:€|EUR\b|euros?\b)/gi;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text)) !== null) {
+    // "2 300 €" : on tomberait sur "300" — un séparateur de milliers précède le match.
+    if (/\d[\s ]?$/.test(text.slice(Math.max(0, m.index - 2), m.index))) continue;
+    // Coût annuel ("~2400€ par an") : hors périmètre du prix boîte/mois.
+    if (/^\s*(?:\/|par\s+)\s*an(?:née)?\b/i.test(text.slice(m.index + m[0].length))) continue;
+    const value = parseFloat(m[1].replace(",", "."));
+    if (!isNaN(value) && value > ceiling) amounts.push(value);
+  }
+  return { violated: amounts.length > 0, amounts, ceiling, drugs };
+}
 
 // --- Helper: save user + assistant messages ---
 async function saveMessages(
