@@ -21,7 +21,6 @@ Ce fichier est la **source de vérité** de la création de contenu. La routine 
 
 ### P1 — Parcours de soins (l'intention exacte de nos 2 premiers clients payants)
 
-- [ ] **1. Qui peut prescrire Mounjaro ou Wegovy pour être remboursé ? (généraliste vs CSO/CHU)** — collection `medecins-glp1-france`. Preuve : question littérale de la cliente n°2 ("la pharmacie m'a dit de chercher un médecin prescripteur habilité, où en trouver un ?") ; la page télémédecine prend déjà des clics. Angle : primo-prescription CSO/CHU, rôle exact du généraliste (renouvellement), que faire si le généraliste a prescrit à tort, comment trouver le CSO le plus proche (mode d'emploi annuaire ameli, pas de liste inventée). CTA : Dossier 4,99 €. Suivi : —
 - [ ] **2. La pharmacie refuse de délivrer Mounjaro/Wegovy : pourquoi et que faire** — collection `traitements-glp1`. Preuve : pain point client n°2 ; requêtes "pharmacie refuse" à vérifier par WebSearch au moment de la rédaction. Angle : les 4 causes réelles de refus (primo-prescription non conforme, accord préalable, rupture, ordonnance non sécurisée) + parcours de déblocage étape par étape. Suivi : —
 
 ### P2 — Quick wins sur demande GSC mesurée
@@ -49,4 +48,4 @@ _(vide — la routine ajoute ici : sujet, requête cible, preuve de demande chif
 
 ## Publiés
 
-_(la routine déplace ici les items cochés : date, URL, imp J+7, imp J+30)_
+- [x] **1. Qui peut prescrire Mounjaro ou Wegovy pour être remboursé ? (généraliste vs CSO/CHU)** — publié le 01/08/2026 → https://glp1-france.fr/collections/medecins-glp1-france/qui-peut-prescrire-mounjaro-wegovy-rembourse/ — sources : arrêtés des 10-12/06/2026 (Vidal 37850/37934), ameli.fr, Santé.fr (41 CSO), Moniteur des pharmacies (règle 6 mois / -5 %). Maillage entrant : article généraliste + article télémédecine. Suivi : imp J+7 (~08/08) : — ; imp J+30 (~31/08) : —

@@ -1,9 +1,9 @@
 ---
 title: "Médecin Généraliste Prescrire Wegovy Mounjaro : Conditions"
-description: "Médecin généraliste prescrire Wegovy Mounjaro : depuis juin 2025, conditions IMC, formulaire Ameli et critères d'éligibilité en France."
+description: "Le généraliste peut prescrire Wegovy et Mounjaro, mais pas ouvrir le remboursement : primo-prescription en CSO/CHU depuis le 15 juin 2026. Détails."
 pubDate: 2026-03-16
 date: 2026-06-22
-updatedAt: 2026-06-22
+updatedAt: 2026-08-01
 author: "Dr. Marie Dubois"
 category: "Médecins spécialisés"
 tags: ["médecin généraliste", "prescription", "wegovy", "mounjaro", "glp1", "conditions", "imc", "france", "2025"]
@@ -28,7 +28,9 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Depuis juin 2025, tout médecin généraliste en France peut prescrire les traitements GLP-1 pour l'obésité — Wegovy et Mounjaro en tête. Cette évolution majeure des règles de prescription, décidée par l'ANSM, a mis fin à la réservation aux seuls spécialistes qui créait des délais d'attente de plusieurs mois pour les patients. Mais quelles sont exactement les conditions à remplir ? Comment se passe la consultation ? Voici tout ce que vous devez savoir.
+Depuis juin 2025, tout médecin généraliste en France peut prescrire les traitements GLP-1 pour l'obésité — Wegovy et Mounjaro en tête. Cette évolution majeure des règles de prescription, décidée par l'ANSM, a mis fin à la réservation aux seuls spécialistes qui créait des délais d'attente de plusieurs mois pour les patients.
+
+**Mise à jour importante (15 juin 2026)** : depuis l'entrée en vigueur du remboursement à 65 %, une distinction essentielle s'impose. Votre généraliste peut toujours prescrire Wegovy ou Mounjaro, mais **cette ordonnance n'ouvre pas droit au remboursement** : la primo-prescription remboursée est réservée aux médecins spécialistes exerçant en CSO, CHU ou SMR spécialisé (arrêtés du 12 juin 2026). Le généraliste assure ensuite les renouvellements. Tous les détails dans notre guide [qui peut prescrire pour être remboursé](/collections/medecins-glp1-france/qui-peut-prescrire-mounjaro-wegovy-rembourse/).
 
 ## Ce qui a changé en juin 2025
 
@@ -174,7 +176,7 @@ Consultez notre [guide complet du remboursement GLP-1 2026](/collections/glp1-co
 ## Questions fréquentes
 
 **Mon médecin traitant peut-il vraiment me prescrire Wegovy ou Mounjaro ?**
-Oui, depuis juin 2025. Il n'est plus nécessaire de consulter un spécialiste pour la première prescription. Votre médecin traitant est pleinement habilité à initier et renouveler ces traitements.
+Oui, il peut rédiger l'ordonnance depuis juin 2025 — mais attention : depuis le 15 juin 2026, cette prescription du généraliste n'est **pas remboursée**. Pour bénéficier du remboursement à 65 %, la première prescription doit être faite par un spécialiste en CSO, CHU ou SMR spécialisé ; votre médecin traitant prend ensuite le relais pour les renouvellements.
 
 **Faut-il plusieurs consultations avant d'obtenir la prescription ?**
 Souvent oui. Une première consultation pour l'évaluation et la prescription du bilan biologique, puis une deuxième pour la prescription du traitement après réception des résultats. Certains médecins qui ont déjà accès à votre dossier médical (bilan récent, suivi régulier) peuvent prescrire en une seule consultation.
@@ -193,10 +195,10 @@ La formation des médecins généralistes sur les GLP-1 a considérablement prog
 
 ## Conclusion
 
-L'ouverture de la prescription des GLP-1 aux médecins généralistes est une avancée majeure pour les patients français. Elle rapproche les soins, réduit les inégalités d'accès et permet une prise en charge plus rapide de l'obésité. Votre médecin traitant est aujourd'hui votre premier interlocuteur pour accéder à ces traitements efficaces.
+L'ouverture de la prescription des GLP-1 aux médecins généralistes est une avancée majeure pour les patients français. Elle rapproche les soins et réduit les inégalités d'accès. Mais depuis le 15 juin 2026, le parcours remboursé passe d'abord par un spécialiste en CSO ou CHU pour la primo-prescription : votre médecin traitant reste votre premier interlocuteur pour évaluer votre situation, vous orienter vers le bon centre, puis renouveler le traitement.
 
 Préparez votre consultation, apportez vos antécédents médicaux, et discutez ouvertement de vos objectifs avec votre médecin. C'est la meilleure façon de débuter un traitement qui vous convient vraiment.
 
 ---
 
-*Sources : ANSM - Évolution des conditions de prescription des analogues du GLP-1 (juin 2025), HAS - Avis de remboursement Wegovy (décembre 2024), Ameli.fr. Cet article est fourni à titre informatif et ne remplace pas un avis médical personnalisé. Consultez votre médecin avant de commencer tout traitement.*
+*Sources : ANSM - Évolution des conditions de prescription des analogues du GLP-1 (juin 2025), arrêtés du 12 juin 2026 (conditions de remboursement, [détail Vidal](https://www.vidal.fr/actualites/37934-obesite-le-cadre-de-prescription-de-wegovy-et-mounjaro-precise-pour-le-remboursement.html)), [Ameli.fr](https://www.ameli.fr/assure/actualites/obesite-de-nouveaux-medicaments-peuvent-etre-pris-en-charge-dans-des-conditions-encadrees). Cet article est fourni à titre informatif et ne remplace pas un avis médical personnalisé. Consultez votre médecin avant de commencer tout traitement.*
