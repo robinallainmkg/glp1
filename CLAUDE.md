@@ -123,6 +123,32 @@ La routine n'est PAS un rapporteur : c'est un **operateur autonome du site**. A 
 - Reecrire plus de ~30% d'un article existant, ou publier un article HORS content-plan.md (les sujets du plan sont autonomes, voir ci-dessus)
 - Tout sujet medical/legal incertain (si la source officielle est introuvable → ticket + question, pas d'invention)
 
+### Format de communication chat (IMPOSE, demande Robin 01/08/2026 : « la j'ai encore recu ce pave c'est imbitable »)
+
+Le detail vit dans `reports/daily-YYYY-MM-DD.md`. Le chat, lui, doit etre court et scannable :
+- **Messages intermediaires** : maximum 1 ligne par etape majeure (collecte faite, article en cours, build lance, deploy vert). Zero narration outil par outil, zero explication de methode.
+- **Message final** : EXACTEMENT ce template, 20 lignes max au total, 1 ligne par item, pas de paragraphe :
+
+```
+## Run du JJ/MM — [OK / RATE + raison]
+
+**FAIT**
+- Article publie : [titre court](URL live)  ← obligatoire, sinon expliquer en 1 ligne
+- Fact-check : slug1 [OK/corrige], slug2 [OK/corrige]
+- [autres actions, 1 ligne chacune, max 4]
+
+**CHIFFRES** (3 max, avec tendance)
+- Recovery GSC : X% (vs Y% precedent)
+- Dossiers : X payes / Y checkouts (24h)
+- [le chiffre marquant du jour]
+
+**ALERTES** : [1 ligne ou « aucune »]
+**EN ATTENTE ROBIN** : [1 ligne ou « rien »]
+Details : reports/daily-JJ-MM.md
+```
+
+- Interdits dans le chat : listes d'URLs a copier-coller (voir regle 3bis), tableaux de donnees, rappels de taches deja signalees un run precedent, re-explication du contexte que Robin connait.
+
 ### Phase A0 — MONETISATION (PREMIER volet du rapport, OBLIGATOIRE chaque run)
 
 C'est l'objectif principal du site (voir OBJECTIFS BUSINESS). Chaque rapport quotidien S'OUVRE par ce volet, avec ces metriques :
@@ -148,7 +174,11 @@ Verifier fraicheur GA4/GSC (regle critique en tete de fichier), site live (home 
 3. **Chercher des opportunites** : nouvelles requetes GSC en positions 5-20 avec impressions (quick wins), tendances (WebSearch si pertinent), gaps de contenu — alimenter content_opportunities et proposer les 2-3 meilleures actions du jour dans le rapport.
 2ter. **Sequence email leads** : au-dela de l'email J0 (recap), relancer les leads eligibility_test a J+3 ("avez-vous pris rendez-vous ? comment choisir son CSO") et J+7 (proposition Dossier 4,99 EUR) — un seul theme par email, se desinscrire possible, tracer dans email_replies. Ne relancer que les leads n'ayant pas achete. **REGLE STOP (obligatoire avant TOUT envoi)** : verifier incoming_emails pour toute reponse "STOP"/desinscription et ne JAMAIS re-emailer ces adresses ; exclure aussi les victimes d'arnaque (contact_type='contact' sauf vrais prospects), les emails de test et les adresses hors France (remboursement Secu non applicable). Campagne de reference : dossier_prospection du 27/07 (99 envois, segmentation dans email_replies).
 2bis. **Envoyer les emails "plan d'action" du test d'eligibilite** (ENGAGEMENT UTILISATEUR, sous 24h) : chaque run, recuperer les nouveaux leads `contacts` avec `contact_type='eligibility_test'` sans reponse envoyee, et leur envoyer leur recapitulatif par email (verdict + 3 etapes du parcours, stocke dans le champ `message`) via SMTP Hostinger (robin@glp1-france.fr, meme canal que scripts/send-email-replies.mjs). Contenu : verdict personnalise, 3 etapes generiques (medecin traitant → CSO/CHU → pharmacie), lien vers le Dossier 4,99 EUR. PAS de checklist detaillee ni de liste CSO (exclusivite du Dossier payant). Tracer l'envoi dans email_replies ou marquer le contact.
-3bis. **Indexation des pages manquantes** : detecter les pages publiees mais non indexees (page dans le sitemap / recemment publiee MAIS 0 impression dans gsc_metrics depuis 3+ jours). La soumission GSC est MANUELLE (aucune API Google pour "demander une indexation" de pages classiques) : la routine produit la liste d'URLs prete a coller dans l'inspection GSC, en tete de rapport, et notifie Robin si la liste est non vide (max ~10 URLs/jour, prioriser par potentiel de trafic). Verifier aussi que le sitemap est a jour apres chaque publication.
+3bis. **Indexation — file d'attente GSC (regle mise a jour 01/08/2026, demande Robin : NE PLUS harceler)** : la soumission GSC est manuelle et Robin ne veut PAS de rappel quotidien. Fonctionnement :
+   - La routine maintient `reports/gsc-submission-queue.md` (fichier cumulatif avec cases a cocher). A chaque publication d'article : ajouter l'URL au fichier, UNE ligne dans le message final ("1 URL ajoutee a la file GSC"), et c'est tout.
+   - **INTERDIT** : re-lister les URLs en attente dans le chat ou le rapport quotidien, redemander a Robin de les coller, notifier pour ca. Robin traite le fichier quand il veut.
+   - Seule exception (escalade legitime) : un article publie toujours a 0 impression GSC a J+7 → une ligne dans les alertes du rapport, une fois, pas tous les jours.
+   - Verifier que le sitemap est a jour apres chaque publication (ca oui, chaque run).
 4. **Alerter Robin** (PushNotification) seulement si : anomalie critique (site down, deindexation, erreur medicale du Coach, violation Zepbound), 1re conversion payante du Dossier, action bloquante cote Robin (nota : la sync IMAP est REPAREE depuis le 23/07 — edge function `sync-inbox` + pg_cron toutes les 15 min, plus rien a relancer en local ; si `incoming_emails` reste muette 3+ jours, tester la fonction avant d'alerter), ou decision sensible en attente (matrice d'autonomie).
 
 ### Phase B — Analyse du trafic & decisions (chaque run, avant les actions)
@@ -205,15 +235,22 @@ INSERT INTO content_opportunities (title, keyword, search_volume_estimate, prior
 VALUES (...);
 ```
 
-**C5. Redaction d'un article du plan (content-plan.md)** — CHAQUE run, sauf urgence critique qui consomme le temps :
+**C5. Redaction d'un article du plan (content-plan.md)** — **OBLIGATOIRE CHAQUE RUN, ACTION N°1** (renforce le 01/08/2026 apres feedback Robin : « la routine devait passer davantage a l'action ») :
+- L'article se fait EN PREMIER dans la phase C, avant toute autre action optionnelle. Les seules exceptions valables : site down, violation Zepbound, erreur medicale du Coach en prod. « L'analyse a pris du temps » n'est PAS une exception. Un run sans article publie = run rate, a dire explicitement en tete de message final avec la raison.
 - Prendre le premier sujet non coche de `content-plan.md` (ou un sujet du backlog present depuis >= 1 run), rediger selon les regles du plan (WebSearch obligatoire pour chaque chiffre, byline "Rédaction GLP-1 France", thumbnail SVG unique, FAQ schema, maillage entrant ET sortant dans le meme commit).
 - Publier (commit + PR + merge + deploy vert + verif live), cocher l'item avec date + URL, l'ajouter a la liste de soumission GSC du rapport.
 - Boucle de calibrage : a J+7 et J+30, noter les impressions GSC de chaque article publie dans la colonne Suivi du plan. 2 articles consecutifs invisibles a J+30 sur un meme cluster = stopper le cluster et re-prioriser (le dire dans le rapport).
 - Detecter de nouvelles opportunites (requetes GSC montantes, questions clients/Coach) et les ajouter au backlog du plan avec preuve chiffree.
 
+**C6. Fact-check rotatif (OBLIGATOIRE chaque run, ajoute le 01/08/2026)** — ne plus attendre le J4 de l'audit pour fact-checker :
+- Chaque run, prendre les **2 articles les plus anciens** (tri par `last_fact_checked` dans la table articles, sinon par `updatedAt` du fichier) et verifier leurs 3-5 chiffres cles via WebSearch (prix, taux, dates, criteres reglementaires).
+- Chiffre faux ou perime → correction directe sourcee dans le .md (si < 30% de l'article) ou correction_ticket. Mettre a jour `last_fact_checked` dans la table articles dans les deux cas.
+- Une ligne par article dans le rapport : slug + verdict (OK / corrige / ticket).
+
 **Regles d'execution** :
+- **Quota minimum par run (non negociable)** : 1 article du plan publie (C5) + 2 articles fact-checkes (C6). Le reste (C1-C4) vient APRES si le temps le permet.
 - **Max 6 actions autonomes par run** (au-dela : tickets pour le pipeline editorial). Une action = 1 fichier corrige, 1 bug Coach fixe+deploye, 1 article du plan redige, ou 1 lot de tickets/opportunites insere.
-- Privilegier dans l'ordre : violation Zepbound > bugs Coach (erreur medicale d'abord) > findings de l'audit Phase D > CTR pages cle > content opportunities
+- Privilegier dans l'ordre : violation Zepbound > bugs Coach (erreur medicale d'abord) > **C5 article du plan** > **C6 fact-check** > findings de l'audit Phase D > CTR pages cle > content opportunities
 - Toujours committer a la fin du run : `git add -A && git commit -m "fix/feat: [description]"`
 - Pusher sur la branche de travail de la session (en remote) ou main (en local) pour deployer
 - Ajouter un volet "C. ACTIONS EXECUTEES" dans le rapport daily avec la liste de ce qui a ete fait, pourquoi, et le diff en 1 ligne
