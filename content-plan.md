@@ -21,7 +21,6 @@ Ce fichier est la **source de vérité** de la création de contenu. La routine 
 
 ### P1 — Parcours de soins (l'intention exacte de nos 2 premiers clients payants)
 
-- [ ] **2. La pharmacie refuse de délivrer Mounjaro/Wegovy : pourquoi et que faire** — collection `traitements-glp1`. Preuve : pain point client n°2 ; requêtes "pharmacie refuse" à vérifier par WebSearch au moment de la rédaction. Angle : les 4 causes réelles de refus (primo-prescription non conforme, accord préalable, rupture, ordonnance non sécurisée) + parcours de déblocage étape par étape. Suivi : —
 
 ### P2 — Quick wins sur demande GSC mesurée
 
@@ -48,4 +47,5 @@ _(vide — la routine ajoute ici : sujet, requête cible, preuve de demande chif
 
 ## Publiés
 
+- [x] **2. La pharmacie refuse de délivrer Mounjaro/Wegovy : pourquoi et que faire** — publié le 01/08/2026 (run 2) → https://glp1-france.fr/collections/traitements-glp1/pharmacie-refuse-delivrer-mounjaro-wegovy-que-faire/ — sources : Vidal 37850, ameli espace pharmacien (dispositif d'aide à la prescription AGLP-1), FSPF circulaire 2026-30, ANSM disponibilité. Angle ajusté vs plan : les 4 causes documentées sont formulaire ITR manquant, prescripteur non habilité, critères non remplis, rupture (l'« accord préalable » et l'« ordonnance non sécurisée » du plan n'ont pas de source officielle pour Wegovy/Mounjaro — non retenus). Preuve GSC : « formulaire remboursement mounjaro » pos 7,7 ; « ou trouver le mounjaro le moins cher » 173 imp/28j. Maillage entrant : article qui-peut-prescrire + article pénurie. Suivi : imp J+7 (~08/08) : — ; imp J+30 (~31/08) : —
 - [x] **1. Qui peut prescrire Mounjaro ou Wegovy pour être remboursé ? (généraliste vs CSO/CHU)** — publié le 01/08/2026 → https://glp1-france.fr/collections/medecins-glp1-france/qui-peut-prescrire-mounjaro-wegovy-rembourse/ — sources : arrêtés des 10-12/06/2026 (Vidal 37850/37934), ameli.fr, Santé.fr (41 CSO), Moniteur des pharmacies (règle 6 mois / -5 %). Maillage entrant : article généraliste + article télémédecine. Suivi : imp J+7 (~08/08) : — ; imp J+30 (~31/08) : —

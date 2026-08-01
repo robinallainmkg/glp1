@@ -38,7 +38,7 @@ Le remboursement de Wegovy (sémaglutide) et Mounjaro (tirzépatide) dans l'obé
 - **Le circuit remboursé** : primo-prescription obligatoirement faite par un spécialiste habilité dans une structure de recours (CSO, CHU, SMR), puis renouvellements possibles par le médecin traitant. Prise en charge à 65 % par l'Assurance Maladie.
 - **Le circuit non remboursé** : tout médecin, y compris votre généraliste, peut prescrire Wegovy ou Mounjaro depuis juin 2025 (décision ANSM). L'ordonnance est valable en pharmacie, mais le traitement reste alors entièrement à votre charge — de 146,91 € à 433,80 € par mois selon le médicament et le dosage ([prix officiels](/collections/glp1-cout/prix-mounjaro-france/)).
 
-C'est cette distinction qui explique un malentendu fréquent : « mon médecin m'a prescrit Wegovy, mais la pharmacie refuse de me le passer en remboursé ». L'ordonnance du généraliste n'est pas fausse — elle n'ouvre simplement pas le droit au remboursement en initiation.
+C'est cette distinction qui explique un malentendu fréquent : « mon médecin m'a prescrit Wegovy, mais la pharmacie refuse de me le passer en remboursé ». L'ordonnance du généraliste n'est pas fausse — elle n'ouvre simplement pas le droit au remboursement en initiation. Toutes les causes de blocage au comptoir (formulaire manquant, prescripteur, critères, rupture) sont détaillées dans notre guide [la pharmacie refuse de délivrer Mounjaro ou Wegovy : que faire](/collections/traitements-glp1/pharmacie-refuse-delivrer-mounjaro-wegovy-que-faire/).
 
 ## Qui peut faire la primo-prescription remboursée ?
 
