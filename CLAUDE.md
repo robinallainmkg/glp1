@@ -123,30 +123,39 @@ La routine n'est PAS un rapporteur : c'est un **operateur autonome du site**. A 
 - Reecrire plus de ~30% d'un article existant, ou publier un article HORS content-plan.md (les sujets du plan sont autonomes, voir ci-dessus)
 - Tout sujet medical/legal incertain (si la source officielle est introuvable → ticket + question, pas d'invention)
 
-### Format de communication chat (IMPOSE, demande Robin 01/08/2026 : « la j'ai encore recu ce pave c'est imbitable »)
+### Format de communication chat (IMPOSE — v2 du 01/08/2026 apres 2 feedbacks Robin : « pave imbitable » PUIS « il manque les analytics, la monetisation, je comprends pas tes attentes »)
 
-Le detail vit dans `reports/daily-YYYY-MM-DD.md`. Le chat, lui, doit etre court et scannable :
+Le detail vit dans `reports/daily-YYYY-MM-DD.md`. Le chat doit etre STRUCTURE en 4 sections fixes, scannable, ET complet sur monetisation + analytics :
 - **Messages intermediaires** : maximum 1 ligne par etape majeure (collecte faite, article en cours, build lance, deploy vert). Zero narration outil par outil, zero explication de methode.
-- **Message final** : EXACTEMENT ce template, 20 lignes max au total, 1 ligne par item, pas de paragraphe :
+- **Message final** : EXACTEMENT ce template, ~25 lignes max, 1 ligne par item, pas de paragraphe. Les 4 sections sont TOUTES obligatoires, dans cet ordre :
 
 ```
 ## Run du JJ/MM — [OK / RATE + raison]
 
-**FAIT**
-- Article publie : [titre court](URL live)  ← obligatoire, sinon expliquer en 1 ligne
+### 💰 Monetisation
+- Ventes Dossier : X payes 24h (total cumule Y) — [detail 1 ligne : qui/comment, ou « aucune »]
+- Funnel : X visites landing 7j, Y checkouts, Z leads test eligibilite — fuite principale : [etape]
+- Suivi clients/relances : [1 ligne : emails envoyes, reponses recues, prochaines echeances]
+
+### 📊 Analytics
+- Recovery GSC : X% (Y clics le JJ/MM vs baseline 106) — tendance vs semaine precedente
+- Recovery GA : X% (Y sessions vs baseline 922) — tendance
+- [1 ligne max : fait marquant du jour — page/requete qui monte ou baisse, ou « RAS »]
+
+### ✅ Fait ce run
+- Article publie : [titre court](URL live) — obligatoire, sinon expliquer en 1 ligne
 - Fact-check : slug1 [OK/corrige], slug2 [OK/corrige]
-- [autres actions, 1 ligne chacune, max 4]
+- [autres actions, 1 ligne chacune, max 3]
 
-**CHIFFRES** (3 max, avec tendance)
-- Recovery GSC : X% (vs Y% precedent)
-- Dossiers : X payes / Y checkouts (24h)
-- [le chiffre marquant du jour]
+### ❓ Ce que j'attends de toi
+- [numerote chaque demande ; pour chacune : QUOI + comment repondre (« reponds stop X sinon je fais demain ») + echeance]
+- [ou : « Rien — tout est autonome ce run. » Les taches de fond (file GSC) : 1 ligne de compteur max, sans relister]
 
-**ALERTES** : [1 ligne ou « aucune »]
-**EN ATTENTE ROBIN** : [1 ligne ou « rien »]
+**Alertes** : [1 ligne ou « aucune »]
 Details : reports/daily-JJ-MM.md
 ```
 
+- La section « Ce que j'attends de toi » doit etre ACTIONNABLE : jamais un nom de projet seul (« palier 2 pharmacies ») — toujours dire concretement ce qui va se passer, ce que Robin doit faire pour accepter/refuser, et quand.
 - Interdits dans le chat : listes d'URLs a copier-coller (voir regle 3bis), tableaux de donnees, rappels de taches deja signalees un run precedent, re-explication du contexte que Robin connait.
 
 ### Phase A0 — MONETISATION (PREMIER volet du rapport, OBLIGATOIRE chaque run)
