@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a3c34"/>
+      <stop offset="1" stop-color="#0f2620"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1100" cy="110" r="180" fill="#16a34a" opacity="0.10"/>
+  <circle cx="120" cy="540" r="160" fill="#16a34a" opacity="0.12"/>
+  <text x="80" y="150" font-family="Georgia, serif" font-size="34" fill="#16a34a" font-weight="bold">GLP-1 FRANCE</text>
+  <text x="80" y="280" font-family="Georgia, serif" font-size="66" fill="#ffffff" font-weight="bold">La pharmacie refuse</text>
+  <text x="80" y="370" font-family="Georgia, serif" font-size="66" fill="#ffffff" font-weight="bold">Mounjaro ou Wegovy ?</text>
+  <rect x="80" y="410" width="120" height="6" fill="#16a34a"/>
+  <text x="80" y="500" font-family="Georgia, serif" font-size="40" fill="#9fd7b4">4 causes réelles, 4 solutions — règle 2026</text>
+  <g transform="translate(1010,300)">
+    <rect x="-70" y="-90" width="140" height="180" rx="16" fill="#ffffff" opacity="0.92"/>
+    <rect x="-14" y="-64" width="28" height="76" rx="6" fill="#16a34a"/>
+    <rect x="-38" y="-40" width="76" height="28" rx="6" fill="#16a34a"/>
+    <circle cx="0" cy="52" r="26" fill="none" stroke="#1a3c34" stroke-width="7" opacity="0.7"/>
+    <line x1="-15" y1="67" x2="15" y2="37" stroke="#1a3c34" stroke-width="7" opacity="0.7" stroke-linecap="round"/>
+  </g>
+</svg>

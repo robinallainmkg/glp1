@@ -50,7 +50,7 @@ Plusieurs facteurs ont alimenté les tensions pendant la crise :
 
 ## Ma pharmacie n'a plus de stock — que faire maintenant ?
 
-La pénurie nationale est résolue, mais votre pharmacie de quartier peut ponctuellement être en rupture de stock sur un dosage spécifique. La première chose à faire : consulter notre **[carte des pharmacies avec GLP-1 disponible](/outils/carte-prix-pharmacies/)**, mise à jour régulièrement, qui localise les officines ayant signalé du stock dans votre région. Changer de pharmacie — y compris une pharmacie hospitalière ou une grande pharmacie de centre commercial — suffit souvent à résoudre le problème en 24-48h.
+La pénurie nationale est résolue, mais votre pharmacie de quartier peut ponctuellement être en rupture de stock sur un dosage spécifique. Attention aussi à ne pas confondre rupture et refus administratif : depuis le remboursement du 15 juin 2026, un refus au comptoir vient le plus souvent d'un document manquant — notre guide [la pharmacie refuse de délivrer Mounjaro ou Wegovy : pourquoi et que faire](/collections/traitements-glp1/pharmacie-refuse-delivrer-mounjaro-wegovy-que-faire/) distingue les deux cas. La première chose à faire en cas de vraie rupture : consulter notre **[carte des pharmacies avec GLP-1 disponible](/outils/carte-prix-pharmacies/)**, mise à jour régulièrement, qui localise les officines ayant signalé du stock dans votre région. Changer de pharmacie — y compris une pharmacie hospitalière ou une grande pharmacie de centre commercial — suffit souvent à résoudre le problème en 24-48h.
 
 ## Les bons réflexes si votre pharmacie est en rupture
 
