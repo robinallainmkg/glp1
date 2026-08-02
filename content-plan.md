@@ -24,7 +24,6 @@ Ce fichier est la **source de vérité** de la création de contenu. La routine 
 
 ### P2 — Quick wins sur demande GSC mesurée
 
-- [ ] **3. Prix des GLP-1 en pharmacie : le tableau complet 2026 (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Rybelsus)** — collection `glp1-cout`. Preuve : "glp-1 en pharmacie prix" 201 imp/7j pos 8,1 CTR 0,5% sans page parfaitement dédiée. Angle : LE tableau de référence, prix BDPM sourcés, remboursement par indication, lien carte pharmacies. Suivi : —
 - [ ] **4. Acheter Wegovy ou Mounjaro en Espagne : prix réels et ce qui est légal** — collection `glp1-cout`. Preuve : "wegovy prix pharmacie espagne" 131 imp/7j pos 7,0 ; keywords "mounjaro prix espagne" déjà présents sur nos pages sans contenu dédié. Angle : comparatif prix officiel FR/ES sourcé, règles douanières/ordonnance UE (sourcées), pourquoi le remboursement FR change le calcul. Prudence légale : que du sourcé. Suivi : —
 
 ### P3 — Cluster retraites (leadership : déjà position 8 sur "retraite perte de poids" à J+14)
@@ -46,6 +45,8 @@ Ce fichier est la **source de vérité** de la création de contenu. La routine 
 _(vide — la routine ajoute ici : sujet, requête cible, preuve de demande chiffrée, collection proposée)_
 
 ## Publiés
+
+- [x] **3. Prix des GLP-1 en pharmacie : le tableau complet 2026 (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Rybelsus)** — publié le 02/08/2026 → https://glp1-france.fr/collections/glp1-cout/prix-glp1-pharmacie-tableau-2026/ — sources : BDPM (Ozempic 77,60 € / Trulicity 81,14 €), Vidal 37850 (Wegovy 146,91-195,10 € / Mounjaro 176,10-433,80 €, remb 65 % 15/06/2026), Moniteur des pharmacies (Saxenda non remboursé, prix libre), HAS avis défavorable Rybelsus. Cible : « glp-1 en pharmacie prix » (201 imp/7j pos 8,1). Maillage entrant : prix-ozempic-france + pharmacie-refuse-delivrer. Suivi : imp J+7 (~09/08) : — ; imp J+30 (~01/09) : —
 
 - [x] **2. La pharmacie refuse de délivrer Mounjaro/Wegovy : pourquoi et que faire** — publié le 01/08/2026 (run 2) → https://glp1-france.fr/collections/traitements-glp1/pharmacie-refuse-delivrer-mounjaro-wegovy-que-faire/ — sources : Vidal 37850, ameli espace pharmacien (dispositif d'aide à la prescription AGLP-1), FSPF circulaire 2026-30, ANSM disponibilité. Angle ajusté vs plan : les 4 causes documentées sont formulaire ITR manquant, prescripteur non habilité, critères non remplis, rupture (l'« accord préalable » et l'« ordonnance non sécurisée » du plan n'ont pas de source officielle pour Wegovy/Mounjaro — non retenus). Preuve GSC : « formulaire remboursement mounjaro » pos 7,7 ; « ou trouver le mounjaro le moins cher » 173 imp/28j. Maillage entrant : article qui-peut-prescrire + article pénurie. Suivi : imp J+7 (~08/08) : — ; imp J+30 (~31/08) : —
 - [x] **1. Qui peut prescrire Mounjaro ou Wegovy pour être remboursé ? (généraliste vs CSO/CHU)** — publié le 01/08/2026 → https://glp1-france.fr/collections/medecins-glp1-france/qui-peut-prescrire-mounjaro-wegovy-rembourse/ — sources : arrêtés des 10-12/06/2026 (Vidal 37850/37934), ameli.fr, Santé.fr (41 CSO), Moniteur des pharmacies (règle 6 mois / -5 %). Maillage entrant : article généraliste + article télémédecine. Suivi : imp J+7 (~08/08) : — ; imp J+30 (~31/08) : —
