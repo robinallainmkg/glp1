@@ -10,16 +10,18 @@ import { supabaseConfig } from '../../../lib/supabase';
   <meta name="robots" content="noindex, nofollow" />
   <style is:inline>
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f0f4ff;color:#1e293b;min-height:100vh}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f0fdf4;color:#1e293b;min-height:100vh}
     .wrap{max-width:560px;margin:0 auto;padding:40px 20px}
     .card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px;box-shadow:0 4px 20px rgba(0,0,0,.06)}
-    .hd{background:linear-gradient(135deg,#1e40af,#3b82f6);border-radius:16px 16px 0 0;padding:24px;color:#fff;margin:-28px -28px 22px}
+    .hd{background:linear-gradient(135deg,#1a3c34,#16a34a);border-radius:16px 16px 0 0;padding:24px;color:#fff;margin:-28px -28px 22px}
     h1{font-size:1.35rem;margin-bottom:6px;line-height:1.25}
     .muted{color:#6b7280;font-size:.92rem;line-height:1.6}
     .pill{display:inline-block;background:rgba(255,255,255,.22);color:#fff;border-radius:999px;padding:4px 12px;font-size:.72rem;font-weight:700;margin-bottom:12px}
-    .btn{display:block;width:100%;background:#1e40af;color:#fff;border:none;border-radius:10px;padding:15px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:18px;text-align:center;text-decoration:none}
-    .btn:hover{background:#1d4ed8}
+    .btn{display:block;width:100%;background:#16a34a;color:#fff;border:none;border-radius:10px;padding:15px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:18px;text-align:center;text-decoration:none}
+    .btn:hover{background:#15803d}
     .btn:disabled{opacity:.6;cursor:default}
+    .btn-secondary{display:block;width:100%;background:#fff;color:#1a3c34;border:2px solid #16a34a;border-radius:10px;padding:13px;font-size:.95rem;font-weight:700;cursor:pointer;margin-top:10px;text-align:center;text-decoration:none}
+    .btn-secondary:hover{background:#f0fdf4}
     .status-box{padding:16px;border-radius:10px;margin:16px 0;text-align:center}
     .status-success{background:#f0fdf4;border:1px solid #bbf7d0;color:#166534}
     .status-pending{background:#fef9c3;border:1px solid #fde68a;color:#854d0e}
@@ -79,11 +81,25 @@ import { supabaseConfig } from '../../../lib/supabase';
         }
         var d = rows[0];
         if (d.status === 'generated' && d.pdf_url) {
+          // Le Storage supabase.co sert les .html en text/plain (anti-phishing) :
+          // un lien direct affiche le code source brut. On force donc le
+          // telechargement (&download=) et on propose une lecture via blob.
+          var dlUrl = d.pdf_url + (d.pdf_url.indexOf('?') > -1 ? '&' : '?') + 'download=dossier-glp1-personnalise.html';
           root.innerHTML =
             '<div class="hd"><div class="pill">PRET</div><h1>' + (d.prenom ? d.prenom + ', ton' : 'Ton') + ' dossier GLP-1 est pret !</h1><p style="opacity:.85;font-size:.9rem">' + (d.verdict || 'Dossier personnalise') + '</p></div>' +
             '<div class="status-box status-success"><strong>Dossier genere avec succes</strong></div>' +
-            '<a href="' + d.pdf_url + '" target="_blank" class="btn">Telecharger mon dossier</a>' +
-            '<p class="muted" style="margin-top:16px;text-align:center">Le lien reste actif — tu peux y revenir a tout moment.</p>';
+            '<button id="view-btn" class="btn">Lire mon dossier</button>' +
+            '<a href="' + dlUrl + '" class="btn-secondary">Telecharger (fichier a ouvrir dans ton navigateur)</a>' +
+            '<p class="muted" style="margin-top:16px;text-align:center">Le lien reste actif — tu peux y revenir a tout moment. Astuce : depuis le dossier ouvert, Ctrl+P / Imprimer pour en faire un PDF.</p>';
+          document.getElementById('view-btn').addEventListener('click', function(){
+            fetch(d.pdf_url)
+              .then(function(r){ return r.text(); })
+              .then(function(htmlContent){
+                var blob = new Blob([htmlContent], { type: 'text/html' });
+                window.open(URL.createObjectURL(blob), '_blank');
+              })
+              .catch(function(){ window.location.href = dlUrl; });
+          });
         } else if (d.status === 'paid' && attempts < maxAttempts) {
           setTimeout(checkDossier, 2000);
         } else if (attempts >= maxAttempts) {

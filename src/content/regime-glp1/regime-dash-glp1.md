@@ -4,7 +4,8 @@ draft: true
 description: "Régime DASH GLP-1 hypertension diabète : la combinaison idéale pour patients hypertendus et diabétiques. Plan alimentaire et bénéfices santé."
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Émilie Martin"
+updatedAt: 2026-08-02
+author: "Rédaction GLP-1 France"
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]
 collection: "régime-glp1"
@@ -103,20 +104,22 @@ Le régime DASH, naturellement peu gras et bien structuré en petits repas, conv
 - **Midi** : Dinde en papillote avec herbes + purée de patate douce
 - **Soir** : Soupe de poireaux-pommes de terre + fromage blanc + kiwi
 
-## Remboursement et coûts des traitements GLP-1 (France, mars 2026)
+## Remboursement et coûts des traitements GLP-1 (France, été 2026)
 
 ### Ozempic (sémaglutide)
-- Prix par stylo : ~76,58 €
-- Remboursement Sécu : **65%** en bithérapie metformine pour le diabète de type 2
-- **ALD 30 (diabète de type 2)** : prise en charge à 100% du ticket modérateur. L'obésité seule n'est pas une ALD en France en mars 2026.
+- Prix officiel : 77,60 € TTC le stylo (un mois), identique dans toutes les pharmacies ([BDPM](https://base-donnees-publique.medicaments.gouv.fr/extrait.php?specid=63210923))
+- Remboursement Sécu : **30 %** pour le diabète de type 2, en association (metformine ou sulfamide)
+- **ALD 30 (diabète de type 2)** : prise en charge à 100 % du ticket modérateur. L'obésité seule n'est pas une ALD en France en 2026.
 
 ### Wegovy (sémaglutide 2,4 mg pour l'obésité)
-- Prix : ~250 à 290 €/mois
+- Prix officiel : 146,91 à 195,10 €/mois selon dosage ([Vidal, 15 juin 2026](https://www.vidal.fr/actualites/37850-obesite-prise-en-charge-de-wegovy-et-mounjaro-a-partir-du-15-juin-2026-sous-conditions.html))
 - Remboursé à 65% depuis le 15 juin 2026 sous conditions (IMC ≥40 ou ≥35 avec comorbidités)
 
 ### Mounjaro (tirzepatide)
-- Prix : 230 à 440 €/mois selon dosage
+- Prix officiel : 176,10 à 433,80 €/mois selon dosage ([Vidal, 15 juin 2026](https://www.vidal.fr/actualites/37850-obesite-prise-en-charge-de-wegovy-et-mounjaro-a-partir-du-15-juin-2026-sous-conditions.html))
 - Remboursé à 65% depuis le 15 juin 2026 sous conditions (IMC ≥40 ou ≥35 avec comorbidités)
+
+Tous les tarifs officiels sont regroupés dans notre [tableau complet des prix des GLP-1 en pharmacie](/collections/glp1-cout/prix-glp1-pharmacie-tableau-2026/).
 
 ## Conseils pratiques pour démarrer
 

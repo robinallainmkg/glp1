@@ -93,7 +93,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo
 
 - **Prix inchangé** : 77,60 € TTC par stylo (76,58 € + 1,02 € d'honoraire de dispensation), fixé par le CEPS — aucun changement depuis les arrêtés de juin 2026.
 - **Disponibilité** : la situation s'est normalisée par rapport aux pénuries de 2023-2024 ; l'[ANSM](https://ansm.sante.fr/actualites/ozempic-semaglutide-un-medicament-a-utiliser-uniquement-dans-le-traitement-du-diabete-de-type-2) rappelle qu'Ozempic est réservé au diabète de type 2 et surveille les tensions. Des ruptures ponctuelles restent possibles selon les officines : vérifiez la disponibilité près de chez vous via la [carte des pharmacies](/outils/carte-prix-pharmacies/).
-- **Remboursement** : 30 % pour le diabète de type 2, **100 % en ALD** (affection longue durée). Pour la perte de poids, ce sont [Wegovy](/collections/glp1-cout/prix-wegovy-france/) et [Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) qui sont remboursés à 65 % depuis le 15 juin 2026 — [vérifiez votre éligibilité en 2 minutes](/outils/test-eligibilite/).
+- **Remboursement** : 30 % pour le diabète de type 2, **100 % en ALD** (affection longue durée). Pour la perte de poids, ce sont [Wegovy](/collections/glp1-cout/prix-wegovy-france/) et [Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) qui sont remboursés à 65 % depuis le 15 juin 2026 — [vérifiez votre éligibilité en 2 minutes](/outils/test-eligibilite/). Pour comparer tous les traitements d'un coup d'œil, consultez notre [tableau complet des prix des GLP-1 en pharmacie](/collections/glp1-cout/prix-glp1-pharmacie-tableau-2026/).
 
 ### Tarifs Ozempic selon le dosage (2026)
 
