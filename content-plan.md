@@ -24,8 +24,6 @@ Ce fichier est la **source de vérité** de la création de contenu. La routine 
 
 ### P2 — Quick wins sur demande GSC mesurée
 
-- [ ] **4. Acheter Wegovy ou Mounjaro en Espagne : prix réels et ce qui est légal** — collection `glp1-cout`. Preuve : "wegovy prix pharmacie espagne" 131 imp/7j pos 7,0 ; keywords "mounjaro prix espagne" déjà présents sur nos pages sans contenu dédié. Angle : comparatif prix officiel FR/ES sourcé, règles douanières/ordonnance UE (sourcées), pourquoi le remboursement FR change le calcul. Prudence légale : que du sourcé. Suivi : —
-
 ### P3 — Cluster retraites (leadership : déjà position 8 sur "retraite perte de poids" à J+14)
 
 - [ ] **5. Cure thermale obésité : les stations agréées et la procédure de remboursement Sécu** — collection `retraites-bien-etre`. Preuve : "cure thermale minceur remboursé" pos 28,8 SANS page dédiée ; roadmap validée. Liste des stations sourcée (CNETh / ameli), procédure accord préalable. Suivi : —
@@ -45,6 +43,8 @@ Ce fichier est la **source de vérité** de la création de contenu. La routine 
 _(vide — la routine ajoute ici : sujet, requête cible, preuve de demande chiffrée, collection proposée)_
 
 ## Publiés
+
+- [x] **4. Acheter Wegovy ou Mounjaro en Espagne : prix réels et ce qui est légal** — publié le 03/08/2026 → https://glp1-france.fr/collections/glp1-cout/acheter-wegovy-mounjaro-espagne-prix-legalite/ — sources : Merca2 15/05/2026 (Sanidad ne finance pas la tirzépatide), miglp1.com (Wegovy ES ~136-292 €/dosage, baisse Novo mars 2026), Holvia (Mounjaro ES 207,91-446,07 €), europa.eu (directive 2011/24/UE art. 11, ordonnance transfrontalière), douane.gouv.fr (règle des 3 mois usage personnel). Angle : depuis remboursement 65 % + baisses françaises, l'Espagne n'est presque jamais rentable. Cible : « wegovy prix pharmacie espagne » (131 imp/7j pos 7,0). Maillage entrant : prix-glp1-pharmacie-tableau-2026 + acheter-wegovy-allemagne-prix. Suivi : imp J+7 (~10/08) : — ; imp J+30 (~02/09) : —
 
 - [x] **3. Prix des GLP-1 en pharmacie : le tableau complet 2026 (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Rybelsus)** — publié le 02/08/2026 → https://glp1-france.fr/collections/glp1-cout/prix-glp1-pharmacie-tableau-2026/ — sources : BDPM (Ozempic 77,60 € / Trulicity 81,14 €), Vidal 37850 (Wegovy 146,91-195,10 € / Mounjaro 176,10-433,80 €, remb 65 % 15/06/2026), Moniteur des pharmacies (Saxenda non remboursé, prix libre), HAS avis défavorable Rybelsus. Cible : « glp-1 en pharmacie prix » (201 imp/7j pos 8,1). Maillage entrant : prix-ozempic-france + pharmacie-refuse-delivrer. Suivi : imp J+7 (~09/08) : — ; imp J+30 (~01/09) : —
 

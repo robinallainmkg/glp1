@@ -3,7 +3,7 @@ title: "Acheter Wegovy en Allemagne : Prix 2026 et Achat Légal depuis la France
 description: "Wegovy Allemagne prix 2026 : 172-277€ selon dosage. Pharmacies certifiées, démarches légales UE, ordonnance et expédition vers la France."
 pubDate: 2026-05-02
 date: '2026-05-02'
-updatedAt: '2026-05-02'
+updatedAt: '2026-08-03'
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "wegovy", "prix", "allemagne", "europe", "achat-transfrontalier"]
@@ -59,7 +59,7 @@ Depuis début 2026, **Zentiva** commercialise le premier générique européen d
 
 ### Comparaison France vs Allemagne
 
-Wegovy en France coûte 169-360€ selon le dosage. L'écart est marqué sur les **paliers élevés** (1,7 mg et 2,4 mg) où l'Allemagne reste 50-80€/mois moins chère, soit **600 à 960€ d'économies annuelles**. Pour un benchmark complet, consultez notre [analyse du prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/).
+Wegovy en France coûte **146,91 à 195,10 €/mois** selon le dosage depuis les arrêtés de juin 2026, et il est **remboursé à 65 %** pour l'obésité sous conditions — ce qui change complètement le calcul par rapport à 2025. Pour un benchmark complet, consultez notre [analyse du prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/). Si vous envisagez plutôt l'achat au sud des Pyrénées, lisez notre comparatif [acheter Wegovy ou Mounjaro en Espagne : prix réels et légalité](/collections/glp1-cout/acheter-wegovy-mounjaro-espagne-prix-legalite/).
 
 ## Cadre Légal : Acheter du Wegovy en Allemagne est-il Autorisé ?
 

@@ -5,7 +5,7 @@ description: "MGEN et Wegovy en 2026 : forfait médicaments non remboursés, con
 seoDescription: "MGEN et Wegovy 2026 : forfait obésité, conditions, démarches et alternatives. Tout ce qu'il faut savoir."
 keywords: ['MGEN rembourse Wegovy', 'wegovy remboursement MGEN', 'mutuelle MGEN obésité', 'forfait MGEN sémaglutide']
 publishedAt: '2026-05-02'
-updatedAt: '2026-06-22'
+updatedAt: '2026-08-03'
 date: '2026-06-22'
 pubDate: 2026-05-02
 author: 'Dr. Marie Dubois'
@@ -37,7 +37,7 @@ La **MGEN** (Mutuelle Générale de l'Éducation Nationale) compte parmi les com
 
 ## Wegovy : statut de remboursement Sécurité sociale en 2026
 
-Avant d'aborder la couverture MGEN, il faut rappeler le contexte global. **Depuis le 15 juin 2026, Wegovy est remboursé à 65% par l'Assurance Maladie** pour le traitement de l'obésité, sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté de prise en charge nutritionnelle. La prescription initiale est réservée aux CSO (Centres Spécialisés Obésité), CHU ou services spécialisés. Le renouvellement est possible par le médecin traitant. Les prix officiels vont de ~147€/mois (0,25 mg) à ~350€/mois (2,4 mg).
+Avant d'aborder la couverture MGEN, il faut rappeler le contexte global. **Depuis le 15 juin 2026, Wegovy est remboursé à 65% par l'Assurance Maladie** pour le traitement de l'obésité, sous conditions : IMC ≥ 35 kg/m² avec comorbidité ou IMC ≥ 40 kg/m², après échec documenté de prise en charge nutritionnelle. La prescription initiale est réservée aux CSO (Centres Spécialisés Obésité), CHU ou services spécialisés. Le renouvellement est possible par le médecin traitant. Les prix officiels vont de 146,91 €/mois (0,25 à 1 mg) à 195,10 €/mois (2,4 mg).
 
 Pour suivre l'évolution réglementaire en temps réel, consultez notre [dossier remboursement Wegovy Sécurité sociale 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
@@ -45,9 +45,8 @@ Pour suivre l'évolution réglementaire en temps réel, consultez notre [dossier
 
 Pour les patients éligibles au remboursement à 65%, le reste à charge est de 35% du prix officine (avant mutuelle). Pour les patients non éligibles, le coût reste intégral :
 
-- **Wegovy 0,25 mg** : environ 169 €/mois (phase d'initiation)
-- **Wegovy 0,5 mg / 1 mg** : environ 220 à 270 €/mois
-- **Wegovy 1,7 mg / 2,4 mg** : 300 à 360 €/mois (dosage d'entretien)
+- Wegovy 0,25 / 0,5 / 1 mg : 146,91 €/mois (prix réglementé)
+- Wegovy 1,7 mg : 169,31 €/mois — 2,4 mg : 195,10 €/mois (entretien)
 
 Sur une année pleine au dosage cible, la facture peut donc dépasser **3 500 à 4 300 €**. C'est dans ce contexte que la couverture MGEN prend tout son sens.
 

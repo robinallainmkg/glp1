@@ -55,7 +55,7 @@ Pour **Ozempic, Trulicity, Wegovy et Mounjaro**, le prix est fixé par arrêté 
 - **Wegovy** : de **146,91 €** (0,25 mg) à **195,10 €** (2,4 mg) par mois selon le palier de dosage.
 - **Mounjaro** : de **176,10 €** (2,5 mg) à **433,80 €** (15 mg) par mois — c'est le GLP-1 dont le prix grimpe le plus avec l'escalade de dose.
 
-Ce qui varie réellement d'une officine à l'autre, ce n'est pas le prix : c'est la **disponibilité en stock**. Pour localiser une pharmacie près de chez vous et vérifier les prix officiels par ville, utilisez notre [carte des pharmacies et des prix](/outils/carte-prix-pharmacies/).
+Ce qui varie réellement d'une officine à l'autre, ce n'est pas le prix : c'est la **disponibilité en stock**. Pour localiser une pharmacie près de chez vous et vérifier les prix officiels par ville, utilisez notre [carte des pharmacies et des prix](/outils/carte-prix-pharmacies/). Et si vous vous demandez si les prix sont plus intéressants de l'autre côté des Pyrénées, la réponse chiffrée est dans notre comparatif [Wegovy et Mounjaro en Espagne : prix réels et légalité](/collections/glp1-cout/acheter-wegovy-mounjaro-espagne-prix-legalite/).
 
 Le détail complet de chaque médicament est dans nos guides dédiés : [prix Ozempic](/collections/glp1-cout/prix-ozempic-france/), [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/), [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/), [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/), [prix Trulicity](/collections/glp1-cout/prix-trulicity-france/) et [prix Rybelsus](/collections/glp1-cout/prix-rybelsus-france/).
 
