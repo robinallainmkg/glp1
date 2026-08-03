@@ -5,7 +5,7 @@ description: "Apicil et Wegovy en 2026 : forfaits santé, médicaments non rembo
 seoDescription: "Apicil et Wegovy 2026 : forfaits, conditions, démarches. Guide complet sur la prise en charge."
 keywords: ['Apicil Wegovy remboursement', 'wegovy Apicil', 'mutuelle Apicil obésité', 'forfait Apicil GLP1']
 publishedAt: '2026-05-02'
-updatedAt: '2026-06-22'
+updatedAt: '2026-08-03'
 date: '2026-06-22'
 pubDate: 2026-05-02
 author: 'Dr. Marie Dubois'
@@ -43,9 +43,8 @@ Depuis l'inscription au remboursement, les complémentaires comme Apicil intervi
 
 ### Coût mensuel et annuel pour le patient
 
-- Wegovy 0,25 mg : ~169 €/mois (initiation)
-- Wegovy 0,5 mg / 1 mg : 220–270 €/mois
-- Wegovy 1,7 mg / 2,4 mg : 300–360 €/mois (entretien)
+- Wegovy 0,25 / 0,5 / 1 mg : 146,91 €/mois (prix réglementé)
+- Wegovy 1,7 mg : 169,31 €/mois — 2,4 mg : 195,10 €/mois (entretien)
 
 Soit un total annuel pouvant atteindre **4 300 €** au dosage cible. Détails dans notre [tableau prix Wegovy France](/collections/glp1-cout/prix-wegovy-france/).
 
