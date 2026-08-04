@@ -45,13 +45,13 @@ export async function getStaticPaths() {
     c.centerLng = c.pharmacies.reduce((a, p) => a + Number(p.lng), 0) / c.pharmacies.length;
   }
 
-  // Top 500 villes (palier 2 du rollout programmatique — était 100)
+  // Top 1000 villes (palier 2 du rollout programmatique — était 500)
   const allCitiesSorted = Object.values(byCity)
     .sort((a, b) => b.pharmacies.length - a.pharmacies.length);
-  const topCities = allCitiesSorted.slice(0, 500);
+  const topCities = allCitiesSorted.slice(0, 1000);
   // Villes disposant de pages prix dédiées (/pharmacies/[ville]/prix-*) — doit rester
-  // synchronisé avec PRICE_CITIES_LIMIT dans prix-mounjaro/wegovy/ozempic.astro
-  const priceCitySlugs = new Set(allCitiesSorted.slice(0, 200).map((c) => c.slug));
+  // synchronisé avec PRICE_CITIES_LIMIT dans src/lib/pharmacyCityData.ts
+  const priceCitySlugs = new Set(allCitiesSorted.slice(0, 500).map((c) => c.slug));
 
   // Calcule les "villes proches" pour chaque ville : même département d'abord, puis top global
   const sameDeptByCity = {};

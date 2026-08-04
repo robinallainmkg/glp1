@@ -35,14 +35,14 @@ export async function getStaticPaths() {
     });
   }
 
-  // Top 500 villes (même seuil que [ville].astro)
+  // Top 1000 villes (même seuil que [ville].astro)
   const cityCounts = new Map<string, number>();
   for (const row of pharmacies.rows) {
     const slug = row[iSlug];
     if (slug) cityCounts.set(slug, (cityCounts.get(slug) || 0) + 1);
   }
   const validCitySlugs = new Set(
-    [...cityCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 500).map(([s]) => s)
+    [...cityCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 1000).map(([s]) => s)
   );
 
   // Génère une page par zipcode ayant >=3 pharmacies (évite les pages 1-row sans valeur)
