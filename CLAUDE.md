@@ -282,9 +282,9 @@ VALUES (...);
 - Deploy : toucher `src/pages/pharmacies/` ou `pharmacies.json` declenche le full sync FTP (~16-40 min) ; les merges pendant un deploy en cours l'ANNULENT (`cancel-in-progress`) — toujours attendre le vert avant de merger un 2e lot
 
 **Prochains paliers (dans l'ordre, chacun conditionne au precedent)** :
-1. **Attendre l'indexation** : verifier a chaque routine les impressions GSC sur `/pharmacies/.*/prix-` ; premiere evaluation serieuse ~24-25/07
-2. Si l'indexation demarre : palier hubs villes 500 → 1000 (`[ville].astro` + `cp/[zipcode].astro`, slice 500 → 1000) et pages prix ville 200 → 500 (`PRICE_CITIES_LIMIT`, garder les 3 fichiers prix + `[ville].astro` synchronises)
-3. Si ca continue : envisager l'angle "disponibilite/stock communautaire" (retourner l'outil de soumission prix en signalement de stock) — DEMANDER a Robin avant (produit)
+1. ~~Attendre l'indexation~~ — FAIT : decollage confirme le 04/08 (imp x2,5 WoW, 109 pages prix actives)
+2. ~~Palier 2~~ — **DEPLOYE le 04/08/2026** (go Robin, PR #93, deploy vert 13h59) : hubs villes 1000, pages prix ville 500 (`PRICE_CITIES_LIMIT = 500`), cp/[zipcode] seuil 1000. Suivre l'indexation des nouvelles pages a chaque routine.
+3. Si ca continue : palier 3 possible (toutes villes >= 5 pharmacies) et/ou angle "disponibilite/stock communautaire" (retourner l'outil de soumission prix en signalement de stock) — DEMANDER a Robin avant (produit)
 
 **Signaux en surveillance (20/07)** :
 - "ozempic wegovy penurie" : 901 imp/14j, position 3.6, **0 clic** — anormal ; re-checker apres le nouveau title (deploye 20/07). Si toujours 0 clic vers le 24-25/07, investiguer la SERP.
