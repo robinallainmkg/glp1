@@ -2,7 +2,7 @@
 import StaticLayout from '../../../layouts/StaticLayout.astro';
 import { getPriceCityPaths, titleCaseCity } from '../../../lib/pharmacyCityData';
 
-// SEO local (top 200 villes) — cible "ozempic [ville]", "prix ozempic [ville]", "pharmacie ozempic [ville]".
+// SEO local (top 500 villes, palier 2) — cible "ozempic [ville]", "prix ozempic [ville]", "pharmacie ozempic [ville]".
 // Ozempic = diabète type 2 uniquement : angle différent des pages Wegovy/Mounjaro (obésité).
 
 export async function getStaticPaths() {

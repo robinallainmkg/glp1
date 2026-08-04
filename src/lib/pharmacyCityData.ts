@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-export const PRICE_CITIES_LIMIT = 200;
+export const PRICE_CITIES_LIMIT = 500;
 
 export interface PriceCityPath {
   params: { ville: string };
@@ -117,7 +117,7 @@ export function getPriceDeptPaths(): PriceDeptPath[] {
   const iSlug = pharmacies.schema.indexOf('city_slug');
   const iDept = pharmacies.schema.indexOf('department');
 
-  // Villes ayant une page prix ville (top 200 national, meme calcul que getPriceCityPaths)
+  // Villes ayant une page prix ville (top PRICE_CITIES_LIMIT national, meme calcul que getPriceCityPaths)
   const cityCounts: Record<string, number> = {};
   for (const row of pharmacies.rows) {
     const slug = row[iSlug];
