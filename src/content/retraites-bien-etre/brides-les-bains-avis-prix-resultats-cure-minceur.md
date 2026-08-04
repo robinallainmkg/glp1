@@ -144,4 +144,4 @@ Oui : pas de contre-indication générale, et le médecin thermal adapte le prog
 
 ### Comment obtenir la prescription pour une cure remboursée ?
 
-Votre médecin traitant remplit le questionnaire de prise en charge en orientation AD, vous l'envoyez à votre caisse, et vous attendez l'accord préalable avant de réserver. Saison 2026 : du 23 mars au 31 octobre.
+Votre médecin traitant remplit le questionnaire de prise en charge en orientation AD, vous l'envoyez à votre caisse, et vous attendez l'accord préalable avant de réserver. Saison 2026 : du 23 mars au 31 octobre. Si Brides est complet ou trop loin, consultez [les 13 autres stations agréées AD et la procédure de remboursement détaillée](/collections/retraites-bien-etre/cure-thermale-obesite-stations-agreees-remboursement/).

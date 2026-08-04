@@ -62,7 +62,7 @@ Sur un an à la dose d'entretien de Wegovy (2,4 mg), le reste à charge représe
 
 C'est le volet que presque personne ne connaît. L'Assurance Maladie prend en charge une cure thermale de **18 jours** par an, sur prescription de votre médecin traitant ou d'un spécialiste, dans une station agréée pour votre pathologie ([ameli.fr](https://www.ameli.fr/assure/remboursements/rembourse/cure-thermale)).
 
-Le surpoids et l'obésité relèvent de l'orientation **AD — affections digestives et maladies métaboliques** ([Médecine thermale](https://www.medecinethermale.fr/contenus-commun/pathologies/affections-digestives-et-maladies-metaboliques/surpoids-et-obesite-en-cure-thermale.html)).
+Le surpoids et l'obésité relèvent de l'orientation **AD — affections digestives et maladies métaboliques** ([Médecine thermale](https://www.medecinethermale.fr/contenus-commun/pathologies/affections-digestives-et-maladies-metaboliques/surpoids-et-obesite-en-cure-thermale.html)). Nous avons détaillé [la liste des 14 stations agréées AD et la procédure complète de remboursement](/collections/retraites-bien-etre/cure-thermale-obesite-stations-agreees-remboursement/).
 
 ### Les stations agréées AD
 

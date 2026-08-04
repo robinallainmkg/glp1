@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Stations thermales agréées obésité et remboursement">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a3c34"/>
+      <stop offset="1" stop-color="#0f2620"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- vapeur thermale stylisée -->
+  <g stroke="#16a34a" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85">
+    <path d="M140 300 q-18 -32 0 -64 q18 -32 0 -64"/>
+    <path d="M190 310 q-18 -36 0 -72 q18 -36 0 -72"/>
+    <path d="M240 300 q-18 -32 0 -64 q18 -32 0 -64"/>
+  </g>
+  <!-- bassin -->
+  <path d="M100 330 q90 40 180 0" stroke="#e8f5ee" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <!-- épingles carte -->
+  <g fill="#16a34a">
+    <path d="M560 120 c-26 0 -46 20 -46 46 c0 34 46 78 46 78 s46 -44 46 -78 c0 -26 -20 -46 -46 -46 z"/>
+    <circle cx="560" cy="166" r="18" fill="#0f2620"/>
+  </g>
+  <g fill="#e8f5ee" opacity="0.9">
+    <path d="M660 220 c-16 0 -29 13 -29 29 c0 21 29 49 29 49 s29 -28 29 -49 c0 -16 -13 -29 -29 -29 z"/>
+    <circle cx="660" cy="249" r="11" fill="#1a3c34"/>
+  </g>
+  <g fill="#e8f5ee" opacity="0.7">
+    <path d="M470 240 c-13 0 -24 11 -24 24 c0 17 24 41 24 41 s24 -24 24 -41 c0 -13 -11 -24 -24 -24 z"/>
+    <circle cx="470" cy="264" r="9" fill="#1a3c34"/>
+  </g>
+  <text x="60" y="392" font-family="Georgia, serif" font-size="40" fill="#e8f5ee" font-weight="bold">Cure thermale obésité</text>
+  <text x="60" y="428" font-family="Arial, sans-serif" font-size="24" fill="#16a34a">14 stations agréées · remboursement Sécu 2026</text>
+</svg>

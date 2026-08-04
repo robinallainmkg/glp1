@@ -3,7 +3,7 @@ title: "GLP-1 et Pancréatite : Risque, Symptômes et Conduite à Tenir"
 description: "GLP-1 pancréatite risque ozempic : risque évalué à 1/1000, qui est à risque, signes d'alerte et conduite à tenir en cas de douleur abdominale."
 pubDate: 2026-03-17
 date: 2026-03-17
-updatedAt: 2026-03-17
+updatedAt: 2026-08-04
 author: "Dr. Marie Dubois"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "pancréatite", "ozempic", "wegovy", "mounjaro", "effets secondaires", "pancréas", "ANSM"]
@@ -48,7 +48,7 @@ Des récepteurs GLP-1 ont été identifiés dans les cellules acinaires du pancr
 
 Les grandes études cliniques menées avant la mise sur le marché ont évalué ce risque avec soin. Dans les essais SUSTAIN (sémaglutide/Ozempic) et SCALE (liraglutide/[Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/)/), les taux de pancréatite observés étaient comparables entre les groupes traités et les groupes placebo — environ 0,1 à 0,2% des patients sur plusieurs années.
 
-L'étude SELECT de 2023 — qui a suivi 17 604 patients prenant du sémaglutide (Wegovy) sur 5 ans — n'a pas mis en évidence d'augmentation significative du risque de pancréatite par rapport au placebo.
+L'étude SELECT, publiée fin 2023 dans le *New England Journal of Medicine* — 17 604 patients, dont 8 803 sous sémaglutide (Wegovy), suivis en moyenne 40 mois — n'a pas mis en évidence d'augmentation du risque de pancréatite par rapport au placebo. Elle a en revanche confirmé une fréquence plus élevée de lithiases biliaires dans le groupe sémaglutide.
 
 **En pratique** : le risque absolu est faible, estimé à environ 1 cas pour 1 000 patients traités sur une année. Il reste néanmoins réel et nécessite une vigilance particulière.
 
@@ -155,7 +155,7 @@ L'ANSM maintient, dans son [bilan de pharmacovigilance ANSM 2025-2026](/collecti
 
 ### La position de l'EMA
 
-L'Agence européenne des médicaments (EMA) a réexaminé en 2023 le dossier de pharmacovigilance des GLP-1 et confirmé que le risque de pancréatite existe mais reste faible. Elle recommandé de ne pas prescrire ces médicaments chez les patients ayant un antécédent de pancréatite aiguë ou chronique.
+L'Agence européenne des médicaments (EMA) a réexaminé en 2023 le dossier de pharmacovigilance des GLP-1 et confirmé que le risque de pancréatite existe mais reste faible. Les RCP européens recommandent la prudence chez les patients ayant un antécédent de pancréatite, et l'arrêt définitif du traitement en cas de pancréatite confirmée sous GLP-1.
 
 ## Questions fréquentes
 

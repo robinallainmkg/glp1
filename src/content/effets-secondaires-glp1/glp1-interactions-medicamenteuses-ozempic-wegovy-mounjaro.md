@@ -3,7 +3,7 @@ title: "GLP-1 Interactions Médicamenteuses Ozempic Wegovy"
 description: "GLP-1 interactions médicamenteuses : la vidange gastrique ralentie modifie l'absorption de nombreux médicaments. Guide pratique 2026."
 pubDate: 2026-03-17
 date: 2026-03-17
-updatedAt: 2026-03-17
+updatedAt: 2026-08-04
 author: "Dr. Sophie Dubois"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "interactions médicamenteuses", "ozempic", "wegovy", "mounjaro", "pharmacologie", "médicaments", "ANSM"]
@@ -63,6 +63,9 @@ Les contraceptifs oraux combinés (pilule contraceptive) font l'objet d'une surv
 
 **Ce que disent les données officielles**
 Les études pharmacocinétiques publiées (Novo Nordisk) montrent que le sémaglutide ne réduit pas la biodisponibilité de l'éthinylestradiol et du lévonorgestrel de façon cliniquement pertinente. Le RCP officiel de l'Ozempic/Wegovy ne fait donc pas état d'une interaction pharmacocinétique significative avec les contraceptifs oraux combinés. Des grossesses ont cependant été signalées à l'EMA chez des femmes sous sémaglutide et contraceptifs oraux, mais le lien causal n'est pas établi — des vomissements importants en début de traitement pourraient réduire l'efficacité de la pilule dans certains cas.
+
+**Le cas particulier du tirzépatide (Mounjaro) : une vraie interaction documentée**
+Contrairement au sémaglutide, le tirzépatide réduit l'exposition aux contraceptifs oraux : une baisse d'environ 20 % de l'exposition globale a été mesurée après une dose de 5 mg, en raison du ralentissement de la vidange gastrique. Le RCP de Mounjaro recommande donc aux femmes sous pilule de **passer à une contraception non orale (DIU, implant, patch, anneau) ou d'ajouter une méthode barrière pendant les 4 semaines suivant l'initiation du traitement et les 4 semaines suivant chaque augmentation de dose**. C'est la principale différence entre les deux molécules sur ce sujet.
 
 **La recommandation pratique**
 Par précaution, si vous prenez une pilule contraceptive et que vous souffrez de vomissements importants en début de traitement GLP-1, discutez-en avec votre médecin ou gynécologue. Si vous envisagez une grossesse, consultez notre guide sur l'[arrêt du traitement GLP-1 avant la grossesse](/collections/effets-secondaires-glp1/glp1-grossesse-preconception-arret-traitement-fertilite/). Une contraception complémentaire (préservatif) peut être envisagée pendant les phases de vomissements intenses.
@@ -125,11 +128,11 @@ Si vous constatez une modification de l'efficacité d'un de vos médicaments hab
 
 Le ralentissement de la vidange gastrique créé par les GLP-1 a une importance capitale en cas d'intervention chirurgicale nécessitant une anesthésie générale. L'estomac doit être vide pour éviter l'inhalation de son contenu pendant l'anesthésie — un accident potentiellement mortel.
 
-Les recommandations actuelles des sociétés d'anesthésie préconisent :
-- D'arrêter un GLP-1 hebdomadaire (Ozempic, Wegovy, Mounjaro) **au moins 7 jours avant** une intervention programmée
-- D'arrêter un GLP-1 quotidien (liraglutide/Saxenda) **le jour de l'intervention** (ou la veille par précaution selon le protocole anesthésique, conformément aux recommandations PRAC de juillet 2024)
-- D'informer l'équipe anesthésique si l'arrêt n'a pas pu être effectué dans ces délais
-- De réaliser une échographie gastrique au point de soins (POCUS) en préopératoire pour évaluer le contenu gastrique résiduel
+Les recommandations ont évolué : les référentiels publiés en 2025 par la Société française d'anesthésie et de réanimation (SFAR) et la Société francophone du diabète ne préconisent **plus l'arrêt systématique** des GLP-1 à action prolongée dans les 7 jours précédant une intervention chez les patients à faible risque. L'approche est désormais individualisée :
+- **Ne pas arrêter le traitement de soi-même** : la décision revient à l'équipe d'anesthésie selon votre profil de risque
+- En cas de doute sur le contenu gastrique résiduel (position recommandée par le PRAC depuis juillet 2024), une **échographie gastrique** préopératoire peut être réalisée
+- Des mesures de précaution anesthésique peuvent être mises en place : anesthésie loco-régionale privilégiée, induction à séquence rapide
+- D'informer l'équipe anesthésique de votre traitement GLP-1 dans tous les cas, dès la consultation pré-anesthésique
 
 Si vous avez une chirurgie programmée, informez **immédiatement** le chirurgien et l'anesthésiste de votre traitement GLP-1. Consultez notre guide complet sur les [précautions d'arrêt avant chirurgie et anesthésie](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) pour les délais et protocoles recommandés.
 
