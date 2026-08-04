@@ -169,6 +169,15 @@ C'est l'objectif principal du site (voir OBJECTIFS BUSINESS). Chaque rapport quo
 6. **Suivi post-achat (OBLIGATOIRE dans chaque rapport)** : pour chaque dossier paye, envoyer l'email de satisfaction a J+2/J+3 via l'edge function `send-feedback-email` (v3, envoyeur generique guarde par token — token lisible dans le source via `mcp__Supabase__get_edge_function`, category `dossier_satisfaction`, trace auto dans email_replies), puis verifier a CHAQUE run si le client a repondu (incoming_emails, sync auto pg_cron toutes les 15 min) et le dire dans le rapport (« relance envoyee le X, pas de reponse » compte comme une info). Etat au 27/07 : client 1 (paye 22/07) email envoye 23/07 sans reponse ; client 2 (paye 24/07) email envoye 27/07.
 Si un dossier est PAYE : PushNotification immediate a Robin (1re conversion = evenement).
 
+**KPIs funnel officiels (definis avec Robin le 04/08/2026 — a reporter dans CHAQUE rapport A0, fenetre glissante 30j)** :
+- **K1 Exposition** = sessions (/outils/test-eligibilite/ + /dossier-glp1/) / sessions site. Baseline 04/08 : **0,69 %** (104/15 095)
+- **K2 Activation** = dossiers crees / sessions /dossier-glp1/. Baseline : **12 %** (6/50)
+- **K3 Paiement** = dossiers payes / dossiers crees. Baseline : **50 %** (3/6)
+- **K4 Conversion funnel** = payes / sessions funnel. Baseline : **2,9 %** (3/104)
+- **K5 Coach** = reponses proposant le Dossier / conversations. Baseline : **11 %** (15/135) — et ventes via chat (1/3 au 04/08)
+- **K6 Capture test** = leads eligibility_test / sessions test. Baseline : **9,3 %** (5/54)
+Le diagnostic de fuite (point 5) se fait en comparant chaque K a sa baseline : le K qui decroche = la fuite du moment. Goulot identifie au 04/08 : **K1** (exposition), le reste du funnel convertit correctement.
+
 ### Phase A — Etat des lieux (collecte, chaque run)
 
 Verifier fraicheur GA4/GSC (regle critique en tete de fichier), site live (home 200, redirect zepbound→mounjaro, sitemap), puis :
