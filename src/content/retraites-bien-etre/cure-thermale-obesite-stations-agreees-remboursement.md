@@ -55,7 +55,7 @@ Voici la liste des stations possédant l'agrément pour cette orientation ([Loca
 | **Le Boulou** | Pyrénées-Orientales (66) |
 | **Santenay** | Côte-d'Or (21) |
 
-Toutes ne se valent pas pour l'amaigrissement. **Brides-les-Bains** est la référence historique de la perte de poids : c'est la seule station dont l'efficacité sur l'obésité a été mesurée par une étude contrôlée (Maâthermes : 3,86 kg perdus en moyenne, mesurés 14 mois après la cure). Notre [avis complet sur Brides-les-Bains](/collections/retraites-bien-etre/brides-les-bains-avis-prix-resultats-cure-minceur/) détaille prix réels et résultats. Vittel, Contrexéville et Capvern ont également des programmes minceur structurés ; Évian et Thonon sont davantage orientées troubles digestifs.
+Toutes ne se valent pas pour l'amaigrissement. **Brides-les-Bains** est la référence historique de la perte de poids : c'est la seule station dont l'efficacité sur l'obésité a été mesurée par une étude contrôlée (Maâthermes : 3,86 kg perdus en moyenne, mesurés 14 mois après la cure). Notre [avis complet sur Brides-les-Bains](/collections/retraites-bien-etre/brides-les-bains-avis-prix-resultats-cure-minceur/) détaille prix réels et résultats. Vittel, Contrexéville et Capvern ont également des programmes minceur structurés — nous les avons [comparées en détail (prix, saisons, programmes surpoids)](/collections/retraites-bien-etre/vittel-capvern-contrexeville-cure-thermale-minceur-comparatif/) ; Évian et Thonon sont davantage orientées troubles digestifs.
 
 ## Ce que rembourse l'Assurance Maladie en 2026
 
