@@ -1,9 +1,9 @@
 ---
 title: "Wegovy Comprimé Oral : La Pilule GLP-1 Qui Change la Donne"
-description: "Wegovy comprimé oral France : sémaglutide oral 25 mg approuvé FDA déc. 2025 et CHMP mai 2026, essais OASIS, efficacité 15-17 %, alternative aux injections. Lancement EU S2 2026."
+description: "Wegovy comprimé oral France : sémaglutide oral 25 mg approuvé FDA déc. 2025, AMM européenne le 15 juillet 2026, essais OASIS, efficacité 15-17 %, alternative aux injections. Lancement EU S2 2026."
 pubDate: 2026-05-28
 date: "2026-05-28"
-updatedAt: 2026-05-28
+updatedAt: 2026-08-05
 author: "Dr. Marie Dubois"
 category: "Traitements GLP-1"
 tags: ["wegovy oral", "sémaglutide oral", "comprimé", "pilule", "GLP-1 oral", "perte de poids", "OASIS", "rybelsus haute dose"]
@@ -16,7 +16,7 @@ priority: 1
 schema: "Article"
 faqSchema:
   - question: "Le Wegovy comprimé oral est-il déjà disponible en France ?"
-    answer: "Non, pas encore en France. Le sémaglutide oral 25 mg pour la perte de poids a été approuvé par la FDA en décembre 2025 et a reçu un avis positif du CHMP (EMA) en mai 2026. Un lancement européen est attendu au second semestre 2026, suivi des procédures HAS/CEPS pour la France."
+    answer: "Non, pas encore en France. Le sémaglutide oral 25 mg pour la perte de poids a été approuvé par la FDA en décembre 2025 et a obtenu son AMM européenne le 15 juillet 2026 (Commission européenne, après avis positif du CHMP en mai 2026). Il est déjà commercialisé aux États-Unis, au Royaume-Uni et aux Émirats arabes unis ; les lancements dans l'UE sont attendus au second semestre 2026, suivis des procédures HAS/CEPS pour la France."
   - question: "Le Wegovy oral est-il aussi efficace que le Wegovy injectable ?"
     answer: "Les essais cliniques OASIS montrent une efficacité comparable : le sémaglutide oral 25 mg (dose approuvée FDA déc. 2025 et CHMP EMA mai 2026) entraîne une perte de poids d'environ 15 à 17 % du poids initial, ce qui est similaire aux 15-16 % obtenus avec l'injection hebdomadaire de Wegovy 2,4 mg."
   - question: "Quelle est la différence entre le Wegovy oral et Rybelsus ?"
@@ -243,7 +243,7 @@ Le sémaglutide oral haute dose suit un parcours réglementaire parallèle à ce
 
 ### Calendrier estimé
 
-La FDA a approuvé le sémaglutide oral 25 mg en décembre 2025, et le CHMP de l'EMA a rendu un avis positif en mai 2026. Un lancement européen est attendu au **second semestre 2026**. La disponibilité en France dépendra ensuite des procédures HAS (SMR/ASMR) et de la négociation du prix avec le CEPS, qui peuvent prendre 6 à 18 mois supplémentaires.
+La FDA a approuvé le sémaglutide oral 25 mg en décembre 2025, et après l'avis positif du CHMP en mai 2026, la **Commission européenne a délivré l'AMM le 15 juillet 2026** — le Wegovy en comprimé devient ainsi le premier GLP-1 oral autorisé pour la gestion du poids dans l'UE ([Novo Nordisk](https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=916582)). Le comprimé est déjà commercialisé aux États-Unis, au Royaume-Uni et aux Émirats arabes unis, avec des lancements européens prévus au **second semestre 2026**. La disponibilité en France dépendra ensuite des procédures HAS (SMR/ASMR) et de la négociation du prix avec le CEPS, qui peuvent prendre 6 à 18 mois supplémentaires.
 
 ### Question du remboursement
 
@@ -325,7 +325,7 @@ Les patients ayant subi un bypass gastrique ou une sleeve gastrectomie ont une a
 - **Le Wegovy comprimé oral** (sémaglutide 25 mg/jour, approuvé FDA déc. 2025 et CHMP EMA mai 2026) vise à offrir l'efficacité de Wegovy injectable (~15-17 % de perte de poids) sous forme de pilule quotidienne
 - **Les essais OASIS** montrent des résultats très proches de l'injection, confirmant que la voie orale peut rivaliser avec la voie injectable pour le sémaglutide
 - **Les contraintes de prise** (jeûne, peu d'eau, attente de 30 min) sont réelles et doivent être intégrées dans la routine quotidienne
-- **La disponibilité en France** : FDA approuvé déc. 2025, CHMP avis positif mai 2026 — lancement EU S2 2026 prévu, France sous réserve des procédures HAS/CEPS
+- **La disponibilité en France** : FDA approuvé déc. 2025, AMM européenne accordée le 15 juillet 2026 — lancements EU S2 2026 prévus, France sous réserve des procédures HAS/CEPS
 - **En attendant**, Wegovy injectable, Mounjaro et les autres GLP-1 sont disponibles en France pour les patients éligibles — n'attendez pas si vous êtes éligible à un traitement
 
 Le Wegovy oral représente une avancée importante vers une démocratisation des traitements GLP-1 pour la perte de poids. Combiné à l'arrivée de Foundayo (orforglipron), il annonce une ère où les patients auront le choix entre comprimé et injection selon leurs préférences — une excellente nouvelle pour la prise en charge de l'obésité en France.
