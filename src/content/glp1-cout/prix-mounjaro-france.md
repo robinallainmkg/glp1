@@ -6,7 +6,7 @@ keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounj
 seoTitle: "Prix Mounjaro 2026 : 176-433 € — même prix partout, -65% Sécu"
 seoDescription: "Prix Mounjaro officiel : 176 à 434 €/mois selon dosage, identique dans toutes les pharmacies. Remboursé à 65 % depuis juin 2026 — vérifiez votre éligibilité."
 publishedAt: '2025-09-06'
-updatedAt: '2026-07-27'
+updatedAt: '2026-08-06'
 date: 2026-07-20
 featured: true
 priority: 1
@@ -304,6 +304,12 @@ Retrouvez aussi nos pages locales avec la liste des pharmacies et les centres de
 | 12,5-15 mg | 433,80 € | ~151 €/mois |
 
 *Tous les dosages sont remboursés à 65% par l'Assurance Maladie pour les patients éligibles (depuis le 15 juin 2026). Ticket modérateur de 35% complété par la mutuelle selon votre contrat.*
+
+<div style="background:#f0fdf4;border:2px solid #16a34a;border-radius:12px;padding:20px 24px;margin:24px 0;">
+  <p style="margin:0 0 8px;font-weight:700;color:#1a3c34;font-size:1.05em;">De 176-434 €/mois à 61-151 €/mois : tout se joue sur l'éligibilité</p>
+  <p style="margin:0 0 14px;color:#374151;">Le remboursement à 65 % dépend de critères précis : IMC ≥ 40, ou ≥ 35 avec comorbidité, après 6 mois de prise en charge nutritionnelle. Vérifiez les vôtres avant le rendez-vous médecin.</p>
+  <a href="/outils/test-eligibilite/" style="display:inline-block;background:#16a34a;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Faire le test d'éligibilité → 2 min</a>
+</div>
 
 ## Obtenir le Remboursement Mounjaro : 4 Étapes Concrètes {#remboursement-etapes}
 

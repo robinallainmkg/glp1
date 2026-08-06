@@ -7,7 +7,7 @@ keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy prix phar
 seoTitle: "Wegovy Prix Pharmacie Moins Cher 2026 : dès 146,91€, remboursé 65%"
 seoDescription: "Wegovy prix pharmacie juillet 2026 : 146,91 à 195,10€/mois (prix réglementé, identique partout). Remboursé 65% Sécu depuis juin 2026. Carte des pharmacies disponibles, éligibilité et reste à charge. Mis à jour."
 publishedAt: '2025-01-28'
-updatedAt: '2026-07-20'
+updatedAt: '2026-08-06'
 date: '2026-07-19'
 featured: true
 author: 'Dr. Marie Dubois'
@@ -100,6 +100,12 @@ faqSchema:
 | 2.4 mg | 195,10 € | 65 % (sous conditions) |
 
 **Prix mensuel réglementé** : 146,91-195,10 €/mois selon le dosage, **remboursé à 65 % depuis le 15 juin 2026** sous conditions (IMC ≥ 35 + comorbidité ou IMC ≥ 40)
+
+<div style="background:#f0fdf4;border:2px solid #16a34a;border-radius:12px;padding:20px 24px;margin:24px 0;">
+  <p style="margin:0 0 8px;font-weight:700;color:#1a3c34;font-size:1.05em;">De 147-195 €/mois à 51-68 €/mois : tout se joue sur l'éligibilité</p>
+  <p style="margin:0 0 14px;color:#374151;">Le remboursement à 65 % dépend de critères précis : IMC ≥ 40, ou ≥ 35 avec comorbidité, après 6 mois de prise en charge nutritionnelle. Vérifiez les vôtres avant le rendez-vous médecin.</p>
+  <a href="/outils/test-eligibilite/" style="display:inline-block;background:#16a34a;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Faire le test d'éligibilité → 2 min</a>
+</div>
 
 ### Comparaison avec autres GLP-1
 

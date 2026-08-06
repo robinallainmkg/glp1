@@ -7,7 +7,7 @@ seoTitle: "Prix Ozempic 2026 : 77,60 €/stylo — remboursé 30%, 100% en ALD"
 seoDescription: "Prix officiel Ozempic : 77,60 € TTC le stylo (1 mois), identique dans toutes les pharmacies. Remboursé 30% diabète type 2, 100% en ALD. Point juillet 2026."
 mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
-updatedAt: '2026-07-27'
+updatedAt: '2026-08-06'
 date: 2026-06-22
 featured: true
 author: 'Rédaction GLP-1 France'
@@ -105,6 +105,12 @@ Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo
 | 2 mg | AMM européenne, non commercialisé en France | — |
 
 **Prix mensuel** : 77,60 € quel que soit le dosage (chaque stylo contient 4 doses, soit 1 stylo/mois)
+
+<div style="background:#f0fdf4;border:2px solid #16a34a;border-radius:12px;padding:20px 24px;margin:24px 0;">
+  <p style="margin:0 0 8px;font-weight:700;color:#1a3c34;font-size:1.05em;">Ozempic n'est remboursé que pour le diabète — pour la perte de poids, c'est Wegovy ou Mounjaro (65 %)</p>
+  <p style="margin:0 0 14px;color:#374151;">Si votre objectif est de maigrir, le remboursement à 65 % passe par Wegovy ou Mounjaro, sous conditions : IMC ≥ 40, ou ≥ 35 avec comorbidité, après 6 mois de suivi nutritionnel. Vérifiez vos critères.</p>
+  <a href="/outils/test-eligibilite/" style="display:inline-block;background:#16a34a;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Faire le test d'éligibilité → 2 min</a>
+</div>
 
 ### Comparaison avec autres GLP-1
 
