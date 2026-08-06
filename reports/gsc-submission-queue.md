@@ -5,6 +5,8 @@ La routine AJOUTE ici a chaque publication — elle ne relance jamais dans le ch
 
 ## En attente de soumission
 
+- [ ] **https://glp1-france.fr/outils/test-eligibilite/ (PRIORITE ABSOLUE — page funnel, 0 impression GSC en 30j, jamais indexee depuis le 14/07 ; constat du 04/08)**
+
 - [ ] https://glp1-france.fr/collections/medecins-glp1-france/qui-peut-prescrire-mounjaro-wegovy-rembourse/ (article 01/08, prioritaire)
 - [ ] https://glp1-france.fr/collections/traitements-glp1/pharmacie-refuse-delivrer-mounjaro-wegovy-que-faire/ (article 01/08 run 2, prioritaire)
 - [ ] https://glp1-france.fr/collections/glp1-cout/prix-glp1-pharmacie-tableau-2026/ (article 02/08, prioritaire — cible « glp-1 en pharmacie prix »)
