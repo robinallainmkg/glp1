@@ -3,7 +3,7 @@ title: "GLP-1 et Syndrome Métabolique : Traitement des Composantes"
 description: "GLP-1 et syndrome métabolique : Ozempic, Wegovy et Mounjaro agissent sur l'obésité abdominale, l'HTA, la dyslipidémie et la glycémie."
 pubDate: 2026-03-18
 date: 2026-06-22
-updatedAt: 2026-06-22
+updatedAt: 2026-08-07
 author: "Dr. Sophie Dubois"
 category: "Perte de poids GLP-1"
 tags: ["glp1", "syndrome métabolique", "obésité abdominale", "HTA", "dyslipidémie", "glycémie", "ozempic", "wegovy", "mounjaro"]
@@ -123,7 +123,7 @@ Il est important de noter que ces effets sont maintenus tant que le traitement e
 
 ### Ozempic (sémaglutide injectable) : si diabète de type 2 associé
 
-[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide 0,5 mg, 1 mg ou 2 mg) est indiqué pour le **diabète de type 2** et remboursé à 30 % en bithérapie metformine (100 % en ALD diabète) en France pour cette indication. C'est le choix de référence quand le syndrome métabolique est associé à un diabète de type 2 avéré. Son bénéfice cardiovasculaire est prouvé par les études SUSTAIN-6 et SELECT.
+[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide 0,25 mg, 0,5 mg ou 1 mg — le [dosage 2 mg n'est pas commercialisé en France](/collections/traitements-glp1/ozempic-2-mg-pourquoi-pas-disponible-france/)) est indiqué pour le **diabète de type 2** et remboursé à 30 % en bithérapie metformine (100 % en ALD diabète) en France pour cette indication. C'est le choix de référence quand le syndrome métabolique est associé à un diabète de type 2 avéré. Son bénéfice cardiovasculaire est prouvé par les études SUSTAIN-6 et SELECT.
 
 ### Wegovy (sémaglutide 2,4 mg) : si obésité sans diabète
 
@@ -150,7 +150,7 @@ Le remboursement dépend de l'indication. Pour le diabète de type 2, Ozempic es
 
 ### Mon médecin traitant peut-il prescrire un GLP-1 pour syndrome métabolique ?
 
-Oui. Depuis 2025, la prescription de GLP-1 peut être initiée par tout médecin (généraliste ou spécialiste) pour les indications reconnues. Si votre médecin estime que vous remplissez les critères d'indication, il peut prescrire. Il peut aussi vous orienter vers un spécialiste (endocrinologue, diabétologue, nutritionniste) pour un avis.
+Oui pour la prescription simple : tout médecin (généraliste ou spécialiste) peut prescrire un GLP-1 dans les indications reconnues. Attention toutefois : pour bénéficier du **remboursement à 65 % dans l'obésité** (Wegovy, Mounjaro), la primo-prescription doit être faite dans un centre spécialisé de l'obésité (CSO) ou un CHU depuis le 15 juin 2026 — le généraliste prend ensuite le relais pour les renouvellements. Pour Ozempic dans le diabète de type 2, le généraliste peut initier directement.
 
 ### Combien de temps faut-il pour que les GLP-1 agissent sur le syndrome métabolique ?
 

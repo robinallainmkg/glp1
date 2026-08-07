@@ -144,7 +144,7 @@ Non. Le prix reste identique à celui de l'ancienne présentation : 76,58 € pl
 Non, les règles de conservation sont identiques : réfrigérateur avant ouverture, et 6 semaines maximum à température ambiante après la première utilisation. Notez simplement la date de première utilisation pour ne pas dépasser la limite de 6 semaines.
 
 **Novo Nordisk va-t-il aussi changer le conditionnement d'Ozempic 1 mg ?**
-Les informations disponibles en mars 2026 concernent spécifiquement le changement du conditionnement d'Ozempic 0,5 mg. Pour le 1 mg, renseignez-vous auprès de votre pharmacien ou consultez les communications officielles de l'ANSM.
+Les informations disponibles en mars 2026 concernent spécifiquement le changement du conditionnement d'Ozempic 0,5 mg. Pour le 1 mg, renseignez-vous auprès de votre pharmacien ou consultez les communications officielles de l'ANSM. À noter : la gamme française s'arrête à 1 mg — le dosage supérieur existe ailleurs mais [Ozempic 2 mg n'est pas commercialisé en France](/collections/traitements-glp1/ozempic-2-mg-pourquoi-pas-disponible-france/).
 
 **J'ai des difficultés à manipuler le nouveau stylo. Qui consulter ?**
 Votre pharmacien peut vous montrer le fonctionnement du nouveau stylo lors du retrait. Pour un guide détaillé, consultez notre article sur [comment s'injecter Ozempic](/collections/traitements-glp1/comment-s-injecter-glp1-guide-pratique-ozempic-wegovy-mounjaro/). Votre médecin traitant ou une infirmière peut également vous accompagner lors des premières injections si nécessaire.

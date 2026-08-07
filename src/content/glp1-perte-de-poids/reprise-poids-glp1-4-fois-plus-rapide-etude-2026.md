@@ -3,7 +3,7 @@ title: "Reprise de Poids après GLP-1 : 4× Plus Rapide"
 description: "Reprise de poids après arrêt GLP-1 : 4 fois plus rapide qu'après un régime classique. Causes biologiques et stratégies anti-effet rebond."
 pubDate: 2026-03-18
 date: 2026-03-18
-updatedAt: 2026-03-18
+updatedAt: 2026-08-07
 author: "Dr. Marie Dubois"
 category: "Perte de poids"
 tags: ["glp1", "reprise de poids", "arrêt traitement", "ozempic", "wegovy", "mounjaro", "effet yoyo", "données 2026"]
@@ -36,7 +36,7 @@ Une nouvelle étude publiée début 2026 vient chiffrer avec précision ce que l
 
 ### La reprise de poids : 4 fois plus rapide
 
-Jusqu'ici, les études STEP et SCALE avaient déjà montré que l'arrêt du sémaglutide ou du liraglutide entraînait une reprise significative du poids perdu. Mais les nouvelles analyses de 2026 affinent ce constat avec un chiffre marquant : la vitesse de reprise pondérale après arrêt des GLP-1 est environ **quatre fois supérieure** à celle observée après la fin d'un régime hypocalorique classique de même efficacité.
+Jusqu'ici, les études STEP et SCALE avaient déjà montré que l'arrêt du sémaglutide ou du liraglutide entraînait une reprise significative du poids perdu. Mais les nouvelles analyses de 2026 affinent ce constat avec un chiffre marquant : la vitesse de reprise pondérale après arrêt des GLP-1 est environ **quatre fois supérieure** à celle observée après la fin d'un régime hypocalorique classique de même efficacité. C'est la conclusion d'une revue systématique menée par l'[Université d'Oxford, publiée dans le BMJ le 7 janvier 2026](https://www.ox.ac.uk/news/2026-01-08-new-study-finds-stopping-weight-loss-drugs-linked-faster-regain-ending-diet), portant sur 37 études et environ 9 300 participants.
 
 En termes concrets, cela se traduit souvent par :
 

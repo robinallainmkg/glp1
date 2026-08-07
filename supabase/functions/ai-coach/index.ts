@@ -940,6 +940,18 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
         cleanResponse = priceCheck.text;
       }
 
+      // Garde-fou éligibilité → lien du test : la règle du prompt (« lien direct
+      // avant toute collecte poids/taille ») n'est pas toujours suivie par le LLM.
+      // Si la réponse demande le poids/la taille sans que le lien du test ait été
+      // donné dans la conversation, on l'ajoute en fin de réponse.
+      const asksBodyData = /\b(ton|votre)\s+poids\b|poids\s+et\s+(ta|votre)\s+taille/i.test(cleanResponse);
+      const testLinkAlreadyGiven = cleanResponse.includes("/outils/test-eligibilite/")
+        || historyMessages.some((m: any) => m.role === "assistant" && typeof m.content === "string" && m.content.includes("/outils/test-eligibilite/"));
+      if (asksBodyData && !testLinkAlreadyGiven && !dossierData) {
+        console.warn(`[eligibility-guard] lien du test ajouté (modèle: ${usedModel})`);
+        cleanResponse += "\n\nLe plus rapide si tu préfères : notre [test d'éligibilité](/outils/test-eligibilite/) te donne le verdict en 1 minute (3 questions).";
+      }
+
       // Moment chaud → on propose la capture email (le funnel convertit à 0 sans capture).
       const saysEligible = /\béligibl/i.test(cleanResponse);
       const saysNotEligible = /\b(pas|plus)\b[^.]{0,25}éligibl|éligibl[^.]{0,25}\bsi\b/i.test(cleanResponse);
