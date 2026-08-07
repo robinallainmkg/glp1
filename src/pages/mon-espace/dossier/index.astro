@@ -30,11 +30,15 @@ import { supabaseConfig } from '../../../lib/supabase';
     @keyframes spin{to{transform:rotate(360deg)}}
     a.back{display:inline-block;margin-top:18px;color:#6b7280;font-size:.85rem;text-decoration:none}
     .center{text-align:center}
+    /* le dossier est plus large que la carte de statut : on deborde le .wrap */
+    #viewer:not(:empty){margin-top:20px;width:min(920px,100vw - 40px);margin-left:50%;transform:translateX(-50%);background:#fff;border:1px solid #e2e8f0;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+    .viewer-frame{display:block;width:100%;height:78vh;min-height:520px;border:0}
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card" id="root"><p class="center muted"><span class="spinner"></span>Chargement...</p></div>
+    <div id="viewer"></div>
     <p class="center"><a class="back" href="/">← Retour au site</a></p>
   </div>
 
@@ -92,13 +96,36 @@ import { supabaseConfig } from '../../../lib/supabase';
             '<a href="' + dlUrl + '" class="btn-secondary">Telecharger (fichier a ouvrir dans ton navigateur)</a>' +
             '<p class="muted" style="margin-top:16px;text-align:center">Le lien reste actif — tu peux y revenir a tout moment. Astuce : depuis le dossier ouvert, Ctrl+P / Imprimer pour en faire un PDF.</p>';
           document.getElementById('view-btn').addEventListener('click', function(){
+            // Lecture INLINE : window.open() apres un fetch async est bloque par
+            // les popup blockers (Safari/iOS surtout) — le client cliquait sans
+            // rien voir. On rend le dossier dans un iframe de la page courante.
+            var btn = this;
+            var host = document.getElementById('viewer');
+            if (host.getAttribute('data-loaded') === '1') {
+              host.scrollIntoView({ behavior: 'smooth' });
+              return;
+            }
+            btn.disabled = true;
+            btn.textContent = 'Ouverture...';
             fetch(d.pdf_url)
               .then(function(r){ return r.text(); })
               .then(function(htmlContent){
-                var blob = new Blob([htmlContent], { type: 'text/html' });
-                window.open(URL.createObjectURL(blob), '_blank');
+                var frame = document.createElement('iframe');
+                frame.className = 'viewer-frame';
+                frame.setAttribute('title', 'Mon dossier GLP-1');
+                frame.srcdoc = htmlContent;
+                host.innerHTML = '';
+                host.appendChild(frame);
+                host.setAttribute('data-loaded', '1');
+                btn.disabled = false;
+                btn.textContent = 'Revenir a mon dossier';
+                host.scrollIntoView({ behavior: 'smooth' });
               })
-              .catch(function(){ window.location.href = dlUrl; });
+              .catch(function(){
+                btn.disabled = false;
+                btn.textContent = 'Lire mon dossier';
+                window.location.href = dlUrl;
+              });
           });
         } else if (d.status === 'paid' && attempts < maxAttempts) {
           setTimeout(checkDossier, 2000);

@@ -74,6 +74,15 @@ const faqJsonLd = JSON.stringify({
         <a href={`/pharmacies/${Astro.params.ville}/prix-mounjaro/`} style="color:#16a34a; font-weight:600;">Mounjaro</a>, remboursés à 65 % depuis le 15 juin 2026 —
         <a href="/outils/test-eligibilite/" style="color:#16a34a; font-weight:600;">testez votre éligibilité en 2 minutes →</a></p>
 
+      {/* Anti-cannibalisation : sur la requete generique "ozempic prix", la page
+          canonique est le guide national — ancre exacte pour reconcentrer l'autorite. */}
+      <p class="text-gray-700 mb-6" style="border-left:3px solid #16a34a; padding-left:12px;">
+        Ce tarif est réglementé et <strong>identique dans toute la France</strong> : il n'existe pas de prix
+        propre à {city}. Pour le détail national (remboursement 30 %, 100 % en ALD, reste à charge), consultez le
+        guide de référence <a href="/collections/glp1-cout/prix-ozempic-france/" style="color:#16a34a; font-weight:600;">prix Ozempic</a>.
+        Cette page sert à trouver <strong>où retirer votre traitement à {city}</strong>.
+      </p>
+
       <h2 class="text-2xl font-bold mb-3" style="color:#1a3c34;">Trouver Ozempic en stock à {city}</h2>
       <p class="text-gray-700 mb-4">
         La pénurie est terminée : l'ANSM a levé toutes les restrictions en juin 2025 et aucun GLP-1 ne figure sur la

@@ -70,6 +70,15 @@ const faqJsonLd = JSON.stringify({
       <p class="text-sm text-gray-500 mb-6">* Si éligible au remboursement (IMC ≥ 35 avec comorbidité ou ≥ 40) ; votre mutuelle peut couvrir ce reste à charge.
         <a href="/outils/test-eligibilite/" style="color:#16a34a; font-weight:600;">Vérifiez votre éligibilité en 2 minutes →</a></p>
 
+      {/* Anti-cannibalisation : sur la requete generique "wegovy prix", la page
+          canonique est le guide national — ancre exacte pour reconcentrer l'autorite. */}
+      <p class="text-gray-700 mb-6" style="border-left:3px solid #16a34a; padding-left:12px;">
+        Ces tarifs sont réglementés et <strong>identiques dans toute la France</strong> : il n'existe pas de prix
+        propre à {city}. Pour le détail national (dosages, remboursement, reste à charge), consultez le guide de
+        référence <a href="/collections/glp1-cout/prix-wegovy-france/" style="color:#16a34a; font-weight:600;">prix Wegovy</a>.
+        Cette page sert à trouver <strong>où retirer votre traitement à {city}</strong>.
+      </p>
+
       <h2 class="text-2xl font-bold mb-3" style="color:#1a3c34;">Trouver Wegovy en stock à {city}</h2>
       <p class="text-gray-700 mb-4">
         Toutes les pharmacies peuvent délivrer Wegovy sur ordonnance, et commander sous 24-48 h si besoin.
