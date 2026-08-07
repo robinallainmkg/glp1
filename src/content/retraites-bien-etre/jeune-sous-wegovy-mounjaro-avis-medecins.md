@@ -126,7 +126,7 @@ Rarement sous sémaglutide ou tirzépatide seuls. Le risque devient réel en ass
 
 ### Puis-je participer à un stage jeûne et randonnée sous traitement ?
 
-Pas sans avis médical : la FFJR exige la consultation d'un médecin avant tout séjour et renvoie les cas complexes vers l'Académie Médicale du Jeûne. La plupart des médecins déconseillent le jeûne prolongé sous GLP-1.
+Pas sans avis médical : la FFJR exige la consultation d'un médecin avant tout séjour et renvoie les cas complexes vers l'Académie Médicale du Jeûne. La plupart des médecins déconseillent le jeûne prolongé sous GLP-1. Sa charte réserve d'ailleurs les séjours labellisés aux personnes « qui ne nécessitent pas d'une prise en charge médicale » — voir notre [comparatif des organisateurs labellisés FFJR](/collections/retraites-bien-etre/jeune-randonnee-organisateurs-ffjr-comparatif-prix/).
 
 ### Combien coûte un stage de jeûne et randonnée en France ?
 

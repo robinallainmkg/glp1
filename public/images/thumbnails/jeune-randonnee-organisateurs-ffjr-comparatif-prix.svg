@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Comparatif des organisateurs de séjours jeûne et randonnée labellisés FFJR">
+  <defs>
+    <linearGradient id="bgffjr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a3c34"/>
+      <stop offset="1" stop-color="#0f2620"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgffjr)"/>
+
+  <!-- ligne de crete / sentier de randonnee -->
+  <path d="M0 330 L120 268 L215 305 L330 214 L440 272 L545 196 L660 250 L800 190 L800 450 L0 450 Z" fill="#16a34a" opacity="0.22"/>
+  <path d="M0 330 L120 268 L215 305 L330 214 L440 272 L545 196 L660 250 L800 190" fill="none" stroke="#16a34a" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- trois jalons = trois organisateurs compares -->
+  <g>
+    <circle cx="215" cy="305" r="17" fill="#e8f5ee"/>
+    <circle cx="440" cy="272" r="17" fill="#16a34a"/>
+    <circle cx="660" cy="250" r="17" fill="#e8f5ee" opacity="0.7"/>
+  </g>
+
+  <!-- gourde / goutte d eau : jeune hydrique -->
+  <g transform="translate(96 96)">
+    <path d="M0 -46 c-26 36 -40 60 -40 82 a40 40 0 0 0 80 0 c0 -22 -14 -46 -40 -82 z" fill="#16a34a"/>
+    <path d="M-14 42 a14 14 0 0 0 28 0" fill="none" stroke="#0f2620" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- barres comparatives de prix -->
+  <g stroke-linecap="round" stroke="#e8f5ee">
+    <line x1="620" y1="118" x2="700" y2="118" stroke-width="12" opacity="0.55"/>
+    <line x1="620" y1="146" x2="726" y2="146" stroke-width="12" opacity="0.75"/>
+    <line x1="620" y1="174" x2="756" y2="174" stroke-width="12" stroke="#16a34a"/>
+  </g>
+
+  <text x="200" y="104" font-family="Georgia, serif" font-size="46" fill="#ffffff" font-weight="bold">Jeûne &amp; randonnée</text>
+  <text x="200" y="152" font-family="Georgia, serif" font-size="30" fill="#8fd8b0">Les organisateurs labellisés FFJR</text>
+  <text x="60" y="404" font-family="Georgia, serif" font-size="26" fill="#e8f5ee" opacity="0.85">Prix 2026 · déroulé · qui est exclu</text>
+</svg>

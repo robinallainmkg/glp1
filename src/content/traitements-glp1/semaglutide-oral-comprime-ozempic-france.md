@@ -88,7 +88,7 @@ Pour l'indication **obésité**, le [remboursement GLP-1 en France](/collections
 
 ### Le prix attendu
 
-Pour le [prix du sémaglutide oral en France](/collections/glp1-cout/prix-rybelsus-france/), les estimations du marché tablent sur un prix mensuel de **300 à 350 €** pour le comprimé oral haute dose, soit un positionnement proche de Wegovy (169-360 €/mois selon dosage). Une légère prime par rapport à l'injectable serait justifiée par la commodité de la prise orale.
+Pour le [prix du sémaglutide oral en France](/collections/glp1-cout/prix-rybelsus-france/), les estimations du marché tablent sur un prix mensuel de **300 à 350 €** pour le comprimé oral haute dose, soit un positionnement nettement au-dessus de Wegovy (146,91-195,10 €/mois selon dosage depuis juin 2026). Une légère prime par rapport à l'injectable serait justifiée par la commodité de la prise orale.
 
 Pour le **remboursement**, le précédent établi par Wegovy et Mounjaro (remboursés à 65 % depuis juin 2026) est encourageant, mais la décision dépendra des négociations spécifiques entre Novo Nordisk et le CEPS (Comité économique des produits de santé).
 

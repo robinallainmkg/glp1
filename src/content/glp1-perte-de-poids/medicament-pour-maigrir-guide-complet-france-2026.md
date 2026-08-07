@@ -148,7 +148,7 @@ Pour en savoir plus : [guide complet Ozempic](/collections/traitements-glp1/guid
     <tr>
       <td><strong><a href="/collections/traitements-glp1/guide-complet-wegovy/">Wegovy</a></strong></td>
       <td>~15 %</td>
-      <td>169-360 euros</td>
+      <td>146,91-195,10 euros</td>
       <td>1x/semaine</td>
       <td>65 % (IMC ≥ 35, depuis juin 2026)</td>
       <td>30+ ou 27+ avec comorbidités</td>
@@ -156,7 +156,7 @@ Pour en savoir plus : [guide complet Ozempic](/collections/traitements-glp1/guid
     <tr>
       <td><strong><a href="/collections/traitements-glp1/guide-complet-mounjaro/">Mounjaro</a></strong></td>
       <td>16-22.5 %</td>
-      <td>230-440 euros</td>
+      <td>176,10-433,80 euros</td>
       <td>1x/semaine</td>
       <td>65 % (IMC ≥ 35, depuis juin 2026)</td>
       <td>30+ ou 27+ avec comorbidités</td>
@@ -293,13 +293,13 @@ Le cout reste le principal frein a l'acces aux medicaments pour maigrir en Franc
   <tbody>
     <tr>
       <td><strong>Wegovy</strong></td>
-      <td>169-360 euros</td>
+      <td>146,91-195,10 euros</td>
       <td>65 % (IMC ≥ 35, depuis juin 2026)</td>
       <td>Complement possible</td>
     </tr>
     <tr>
       <td><strong>Mounjaro</strong></td>
-      <td>230-440 euros</td>
+      <td>176,10-433,80 euros</td>
       <td>65 % (IMC ≥ 35, depuis juin 2026)</td>
       <td>Complement possible</td>
     </tr>

@@ -76,6 +76,7 @@ Le format culte des années 2020 : une semaine de jeûne (type Buchinger) avec 1
 - **Format** : 6-7 jours, jeûne + randonnée quotidienne
 - **Pour qui** : adultes en bonne santé, sans traitement en cours, après avis médical (exigé par la FFJR)
 - **Compatibilité GLP-1** : **déconseillé sans avis médical** — fonte musculaire, risque biliaire et hypoglycémie possible en bithérapie. Notre analyse complète : [peut-on jeûner sous Wegovy ou Mounjaro ?](/collections/retraites-bien-etre/jeune-sous-wegovy-mounjaro-avis-medecins/)
+- **Comment choisir l'organisateur** : prix constatés, déroulé et profils exclus dans notre [comparatif des séjours labellisés FFJR](/collections/retraites-bien-etre/jeune-randonnee-organisateurs-ffjr-comparatif-prix/)
 
 ## 6. Vercors Fitness Camp — Bouvante (Drôme)
 

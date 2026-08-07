@@ -138,7 +138,7 @@ L'un des aspects les plus demandes dans les avis sur Mounjaro concerne la compar
 | **Indication principale** | Diabète type 2, obésité | Obésité | Diabète type 2 |
 | **Fréquence injection** | 1x par semaine | 1x par semaine | 1x par semaine |
 | **Note patients** | 4,4/5 | 4,1/5 | 4,0/5 |
-| **Prix mensuel (estimation)** | 230-440 EUR | 260-300 EUR | ~77-90 EUR |
+| **Prix mensuel** | 176,10-433,80 EUR | 260-300 EUR | ~77-90 EUR |
 | **Remboursement** | Oui, 65% obésité depuis le 15/06/2026 (sous conditions) ; DT2 aussi | Oui, 65% obésité depuis le 15/06/2026 (sous conditions) | Oui (diabète uniquement) |
 | **Disponibilite France** | Disponible depuis novembre 2024 | Ruptures fréquentes | Disponible |
 

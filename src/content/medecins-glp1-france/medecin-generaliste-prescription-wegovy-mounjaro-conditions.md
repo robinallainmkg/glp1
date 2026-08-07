@@ -134,7 +134,7 @@ Votre médecin généraliste tiendra compte de plusieurs facteurs pour vous reco
 | Critère | Wegovy | Mounjaro |
 |---------|--------|---------|
 | Perte de poids attendue | -15 à -17% | -20 à -22% |
-| Prix mensuel (mars 2026) | 169-360€ | 230-440€ |
+| Prix mensuel (depuis juin 2026) | 146,91-195,10€ | 176,10-433,80€ |
 | Recul clinique | Plus long (depuis 2021) | Plus récent (depuis 2024) |
 | Bénéfice cardiovasculaire | Prouvé (étude SELECT) | En cours d'évaluation |
 | Diabète associé | Moins ciblé | Double action GLP-1+GIP |

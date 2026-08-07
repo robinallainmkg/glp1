@@ -62,14 +62,14 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - **Perte de poids** : 10-15% du poids corporel
 - **Posologie** : 1 injection par semaine
 - **Avantages** : Dose maximale la plus élevée, indication obésité
-- **Prix** : 169-360€/mois
+- **Prix** : 146,91-195,10€/mois (remboursé 65% pour l'obésité depuis le 15/06/2026, sous conditions)
 
 #### Mounjaro (tirzépatide 2,5-15 mg)
 - **Indications** : Diabète type 2 et obésité
 - **Perte de poids** : 15-20% du poids corporel
 - **Posologie** : 1 injection par semaine
 - **Avantages** : Double action (GLP-1 + GIP), très efficace
-- **Prix** : 230-440€/mois
+- **Prix** : 176,10-433,80€/mois (remboursé 65% pour l'obésité depuis le 15/06/2026, sous conditions)
 
 #### Trulicity (dulaglutide 0,75-4,5 mg)
 - **Indications** : Diabète type 2
