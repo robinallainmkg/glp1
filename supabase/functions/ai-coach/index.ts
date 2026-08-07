@@ -349,6 +349,32 @@ const CORS_HEADERS = {
   "Access-Control-Allow-Headers": "Authorization, Content-Type, apikey, x-client-info",
 };
 
+// --- Garde-fou prix (ceinture de sécurité déterministe) ---
+// La consigne de prompt suffit sur Groq 70B mais PAS sur le fallback
+// mistral-small-latest, qui recopie les fourchettes périmées du contexte RAG
+// (constaté en prod le 07/08/2026 : « 169 € à 360 € » pour Wegovy).
+// Les chunks déjà vectorisés portent encore ces valeurs jusqu'à réindexation,
+// donc on corrige la RÉPONSE, quel que soit le modèle qui l'a produite.
+const STALE_PRICE_RULES: Array<{ pattern: RegExp; replacement: string }> = [
+  // Wegovy : ancienne fourchette libre 169-360 € → prix réglementé juin 2026
+  { pattern: /\b169\s*(?:€|euros?)?\s*(?:à|a|-|–|—|et)\s*360\s*(?:€|euros?)/gi, replacement: "146,91 € à 195,10 €" },
+  // Mounjaro : ancienne fourchette 230-440 €
+  { pattern: /\b230\s*(?:€|euros?)?\s*(?:à|a|-|–|—|et)\s*440\s*(?:€|euros?)/gi, replacement: "176,10 € à 433,80 €" },
+];
+
+function sanitizePrices(text: string): { text: string; corrected: boolean } {
+  let corrected = false;
+  let out = text;
+  for (const { pattern, replacement } of STALE_PRICE_RULES) {
+    if (pattern.test(out)) {
+      corrected = true;
+      out = out.replace(pattern, replacement);
+    }
+    pattern.lastIndex = 0;
+  }
+  return { text: out, corrected };
+}
+
 function jsonResponse(body: object, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
@@ -904,6 +930,14 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
             dossierData = null;
           }
         }
+      }
+
+      // Garde-fou prix : corrige les fourchettes périmées avant sauvegarde ET renvoi,
+      // y compris quand la réponse vient d'un modèle de secours.
+      const priceCheck = sanitizePrices(cleanResponse);
+      if (priceCheck.corrected) {
+        console.warn(`[price-guard] fourchette périmée corrigée (modèle: ${usedModel})`);
+        cleanResponse = priceCheck.text;
       }
 
       // Moment chaud → on propose la capture email (le funnel convertit à 0 sans capture).
