@@ -130,6 +130,27 @@ async function main() {
 
   for (const reply of replies) {
     try {
+      // Garde-fou anti-STOP : une adresse desinscrite ne doit JAMAIS etre
+      // re-emailee. is_email_suppressed() normalise l'adresse (minuscules,
+      // sous-adressage +tag, points de la partie locale pour Gmail), donc
+      // "s.ruth83@" et "sruth83@" sont reconnues comme la meme boite.
+      const { data: suppressed, error: suppErr } = await supabase
+        .rpc('is_email_suppressed', { addr: reply.to_email });
+
+      if (suppErr) {
+        // En cas de doute, on n'envoie PAS : un email de trop a une personne
+        // desinscrite coute plus cher qu'un email retarde.
+        console.error(`SKIP (verification suppression impossible) → ${reply.to_email}: ${suppErr.message}`);
+        continue;
+      }
+      if (suppressed) {
+        // On laisse sent_at a NULL : cet email n'a PAS ete envoye, et le
+        // marquer comme envoye rendrait la trace de conformite mensongere.
+        // Le skip est idempotent et se rejoue silencieusement a chaque run.
+        console.log(`SKIP (desinscrit) → ${reply.to_email}`);
+        continue;
+      }
+
       console.log(`Envoi → ${reply.to_email} | ${reply.subject}`);
 
       await transporter.sendMail({
