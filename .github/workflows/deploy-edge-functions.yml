@@ -1,0 +1,100 @@
+name: Deploy Supabase Edge Functions
+
+# Deploie les edge functions modifiees a chaque push sur main.
+#
+# Pourquoi : jusqu'ici le seul chemin de deploiement etait l'outil MCP, qui
+# impose de re-emettre le fichier entier a la main (76 Ko pour ai-coach).
+# C'est lent, cher, et surtout risque : une faute de frappe dans une regex
+# casse le Coach en production. Ce workflow deploie depuis le depot, donc
+# exactement ce qui a ete relu et merge.
+#
+# Prerequis : secret SUPABASE_ACCESS_TOKEN (personal access token Supabase,
+# a creer sur https://supabase.com/dashboard/account/tokens).
+# Les secrets SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY deja presents ne
+# suffisent pas : ils donnent acces a la base, pas au deploiement.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/functions/**'
+  workflow_dispatch:
+    inputs:
+      function:
+        description: 'Nom de la fonction a deployer (vide = toutes celles modifiees)'
+        required: false
+        default: ''
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Necessaire pour diffing le commit precedent et ne deployer
+          # que les fonctions reellement touchees.
+          fetch-depth: 2
+
+      - name: Verifier la presence du token
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+        run: |
+          if [ -z "$SUPABASE_ACCESS_TOKEN" ]; then
+            echo "::error::SUPABASE_ACCESS_TOKEN manquant. Ajoute-le dans Settings > Secrets > Actions."
+            exit 1
+          fi
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Determiner les fonctions a deployer
+        id: targets
+        run: |
+          set -euo pipefail
+          MANUAL="${{ github.event.inputs.function }}"
+
+          if [ -n "$MANUAL" ]; then
+            echo "Deploiement manuel demande : $MANUAL"
+            printf '%s\n' "$MANUAL" > targets.txt
+          else
+            # Fonctions dont au moins un fichier a change dans ce push.
+            git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'supabase/functions/*' \
+              | awk -F/ 'NF>=3 {print $3}' | sort -u > targets.txt || true
+          fi
+
+          if [ ! -s targets.txt ]; then
+            echo "Aucune fonction modifiee."
+          else
+            echo "A deployer :"; cat targets.txt
+          fi
+          echo "count=$(wc -l < targets.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Deployer
+        if: steps.targets.outputs.count != '0'
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          PROJECT_REF: ywekaivgjzsmdocchvum
+        run: |
+          set -euo pipefail
+          failed=0
+          while read -r fn; do
+            [ -z "$fn" ] && continue
+            if [ ! -d "supabase/functions/$fn" ]; then
+              echo "::warning::supabase/functions/$fn absent (fonction supprimee ?) — ignore."
+              continue
+            fi
+            echo "::group::deploy $fn"
+            # ai-coach est appelee avec la cle anon depuis le navigateur :
+            # elle DOIT garder verify-jwt active, comme en production.
+            if supabase functions deploy "$fn" --project-ref "$PROJECT_REF"; then
+              echo "$fn deploye"
+            else
+              echo "::error::echec du deploiement de $fn"
+              failed=1
+            fi
+            echo "::endgroup::"
+          done < targets.txt
+          exit $failed
