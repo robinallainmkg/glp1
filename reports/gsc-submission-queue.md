@@ -21,6 +21,7 @@ La routine AJOUTE ici a chaque publication — elle ne relance jamais dans le ch
 - [ ] https://glp1-france.fr/collections/traitements-glp1/glp1-sopk-syndrome-ovaires-polykystiques-ozempic-wegovy/
 - [ ] https://glp1-france.fr/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/
 - [ ] https://glp1-france.fr/collections/retraites-bien-etre/jeune-randonnee-organisateurs-ffjr-comparatif-prix/ (article 07/08)
+- [ ] https://glp1-france.fr/collections/traitements-glp1/ozempic-2-mg-pourquoi-pas-disponible-france/ (article 07/08 run 2)
 
 ## Soumises
 

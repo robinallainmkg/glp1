@@ -34,9 +34,9 @@ Ce fichier est la **source de vérité** de la création de contenu. La routine 
 
 ### P4 — Fond de roadmap
 
-- [ ] **10. Camp / séjour perte de poids pour adulte en France ("fat camp")** — `retraites-bien-etre`. Preuve : "camp perte de poids france" + "fat camp france" (pos 7 !) en imp sur le cluster. Suivi : —
-- [ ] **11. Peau relâchée après perte de poids GLP-1 : solutions (sport, nutrition, médecine esthétique)** — `effets-secondaires-glp1`. Pont vers retraites/Morpheus8 SANS promesse commerciale. Suivi : —
-- [ ] **12. Ozempic 2 mg : pourquoi il n'est pas disponible en France** — `traitements-glp1`. FAQ récurrente de la page prix, format court. Suivi : —
+- [x] **10. Camp / séjour perte de poids pour adulte en France ("fat camp")** — DÉJÀ COUVERT (constat routine 07/08 run 2) : article `camp-perte-de-poids-adulte-france-prix-avis` publié le 14/07/2026, live 200. L'item était resté non coché par erreur. Suivi : —
+- [x] **11. Peau relâchée après perte de poids GLP-1** — DÉJÀ COUVERT partiellement (constat routine 07/08 run 2) : article `glp1-relachement-cutane-peau-corps-perte-poids-solutions` (effets-secondaires-glp1) publié le 17/03/2026, live 200. ⚠️ MAIS : byline fictive "Dr. Sophie Dubois", thumbnail réutilisé (`effets-secondaires-ozempic-illus.jpg`), pas mis à jour depuis mars, pas de pont vers /retraites/. Refonte > 30 % = décision Robin (signalé au rapport du 07/08 run 2).
+- [x] **12. Ozempic 2 mg : pourquoi il n'est pas disponible en France** — publié le 07/08/2026 (run 2) → https://glp1-france.fr/collections/traitements-glp1/ozempic-2-mg-pourquoi-pas-disponible-france/ — sources : Vidal gamme Ozempic 86313 (3 dosages commercialisés FR, 2 mg absent), communiqués Novo Nordisk (CHMP 12/11/2021, SUSTAIN FORTE 17/11/2020 : HbA1c −2,2 vs −1,9 pts, objectif <7 % 68 % vs 58 %), Lancet Diabetes Endo (SUSTAIN FORTE, 961 patients, 40 sem), ANSM (encadrement Ozempic diabète T2), ameli/ANSM CP 01/03/2023 (surveillance mésusage). Maillage entrant : prix-ozempic-france (tableau dosages) + nouveau-stylo-ozempic-3ml (FAQ) + glp1-syndrome-metabolique (correction dosages). Suivi : imp J+7 (~14/08) : — ; imp J+30 (~06/09) : —
 
 ## Backlog candidat (ajouts de la routine — publiables au run suivant leur ajout, veto Robin 24h)
 

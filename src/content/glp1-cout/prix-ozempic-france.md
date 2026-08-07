@@ -104,7 +104,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo
 | 1 mg | 77,60 € | 77,60 € (1 stylo = 4 doses) |
 | 2 mg | AMM européenne, non commercialisé en France | — |
 
-**Prix mensuel** : 77,60 € quel que soit le dosage (chaque stylo contient 4 doses, soit 1 stylo/mois)
+**Prix mensuel** : 77,60 € quel que soit le dosage (chaque stylo contient 4 doses, soit 1 stylo/mois). Pourquoi le dosage 2 mg n'est-il jamais arrivé en pharmacie française ? Explications complètes dans notre article [Ozempic 2 mg : pourquoi ce dosage n'est pas disponible en France](/collections/traitements-glp1/ozempic-2-mg-pourquoi-pas-disponible-france/).
 
 <div style="background:#f0fdf4;border:2px solid #16a34a;border-radius:12px;padding:20px 24px;margin:24px 0;">
   <p style="margin:0 0 8px;font-weight:700;color:#1a3c34;font-size:1.05em;">Ozempic n'est remboursé que pour le diabète — pour la perte de poids, c'est Wegovy ou Mounjaro (65 %)</p>
