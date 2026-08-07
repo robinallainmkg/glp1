@@ -105,7 +105,7 @@ Certaines mutuelles complémentaires proposent une prise en charge partielle :
 
 **Wegovy (remboursé 65 % depuis juin 2026) :**
 
-* 6 mois × 169-360 € = **1 014-2 160 €**
+* 6 mois × 146,91-195,10 € = **881-1 171 €**
 
 *Saxenda est **remboursé à 65 %** par l\'Assurance Maladie depuis le 15 juin 2026 (IMC ≥ 35 avec comorbidité ou ≥ 40, prescription initiale en CSO/CHU). Wegovy est remboursé à 65 % depuis le 15 juin 2026 sous conditions.*
 

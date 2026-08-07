@@ -244,7 +244,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Reste à charge :** ~21€/mois environ (DT2)
 
 **Wegovy :**
-- **Prix :** 169-360€/mois (selon dose)
+- **Prix :** 146,91-195,10€/mois (selon dose ; remboursé 65% pour l'obésité depuis le 15/06/2026, sous conditions)
 - **Remboursement :** Remboursé à 65% pour l'obésité depuis le 15 juin 2026 (conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, ≥ 6 mois prise en charge diététique documentée, primo-prescription CSO/CHU/endocrinologue lié à un CSO). **Évaluation obligatoire à 4 mois** : maintien du remboursement conditionné à une perte ≥ 5% du poids initial.
 - **Reste à charge :** 35% (ticket modérateur) pour les patients éligibles, souvent couvert par la mutuelle ; intégralité du coût pour les patients hors critères.
 

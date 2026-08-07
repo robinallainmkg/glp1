@@ -74,7 +74,7 @@ Le **prix de Wegovy en pharmacie** en France varie entre **~147€ et 350€ par
 
 ## Points clés à retenir
 
-- **Prix mensuel** : de 169€ à 360€ selon le dosage
+- **Prix mensuel** : de 146,91€ à 195,10€ selon le dosage (remboursé 65% pour l'obésité depuis le 15/06/2026, sous conditions)
 - **Remboursement** : 65 % par la Sécurité Sociale (depuis le 15/06/2026, sous conditions)
 - **Coût annuel brut** : entre ~1 764€ et ~4 200€
 - **Alternatives disponibles** : programmes d'aide mutuelle

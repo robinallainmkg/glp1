@@ -71,7 +71,7 @@ En 2026, quatre traitements injectables sont accessibles en France pour la perte
 - **Molecule** : Semaglutide a dose élevée (2.4mg)
 - **Fréquence** : Une injection par semaine (le même jour chaque semaine)
 - **Efficacité prouvee** : Perte de poids moyenne de **15 a 17% du poids corporel** dans les essais cliniques STEP
-- **Prix** : 169 a 360 euros par mois selon la dose
+- **Prix** : 146,91 a 195,10 euros par mois selon la dose (rembourse 65% pour l'obesite depuis le 15/06/2026, sous conditions)
 - **Indication** : IMC supérieur ou égal a 30, ou IMC supérieur ou égal a 27 avec au moins une comorbidité liée au poids (diabète de type 2, hypertension, dyslipidemie, apnee du sommeil)
 - **Administration** : Stylo pre-rempli, injection sous-cutanée dans l'abdomen, la cuisse ou le haut du bras
 - **Titration progressive** : Le traitement demarre a 0.25mg et augmente progressivement sur 16 semaines pour atteindre la dose thérapeutique de 2.4mg
@@ -85,7 +85,7 @@ Wegovy a démontré dans l'etude STEP 1 une perte de poids moyenne de 14.9% cont
 - **Molecule** : Tirzepatide, double agoniste GLP-1/GIP
 - **Fréquence** : Une injection par semaine
 - **Efficacité record** : Perte de poids de **16 a 22.5 % du poids corporel** dans les essais cliniques SURMOUNT
-- **Prix** : 230 a 440 euros par mois selon la dose
+- **Prix** : 176,10 a 433,80 euros par mois selon la dose (rembourse 65% pour l'obesite depuis le 15/06/2026, sous conditions)
 - **Indication** : Traitement de l'obésité et du surpoids avec comorbidités
 - **Doses disponibles** : 2.5mg, 5mg, 7.5mg, 10mg, 12.5mg et 15mg
 
@@ -137,7 +137,7 @@ La prescription hors AMM d'Ozempic pour la perte de poids est une pratique medic
       <td><strong><a href="/collections/traitements-glp1/guide-complet-wegovy/">Wegovy</a></strong></td>
       <td>1x/semaine</td>
       <td>-15 a 17%</td>
-      <td>169-360 euros</td>
+      <td>146,91-195,10 euros</td>
       <td>Rembourse 65% (obésité, dès le 15/06/2026, sous conditions)</td>
       <td>IMC 30+ ou 27+ avec comorbidités</td>
     </tr>
@@ -145,7 +145,7 @@ La prescription hors AMM d'Ozempic pour la perte de poids est une pratique medic
       <td><strong><a href="/collections/traitements-glp1/guide-complet-mounjaro/">Mounjaro</a></strong></td>
       <td>1x/semaine</td>
       <td>-16 a 22.5 %</td>
-      <td>230-440 euros</td>
+      <td>176,10-433,80 euros</td>
       <td>Rembourse 65% (obésité, dès le 15/06/2026, sous conditions)</td>
       <td>IMC 30+ ou 27+ avec comorbidités</td>
     </tr>

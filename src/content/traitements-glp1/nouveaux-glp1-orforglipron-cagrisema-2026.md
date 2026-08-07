@@ -167,7 +167,7 @@ Si vous attendez ces nouveaux traitements, voici les démarches recommandées :
 1. **Consultez votre médecin dès maintenant** : les critères d'éligibilité seront probablement similaires à ceux des GLP-1 actuels (IMC ≥ 30 ou IMC ≥ 27 avec comorbidités)
 2. **Documentez votre parcours** : les tentatives antérieures de prise en charge (régimes, activité physique, autres médicaments) seront importantes pour les dossiers de remboursement
 3. **Suivez les actualités de l'EMA** : les décisions d'AMM européennes sont publiées sur [ema.europa.eu](https://www.ema.europa.eu)
-4. **Envisagez les traitements actuels** : le Mounjaro, avec ses résultats comparables, est disponible en France dès maintenant, à 230-440 €/mois
+4. **Envisagez les traitements actuels** : le Mounjaro, avec ses résultats comparables, est disponible en France dès maintenant, à 176,10-433,80 €/mois (remboursé 65% pour l'obésité depuis le 15/06/2026, sous conditions)
 
 ---
 

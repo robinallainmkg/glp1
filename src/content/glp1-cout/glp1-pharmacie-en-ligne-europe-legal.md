@@ -84,7 +84,7 @@ Au-delà de **3 mois**, une autorisation préalable de l'ANSM est requise.
 | **Espagne** | 180-292€ | Stable |
 | **Italie** | 220-388€ | Plus cher |
 | **Portugal** | ~244€ | Marché modeste |
-| **France** | 169-360€ | Référence |
+| **France** | 146,91-195,10€ | Référence |
 | **Belgique** | ~270€ | Stable |
 
 L'**Allemagne** offre les tarifs les plus compétitifs, renforcés par l'arrivée du **générique Nevolat® (Zentiva) à 79-129€/mois** depuis début 2026. Pour comprendre les perspectives de [génériques Semaglutide disponibles en Europe](/collections/glp1-cout/ozempic-generique-france-semaglutide-biosimilaire-date/), consultez notre dossier dédié.
@@ -96,7 +96,7 @@ L'**Allemagne** offre les tarifs les plus compétitifs, renforcés par l'arrivé
 | **Espagne** | 207-446€ | Bon rapport |
 | **Allemagne** | 206-482€ | Compétitif |
 | **Italie** | 346-623€ | Plus cher |
-| **France** | 230-440€ | Référence |
+| **France** | 176,10-433,80€ | Référence |
 | **Belgique** | 250-460€ | Stable |
 | **Portugal** | 240-450€ | Stable |
 

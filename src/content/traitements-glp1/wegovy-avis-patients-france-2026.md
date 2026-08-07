@@ -266,7 +266,7 @@ Oui. Les essais cliniques STEP, menes sur des milliers de patients, demontrent u
 
 ### Combien coute Wegovy par mois en France en 2026 ?
 
-Le prix de Wegovy varie selon le dosage. A la dose cible de 2.4 mg, comptez entre 320 et 360 euros par mois en pharmacie (prix hors remboursement). En phase d'escalade (doses plus faibles), le cout est inferieur, de l'ordre de 169 a 260 euros par mois. **Depuis le 15 juin 2026, Wegovy est rembourse a 65% pour l'obésité severe** (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée), ce qui réduit fortement le reste a charge des patients eligibles. Consultez notre page [prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/) pour les tarifs actualises.
+Le prix de Wegovy varie selon le dosage. A la dose cible de 2.4 mg, le prix public est de 195,10 euros par mois en pharmacie (prix hors remboursement). En phase d'escalade (doses plus faibles), le cout est inferieur, a partir de 146,91 euros par mois. **Depuis le 15 juin 2026, Wegovy est rembourse a 65% pour l'obésité severe** (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel, primo-prescription en structure spécialisée), ce qui réduit fortement le reste a charge des patients eligibles. Consultez notre page [prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/) pour les tarifs actualises.
 
 ### Quels sont les effets secondaires les plus courants de Wegovy ?
 
