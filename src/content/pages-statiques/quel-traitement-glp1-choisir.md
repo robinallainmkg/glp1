@@ -106,7 +106,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 | Médicament | Molécule | Indication | Perte poids | Fréquence | Prix/mois | Remboursement |
 |------------|----------|------------|-------------|-----------|-----------|---------------|
-| **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~77,60€/stylo | 65% DT2 |
+| **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~77,60€/stylo | 30% DT2 |
 | **Wegovy** | Sémaglutide HD | Obésité | 10-15% | Hebdomadaire | ~147-350€ | Remboursé 65% (obésité, sous conditions) |
 | **Mounjaro** | Tirzépatide | Diabète + Obésité | 15-20% | Hebdomadaire | ~176-433€ | Remboursé 65% (obésité, sous conditions) |
 | **Trulicity** | Dulaglutide | Diabète | 3-8% | Hebdomadaire | ~81€ | 65% DT2 |
@@ -148,7 +148,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 ### 4. Votre tolérance budgétaire
 
 #### Budget limité (remboursés SS pour DT2) :
-- Ozempic (~77,60€/stylo, remboursé 65% DT2 en bithérapie metformine)
+- Ozempic (~77,60€/stylo, remboursé 30% DT2 en bithérapie metformine)
 - Victoza (~60€/mois, remboursé 65% DT2)
 - Trulicity (~81€/mois, remboursé 65% DT2)
 - Rybelsus (80-110€/mois, non remboursé)
@@ -201,7 +201,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 #### Taux de remboursement :
 - **65%** pour Trulicity (dulaglutide) et Victoza (liraglutide) en diabète de type 2.
-- **65%** pour Ozempic (sémaglutide) en diabète de type 2 (en bithérapie metformine).
+- **30%** pour Ozempic (sémaglutide) en diabète de type 2 (en bithérapie metformine).
 - **Remboursé 65%** pour Wegovy et Mounjaro (obésité, depuis le 15 juin 2026, sous conditions : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel, prescription initiale en CSO/CHU).
 - **Remboursé 65 %** (depuis juin 2026, obésité): Rybelsus (avis HAS défavorable), Saxenda.
 - **Supplément** possible selon mutuelle pour les médicaments remboursés (30-35% restants)
@@ -210,7 +210,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 | Médicament | Prix brut/mois | Remboursement SS | Coût net estimé |
 |------------|----------------|------------------|-----------------|
-| Ozempic | ~77,60€/stylo | 65% (DT2) | ~28,06€/stylo |
+| Ozempic | ~77,60€/stylo | 30% (DT2) | ~28,06€/stylo |
 | Victoza | ~60€ | 65% (DT2) | ~21€ |
 | Trulicity | ~81€ | 65% (DT2) | ~28€ |
 | Rybelsus | 80-110€ | Non remboursé | 80-110€ (à charge) |

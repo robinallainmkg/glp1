@@ -192,7 +192,7 @@ La situation du remboursement des GLP-1 en France en 2026 est la suivante :
 
 | Médicament | Remboursement Sécurité sociale |
 |------------|-------------------------------|
-| **Ozempic** | Remboursé à 65 % en bithérapie metformine (100 % en ALD) — **uniquement pour le diabète de type 2** |
+| **Ozempic** | Remboursé à 30 % en bithérapie metformine (100 % en ALD) — **uniquement pour le diabète de type 2** |
 | **Trulicity** | Remboursé à 65 % — uniquement DT2 |
 | **Rybelsus** | **Remboursé 65 %** (depuis juin 2026, obésité)(avis HAS défavorable) |
 | **Wegovy** | **Remboursé à 65 %** depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 + comorbidité ou IMC ≥ 40, échec nutritionnel, primo-prescription CSO/CHU) |

@@ -56,7 +56,7 @@ Le coût annuel restant à charge pour un patient suivant un traitement GLP-1 re
 |------------|------------|------------------|----------------|---------------|
 | Wegovy (sémaglutide) | Obésité | Remboursé 65 % (depuis 15/06/2026, sous conditions) | 147–350 €/mois | TM 35 % |
 | Mounjaro (tirzépatide) | Obésité | Remboursé 65 % (depuis 15/06/2026, sous conditions) | 176–433 €/mois | TM 35 % |
-| Ozempic (sémaglutide) | DT2 | Remboursé 65 % (bithérapie metformine) / 30 % (trithérapie insuline) | ~85 €/mois TTC | TM standard |
+| Ozempic (sémaglutide) | DT2 | Remboursé 30 % | ~85 €/mois TTC | TM standard |
 
 Pour le détail réglementaire, voir notre [page remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 

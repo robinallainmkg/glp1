@@ -128,7 +128,7 @@ Pour une vue d'ensemble comparative incluant d'autres complémentaires, consulte
 ## Mounjaro et Ozempic chez MGEN : situation 2026
 
 - **Mounjaro (tirzépatide)** : **remboursé à 65%** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (mêmes conditions que Wegovy). La MGEN complète le ticket modérateur selon votre contrat.
-- **Ozempic (sémaglutide)** : remboursé à **65 %** en bithérapie avec metformine et à **30 %** en trithérapie avec insuline, **uniquement pour le diabète de type 2**. La MGEN couvre le ticket modérateur dans les conditions de droit commun. Toute prescription hors AMM (perte de poids sans diabète) reste à la charge du patient.
+- **Ozempic (sémaglutide)** : remboursé à **30 %** dans le diabète de type 2, **uniquement pour le diabète de type 2**. La MGEN couvre le ticket modérateur dans les conditions de droit commun. Toute prescription hors AMM (perte de poids sans diabète) reste à la charge du patient.
 
 ## Trouver le bon accompagnement médical
 

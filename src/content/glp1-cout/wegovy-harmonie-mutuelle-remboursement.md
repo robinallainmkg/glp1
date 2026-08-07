@@ -120,7 +120,7 @@ Le succès du traitement (et donc sa rentabilité) dépend largement du suivi : 
 ## Mounjaro et Ozempic : situation Harmonie Mutuelle 2026
 
 - **Mounjaro** : **remboursé à 65%** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (mêmes conditions que Wegovy). Prix officiels : 176–433 €/mois. Harmonie Mutuelle complète le ticket modérateur selon votre contrat.
-- **Ozempic** : remboursé à **65 %** par la Sécu en bithérapie metformine et **30 %** en trithérapie insuline, **uniquement dans le diabète de type 2**. Harmonie complète le ticket modérateur dans les conditions de votre contrat (souvent 100 % BR). Toute prescription pour la perte de poids hors diabète reste à la charge du patient.
+- **Ozempic** : remboursé à **30 %** par la Sécu en bithérapie metformine et **30 %** en trithérapie insuline, **uniquement dans le diabète de type 2**. Harmonie complète le ticket modérateur dans les conditions de votre contrat (souvent 100 % BR). Toute prescription pour la perte de poids hors diabète reste à la charge du patient.
 
 ## Comparaison synthétique avec d'autres complémentaires
 

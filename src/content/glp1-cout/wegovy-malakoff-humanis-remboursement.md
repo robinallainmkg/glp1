@@ -124,7 +124,7 @@ Le succès du traitement dépend du suivi médical. Voir notre [guide complet We
 ## Mounjaro et Ozempic : situation Malakoff Humanis 2026
 
 - **Mounjaro (tirzépatide)** : **remboursé à 65%** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (mêmes conditions que Wegovy). Prix officiels : 176–433 €/mois. Malakoff Humanis complète le ticket modérateur selon votre contrat.
-- **Ozempic (sémaglutide)** : remboursé Sécu **65 %** en bithérapie metformine, **30 %** en trithérapie insuline, **dans le diabète de type 2 uniquement**. Malakoff Humanis complète le ticket modérateur selon contrat (souvent 100 % BR).
+- **Ozempic (sémaglutide)** : remboursé Sécu **30 %** dans le diabète de type 2, **dans le diabète de type 2 uniquement**. Malakoff Humanis complète le ticket modérateur selon contrat (souvent 100 % BR).
 
 ## Comparaison synthétique
 

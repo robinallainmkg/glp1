@@ -141,7 +141,7 @@ Pour les patients diabétiques curieux des effets secondaires, notre [guide comp
 
 > "Ce qui m'a aussi encouragé à faire ce traitement, c'est qu'il est remboursé. Je paye environ 28 euros par mois après remboursement à 65%. Pour un traitement qui contrôle mon diabète ET me fait perdre du poids, c'est raisonnable. J'aurais beaucoup plus hésité si ça avait coûté 300 euros par mois sans remboursement."
 
-Bernard illustre une réalité importante : pour les patients diabétiques de type 2, Ozempic est remboursé (à 65% en bithérapie metformine par l'Assurance Maladie, avec un formulaire obligatoire depuis février 2025). La situation est très différente pour les patients qui souhaitent Ozempic uniquement pour perdre du poids. Pour comprendre les conditions précises, consultez notre [guide remboursement Ozempic pour le diabète](/collections/glp1-cout/remboursement-ozempic-diabete-justificatif-prescription-guide-2026/).
+Bernard illustre une réalité importante : pour les patients diabétiques de type 2, Ozempic est remboursé (à 30% en bithérapie metformine par l'Assurance Maladie, avec un formulaire obligatoire depuis février 2025). La situation est très différente pour les patients qui souhaitent Ozempic uniquement pour perdre du poids. Pour comprendre les conditions précises, consultez notre [guide remboursement Ozempic pour le diabète](/collections/glp1-cout/remboursement-ozempic-diabete-justificatif-prescription-guide-2026/).
 
 ## Un an après : ses conseils
 

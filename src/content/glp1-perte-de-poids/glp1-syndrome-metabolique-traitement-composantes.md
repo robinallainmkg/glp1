@@ -123,7 +123,7 @@ Il est important de noter que ces effets sont maintenus tant que le traitement e
 
 ### Ozempic (sémaglutide injectable) : si diabète de type 2 associé
 
-[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide 0,5 mg, 1 mg ou 2 mg) est indiqué pour le **diabète de type 2** et remboursé à 65 % en bithérapie metformine (100 % en ALD diabète) en France pour cette indication. C'est le choix de référence quand le syndrome métabolique est associé à un diabète de type 2 avéré. Son bénéfice cardiovasculaire est prouvé par les études SUSTAIN-6 et SELECT.
+[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide 0,5 mg, 1 mg ou 2 mg) est indiqué pour le **diabète de type 2** et remboursé à 30 % en bithérapie metformine (100 % en ALD diabète) en France pour cette indication. C'est le choix de référence quand le syndrome métabolique est associé à un diabète de type 2 avéré. Son bénéfice cardiovasculaire est prouvé par les études SUSTAIN-6 et SELECT.
 
 ### Wegovy (sémaglutide 2,4 mg) : si obésité sans diabète
 
@@ -146,7 +146,7 @@ Les GLP-1 sont un outil puissant contre le syndrome métabolique, mais ils fonct
 
 ### Le syndrome métabolique justifie-t-il un remboursement du GLP-1 ?
 
-Le remboursement dépend de l'indication. Pour le diabète de type 2, Ozempic est remboursé à 65 % en bithérapie metformine (100 % en ALD). Pour l'obésité, depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % sous conditions strictes : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, échec nutritionnel documenté, primo-prescription en CSO/CHU. Si vous avez un syndrome métabolique avec ces critères, vous pouvez bénéficier du remboursement.
+Le remboursement dépend de l'indication. Pour le diabète de type 2, Ozempic est remboursé à 30 % en bithérapie metformine (100 % en ALD). Pour l'obésité, depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % sous conditions strictes : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, échec nutritionnel documenté, primo-prescription en CSO/CHU. Si vous avez un syndrome métabolique avec ces critères, vous pouvez bénéficier du remboursement.
 
 ### Mon médecin traitant peut-il prescrire un GLP-1 pour syndrome métabolique ?
 

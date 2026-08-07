@@ -132,7 +132,7 @@ Le cout d'Ozempic varie considerablement selon votre situation medicale et votre
 
 ### Ozempic pour le diabète de type 2 (avec ordonnance)
 
-Lorsque Ozempic est prescrit dans le cadre du diabète de type 2, il beneficie d'un **remboursement par l'Assurance maladie a hauteur de 65 %**, le reste etant pris en charge par votre mutuelle dans la plupart des cas.
+Lorsque Ozempic est prescrit dans le cadre du diabète de type 2, il beneficie d'un **remboursement par l'Assurance maladie a hauteur de 30 %**, le reste etant pris en charge par votre mutuelle dans la plupart des cas.
 
 - **Prix public** : environ 80 a 90 euros par stylo (1 mois de traitement a 0,5 mg ou 1 mg).
 - **Reste a charge après remboursement Secu** : environ 54 a 63 euros (avant mutuelle).
@@ -213,7 +213,7 @@ Oui. Pour le diabète de type 2, tout médecin généraliste peut prescrire Ozem
 
 ### Combien coute Ozempic avec une ordonnance ?
 
-Le prix public d'un stylo Ozempic varie entre 80 et 90 euros pour un mois de traitement. Pour les patients diabetiques, la Sécurité sociale rembourse 65 % du coût (100 % en ALD). Pour une prescription hors AMM (perte de poids), le médicament n'est pas remboursé et reste entièrement à votre charge. Retrouvez tous les details sur notre [page dediee aux prix Ozempic](/collections/glp1-cout/prix-ozempic-france/).
+Le prix public d'un stylo Ozempic varie entre 80 et 90 euros pour un mois de traitement. Pour les patients diabetiques, la Sécurité sociale rembourse 30 % du coût (100 % en ALD). Pour une prescription hors AMM (perte de poids), le médicament n'est pas remboursé et reste entièrement à votre charge. Retrouvez tous les details sur notre [page dediee aux prix Ozempic](/collections/glp1-cout/prix-ozempic-france/).
 
 ### Peut-on obtenir une ordonnance Ozempic par téléconsultation ?
 

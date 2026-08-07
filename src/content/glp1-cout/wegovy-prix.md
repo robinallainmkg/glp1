@@ -175,7 +175,7 @@ Le laboratoire Novo Nordisk propose plusieurs aides :
 |------------|-------------|-------------|------------|---------------|
 | **Wegovy** | ~147-350€ | ~882-2 100€ | -15% du poids | 65% (depuis 06/2026) |
 | Saxenda | 240-300€ | 1 440-1 800€ | -8% du poids | Non |
-| Ozempic (hors indication) | ~77,60€/stylo | ~480€ | -12% du poids | 65% (DT2 bithérapie) |
+| Ozempic (hors indication) | ~77,60€/stylo | ~480€ | -12% du poids | 30% (DT2 bithérapie) |
 | Mounjaro | 176-433€ | 1 056-2 598€ | -20% du poids | 65% (depuis 06/2026) |
 | Mysimba | 70€ | 420€ | -5% du poids | Non |
 

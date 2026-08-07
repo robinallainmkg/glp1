@@ -198,7 +198,7 @@ L'aspect financier est un facteur déterminant pour beaucoup de patients. Ne lai
 
 **26. « Ce traitement est-il remboursé par la Sécurité sociale dans mon cas ? »**
 
-La prise en charge varie selon la molécule et l'indication. Les GLP-1 prescrits pour le diabète de type 2 (Ozempic, Trulicity) sont remboursés à 65 %. Pour l'obésité seule (Wegovy, Mounjaro en indication obésité), le remboursement est plus limité et en cours d'évolution en France. Votre médecin connaît les dernières dispositions réglementaires.
+La prise en charge varie selon la molécule et l'indication. Les GLP-1 prescrits pour le diabète de type 2 sont remboursés à 30 % (Ozempic) ou 65 % (Trulicity). Pour l'obésité seule (Wegovy, Mounjaro en indication obésité), le remboursement est plus limité et en cours d'évolution en France. Votre médecin connaît les dernières dispositions réglementaires.
 
 **27. « Combien coûte le traitement par mois si je ne suis pas remboursé ? »**
 

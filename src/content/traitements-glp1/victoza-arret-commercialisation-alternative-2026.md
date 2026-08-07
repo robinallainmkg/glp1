@@ -135,7 +135,7 @@ Les premières semaines après le changement de traitement méritent une attenti
 
 | Médicament | Indication | Remboursement SS |
 |------------|-----------|-----------------|
-| Ozempic | Diabète type 2 | 65% |
+| Ozempic | Diabète type 2 | 30% |
 | Trulicity | Diabète type 2 | 65% |
 | Rybelsus | Diabète type 2 | Non |
 | Saxenda | Obésité | Non |

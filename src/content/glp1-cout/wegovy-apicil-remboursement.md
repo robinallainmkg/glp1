@@ -118,7 +118,7 @@ Voir notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-we
 ## Mounjaro et Ozempic chez Apicil en 2026
 
 - **Mounjaro (tirzépatide)** : remboursé à 65 % depuis le 15 juin 2026 pour l'obésité (mêmes conditions que Wegovy : IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel). Apicil complète le ticket modérateur selon contrat.
-- **Ozempic (sémaglutide)** : pris en charge Sécu à **65 %** en bithérapie metformine, **30 %** en trithérapie insuline, **uniquement DT2**. Apicil complète le ticket modérateur selon contrat (souvent 100 % BR).
+- **Ozempic (sémaglutide)** : pris en charge Sécu à **30 %** dans le diabète de type 2, **uniquement DT2**. Apicil complète le ticket modérateur selon contrat (souvent 100 % BR).
 
 ## Comparaison synthétique
 
