@@ -142,7 +142,7 @@ Avant de démarrer, vérifiez si vous remplissez les [critères d'éligibilité 
 - [**Saxenda**](/collections/traitements-glp1/guide-complet-saxenda/) (liraglutide 3 mg) : injection quotidienne, non remboursé (240-300 €/mois)
 
 ### GLP-1 remboursés pour le diabète de type 2 uniquement
-- **Ozempic** (semaglutide 1 mg max) : injection hebdomadaire, remboursé à 65 % en bithérapie metformine pour le DT2 (~76,58 €/stylo)
+- **Ozempic** (semaglutide 1 mg max) : injection hebdomadaire, remboursé à 30 % en bithérapie metformine pour le DT2 (~76,58 €/stylo)
 - **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** (dulaglutide) : injection hebdomadaire, remboursé à 65 % pour le DT2 (~81 €/mois)
 
 ### Traitements alternatifs

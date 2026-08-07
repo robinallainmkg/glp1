@@ -51,7 +51,7 @@ Or **la Sécurité Sociale ne rembourse pas** la majorité de ces accompagnement
 
 - **Wegovy (sémaglutide)** : **remboursé à 65%** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Prix officiels : ~147–350 €/mois.
 - **Mounjaro (tirzépatide)** : **remboursé à 65%** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (mêmes conditions). Prix officiels : 176–433 €/mois.
-- **Ozempic (sémaglutide)** : remboursé Sécu **65 %** en bithérapie metformine, **30 %** en trithérapie insuline, **uniquement DT2**.
+- **Ozempic (sémaglutide)** : remboursé Sécu **30 %** dans le diabète de type 2, **uniquement DT2**.
 
 Pour le détail réglementaire, voir notre [page remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 

@@ -111,7 +111,7 @@ Pour ces patients, le traitement restera à leur charge, au prix libre pratiqué
 
 En attendant la finalisation du dossier Mounjaro, voici le statut des autres GLP-1 sur le marché français :
 
-- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic)** (sémaglutide) : remboursé à **65%** en bithérapie metformine pour le **diabète de type 2 uniquement** (100% en ALD)
+- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic)** (sémaglutide) : remboursé à **30%** en bithérapie metformine pour le **diabète de type 2 uniquement** (100% en ALD)
 - **<a href="/collections/traitements-glp1/guide-complet-victoza/">Victoza</a>** (liraglutide) : remboursé à **65%** pour le **diabète de type 2**
 - **<a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** (dulaglutide) : remboursé à **65%** pour le **diabète de type 2**
 - **Rybelsus** (sémaglutide oral) : **Remboursé 65 %** (depuis juin 2026, obésité)(avis HAS défavorable)

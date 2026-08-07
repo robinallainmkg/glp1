@@ -73,7 +73,7 @@ Le remboursement de Mounjaro pour des patients en **surpoids simple** (IMC entre
 ### Le taux de remboursement : 65 %
 
 Le taux de remboursement de Mounjaro a été fixé à **65 %** par l'Assurance Maladie, au même niveau que les autres GLP-1 déjà remboursés :
-- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic)** (sémaglutide pour le diabète) : remboursé à 65 % (100 % en ALD diabète)
+- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic)** (sémaglutide pour le diabète) : remboursé à 30 % (100 % en ALD diabète)
 - **Trulicity** (dulaglutide pour le diabète) : remboursé à 65 %
 - **[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)** : remboursé à 65 % depuis juin 2026 (mêmes conditions)
 
@@ -103,7 +103,7 @@ Pour situer Mounjaro par rapport au paysage actuel des médicaments remboursés 
 
 | Médicament | Molécule | Indication | Remboursement |
 |-----------|---------|------------|---------------|
-| Ozempic | Sémaglutide | Diabète type 2 | 65 % |
+| Ozempic | Sémaglutide | Diabète type 2 | 30 % |
 | Trulicity | Dulaglutide | Diabète type 2 | 65 % |
 | [Victoza](/collections/traitements-glp1/guide-complet-victoza)* | Liraglutide | Diabète type 2 | 65 % |
 | **Mounjaro** | **Tirzépatide** | **Obésité** | **65 % (depuis juin 2026)** |

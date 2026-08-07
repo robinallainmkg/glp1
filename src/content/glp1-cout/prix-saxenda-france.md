@@ -78,7 +78,7 @@ mainKeyword: "prix Saxenda France"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Saxenda | 240-300 € | Non remboursé |
-| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 €/stylo | 65% (DT2, bithérapie metformine) |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 €/stylo | 30% (DT2, bithérapie metformine) |
 | Wegovy | ~147-350 €/mois | 65% (obésité, IMC ≥ 35 + comorbidité ou IMC ≥ 40, depuis juin 2026) |
 | Trulicity | 85 € | 65% (DT2 uniquement) |
 

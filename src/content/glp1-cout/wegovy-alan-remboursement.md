@@ -128,7 +128,7 @@ Voir notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-we
 ## Mounjaro et Ozempic chez Alan en 2026
 
 - **Mounjaro** : **remboursé à 65%** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (mêmes conditions que Wegovy). Alan complète le ticket modérateur selon votre plan.
-- **Ozempic** : pris en charge Sécu à **65 %** en bithérapie metformine, **30 %** en trithérapie insuline, **uniquement DT2**. Alan complète le ticket modérateur selon votre plan (souvent 100 % BR).
+- **Ozempic** : pris en charge Sécu à **30 %** dans le diabète de type 2, **uniquement DT2**. Alan complète le ticket modérateur selon votre plan (souvent 100 % BR).
 
 ## Comparaison synthétique
 
@@ -168,7 +168,7 @@ Oui, via le CSE et la DRH lors du renouvellement du contrat collectif. Discussio
 Oui, Alan inclut la téléconsultation médicale. La consultation est gratuite, le médicament reste soumis aux forfaits applicables.
 
 **6. Et Mounjaro et Ozempic ?**
-Mounjaro : même régime que Wegovy (remboursé 65% Sécu depuis le 15 juin 2026 pour l'obésité). Ozempic : pris en charge dans le DT2 (65 %/30 %). Alan complète le TM pour les deux.
+Mounjaro : même régime que Wegovy (remboursé 65% Sécu depuis le 15 juin 2026 pour l'obésité). Ozempic : pris en charge dans le DT2 (30 %). Alan complète le TM pour les deux.
 
 **7. Alan rembourse-t-il automatiquement Wegovy ?**
 Oui, depuis l'inscription au JO le 15 juin 2026, Alan applique le complément de ticket modérateur automatiquement, sans démarche.

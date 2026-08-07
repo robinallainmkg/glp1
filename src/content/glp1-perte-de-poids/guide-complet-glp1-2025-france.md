@@ -36,7 +36,7 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 
 | Médicament | Laboratoire | Indications | Posologie | Prix/mois | Remboursement |
 |------------|-------------|-------------|-----------|-----------|---------------|
-| **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** | Novo Nordisk | Diabète type 2 | 0.25mg à 2mg/semaine | ~77,60€/stylo | 65% DT2 (100% en ALD) |
+| **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** | Novo Nordisk | Diabète type 2 | 0.25mg à 2mg/semaine | ~77,60€/stylo | 30% DT2 (100% en ALD) |
 | **[Wegovy (sémaglutide)](/collections/traitements-glp1/guide-complet-wegovy/)** | Novo Nordisk | Obésité (IMC ≥30) | 0.25mg à 2.4mg/semaine | 147-350€ | 65 % (depuis 15/06/2026, sous conditions) |
 | **<a href="/collections/traitements-glp1/guide-complet-saxenda/">Saxenda</a>** | Novo Nordisk | Obésité | 0.6mg à 3mg/jour | 240-300€ | Non remboursé |
 | **<a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** | Lilly | Diabète type 2 | 0.75mg à 4.5mg/semaine | ~81€ | 65% DT2 (100% en ALD) |
@@ -136,13 +136,13 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 - **Obésité (IMC ≥30) :** Wegovy et Mounjaro sont **remboursés à 65 %** depuis le 15 juin 2026, sous conditions (IMC ≥ 35 + comorbidité ou IMC ≥ 40, échec nutritionnel, primo-prescription CSO/CHU). Saxenda reste **Remboursé 65 %** (depuis juin 2026, obésité)- **ALD 30 (diabète de type 2) :** 100% du ticket modérateur pour Ozempic
 - **Mutuelle santé :** Peut couvrir le reste à charge selon votre contrat
 
-**Pour bénéficier du remboursement GLP-1 :** Les traitements pour le diabète de type 2 (Ozempic, Trulicity, Victoza) sont remboursés à 65% en bithérapie metformine (100% en ALD). Rybelsus n'est pas remboursé (avis HAS défavorable). Depuis le 15 juin 2026, **Wegovy et Mounjaro sont remboursés à 65 %** pour l'obésité sous conditions strictes (IMC ≥ 35 + comorbidité ou IMC ≥ 40, échec nutritionnel documenté, primo-prescription CSO/CHU). Saxenda reste **Remboursé 65 %** (depuis juin 2026, obésité).
+**Pour bénéficier du remboursement GLP-1 :** Les traitements pour le diabète de type 2 sont remboursés à 30% (Ozempic) ou 65% (Trulicity, Victoza) en bithérapie metformine (100% en ALD). Rybelsus n'est pas remboursé (avis HAS défavorable). Depuis le 15 juin 2026, **Wegovy et Mounjaro sont remboursés à 65 %** pour l'obésité sous conditions strictes (IMC ≥ 35 + comorbidité ou IMC ≥ 40, échec nutritionnel documenté, primo-prescription CSO/CHU). Saxenda reste **Remboursé 65 %** (depuis juin 2026, obésité).
 
 ### Prix Réels des Médicaments GLP-1 en Pharmacie (mai 2026)
 
 | Médicament | Prix Public/mois | Remboursement SS | Prix Final/mois |
 |------------|------------------|------------------|-----------------|
-| **Ozempic** | ~77,60€/stylo | 65% DT2 (bithérapie) | ~28€ (DT2) |
+| **Ozempic** | ~77,60€/stylo | 30% DT2 (bithérapie) | ~28€ (DT2) |
 | **Wegovy** | 147-350€ | 65 % (depuis 15/06/2026, sous conditions) | Variable selon mutuelle |
 | **Saxenda** | 240-300€ | Non remboursé | 240-300€ (à charge) |
 | **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | ~81€ | 65% DT2 | ~28€ (DT2) |

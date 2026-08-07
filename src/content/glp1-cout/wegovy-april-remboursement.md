@@ -118,7 +118,7 @@ Voir notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-we
 ## Mounjaro et Ozempic chez April en 2026
 
 - **Mounjaro (tirzépatide)** : **remboursé à 65%** par l'Assurance Maladie depuis le 15 juin 2026 pour l'obésité (mêmes conditions que Wegovy). April complète le ticket modérateur selon votre formule.
-- **Ozempic (sémaglutide)** : pris en charge Sécu à **65 %** en bithérapie metformine, **30 %** en trithérapie insuline, **uniquement DT2**. April complète le ticket modérateur selon votre formule (souvent 100 % BR).
+- **Ozempic (sémaglutide)** : pris en charge Sécu à **30 %** dans le diabète de type 2, **uniquement DT2**. April complète le ticket modérateur selon votre formule (souvent 100 % BR).
 
 ## Comparaison synthétique
 

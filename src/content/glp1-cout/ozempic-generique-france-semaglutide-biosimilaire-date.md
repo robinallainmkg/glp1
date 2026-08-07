@@ -100,9 +100,9 @@ En attendant 2032-2034, plusieurs options permettent de réduire le coût du tra
 
 Son prix : environ 80-110 € par boîte de 30 comprimés selon le dosage. Sans remboursement Sécurité Sociale, cela représente un budget mensuel conséquent. Rybelsus reste toutefois une option pour les patients qui préfèrent un traitement oral au sémaglutide plutôt qu'injectable.
 
-### 2. Le remboursement Ozempic pour les diabétiques : 65 % en bithérapie metformine
+### 2. Le remboursement Ozempic pour les diabétiques : 30 % en bithérapie metformine
 
-Ozempic est **remboursé à 65 %** en bithérapie metformine par l'Assurance Maladie pour le traitement du diabète de type 2, sous conditions (100 % en ALD diabète). Cela porte le reste à charge à environ 28 € par stylo. Avec une bonne mutuelle, ce coût peut être réduit davantage.
+Ozempic est **remboursé à 30 %** en bithérapie metformine par l'Assurance Maladie pour le traitement du diabète de type 2, sous conditions (100 % en ALD diabète). Cela porte le reste à charge à environ 28 € par stylo. Avec une bonne mutuelle, ce coût peut être réduit davantage.
 
 Pour plus de détails, consultez notre guide sur le [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
@@ -134,7 +134,7 @@ Ces différences de calendrier géographique créent une situation paradoxale : 
 
 Le remboursement de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pour l'obésité est effectif depuis le 15 juin 2026 (arrêté du 10 juin 2026), à 65% de prise en charge. Le reste à charge est considérablement réduit.
 
-Le remboursement à 65 % (comme pour Ozempic en bithérapie metformine pour le diabète) rendrait ces traitements accessibles à une bien plus grande partie de la population. Ce débat est au cœur des négociations HAS-CEPS actuellement en cours.
+Un remboursement (comme celui d'Ozempic en bithérapie metformine pour le diabète, à 30 %) rendrait ces traitements accessibles à une bien plus grande partie de la population. Ce débat est au cœur des négociations HAS-CEPS actuellement en cours.
 
 ## Questions fréquentes sur le générique d'Ozempic
 

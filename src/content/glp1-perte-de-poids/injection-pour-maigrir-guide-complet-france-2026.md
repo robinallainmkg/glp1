@@ -272,7 +272,7 @@ Le cout des injections pour maigrir constitue un facteur important dans la déci
 
 La prise en charge des injections pour l'obésité a évolué le 15 juin 2026 :
 
-- **Ozempic** : Rembourse a 65% en bithérapie metformine **uniquement pour le diabète de type 2**. La prescription hors AMM pour la perte de poids n'ouvre aucun droit a remboursement.
+- **Ozempic** : Rembourse a 30% en bithérapie metformine **uniquement pour le diabète de type 2**. La prescription hors AMM pour la perte de poids n'ouvre aucun droit a remboursement.
 - **Wegovy et Mounjaro** : **rembourses a 65% pour l'obésité depuis le 15 juin 2026** (arrêté du 10 juin 2026, JO du 12 juin 2026), sous conditions (voir ci-dessous).
 - **Saxenda** : Non rembourse pour le traitement de l'obésité.
 

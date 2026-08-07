@@ -4,7 +4,7 @@ thumbnail: "/images/thumbnails/remboursement-glp1-2026.jpg"
 description: "Remboursement GLP-1 2026 sécurité sociale conditions : Mounjaro, Wegovy, Ozempic. Mutuelles et aides. Guide remboursement GLP-1 2026 mis à jour."
 keywords: ['remboursement glp1 2026', 'mounjaro remboursement 2026', 'wegovy remboursement 2026', 'remboursement ozempic 2026', 'glp1 remboursement mutuelle', 'quelle mutuelle rembourse glp1', 'prise en charge glp1 2026']
 seoTitle: "Remboursement GLP-1 2026 : Guide par Médicament et Mutuelle"
-seoDescription: "Remboursement GLP-1 2026 : Ozempic, Trulicity, Victoza remboursés 65% (DT2). Wegovy et Mounjaro remboursés 65% (obésité, depuis 15/06/2026). Rybelsus et Saxenda non remboursés. Guide complet."
+seoDescription: "Remboursement GLP-1 2026 : Ozempic remboursé 30%, Trulicity et Victoza 65% (DT2). Wegovy et Mounjaro remboursés 65% (obésité, depuis 15/06/2026). Rybelsus et Saxenda non remboursés. Guide complet."
 publishedAt: '2025-12-27'
 updatedAt: '2026-06-22'
 date: '2026-06-22'
@@ -26,7 +26,7 @@ Les traitements GLP-1 représentent une avancée majeure pour le [diabète de ty
 
 | Médicament | Indication | Remboursement Sécu | Coût patient/mois | Statut 2026 |
 |------------|------------|-------------------|------------------|-----------------|
-| **Ozempic** | Diabète T2 | **65%** (bithérapie metformine) / 30% (trithérapie insuline) | ~28-56€ | ✅ Maintenu |
+| **Ozempic** | Diabète T2 | **30%** | ~28-56€ | ✅ Maintenu |
 | **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | Diabète T2 | **65%** (DT2 uniquement) | ~33€ | ✅ Maintenu |
 | **Victoza** | Diabète T2 | **65%** (DT2 uniquement) | ~27€ | ✅ Maintenu |
 | **Rybelsus** | Diabète T2 (oral) | **Remboursé 65 %** (depuis juin 2026, obésité)(avis défavorable HAS) | 80-110€ | ❌ Non remboursé |
@@ -42,7 +42,7 @@ Les traitements GLP-1 représentent une avancée majeure pour le [diabète de ty
 
 ### Critères Communs à Tous les GLP-1
 
-Pour bénéficier du remboursement par l'Assurance Maladie (65% pour Ozempic/Trulicity/Victoza en bithérapie metformine, 30% en trithérapie avec insuline ; Saxenda non remboursé), vous devez remplir ces conditions de base :
+Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic, 65% pour Trulicity et Victoza en bithérapie metformine ; Saxenda non remboursé), vous devez remplir ces conditions de base :
 
 ✅ **Prescription médicale obligatoire**
 - Ordonnance d'un médecin généraliste, endocrinologue ou diabétologue
@@ -113,7 +113,7 @@ Pour bénéficier du remboursement par l'Assurance Maladie (65% pour Ozempic/Tru
 
 ### Statut Officiel
 
-**Ozempic (sémaglutide 0.25-1 mg)** maintient son remboursement à **65%** en 2026 pour le **diabète de type 2** en bithérapie avec metformine (30% en trithérapie avec insuline basale). (Note : le dosage 2 mg n'est pas commercialisé en France.)
+**Ozempic (sémaglutide 0.25-1 mg)** maintient son remboursement à **30%** en 2026 pour le **diabète de type 2**. (Note : le dosage 2 mg n'est pas commercialisé en France.)
 
 ⚠️ **Important** : Ozempic n'est PAS remboursé pour la perte de poids seule (sans diabète). Pour cette indication, utilisez **Wegovy** (même principe actif, dosage supérieur).
 
@@ -358,7 +358,7 @@ Pour continuer à être remboursé, vous devez démontrer :
 Le remboursement est **confirmé pour 2026** pour les GLP-1 indiqués dans le **diabète de type 2** : **65% en bithérapie avec metformine** (cas le plus fréquent), 30% en trithérapie avec insuline basale. **Depuis le 15 juin 2026, Wegovy et Mounjaro sont également remboursés à 65 %** pour le traitement de l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Saxenda reste non remboursé.
 
 **Statut par traitement :**
-- ✅ Ozempic : Maintenu 65% bithérapie metformine / 30% trithérapie insuline (DT2 uniquement)
+- ✅ Ozempic : Remboursé 30% (DT2 uniquement, en bithérapie metformine ou trithérapie)
 - ✅ Trulicity : Maintenu 65% bithérapie metformine / 30% trithérapie insuline (DT2 uniquement)
 - ✅ Victoza : Maintenu 65% bithérapie metformine / 30% trithérapie insuline (DT2 uniquement, **arrêt commercialisation prévu fin 2026**)
 - ❌ Rybelsus : NON remboursé (avis défavorable HAS)
@@ -433,7 +433,7 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 **Choix recommandé :**
 - **Budget limité** --> Wegovy (prix officiel plus bas)
 - **Efficacité maximale** --> Mounjaro
-- **Diabète de type 2** --> Ozempic (65% en bithérapie metformine / 30% en trithérapie insuline, DT2 uniquement, principe actif identique à Wegovy)
+- **Diabète de type 2** --> Ozempic (30%, DT2 uniquement, principe actif identique à Wegovy)
 
 [Comparaison détaillée Wegovy vs Mounjaro →](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
 

@@ -14,7 +14,7 @@ Les traitements GLP-1 (Glucagon-Like Peptide-1) ont transformé la prise en char
 
 Plusieurs molécules GLP-1 sont disponibles sur ordonnance et remboursées par l'Assurance Maladie dans le cadre du diabète de type 2 :
 
-- **Ozempic (sémaglutide)** — injection hebdomadaire, remboursé à 65% en bithérapie metformine
+- **Ozempic (sémaglutide)** — injection hebdomadaire, remboursé à 30% en bithérapie metformine
 - **Trulicity (dulaglutide)** — injection hebdomadaire, remboursé à 65%
 - **Victoza (liraglutide)** — injection quotidienne, remboursé à 65%
 
