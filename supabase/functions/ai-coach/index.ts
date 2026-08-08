@@ -294,7 +294,24 @@ function extractImc(userTexts: string[]): { imc: number; poids: number; taille: 
   return { imc, poids, taille };
 }
 
-function buildImcVerdictContext(imcData: { imc: number; poids: number; taille: number }): string {
+// IMC énoncé directement ("mon IMC est de 33,2", "avec un imc de 33.2") :
+// le calcul poids/taille ne capte pas ce cas et le LLM a rendu un verdict
+// "éligible" à un IMC de 33,2 le 08/08 — on injecte donc aussi le verdict
+// quand l'utilisateur donne son IMC sans poids ni taille.
+function extractStatedImc(userTexts: string[]): number | null {
+  for (const t of userTexts) {
+    const m = t.match(/\bimc\b\s*(?:est|était|etait|=|:|de|d'environ|autour de|a|à)?\s*(?:de\s*)?(\d{2}(?:[.,]\d{1,2})?)\b/i);
+    if (!m) continue;
+    // Exclure les citations de seuils réglementaires ("il faut un IMC de 35", "IMC ≥ 40")
+    const before = t.slice(Math.max(0, (m.index ?? 0) - 30), m.index ?? 0);
+    if (/(≥|>=|>|<|≤|<=|seuil|faut|minimum|au moins|inf[eé]rieur|sup[eé]rieur|dessous|dessus)/i.test(before)) continue;
+    const value = parseFloat(m[1].replace(',', '.'));
+    if (value >= 12 && value <= 80) return value;
+  }
+  return null;
+}
+
+function buildImcVerdictContext(imcData: { imc: number; poids: number | null; taille: number | null }): string {
   const { imc, poids, taille } = imcData;
   let verdict: string;
   if (imc >= 40) {
@@ -304,7 +321,10 @@ function buildImcVerdictContext(imcData: { imc: number; poids: number; taille: n
   } else {
     verdict = "NON ÉLIGIBLE au remboursement (IMC < 35, seuils : IMC ≥ 35 avec comorbidité ou IMC ≥ 40). INTERDICTION ABSOLUE de dire \"tu es éligible\" ou \"vous êtes éligible\". Dis-le avec tact et oriente vers le médecin pour évaluer d'autres options.";
   }
-  return `\n\n⚠️ VERDICT CALCULÉ PAR LE SYSTÈME (fiable, PRIORITAIRE sur tout autre calcul) : poids ${poids} kg, taille ${taille} cm → IMC = ${imc.toFixed(1)}. Verdict remboursement : ${verdict} Ta réponse DOIT être cohérente avec ce verdict — ne recalcule pas toi-même.`;
+  const source = poids !== null && taille !== null
+    ? `poids ${poids} kg, taille ${taille} cm → IMC = ${imc.toFixed(1)}`
+    : `IMC annoncé par l'utilisateur = ${imc.toFixed(1)}`;
+  return `\n\n⚠️ VERDICT CALCULÉ PAR LE SYSTÈME (fiable, PRIORITAIRE sur tout autre calcul) : ${source}. Verdict remboursement : ${verdict} Ta réponse DOIT être cohérente avec ce verdict — ne recalcule pas toi-même.`;
 }
 
 // --- Scam signal detection ---
@@ -805,7 +825,12 @@ serve(async (req) => {
       // Garde-fou éligibilité : IMC calculé côté serveur, verdict injecté
       const userTexts = [cleanMessage, ...historyMessages.filter((m: any) => m.role === 'user').map((m: any) => m.content).reverse()];
       const imcData = extractImc(userTexts);
-      const imcContext = imcData ? buildImcVerdictContext(imcData) : '';
+      const statedImc = imcData === null ? extractStatedImc(userTexts) : null;
+      const imcContext = imcData
+        ? buildImcVerdictContext(imcData)
+        : statedImc !== null
+          ? buildImcVerdictContext({ imc: statedImc, poids: null, taille: null })
+          : '';
 
       const userMessageWithContext = ragContext
         ? `Contexte factuel (utilise ces informations pour répondre sans mentionner leur source) :\n\n${ragContext}${linksHint}${scamContext}${doctorContext}${imcContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
