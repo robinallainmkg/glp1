@@ -182,7 +182,7 @@ Le diagnostic de fuite (point 5) se fait en comparant chaque K a sa baseline : l
 1. **[ACTION ROBIN]** Soumettre `/outils/test-eligibilite/` en GSC (0 impression en 30j alors que la page est indexable — jamais indexee par Google depuis sa creation le 14/07). Ajoutee en tete de la file gsc-submission-queue.md.
 2. **[FAIT 06/08/2026 — go Robin « go CTA »]** Encart eligibilite sur `/outils/carte-prix-pharmacies/` (page n°1 du site, 1 872 sessions/30j). Suivre le trafic referral vers /outils/test-eligibilite/ dans les rapports A0.
 3. **[FAIT 06/08/2026 — go Robin « go CTA »]** Encart apres le tableau de prix des 3 pages prix nationales (angle Ozempic adapte : rembourse diabete seulement → renvoi Wegovy/Mounjaro 65 %).
-4. **[AUTONOME — A FAIRE au prochain run]** Coach IA : quand intent price/eligibility detecte, proposer le LIEN direct vers /outils/test-eligibilite/ au lieu de collecter poids/taille en chat (0 DOSSIER_READY en 7j, personne ne finit la collecte). Modif prompt systeme + deploy MCP.
+4. **[FAIT 07/08/2026 — v65]** Coach IA : lien direct vers /outils/test-eligibilite/ sur intent price/eligibility (regle prioritaire prompt + garde-fou deterministe post-reponse). Complete le 09/08 (v66) par un garde-fou primo-prescription (mistral-small affirmait que le generaliste peut initier la prescription remboursee).
 5. **[APRES 2-3]** Meme encart sur les pages prix ville/dept du cluster pharmacies.
 6. **[AUTONOME — backlog]** Email de livraison J0 automatique post-achat Dossier (« votre dossier est pret » + lien /mon-espace/dossier/) — actuellement l'acheteur qui ferme l'onglet de retour Stripe n'a aucun moyen de retrouver son dossier.
 Estimation actions 2+3 a 3 % de clic : K1 0,69 % → ~1,4 %, soit ~6 ventes/mois a K2-K4 constants.

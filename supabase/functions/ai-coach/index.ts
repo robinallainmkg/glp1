@@ -977,6 +977,21 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
         cleanResponse += "\n\nLe plus rapide si tu préfères : notre [test d'éligibilité](/outils/test-eligibilite/) te donne le verdict en 1 minute (3 questions).";
       }
 
+      // Garde-fou primo-prescription : la consigne du prompt (« ne jamais dire que le
+      // médecin traitant peut initier la prescription remboursée ») n'est pas toujours
+      // suivie par les modèles de secours (constaté en prod le 08/08/2026, mistral-small :
+      // « ton médecin traitant peut te prescrire directement Mounjaro depuis juin 2025 »
+      // à une utilisatrice qui demandait explicitement le remboursement). Comme pour les
+      // prix, on corrige la RÉPONSE quel que soit le modèle : si elle affirme que le
+      // généraliste prescrit « directement / sans spécialiste » sans préciser que c'est
+      // hors remboursement, on ajoute la clarification.
+      const gpInitiationClaim = /(médecin traitant|généraliste)[^.!?]{0,140}(prescrire\s+directement|prescrire[^.!?]{0,60}sans (passer par un |)spécialiste|sans passer par un spécialiste)/i;
+      const gpClaimClarified = /hors remboursement|non remboursé|plein tarif|n'ouvre pas (le |droit au )?remboursement|à (ta |votre |sa )?charge/i;
+      if (gpInitiationClaim.test(cleanResponse) && !gpClaimClarified.test(cleanResponse)) {
+        console.warn(`[prescriber-guard] claim généraliste sans nuance remboursement corrigé (modèle: ${usedModel})`);
+        cleanResponse += "\n\nPrécision importante : le médecin traitant peut prescrire Wegovy ou Mounjaro, mais HORS remboursement (traitement à ta charge). Pour ouvrir le remboursement à 65 %, la première prescription doit être faite par un spécialiste en CSO/CHU — ton généraliste pourra ensuite renouveler. Détails : [qui peut prescrire pour être remboursé ?](/collections/medecins-glp1-france/qui-peut-prescrire-mounjaro-wegovy-rembourse/)";
+      }
+
       // Moment chaud → on propose la capture email (le funnel convertit à 0 sans capture).
       const saysEligible = /\béligibl/i.test(cleanResponse);
       const saysNotEligible = /\b(pas|plus)\b[^.]{0,25}éligibl|éligibl[^.]{0,25}\bsi\b/i.test(cleanResponse);

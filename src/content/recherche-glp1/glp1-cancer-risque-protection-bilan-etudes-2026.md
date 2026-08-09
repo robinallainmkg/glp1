@@ -3,7 +3,7 @@ title: "GLP-1 et Cancer : Risques et Protections — Bilan 2026"
 description: "GLP-1 et cancer : risques et protections pour thyroïde, colorectal et pancréas. Bilan 2026 sur sémaglutide, tirzépatide et risque oncologique."
 pubDate: 2026-03-18
 date: 2026-03-18
-updatedAt: 2026-03-18
+updatedAt: 2026-08-09
 author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
 tags: ["glp1", "cancer", "risque", "protection", "thyroïde", "colorectal", "pancréatique", "sémaglutide", "recherche", "oncologie"]
@@ -74,7 +74,7 @@ Trois grandes études de sécurité cardiovasculaire ont fourni des données ras
 
 - **LEADER** (liraglutide, 9 340 patients, 3,8 ans de suivi) : aucune augmentation significative du cancer du pancréas
 - **SUSTAIN-6** (sémaglutide, 3 297 patients) : pas de signal pancréatique
-- **SURPASS-CVOT** (tirzépatide, 13 884 patients) : pas d'augmentation du risque de cancer pancréatique
+- **SURPASS-CVOT** (tirzépatide vs dulaglutide, 13 299 patients, résultats publiés dans le NEJM en décembre 2025) : pas d'augmentation du risque de cancer pancréatique
 
 Une méta-analyse publiée dans *The Lancet Diabetes & Endocrinology* en 2024 regroupant plus de 80 000 patients de ces essais a conclu à **l'absence d'augmentation du risque de cancer du pancréas** sous GLP-1, comparativement aux autres traitements antidiabétiques ou à un placebo.
 
@@ -88,7 +88,7 @@ Des données observationnelles récentes suggèrent que les GLP-1 pourraient ré
 
 ### L'étude de la Clinique Cleveland (2023-2024)
 
-Une grande étude rétrospective de Wang et al. (Case Western Reserve University) publiée dans *JAMA Oncology* en décembre 2023 a analysé plus de 1,2 million de dossiers médicaux avec des cohortes appariées de 22 572 patients ou en surpoids avec diabète de type 2 traités par sémaglutide à des patients traités par d'autres médicaments contre le diabète. Les patients sous sémaglutide présentaient une réduction du risque de cancer colorectal de **17 %** sur 10 ans de suivi, après ajustement pour les facteurs confondants.
+Une grande étude rétrospective de Wang et al. (Case Western Reserve University) publiée dans [*JAMA Oncology* en décembre 2023](https://jamanetwork.com/journals/jamaoncology/fullarticle/2812769) a analysé plus de 1,2 million de dossiers de patients diabétiques de type 2 débutant un premier antidiabétique, avec des cohortes appariées de 22 572 patients. Résultat : les patients débutant un agoniste GLP-1 (la classe entière, pas seulement le sémaglutide) présentaient un risque de cancer colorectal réduit de **44 %** par rapport à ceux débutant une insuline (HR 0,56) et de **25 %** par rapport à ceux débutant la metformine (HR 0,75), sur une fenêtre de suivi allant jusqu'à 15 ans, après appariement sur les facteurs confondants. L'effet était plus marqué chez les patients en surpoids ou obèses.
 
 ### Mécanismes biologiques proposés
 
