@@ -4,7 +4,7 @@ description: "CagriSema (cagrilintide + sémaglutide) : résultats REDEFINE à 2
 pubDate: 2026-03-19
 date: "2026-06-22"
 updatedAt: 2026-06-22
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "cagrisema", "cagrilintide", "semaglutide", "novo nordisk", "REDEFINE", "obesite", "nouveaux traitements", "france", "2026"]
 collection: "recherche-glp1"

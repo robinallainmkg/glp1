@@ -4,7 +4,7 @@ description: "Arrêt GLP-1 et risque cardiovasculaire : une étude BMJ 2026 aler
 pubDate: 2026-05-28
 date: "2026-05-29"
 updatedAt: 2026-05-29
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Recherche GLP-1"
 tags: ["glp1", "cardiovasculaire", "arrêt traitement", "sémaglutide", "SELECT", "coeur", "risque", "BMJ", "2026", "recherche"]
 collection: "recherche-glp1"

@@ -4,7 +4,7 @@ description: "GLP-1 et accompagnement psychologique : préserver sa relation à 
 seoDescription: "GLP-1 et accompagnement psychologique : comment préserver votre rapport à la nourriture sous Ozempic ou Mounjaro. Rôle du diététicien et du psychologue."
 pubDate: 2026-03-17
 date: 2026-03-17
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Nutrition et comportement alimentaire"
 tags: ["glp1", "accompagnement", "psychologie", "comportement alimentaire", "nutrition", "diététicien", "régime-glp1"]
 collection: "régime-glp1"

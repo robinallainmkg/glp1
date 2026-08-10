@@ -4,7 +4,7 @@ description: "GLP-1 gastroparésie vidange gastrique ralentissement : mécanisme
 pubDate: 2026-03-17
 date: 2026-03-17
 updatedAt: 2026-03-17
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "gastroparésie", "vidange gastrique", "effets secondaires", "ozempic", "wegovy", "mounjaro", "anesthésie", "ANSM"]
 collection: "effets-secondaires-glp1"

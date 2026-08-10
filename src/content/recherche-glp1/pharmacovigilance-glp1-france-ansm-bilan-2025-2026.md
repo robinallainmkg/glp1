@@ -4,7 +4,7 @@ description: "Pharmacovigilance GLP-1 France : effets indésirables graves, més
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "pharmacovigilance", "ANSM", "EPI-Phare", "sécurité", "effets indésirables", "mésusage", "France", "2026"]
 collection: "recherche-glp1"

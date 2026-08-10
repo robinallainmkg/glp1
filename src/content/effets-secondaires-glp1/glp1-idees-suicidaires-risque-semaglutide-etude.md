@@ -4,7 +4,7 @@ description: "GLP-1 idées suicidaires risque semaglutide : ce que disent l'EMA,
 pubDate: 2026-03-17
 date: 2026-03-17
 updatedAt: 2026-03-17
-author: "Dr. Émilie Martin"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "idées suicidaires", "santé mentale", "semaglutide", "EMA", "Epi-Phare", "pharmacovigilance", "effets secondaires", "2026"]
 collection: "effets-secondaires-glp1"

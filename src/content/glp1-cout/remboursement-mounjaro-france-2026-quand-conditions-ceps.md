@@ -9,7 +9,7 @@ updatedAt: '2026-06-22'
 date: 2026-06-22
 featured: true
 priority: 2
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 9
 thumbnail: "/images/thumbnails/remboursement-mounjaro-ceps-2026-illus.svg"
 thumbnailAlt: "Remboursement Mounjaro France 2026 - conditions et calendrier"

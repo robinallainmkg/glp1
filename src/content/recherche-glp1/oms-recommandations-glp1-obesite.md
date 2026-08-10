@@ -4,7 +4,7 @@ description: "OMS recommandations GLP-1 obésité 2025 : liraglutide, sémagluti
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "OMS", "obésité", "recommandations", "recherche", "santé publique"]
 collection: "recherche-glp1"

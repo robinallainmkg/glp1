@@ -4,7 +4,7 @@ description: "Comment s'injecter Ozempic, Wegovy, Mounjaro : technique d'auto-in
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["glp1", "ozempic", "wegovy", "mounjaro", "injection", "auto-injection", "stylo", "technique"]
 collection: "traitements-glp1"

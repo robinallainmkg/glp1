@@ -4,7 +4,7 @@ description: "Mésusage GLP-1 en France : détournement Ozempic chez 2,2% des pa
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "mésusage", "détournement", "ozempic", "ANSM", "santé publique", "effets secondaires"]
 collection: "effets-secondaires-glp1"

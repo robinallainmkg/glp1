@@ -8,7 +8,7 @@ publishedAt: '2026-03-17'
 updatedAt: '2026-03-17'
 date: 2026-03-17
 featured: true
-author: 'Dr. Julien Lefèvre'
+author: "Rédaction GLP-1 France"
 readingTime: 9
 thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
 thumbnailAlt: "GLP-1 et risque de neuropathie optique ischémique NOIAN sous sémaglutide"

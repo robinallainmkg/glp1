@@ -4,7 +4,7 @@ description: "Mounjaro vs Wegovy comparatif 2026 : tirzépatide vs sémaglutide,
 pubDate: 2026-05-28
 date: "2026-05-29"
 updatedAt: 2026-05-29
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["mounjaro", "wegovy", "comparatif", "tirzépatide", "sémaglutide", "perte de poids", "GLP-1", "prix", "efficacité"]
 collection: "traitements-glp1"

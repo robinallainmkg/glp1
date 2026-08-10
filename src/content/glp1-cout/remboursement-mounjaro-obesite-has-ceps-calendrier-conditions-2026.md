@@ -9,7 +9,7 @@ updatedAt: '2026-06-22'
 date: 2026-06-22
 featured: true
 priority: 1
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 11
 thumbnail: "/images/thumbnails/mounjaro-obesite-has-2026-illus.svg"
 thumbnailAlt: "Remboursement Mounjaro obésité 2026 : décision HAS et calendrier CEPS France"

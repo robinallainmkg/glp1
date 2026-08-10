@@ -179,7 +179,7 @@ Si un dossier est PAYE : PushNotification immediate a Robin (1re conversion = ev
 Le diagnostic de fuite (point 5) se fait en comparant chaque K a sa baseline : le K qui decroche = la fuite du moment. Goulot identifie au 04/08 : **K1** (exposition), le reste du funnel convertit correctement.
 
 **PLAN K1 (etabli avec Robin le 04/08/2026 — statuts a tenir a jour a chaque run)** :
-1. **[ACTION ROBIN]** Soumettre `/outils/test-eligibilite/` en GSC (0 impression en 30j alors que la page est indexable — jamais indexee par Google depuis sa creation le 14/07). Ajoutee en tete de la file gsc-submission-queue.md.
+1. **[FAIT 09/08/2026 — Robin a soumis la page en GSC]** `/outils/test-eligibilite/` : surveiller les premieres impressions GSC a chaque run (0 imp en 30j avant soumission ; audit 09/08 : page techniquement saine, jamais crawlee). Si toujours 0 imp au 16/08 → re-signaler une fois.
 2. **[FAIT 06/08/2026 — go Robin « go CTA »]** Encart eligibilite sur `/outils/carte-prix-pharmacies/` (page n°1 du site, 1 872 sessions/30j). Suivre le trafic referral vers /outils/test-eligibilite/ dans les rapports A0.
 3. **[FAIT 06/08/2026 — go Robin « go CTA »]** Encart apres le tableau de prix des 3 pages prix nationales (angle Ozempic adapte : rembourse diabete seulement → renvoi Wegovy/Mounjaro 65 %).
 4. **[FAIT 07/08/2026 — v65]** Coach IA : lien direct vers /outils/test-eligibilite/ sur intent price/eligibility (regle prioritaire prompt + garde-fou deterministe post-reponse). Complete le 09/08 (v66) par un garde-fou primo-prescription (mistral-small affirmait que le generaliste peut initier la prescription remboursee).

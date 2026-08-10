@@ -4,7 +4,7 @@ description: "Orforglipron France, nouveau médicament GLP-1 pour la perte de po
 pubDate: 2026-03-15
 date: "2026-05-29"
 updatedAt: 2026-05-29
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["glp1", "orforglipron", "cagrisema", "nouveaux traitements", "obésité", "2026"]
 collection: "traitements-glp1"

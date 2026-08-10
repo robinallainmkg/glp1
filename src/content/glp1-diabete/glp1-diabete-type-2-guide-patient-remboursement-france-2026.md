@@ -4,7 +4,7 @@ description: "GLP-1 et diabète type 2 en France 2026 : médicaments remboursés
 pubDate: 2026-03-17
 date: "2026-05-29"
 updatedAt: 2026-08-05
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Diabète"
 tags: ["glp1", "diabète type 2", "remboursement", "ozempic", "trulicity", "victoza", "rybelsus", "france", "2026", "patient"]
 collection: "glp1-diabete"

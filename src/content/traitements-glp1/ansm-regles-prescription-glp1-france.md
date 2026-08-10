@@ -4,7 +4,7 @@ description: "ANSM prescription GLP-1 règles France 2025-2026 : tout médecin p
 pubDate: 2026-03-16
 date: "2026-05-29"
 updatedAt: 2026-05-29
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements"
 tags: ["glp1", "ANSM", "prescription", "réglementation", "France", "obésité", "diabète"]
 collection: "traitements-glp1"

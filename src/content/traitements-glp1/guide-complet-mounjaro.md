@@ -3,7 +3,7 @@ title: "Mounjaro Guide Complet : Prix et Résultats"
 thumbnail: "/images/thumbnails/guide-complet-mounjaro-illus.svg"
 slug: "guide-complet-mounjaro"
 description: "Mounjaro (tirzepatide) guide complet France : perdez 15-20% de poids. Prix, posologie, effets secondaires et témoignages 2026."
-author: "Dr. Martin"
+author: "Rédaction GLP-1 France"
 image: "/images/thumbnails/guide-complet-mounjaro-illus.svg"
 collection: "traitements-glp1"
 category: "traitements-glp1"
@@ -322,11 +322,11 @@ Pour savoir si vous pouvez bénéficier de Mounjaro, consultez notre page [êtes
 ---
 
 <div class="expert-conclusion">
-  <h3>🎯 Conclusion de l'Expert</h3>
+  <h3>🎯 Conclusion</h3>
   <blockquote>
     "Mounjaro représente l'avenir des traitements pour la perte de poids, avec les [recommandations de l'OMS validant les GLP-1](/collections/recherche-glp1/oms-recommandations-glp1-obesite/) comme option thérapeutique. Ses résultats exceptionnels
     (-20% du poids corporel) et sa tolérance remarquable en font LE traitement de référence en 2025."
-    <cite>- Dr. Martin, Endocrinologue</cite>
+    
   </blockquote>
 </div>
 - **Jour fixe** : même jour chaque semaine

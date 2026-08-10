@@ -3,7 +3,7 @@ title: "Régime Mounjaro Optimal 2026 : Menus & Aliments"
 description: "Régime Mounjaro optimal pour tirzépatide : aliments à privilégier (30-35% protéines), menus types par phase et 7 conseils pour maximiser la perte de poids."
 pubDate: 2025-09-07
 date: 2026-05-29
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Nutrition"
 tags: ["glp1", "traitements", "nutrition"]
 collection: "régime-glp1"

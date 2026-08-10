@@ -8,7 +8,7 @@ date: '2026-03-15'
 publishedAt: '2026-03-15'
 updatedAt: '2026-03-15'
 featured: true
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 9
 image: "/images/thumbnails/sante.jpg"
 thumbnail: "/images/thumbnails/sante.jpg"

@@ -4,7 +4,7 @@ description: "GLP-1 apnée du sommeil SAOS : tirzépatide réduit le SAOS de 55 
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "apnée du sommeil", "SAOS", "tirzépatide", "mounjaro", "sémaglutide", "recherche", "sommeil"]
 collection: "recherche-glp1"

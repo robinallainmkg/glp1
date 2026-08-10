@@ -4,7 +4,7 @@ description: "Nausées sous Ozempic, Wegovy ou Mounjaro ? 10 solutions concrète
 pubDate: 2026-05-27
 date: "2026-05-27"
 updatedAt: 2026-05-27
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires"
 tags: ["nausées", "vomissements", "glp1", "effets secondaires", "ozempic", "wegovy", "mounjaro", "gestion", "conseils"]
 collection: "effets-secondaires-glp1"

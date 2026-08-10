@@ -4,7 +4,7 @@ description: "Guide pratique pour suivre efficacement votre traitement GLP-1 : j
 pubDate: 2026-05-28
 date: "2026-05-28"
 updatedAt: 2026-05-28
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Régime et alimentation"
 tags: ["glp1", "suivi", "perte de poids", "journal de bord", "dose", "effets secondaires", "bilan sanguin"]
 collection: "regime-glp1"

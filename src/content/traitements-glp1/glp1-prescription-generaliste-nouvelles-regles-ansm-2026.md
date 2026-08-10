@@ -9,7 +9,7 @@ date: 2026-05-29
 updatedAt: '2026-05-29'
 featured: true
 priority: 1
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 10
 thumbnail: "/images/thumbnails/docteur.jpg"
 thumbnailAlt: "Médecin généraliste prescrivant un traitement GLP-1 Wegovy ou Mounjaro"

@@ -4,7 +4,7 @@ description: "Protéines GLP-1 Ozempic Wegovy : combien de protéines manger pou
 pubDate: 2025-08-20
 date: 2025-08-20
 updatedAt: 2026-03-18
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition", "protéines", "masse musculaire", "ozempic", "wegovy", "mounjaro"]
 collection: "régime-glp1"

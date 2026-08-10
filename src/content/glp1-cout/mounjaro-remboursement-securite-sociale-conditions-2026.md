@@ -10,7 +10,7 @@ updatedAt: '2026-06-22'
 date: 2026-06-22
 featured: true
 priority: 1
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 10
 image: "/images/thumbnails/mounjaro-securite-sociale-2026-illus.svg"
 collection: "glp1-cout"

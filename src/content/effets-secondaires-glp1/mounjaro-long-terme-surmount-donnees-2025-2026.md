@@ -9,7 +9,7 @@ publishedAt: '2026-07-20'
 updatedAt: '2026-07-20'
 date: 2026-07-20
 featured: false
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 10
 collection: "effets-secondaires-glp1"
 mainKeyword: "mounjaro long terme études SURMOUNT"

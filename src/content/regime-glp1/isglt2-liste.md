@@ -4,7 +4,7 @@ description: "iSGLT2 liste médicaments prix France GLP-1 : Jardiance, Forxiga, 
 pubDate: 2025-08-20
 date: 2026-06-22
 updatedAt: 2026-06-22
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Nutrition"
 tags: ["isglt2", "glp1", "diabète", "jardiance", "forxiga", "traitement"]
 collection: "régime-glp1"

@@ -7,7 +7,7 @@ publishedAt: '2026-03-16'
 date: '2026-03-16'
 updatedAt: '2026-03-16'
 featured: true
-author: 'Dr. Sophie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 11
 image: "/images/thumbnails/recherche-clinique-glp1-illus.jpg"
 thumbnail: "/images/thumbnails/recherche-clinique-glp1-illus.jpg"

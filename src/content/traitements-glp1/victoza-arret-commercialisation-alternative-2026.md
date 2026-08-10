@@ -4,7 +4,7 @@ description: "Victoza arrêt commercialisation 2026 : alternatives au liraglutid
 pubDate: 2026-03-16
 date: "2026-03-16"
 updatedAt: 2026-03-16
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["victoza", "liraglutide", "arrêt", "alternative", "glp1", "2026", "ozempic", "saxenda"]
 collection: "traitements-glp1"

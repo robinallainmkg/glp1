@@ -9,7 +9,7 @@ updatedAt: '2026-07-20'
 date: 2026-07-20
 featured: false
 priority: 4
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 8
 thumbnail: "/images/thumbnails/wegovy-espagne-prix-illus.svg"
 thumbnailAlt: "Comparatif prix Wegovy Espagne vs France 2026"

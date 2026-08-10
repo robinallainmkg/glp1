@@ -3,7 +3,7 @@ title: "Index Glycémique et GLP-1 : Aliments et Glycémie"
 description: "Index glycémique GLP-1 : choisir les aliments à faible glycémie pour optimiser votre traitement. Guide des bons glucides et stabilisation glycémique."
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]
 collection: "régime-glp1"

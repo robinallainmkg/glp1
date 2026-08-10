@@ -3,7 +3,7 @@ title: "Vitamines et GLP-1 : Carences et Supplémentation"
 published: false
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 description: "Micronutriments et vitamines sous GLP-1 : prévenir les carences et adapter votre supplémentation. Guide expert avec bilans biologiques recommandés."
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]

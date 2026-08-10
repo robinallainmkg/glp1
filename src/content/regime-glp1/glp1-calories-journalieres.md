@@ -2,7 +2,7 @@
 title: "Calories Journalières GLP-1 : Régime Perte de Poids"
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 description: "Calculez vos calories journalières sous GLP-1 pour un régime efficace. Méthodes de calcul, adaptation au traitement et déficit calorique sain."
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]

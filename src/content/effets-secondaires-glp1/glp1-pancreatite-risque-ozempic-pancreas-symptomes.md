@@ -4,7 +4,7 @@ description: "GLP-1 pancréatite risque ozempic : risque évalué à 1/1000, qui
 pubDate: 2026-03-17
 date: 2026-03-17
 updatedAt: 2026-08-04
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "pancréatite", "ozempic", "wegovy", "mounjaro", "effets secondaires", "pancréas", "ANSM"]
 collection: "effets-secondaires-glp1"

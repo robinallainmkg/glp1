@@ -4,7 +4,7 @@ description: "Êtes-vous éligible au GLP-1 (Ozempic, Wegovy, Mounjaro) ? Critè
 pubDate: 2026-05-27
 date: "2026-06-22"
 updatedAt: 2026-06-22
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Perte de poids"
 tags: ["éligibilité", "glp1", "imc", "critères", "obésité", "surpoids", "auto-évaluation", "france"]
 collection: "glp1-perte-de-poids"

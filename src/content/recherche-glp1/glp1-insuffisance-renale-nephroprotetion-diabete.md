@@ -4,7 +4,7 @@ description: "Les GLP-1 protègent les reins : -27% de risque de dialyse. Mais s
 pubDate: 2026-03-17
 date: 2026-03-17
 updatedAt: 2026-03-17
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "rein", "insuffisance rénale", "néphroprotection", "diabète", "DFGe", "sémaglutide"]
 collection: "recherche-glp1"

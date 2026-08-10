@@ -1,7 +1,7 @@
 ---
 title: "Wegovy Avis 2026 : Témoignages Patients en France"
 description: "Wegovy avis patients France 2026 : témoignages réels, résultats perte de poids (-15 à 17%), effets secondaires et prix. Vaut-il le coût ?"
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 thumbnail: "/images/thumbnails/wegovy-avis-illus.jpg"
 thumbnailAlt: "Wegovy avis et retours patients France 2026"
 collection: "traitements-glp1"
@@ -299,5 +299,5 @@ Pour aller plus loin, consultez notre [guide complet Wegovy](/collections/traite
 
 ---
 
-*Article redige par Dr. Marie Dubois, mis a jour le 10 avril 2026. Sources : etudes cliniques STEP 1-5 (Novo Nordisk / New England Journal of Medicine), avis de la HAS, données EMA. Cet article ne constitue pas un avis medical. Consultez votre médecin avant toute décision thérapeutique.*
+*Article redige par la Redaction GLP-1 France, mis a jour le 10 avril 2026. Sources : etudes cliniques STEP 1-5 (Novo Nordisk / New England Journal of Medicine), avis de la HAS, données EMA. Cet article ne constitue pas un avis medical. Consultez votre médecin avant toute décision thérapeutique.*
 

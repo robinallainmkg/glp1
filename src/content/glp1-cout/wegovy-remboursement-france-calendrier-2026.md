@@ -4,7 +4,7 @@ description: "État des lieux complet du remboursement Wegovy en France en 2026 
 pubDate: 2026-05-28
 date: "2026-06-22"
 updatedAt: 2026-06-22
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Prix et remboursement"
 tags: ["wegovy", "remboursement", "france", "2026", "CPAM", "mutuelle", "sémaglutide", "obésité"]
 collection: "glp1-cout"

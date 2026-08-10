@@ -4,7 +4,7 @@ description: "Wegovy effets secondaires danger : nausées, pancréatite, risques
 pubDate: 2025-08-20
 date: 2026-06-22
 updatedAt: '2026-06-22'
-author: "Dr. Émilie Martin"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires"
 tags: ["glp1", "effets-secondaires", "tolérance"]
 collection: "effets-secondaires-glp1"

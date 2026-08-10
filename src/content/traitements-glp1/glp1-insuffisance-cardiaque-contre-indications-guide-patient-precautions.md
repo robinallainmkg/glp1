@@ -4,7 +4,7 @@ description: "GLP-1 et insuffisance cardiaque : contre-indications, interactions
 pubDate: 2026-03-19
 date: 2026-03-19
 updatedAt: 2026-03-19
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["glp1", "insuffisance cardiaque", "contre-indications", "cardiologie", "ozempic", "wegovy", "mounjaro", "bêtabloquants", "diurétiques", "sécurité"]
 collection: "traitements-glp1"

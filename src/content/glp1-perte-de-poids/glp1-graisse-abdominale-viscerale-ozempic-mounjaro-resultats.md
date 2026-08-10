@@ -4,7 +4,7 @@ description: "GLP-1 et graisse abdominale viscérale : résultats cliniques Ozem
 pubDate: 2026-03-17
 date: "2026-03-17"
 updatedAt: 2026-03-17
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Perte de poids"
 tags: ["glp1", "graisse abdominale", "graisse viscérale", "ozempic", "mounjaro", "ventre", "perte de poids", "2026"]
 collection: "glp1-perte-de-poids"

@@ -4,7 +4,7 @@ description: "Mounjaro (tirzepatide) réduit le risque d'insuffisance cardiaque 
 pubDate: 2026-03-17
 date: "2026-06-22"
 updatedAt: 2026-06-22
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "mounjaro", "tirzepatide", "insuffisance cardiaque", "SUMMIT", "cardiovasculaire", "obésité", "france", "2026"]
 collection: "recherche-glp1"

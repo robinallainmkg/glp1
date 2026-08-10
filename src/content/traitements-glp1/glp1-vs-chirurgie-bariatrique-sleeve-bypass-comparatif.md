@@ -4,7 +4,7 @@ description: "GLP-1 vs chirurgie bariatrique : sleeve ou Wegovy, bypass ou Mounj
 pubDate: 2026-03-16
 date: "2026-05-29"
 updatedAt: 2026-05-29
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements"
 tags: ["glp1", "chirurgie bariatrique", "sleeve", "bypass", "comparatif", "obesity", "perte de poids", "wegovy", "mounjaro"]
 collection: "traitements-glp1"

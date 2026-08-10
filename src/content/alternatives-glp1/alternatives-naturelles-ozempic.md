@@ -2,7 +2,7 @@
 title: "Alternatives Naturelles Ozempic : Guide Complet 2026"
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Émilie Martin"
+author: "Rédaction GLP-1 France"
 description: "Quelles alternatives naturelles à l'Ozempic existent ? Plantes et compléments pour réguler la glycémie et favoriser la perte de poids naturellement."
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]

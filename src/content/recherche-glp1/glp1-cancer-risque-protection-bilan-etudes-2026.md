@@ -4,7 +4,7 @@ description: "GLP-1 et cancer : risques et protections pour thyroïde, colorecta
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-08-09
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "cancer", "risque", "protection", "thyroïde", "colorectal", "pancréatique", "sémaglutide", "recherche", "oncologie"]
 collection: "recherche-glp1"

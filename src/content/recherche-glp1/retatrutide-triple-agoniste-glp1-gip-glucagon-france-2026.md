@@ -4,7 +4,7 @@ description: "Retatrutide en France 2026 : résultats phase 3 TRIUMPH-4 (28,7% p
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "retatrutide", "triple agoniste", "GIP", "glucagon", "eli lilly", "perte de poids", "TRIUMPH", "recherche", "2026"]
 collection: "recherche-glp1"

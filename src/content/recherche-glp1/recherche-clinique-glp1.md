@@ -3,7 +3,7 @@ title: "Recherche Clinique GLP-1 : Essais Cliniques en France"
 published: false
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 description: "Recherche clinique GLP-1 et essais cliniques en cours en France. Nouveaux médicaments, avancées thérapeutiques et perspectives médicales 2025."
 category: "Recherche médicale"
 tags: ["glp1", "recherche", "etudes"]

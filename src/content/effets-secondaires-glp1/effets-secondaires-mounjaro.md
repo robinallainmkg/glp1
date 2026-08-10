@@ -9,7 +9,7 @@ publishedAt: '2025-08-30'
 updatedAt: '2026-07-19'
 date: 2026-07-19
 featured: true
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 12
 image: "/images/thumbnails/effets-secondaires-mounjaro-illus.svg"
 collection: "effets-secondaires-glp1"

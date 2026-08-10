@@ -4,7 +4,7 @@ description: "CagriSema résultats essais cliniques France 2026 : -22,7% dans RE
 pubDate: 2026-03-17
 date: 2026-05-29
 updatedAt: 2026-05-29
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "cagrisema", "cagrilintide", "novo nordisk", "essais cliniques", "REDEFINE", "obésité", "recherche", "2026"]
 collection: "recherche-glp1"

@@ -4,7 +4,7 @@ published: false
 description: "Vinaigre de cidre GLP-1 glycémie : effets sur la régulation glycémique, soutien aux traitements GLP-1 et résultats des études scientifiques."
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Émilie Martin"
+author: "Rédaction GLP-1 France"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
 collection: "alternatives-glp1"

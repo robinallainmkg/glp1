@@ -4,7 +4,7 @@ description: "Ozempic dépression apathie effets psychologiques : Wegovy, Mounja
 pubDate: 2026-03-15
 date: 2026-03-15
 updatedAt: 2026-03-15
-author: "Dr. Émilie Martin"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "effets secondaires", "dépression", "apathie", "sante mentale", "ozempic", "psychologie"]
 collection: "effets-secondaires-glp1"

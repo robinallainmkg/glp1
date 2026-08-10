@@ -5,7 +5,7 @@ slug: "semaglutide-oral-comprimé-ozempic-france"
 description: "Sémaglutide oral en comprimé France 2026 : Rybelsus, Wegovy comprimé attendu fin 2027. Technologie SNAC, efficacité comparée à l'injectable Ozempic."
 mainKeyword: "semaglutide oral comprimé France 2026"
 secondaryKeywords: ["semaglutide oral comprimé France 2026", "rybelsus sémaglutide oral", "wegovy comprimé oral", "glp1 comprimé sans injection", "sémaglutide oral efficacité", "ozempic comprimé France", "traitement obesite oral glp1"]
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 image: "/images/thumbnails/pilule-qui-fait-maigrir-illus.jpg"
 collection: "traitements-glp1"
 category: "traitements-glp1"

@@ -4,7 +4,7 @@ description: "Foundayo orforglipron : premier GLP-1 oral approuvé FDA 2026. Ess
 pubDate: 2026-05-28
 date: "2026-05-28"
 updatedAt: 2026-05-28
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["foundayo", "orforglipron", "glp1 oral", "eli lilly", "comprimé", "FDA", "perte de poids", "obésité"]
 collection: "traitements-glp1"

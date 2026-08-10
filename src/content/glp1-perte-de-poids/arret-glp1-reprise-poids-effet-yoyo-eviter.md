@@ -4,7 +4,7 @@ description: "Reprise poids et effet yoyo après arrêt GLP-1 : 2/3 du poids rep
 pubDate: 2026-03-16
 date: '2026-03-17'
 updatedAt: '2026-03-17'
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Perte de poids"
 tags: ["glp1", "arrêt traitement", "reprise de poids", "effet yoyo", "wegovy", "mounjaro", "sevrage"]
 collection: "glp1-perte-de-poids"

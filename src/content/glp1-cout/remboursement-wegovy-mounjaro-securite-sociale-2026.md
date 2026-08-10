@@ -7,7 +7,7 @@ seoDescription: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026 : calendr
 pubDate: 2026-03-16
 date: '2026-06-22'
 updatedAt: '2026-06-22'
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Économie santé"
 tags: ["wegovy", "mounjaro", "remboursement", "sécurité sociale", "glp1", "prix", "2026"]
 collection: "glp1-cout"

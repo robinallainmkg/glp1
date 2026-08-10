@@ -4,7 +4,7 @@ description: "GLP-1 avant grossesse : quand arrêter Ozempic, Wegovy, Mounjaro a
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "grossesse", "préconception", "fertilité", "arrêt traitement", "ozempic", "wegovy", "mounjaro", "femmes"]
 collection: "effets-secondaires-glp1"

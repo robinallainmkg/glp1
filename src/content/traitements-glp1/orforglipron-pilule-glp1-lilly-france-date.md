@@ -4,7 +4,7 @@ description: "Orforglipron comprimé France : approbation EMA attendue, efficaci
 pubDate: 2026-03-16
 date: "2026-03-16"
 updatedAt: 2026-03-16
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["orforglipron", "glp1 oral", "eli lilly", "comprimé", "obésité", "france", "2026", "2027"]
 collection: "traitements-glp1"
