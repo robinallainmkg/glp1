@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a3c34"/>
+      <stop offset="1" stop-color="#0f2620"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1100" cy="110" r="170" fill="#16a34a" opacity="0.10"/>
+  <circle cx="120" cy="540" r="150" fill="#16a34a" opacity="0.12"/>
+  <text x="80" y="150" font-family="Georgia, serif" font-size="34" fill="#16a34a" font-weight="bold">GLP-1 FRANCE</text>
+  <text x="80" y="270" font-family="Georgia, serif" font-size="64" fill="#ffffff" font-weight="bold">Rendez-vous CSO / CHU :</text>
+  <text x="80" y="356" font-family="Georgia, serif" font-size="64" fill="#ffffff" font-weight="bold">quel délai en 2026 ?</text>
+  <rect x="80" y="398" width="120" height="6" fill="#16a34a"/>
+  <text x="80" y="490" font-family="Georgia, serif" font-size="38" fill="#9fd7b4">6 leviers pour accélérer + courrier type</text>
+  <g transform="translate(985,400)">
+    <circle cx="0" cy="0" r="110" fill="#ffffff" opacity="0.92"/>
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#16a34a" stroke-width="10"/>
+    <line x1="0" y1="0" x2="0" y2="-64" stroke="#1a3c34" stroke-width="10" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="44" y2="26" stroke="#16a34a" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="12" fill="#1a3c34"/>
+  </g>
+</svg>

@@ -81,7 +81,7 @@ Si vous présentez l'une de ces situations, signalez-le dès le premier rendez-v
 
 ### Le médecin traitant : votre premier interlocuteur
 
-Depuis juin 2025, **tout médecin généraliste peut initier un traitement GLP-1 pour l'obésité** en France, sous certaines conditions de formation et de suivi. C'est la voie la plus simple et la plus rapide. Prenez rendez-vous avec votre médecin traitant et exposez-lui votre situation : historique pondéral, tentatives de régime, impact du surpoids sur votre qualité de vie.
+Depuis juin 2025, **tout médecin généraliste peut prescrire un traitement GLP-1 pour l'obésité** en France — mais attention : cette ordonnance n'ouvre PAS le remboursement. Depuis le 15 juin 2026, la primo-prescription remboursée à 65 % est réservée aux spécialistes exerçant en CSO, CHU ou SMR ; le généraliste renouvelle ensuite. Prenez d'abord rendez-vous avec votre médecin traitant pour exposer votre situation (historique pondéral, tentatives de régime, comorbidités) et obtenir un courrier d'adressage — les centres étant saturés, suivez notre guide des [délais de rendez-vous en CSO/CHU et des moyens de les raccourcir](/collections/medecins-glp1-france/delai-rendez-vous-cso-chu-obesite-glp1-2026/).
 
 Votre médecin traitant peut :
 
