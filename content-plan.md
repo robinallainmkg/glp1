@@ -21,11 +21,16 @@ Ce fichier est la **source de vérité** de la création de contenu. La routine 
 
 ### P1 — Parcours de soins (l'intention exacte de nos 2 premiers clients payants)
 
+- [ ] **P1a. Délai de rendez-vous CSO/CHU 2026 : combien de temps, comment accélérer (courrier d'adressage type)** — ajouté 09/08 (plan croissance, veto 24h ou « go plan »). Preuve : intention exacte des clients payants + cas Coach 08/08 (patiente Lille, CHU injoignable, cherchait un prescripteur remboursé). Collection : medecins-glp1-france. WebSearch obligatoire pour les délais réels (sources CHU/CSO/presse santé). CTA Dossier natif (checklist RDV).
+- [ ] **P1b. Suivi nutritionnel 6 mois : comment le documenter pour être remboursé (modèle de suivi)** — ajouté 09/08 (plan croissance, veto 24h ou « go plan »). Preuve : critère bloquant de 2 leads eligibility_test sur 3 cette semaine (verdicts eligible_apres_suivi). Collection : medecins-glp1-france ou glp1-cout. Sources : arrêtés 12/06/2026, ameli, HAS (échec prise en charge 6 mois, perte < 5 %).
 
 ### P2 — Quick wins sur demande GSC mesurée
 
+- [ ] **P2a. Ozempic pour maigrir : prix réel 2026 et pourquoi il n'est pas remboursé pour l'obésité** — ajouté 09/08 (plan croissance, veto 24h ou « go plan »). Preuve GSC : « ozempic pour maigrir prix » 144 imp/14j pos 14,6, 0 clic ; aucune page dédiée à l'intent « maigrir » (prix-ozempic-france = intent diabète). Angle : hors AMM/non remboursé pour l'obésité seule → alternatives remboursées 65 % (Wegovy/Mounjaro) + test d'éligibilité. Collection : glp1-cout. Attention cannibalisation : lier prix-ozempic-france en canonique de l'intent prix.
+
 ### P3 — Cluster retraites (leadership : déjà position 8 sur "retraite perte de poids" à J+14)
 
+- [ ] **P3a. Retraite yoga et perte de poids en France : le comparatif (prix, programmes, ce que ça vaut vraiment)** — ajouté 09/08 (plan croissance ; roadmap retraites validée CLAUDE.md). Prix sourcés et vérifiables uniquement, pas de fausse expérience. Maillage : /retraites/ + jeune-randonnee + meilleures-retraites.
 - [x] **5. Cure thermale obésité : les stations agréées et la procédure de remboursement Sécu** — publié le 04/08/2026 → https://glp1-france.fr/collections/retraites-bien-etre/cure-thermale-obesite-stations-agreees-remboursement/ — sources : service-public.fr F751 (18 jours, forfait thermal 65 %, surveillance 70 %, plafonds ressources 14 664,38 €/21 996,57 €, hébergement 97,50 €, 1 cure/an), location-cure.net (liste 14 stations AD), medecinethermale.fr (orientation AD surpoids/obésité). Cible : « cure thermale minceur remboursé » (pos 28,8 sans page dédiée). Maillage entrant : brides-les-bains-avis + wegovy-rembourse-cure-thermale. Suivi : imp J+7 (~11/08) : — ; imp J+30 (~03/09) : —
 - [x] **6. Brides-les-Bains : avis, prix, résultats — la station minceur de référence** — DÉJÀ COUVERT (constat routine 05/08) : article publié le 14/07/2026 (PR #51, phase 2) → https://glp1-france.fr/collections/retraites-bien-etre/brides-les-bains-avis-prix-resultats-cure-minceur/ — l'item était resté non coché par erreur. Suivi : —
 - [x] **7. Combien coûte une retraite perte de poids en France ? (grille 2026)** — DÉJÀ COUVERT (constat routine 05/08) : article `combien-coute-retraite-bien-etre-france-prix-2026` publié (phase 2, live). Suivi : —
