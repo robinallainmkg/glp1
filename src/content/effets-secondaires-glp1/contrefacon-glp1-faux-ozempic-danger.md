@@ -8,7 +8,7 @@ publishedAt: '2026-03-15'
 updatedAt: '2026-03-15'
 date: 2026-03-15
 featured: true
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 8
 image: "/images/thumbnails/ozempic-danger-illus.jpg"
 thumbnail: "/images/thumbnails/ozempic-danger-illus.jpg"

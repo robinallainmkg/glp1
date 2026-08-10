@@ -2,7 +2,7 @@
 title: "Centres Mounjaro France 2026 : Liste et Accès au Traitement"
 slug: "centres-mounjaro-france"
 description: "Centres Mounjaro France 2026 : liste des centres hospitaliers et spécialistes. Carte interactive, démarches et conseils pour accéder au traitement."
-author: "Dr. Sophie Martin"
+author: "Rédaction GLP-1 France"
 pubDate: 2025-10-09T10:00:00Z
 date: "2026-06-22"
 updatedAt: "2026-06-22"
@@ -509,6 +509,6 @@ Vous avez des questions sur l'accès à Mounjaro dans votre région ? Utilisez l
 
 ---
 
-**Auteur** : Dr. Sophie Martin, Endocrinologue
+**Auteur** : Rédaction GLP-1 France
 **Date de publication** : 9 octobre 2025
 **Dernière mise à jour** : juin 2026

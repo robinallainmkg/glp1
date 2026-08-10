@@ -2,7 +2,7 @@
 title: "Avant Après GLP1 : Résultats Réels de Patients 2026"
 thumbnail: "/images/thumbnails/avant-après-glp1.jpg"
 description: "Avant après GLP1 : résultats réels Ozempic, Wegovy et Mounjaro en France. Témoignages patients, chiffres des études et attentes réalistes."
-author: "Dr. Émilie Dupont"
+author: "Rédaction GLP-1 France"
 pubDate: 2026-03-15
 date: 2026-03-15
 category: "avant-après"

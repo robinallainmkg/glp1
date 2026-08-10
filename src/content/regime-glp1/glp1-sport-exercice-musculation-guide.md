@@ -4,7 +4,7 @@ description: "Sport GLP-1 exercice musculation : guide complet pour pratiquer so
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Nutrition et exercice"
 tags: ["glp1", "sport", "musculation", "exercice", "fonte musculaire", "masse musculaire", "fitness", "régime-glp1"]
 collection: "régime-glp1"

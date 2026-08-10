@@ -4,7 +4,7 @@ description: "GLP-1 et microbiote intestinal : comment Ozempic, Wegovy et Mounja
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "microbiote", "flore intestinale", "probiotiques", "prébiotiques", "ozempic", "wegovy", "mounjaro", "digestion", "effets gastro-intestinaux"]
 collection: "recherche-glp1"

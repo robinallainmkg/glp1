@@ -4,7 +4,7 @@ description: "GLP-1 alcool reduction consommation essai clinique 2025 : sémaglu
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "alcool", "addiction", "alcoolo-dépendance", "sémaglutide", "ALBATROS", "recherche", "neurologie"]
 collection: "recherche-glp1"

@@ -4,7 +4,7 @@ description: "GLP-1 et syndrome métabolique : Ozempic, Wegovy et Mounjaro agiss
 pubDate: 2026-03-18
 date: 2026-06-22
 updatedAt: 2026-08-07
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Perte de poids GLP-1"
 tags: ["glp1", "syndrome métabolique", "obésité abdominale", "HTA", "dyslipidémie", "glycémie", "ozempic", "wegovy", "mounjaro"]
 collection: "glp1-perte-de-poids"

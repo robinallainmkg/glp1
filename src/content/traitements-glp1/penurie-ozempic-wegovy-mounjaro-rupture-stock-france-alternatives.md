@@ -9,7 +9,7 @@ updatedAt: '2026-07-20'
 date: 2026-07-20
 featured: true
 priority: 3
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 10
 thumbnail: "/images/thumbnails/ou-trouver-ozempic-illus.jpg"
 thumbnailAlt: "Pénurie Ozempic Wegovy Mounjaro en pharmacie France : que faire en cas de rupture de stock"

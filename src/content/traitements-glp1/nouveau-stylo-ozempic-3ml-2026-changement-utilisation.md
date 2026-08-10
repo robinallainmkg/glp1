@@ -4,7 +4,7 @@ description: "Nouveau stylo Ozempic 3ml lancé en 2026 : conservation, utilisati
 pubDate: 2026-03-17
 date: "2026-03-17"
 updatedAt: 2026-07-13
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["ozempic", "sémaglutide", "stylo injecteur", "2026", "nouveau stylo", "glp1", "france"]
 collection: "traitements-glp1"

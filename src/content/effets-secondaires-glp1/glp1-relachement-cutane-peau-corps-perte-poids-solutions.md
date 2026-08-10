@@ -4,7 +4,7 @@ description: "Relâchement cutané après GLP-1 perte de poids : bras, ventre, c
 pubDate: 2026-03-17
 date: 2026-03-17
 updatedAt: 2026-03-17
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "relâchement cutané", "peau", "perte de poids", "chirurgie esthétique", "body lift", "effets secondaires", "ozempic", "wegovy"]
 collection: "effets-secondaires-glp1"

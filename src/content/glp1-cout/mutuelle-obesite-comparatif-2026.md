@@ -8,7 +8,7 @@ publishedAt: '2026-05-02'
 updatedAt: '2026-06-22'
 date: '2026-06-22'
 pubDate: 2026-05-02
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 category: "Économie santé"
 tags: ["glp1", "mutuelle", "comparatif", "obésité"]
 collection: "glp1-cout"

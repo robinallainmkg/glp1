@@ -4,7 +4,7 @@ published: false
 description: "Chrome diabète complément alimentaire : rôle dans la régulation de la glycémie, dosages recommandés et précautions médicales essentielles à connaître."
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Émilie Martin"
+author: "Rédaction GLP-1 France"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
 collection: "alternatives-glp1"

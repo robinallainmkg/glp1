@@ -4,7 +4,7 @@ description: "GLP-1 stéatose hépatique NASH : sémaglutide résout la MASH che
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "stéatose hépatique", "NASH", "MASH", "foie gras", "sémaglutide", "survodutide", "recherche"]
 collection: "recherche-glp1"

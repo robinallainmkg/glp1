@@ -4,7 +4,7 @@ description: "Acheter Ozempic sans ordonnance est illégal en France : prescript
 pubDate: 2026-07-20
 date: "2026-07-20"
 updatedAt: 2026-07-20
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["ozempic", "sémaglutide", "ordonnance", "achat en ligne", "contrefaçon", "glp1", "france"]
 collection: "traitements-glp1"

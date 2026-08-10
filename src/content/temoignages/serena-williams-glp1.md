@@ -2,7 +2,7 @@
 title: "Serena Williams et le GLP-1 : Son Expérience"
 thumbnail: "/images/thumbnails/serena.webp"
 description: "Serena Williams et le glp1 : découvrez comment la championne a utilisé ces médicaments pour sa santé et sa forme physique. Leçons à retenir."
-author: "Dr. Martin"
+author: "Rédaction GLP-1 France"
 image: "/images/thumbnails/serena.webp"
 collection: "témoignages"
 category: "celebrites"

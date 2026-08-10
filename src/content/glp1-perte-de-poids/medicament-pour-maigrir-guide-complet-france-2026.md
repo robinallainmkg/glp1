@@ -1,7 +1,7 @@
 ---
 title: "Médicament pour Maigrir 2026 : Guide Complet France"
 description: "Médicaments pour maigrir autorisés en France 2026 : Wegovy, Mounjaro, Saxenda, Ozempic. Comparatif prix, efficacité et prescription."
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 thumbnail: "/images/thumbnails/medicament-pour-maigrir-illus.jpg"
 thumbnailAlt: "Médicaments pour maigrir en France : pilules et injections GLP-1"
 collection: "glp1-perte-de-poids"

@@ -4,7 +4,7 @@ description: "GLP-1 fonte musculaire perte masse muscle : jusqu'à 40% de muscle
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Nutrition et exercice"
 tags: ["glp1", "fonte musculaire", "masse musculaire", "protéines", "musculation", "sarcopénie", "nutrition", "exercice"]
 collection: "régime-glp1"

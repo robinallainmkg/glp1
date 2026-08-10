@@ -9,7 +9,7 @@ updatedAt: '2026-05-29'
 date: 2026-05-29
 featured: true
 priority: 2
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 12
 thumbnail: "/images/thumbnails/personne-obese-illus.jpg"
 thumbnailAlt: "Wegovy et Mounjaro pour les adolescents obèses de 12 ans et plus en France"

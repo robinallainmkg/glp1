@@ -4,7 +4,7 @@ description: "GLP-1 apnée du sommeil : le tirzépatide réduit la sévérité d
 pubDate: 2026-05-28
 date: "2026-05-28"
 updatedAt: 2026-05-28
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Recherche GLP-1"
 tags: ["glp1", "apnée du sommeil", "tirzépatide", "SURMOUNT-OSA", "mounjaro", "SAOS", "sommeil", "obésité", "recherche"]
 collection: "recherche-glp1"

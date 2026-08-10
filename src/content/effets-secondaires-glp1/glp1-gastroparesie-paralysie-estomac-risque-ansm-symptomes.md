@@ -4,7 +4,7 @@ description: "GLP-1 gastroparésie paralysie estomac : risque ANSM, symptômes e
 pubDate: 2026-03-19
 date: "2026-03-19"
 updatedAt: 2026-03-19
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "gastroparésie", "paralysie estomac", "ozempic", "wegovy", "mounjaro", "effets secondaires", "ANSM", "pharmacovigilance", "vidange gastrique"]
 collection: "effets-secondaires-glp1"

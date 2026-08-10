@@ -4,7 +4,7 @@ description: "Wegovy comprimé oral France : sémaglutide oral 25 mg approuvé F
 pubDate: 2026-05-28
 date: "2026-05-28"
 updatedAt: 2026-08-05
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["wegovy oral", "sémaglutide oral", "comprimé", "pilule", "GLP-1 oral", "perte de poids", "OASIS", "rybelsus haute dose"]
 collection: "traitements-glp1"

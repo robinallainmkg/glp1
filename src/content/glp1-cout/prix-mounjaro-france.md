@@ -10,7 +10,7 @@ updatedAt: '2026-08-06'
 date: 2026-07-20
 featured: true
 priority: 1
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 12
 image: "/images/thumbnails/prix-mounjaro-france-illus.svg"
 collection: "glp1-cout"
@@ -40,8 +40,8 @@ faqSchema:
   "datePublished": "2025-09-06",
   "dateModified": "2026-07-20",
   "author": {
-    "@type": "Person",
-    "name": "Dr. Marie Dubois"
+    "@type": "Organization",
+    "name": "Rédaction GLP-1 France"
   },
   "publisher": {
     "@type": "Organization",

@@ -4,7 +4,7 @@ description: "Mésusage GLP-1 France 2026 : 2,2% des utilisateurs n'ont ni diab�
 pubDate: 2026-03-19
 date: 2026-06-22
 updatedAt: 2026-06-22
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "mésusage", "étude", "cohorte", "france", "ANSM", "recherche", "pharmacovigilance", "2026"]
 collection: "recherche-glp1"

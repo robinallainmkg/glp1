@@ -8,7 +8,7 @@ publishedAt: '2026-03-17'
 date: "2026-03-17"
 updatedAt: '2026-07-13'
 featured: true
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 10
 image: "/images/thumbnails/chirurgie-bariatrique-illus.jpg"
 thumbnail: "/images/thumbnails/chirurgie-bariatrique-illus.jpg"

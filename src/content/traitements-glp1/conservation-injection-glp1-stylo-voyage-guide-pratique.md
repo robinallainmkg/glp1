@@ -2,7 +2,7 @@
 title: "Conservation GLP-1 : Guide Pratique Voyage et Quotidien"
 slug: "conservation-injection-glp1-stylo-voyage-guide-pratique"
 description: "Comment conserver votre stylo GLP-1 (Ozempic, Wegovy, Mounjaro) et voyager avec ces traitements. Guide pratique : avion, chaleur, froid, technique d'injection."
-author: "Dr. Martin"
+author: "Rédaction GLP-1 France"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["glp1", "conservation", "injection", "voyage", "ozempic", "wegovy", "mounjaro", "pratique"]

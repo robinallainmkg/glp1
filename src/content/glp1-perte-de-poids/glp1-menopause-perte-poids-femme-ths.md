@@ -4,7 +4,7 @@ description: "GLP-1 et ménopause : Wegovy, Mounjaro, Ozempic pour les femmes m�
 pubDate: 2026-03-18
 date: 2026-06-22
 updatedAt: 2026-06-22
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Perte de poids"
 tags: ["glp1", "ménopause", "perte de poids", "wegovy", "mounjaro", "ozempic", "THS", "femme", "hormonothérapie", "graisse viscérale", "2026"]
 collection: "glp1-perte-de-poids"

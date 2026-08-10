@@ -9,7 +9,7 @@ publishedAt: '2025-01-28'
 updatedAt: '2026-06-22'
 date: 2026-06-22
 featured: true
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 8
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
@@ -26,8 +26,8 @@ mainKeyword: "prix Saxenda France"
   "datePublished": "2025-12-27",
   "dateModified": "2025-12-27",
   "author": {
-    "@type": "Person",
-    "name": "Dr. Marie Dubois"
+    "@type": "Organization",
+    "name": "Rédaction GLP-1 France"
   },
   "publisher": {
     "@type": "Organization",

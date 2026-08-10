@@ -4,7 +4,7 @@ description: "Comment commencer un traitement GLP-1 en France ? Éligibilité, m
 pubDate: 2026-05-27
 date: "2026-06-22"
 updatedAt: 2026-06-22
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Médecins spécialisés"
 tags: ["glp1", "prescription", "parcours", "france", "médecin", "traitement", "commencer", "2026"]
 collection: "medecins-glp1-france"

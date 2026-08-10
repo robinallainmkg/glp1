@@ -4,7 +4,7 @@ description: "Plateau de poids sous GLP-1 (Ozempic, Wegovy, Mounjaro) : causes d
 pubDate: 2026-03-17
 date: "2026-03-17"
 updatedAt: 2026-03-17
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Perte de poids"
 tags: ["glp1", "plateau poids", "stagnation pondérale", "ozempic", "wegovy", "mounjaro", "adaptation métabolique", "perte de poids"]
 collection: "glp1-perte-de-poids"

@@ -12,7 +12,7 @@ seoTitle: "Quel traitement GLP-1 choisir en 2025 ? Comparatif Complet"
 seoDescription: "Comparaison détaillée des GLP-1 (Ozempic, Wegovy, Mounjaro, Saxenda) : prix, efficacité, effets secondaires. Trouvez le traitement adapté à votre situation."
 publishedAt: '2025-08-30'
 updatedAt: '2026-06-22'
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 15
 ---
 

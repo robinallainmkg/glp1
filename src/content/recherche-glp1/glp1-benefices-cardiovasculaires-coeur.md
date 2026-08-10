@@ -4,7 +4,7 @@ description: "GLP-1 bénéfices cardiovasculaires : réduction du risque de 20%,
 pubDate: 2026-03-15
 date: 2026-06-22
 updatedAt: 2026-06-22
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "cardiovasculaire", "coeur", "ozempic", "recherche", "protection cardiaque"]
 collection: "recherche-glp1"

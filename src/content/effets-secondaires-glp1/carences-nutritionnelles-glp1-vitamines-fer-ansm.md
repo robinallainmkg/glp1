@@ -4,7 +4,7 @@ description: "Carences sous GLP-1 : déficits en fer, vitamines B1, B12, D et pr
 pubDate: 2026-05-28
 date: "2026-05-28"
 updatedAt: 2026-05-28
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires"
 tags: ["GLP-1", "carences", "vitamines", "fer", "ANSM", "nutrition", "supplémentation", "ozempic", "wegovy"]
 collection: "effets-secondaires-glp1"

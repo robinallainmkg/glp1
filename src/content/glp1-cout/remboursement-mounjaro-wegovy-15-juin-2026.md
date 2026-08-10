@@ -9,7 +9,7 @@ date: 2026-06-04
 updatedAt: '2026-06-15'
 featured: true
 priority: 1
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 9
 image: "/images/thumbnails/remboursement-glp1-2026.jpg"
 thumbnail: "/images/thumbnails/remboursement-glp1-2026.jpg"
@@ -29,7 +29,7 @@ secondaryKeywords: ["mounjaro remboursé conditions", "wegovy remboursement 65%"
   "url": "https://glp1-france.fr/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026",
   "datePublished": "2026-06-04",
   "dateModified": "2026-06-15",
-  "author": { "@type": "Person", "name": "Dr. Marie Dubois" },
+  "author": { "@type": "Organization", "name": "Rédaction GLP-1 France" },
   "publisher": { "@type": "Organization", "name": "GLP-1 France", "url": "https://glp1-france.fr" },
   "mainEntity": {
     "@type": "FAQPage",

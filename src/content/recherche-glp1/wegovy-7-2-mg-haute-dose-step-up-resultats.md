@@ -4,7 +4,7 @@ description: "Wegovy 7,2 mg haute dose STEP-UP : 20,7% de perte de poids vs 17,5
 pubDate: 2026-03-17
 date: 2026-03-17
 updatedAt: 2026-03-17
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "wegovy", "semaglutide", "haute dose", "7.2 mg", "STEP-UP", "novo nordisk", "obésité", "recherche", "2026"]
 collection: "recherche-glp1"

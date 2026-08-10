@@ -4,7 +4,7 @@ description: "GLP-1 et arthrose : Ozempic et Wegovy soulagent-ils les douleurs a
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18
-author: "Dr. Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "arthrose", "douleurs articulaires", "anti-inflammatoire", "retatrutide", "ozempic", "mounjaro", "obésité", "rhumatologie"]
 collection: "recherche-glp1"

@@ -4,7 +4,7 @@ description: "Reprise de poids après arrêt GLP-1 : 4 fois plus rapide qu'aprè
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-08-07
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Perte de poids"
 tags: ["glp1", "reprise de poids", "arrêt traitement", "ozempic", "wegovy", "mounjaro", "effet yoyo", "données 2026"]
 collection: "glp1-perte-de-poids"

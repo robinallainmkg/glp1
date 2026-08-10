@@ -4,7 +4,7 @@ description: "GLP-1 personne âgée senior plus 65 ans : l'ANSM limite ces trait
 pubDate: 2026-03-17
 date: "2026-05-29"
 updatedAt: 2026-05-29
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements"
 tags: ["glp1", "seniors", "65 ans", "ANSM", "obésité", "sarcopénie", "alternatives", "personnes âgées"]
 collection: "traitements-glp1"

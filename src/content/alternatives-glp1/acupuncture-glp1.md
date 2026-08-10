@@ -4,7 +4,7 @@ description: "L'acupuncture peut-elle compléter un traitement GLP-1 ? Bénéfic
 pubDate: 2025-08-20
 date: 2025-08-20
 updatedAt: 2026-03-18
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements", "acupuncture", "diabète", "obésité"]
 collection: "alternatives-glp1"

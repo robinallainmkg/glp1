@@ -1,7 +1,7 @@
 ---
 title: "GLP-1 France 2026 Guide Complet des Traitements"
 description: "Guide complet GLP-1 France 2026 : médicaments disponibles, efficacité, prix, effets secondaires et alternatives pour perdre du poids."
-author: "Dr. Martin"
+author: "Rédaction GLP-1 France"
 thumbnail: "/images/thumbnails/guide-complet-GLP1.jpg"
 collection: "glp1-perte-de-poids"
 category: "glp1-perte-de-poids"

@@ -3,7 +3,7 @@ title: "Alternatives Bio GLP-1 : Guide Complet et Conseils 2026"
 description: "Alternatives bio aux GLP-1 — berbérine, cannelle, inositol — ce que la science dit sur les substituts naturels à Ozempic et Wegovy. Guide 2025."
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Émilie Martin"
+author: "Rédaction GLP-1 France"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
 collection: "alternatives-glp1"

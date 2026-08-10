@@ -8,7 +8,7 @@ date: '2025-01-28'
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
 featured: true
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 10
 image: "/images/thumbnails/effets-secondaires-wegovy-illus.jpg"
 thumbnail: "/images/thumbnails/effets-secondaires-wegovy-illus.jpg"

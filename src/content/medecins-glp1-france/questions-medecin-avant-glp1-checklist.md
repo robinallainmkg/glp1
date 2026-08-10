@@ -4,7 +4,7 @@ description: "Checklist complète des questions à poser lors de votre première
 pubDate: 2026-05-28
 date: "2026-05-28"
 updatedAt: 2026-05-28
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Médecins spécialisés"
 tags: ["glp1", "médecin", "consultation", "questions", "checklist", "prescription", "première consultation"]
 collection: "medecins-glp1-france"

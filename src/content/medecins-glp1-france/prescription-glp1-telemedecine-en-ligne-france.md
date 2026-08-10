@@ -4,7 +4,7 @@ description: "Prescription GLP-1 en télémédecine France 2026 : plateformes, c
 pubDate: 2026-03-17
 date: 2026-06-22
 updatedAt: 2026-06-22
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Médecins spécialisés"
 tags: ["télémédecine", "prescription", "glp1", "wegovy", "mounjaro", "en ligne", "ordonnance", "france", "2026", "médecin en ligne"]
 collection: "medecins-glp1-france"

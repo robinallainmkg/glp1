@@ -10,7 +10,7 @@ publishedAt: '2025-01-28'
 updatedAt: '2026-08-06'
 date: '2026-07-19'
 featured: true
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 12
 image: "/images/thumbnails/prix-wegovy-france-illus.jpg"
 collection: "glp1-cout"
@@ -40,8 +40,8 @@ faqSchema:
   "datePublished": "2025-01-28",
   "dateModified": "2026-07-19",
   "author": {
-    "@type": "Person",
-    "name": "Dr. Marie Dubois"
+    "@type": "Organization",
+    "name": "Rédaction GLP-1 France"
   },
   "publisher": {
     "@type": "Organization",

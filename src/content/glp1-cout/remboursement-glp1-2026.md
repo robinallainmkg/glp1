@@ -10,7 +10,7 @@ updatedAt: '2026-06-22'
 date: '2026-06-22'
 featured: true
 priority: 1
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 15
 image: "/images/thumbnails/remboursement-glp1-2026.jpg"
 collection: "glp1-cout"

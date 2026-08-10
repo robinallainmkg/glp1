@@ -4,7 +4,7 @@ description: "GLP-1 et SOPK syndrome ovaires polykystiques : Ozempic, Wegovy, Mo
 pubDate: 2026-03-17
 date: "2026-03-17"
 updatedAt: 2026-07-13
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Traitements"
 tags: ["glp1", "SOPK", "syndrome ovaires polykystiques", "ozempic", "wegovy", "mounjaro", "résistance insuline", "fertilité"]
 collection: "traitements-glp1"

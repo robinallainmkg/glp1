@@ -4,7 +4,7 @@ published: false
 description: "Suppléments naturels GLP-1 : quels compléments alimentaires stimulent réellement le GLP-1 ? Vitamines, minéraux et plantes pour soutenir votre glycémie."
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
 collection: "alternatives-glp1"

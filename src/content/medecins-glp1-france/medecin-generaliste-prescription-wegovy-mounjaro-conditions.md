@@ -4,7 +4,7 @@ description: "Le généraliste peut prescrire Wegovy et Mounjaro, mais pas ouvri
 pubDate: 2026-03-16
 date: 2026-06-22
 updatedAt: 2026-08-01
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Médecins spécialisés"
 tags: ["médecin généraliste", "prescription", "wegovy", "mounjaro", "glp1", "conditions", "imc", "france", "2025"]
 collection: "medecins-glp1-france"

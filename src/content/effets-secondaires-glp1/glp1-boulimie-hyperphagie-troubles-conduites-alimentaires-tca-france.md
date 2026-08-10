@@ -4,7 +4,7 @@ description: "GLP-1 boulimie hyperphagie troubles conduites alimentaires : risqu
 pubDate: 2026-03-19
 date: 2026-03-19
 updatedAt: 2026-03-19
-author: "Dr. Émilie Martin"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "boulimie", "hyperphagie", "TCA", "troubles alimentaires", "ozempic", "wegovy", "psychiatrie", "sante mentale"]
 collection: "effets-secondaires-glp1"

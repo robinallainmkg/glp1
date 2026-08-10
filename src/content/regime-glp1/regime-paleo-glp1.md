@@ -5,7 +5,7 @@ description: "Régime paléo GLP-1 alimentation ancestrale perte de poids : alim
 pubDate: 2025-08-20
 date: 2026-06-22
 updatedAt: 2026-06-22
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]
 collection: "régime-glp1"

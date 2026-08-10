@@ -4,7 +4,7 @@ description: "GLP-1 et sport de performance : impact sur la composition corporel
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Nutrition et exercice"
 tags: ["glp1", "sport", "performance", "sportif", "composition corporelle", "endurance", "récupération", "masse musculaire", "VO2max"]
 collection: "régime-glp1"

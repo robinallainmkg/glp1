@@ -4,7 +4,7 @@ description: "GLP-1 stéatose hépatique NASH MASLD : le sémaglutide montre des
 pubDate: 2026-05-28
 date: "2026-05-28"
 updatedAt: 2026-05-28
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Recherche GLP-1"
 tags: ["glp1", "stéatose hépatique", "NASH", "MASLD", "MASH", "sémaglutide", "foie", "obésité", "recherche", "2026"]
 collection: "recherche-glp1"

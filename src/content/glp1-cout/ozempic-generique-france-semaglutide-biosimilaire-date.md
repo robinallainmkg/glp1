@@ -8,7 +8,7 @@ publishedAt: '2026-03-17'
 updatedAt: '2026-06-22'
 date: 2026-06-22
 featured: true
-author: 'Dr. Marie Dubois'
+author: "Rédaction GLP-1 France"
 readingTime: 10
 thumbnail: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 thumbnailAlt: "Ozempic générique France biosimilaire sémaglutide date et prix"

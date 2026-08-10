@@ -3,7 +3,7 @@ title: "Régime méditerranéen GLP-1 alimentation santé"
 pubDate: 2025-08-20
 date: 2026-06-22
 updatedAt: 2026-06-22
-author: "Dr. Émilie Martin"
+author: "Rédaction GLP-1 France"
 description: "Régime méditerranéen GLP-1 alimentation santé : menu type, aliments clés et conseils pratiques pour allier cuisine méditerranéenne et traitement."
 category: "Nutrition"
 tags: ["glp1", "régime", "nutrition"]

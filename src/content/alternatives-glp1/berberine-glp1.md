@@ -2,7 +2,7 @@
 title: "Berbérine GLP-1 glycémie perte de poids : Guide 2026"
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Sophie Dubois"
+author: "Rédaction GLP-1 France"
 description: "Berbérine et GLP-1 : comment ce complément naturel agit sur la glycémie et la perte de poids, sa posologie et son association avec les médicaments GLP-1."
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]

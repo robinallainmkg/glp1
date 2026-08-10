@@ -2,7 +2,7 @@
 title: "GLP-1 Perte de Poids 2026 : Guide Complet"
 pubDate: 2025-08-20
 date: '2026-03-17'
-author: "Dr. Émilie Martin"
+author: "Rédaction GLP-1 France"
 description: "GLP-1 perte de poids 2026 : mécanisme d'action, résultats cliniques prouvés, témoignages patients et guide complet pour maigrir efficacement."
 category: "Perte de poids"
 tags: ["glp1", "perte-de-poids", "minceur"]

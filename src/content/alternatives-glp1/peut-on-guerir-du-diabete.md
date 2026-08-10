@@ -3,7 +3,7 @@ title: "Peut-on guérir du diabète de type 2 ? Guide 2026"
 published: false
 pubDate: 2025-08-20
 date: 2025-08-20
-author: "Dr. Émilie Martin"
+author: "Rédaction GLP-1 France"
 description: "Peut-on guérir du diabète de type 2 ? Rémission possible, rôle des GLP-1 et stratégies pour contrôler durablement votre glycémie. Guide médical 2025."
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]

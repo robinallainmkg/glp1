@@ -4,7 +4,7 @@ description: "Novo Nordisk annonce une baisse de prix de 50% pour Ozempic et Weg
 pubDate: 2026-05-28
 date: "2026-06-22"
 updatedAt: 2026-06-22
-author: "Dr. Marie Dubois"
+author: "Rédaction GLP-1 France"
 category: "Prix et remboursement"
 tags: ["ozempic", "wegovy", "prix", "baisse", "2027", "novo nordisk", "biosimilaire", "france"]
 collection: "glp1-cout"
