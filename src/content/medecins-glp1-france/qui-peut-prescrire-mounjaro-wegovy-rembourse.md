@@ -77,7 +77,7 @@ Si vous avez déjà une ordonnance de votre généraliste, trois options :
 ## Comment obtenir le rendez-vous en CSO ou CHU (mode d'emploi)
 
 1. **Vérifiez votre éligibilité** : IMC ≥ 40 kg/m², ou IMC ≥ 35 kg/m² avec au moins une comorbidité liée au poids (diabète de type 2, hypertension, apnée du sommeil, dyslipidémie...). Notre [test d'éligibilité gratuit](/outils/test-eligibilite/) vous donne un verdict en 2 minutes.
-2. **Documentez vos 6 mois de suivi nutritionnel** avec votre médecin traitant ou un diététicien — c'est la condition la plus souvent manquante, et le délai court pendant l'attente du rendez-vous.
+2. **Documentez vos 6 mois de suivi nutritionnel** avec votre médecin traitant ou un diététicien — c'est la condition la plus souvent manquante, et le délai court pendant l'attente du rendez-vous. Notre guide explique [comment documenter ce suivi pas à pas, avec un modèle de tableau](/collections/medecins-glp1-france/suivi-nutritionnel-6-mois-remboursement-glp1-documenter/).
 3. **Trouvez le bon interlocuteur** : cherchez « endocrinologie-diabétologie-nutrition » sur [annuaire-sante.ameli.fr](https://annuaire-sante.ameli.fr/), ou demandez le CSO de rattachement de votre département à votre médecin.
 4. **Appelez plusieurs centres** : les délais varient de quelques semaines à plusieurs mois selon les régions. Prenez le premier créneau et restez sur liste d'attente ailleurs.
 5. **Préparez le rendez-vous** : comptes rendus (bilan biologique, apnée du sommeil), courbe de poids, liste de vos tentatives passées. Notre [checklist des questions à poser au médecin](/collections/medecins-glp1-france/questions-medecin-avant-glp1-checklist/) vous aide à ne rien oublier.
