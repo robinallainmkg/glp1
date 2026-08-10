@@ -20,6 +20,7 @@ La routine AJOUTE ici a chaque publication — elle ne relance jamais dans le ch
 - [ ] https://glp1-france.fr/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/
 - [ ] https://glp1-france.fr/collections/retraites-bien-etre/jeune-randonnee-organisateurs-ffjr-comparatif-prix/ (article 07/08)
 - [ ] https://glp1-france.fr/collections/traitements-glp1/ozempic-2-mg-pourquoi-pas-disponible-france/ (article 07/08 run 2)
+- [ ] https://glp1-france.fr/collections/medecins-glp1-france/delai-rendez-vous-cso-chu-obesite-glp1-2026/ (article 10/08, prioritaire — contenu funnel parcours de soins)
 
 ## Soumises
 

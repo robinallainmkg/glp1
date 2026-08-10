@@ -61,7 +61,7 @@ Deux cas particuliers complètent la liste : les **médecins coordinateurs du pa
 Écarté de la primo-prescription, le généraliste reste pourtant le pivot du parcours :
 
 1. **Avant la prescription** : c'est lui qui documente la prise en charge nutritionnelle d'au moins 6 mois exigée pour le remboursement (suivi du poids, régime hypocalorique, activité physique). Sans ce dossier, le spécialiste ne pourra pas prescrire en remboursé.
-2. **L'adressage** : un courrier de votre médecin traitant vers le CSO ou le service spécialisé accélère l'obtention du rendez-vous et évite les dossiers incomplets.
+2. **L'adressage** : un courrier de votre médecin traitant vers le CSO ou le service spécialisé accélère l'obtention du rendez-vous et évite les dossiers incomplets. Les centres étant saturés depuis le remboursement, consultez notre guide des [délais de rendez-vous en CSO/CHU et des moyens de les raccourcir](/collections/medecins-glp1-france/delai-rendez-vous-cso-chu-obesite-glp1-2026/) (modèle de courrier inclus).
 3. **Après la primo-prescription** : il **renouvelle** les ordonnances et assure le suivi mensuel (tolérance digestive, poids, adaptation du mode de vie), sans que vous ayez à retourner au CSO à chaque boîte.
 
 Notre guide sur la [prescription par le médecin généraliste](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/) détaille ce que votre médecin traitant peut et ne peut pas faire.

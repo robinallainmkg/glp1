@@ -183,7 +183,7 @@ Le diagnostic de fuite (point 5) se fait en comparant chaque K a sa baseline : l
 2. **[FAIT 06/08/2026 — go Robin « go CTA »]** Encart eligibilite sur `/outils/carte-prix-pharmacies/` (page n°1 du site, 1 872 sessions/30j). Suivre le trafic referral vers /outils/test-eligibilite/ dans les rapports A0.
 3. **[FAIT 06/08/2026 — go Robin « go CTA »]** Encart apres le tableau de prix des 3 pages prix nationales (angle Ozempic adapte : rembourse diabete seulement → renvoi Wegovy/Mounjaro 65 %).
 4. **[FAIT 07/08/2026 — v65]** Coach IA : lien direct vers /outils/test-eligibilite/ sur intent price/eligibility (regle prioritaire prompt + garde-fou deterministe post-reponse). Complete le 09/08 (v66) par un garde-fou primo-prescription (mistral-small affirmait que le generaliste peut initier la prescription remboursee).
-5. **[APRES 2-3]** Meme encart sur les pages prix ville/dept du cluster pharmacies.
+5. **[FAIT — constate le 09/08/2026]** Encart/lien test-eligibilite deja present dans les templates prix ville (600 pages, + lien vers page prix nationale) et dept (306 pages). Reste : ajouter le lien vers la page prix NATIONALE dans PrixDeptContent.astro (action 1.3 du plan croissance).
 6. **[AUTONOME — backlog]** Email de livraison J0 automatique post-achat Dossier (« votre dossier est pret » + lien /mon-espace/dossier/) — actuellement l'acheteur qui ferme l'onglet de retour Stripe n'a aucun moyen de retrouver son dossier.
 Estimation actions 2+3 a 3 % de clic : K1 0,69 % → ~1,4 %, soit ~6 ventes/mois a K2-K4 constants.
 
