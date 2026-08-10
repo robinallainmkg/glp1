@@ -3,7 +3,7 @@ title: "Comment s'injecter un GLP-1 : Guide Pratique Ozempic"
 description: "Comment s'injecter Ozempic, Wegovy, Mounjaro : technique d'auto-injection pas à pas, zones recommandées, rotation des sites, conseils douleur et oublis."
 pubDate: 2026-03-18
 date: 2026-03-18
-updatedAt: 2026-03-18
+updatedAt: 2026-08-10
 author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["glp1", "ozempic", "wegovy", "mounjaro", "injection", "auto-injection", "stylo", "technique"]
@@ -42,7 +42,7 @@ Commencer un traitement par stylo injecteur GLP-1 peut sembler intimidant au pre
 
 Chaque médicament GLP-1 injectable est conditionné dans un **stylo auto-injecteur prérempli** :
 
-- **Ozempic** : stylo FlexTouch (Novo Nordisk), disponible en 0,25/0,5 mg, 1 mg et 2 mg — un [nouveau stylo Ozempic 3ml](/collections/traitements-glp1/nouveau-stylo-ozempic-3ml-2026-changement-utilisation/) est également disponible depuis 2026
+- **Ozempic** : stylo FlexTouch (Novo Nordisk), disponible en France en 0,25/0,5 mg et 1 mg (le dosage [2 mg n'est pas commercialisé en France](/collections/traitements-glp1/ozempic-2-mg-pourquoi-pas-disponible-france/)) — un [nouveau stylo Ozempic 3ml](/collections/traitements-glp1/nouveau-stylo-ozempic-3ml-2026-changement-utilisation/) est également disponible depuis 2026
 - **Wegovy** : stylo FlexTouch (Novo Nordisk), disponible en 0,25 mg, 0,5 mg, 1 mg, 1,7 mg et 2,4 mg
 - **Mounjaro** : stylo KwikPen (Eli Lilly), disponible en 2,5 mg, 5 mg, 7,5 mg, 10 mg, 12,5 mg et 15 mg
 

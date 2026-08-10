@@ -84,7 +84,7 @@ Si vous prenez déjà Wegovy ou Mounjaro (prescription non remboursée), certain
 
 ## L'attente n'est pas du temps perdu : les 6 mois courent
 
-Le remboursement exige une prise en charge nutritionnelle documentée d'au moins 6 mois avec une perte de poids restée inférieure à 5 %. Ce suivi peut être mené **par votre médecin traitant ou un diététicien, pendant que vous attendez le rendez-vous spécialisé** : pesées régulières notées au dossier, objectifs alimentaires, activité physique adaptée. Un patient qui arrive au CSO avec ses 6 mois documentés peut repartir avec sa primo-prescription ; celui qui arrive sans devra souvent revenir.
+Le remboursement exige une prise en charge nutritionnelle documentée d'au moins 6 mois avec une perte de poids restée inférieure à 5 %. Ce suivi peut être mené **par votre médecin traitant ou un diététicien, pendant que vous attendez le rendez-vous spécialisé** : pesées régulières notées au dossier, objectifs alimentaires, activité physique adaptée. Nous avons détaillé [comment documenter ces 6 mois, avec un modèle de tableau de suivi](/collections/medecins-glp1-france/suivi-nutritionnel-6-mois-remboursement-glp1-documenter/). Un patient qui arrive au CSO avec ses 6 mois documentés peut repartir avec sa primo-prescription ; celui qui arrive sans devra souvent revenir.
 
 Attention enfin au piège classique en pharmacie : une ordonnance de généraliste, même valable, [n'ouvre pas le remboursement en initiation](/collections/traitements-glp1/pharmacie-refuse-delivrer-mounjaro-wegovy-que-faire/) — d'où l'importance de faire les choses dans l'ordre.
 

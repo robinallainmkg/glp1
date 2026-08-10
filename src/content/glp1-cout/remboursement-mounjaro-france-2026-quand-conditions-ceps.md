@@ -61,7 +61,7 @@ La HAS a précisé dans son avis les conditions dans lesquelles le remboursement
 - **Ou IMC ≥ 40 kg/m²** sans comorbidité associée
 
 **En complément :**
-- Échec d'une prise en charge nutritionnelle, diététique et d'activité physique bien conduite pendant au moins 6 mois
+- Échec d'une prise en charge nutritionnelle, diététique et d'activité physique bien conduite pendant au moins 6 mois — voir [comment documenter ce suivi de 6 mois](/collections/medecins-glp1-france/suivi-nutritionnel-6-mois-remboursement-glp1-documenter/)
 - Primo-prescription par un spécialiste de recours (CSO, CHU, endocrinologue exerçant en lien avec un CSO) ; renouvellement possible ensuite par le médecin traitant
 - Document justificatif d'indication rempli par le prescripteur via le téléservice de l'Assurance Maladie (ameli), à présenter en pharmacie avec l'ordonnance
 - Suivi médical régulier pendant toute la durée du traitement
