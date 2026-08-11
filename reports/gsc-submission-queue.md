@@ -23,6 +23,8 @@ La routine AJOUTE ici a chaque publication — elle ne relance jamais dans le ch
 - [ ] https://glp1-france.fr/collections/medecins-glp1-france/delai-rendez-vous-cso-chu-obesite-glp1-2026/ (article 10/08, prioritaire — contenu funnel parcours de soins)
 - [ ] https://glp1-france.fr/collections/medecins-glp1-france/suivi-nutritionnel-6-mois-remboursement-glp1-documenter/ (article 10/08 run 2, prioritaire — contenu funnel parcours de soins)
 
+- [ ] https://glp1-france.fr/collections/glp1-cout/ozempic-pour-maigrir-prix-remboursement-obesite/ (article 11/08, prioritaire — cible « ozempic pour maigrir prix », 144 imp/14j pos ~10)
+
 ## Soumises
 
 - [x] https://glp1-france.fr/outils/test-eligibilite/ — soumise par Robin le 09/08/2026 (confirme en chat « fait »). Surveiller premieres impressions ; re-signaler une fois si 0 imp au 16/08.
