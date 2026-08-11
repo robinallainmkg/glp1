@@ -88,6 +88,10 @@ Le remboursement exige une prise en charge nutritionnelle documentée d'au moins
 
 Attention enfin au piège classique en pharmacie : une ordonnance de généraliste, même valable, [n'ouvre pas le remboursement en initiation](/collections/traitements-glp1/pharmacie-refuse-delivrer-mounjaro-wegovy-que-faire/) — d'où l'importance de faire les choses dans l'ordre.
 
+## Ne restez pas seul face à l'attente : les associations de patients
+
+Les associations de patients connaissent les centres de leur région, les praticiens qui prennent encore des dossiers et les pièges du parcours — et leur accompagnement est gratuit. Deux structures nationales fédèrent le réseau : la [Ligue nationale Contre l'Obésité](https://liguecontrelobesite.org/) (9 000 membres, antennes départementales) et le [CNAO — Collectif National des Associations d'Obèses](https://cnao.fr/), interlocuteur des autorités de santé. Contacter l'antenne locale peut débloquer un dossier qui piétine, et parler à d'autres patients passés par le même parcours aide à tenir sur la durée.
+
 Pour arriver au rendez-vous avec un dossier irréprochable — verdict d'éligibilité, centres proches de chez vous, checklist des documents et questions à poser — notre [Dossier GLP-1 personnalisé](/dossier-glp1/) rassemble tout, prêt à imprimer, pour 4,99 €.
 
 ---
