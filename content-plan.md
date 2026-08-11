@@ -26,7 +26,7 @@ Ce fichier est la **source de vérité** de la création de contenu. La routine 
 
 ### P2 — Quick wins sur demande GSC mesurée
 
-- [ ] **P2a. Ozempic pour maigrir : prix réel 2026 et pourquoi il n'est pas remboursé pour l'obésité** — ajouté 09/08 (plan croissance, veto 24h ou « go plan »). Preuve GSC : « ozempic pour maigrir prix » 144 imp/14j pos 14,6, 0 clic ; aucune page dédiée à l'intent « maigrir » (prix-ozempic-france = intent diabète). Angle : hors AMM/non remboursé pour l'obésité seule → alternatives remboursées 65 % (Wegovy/Mounjaro) + test d'éligibilité. Collection : glp1-cout. Attention cannibalisation : lier prix-ozempic-france en canonique de l'intent prix.
+- [x] **P2a. Ozempic pour maigrir : prix réel 2026 et pourquoi il n'est pas remboursé pour l'obésité** — publié le 11/08/2026 (fenêtre veto 24h passée, plan croissance) → https://glp1-france.fr/collections/glp1-cout/ozempic-pour-maigrir-prix-remboursement-obesite/ — sources : BDPM fiche Ozempic 63210923 (77,60 € TTC, remboursement 30 %), ANSM/CNAM CP 01/03/2023 (usage réservé diabète type 2, surveillance mésusage), Vidal 37850 (Wegovy 146,91-195,10 € / Mounjaro 176,10-433,80 €, remb 65 % 15/06/2026, critères IMC ≥ 40 ou ≥ 35 + comorbidité + 6 mois), STEP 2 PubMed 33667417 (sémaglutide 2,4 mg −9,6 % vs 1 mg −7 %). Angle : hors AMM = 0 % remboursé + moins efficace que Wegovy → renvoi test d'éligibilité. Maillage entrant : prix-ozempic-france + ozempic-2-mg-pourquoi-pas-disponible + medicament-pour-maigrir-guide (lien canonique prix vers prix-ozempic-france). Suivi : imp J+7 (~18/08) : — ; imp J+30 (~10/09) : —
 
 ### P3 — Cluster retraites (leadership : déjà position 8 sur "retraite perte de poids" à J+14)
 

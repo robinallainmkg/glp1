@@ -7,7 +7,7 @@ seoTitle: "Prix Ozempic 2026 : 77,60 €/stylo — remboursé 30%, 100% en ALD"
 seoDescription: "Prix officiel Ozempic : 77,60 € TTC le stylo (1 mois), identique dans toutes les pharmacies. Remboursé 30% diabète type 2, 100% en ALD. Point juillet 2026."
 mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
-updatedAt: '2026-08-06'
+updatedAt: '2026-08-11'
 date: 2026-06-22
 featured: true
 author: 'Rédaction GLP-1 France'
@@ -133,7 +133,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo
 ✅ **Échec des antidiabétiques oraux**
 ✅ **Formulaire de demande obligatoire** (depuis février 2025)
 
-⚠️ **Important** : Ozempic n'est remboursé que pour le **diabète de type 2**, pas pour l'obésité seule. Pour la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) sans diabète, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) sont remboursés à 65% depuis le 15 juin 2026 pour l'obésité sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Saxenda reste non remboursé.
+⚠️ **Important** : Ozempic n'est remboursé que pour le **diabète de type 2**, pas pour l'obésité seule. Pour la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) sans diabète, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) sont remboursés à 65% depuis le 15 juin 2026 pour l'obésité sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40). Saxenda reste non remboursé. Nous détaillons le sujet dans [Ozempic pour maigrir : prix réel et pourquoi il n'est pas remboursé](/collections/glp1-cout/ozempic-pour-maigrir-prix-remboursement-obesite/).
 
 ### Démarches pour le remboursement
 

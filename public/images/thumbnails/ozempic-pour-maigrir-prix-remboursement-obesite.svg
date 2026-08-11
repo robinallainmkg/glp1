@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Ozempic pour maigrir : prix et remboursement 2026">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a3c34"/>
+      <stop offset="1" stop-color="#0f2721"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <circle cx="710" cy="70" r="120" fill="#16a34a" opacity="0.12"/>
+  <circle cx="70" cy="390" r="95" fill="#16a34a" opacity="0.10"/>
+  <!-- Carte prix barrée : Ozempic hors AMM -->
+  <g transform="translate(80,130)">
+    <rect x="0" y="0" width="300" height="180" rx="14" fill="#ffffff" opacity="0.97"/>
+    <text x="24" y="44" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1a3c34">Ozempic « pour maigrir »</text>
+    <text x="24" y="92" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#b91c1c">77,60 €/mois</text>
+    <text x="24" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#b91c1c">Remboursement : 0 %</text>
+    <line x1="20" y1="82" x2="280" y2="100" stroke="#b91c1c" stroke-width="4" opacity="0.55"/>
+    <text x="24" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#6b7280">Hors AMM — 100 % à votre charge</text>
+  </g>
+  <!-- Carte alternative remboursée -->
+  <g transform="translate(430,130)">
+    <rect x="0" y="0" width="290" height="180" rx="14" fill="#16a34a"/>
+    <text x="24" y="44" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Wegovy / Mounjaro</text>
+    <text x="24" y="92" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">65 %</text>
+    <text x="24" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#dcfce7">remboursés depuis le 15/06/2026</text>
+    <text x="24" y="158" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#dcfce7">Sous conditions (IMC, 6 mois de suivi)</text>
+  </g>
+  <text x="400" y="80" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">Ozempic pour maigrir : le vrai prix 2026</text>
+  <text x="400" y="380" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#a7f3d0">glp1-france.fr — chiffres officiels BDPM / ANSM</text>
+</svg>

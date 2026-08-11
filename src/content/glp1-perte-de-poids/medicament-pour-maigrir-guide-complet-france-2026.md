@@ -8,6 +8,7 @@ collection: "glp1-perte-de-poids"
 category: "glp1-perte-de-poids"
 tags: ["médicament pour maigrir", "perte de poids", "GLP-1", "Wegovy", "Mounjaro", "Saxenda", "Ozempic", "France 2026"]
 date: "2026-04-10"
+updatedAt: '2026-08-11'
 mainKeyword: "medicament pour maigrir france"
 featured: true
 enableAffiliation: true
@@ -124,10 +125,10 @@ L'**Ozempic** de Novo Nordisk est officiellement autorisé uniquement pour le tr
 
 **Prix et remboursement :**
 - Environ **77,60 euros par stylo** (prix fixe)
-- **Remboursé à 65 %** par la Sécurité sociale pour le diabète de type 2 en bithérapie avec metformine (30 % en trithérapie avec insuline basale). Prise en charge jusqu'à 100 % en ALD (Affection de Longue Durée).
+- **Remboursé à 30 %** par la Sécurité sociale pour le diabète de type 2 ([taux BDPM](https://base-donnees-publique.medicaments.gouv.fr/medicament/63210923/extrait)). Prise en charge à 100 % en ALD (Affection de Longue Durée).
 - Non rembourse pour la perte de poids seule
 
-**Attention :** la prescription hors AMM de l'Ozempic pour la perte de poids comporte des risques. En cas d'effet secondaire grave, la responsabilite du médecin est engagee differemment. De plus, les tensions d'approvisionnement liees a la forte demande pour la perte de poids peuvent priver les patients diabetiques de leur traitement. Privilegiez le [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) si votre objectif est la perte de poids.
+**Attention :** la prescription hors AMM de l'Ozempic pour la perte de poids comporte des risques. En cas d'effet secondaire grave, la responsabilite du médecin est engagee differemment. De plus, les tensions d'approvisionnement liees a la forte demande pour la perte de poids peuvent priver les patients diabetiques de leur traitement. Privilegiez le [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) si votre objectif est la perte de poids — nous expliquons en détail [pourquoi Ozempic pour maigrir n'est ni remboursé ni pertinent](/collections/glp1-cout/ozempic-pour-maigrir-prix-remboursement-obesite/).
 
 Pour en savoir plus : [guide complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | [prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/)
 
@@ -174,7 +175,7 @@ Pour en savoir plus : [guide complet Ozempic](/collections/traitements-glp1/guid
       <td>5-10 % (hors AMM)</td>
       <td>~80 euros/stylo</td>
       <td>1x/semaine</td>
-      <td>65 % (diabète, bithérapie)</td>
+      <td>30 % (diabète, 100 % en ALD)</td>
       <td>Pas d'AMM obésité</td>
     </tr>
   </tbody>
@@ -191,7 +192,7 @@ Le **Rybelsus** est le seul GLP-1 disponible sous forme de comprimé en France. 
 - **Dose :** 3 mg, 7 mg ou 14 mg, un comprimé par jour a jeun
 - **Indication officielle :** diabète de type 2
 - **Efficacité pour la perte de poids :** inferieure aux formes injectables (environ 5 a 10 % de perte de poids)
-- **Prix :** 80 a 110 euros par mois, rembourse a 65 % pour le diabète de type 2
+- **Prix :** prix libre (non remboursé) — la Haute Autorité de santé a rendu un avis défavorable à son remboursement, et il est très peu référencé dans les officines françaises
 
 Le Rybelsus doit etre pris a jeun avec un demi-verre d'eau, au moins 30 minutes avant le premier repas. Cette contrainte peut etre genante au quotidien.
 
@@ -312,7 +313,7 @@ Le cout reste le principal frein a l'acces aux medicaments pour maigrir en Franc
     <tr>
       <td><strong>Ozempic</strong></td>
       <td>~80 euros/stylo</td>
-      <td>65 % (diabète, bithérapie)</td>
+      <td>30 % (diabète, 100 % en ALD)</td>
       <td>Complement possible (diabète)</td>
     </tr>
   </tbody>

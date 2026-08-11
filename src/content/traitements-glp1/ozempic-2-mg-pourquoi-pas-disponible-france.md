@@ -61,7 +61,7 @@ Si votre glycémie reste mal contrôlée à 1 mg, la réponse n'est **jamais** d
 
 1. **N'augmentez jamais la dose vous-même.** Faire deux injections de 1 mg pour simuler du 2 mg n'a été validé dans aucun cadre de soins français : la sécurité du 2 mg a été évaluée avec une titration précise, un stylo dédié et un suivi d'essai clinique.
 2. **Des alternatives à doses supérieures existent en France.** [Mounjaro (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/) monte jusqu'à 15 mg par semaine dans le diabète de type 2, avec des paliers progressifs. C'est au prescripteur d'évaluer si un changement de molécule est pertinent.
-3. **Si l'enjeu est le poids plus que la glycémie**, le cadre a changé : Wegovy et Mounjaro sont remboursés à 65 % dans l'obésité depuis juin 2026, sous conditions strictes. Notre [test d'éligibilité](/outils/test-eligibilite/) vous dit en une minute si vous entrez dans les critères avant d'en parler à votre médecin.
+3. **Si l'enjeu est le poids plus que la glycémie**, le cadre a changé : Wegovy et Mounjaro sont remboursés à 65 % dans l'obésité depuis juin 2026, sous conditions strictes — utiliser [Ozempic pour maigrir n'est ni remboursé ni pertinent](/collections/glp1-cout/ozempic-pour-maigrir-prix-remboursement-obesite/). Notre [test d'éligibilité](/outils/test-eligibilite/) vous dit en une minute si vous entrez dans les critères avant d'en parler à votre médecin.
 
 ## Le piège : les sites qui « vendent » Ozempic 2 mg
 
