@@ -3,7 +3,7 @@ title: "GLP-1 et Graisse Abdominale : Ozempic et Mounjaro"
 description: "GLP-1 et graisse abdominale viscérale : résultats cliniques Ozempic vs Mounjaro. Mécanismes, données chiffrées et comparaison 2026."
 pubDate: 2026-03-17
 date: "2026-03-17"
-updatedAt: 2026-03-17
+updatedAt: 2026-08-12
 author: "Rédaction GLP-1 France"
 category: "Perte de poids"
 tags: ["glp1", "graisse abdominale", "graisse viscérale", "ozempic", "mounjaro", "ventre", "perte de poids", "2026"]
@@ -92,7 +92,7 @@ L'essai STEP 1, qui a évalué le sémaglutide 2,4 mg ([Wegovy](/collections/tra
 
 Les résultats sur la graisse viscérale sont significatifs :
 
-- **Réduction du volume de graisse viscérale** : -27,4 % en moyenne dans le groupe sémaglutide vs -11 % dans le groupe placebo (étude STEP 1, sémaglutide 2,4 mg, 68 semaines)
+- **Réduction du volume de graisse viscérale** : -27,4 % en moyenne dans le groupe sémaglutide, sans changement notable de la composition corporelle sous placebo ([analyse exploratoire DEXA de STEP 1](https://www.nejm.org/doi/full/10.1056/NEJMoa2032183), sémaglutide 2,4 mg, 68 semaines)
 - **Réduction du tour de taille** : -13,5 cm en moyenne (vs -4,1 cm sous placebo)
 - **Ratio graisse viscérale/sous-cutanée** : la proportion de graisse perdue était davantage viscérale que sous-cutanée, confirmant l'effet préférentiel
 
@@ -100,7 +100,7 @@ Les résultats sur la graisse viscérale sont significatifs :
 
 L'étude SUSTAIN-6 chez des patients diabétiques de type 2 à haut risque cardiovasculaire a observé :
 
-- Réduction du tour de taille de -3,6 cm sous sémaglutide 1 mg
+- Perte de poids moyenne de -4,9 kg sous sémaglutide 1 mg (vs environ -0,5 kg sous placebo) sur 104 semaines ([Marso et al., NEJM 2016](https://www.nejm.org/doi/full/10.1056/NEJMoa1607141))
 - Amélioration significative des marqueurs métaboliques associés à la graisse viscérale (HbA1c, triglycérides, pression artérielle)
 
 Pour les patients traités par [Ozempic pour le diabète](/collections/traitements-glp1/guide-complet-ozempic/), ces bénéfices sur la graisse viscérale s'ajoutent aux effets hypoglycémiants.
@@ -120,7 +120,7 @@ Les essais SURMOUNT ont évalué le tirzépatide ([Mounjaro](/collections/traite
 | Paramètre | Tirzépatide | Placebo | Différence |
 |-----------|-------------|---------|------------|
 | Perte de poids totale | -20,9% | -3,1% | -17,8 pts |
-| Réduction graisse viscérale | -40,1% | -9% | -31,1 pts |
+| Réduction graisse viscérale | -40,1% | -7,3% | -32,8 pts ([Look et al. 2025](https://pubmed.ncbi.nlm.nih.gov/39996356/)) |
 | Réduction tour de taille | -18,5 cm (dose 15 mg) | -4,0 cm | -14,5 cm |
 | Réduction graisse totale | -33% | -8% | -25 pts |
 
@@ -128,7 +128,7 @@ Le tirzépatide réduit la graisse viscérale de -40,1 % dans l'étude SURMOUNT-
 
 ### SURMOUNT-4 : données sur le maintien de la réduction viscérale
 
-L'étude SURMOUNT-4 a évalué la durabilité des effets sur la composition corporelle : après 88 semaines de traitement puis 52 semaines supplémentaires en entretien, la majorité de la réduction de graisse viscérale était maintenue tant que le traitement était poursuivi. À l'arrêt du traitement, la graisse viscérale tend à revenir — comme pour la perte de poids globale.
+L'étude SURMOUNT-4 a évalué la durabilité des effets : après 36 semaines de traitement initial en ouvert, les participants ont été randomisés pour 52 semaines supplémentaires (88 semaines au total). Ceux qui ont poursuivi le tirzépatide ont maintenu — et même accentué (-5,5 % supplémentaires) — leur perte, tandis que le passage au placebo a entraîné une reprise moyenne de +14 % du poids ([Aronne et al., JAMA 2024](https://pubmed.ncbi.nlm.nih.gov/38078870/)). À l'arrêt du traitement, la graisse viscérale tend donc à revenir — comme la perte de poids globale.
 
 ## Ozempic vs Mounjaro : lequel est plus efficace sur le ventre ? {#comparaison}
 
@@ -137,7 +137,7 @@ Il n'existe pas d'essai tête-à-tête direct comparant les deux molécules sur 
 | | Ozempic/Wegovy (sémaglutide 2,4 mg) | Mounjaro (tirzépatide 15 mg) |
 |---|---|---|
 | Réduction graisse viscérale | -27,4% (STEP 1) | ~40,1% (SURMOUNT-1) |
-| Réduction tour de taille | ~13,5 cm | ~17,2 cm |
+| Réduction tour de taille | ~13,5 cm | ~18,5 cm (dose 15 mg) |
 | Perte de poids totale | ~15-17% | ~20-22% |
 
 Le tirzépatide semble plus efficace sur la réduction de la graisse viscérale en valeur absolue, mais les deux molécules présentent un effet préférentiel sur la graisse abdominale profonde, supérieur à ce qu'on observe avec les régimes seuls.

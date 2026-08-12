@@ -133,7 +133,7 @@ La détox premium française, souvent citée comme la meilleure adresse du genre
 | 9 | Les Corallines, La Grande-Motte | Thalasso | 6 j | 1 100 € hors hébergement | Oui (médecin nutritionniste) | Oui |
 | 10 | La Pensée Sauvage | Détox premium | 7 j | dès 1 550 € | Non | Formules avec alimentation uniquement |
 
-À noter : les retraites yoga/bien-être « génériques » (une semaine tout compris se négocie [entre 900 et 1 500 € en France](https://www.pasithea-retreats.com/retraite-yoga-france/)) n'entrent pas dans ce top 10 faute de programme perte de poids structuré — elles restent une bonne option de maintien après un séjour plus cadré.
+À noter : les retraites yoga/bien-être « génériques » (une semaine tout compris se négocie [entre 900 et 1 500 € en France](https://www.pasithea-retreats.com/retraite-yoga-france/)) n'entrent pas dans ce top 10 faute de programme perte de poids structuré — elles restent une bonne option de maintien après un séjour plus cadré. Notre [comparatif des retraites yoga en France](/collections/retraites-bien-etre/retraite-yoga-perte-de-poids-france-comparatif-prix/) détaille les prix 2026 constatés et ce que la science dit réellement de leur effet sur le poids.
 
 ## Comment choisir (vite)
 
