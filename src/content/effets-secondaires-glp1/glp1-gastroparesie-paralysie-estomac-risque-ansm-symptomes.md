@@ -3,7 +3,7 @@ title: "GLP-1 et Gastroparésie : Risques, Symptômes, Solutions"
 description: "GLP-1 gastroparésie paralysie estomac : risque ANSM, symptômes et que faire si votre estomac se vide mal sous Ozempic ou Wegovy."
 pubDate: 2026-03-19
 date: "2026-03-19"
-updatedAt: 2026-03-19
+updatedAt: 2026-08-12
 author: "Rédaction GLP-1 France"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "gastroparésie", "paralysie estomac", "ozempic", "wegovy", "mounjaro", "effets secondaires", "ANSM", "pharmacovigilance", "vidange gastrique"]
@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) ralentissent délibérément la vidange gastrique — c'est l'un des mécanismes par lesquels ils prolongent la sensation de satiété. Mais chez une minorité de patients, ce ralentissement peut devenir excessif et évoluer vers un tableau clinique de gastroparésie, une paralysie partielle de l'estomac qui compromet la qualité de vie et peut créer des complications sérieuses. L'ANSM surveille activement ce signal depuis 2023, et les signalements de pharmacovigilance ont augmenté. Voici ce que tout patient sous GLP-1 devrait savoir sur ce risque.
+Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) ralentissent délibérément la vidange gastrique — c'est l'un des mécanismes par lesquels ils prolongent la sensation de satiété. Mais chez une minorité de patients, ce ralentissement peut devenir excessif et évoluer vers un tableau clinique de gastroparésie, une paralysie partielle de l'estomac qui compromet la qualité de vie et peut créer des complications sérieuses. Ce risque est étudié dans le cadre du dispositif de surveillance national des GLP-1 piloté par l'ANSM avec le groupement EPI-PHARE. Voici ce que tout patient sous GLP-1 devrait savoir sur ce risque.
 
 ## Qu'est-ce que la gastroparésie ?
 
@@ -36,7 +36,7 @@ Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-comple
 
 L'estomac n'est pas un simple réservoir passif. Après un repas, il broie les aliments, les mélange avec les sucs gastriques, et les libère progressivement dans l'intestin grêle — un processus appelé vidange gastrique qui dure normalement entre 2 et 4 heures selon la composition du repas.
 
-Ce processus est contrôlé par le système nerveux autonome (notamment le nerf vague) et par des hormones, dont le GLP-1 naturellement produit par l'intestin. Les médicaments GLP-1 amplifient ce signal hormonal, ce qui ralentit intentionnellement la vidange gastrique de 20 à 40 % par rapport à l'état normal.
+Ce processus est contrôlé par le système nerveux autonome (notamment le nerf vague) et par des hormones, dont le GLP-1 naturellement produit par l'intestin. Les médicaments GLP-1 amplifient ce signal hormonal, ce qui ralentit intentionnellement la vidange gastrique — de l'ordre de 10 à 40 % selon les études, les méthodes de mesure et les molécules.
 
 **Dans la grande majorité des cas, ce ralentissement est bénin et bénéfique** : il prolonge la satiété, réduit les pics glycémiques post-prandiaux et contribue à la perte de poids. C'est un mécanisme thérapeutique voulu.
 
@@ -53,16 +53,13 @@ Les GLP-1 ne "créent" pas une gastroparésie ex nihilo. Mais ils peuvent :
 
 ## Ce que dit l'ANSM sur le risque de gastroparésie
 
-### Le signal de pharmacovigilance identifié
+### Un risque sous surveillance, pas un signal confirmé
 
-L'ANSM a identifié un signal de pharmacovigilance concernant la gastroparésie sous GLP-1 dans le cadre de sa surveillance renforcée des analogues du récepteur GLP-1 en France. Entre 2023 et 2025, plusieurs cas de gastroparésie sévère ont été rapportés par des professionnels de santé via le réseau des Centres Régionaux de Pharmacovigilance (CRPV).
+La gastroparésie fait partie des événements gastro-intestinaux rares mais graves surveillés dans le cadre du dispositif national de l'ANSM sur les analogues du GLP-1 : le groupement scientifique EPI-PHARE a été chargé d'étudier spécifiquement ce risque (avec la pancréatite et l'occlusion intestinale), en complément de l'[enquête nationale de pharmacovigilance](https://ansm.sante.fr/actualites/analogues-du-glp-1-point-sur-la-surveillance-des-effets-indesirables-graves-et-mesusages) menée par les Centres Régionaux de Pharmacovigilance (CRPV) depuis 2019.
 
-Ces signalements ont été pris au sérieux car :
-- Certains cas nécessitaient une hospitalisation
-- Des patients présentaient des vomissements incoercibles conduisant à une dénutrition sévère
-- Des cas avaient conduit à l'arrêt du traitement sans résolution complète des symptômes
+Le [bilan de surveillance publié par l'ANSM en janvier 2026](https://ansm.sante.fr/actualites/surveillance-des-aglp-1-lansm-confirme-le-rapport-benefice-risque-favorable-lorsque-ces-medicaments-sont-utilises-conformement-aux-recommandations) confirme un rapport bénéfice/risque favorable lorsque ces médicaments sont utilisés dans le cadre de leurs indications ; aucun signal spécifique « gastroparésie » n'y est retenu à ce stade — les signaux en surveillance renforcée concernent surtout les carences nutritionnelles.
 
-L'ANSM a inscrit la gastroparésie comme une **réaction indésirable "peu fréquente"** dans les Résumés des Caractéristiques des Produits (RCP) actualisés des GLP-1 en Europe.
+Côté réglementaire européen, le **retard de la vidange gastrique** (delayed gastric emptying) est inscrit comme réaction indésirable **« peu fréquente »** (entre 1/1 000 et 1/100) dans le [RCP européen d'Ozempic](https://www.ema.europa.eu/en/documents/product-information/ozempic-epar-product-information_en.pdf) actualisé par l'EMA — le terme « gastroparésie » n'y figure pas en tant que tel.
 
 ### La fréquence réelle : des données encore incertaines
 
@@ -93,7 +90,7 @@ Tous les patients sous GLP-1 ne sont pas égaux face au risque de gastroparésie
 
 ### Les patients contre-indiqués
 
-La **gastroparésie sévère préexistante est une contre-indication** à l'utilisation des GLP-1 dans les RCP de l'ensemble des molécules de cette classe. Si vous avez un diagnostic de gastroparésie, vous ne devez pas prendre de GLP-1 sans avis spécialisé.
+Les RCP des GLP-1 **déconseillent formellement** leur utilisation en cas de gastroparésie sévère préexistante : le traitement y est indiqué « non recommandé » (mise en garde, section 4.4 du [RCP européen](https://www.ema.europa.eu/en/documents/product-information/ozempic-epar-product-information_en.pdf)) — ce n'est pas une contre-indication formelle au sens réglementaire (seule l'hypersensibilité l'est), mais la prudence s'impose. Si vous avez un diagnostic de gastroparésie, vous ne devez pas prendre de GLP-1 sans avis spécialisé.
 
 ## Comment reconnaître les symptômes ?
 
@@ -186,7 +183,7 @@ La surveillance de la pharmacovigilance sur l'ensemble des effets indésirables 
 
 **Mes nausées sous Ozempic sont-elles normales ou doivent-elles m'inquiéter ?**
 
-Les nausées légères à modérées sont très fréquentes au début du traitement GLP-1 (40 à 50 % des patients) et se résorbent généralement dans les 4 à 8 premières semaines. Si vos nausées sont sévères, accompagnées de vomissements fréquents, et persistent au-delà de 6 semaines sans s'améliorer, il faut en parler à votre médecin. Des vomissements d'aliments non digérés plusieurs heures après un repas sont un signe d'alerte à signaler rapidement.
+Les nausées légères à modérées sont l'effet indésirable le plus fréquent : environ 17 à 20 % des patients sous Ozempic (0,5-1 mg, RCP EMA) et jusqu'à 44 % aux doses de Wegovy 2,4 mg (notice FDA). Elles se résorbent généralement dans les 4 à 8 premières semaines. Si vos nausées sont sévères, accompagnées de vomissements fréquents, et persistent au-delà de 6 semaines sans s'améliorer, il faut en parler à votre médecin. Des vomissements d'aliments non digérés plusieurs heures après un repas sont un signe d'alerte à signaler rapidement.
 
 **Puis-je reprendre un GLP-1 après une gastroparésie ?**
 
