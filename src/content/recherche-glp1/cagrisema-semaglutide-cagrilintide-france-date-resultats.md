@@ -2,8 +2,8 @@
 title: "CagriSema : Révolution Après Ozempic et Mounjaro ?"
 description: "CagriSema (cagrilintide + sémaglutide) : résultats REDEFINE à 22,7% de perte de poids. Ce que les patients français peuvent espérer."
 pubDate: 2026-03-19
-date: "2026-06-22"
-updatedAt: 2026-06-22
+date: "2026-08-13"
+updatedAt: 2026-08-13
 author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "cagrisema", "cagrilintide", "semaglutide", "novo nordisk", "REDEFINE", "obesite", "nouveaux traitements", "france", "2026"]
@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Cinq ans après l'irruption d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) sur la scène mondiale, et deux ans après le lancement de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), un nouveau candidat se profile à l'horizon : le CagriSema. Cette combinaison innovante, développée par Novo Nordisk, associe deux mécanismes d'action distincts pour dépasser les plafonds de perte de poids des traitements actuels. Les [résultats de l'étude REDEFINE 1](/collections/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/), publiés dans le New England Journal of Medicine début 2025, ont confirmé des performances impressionnantes : une perte de poids moyenne de 22,7 % du poids corporel à 68 semaines. Voici ce que l'on sait, et ce que les patients français peuvent raisonnablement espérer.
+Cinq ans après l'irruption d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) sur la scène mondiale, et deux ans après le lancement de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), un nouveau candidat se profile à l'horizon : le CagriSema. Cette combinaison innovante, développée par Novo Nordisk, associe deux mécanismes d'action distincts pour dépasser les plafonds de perte de poids des traitements actuels. Les [résultats de l'étude REDEFINE 1](/collections/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/), publiés dans le New England Journal of Medicine le 22 juin 2025, ont confirmé des performances impressionnantes : une perte de poids moyenne de 22,7 % du poids corporel à 68 semaines. Voici ce que l'on sait, et ce que les patients français peuvent raisonnablement espérer.
 
 ## Qu'est-ce que le CagriSema ?
 
@@ -64,40 +64,36 @@ L'étude a comparé CagriSema à la dose maximale de 2,4 mg/2,4 mg par semaine �
 
 ### Principaux résultats
 
-**Perte de poids :**
-- Groupe CagriSema : -22,7 % du poids corporel en moyenne à 68 semaines
-- Groupe placebo : -2,1 %
-- Différence de traitement : -20,6 points de pourcentage
+**Perte de poids (résultats publiés dans le NEJM le 22 juin 2025)** :
+- Groupe CagriSema : -22,7 % du poids corporel en moyenne à 68 semaines (estimand « produit de l'essai », c'est-à-dire en cas de bonne observance ; -20,4 % en analyse « treatment policy », quelle que soit l'observance)
+- Groupe placebo : -2,3 %
+- Différence de traitement : -20,4 points de pourcentage (IC 95 % : -21,1 à -19,7)
 
 **Réponse cliniquement significative :**
-- 75 % des participants ont perdu au moins 10 % de leur poids sous CagriSema (contre 10 % sous placebo)
-- 56 % ont perdu au moins 15 % de leur poids
-- 37 % ont perdu au moins 20 % de leur poids — un niveau de perte que seule la chirurgie bariatrique permettait d'atteindre de manière reproductible jusqu'ici
+- 97,6 % des participants ont perdu au moins 5 % de leur poids sous CagriSema
+- 60,2 % ont perdu au moins 20 % de leur poids
+- 40,4 % ont perdu au moins 25 %, et 23,1 % au moins 30 % — des niveaux de perte que seule la chirurgie bariatrique permettait d'atteindre de manière reproductible jusqu'ici
 
-**Paramètres métaboliques :**
-- Réduction significative de la glycémie à jeun et de l'HbA1c chez les patients diabétiques inclus
-- Amélioration des paramètres lipidiques (cholestérol LDL, triglycérides)
-- Réduction de la tension artérielle systolique de 5 à 6 mmHg en moyenne
+À noter : REDEFINE 1 a inclus des adultes en surpoids ou obèses **sans diabète** (le volet diabète de type 2 fait l'objet d'un essai distinct, REDEFINE 2).
 
 ### Profil de tolérance
 
 Le profil de sécurité de CagriSema est globalement cohérent avec ce qu'on observe avec les autres GLP-1 :
 
-- **Effets digestifs** : nausées (44 %), diarrhée (25 %), vomissements (20 %), constipation (15 %). Ces effets sont plus fréquents qu'avec sémaglutide seul, ce qui est attendu compte tenu de la double action du produit.
-- **Réactions au site d'injection** : légèrement plus fréquentes que sous Wegovy seul, en lien avec le cagrilintide
-- **Arrêts de traitement pour effets indésirables** : 8,4 % dans le groupe CagriSema vs 2,6 % sous placebo
+- **Effets digestifs** (chiffres NEJM/REDEFINE 1) : 79,6 % des participants ont rapporté au moins un effet gastro-intestinal (vs 39,9 % sous placebo) — principalement nausées (55 % vs 12,6 %), constipation (30,7 % vs 11,6 %) et vomissements (26,1 % vs 4,1 %). Ces effets sont plus fréquents qu'avec sémaglutide seul, ce qui est attendu compte tenu de la double action du produit.
+- **Arrêts de traitement pour effets indésirables** : 6 % dans le groupe CagriSema vs 3,7 % sous placebo
 
 Aucun signal de sécurité nouveau par rapport aux classes existantes n'a été identifié dans REDEFINE 1.
 
 ## Où en est l'accès pour les patients ?
 
-### La demande d'autorisation FDA (Q1 2026)
+### La demande d'autorisation FDA (déposée le 18 décembre 2025)
 
-Novo Nordisk a annoncé avoir déposé une demande d'autorisation de mise sur le marché (AMM) auprès de la Food and Drug Administration (FDA) américaine au premier trimestre 2026. Le processus d'examen standard de la FDA dure généralement 6 à 12 mois. Si l'autorisation est accordée, on peut espérer une commercialisation aux États-Unis d'ici fin 2026 ou début 2027.
+Novo Nordisk a déposé sa demande d'autorisation de mise sur le marché (NDA) auprès de la Food and Drug Administration (FDA) américaine le 18 décembre 2025. Le processus d'examen standard de la FDA dure généralement 10 à 12 mois : une première décision est attendue vers fin 2026. Si l'autorisation est accordée, on peut espérer une commercialisation aux États-Unis fin 2026 ou début 2027.
 
 ### Le dossier EMA pour l'Europe
 
-Parallèlement à la procédure FDA, Novo Nordisk prépare un dossier auprès de l'Agence Européenne du Médicament (EMA). Le calendrier exact n'a pas été confirmé officiellement, mais les filiales européennes de Novo Nordisk évoquent un dépôt de dossier EMA dans la seconde moitié de 2026.
+Parallèlement à la procédure FDA, un dossier auprès de l'Agence Européenne du Médicament (EMA) est attendu, mais à la mi-2026 aucun dépôt EMA n'a été confirmé publiquement par Novo Nordisk. Historiquement, les autorisations européennes de ce type suivent la décision américaine de quelques mois.
 
 Le processus EMA est généralement plus long que la procédure FDA : entre 12 et 18 mois en procédure standard, ou 6 à 9 mois en procédure accélérée si l'EMA accorde le statut d'"examen accéléré" (Accelerated Assessment), qui peut être demandé pour les médicaments ciblant un besoin médical important non satisfait.
 
@@ -150,7 +146,7 @@ Cela confirme la notion que l'obésité est une maladie chronique qui nécessite
 
 **CagriSema est-il déjà disponible en France ?**
 
-Non. Au printemps 2026, CagriSema n'a reçu aucune autorisation de mise sur le marché, ni aux États-Unis ni en Europe. La demande FDA a été déposée au premier trimestre 2026. Pour les patients français, un accès dans les conditions normales n'est pas réaliste avant 2028-2029.
+Non. À l'été 2026, CagriSema n'a reçu aucune autorisation de mise sur le marché, ni aux États-Unis ni en Europe. La demande FDA a été déposée le 18 décembre 2025 (décision attendue vers fin 2026). Pour les patients français, un accès dans les conditions normales n'est pas réaliste avant 2028-2029.
 
 **CagriSema et Mounjaro sont-ils similaires ?**
 
@@ -172,4 +168,4 @@ En attendant, les patients éligibles à un traitement GLP-1 peuvent déjà bén
 
 ---
 
-*Sources : REDEFINE 1 — CagriSema Phase 3 Study Results (NEJM, 2025) ; Novo Nordisk — Dépôt de dossier FDA CagriSema (communiqué de presse, Q1 2026) ; FindHonestCare — CagriSema update (2026). Cet article est fourni à titre informatif et ne remplace pas l'avis de votre médecin.*
+*Sources : [REDEFINE 1 — résultats publiés dans le NEJM, 22 juin 2025 (communiqué Novo Nordisk)](https://www.prnewswire.com/news-releases/cagrisema-2-4-mg--2-4-mg-demonstrated-22-7-mean-weight-reduction-in-adults-with-overweight-or-obesity-in-redefine-1--published-in-nejm-302487770.html) ; [Novo Nordisk — dépôt de la demande FDA pour CagriSema, 18 décembre 2025](https://www.prnewswire.com/news-releases/novo-nordisk-files-for-fda-approval-of-cagrisema-the-first-once-weekly-combination-of-glp1-and-amylin-analogues-for-weight-management-302645862.html). Cet article est fourni à titre informatif et ne remplace pas l'avis de votre médecin.*
