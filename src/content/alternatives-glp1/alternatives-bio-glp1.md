@@ -3,6 +3,7 @@ title: "Alternatives Bio GLP-1 : Guide Complet et Conseils 2026"
 description: "Alternatives bio aux GLP-1 — berbérine, cannelle, inositol — ce que la science dit sur les substituts naturels à Ozempic et Wegovy. Guide 2025."
 pubDate: 2025-08-20
 date: 2025-08-20
+updatedAt: 2026-08-14
 author: "Rédaction GLP-1 France"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
@@ -49,7 +50,7 @@ La berbérine active l'**AMPK** (AMP-activated protein kinase), la même voie m�
 
 ### Ce que disent les études
 - Réduction de l'HbA1c : **-0,3 à -0,7 %** avec 1 500 mg/j (doses standard)
-- Jusqu'à **-1 % d'HbA1c** à 2 000 mg/j dans des études récentes (JAMA 2025)
+- Jusqu'à **-1 % d'HbA1c** pour un dérivé de la berbérine (berbérine ursodésoxycholate, HTD1801) dans un essai randomisé publié dans [JAMA Network Open en 2025](https://jamanetwork.com/journals/jamanetworkopen/articlepdf/2830825/mathioudakis_2025_ic_240386_1740068777.90761.pdf) — résultat non transposable tel quel à la berbérine simple vendue en complément alimentaire
 - Réduction modeste du poids corporel : 1 à 3 kg en moyenne sur 12 semaines
 - Effet sur la glycémie à jeun comparable à certains antidiabétiques de 2e ligne dans certaines études, mais avec des biais méthodologiques importants
 
@@ -80,7 +81,7 @@ La cannelle est populaire dans la communauté des personnes atteintes de diabèt
 | **Cannelle Ceylon** (*Cinnamomum verum*) | Très faible | ✅ Sûre pour usage quotidien | Plus chère |
 | **Cannelle Cassia** (*Cinnamomum cassia*) | Élevée | ⚠️ Risque hépatotoxique à doses élevées | Courante en supermarché |
 
-L'**ANSES** recommande de ne pas dépasser **0,1 mg/kg/j de coumarine** (avis 2014). La cannelle Cassia — la plus vendue en grande surface — peut facilement dépasser ce seuil à usage thérapeutique. **Pour tout usage médical, utiliser exclusivement la cannelle Ceylon.**
+La dose journalière tolérable fixée par l'**EFSA** est de **0,1 mg/kg/j de coumarine** ; l'**ANSES** recommande de son côté de rester sous **4,8 mg/j** pour un adulte de 60 kg via les compléments alimentaires ([avis 2018-SA-0180](https://www.anses.fr/fr/system/files/NUT2018SA0180.pdf)). La cannelle Cassia — la plus vendue en grande surface, ~3 000 mg de coumarine/kg — dépasse ce seuil dès une cuillère à café par jour. **Pour tout usage médical, utiliser exclusivement la cannelle Ceylon.**
 
 ### Efficacité sur la glycémie
 Les études sont contradictoires. Certaines méta-analyses montrent une légère réduction de la glycémie à jeun (-0,5 à -1 mmol/L), mais sans résultats robustes sur l'HbA1c. La cannelle ne se substitue pas à un antidiabétique médicamenteux.
