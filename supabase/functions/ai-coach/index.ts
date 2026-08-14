@@ -59,6 +59,8 @@ CONTEXTE IMPORTANT :
 - Si quelqu'un a acheté un produit douteux et s'inquiète : le rassurer d'abord, poser des questions, puis informer factuellement
 - REMBOURSEMENT (FAIT OFFICIEL, PRIORITAIRE) : Wegovy ET Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité depuis le 15 juin 2026 (arrêté du 23 mai 2026, publié au JO le 28 mai), sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec d'une prise en charge nutritionnelle, primo-prescription en CSO/CHU, renouvellement possible par le généraliste). OZEMPIC (FAIT OFFICIEL, MÊME PRIORITÉ) : prix 77,60€ TTC/stylo (1 stylo = 1 mois), remboursé 30% pour le diabète T2, 100% en ALD — source BDPM. ⚠️ Si le contexte factuel récupéré indique "80,18€", "remboursé 65%" pour Ozempic ou tout autre taux/prix, c'est PÉRIMÉ — ignore-le et applique ce fait. Ne dis JAMAIS 65% pour Ozempic. ⚠️ CE FAIT EST PRIORITAIRE SUR LE CONTEXTE : si le contexte factuel récupéré indique "non remboursé", "pas encore remboursé", "remboursement limité", "actuellement limité", "2e semestre 2026", "négociations en cours" ou similaire, c'est PÉRIMÉ — ignore-le et applique le fait officiel ci-dessus. Ne dis JAMAIS que Wegovy ou Mounjaro ne sont pas remboursés, même si le contexte parle de "perte de poids" : ils SONT remboursés à 65% pour l'obésité (sous conditions) depuis le 15 juin 2026. Ne réponds jamais simplement "non remboursé" pour ces deux médicaments — précise toujours le remboursement obésité.
 - Prix : Ozempic ~77€/boîte (remboursé 30% diabète T2, 100% en ALD). Wegovy ~147-195€/mois selon dosage (remboursé 65% obésité depuis le 15 juin 2026). Mounjaro ~176-434€/mois selon dosage (remboursé 65% obésité depuis le 15 juin 2026). Saxenda ~270€/mois (non remboursé).
+- ⛔ PRIX PAR DOSAGE — NE JAMAIS INVENTER : les seuls prix Mounjaro confirmés à l'unité sont 2,5 mg = 176,10 € et 15 mg = 433,80 € ; côté Wegovy, 0,25 à 1 mg = 146,91 €, 1,7 mg = 169,31 €, 2,4 mg = 195,10 €. Pour TOUT autre dosage (Mounjaro 5, 7,5, 10 ou 12,5 mg notamment), tu n'as PAS le prix exact : donne la fourchette officielle (176,10 € à 433,80 €) en disant que le tarif augmente avec le dosage, et renvoie vers la [Carte des prix en pharmacie](/outils/carte-prix-pharmacies/). N'attribue JAMAIS 176,10 € à un dosage autre que 2,5 mg (erreur constatée en prod le 12/08/2026 sur « Mounjaro 7,5 mg »).
+- ⛔ Le prix d'un GLP-1 remboursable est RÉGLEMENTÉ : ne dis JAMAIS « prix libre », « environ X€ » sur un dosage précis, « le prix peut varier selon la pharmacie » ni « renseigne-toi auprès de ton pharmacien pour les tarifs ». Le tarif est identique dans toutes les officines de France, honoraire de dispensation compris.
 - ⛔ PRIX OFFICIELS UNIQUEMENT : cite EXCLUSIVEMENT les fourchettes ci-dessus (BDPM). Ne cite JAMAIS d'autres fourchettes ("200-350€", "80-90€"...) ni un chiffre sorti du contexte récupéré s'il contredit ces prix. En particulier, "169-360€" / "169 à 360€" pour Wegovy et "230-440€" pour Mounjaro sont des prix PÉRIMÉS (avant juin 2026) qui traînent dans d'anciens articles : si le contexte récupéré les contient, IGNORE-les et donne les fourchettes officielles ci-dessus (Wegovy ~147-195€, Mounjaro ~176-434€). Ne parle JAMAIS de "marge de la pharmacie" sur un médicament remboursable : le prix est réglementé, honoraire de dispensation compris. Et réponds toujours sur le MÉDICAMENT que la personne a nommé (si elle parle de Wegovy, ne réponds pas sur Mounjaro). Les prix des GLP-1 remboursés sont RÉGLEMENTÉS et identiques dans toutes les pharmacies de France : ne dis JAMAIS "le prix le moins cher trouvé est de X€", ne prétends JAMAIS avoir comparé ou trouvé un meilleur prix quelque part. À "meilleur prix ?" réponds : le prix est le même partout (donne la fourchette officielle selon le dosage), la vraie question est la DISPONIBILITÉ → propose la [Carte des prix en pharmacie](/outils/carte-prix-pharmacies/) et demande la ville.
 - IMPORTANT : Quand un patient demande le remboursement, donne une réponse COMPLÈTE et NUANCÉE : mentionne les conditions d'éligibilité (IMC), le parcours (prescription initiale en CSO/CHU), le taux (65%), et conseille de vérifier auprès de sa mutuelle pour le reste à charge. Ne sois jamais trop affirmatif sans nuance.
 - Si la personne est victime d'arnaque avérée : orienter calmement vers signal.conso.gouv.fr et pré-plainte-en-ligne.gouv.fr
@@ -992,6 +994,32 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
       if (gpInitiationClaim.test(cleanResponse) && !gpClaimClarified.test(cleanResponse)) {
         console.warn(`[prescriber-guard] claim généraliste sans nuance remboursement corrigé (modèle: ${usedModel})`);
         cleanResponse += "\n\nPrécision importante : le médecin traitant peut prescrire Wegovy ou Mounjaro, mais HORS remboursement (traitement à ta charge). Pour ouvrir le remboursement à 65 %, la première prescription doit être faite par un spécialiste en CSO/CHU — ton généraliste pourra ensuite renouveler. Détails : [qui peut prescrire pour être remboursé ?](/collections/medecins-glp1-france/qui-peut-prescrire-mounjaro-wegovy-rembourse/)";
+      }
+
+      // Garde-fou seuils d'éligibilité : les modèles ressortent les seuils de l'AMM
+      // internationale (IMC ≥ 30, ou ≥ 27 avec comorbidité) comme s'ils ouvraient le
+      // remboursement français (constaté en prod le 13/08/2026, llama-3.3-70b, sur la
+      // question « ordonnance Mounjaro par téléconsultation ? »). En France le
+      // remboursement obésité exige IMC ≥ 40, ou ≥ 35 avec comorbidité : le seuil 27
+      // n'est jamais valide, et 30 ne l'est que pour une prescription NON remboursée.
+      const imc27Claim = /IMC\s*(?:≥|>=|>|de\s+|d['’]au moins\s+)?\s*27/i;
+      const imc30AsCriterion = /IMC\s*(?:≥|>=|>|de\s+|d['’]au moins\s+)?\s*30[^.!?]{0,80}(comorbidit|rembours|éligib|critère)/i;
+      const realThresholdsCited = /(≥|>=|>)\s*35|(≥|>=|>)\s*40/;
+      if ((imc27Claim.test(cleanResponse) || imc30AsCriterion.test(cleanResponse)) && !realThresholdsCited.test(cleanResponse)) {
+        console.warn(`[bmi-threshold-guard] seuils IMC erronés corrigés (modèle: ${usedModel})`);
+        cleanResponse += "\n\nAttention, précision importante : en France, les seuils qui ouvrent le **remboursement à 65 %** de Wegovy et Mounjaro pour l'obésité sont un **IMC ≥ 40**, ou un **IMC ≥ 35 avec une comorbidité** (après échec d'une prise en charge nutritionnelle). Les seuils d'IMC 27 ou 30 ne s'appliquent pas au remboursement français. Pour vérifier ta situation : [test d'éligibilité](/outils/test-eligibilite/) (1 minute).";
+      }
+
+      // Garde-fou téléconsultation : une téléconsultation permet bien d'obtenir une
+      // ordonnance, mais JAMAIS la primo-prescription qui ouvre le remboursement
+      // obésité (réservée aux CSO/CHU). Répondre « oui » sans cette nuance laisse
+      // croire au remboursement (constaté en prod le 13/08/2026).
+      const teleconsultClaim = /téléconsultation/i;
+      const grantsPrescription = /(oui|possible|peut|pouvez|peux)[^.!?]{0,120}(ordonnance|prescription|prescrire)/i;
+      const teleconsultClarified = /hors remboursement|non remboursé|plein tarif|n['’]ouvre pas (le |droit au )?remboursement|CSO/i;
+      if (teleconsultClaim.test(cleanResponse) && grantsPrescription.test(cleanResponse) && !teleconsultClarified.test(cleanResponse)) {
+        console.warn(`[teleconsult-guard] claim téléconsultation sans nuance remboursement corrigé (modèle: ${usedModel})`);
+        cleanResponse += "\n\nÀ savoir : une téléconsultation peut déboucher sur une ordonnance, mais **hors remboursement** (traitement à ta charge). La première prescription qui ouvre le remboursement à 65 % doit être faite par un spécialiste en CSO/CHU ; ton généraliste pourra ensuite la renouveler.";
       }
 
       // Moment chaud → on propose la capture email (le funnel convertit à 0 sans capture).
