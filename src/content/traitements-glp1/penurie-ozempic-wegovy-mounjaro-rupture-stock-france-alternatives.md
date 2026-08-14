@@ -3,7 +3,7 @@ title: "Pénurie Ozempic, Wegovy, Mounjaro : C'est Fini — Historique et Réfle
 description: "La pénurie d'Ozempic, Wegovy et Mounjaro est terminée : l'ANSM a levé toutes les restrictions en juin 2025 et aucun GLP-1 ne figure sur la liste des tensions en 2026. Retour sur la crise 2023-2025 et les bons réflexes à garder."
 keywords: ['penurie ozempic', 'rupture stock wegovy', 'penurie mounjaro', 'penurie glp1 pharmacie', 'ozempic indisponible pharmacie', 'alternative penurie glp1', 'rupture approvisionnement semaglutide']
 seoTitle: "Rupture Stock Ozempic / Wegovy / Mounjaro 2026 : trouver votre pharmacie"
-seoDescription: "Votre pharmacie n'a plus de Ozempic, Wegovy ou Mounjaro ? La pénurie nationale est résolue mais des ruptures locales persistent. Carte des pharmacies disponibles + que faire en attendant."
+seoDescription: "Ozempic, Wegovy ou Mounjaro introuvable dans votre pharmacie ? Vérifiez les officines qui les délivrent près de chez vous, le point ANSM 2026 sur les stocks et quoi faire si votre boîte manque."
 publishedAt: '2026-03-17'
 updatedAt: '2026-07-20'
 date: 2026-07-20

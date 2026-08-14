@@ -3,7 +3,7 @@ title: "Acupuncture GLP-1 diabète : Guide Complet et Conseils 2026"
 description: "L'acupuncture peut-elle compléter un traitement GLP-1 ? Bénéfices, preuves scientifiques, coûts et remboursement en France."
 pubDate: 2025-08-20
 date: 2025-08-20
-updatedAt: 2026-03-18
+updatedAt: 2026-08-14
 author: "Rédaction GLP-1 France"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements", "acupuncture", "diabète", "obésité"]
@@ -89,7 +89,7 @@ Le coût d'une séance d'acupuncture en France dépend essentiellement du statut
 
 | Type de praticien | Tarif moyen par séance | Remboursement SS |
 |-------------------|------------------------|-----------------|
-| Médecin acupuncteur conventionné | 23-30 € (base SS) | Oui, 70% de la base |
+| Médecin acupuncteur conventionné (secteur 1) | 30 € (tarif conventionné) | Oui, 70% de la base |
 | Médecin acupuncteur non conventionné | 60-100 € | Partiel (base SS seulement) |
 | Acupuncteur non médecin | 50-80 € | Non |
 | Kinésithérapeute pratiquant l'acupuncture | Variable | Non (hors nomenclature) |
@@ -98,7 +98,7 @@ Le coût d'une séance d'acupuncture en France dépend essentiellement du statut
 
 **Condition indispensable** : seule l'acupuncture pratiquée par un médecin (titulaire du Diplôme Interuniversitaire d'Acupuncture) donne droit à un remboursement par la Sécurité Sociale.
 
-- **Taux de remboursement standard** : 70% de la base de remboursement SS (soit environ 16-21 €)
+- **Taux de remboursement standard** : 70% de la base de remboursement SS, soit 21 € pour une consultation à 30 € (tarif du secteur 1 depuis le 22 décembre 2024), moins la participation forfaitaire de 2 € — remboursement effectif de 19 €
 - **Ticket modérateur** : 30% restant à la charge du patient (sauf mutuelle complémentaire)
 
 ### Remboursement en ALD (Affection de Longue Durée)
