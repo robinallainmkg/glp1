@@ -6,7 +6,7 @@ keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounj
 seoTitle: "Prix Mounjaro 2026 : 176-433 € — même prix partout, -65% Sécu"
 seoDescription: "Prix Mounjaro officiel : 176 à 434 €/mois selon dosage, identique dans toutes les pharmacies. Remboursé à 65 % depuis juin 2026 — vérifiez votre éligibilité."
 publishedAt: '2025-09-06'
-updatedAt: '2026-08-06'
+updatedAt: '2026-08-15'
 date: 2026-07-20
 featured: true
 priority: 1
@@ -87,7 +87,7 @@ faqSchema:
 
 ## Prix Mounjaro France 2026 : Le Moins Cher en Pharmacie
 
-Vous cherchez **Mounjaro au prix le moins cher en France** ? Voici la réponse claire : le **prix Mounjaro en France** démarre à **176€/mois** pour le dosage 2,5 mg et monte à **433€/mois** pour le 15 mg. Le tirzépatide, commercialisé par **Eli Lilly** sous le nom Mounjaro, est disponible en France depuis **novembre 2024**. **Depuis le 15 juin 2026, Mounjaro est remboursé à 65%** par l'Assurance Maladie pour le traitement de l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec de prise en charge nutritionnelle, prescription initiale réservée aux spécialistes de l'obésité (CSO, CHU, endocrinologues en lien avec un CSO)). Ce traitement révolutionne la gestion du [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et de l'obésité. Pour comparer les coûts, consultez aussi notre [comparatif prix Wegovy France](/collections/glp1-cout/prix-wegovy-france/) et le [prix Ozempic en pharmacie](/collections/glp1-cout/prix-ozempic-france/).
+Vous cherchez **Mounjaro au prix le moins cher en France** ? Voici la réponse claire : le **prix Mounjaro en France** démarre à **176€/mois** pour le dosage 2,5 mg et monte à **433€/mois** pour le 15 mg. Le tirzépatide, commercialisé par **Eli Lilly** sous le nom Mounjaro, est disponible en France depuis **novembre 2024**. **Depuis le 15 juin 2026, Mounjaro est remboursé à 65%** par l'Assurance Maladie pour le traitement de l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec de prise en charge nutritionnelle, prescription initiale réservée aux spécialistes de l'obésité (CSO, CHU, endocrinologues en lien avec un CSO)). Ce traitement révolutionne la gestion du [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et de l'obésité. Le prix étant réglementé et identique partout, inutile de chercher une pharmacie « moins chère autour de vous » : utilisez plutôt notre [carte des pharmacies près de chez vous](/outils/carte-prix-pharmacies/) pour vérifier la disponibilité locale. Pour comparer les coûts, consultez aussi notre [comparatif prix Wegovy France](/collections/glp1-cout/prix-wegovy-france/) et le [prix Ozempic en pharmacie](/collections/glp1-cout/prix-ozempic-france/).
 
 <div class="price-hero">
   <div class="price-highlight">
