@@ -29,7 +29,7 @@ affiliateConfig:
 
 ## À retenir
 
-Sous traitement GLP-1, maintenir un apport protéique suffisant est l'un des leviers les plus importants pour préserver votre masse musculaire. La recommandation générale est de viser **1,2 à 1,6 g de protéines par kilogramme de poids corporel par jour**, en privilégiant des sources de qualité et en répartissant l'apport sur la journée.
+Sous traitement GLP-1, maintenir un apport protéique suffisant est l'un des leviers les plus importants pour préserver votre masse musculaire. La recommandation générale est de viser **1,2 à 1,6 g de protéines par kilogramme de poids corporel par jour**, en privilégiant des sources de qualité et en répartissant l'apport sur la journée. Pour situer les protéines dans l'ensemble de l'assiette (légumes, fibres, féculents, erreurs à éviter), consultez notre guide [régime GLP-1 : quoi manger sous Wegovy, Ozempic ou Mounjaro](/collections/regime-glp1/regime-glp1-quoi-manger-menus-erreurs/).
 
 ---
 

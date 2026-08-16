@@ -4,6 +4,7 @@ published: false
 description: "Chrome diabète complément alimentaire : rôle dans la régulation de la glycémie, dosages recommandés et précautions médicales essentielles à connaître."
 pubDate: 2025-08-20
 date: 2025-08-20
+updatedAt: '2026-08-16'
 author: "Rédaction GLP-1 France"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
@@ -63,39 +64,16 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ## Prix, disponibilité et variations en France
 
 ### Coûts et tarification
-- **Chrome picolinate 200 µg** : 8-15€/mois
-- **Chrome GTF (facteur de tolérance au glucose)** : 10-20€/mois  
-- **Consultations spécialisées** : 60-80€/consultation
-- **Suivi complémentaire** : XX€/mois
+- **Chrome picolinate 200 µg** : environ 8 à 15 € par mois (prix constatés en ligne et en parapharmacie)
+- **Chrome GTF (facteur de tolérance au glucose)** : environ 10 à 20 € par mois
 
-### Disponibilité marché français
-- **Pharmacies** : Disponible sur ordonnance/conseil
-- **Centres spécialisés** : Accès réglementé
-- **E-commerce** : Selon réglementation
-- **Délais moyens** : 2-4 semaines
+### Disponibilité en France
+- **Vente libre** : le chrome est un complément alimentaire, disponible sans ordonnance en pharmacie, parapharmacie et en ligne ([Vidal — chrome, complément alimentaire](https://www.vidal.fr/parapharmacie/complements-alimentaires/chrome.html))
+- **Dose à ne pas dépasser** : l'EFSA retient un apport supplémentaire maximal de **250 µg/jour** ; les effets indésirables graves rapportés concernent surtout le picolinate de chrome au-delà de 1 200 µg/jour (Vidal)
 
-## Remboursement et prise en charge (France)
+## Remboursement : aucun (et c'est normal)
 
-### Critères remboursement
-1. **Indication médicale** validée
-2. **Prescription spécialisée** requise
-3. **Suivi médical** obligatoire
-4. **Critères HAS** respectés
-
-### Prise en charge spécifique
-- **Sécurité Sociale** : Remboursement selon indication
-- **Mutuelles** : Prise en charge complémentaire variable
-- **ALD** : 100% si diabète/obésité sévère
-- **Aide sociale** : Dispositifs spécifiques
-
-## Comparaison rapide (France vs autres pays)
-
-| Pays | Disponibilité | Prix moyen | Remboursement |
-|------|--------------|------------|---------------|
-| **France** | Réglementée | XX€/mois | 65-100% |
-| **États-Unis** | Large accès | $XX/mois | Variable |
-| **Allemagne** | Encadrée | XX€/mois | GKV standard |
-| **Royaume-Uni** | NHS contrôlé | NHS gratuit | NHS complet |
+Le chrome n'est **pas un médicament** : c'est un complément alimentaire, sans AMM. À ce titre, il n'est **jamais remboursé** par l'Assurance maladie ni éligible à l'ALD, quelle que soit l'indication — contrairement aux traitements du diabète disposant d'une AMM. Certaines mutuelles proposent un petit forfait « médecines douces/compléments », à vérifier contrat par contrat.
 
 ## Conseils pratiques
 

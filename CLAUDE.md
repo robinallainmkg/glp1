@@ -271,6 +271,7 @@ VALUES (...);
 
 **C6. Fact-check rotatif (OBLIGATOIRE chaque run, ajoute le 01/08/2026)** — ne plus attendre le J4 de l'audit pour fact-checker :
 - Chaque run, prendre les **2 articles les plus anciens** (tri par `last_fact_checked` dans la table articles, sinon par `updatedAt` du fichier) et verifier leurs 3-5 chiffres cles via WebSearch (prix, taux, dates, criteres reglementaires).
+- **PRIORITE AUX ARTICLES LIVE (regle ajoutee 16/08/2026)** : exclure du quota les fichiers `published: false` (14 brouillons recenses le 16/08, surtout alternatives-glp1 — les runs des 13-16/08 ont depense leur quota C6 sur ces brouillons invisibles). Verifier le flag dans le .md avant de compter l'article dans le quota ; les brouillons ne se fact-checkent que s'il ne reste aucun article live en retard.
 - Chiffre faux ou perime → correction directe sourcee dans le .md (si < 30% de l'article) ou correction_ticket. Mettre a jour `last_fact_checked` dans la table articles dans les deux cas.
 - Une ligne par article dans le rapport : slug + verdict (OK / corrige / ticket).
 
