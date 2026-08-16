@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Assiette type sous GLP-1 : moitié légumes, un quart protéines, un quart féculents complets">
+  <defs>
+    <linearGradient id="bgregimeglp1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a3c34"/>
+      <stop offset="1" stop-color="#0f2620"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgregimeglp1)"/>
+
+  <!-- assiette : camembert 1/2 legumes, 1/4 proteines, 1/4 feculents -->
+  <g transform="translate(560 225)">
+    <circle r="150" fill="none" stroke="#e8f5ee" stroke-width="6" opacity="0.35"/>
+    <!-- moitie legumes (gauche) -->
+    <path d="M0 -128 A128 128 0 0 0 0 128 Z" fill="#16a34a" opacity="0.9"/>
+    <!-- quart proteines (haut droit) -->
+    <path d="M0 -128 A128 128 0 0 1 128 0 L0 0 Z" fill="#e8f5ee" opacity="0.92"/>
+    <!-- quart feculents (bas droit) -->
+    <path d="M128 0 A128 128 0 0 1 0 128 L0 0 Z" fill="#8fd8b0" opacity="0.65"/>
+    <!-- fourchette -->
+    <g transform="translate(-208 -60)" fill="#e8f5ee" opacity="0.8">
+      <rect x="-4" y="30" width="8" height="120" rx="4"/>
+      <rect x="-16" y="-10" width="6" height="44" rx="3"/>
+      <rect x="-3" y="-10" width="6" height="44" rx="3"/>
+      <rect x="10" y="-10" width="6" height="44" rx="3"/>
+      <path d="M-16 30 Q0 44 16 30 L16 36 Q0 50 -16 36 Z"/>
+    </g>
+  </g>
+
+  <!-- labels -->
+  <text x="64" y="120" font-family="Georgia, serif" font-size="44" fill="#e8f5ee">Régime GLP-1</text>
+  <text x="64" y="168" font-family="Georgia, serif" font-size="26" fill="#8fd8b0">quoi manger sous Wegovy,</text>
+  <text x="64" y="200" font-family="Georgia, serif" font-size="26" fill="#8fd8b0">Ozempic ou Mounjaro</text>
+
+  <g font-family="Georgia, serif" font-size="20" fill="#e8f5ee">
+    <circle cx="74" cy="266" r="8" fill="#16a34a"/>
+    <text x="94" y="273">½ légumes et fibres</text>
+    <circle cx="74" cy="302" r="8" fill="#e8f5ee"/>
+    <text x="94" y="309">¼ protéines d'abord</text>
+    <circle cx="74" cy="338" r="8" fill="#8fd8b0"/>
+    <text x="94" y="345">¼ féculents complets</text>
+  </g>
+</svg>

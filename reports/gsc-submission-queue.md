@@ -25,6 +25,7 @@ La routine AJOUTE ici a chaque publication — elle ne relance jamais dans le ch
 
 - [ ] https://glp1-france.fr/collections/glp1-cout/ozempic-pour-maigrir-prix-remboursement-obesite/ (article 11/08, prioritaire — cible « ozempic pour maigrir prix », 144 imp/14j pos ~10)
 - [ ] https://glp1-france.fr/collections/retraites-bien-etre/retraite-yoga-perte-de-poids-france-comparatif-prix/ (article 12/08 — cible « retraite yoga perte de poids »)
+- [ ] https://glp1-france.fr/collections/regime-glp1/regime-glp1-quoi-manger-menus-erreurs/ (article 16/08 — cible « regime glp1 », requête tête sans page en top 20)
 
 ## Soumises
 
