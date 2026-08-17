@@ -6,7 +6,7 @@ seoTitle: "GLP-1 Grossesse Fertilité Bébés Ozempic : Guide Complet 2026"
 seoDescription: "GLP-1 et grossesse : risques fœtaux, fertilité augmentée, arrêt du traitement. Recommandations pour les femmes sous Ozempic ou Wegovy."
 date: '2026-03-15'
 publishedAt: '2026-03-15'
-updatedAt: '2026-03-15'
+updatedAt: '2026-08-17'
 featured: true
 author: "Rédaction GLP-1 France"
 readingTime: 9
@@ -122,7 +122,7 @@ Ces questions font l'objet de registres de suivi internationaux, et les résulta
 
 ### Peut-on allaiter sous GLP-1 ?
 
-Non, les [contre-indications [des GLP-1 pendant l'allaitement](/collections/effets-secondaires-glp1/glp1-allaitement-ozempic-wegovy-post-partum-contre-indication/)](/collections/effets-secondaires-glp1/glp1-allaitement-ozempic-wegovy-post-partum-contre-indication/) sont formelles. On sait que le sémaglutide passe dans le lait des animaux, et bien que les données humaines soient insuffisantes, le principe de précaution s'applique.
+Non, les [contre-indications des GLP-1 pendant l'allaitement](/collections/effets-secondaires-glp1/glp1-allaitement-ozempic-wegovy-post-partum-contre-indication/) sont formelles. On sait que le sémaglutide passe dans le lait des animaux, et bien que les données humaines soient insuffisantes, le principe de précaution s'applique.
 
 Si vous souhaitez allaiter, vous devrez attendre la fin de la période d'allaitement avant de reprendre votre traitement GLP-1. Discutez de ce choix avec votre médecin, qui vous aidera à planifier la reprise du traitement après le sevrage.
 
@@ -139,4 +139,4 @@ La bonne nouvelle : la perte de poids obtenue grâce aux GLP-1 peut améliorer v
 
 ---
 
-*Sources : Résumé des caractéristiques du produit Ozempic (EMA, 2024), Wegovy RCP (EMA, 2023), données du registre PREG-GLP1 (publications 2024), HAS recommandations obésité et grossesse.*
+*Sources : Résumé des caractéristiques du produit Ozempic (EMA), Wegovy RCP (EMA), Parker et al., Diabetes, Obesity and Metabolism 2025 (données de sécurité grossesse issues des essais cliniques réglementaires), HAS recommandations obésité et grossesse.*
