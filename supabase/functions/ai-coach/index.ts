@@ -384,7 +384,23 @@ const STALE_PRICE_RULES: Array<{ pattern: RegExp; replacement: string }> = [
   { pattern: /\b169\s*(?:€|euros?)?\s*(?:à|a|-|–|—|et)\s*360\s*(?:€|euros?)/gi, replacement: "146,91 € à 195,10 €" },
   // Mounjaro : ancienne fourchette 230-440 €
   { pattern: /\b230\s*(?:€|euros?)?\s*(?:à|a|-|–|—|et)\s*440\s*(?:€|euros?)/gi, replacement: "176,10 € à 433,80 €" },
+  // Mounjaro : fourchette hallucinée 395-440 € (constatée en prod le 16/08/2026,
+  // llama-3.3-70b sur « Mounjaro 7,5 vs 10 mg » — aucun prix officiel entre 176,10 et 433,80 €)
+  { pattern: /\b395\s*(?:€|euros?)?\s*(?:à|a|-|–|—|et)\s*440\s*(?:€|euros?)/gi, replacement: "176,10 € à 433,80 €" },
+  // « selon … la pharmacie » accolé à un prix : le prix est réglementé, identique partout
+  // (même conversation du 16/08/2026 : « selon le dosage exact et la pharmacie »)
+  { pattern: /selon le dosage exact et la pharmacie/gi, replacement: "selon le dosage (prix réglementé, identique dans toutes les pharmacies)" },
 ];
+
+// Liens hallucinés : le modèle invente parfois une URL de catégorie
+// « /collections/<slug>/_category_/ » (constaté en prod le 17/08/2026, 404).
+// Aucune URL du site ne contient _category_ — on retombe sur le hub de la collection.
+function sanitizeHallucinatedLinks(text: string): { text: string; corrected: boolean } {
+  const pattern = /\/collections\/([a-z0-9-]+)\/_category_\/?/g;
+  const corrected = pattern.test(text);
+  pattern.lastIndex = 0;
+  return { text: text.replace(pattern, "/collections/$1/"), corrected };
+}
 
 function sanitizePrices(text: string): { text: string; corrected: boolean } {
   let corrected = false;
@@ -967,6 +983,13 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
       if (priceCheck.corrected) {
         console.warn(`[price-guard] fourchette périmée corrigée (modèle: ${usedModel})`);
         cleanResponse = priceCheck.text;
+      }
+
+      // Garde-fou liens : réécrit les URLs de catégorie hallucinées (404) vers le hub réel.
+      const linkCheck = sanitizeHallucinatedLinks(cleanResponse);
+      if (linkCheck.corrected) {
+        console.warn(`[link-guard] lien _category_ halluciné corrigé (modèle: ${usedModel})`);
+        cleanResponse = linkCheck.text;
       }
 
       // Garde-fou éligibilité → lien du test : la règle du prompt (« lien direct

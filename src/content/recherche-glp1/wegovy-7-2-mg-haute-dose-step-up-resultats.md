@@ -3,7 +3,7 @@ title: "Wegovy 7,2 mg Haute Dose : Résultats STEP-UP France"
 description: "Wegovy 7,2 mg haute dose STEP-UP : 20,7% de perte de poids vs 17,5% à 2,4 mg. Résultats, calendrier et disponibilité en France en 2026."
 pubDate: 2026-03-17
 date: 2026-03-17
-updatedAt: 2026-03-17
+updatedAt: 2026-08-17
 author: "Rédaction GLP-1 France"
 category: "Recherche médicale"
 tags: ["glp1", "wegovy", "semaglutide", "haute dose", "7.2 mg", "STEP-UP", "novo nordisk", "obésité", "recherche", "2026"]
@@ -90,9 +90,9 @@ Les résultats présentés par Novo Nordisk montrent une différence cliniquemen
 
 | Groupe | Perte de poids moyenne à 72 semaines | ≥ 20% de perte | ≥ 25% de perte |
 |---|---|---|---|
-| **Sémaglutide 7,2 mg** | **-20,7%** | **~45%** | **~33%** |
-| Sémaglutide 2,4 mg | -17,5% | ~28% | ~14% |
-| Placebo | -1,8% | ~2% | <1% |
+| **Sémaglutide 7,2 mg** | **-20,7%** | **~45%** | **33,2%** |
+| Sémaglutide 2,4 mg | -17,5% | ~28% | 16,7% |
+| Placebo | -2,4% | ~2% | 0% |
 
 La dose de 7,2 mg apporte donc un gain d'environ 3 points de pourcentage de perte de poids par rapport à la dose de 2,4 mg. Cela peut sembler modeste en valeur absolue, mais en termes cliniques, cette différence est significative : pour un patient de 120 kg, cela représente environ 3,6 kg de perte supplémentaire.
 
@@ -129,9 +129,9 @@ La bonne nouvelle est que ces effets restent transitoires dans la majorité des 
 
 Le taux d'arrêt pour effets indésirables a été légèrement plus élevé dans le groupe 7,2 mg que dans le groupe 2,4 mg, mais la différence est restée modérée. La grande majorité des patients qui ont toléré l'escalade de dose jusqu'à 7,2 mg ont pu maintenir ce traitement sur la durée de l'étude.
 
-### Aucun signal de sécurité nouveau
+### Un signal spécifique à connaître : les dysesthésies
 
-Point rassurant : la dose de 7,2 mg n'a pas fait émerger de nouveau signal de sécurité par rapport à la dose de 2,4 mg. Les événements indésirables graves étaient rares et comparables entre les groupes. Les préoccupations connues autour des GLP-1 (pancréatite, lithiase biliaire) n'ont pas montré d'augmentation significative avec la haute dose.
+Les événements indésirables graves étaient rares et comparables entre les groupes, et les préoccupations connues autour des GLP-1 (pancréatite, lithiase biliaire) n'ont pas montré d'augmentation significative avec la haute dose. En revanche, un effet s'est révélé nettement plus fréquent à 7,2 mg : les **dysesthésies** (sensations cutanées altérées — picotements, fourmillements, hypersensibilité), rapportées chez environ **22 % des patients sous 7,2 mg contre 6 % sous 2,4 mg** et 0,3 % sous placebo (données FDA/Novo Nordisk, mars 2026). Ces symptômes étaient le plus souvent d'intensité légère à modérée, mais c'est la principale différence de tolérance propre à la haute dose.
 
 ## Comment se situe le 7,2 mg face à la concurrence ? {#comparaison}
 
@@ -153,17 +153,13 @@ Pour Novo Nordisk, le 7,2 mg présente un avantage majeur : il s'agit d'une simp
 
 ### Où en est le dossier réglementaire ?
 
-Sur la base des résultats de STEP-UP, Novo Nordisk a annoncé son intention de déposer des demandes d'autorisation de mise sur le marché auprès de la FDA (États-Unis) et de l'EMA (Europe). Le dépôt FDA a été annoncé pour le premier semestre 2026.
+Le dossier réglementaire est désormais bouclé des deux côtés de l'Atlantique. Les résultats complets de STEP UP (et de son pendant chez les diabétiques de type 2, STEP UP T2D) ont été publiés dans *The Lancet Diabetes & Endocrinology* en novembre 2025.
 
-Pour l'Europe, la procédure passe par l'EMA, qui émet un avis avant que chaque pays ne l'intègre dans son système de santé national. Ce processus prend généralement 12 à 18 mois après le dépôt.
+### Calendrier réglementaire (mis à jour août 2026)
 
-### Calendrier estimé pour la France
-
-En se basant sur les délais habituels, voici un calendrier indicatif :
-
-- **Mars 2026** : FDA a approuvé Wegovy HD (7,2 mg) aux États-Unis
-- **Décembre 2025** : La Commission européenne a approuvé l'administration de sémaglutide 7,2 mg via 3 injections de 2,4 mg. La décision EMA pour le **stylo unique 7,2 mg** est attendue pour le **S2 2026**.
-- **S2 2026** : décision réglementaire attendue en UE pour le stylo unique 7,2 mg
+- **Décembre 2025** : avis positif du CHMP (12/12/2025) puis approbation par la Commission européenne du schéma 7,2 mg administré via 3 injections de 2,4 mg lors d'une même prise hebdomadaire.
+- **19 mars 2026** : la FDA approuve **Wegovy HD** (stylo unique 7,2 mg) aux États-Unis, avec un lancement américain en avril 2026.
+- **15 juillet 2026** : la Commission européenne approuve le **stylo unique 7,2 mg** pour l'UE.
 - **2027 (au plus tôt)** : évaluation HAS et remboursement potentiel en France
 
 Ce calendrier reste soumis à de nombreuses incertitudes : les discussions sur le prix, les éventuelles demandes de données complémentaires par l'EMA, et la question des capacités de production de Novo Nordisk, qui a déjà connu des [tensions d'approvisionnement](/collections/traitements-glp1/penurie-ozempic-wegovy-mounjaro-rupture-stock-france-alternatives/) avec le Wegovy 2,4 mg.
@@ -182,7 +178,7 @@ Pour les patients qui ne perdent pas suffisamment de poids avec Wegovy 2,4 mg, l
 
 ### Pas de raison de reporter un traitement actuel
 
-Si vous êtes actuellement sous Wegovy 2,4 mg ou si votre médecin vous a proposé de commencer un traitement GLP-1, il n'y a aucune raison d'attendre la haute dose. La dose de 2,4 mg reste efficace et éprouvée, et la disponibilité du 7,2 mg en France n'est pas prévue avant 2028 au plus tôt.
+Si vous êtes actuellement sous Wegovy 2,4 mg ou si votre médecin vous a proposé de commencer un traitement GLP-1, il n'y a aucune raison d'attendre la haute dose. La dose de 2,4 mg reste efficace et éprouvée. Le stylo 7,2 mg est approuvé en Europe depuis juillet 2026, mais sa mise à disposition effective en France — et surtout son éventuel remboursement — dépendent encore de l'évaluation par la HAS et des négociations de prix (pas avant 2027).
 
 De même, pour les patients chez qui le sémaglutide n'est pas assez efficace, d'autres options existent déjà ou arrivent prochainement, comme le [tirzépatide (Mounjaro)](/collections/traitements-glp1/guide-complet-mounjaro/).
 
@@ -192,13 +188,13 @@ Quelle que soit la dose, le sémaglutide reste un médicament qui s'inscrit dans
 
 ## Points clés à retenir
 
-- Le sémaglutide 7,2 mg (Wegovy haute dose) a montré une perte de poids de **20,7 %** dans l'essai STEP-UP, contre 17,5 % pour la dose actuelle de 2,4 mg.
-- Près de **45 % des patients** sous 7,2 mg ont perdu au moins 20 % de leur poids.
-- Les effets secondaires gastro-intestinaux sont plus fréquents mais restent gérables avec une escalade de dose progressive.
-- Aucun nouveau signal de sécurité n'a été identifié par rapport à la dose de 2,4 mg.
-- La disponibilité en France n'est pas attendue avant **2028 au plus tôt**.
+- Le sémaglutide 7,2 mg (Wegovy haute dose) a montré une perte de poids de **20,7 %** dans l'essai STEP-UP, contre 17,5 % pour la dose actuelle de 2,4 mg (placebo : -2,4 %).
+- Près de **45 % des patients** sous 7,2 mg ont perdu au moins 20 % de leur poids, et **33,2 %** au moins 25 %.
+- Les effets secondaires gastro-intestinaux sont plus fréquents mais restent gérables avec une escalade de dose progressive ; les **dysesthésies** (22 % vs 6 %) sont la principale différence de tolérance propre à la haute dose.
+- Approbations obtenues : FDA le 19 mars 2026 (Wegovy HD), stylo unique UE le 15 juillet 2026.
+- En France, l'évaluation HAS et un éventuel remboursement ne sont pas attendus avant **2027 au plus tôt**.
 - Cette haute dose sera probablement réservée aux patients insuffisamment répondeurs à la dose standard.
 
 ---
 
-*Dernière mise à jour : mars 2026. Ces informations sont basées sur les résultats publiés par Novo Nordisk. Consultez votre médecin pour toute question relative à votre traitement.*
+*Dernière mise à jour : août 2026. Sources : essai STEP UP (The Lancet Diabetes & Endocrinology, novembre 2025), communiqués Novo Nordisk et FDA (approbation Wegovy HD du 19 mars 2026), Commission européenne (approbations des 12 décembre 2025 et 15 juillet 2026). Consultez votre médecin pour toute question relative à votre traitement.*
