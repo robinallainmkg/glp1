@@ -2,7 +2,7 @@
 title: "Témoignage : Bernard, 54 ans, Diabète T2 et -18 kg Ozempic"
 thumbnail: "/images/thumbnails/communaute-glp1.jpg"
 description: "Bernard, 54 ans, raconte son parcours sous Ozempic : diabète type 2 contrôlé, -18 kg en 14 mois et HbA1c normalisée sous sémaglutide."
-author: "Bernard D."
+author: "Rédaction GLP-1 France"
 image: "/images/thumbnails/guide-complet-ozempic-illus.jpg"
 collection: "témoignages"
 category: "transformation"

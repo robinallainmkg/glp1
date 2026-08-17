@@ -2,7 +2,7 @@
 title: "Témoignage Ozempic Perte de Poids : Sophie, -28 kg à 52 Ans"
 thumbnail: "/images/thumbnails/communaute-glp1.jpg"
 description: "Témoignage ozempic perte de poids : Sophie D., 52 ans, -28 kilos en 14 mois avec Ozempic après la ménopause. Transformation et conseils."
-author: "Sophie D."
+author: "Rédaction GLP-1 France"
 image: "/images/collections/temoignages/sophie29.jpg"
 collection: "témoignages"
 category: "transformation"

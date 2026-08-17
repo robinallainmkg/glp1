@@ -4,7 +4,7 @@ description: "Comment acheter Wegovy France pharmacie en 2026 : ordonnance oblig
 pubDate: 2025-08-23
 date: 2026-06-22
 updatedAt: 2026-06-22
-author: "Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
 collection: "glp1-cout"

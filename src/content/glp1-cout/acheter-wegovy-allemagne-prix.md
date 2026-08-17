@@ -4,7 +4,7 @@ description: "Wegovy Allemagne prix 2026 : 172-277€ selon dosage. Pharmacies c
 pubDate: 2026-05-02
 date: '2026-05-02'
 updatedAt: '2026-08-03'
-author: "Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Économie santé"
 tags: ["glp1", "wegovy", "prix", "allemagne", "europe", "achat-transfrontalier"]
 collection: "glp1-cout"

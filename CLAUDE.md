@@ -187,6 +187,18 @@ Le diagnostic de fuite (point 5) se fait en comparant chaque K a sa baseline : l
 6. **[AUTONOME — backlog]** Email de livraison J0 automatique post-achat Dossier (« votre dossier est pret » + lien /mon-espace/dossier/) — actuellement l'acheteur qui ferme l'onglet de retour Stripe n'a aucun moyen de retrouver son dossier.
 Estimation actions 2+3 a 3 % de clic : K1 0,69 % → ~1,4 %, soit ~6 ventes/mois a K2-K4 constants.
 
+### PLAN RECOVERY SEO (audit 17/08/2026, "go go go" Robin — section OBLIGATOIRE dans chaque rapport quotidien jusqu'a cloture)
+
+Audit complet : `reports/audit-seo-general-2026-08-17.md`. A chaque run, reporter :
+1. **Positions pages money** : prix-mounjaro-france, prix-wegovy-france, wegovy-remboursement-mutuelle, regime-mounjaro-optimal (position + clics 7j vs baseline juin ~125/92/60 clics/sem).
+2. **Degraissage index** [DEPLOYE 17/08/2026] : ~20 100 pages pharmacie individuelles en noindex+hors sitemap SAUF keep-list 38 URLs a >= 1 clic (`config/pharmacy-index-keeplist.json`, template [pharmacie].astro + filtre sitemap astro.config.mjs). Verdict attendu J+30 (~17/09) : imp/clics du cluster conserve vs avant. Rafraichir la keep-list 1x/semaine (requete GSC clics >= 1 sur 28j) — ajouter, ne retirer qu'apres 2 semaines a 0 clic.
+3. **Cannibalisation** [EN COURS] : 42 requetes >= 100 imp/28j servies par 3+ pages. Traiter 5/jour : choisir la canonique, desoptimiser les titles concurrents, maillage convergent. Compteur x/42 dans le rapport. Premieres cibles : ozempic prix france (14 pages), ozempic prix pharmacie (19), ozempic sans ordonnance (4, l'article dedie pos 27-31 vs prix-ozempic-france pos 8-13).
+4. **Bylines fictives** [FAIT 17/08/2026] : 16 articles (Julien Lefevre x11, Sophie D., Marie L., Laurent M., Karim Benali, Bernard D.) passes a "Rédaction GLP-1 France".
+5. **C1 serie** : seoTitle/seoDescription des ~74 pages a impressions (3-5/jour, plus vues d'abord).
+6. **Reactivation articles invisibles** : ~130 articles sans impression 28j — lots de 5/jour (refresh date + maillage entrant + file GSC ; fusion si doublon).
+7. **Backlinks vague 2** : drafts associations patients/annuaires sante/presse — envoi sur le modele vague 1 (11/08).
+8. **Reindexation manuelle** (Robin) : demandee pour les 4 pages money — relancer une fois si pas fait au 20/08.
+
 ### Phase A — Etat des lieux (collecte, chaque run)
 
 Verifier fraicheur GA4/GSC (regle critique en tete de fichier), site live (home 200, redirect zepbound→mounjaro, sitemap), puis :

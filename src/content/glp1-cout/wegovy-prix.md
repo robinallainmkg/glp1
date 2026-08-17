@@ -4,7 +4,7 @@ description: "Prix Wegovy pharmacie 2026 : ~147€ à 350€/mois selon le dosag
 pubDate: 2025-08-23
 date: '2026-06-22'
 updatedAt: '2026-06-22'
-author: "Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement", "wegovy prix pharmacie"]
 collection: "glp1-cout"

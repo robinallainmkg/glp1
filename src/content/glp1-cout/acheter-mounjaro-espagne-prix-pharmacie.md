@@ -4,7 +4,7 @@ description: "Mounjaro Espagne prix 2026 : 207-446€ selon dosage. Comment ache
 pubDate: 2026-05-02
 date: '2026-05-02'
 updatedAt: '2026-05-02'
-author: "Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Économie santé"
 tags: ["glp1", "mounjaro", "prix", "espagne", "europe", "achat-transfrontalier"]
 collection: "glp1-cout"

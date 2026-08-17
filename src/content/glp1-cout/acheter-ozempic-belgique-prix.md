@@ -4,7 +4,7 @@ description: "Ozempic Belgique prix 2026 : 104€ en pharmacie, remboursement IN
 pubDate: 2026-05-02
 date: '2026-05-02'
 updatedAt: '2026-05-02'
-author: "Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Économie santé"
 tags: ["glp1", "ozempic", "prix", "belgique", "europe", "achat-transfrontalier"]
 collection: "glp1-cout"

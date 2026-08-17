@@ -3,7 +3,7 @@ title: "Ozempic Effets Secondaires Risques : Guide Complet 2026"
 description: "Ozempic effets secondaires risques et dangers : posologie sécurisée et recommandations médicales pour une utilisation du sémaglutide en France."
 pubDate: 2025-08-10
 date: 2025-08-10
-author: "Karim Benali"
+author: "Rédaction GLP-1 France"
 category: "Effets secondaires"
 tags: ["glp1", "effets-secondaires", "tolérance"]
 collection: "effets-secondaires-glp1"
