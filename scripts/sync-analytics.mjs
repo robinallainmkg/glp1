@@ -603,6 +603,15 @@ async function main() {
   console.log(`   GA4: ${gaRows.length} rows`);
   console.log(`   GSC: ${gscRows.length} rows`);
   console.log('='.repeat(60));
+
+  // Fail-fast : GSC a toujours des lignes en fonctionnement normal.
+  // 0 ligne = API en erreur (403 permissions, quota…) — on fait echouer le job
+  // pour que la panne soit visible dans GitHub Actions au lieu de rester verte
+  // (panne du 10-17/08/2026 masquee 6 jours par un exit 0).
+  if (gscRows.length === 0) {
+    console.error('❌ GSC: 0 rows — la sync GSC a echoue (voir erreur API plus haut). Exit 1.');
+    process.exit(1);
+  }
 }
 
 main().catch(err => {

@@ -74,10 +74,10 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
           <div id="verdictBox" class="rounded-xl p-5 mb-5"></div>
           <div id="nextSteps" class="text-gray-700 space-y-3 mb-6"></div>
 
-          <!-- Capture email -->
+          <!-- Capture email (titre/pitch adaptés au verdict par renderVerdict) -->
           <div class="rounded-xl p-5 mb-5" style="background:#f0fdf4; border: 1px solid #bbf7d0;">
-            <p class="font-semibold mb-1" style="color:#1a3c34;">📩 Recevez votre résultat par email</p>
-            <p class="text-sm text-gray-600 mb-3">Votre verdict + les 3 grandes étapes du parcours remboursement, envoyés sous 24 h.</p>
+            <p class="font-semibold mb-1" style="color:#1a3c34;" id="captureTitle">📩 Recevez votre résultat par email</p>
+            <p class="text-sm text-gray-600 mb-3" id="capturePitch">Votre verdict + les 3 grandes étapes du parcours remboursement, envoyés sous 24 h.</p>
             <form id="captureForm" class="flex flex-col sm:flex-row gap-2">
               <input type="email" id="captureEmail" required placeholder="votre@email.fr"
                 class="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none" />
@@ -221,6 +221,29 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
         box.innerHTML = html;
         steps.innerHTML = stepsHtml;
         if (eligible) upsell.classList.remove('hidden'); else upsell.classList.add('hidden');
+
+        // Pitch de capture adapté au verdict : un verdict négatif doit aussi
+        // donner une raison de laisser son email (récap + alternatives).
+        var capTitle = document.getElementById('captureTitle');
+        var capPitch = document.getElementById('capturePitch');
+        if (state.verdict === 'eligible') {
+          capTitle.textContent = '📩 Recevez votre plan d’action par email';
+          capPitch.textContent = 'Votre verdict + les 3 étapes vers la prescription remboursée (CSO, justificatifs, renouvellement), envoyés sous 24 h.';
+        } else if (state.verdict === 'eligible_apres_suivi') {
+          capTitle.textContent = '📩 Recevez votre plan des 6 prochains mois';
+          capPitch.textContent = 'Comment démarrer et documenter votre suivi nutritionnel pour débloquer le remboursement — envoyé sous 24 h.';
+        } else if (state.verdict === 'non_eligible_comorbidite') {
+          capTitle.textContent = '📩 Recevez le récap + les comorbidités qui comptent';
+          capPitch.textContent = 'La liste des comorbidités reconnues (souvent non diagnostiquées : apnée, hypertension…) à faire dépister — envoyée sous 24 h.';
+        } else {
+          capTitle.textContent = '📩 Recevez votre récap + vos alternatives';
+          capPitch.textContent = 'Votre résultat détaillé et les options adaptées à votre profil (traitement non remboursé, suivi, alternatives) — envoyés sous 24 h.';
+        }
+
+        // Instrumentation GA4 : mesure du funnel verdict → capture (K6)
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'test_verdict', { verdict: state.verdict, imc: Math.round(state.imc) });
+        }
       }
 
       document.getElementById('captureForm').addEventListener('submit', function (e) {
@@ -238,7 +261,12 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
           created_at: new Date().toISOString()
         }).then(function (r) {
           if (r.error) { msg.textContent = 'Une erreur est survenue, réessayez.'; msg.style.color = '#b91c1c'; }
-          else { msg.textContent = '✓ C\'est noté ! Vous recevrez votre récapitulatif sous 24 h.'; msg.style.color = '#15803d'; document.getElementById('captureEmail').value = ''; }
+          else {
+            msg.textContent = '✓ C\'est noté ! Vous recevrez votre récapitulatif sous 24 h.'; msg.style.color = '#15803d'; document.getElementById('captureEmail').value = '';
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'test_email_capture', { verdict: state.verdict });
+            }
+          }
         });
       });
 
