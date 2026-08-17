@@ -6,7 +6,7 @@ keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounj
 seoTitle: "Prix Mounjaro 2026 : 176-433 € — même prix partout, -65% Sécu"
 seoDescription: "Prix Mounjaro officiel : 176 à 434 €/mois selon dosage, identique dans toutes les pharmacies. Remboursé à 65 % depuis juin 2026 — vérifiez votre éligibilité."
 publishedAt: '2025-09-06'
-updatedAt: '2026-08-15'
+updatedAt: '2026-08-17'
 date: 2026-07-20
 featured: true
 priority: 1
@@ -16,7 +16,7 @@ image: "/images/thumbnails/prix-mounjaro-france-illus.svg"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 mainKeyword: "prix Mounjaro France"
-secondaryKeywords: ["mounjaro prix", "mounjaro prix le moins cher pharmacie", "mounjaro 5mg prix", "mounjaro 15 mg prix france", "carte prix mounjaro france", "mounjaro pharmacie moins cher autour de moi", "mounjaro prix espagne", "mounjaro remboursement 2026"]
+secondaryKeywords: ["mounjaro prix", "mounjaro prix le moins cher pharmacie", "mounjaro 5mg prix", "mounjaro 15 mg prix france", "mounjaro prix espagne", "mounjaro remboursement 2026"]
 faqSchema:
   - question: "Quel est le prix du Mounjaro en France en 2026 ?"
     answer: "Le prix du Mounjaro en France varie de 176 à 433 euros par mois selon le dosage (2,5 mg à 15 mg). Depuis le 15 juin 2026, Mounjaro est remboursé à 65% par l'Assurance Maladie pour l'obésité sous conditions (IMC ≥ 35 avec comorbidité ou IMC ≥ 40)."

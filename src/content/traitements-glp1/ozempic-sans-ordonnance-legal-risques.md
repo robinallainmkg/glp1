@@ -1,7 +1,8 @@
 ---
-title: "Ozempic sans ordonnance : pourquoi c'est impossible (et dangereux) — et comment l'obtenir légalement"
-description: "Acheter Ozempic sans ordonnance est illégal en France : tout site qui en vend en ligne est frauduleux. Risques réels (contrefaçons, arnaques), prix officiel et voies légales pour l'obtenir."
+title: "Faux Ozempic vendu en ligne : contrefaçons, arnaques et recours si vous avez déjà commandé"
+description: "Stylos Ozempic falsifiés, gélules « GLP-1 » frauduleuses : comment reconnaître les contrefaçons vendues en ligne, et les recours concrets (banque, signal.conso, médecin) si vous avez déjà commandé."
 pubDate: 2026-07-13
+updatedAt: 2026-08-17
 author: "Équipe GLP-1 France"
 category: "Traitements"
 tags: ["ozempic sans ordonnance", "acheter ozempic en ligne", "ozempic contrefaçon", "sémaglutide arnaque", "ordonnance ozempic", "prix ozempic"]
@@ -30,7 +31,7 @@ secondaryKeywords: ["acheter ozempic en ligne", "prix ozempic sans ordonnance", 
 
 ## La réponse en 30 secondes
 
-**Non, il est impossible d'acheter de l'Ozempic sans ordonnance en France — et tout site qui prétend le contraire est illégal.**
+**Non, il est impossible d'acheter de l'Ozempic sans ordonnance en France — et tout site qui prétend le contraire est illégal.** Pour le cadre légal complet et les voies d'obtention remboursées, voir notre guide de référence : [Ozempic sans ordonnance : illégal en France — les voies légales](/collections/traitements-glp1/ozempic-sans-ordonnance-achat-en-ligne-france/). Cette page-ci se concentre sur les **contrefaçons et arnaques** — et sur **quoi faire si vous avez déjà commandé**.
 
 Ozempic (sémaglutide) est classé sur la **liste I des substances vénéneuses** : il ne peut être délivré que **sur présentation d'une ordonnance médicale, dans une pharmacie**. C'est ce qu'indique la [fiche officielle du médicament](https://base-donnees-publique.medicaments.gouv.fr/medicament/61400703/extrait) dans la base de données publique des médicaments.
 
