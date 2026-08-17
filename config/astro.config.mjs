@@ -6,6 +6,22 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import fs from 'node:fs';
 
+// Dégraissage index (audit 17/08/2026) : les pages pharmacie individuelles sans
+// clic GSC 28 j sortent du sitemap (et portent un noindex côté template) ; seules
+// les URLs de la keep-list restent soumises. Hubs villes, cp, dept et pages prix
+// ne sont pas concernés.
+const pharmacyIndexKeeplist = JSON.parse(
+  fs.readFileSync(new URL('./pharmacy-index-keeplist.json', import.meta.url), 'utf8')
+);
+function isDeindexedPharmacyPage(page) {
+  const m = page.match(/glp1-france\.fr(\/pharmacies\/[^/]+\/[^/]+\/)$/);
+  if (!m) return false;
+  const p = m[1];
+  if (p.startsWith('/pharmacies/dept/') || p.startsWith('/pharmacies/cp/')) return false;
+  if (/^\/pharmacies\/[^/]+\/prix-/.test(p)) return false;
+  return !pharmacyIndexKeeplist.includes(p);
+}
+
 // Integration Astro : endpoint /__deploy pour le dashboard integration (dev only)
 function integrationApi() {
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -80,7 +96,7 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
-      filter: (page) => !page.includes('/admin/') && !page.includes('/test-admin/') && !page.includes('/test-supabase/') && !page.includes('/test-affiliation-multi/') && !page.includes('/admin-dashboard/') && !page.includes('/admin-stats/') && !page.includes('/demo-affiliate-sidebar/') && !page.includes('/temoignages-glp1') && !page.includes('/guide-beaute-perte-de-poids-glp1') && !page.includes('/produits-recommandes') && !page.match(/glp1-france\.fr\/temoignage-/) && !page.includes('/diagnostic-') && !page.includes('/test-affiliation/') && !page.match(/glp1-france\.fr\/glp1-perte-de-poids\//) && !page.includes('/mentions-legales/') && !page.includes('/politique-confidentialite/') && !page.match(/glp1-france\.fr\/quel-traitement-glp1-choisir\/$/),
+      filter: (page) => !page.includes('/admin/') && !page.includes('/test-admin/') && !page.includes('/test-supabase/') && !page.includes('/test-affiliation-multi/') && !page.includes('/admin-dashboard/') && !page.includes('/admin-stats/') && !page.includes('/demo-affiliate-sidebar/') && !page.includes('/temoignages-glp1') && !page.includes('/guide-beaute-perte-de-poids-glp1') && !page.includes('/produits-recommandes') && !page.match(/glp1-france\.fr\/temoignage-/) && !page.includes('/diagnostic-') && !page.includes('/test-affiliation/') && !page.match(/glp1-france\.fr\/glp1-perte-de-poids\//) && !page.includes('/mentions-legales/') && !page.includes('/politique-confidentialite/') && !page.match(/glp1-france\.fr\/quel-traitement-glp1-choisir\/$/) && !isDeindexedPharmacyPage(page),
       customPages: [
         'https://glp1-france.fr/guides/suivi-medical-glp1/',
         'https://glp1-france.fr/guides/guides-age-glp1/'

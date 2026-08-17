@@ -6,7 +6,7 @@ seoDescription: "Wegovy remboursement 2026 : 65% Sécu depuis le 15/06/2026, la 
 pubDate: 2025-08-23
 date: '2026-06-22'
 updatedAt: '2026-07-20'
-author: "Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
 collection: "glp1-cout"

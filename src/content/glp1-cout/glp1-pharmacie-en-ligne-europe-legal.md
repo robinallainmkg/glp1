@@ -4,7 +4,7 @@ description: "Pharmacie en ligne Europe GLP-1 : guide légal 2026. Wegovy, Mounj
 pubDate: 2026-05-02
 date: '2026-05-02'
 updatedAt: '2026-05-02'
-author: "Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Économie santé"
 tags: ["glp1", "europe", "pharmacie-en-ligne", "legal", "achat-transfrontalier", "prix"]
 collection: "glp1-cout"

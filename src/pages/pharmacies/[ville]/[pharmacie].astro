@@ -208,9 +208,16 @@ const faq = [
     a: `Pour Ozempic (diabète type 2, remboursé 30 % — 100 % en ALD), le reste à charge avant mutuelle est d'environ 54 € par stylo hors ALD. Pour Wegovy et Mounjaro (remboursés 65 % dans l'obésité depuis le 15/06/2026, sous conditions), le reste à charge est de 35 % du prix réglementé — soit environ 51 à 68 € pour Wegovy et 62 à 152 € pour Mounjaro selon le dosage — souvent couvert par une mutuelle "responsable". Détails complets : [Wegovy remboursement mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/) et [Remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).`,
   },
 ];
+
+// Dégraissage index (audit 17/08/2026, go Robin) : les pages pharmacie
+// individuelles sans clic GSC sur 28 j passent en noindex — seules celles de la
+// keep-list (>= 1 clic) restent indexables. Le maillage interne reste suivi (follow).
+import indexKeeplist from '../../../../config/pharmacy-index-keeplist.json';
+const pagePath = `/pharmacies/${pharmacy.city_slug}/${Astro.params.pharmacie}/`;
+const robotsMeta = indexKeeplist.includes(pagePath) ? undefined : 'noindex, follow';
 ---
 
-<StaticLayout title={title} description={description} keywords={`${nameCap}, pharmacie ${pharmacy.postal}, prix Ozempic ${cityCap}, prix Mounjaro ${pharmacy.postal}`}>
+<StaticLayout title={title} description={description} robots={robotsMeta} keywords={`${nameCap}, pharmacie ${pharmacy.postal}, prix Ozempic ${cityCap}, prix Mounjaro ${pharmacy.postal}`}>
   <!-- Schema.org : Pharmacy + Breadcrumb + FAQ -->
   <script type="application/ld+json" is:inline set:html={JSON.stringify({
     "@context": "https://schema.org",

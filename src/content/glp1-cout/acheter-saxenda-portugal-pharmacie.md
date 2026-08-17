@@ -4,7 +4,7 @@ description: "Saxenda preço Portugal 2026 : ~244€/mois. Comment acheter léga
 pubDate: 2026-05-02
 date: '2026-05-02'
 updatedAt: '2026-05-02'
-author: "Julien Lefèvre"
+author: "Rédaction GLP-1 France"
 category: "Économie santé"
 tags: ["glp1", "saxenda", "prix", "portugal", "europe", "achat-transfrontalier"]
 collection: "glp1-cout"
