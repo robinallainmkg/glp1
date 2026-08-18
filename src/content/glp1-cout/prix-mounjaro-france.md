@@ -6,7 +6,7 @@ keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounj
 seoTitle: "Prix Mounjaro 2026 : 176-433 € — même prix partout, -65% Sécu"
 seoDescription: "Prix Mounjaro officiel : 176 à 434 €/mois selon dosage, identique dans toutes les pharmacies. Remboursé à 65 % depuis juin 2026 — vérifiez votre éligibilité."
 publishedAt: '2025-09-06'
-updatedAt: '2026-08-17'
+updatedAt: '2026-08-18'
 date: 2026-07-20
 featured: true
 priority: 1
@@ -153,7 +153,7 @@ Vous cherchez **Mounjaro au prix le moins cher en France** ? Voici la réponse c
 
 ### Comparaison Tarifaire avec les Autres Traitements GLP-1 {#comparaison}
 
-Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GLP-1 disponibles en France est le plus élevé, reflétant son statut de traitement de dernière génération à double mécanisme d'action. Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité sous conditions. Ozempic reste remboursé uniquement dans l'indication diabète de type 2.
+Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GLP-1 disponibles en France est le plus élevé, reflétant son statut de traitement de dernière génération à double mécanisme d'action. Depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65% par l'Assurance Maladie pour l'obésité sous conditions. Ozempic reste remboursé uniquement dans l'indication diabète de type 2. Pour tous les prix des GLP-1 en pharmacie d'un seul coup d'œil, consultez notre [tableau complet des prix GLP-1 2026](/collections/glp1-cout/prix-glp1-pharmacie-tableau-2026/).
 
 <div class="comparison-table-enhanced">
   <div class="comparison-header">
