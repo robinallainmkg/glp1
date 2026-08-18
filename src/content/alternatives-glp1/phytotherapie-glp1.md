@@ -3,6 +3,7 @@ title: "Phytothérapie GLP-1 plantes médicinales : Guide 2026"
 description: "Phytothérapie et GLP-1 : quelles plantes médicinales peuvent compléter ce traitement ? Données scientifiques, précautions et recommandations médicales."
 pubDate: 2025-08-20
 date: 2025-08-20
+updatedAt: 2026-08-18
 author: "Rédaction GLP-1 France"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
@@ -62,16 +63,12 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ## Prix, disponibilité et variations en France
 
 ### Plantes complémentaires courantes
-- **Feuilles de mûrier** : 12-20€/mois (ralentit absorption glucose)
-- **Fenugrec graines** : 8-15€/mois (sensibilité insuline) — la [berbérine](/collections/alternatives-glp1/berberine-glp1/) est une autre option étudiée
-- **Nopal (figue de Barbarie)** : 15-25€/mois (fibres solubles)
-- **Garcinia cambogia** : ⛔ **INTERDIT par l'ANSM** — L'ANSM a interdit en 2012 les préparations magistrales à base de Garcinia cambogia. L'Anses déconseille ces compléments alimentaires à toute la population en raison de risques graves (hépatites fulminantes, décès). Ne pas utiliser.
+- **Feuilles de mûrier** : ralentit l'absorption du glucose
+- **Fenugrec (graines)** : étudié pour la sensibilité à l'insuline — la [berbérine](/collections/alternatives-glp1/berberine-glp1/) est une autre option étudiée
+- **Nopal (figue de Barbarie)** : fibres solubles
+- **Garcinia cambogia** : ⛔ **INTERDIT par l'ANSM** — la prescription et la délivrance de médicaments et préparations à base de Garcinia cambogia sont interdites en France depuis 2012, et l'[Anses déconseille les compléments alimentaires qui en contiennent à l'ensemble de la population](https://www.anses.fr/fr/system/files/NUT2020-SA-0047.pdf) en raison de risques d'atteintes hépatiques graves (hépatites aiguës). Ne pas utiliser.
 
-### Complexes phyto spécialisés
-- **Glyco-régul** (laboratoires) : 25-35€/mois
-- **Metab-complex** : 30-45€/mois
-- **Digestif-comfort** : 20-30€/mois
-- **Consultation phytothérapeute** : 60-80€/séance
+Les prix varient fortement selon la forme (vrac, gélules, extraits standardisés) et le point de vente : comparez en pharmacie ou herboristerie, et méfiez-vous des « complexes minceur » vendus en ligne sans composition claire.
 
 ## Remboursement et prise en charge (France)
 
@@ -116,17 +113,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Relaxantes** : Soir 1-2h avant coucher
 - **GLP-1** : Maintenir horaire habituel
 
-## Produits cosmétiques recommandés
-
-### Préparations artisanales
-- **Tisanes personnalisées** : Mélange selon besoins
-- **Teintures mères BIO** : Concentration optimale
-- **Gélules dosées** : Standardisation active
-
-### Accessoires phytothérapie
-- **Infuseur inox** : Préparation tisanes
-- **Bocaux hermétiques** : Conservation plantes
-- **Balance précision** : Dosage exact
+## Pour aller plus loin
 
 - [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
 - [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)

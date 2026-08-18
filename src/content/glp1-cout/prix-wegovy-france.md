@@ -7,7 +7,7 @@ keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy prix phar
 seoTitle: "Wegovy Prix Pharmacie Moins Cher 2026 : dès 146,91€, remboursé 65%"
 seoDescription: "Wegovy prix pharmacie juillet 2026 : 146,91 à 195,10€/mois (prix réglementé, identique partout). Remboursé 65% Sécu depuis juin 2026. Carte des pharmacies disponibles, éligibilité et reste à charge. Mis à jour."
 publishedAt: '2025-01-28'
-updatedAt: '2026-08-06'
+updatedAt: '2026-08-18'
 date: '2026-07-19'
 featured: true
 author: "Rédaction GLP-1 France"
@@ -235,7 +235,7 @@ Certains patients envisagent de s'approvisionner à l'étranger pour réduire le
 - Prix constaté après la baisse Novo Nordisk de mars 2026 : environ **136 à 224 €/mois** selon le dosage (200,19 € en 1,7 mg, 223,64 € en 2,4 mg), non remboursé en Espagne pour l'obésité
 - Disponibilité variable selon les communautés autonomes
 - **Important** : l'importation personnelle de médicaments depuis l'Espagne avec une ordonnance française n'est pas reconnue en pharmacie française. Il s'agit d'un usage à titre personnel soumis à déclaration douanière.
-- Notre comparatif détaillé : [Prix Wegovy en Espagne 2026 : pourquoi ça ne vaut plus le coup](/collections/glp1-cout/wegovy-espagne-prix-comparatif-france/)
+- Notre comparatif détaillé : [Acheter Wegovy ou Mounjaro en Espagne : prix réels et légalité](/collections/glp1-cout/acheter-wegovy-mounjaro-espagne-prix-legalite/)
 
 **Belgique :**
 - Prix constaté : **160 à 340 €/mois** selon dosage (remboursement partiel possible pour les patients belges avec certaines conditions)
