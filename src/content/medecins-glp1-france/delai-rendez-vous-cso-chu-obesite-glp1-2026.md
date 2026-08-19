@@ -82,6 +82,8 @@ Les arrêtés du 12 juin 2026 habilitent aussi les endocrinologues-diabétologue
 
 Si vous prenez déjà Wegovy ou Mounjaro (prescription non remboursée), certains centres évitent la consultation initiale : à Montpellier, un formulaire rempli par votre médecin actuel et envoyé par email suffit pour que l'équipe étudie le dossier. Demandez systématiquement si ce circuit existe avant de prendre un rendez-vous classique.
 
+Cas particulier : si vous avez **déjà été opéré d'une sleeve ou d'un bypass**, recontactez en priorité le service qui vous a opéré — votre dossier y existe déjà, ce qui court-circuite la file d'attente générale. Le parcours complet des anciens opérés est détaillé dans notre guide [GLP-1 après sleeve ou bypass](/collections/medecins-glp1-france/glp1-apres-sleeve-bypass-reprise-poids-remboursement/).
+
 ## L'attente n'est pas du temps perdu : les 6 mois courent
 
 Le remboursement exige une prise en charge nutritionnelle documentée d'au moins 6 mois avec une perte de poids restée inférieure à 5 %. Ce suivi peut être mené **par votre médecin traitant ou un diététicien, pendant que vous attendez le rendez-vous spécialisé** : pesées régulières notées au dossier, objectifs alimentaires, activité physique adaptée. Nous avons détaillé [comment documenter ces 6 mois, avec un modèle de tableau de suivi](/collections/medecins-glp1-france/suivi-nutritionnel-6-mois-remboursement-glp1-documenter/). Un patient qui arrive au CSO avec ses 6 mois documentés peut repartir avec sa primo-prescription ; celui qui arrive sans devra souvent revenir.

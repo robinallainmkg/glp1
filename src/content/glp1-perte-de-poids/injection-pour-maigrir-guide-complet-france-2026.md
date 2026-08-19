@@ -8,6 +8,7 @@ collection: "glp1-perte-de-poids"
 category: "glp1-perte-de-poids"
 tags: ["injection pour maigrir", "injection minceur", "piqure pour maigrir", "GLP-1 injection", "perte de poids injection", "stylo pour maigrir"]
 date: "2026-04-10"
+updatedAt: "2026-08-19"
 mainKeyword: "injection pour maigrir"
 featured: true
 enableAffiliation: true
@@ -111,7 +112,7 @@ Saxenda reste une option valable, mais **son injection quotidienne et son effica
 - **Molecule** : Semaglutide (0.25mg, 0.5mg, 1mg ou 2mg)
 - **Fréquence** : Une injection par semaine
 - **Efficacité** : Perte de poids de **5 a 10 % du poids corporel** (dose 1mg)
-- **Prix** : Environ 76 euros par stylo
+- **Prix** : 77,60 euros par stylo (prix officiel BDPM)
 - **Remboursement** : Prise en charge a 30% par la Sécurité sociale **uniquement en cas de diabète de type 2**
 - **Indication officielle** : Diabète de type 2 insuffisamment controle
 
@@ -161,7 +162,7 @@ La prescription hors AMM d'Ozempic pour la perte de poids est une pratique medic
       <td><strong><a href="/collections/traitements-glp1/guide-complet-ozempic/">Ozempic</a></strong></td>
       <td>1x/semaine</td>
       <td>-5 a 10 %</td>
-      <td>~76 euros/stylo</td>
+      <td>77,60 euros/stylo</td>
       <td>30% (diabète type 2 uniquement)</td>
       <td>Pas d'AMM obésité</td>
     </tr>
@@ -204,6 +205,8 @@ Pour savoir si un traitement injectable vous concerne, consultez notre page [sui
 - **IMC supérieur ou égal a 27** (surpoids) : la prescription est possible en presence d'au moins une **comorbidité liée au poids** : diabète de type 2, hypertension artérielle, dyslipidemie, syndrome d'apnee du sommeil, steatose hepatique non alcoolique, ou arthrose invalidante.
 - **Echec prealable** : le patient doit avoir tente des mesures hygieno-dietetiques (régime alimentaire structure et activite physique) pendant au moins **6 mois** sans résultat suffisant.
 
+**Attention** : ces seuils (IMC ≥ 30, ou ≥ 27 avec comorbidité) sont les critères de l'AMM — ils permettent la prescription, pas le remboursement. Le **remboursement à 65 %** obéit à des seuils plus stricts : **IMC ≥ 40, ou ≥ 35 avec comorbidité**, après 6 mois de prise en charge nutritionnelle documentée. Vérifiez votre situation avec notre [test d'éligibilité](/outils/test-eligibilite/).
+
 ### Contre-indications
 
 Certaines situations medicales empechent la prescription d'injections pour maigrir :
@@ -222,9 +225,9 @@ Les injections pour maigrir ne sont **pas adaptees** aux personnes ayant un IMC 
 
 ## Comment Obtenir une Prescription ?
 
-### Evolution reglementaire : ce qui a change en 2025
+### Evolution reglementaire : prescription simple vs prescription remboursée
 
-Depuis **juin 2025**, les conditions de prescription des traitements GLP-1 pour l'obésité ont ete simplifiees en France. Auparavant reservee aux endocrinologues et aux centres specialises en obésité (CSO), la **prescription initiale peut desormais etre realisee par tout médecin** : généraliste, endocrinologue, nutritionniste ou tout autre spécialiste.
+Depuis **juin 2025**, tout médecin (généraliste compris) peut prescrire Wegovy ou Mounjaro — mais cette prescription reste alors **entièrement à votre charge**. Pour bénéficier du **remboursement à 65 % en vigueur depuis le 15 juin 2026**, les arrêtés imposent une condition supplémentaire : la **première ordonnance doit être rédigée par un spécialiste habilité** (médecin de centre spécialisé de l'obésité, de CHU ou de SMR, ou endocrinologue lié à un CSO). Le généraliste peut ensuite renouveler. Le détail est dans notre article [qui peut prescrire pour être remboursé](/collections/medecins-glp1-france/qui-peut-prescrire-mounjaro-wegovy-rembourse/).
 
 ### Les etapes pour obtenir une injection pour maigrir
 
@@ -326,7 +329,7 @@ La perte de poids varie selon le traitement et le profil du patient. En moyenne 
 
 ### Faut-il une ordonnance pour une injection pour maigrir ?
 
-**Oui, une ordonnance medicale est obligatoire** pour tous les traitements injectables GLP-1 en France. Ces medicaments sont classes comme medicaments de prescription. Il est impossible (et dangereux) de se les procurer sans consultation medicale prealable. Depuis juin 2025, tout médecin (généraliste ou spécialiste) peut prescrire ces traitements.
+**Oui, une ordonnance medicale est obligatoire** pour tous les traitements injectables GLP-1 en France. Ces medicaments sont classes comme medicaments de prescription. Il est impossible (et dangereux) de se les procurer sans consultation medicale prealable. Tout médecin peut prescrire ces traitements (à votre charge) ; en revanche, la **première prescription remboursée à 65 %** doit venir d'un spécialiste habilité (CSO, CHU ou endocrinologue lié à un CSO), le généraliste assurant ensuite les renouvellements.
 
 ### L'injection pour maigrir fait-elle mal ?
 
@@ -348,5 +351,5 @@ Les GLP-1 peuvent interagir avec certains medicaments, notamment les **antidiabe
 
 **Avertissement medical** : Les informations contenues dans cet article sont fournies a titre informatif et ne remplacent en aucun cas l'avis d'un professionnel de sante. La prescription d'injections pour maigrir releve exclusivement de la competence d'un médecin qui evaluera votre situation individuelle. Ne modifiez jamais votre traitement sans avis medical. En cas d'urgence, contactez le 15 (SAMU) ou le 112.
 
-*Derniere mise a jour : 10 avril 2026. Les informations sur les prix et le remboursement sont susceptibles d'evoluer. Consultez votre pharmacien ou votre médecin pour les tarifs en vigueur.*
+*Derniere mise a jour : 19 août 2026. Les informations sur les prix et le remboursement sont susceptibles d'evoluer. Consultez votre pharmacien ou votre médecin pour les tarifs en vigueur.*
 

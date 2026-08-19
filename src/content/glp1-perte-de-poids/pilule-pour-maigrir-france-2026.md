@@ -8,6 +8,7 @@ collection: "glp1-perte-de-poids"
 category: "glp1-perte-de-poids"
 tags: ["pilule pour maigrir", "comprimé pour maigrir", "médicament oral perte de poids", "rybelsus", "orforglipron", "alli", "xenical"]
 date: "2026-04-10"
+updatedAt: "2026-08-19"
 mainKeyword: "pilule pour maigrir"
 featured: true
 enableAffiliation: true
@@ -38,9 +39,9 @@ Le semaglutide oral agit en imitant l'hormone GLP-1 naturellement produite par l
 
 ### Efficacité pour la perte de poids
 
-Les essais cliniques PIONEER ont démontré une perte de poids de **10 a 12 % du poids corporel** a la dose maximale de 14 mg par jour. Pour une personne de 90 kg, cela représente environ 9 a 11 kg en 6 a 12 mois de traitement.
+Les essais cliniques PIONEER (menés chez des patients diabétiques de type 2) ont montré une perte de poids moyenne d'environ **4 kg en 26 semaines** a la dose maximale de 14 mg par jour (etude PIONEER 1), soit de l'ordre de 4 a 5 % du poids corporel — et 41 % des participants ont perdu au moins 5 % de leur poids.
 
-Ces résultats sont inferieurs a ceux des injections de semaglutide a dose élevée (Wegovy peut atteindre 15-17 %), mais restent significatifs pour un médicament oral.
+Ces résultats sont tres inferieurs a ceux des injections de semaglutide a dose élevée (Wegovy peut atteindre 15-17 %) : Rybelsus est un traitement du diabète dont la perte de poids est un effet associé, pas un traitement de l'obésité.
 
 ### Conditions de prise strictes
 
@@ -190,10 +191,10 @@ L'ANSM (Agence Nationale de Sécurité du Médicament) publie regulierement des 
 | Critere | **Rybelsus (Semaglutide oral)** | **Orlistat (Xenical/Alli)** | **GLP-1 Injectables (Wegovy, Ozempic)** |
 |---|---|---|---|
 | **Type** | Comprimé oral (GLP-1) | Comprimé oral (inhibiteur lipase) | Injection sous-cutanée (GLP-1) |
-| **Perte de poids moyenne** | 10-12 % | 3-5 % | 15-22 % |
+| **Perte de poids moyenne** | ~4-5 % (essais chez diabétiques) | 3-5 % | 15-22 % |
 | **Fréquence** | 1 comprimé/jour | 1 a 3 comprimes/jour | 1 injection/semaine |
-| **Prix mensuel** | 80-100 euros | 50-70 euros | 170-360 euros |
-| **Remboursement** | 65 % (DT2 uniquement) | Non rembourse | 65 % (DT2 pour Ozempic ; obésité pour Wegovy depuis 15/06/2026) |
+| **Prix mensuel** | 80-100 euros | 50-70 euros | 77,60-433,80 euros selon le traitement |
+| **Remboursement** | Non rembourse (avis HAS défavorable) | Non rembourse | Ozempic 30 % (diabète uniquement) ; Wegovy/Mounjaro 65 % (obésité, sous conditions, depuis le 15/06/2026) |
 | **Contraintes** | A jeun, 30 min avant repas | Régime pauvre en graisses | Injection a realiser soi-même |
 | **Effets secondaires principaux** | Nausees, diarrhée | Selles grasses, flatulences | Nausees, diarrhée |
 | **Ordonnance requise** | Oui | Oui (Xenical) | Oui |
@@ -206,7 +207,7 @@ Pour un panorama complet des traitements GLP-1 disponibles, consultez notre [gui
 
 ### Quelle est la meilleure pilule pour maigrir en 2026 ?
 
-En termes d'efficacité prouvee, le **Rybelsus (semaglutide oral)** est actuellement le comprimé le plus performant pour la perte de poids en France. Avec une perte moyenne de 10 a 12 % du poids corporel, il surpasse largement l'orlistat. Toutefois, les [traitements GLP-1 injectables](/collections/traitements-glp1/) restent plus efficaces que les formes orales disponibles aujourd'hui.
+En termes d'efficacité prouvee, le **Rybelsus (semaglutide oral)** est actuellement le comprimé le plus performant disponible en France, avec une perte moyenne d'environ 4 kg dans les essais PIONEER (menés chez des diabétiques) — comparable ou legerement supérieure a l'orlistat, mais tres loin des injections. Aucune pilule disponible en France n'est aujourd'hui approuvée pour traiter l'obésité : les [traitements GLP-1 injectables](/collections/traitements-glp1/) (Wegovy, Mounjaro) restent la référence, et les seuls remboursables dans cette indication.
 
 ### Peut-on acheter une pilule pour maigrir sans ordonnance en France ?
 
@@ -218,7 +219,7 @@ Un **médicament** (comme le Rybelsus ou le Xenical) a passe des essais clinique
 
 ### Les pilules pour maigrir sont-elles remboursees par la Sécurité sociale ?
 
-La situation du [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) est complexe. Le Rybelsus n'est pas remboursé par la Sécurité sociale (avis défavorable de la HAS). L'orlistat n'est pas remboursé non plus. Les GLP-1 injectables comme Ozempic sont rembourses pour le diabète, mais pas pour l'obésité seule. Le cout reste donc majoritairement a la charge du patient.
+La situation du [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) a changé en 2026. Le Rybelsus n'est pas remboursé par la Sécurité sociale (avis défavorable de la HAS), l'orlistat non plus. Côté injections : Ozempic est remboursé a 30 % pour le diabète de type 2 uniquement, et surtout **Wegovy et Mounjaro sont remboursés a 65 % pour l'obésité depuis le 15 juin 2026** (IMC ≥ 40, ou ≥ 35 avec comorbidité, après 6 mois de prise en charge nutritionnelle). Vérifiez vos critères avec notre [test d'éligibilité](/outils/test-eligibilite/).
 
 ### Quand les nouvelles pilules GLP-1 seront-elles disponibles en France ?
 
@@ -228,7 +229,7 @@ Deux molécules orales majeures sont en cours de developpement. L'**orforglipron
 
 ## Conclusion : Choisir la Bonne Pilule pour Maigrir
 
-En 2026, la **pilule pour maigrir** la plus efficace disponible en France est le Rybelsus, un agoniste GLP-1 oral qui permet une perte de poids réelle et cliniquement prouvee. L'orlistat reste une option secondaire pour certains patients. Les complements alimentaires et les produits miracles ne constituent pas des solutions validees.
+En 2026, la **pilule pour maigrir** la plus efficace disponible en France est le Rybelsus, un agoniste GLP-1 oral dont la perte de poids reste toutefois modeste (environ 4 kg dans les essais) et qui n'est autorisé que pour le diabète. L'orlistat reste une option secondaire pour certains patients. Les complements alimentaires et les produits miracles ne constituent pas des solutions validees.
 
 L'avenir s'annonce prometteur avec l'arrivee prochaine de l'orforglipron et du Wegovy oral, qui pourraient democratiser l'acces aux traitements GLP-1 sans recourir aux injections.
 

@@ -1049,6 +1049,29 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
         cleanResponse += "\n\nÀ savoir : une téléconsultation peut déboucher sur une ordonnance, mais **hors remboursement** (traitement à ta charge). La première prescription qui ouvre le remboursement à 65 % doit être faite par un spécialiste en CSO/CHU ; ton généraliste pourra ensuite la renouveler.";
       }
 
+      // Garde-fou pharmacie locale : quand l'utilisateur donne un code postal dans un
+      // contexte pharmacie/disponibilité, le modèle répond générique sans jamais donner
+      // la page locale du site (constaté en prod le 19/08/2026 : CP 59530 donné 2 fois,
+      // 3 réponses génériques). Si la page /pharmacies/cp/{cp}/ existe (HEAD 200), on
+      // ajoute son lien en fin de réponse ; si elle n'existe pas, on ne touche à rien
+      // (la carte des prix reste la réponse générique du prompt).
+      const cpMatch = cleanMessage.match(/\b(0[1-9]\d{3}|[1-8]\d{4}|9[0-5]\d{3}|97[1-6]\d{2})\b/);
+      const pharmacyContext = /pharmacie|disponib|stock|carte des prix/i.test(cleanMessage)
+        || historyMessages.slice(-4).some((m: any) => typeof m.content === "string" && /pharmacie|disponib|stock|carte des prix/i.test(m.content));
+      const localLinkAlreadyGiven = cpMatch !== null && (
+        cleanResponse.includes(`/pharmacies/cp/${cpMatch[1]}/`)
+        || historyMessages.some((m: any) => m.role === "assistant" && typeof m.content === "string" && m.content.includes(`/pharmacies/cp/${cpMatch[1]}/`))
+      );
+      if (cpMatch && pharmacyContext && !localLinkAlreadyGiven) {
+        try {
+          const head = await fetch(`https://glp1-france.fr/pharmacies/cp/${cpMatch[1]}/`, { method: "HEAD" });
+          if (head.ok) {
+            console.warn(`[local-pharmacy-guard] lien page CP ${cpMatch[1]} ajouté (modèle: ${usedModel})`);
+            cleanResponse += `\n\nAutour du ${cpMatch[1]} : [les pharmacies proches de chez toi](/pharmacies/cp/${cpMatch[1]}/) — adresses, horaires et prix officiels des GLP-1.`;
+          }
+        } catch (_e) { /* réseau indisponible : on n'ajoute rien */ }
+      }
+
       // Moment chaud → on propose la capture email (le funnel convertit à 0 sans capture).
       const saysEligible = /\béligibl/i.test(cleanResponse);
       const saysNotEligible = /\b(pas|plus)\b[^.]{0,25}éligibl|éligibl[^.]{0,25}\bsi\b/i.test(cleanResponse);
