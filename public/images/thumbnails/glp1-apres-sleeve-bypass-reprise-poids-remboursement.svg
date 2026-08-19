@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a3c34"/>
+      <stop offset="1" stop-color="#0f2620"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1100" cy="80" r="150" fill="#16a34a" opacity="0.10"/>
+  <circle cx="100" cy="570" r="130" fill="#16a34a" opacity="0.12"/>
+  <text x="80" y="150" font-family="Georgia, serif" font-size="34" fill="#16a34a" font-weight="bold">GLP-1 FRANCE</text>
+  <text x="80" y="266" font-family="Georgia, serif" font-size="62" fill="#ffffff" font-weight="bold">GLP-1 après sleeve</text>
+  <text x="80" y="350" font-family="Georgia, serif" font-size="62" fill="#ffffff" font-weight="bold">ou bypass : reprise de</text>
+  <text x="80" y="434" font-family="Georgia, serif" font-size="62" fill="#ffffff" font-weight="bold">poids, remboursement</text>
+  <rect x="80" y="474" width="120" height="6" fill="#16a34a"/>
+  <text x="80" y="550" font-family="Georgia, serif" font-size="36" fill="#9fd7b4">Critères 2026 + parcours CSO pour les opérés</text>
+  <g transform="translate(985,335)">
+    <path d="M 0 -140 C -70 -140 -90 -85 -85 -35 C -82 5 -60 25 -55 70 C -52 100 -60 120 -35 130 C -10 138 5 118 5 90 C 5 60 -8 40 -5 5 C -2 -25 25 -45 30 -85 C 35 -125 40 -140 0 -140 Z" fill="#ffffff" opacity="0.92"/>
+    <g stroke="#16a34a" stroke-width="9" stroke-linecap="round" fill="none">
+      <path d="M -30 -60 C -10 -75 15 -70 22 -50"/>
+      <path d="M -34 -30 C -12 -45 18 -40 25 -20"/>
+    </g>
+    <g transform="translate(80,55)">
+      <circle r="62" fill="#16a34a"/>
+      <g stroke="#ffffff" stroke-width="9" stroke-linecap="round" fill="none">
+        <path d="M -30 12 L -8 -14 L 8 2 L 32 -26"/>
+        <path d="M 16 -26 L 32 -26 L 32 -10"/>
+      </g>
+    </g>
+  </g>
+</svg>

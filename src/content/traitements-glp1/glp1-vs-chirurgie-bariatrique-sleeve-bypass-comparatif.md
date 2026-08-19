@@ -169,7 +169,7 @@ Une tendance émergente dans la médecine de l'obésité consiste à combiner le
 
 **GLP-1 pour préparer à la chirurgie** : un traitement par GLP-1 de 3 à 6 mois avant une opération bariatrique permet de réduire le poids préopératoire (qui est l'un des principaux facteurs de risque chirurgical), de diminuer la stéatose hépatique et d'améliorer les paramètres métaboliques. Cette stratégie est de plus en plus recommandée par les chirurgiens bariatriques.
 
-**GLP-1 après chirurgie** : certains patients qui reprennent du poids après une chirurgie bariatrique peuvent bénéficier des GLP-1 pour consolider leurs résultats ou traiter la reprise pondérale.
+**GLP-1 après chirurgie** : certains patients qui reprennent du poids après une chirurgie bariatrique peuvent bénéficier des GLP-1 pour consolider leurs résultats ou traiter la reprise pondérale. Nous détaillons ce cas précis — critères de remboursement pour les opérés, suivi à documenter, GLP-1 ou révision chirurgicale — dans notre guide [GLP-1 après sleeve ou bypass](/collections/medecins-glp1-france/glp1-apres-sleeve-bypass-reprise-poids-remboursement/).
 
 ## Témoignages et expériences de patients
 
