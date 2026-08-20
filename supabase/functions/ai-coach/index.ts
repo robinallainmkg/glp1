@@ -20,6 +20,8 @@ const RATE_LIMIT_HOURLY_MAX = 60;
 
 const SYSTEM_PROMPT = `Tu es le Coach GLP-1 France, un assistant d'information spécialisé dans les traitements agonistes du récepteur GLP-1 (sémaglutide, tirzépatide, liraglutide, dulaglutide) en France.
 
+LANGUE : réponds TOUJOURS dans la langue du DERNIER message de l'utilisateur. S'il écrit en anglais, réponds INTÉGRALEMENT en anglais (contenu, relances et libellés de liens compris — les URLs du site restent inchangées). Ne repasse au français que si l'utilisateur le fait.
+
 TON APPROCHE — UTILE ET ENGAGEANTE :
 - Va droit au but dès la première phrase. Ne reformule JAMAIS ce que la personne vient de dire ("D'accord, vous avez arrêté..." est INTERDIT).
 - Réponds D'ABORD à la question posée, clairement et factuellement.
@@ -390,6 +392,11 @@ const STALE_PRICE_RULES: Array<{ pattern: RegExp; replacement: string }> = [
   // « selon … la pharmacie » accolé à un prix : le prix est réglementé, identique partout
   // (même conversation du 16/08/2026 : « selon le dosage exact et la pharmacie »)
   { pattern: /selon le dosage exact et la pharmacie/gi, replacement: "selon le dosage (prix réglementé, identique dans toutes les pharmacies)" },
+  // Prix mensuels hallucinés par dosage Mounjaro (constatés en prod le 19/08/2026,
+  // mistral-small : « 5 mg ≈ 275 €/mois », « 7,5 mg ≈ 395 €/mois » — aucun de ces
+  // deux montants n'existe dans les tarifs officiels BDPM)
+  { pattern: /\b275\s*(?:€|euros?)\s*(?:\/|par\s+)\s*mois/gi, replacement: "entre 176,10 € et 433,80 € selon le dosage (prix réglementé)" },
+  { pattern: /\b395\s*(?:€|euros?)\s*(?:\/|par\s+)\s*mois/gi, replacement: "entre 176,10 € et 433,80 € selon le dosage (prix réglementé)" },
 ];
 
 // Liens hallucinés : le modèle invente parfois une URL de catégorie
@@ -405,6 +412,25 @@ function sanitizeHallucinatedLinks(text: string): { text: string; corrected: boo
 function sanitizePrices(text: string): { text: string; corrected: boolean } {
   let corrected = false;
   let out = text;
+  // « prix libre » appliqué à Wegovy/Mounjaro (constaté en prod le 19/08/2026) :
+  // leurs prix sont réglementés depuis le 15/06/2026. Saxenda, lui, est réellement
+  // à prix libre (non remboursé) → on ne touche pas si la réponse parle de Saxenda.
+  if (/prix libre/i.test(out) && /mounjaro|wegovy/i.test(out) && !/saxenda/i.test(out)) {
+    corrected = true;
+    out = out.replace(/prix libre/gi, "prix réglementé, identique dans toutes les pharmacies");
+  }
+  // Variante anglaise du même claim (constatée au test E2E v72 : « ~275€ in free pricing »)
+  if (/free pric/i.test(out) && /mounjaro|wegovy/i.test(out) && !/saxenda/i.test(out)) {
+    corrected = true;
+    out = out.replace(/\(?in free pricing\)?|free pricing|free price/gi, "at a regulated price (identical in every pharmacy)");
+  }
+  // Montants hallucinés 275/395 € en contexte Mounjaro, quel que soit l'habillage
+  // (« ~275€ », « 275 euros par mois », « 395€/month »…) : aucun de ces montants
+  // n'existe dans les tarifs officiels BDPM.
+  if (/mounjaro/i.test(out) && /\b(275|395)\s*(?:€|euros?)/i.test(out)) {
+    corrected = true;
+    out = out.replace(/~?\s*\b(?:275|395)\s*(?:€|euros?)(?:\s*(?:\/|par)\s*mois|\s*(?:\/|per)\s*month)?/gi, "entre 176,10 € et 433,80 € selon le dosage (prix réglementé)");
+  }
   for (const { pattern, replacement } of STALE_PRICE_RULES) {
     if (pattern.test(out)) {
       corrected = true;
@@ -899,6 +925,7 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
       ];
       let llmResponse: Response | null = null;
       let usedModel = LLM_CHAIN[0].model;
+      let lastLlmErr = "no response";
       for (const link of LLM_CHAIN) {
         let linkOk = false;
         for (let attempt = 0; attempt < 2; attempt++) {
@@ -919,6 +946,14 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
             }),
           });
           if (llmResponse.ok) { linkOk = true; usedModel = link.model; break; }
+          // Log de l'échec du maillon : sans lui, impossible de savoir POURQUOI un
+          // fournisseur est silencieux (constaté les 18-19/08/2026 : 100 % des réponses
+          // servies par mistral-small sans aucune trace de la panne Groq).
+          try {
+            const errBody = (await llmResponse.text()).slice(0, 300);
+            lastLlmErr = `${link.model} HTTP ${llmResponse.status}: ${errBody}`;
+            console.warn(`[llm-chain] ${link.model} → HTTP ${llmResponse.status} (tentative ${attempt + 1}) : ${errBody}`);
+          } catch (_e) { /* corps illisible */ }
           // 5xx = transitoire → 1 retry court. 429 = quota épuisé → fournisseur suivant.
           if (attempt === 0 && llmResponse.status >= 500) {
             await new Promise((r) => setTimeout(r, 600));
@@ -930,8 +965,8 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
       }
 
       if (!llmResponse || !llmResponse.ok) {
-        const errText = llmResponse ? await llmResponse.text() : "no response";
-        throw new Error(`LLM chain error (${llmResponse?.status}): ${errText}`);
+        // Le corps a déjà été lu dans la boucle de log → on réutilise lastLlmErr.
+        throw new Error(`LLM chain error (${llmResponse?.status}): ${lastLlmErr}`);
       }
 
       const llmData = await llmResponse.json();
@@ -975,6 +1010,35 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
             dossierData = null;
           }
         }
+      }
+
+      // Garde-fou réponse vide : quand le modèle n'émet QUE des tags ([[DOSSIER_READY]]
+      // invalide, [[SUGGESTIONS]]…), le nettoyage laisse une réponse vide envoyée telle
+      // quelle à l'utilisateur (constaté en prod le 19/08/2026 : « Oui, je veux mon
+      // dossier » → réponse vide, prospect perdu). On ne renvoie JAMAIS du vide.
+      if (cleanResponse.length < 5) {
+        console.warn(`[empty-response-guard] réponse vide après nettoyage des tags (modèle: ${usedModel}, dossier tag: ${dossierMatch ? "oui" : "non"})`);
+        if (dossierData) {
+          cleanResponse = "C'est noté ! Ton Dossier GLP-1 personnalisé est prêt — clique sur le bouton ci-dessous pour le recevoir.";
+        } else if (dossierMatch) {
+          cleanResponse = "Pour préparer ton Dossier GLP-1 personnalisé, il me manque juste ton **prénom** et ta **ville** (pour le centre spécialisé le plus proche). Tu peux aussi le remplir directement ici : [Dossier GLP-1 personnalisé](/dossier-glp1/) — 4,99 €, prêt en quelques minutes.";
+        } else {
+          cleanResponse = "Je n'ai pas réussi à formuler ma réponse, désolé. Peux-tu reformuler ta question ?";
+        }
+      }
+
+      // Garde-fou « dossier prêt » sans tag : le modèle affirme parfois que le dossier
+      // est prêt sans avoir collecté prénom/ville ni émis [[DOSSIER_READY]] — l'utilisateur
+      // attend alors un dossier qui n'arrivera jamais (constaté en prod le 19/08/2026 :
+      // « Ton Dossier GLP-1 personnalisé est prêt avec : … » sans aucun bouton de paiement).
+      // (pas de déclenchement si la réponse demande déjà le prénom — c'est la phrase
+      // légitime de collecte « il me faut juste ton prénom et ta ville, et ton dossier
+      // est prêt » — ni si le lien de la landing est déjà présent)
+      const claimsDossierReady = /dossier[^.!?\n]{0,80}\b(?:est\s+)?pr[êe]te?\b|\bpr[êe]te?\b[^.!?\n]{0,40}dossier/i;
+      if (!dossierData && claimsDossierReady.test(cleanResponse)
+        && !/pr[ée]nom/i.test(cleanResponse) && !cleanResponse.includes("/dossier-glp1/")) {
+        console.warn(`[dossier-ready-guard] claim « dossier prêt » sans tag valide (modèle: ${usedModel})`);
+        cleanResponse += "\n\nPour le générer, il me manque juste ton **prénom** et ta **ville**. Tu peux aussi le remplir directement ici : [Dossier GLP-1 personnalisé](/dossier-glp1/) — 4,99 €, prêt en quelques minutes.";
       }
 
       // Garde-fou prix : corrige les fourchettes périmées avant sauvegarde ET renvoi,
