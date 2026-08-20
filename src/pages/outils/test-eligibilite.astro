@@ -147,6 +147,9 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
         var r = computeImc();
         if (!r) { document.getElementById('imcLive').textContent = 'Merci d\'indiquer une taille et un poids valides.'; return; }
         state.imc = r.imc; state.taille = r.taille; state.poids = r.poids;
+        // Instrumentation GA4 : progression du funnel (K6) — permet de voir si les
+        // visiteurs abandonnent avant le verdict ou entre le verdict et la capture.
+        if (typeof window.gtag === 'function') window.gtag('event', 'test_step2', { imc: Math.round(state.imc) });
         show('step2');
       });
 
@@ -159,6 +162,7 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
 
       document.getElementById('btnStep2').addEventListener('click', function () {
         state.comorbidites = Array.prototype.map.call(document.querySelectorAll('.comorb:checked'), function (c) { return c.value; });
+        if (typeof window.gtag === 'function') window.gtag('event', 'test_step3', { comorbidites: state.comorbidites.length });
         show('step3');
       });
 

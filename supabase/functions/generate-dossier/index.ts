@@ -439,6 +439,41 @@ serve(async (req) => {
       generated_at: new Date().toISOString(),
     }).eq("id", dossier_id);
 
+    // 8. Email de livraison J0 (plan K1 item 6) : sans lui, un acheteur qui ferme
+    //    l'onglet de retour Stripe n'a AUCUN moyen de retrouver son dossier.
+    //    Envoi via send-feedback-email (SMTP Hostinger), tracé dans email_replies.
+    //    Isolé en try/catch : un échec d'email ne doit JAMAIS bloquer la génération.
+    if (dossier.email) {
+      try {
+        const espaceUrl = `https://glp1-france.fr/mon-espace/dossier/?status=success&dossier_id=${dossier_id}`;
+        const emailHtml = [
+          `<p>Bonjour${dossier.prenom ? " " + dossier.prenom : ""},</p>`,
+          `<p>Votre <strong>Dossier GLP-1 personnalisé</strong> est prêt. Vous pouvez le consulter et le télécharger à tout moment :</p>`,
+          `<p><a href="${espaceUrl}" style="display:inline-block;background:#16a34a;color:#ffffff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">Accéder à mon dossier</a></p>`,
+          pdfUrl ? `<p style="font-size:0.9em;color:#555;">Lien direct de secours (valable 1 an) : <a href="${pdfUrl}">télécharger le dossier</a></p>` : "",
+          `<p>Il contient votre verdict d'éligibilité au remboursement 65 %, les centres spécialisés (CSO/CHU) proches de chez vous, la checklist pour votre rendez-vous médecin et les questions à poser.</p>`,
+          `<p>Une question ? Répondez simplement à cet email.</p>`,
+          `<p>— L'équipe GLP-1 France<br><a href="https://glp1-france.fr">glp1-france.fr</a></p>`,
+        ].join("\n");
+        const emailResp = await fetch(`${Deno.env.get("SUPABASE_URL")}/functions/v1/send-feedback-email`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            token: "c81f5a2e9d40b7361f8e2c04a9d5b713",
+            to: dossier.email,
+            subject: "Votre Dossier GLP-1 personnalisé est prêt ✓",
+            html: emailHtml,
+            category: "dossier_delivery_j0",
+          }),
+        });
+        if (!emailResp.ok) {
+          console.error("Email livraison J0 non envoyé:", emailResp.status, await emailResp.text());
+        }
+      } catch (emailErr) {
+        console.error("Email livraison J0 — erreur:", emailErr);
+      }
+    }
+
     return new Response(JSON.stringify({
       success: true,
       pdf_url: pdfUrl,
