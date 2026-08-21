@@ -72,7 +72,7 @@ Les prix remboursables de Mounjaro sont : 176,10€ (2,5 mg), 237,68€ (5 mg), 
 
 ### Réduire le reste à charge
 
-Si vous ne remplissez pas les critères de remboursement (IMC < 35 ou absence de comorbidité), plusieurs pistes permettent de limiter votre reste à charge :
+Si vous ne remplissez pas les critères de remboursement (IMC < 35 ou absence de comorbidité), plusieurs pistes permettent de limiter votre reste à charge — nous les détaillons dans notre guide dédié [pas éligible au remboursement : vos options en 2026](/collections/glp1-cout/pas-eligible-remboursement-glp1-options-2026/) (coût réel à vos frais, forfaits mutuelle, et comment devenir éligible) :
 
 **1. Les mutuelles avec forfait médicaments non remboursés**
 

@@ -1,5 +1,37 @@
 ---
 import StaticLayout from '../../layouts/StaticLayout.astro';
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelles sont les conditions pour être remboursé de Wegovy ou Mounjaro en 2026 ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Trois conditions cumulatives : un IMC ≥ 40 kg/m², ou ≥ 35 kg/m² avec au moins une comorbidité liée au poids (diabète de type 2, hypertension, apnée du sommeil, dyslipidémie, stéatose hépatique, maladie cardiovasculaire) ; un échec d'une prise en charge nutritionnelle bien conduite d'au moins 6 mois (perte de poids < 5 %) ; et une première prescription faite par un spécialiste de l'obésité (CSO, CHU ou spécialiste en lien avec un CSO). Le remboursement est alors de 65 %." }
+    },
+    {
+      "@type": "Question",
+      "name": "Mon médecin généraliste peut-il me prescrire Wegovy remboursé ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pas pour la première prescription : la primo-prescription remboursée est réservée aux spécialistes de l'obésité (CSO, CHU, ou endocrinologue en lien avec un centre). En revanche, une fois le traitement initié, le renouvellement peut être assuré par votre médecin traitant." }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi la pharmacie demande-t-elle un formulaire pour délivrer Wegovy ou Mounjaro ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La délivrance remboursée s'accompagne d'un formulaire d'accompagnement à la prescription (dispositif ITR) que le pharmacien doit vérifier à chaque dispensation. Sans ce justificatif, la pharmacie peut refuser la prise en charge — c'est l'une des causes les plus fréquentes de refus au comptoir." }
+    },
+    {
+      "@type": "Question",
+      "name": "Que faire si je ne suis pas éligible au remboursement ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Une prescription hors remboursement reste possible dès un IMC ≥ 30 (ou ≥ 27 avec comorbidité), intégralement à votre charge aux prix réglementés : 146,91 à 195,10 €/mois pour Wegovy, 176,10 à 433,80 €/mois pour Mounjaro. À IMC ≥ 35, il est souvent plus pertinent de faire dépister une comorbidité méconnue (apnée du sommeil notamment) et de documenter 6 mois de suivi nutritionnel pour devenir éligible." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ozempic est-il remboursé pour la perte de poids ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non. Ozempic est indiqué et remboursé uniquement dans le diabète de type 2 (30 %, ou 100 % en ALD). Son utilisation pour maigrir sans diabète est un mésusage : pour la perte de poids, les traitements concernés par le remboursement à 65 % sont Wegovy et Mounjaro, sous conditions strictes." }
+    }
+  ]
+});
 ---
 
 <StaticLayout
@@ -97,19 +129,51 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
         </div>
       </div>
 
-      <div class="mt-8 text-sm text-gray-500 leading-relaxed">
-        <p><strong>Critères officiels du remboursement à 65 %</strong> (arrêtés du 23 mai 2026, en vigueur depuis le 15 juin 2026) :
-        IMC ≥ 40, ou IMC ≥ 35 avec au moins une comorbidité liée au poids, après échec d'une prise en charge nutritionnelle
-        d'au moins 6 mois (perte &lt; 5 %). La première prescription remboursée doit être faite par un spécialiste de l'obésité
-        (CSO, CHU, endocrinologue en lien avec un CSO) ; le renouvellement peut ensuite se faire chez votre médecin traitant.
-        Ce test est informatif : seule l'évaluation d'un médecin fait foi.</p>
-        <p class="mt-2">Pour aller plus loin : <a href="/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/" style="color:#16a34a;">les conditions détaillées du remboursement</a> ·
-        <a href="/collections/glp1-cout/prix-wegovy-france/" style="color:#16a34a;">prix Wegovy</a> ·
-        <a href="/collections/glp1-cout/prix-mounjaro-france/" style="color:#16a34a;">prix Mounjaro</a> ·
+      <!-- Contenu éditorial indexable : la page outil seule était trop mince pour être crawlée/rankée -->
+      <section class="mt-12 text-gray-700 leading-relaxed space-y-4">
+        <h2 class="text-2xl font-bold" style="color:#1a3c34;">Les critères officiels du remboursement à 65 % (2026)</h2>
+        <p>Depuis le <strong>15 juin 2026</strong> (arrêtés du 23 mai 2026), l'Assurance Maladie rembourse Wegovy (sémaglutide) et Mounjaro (tirzépatide) à <strong>65 %</strong> dans l'obésité, sous trois conditions cumulatives :</p>
+        <ul class="list-disc ml-6 space-y-1">
+          <li><strong>IMC ≥ 40 kg/m²</strong>, ou <strong>IMC ≥ 35 kg/m² avec au moins une comorbidité</strong> liée au poids : diabète de type 2, hypertension artérielle, apnée obstructive du sommeil (SAHOS), dyslipidémie, stéatose hépatique, maladie cardiovasculaire ;</li>
+          <li><strong>échec d'une prise en charge nutritionnelle bien conduite d'au moins 6 mois</strong> (perte de poids inférieure à 5 %), documentée — voir <a href="/collections/medecins-glp1-france/suivi-nutritionnel-6-mois-remboursement-glp1-documenter/" style="color:#16a34a;">comment documenter ces 6 mois</a> ;</li>
+          <li><strong>première prescription par un spécialiste de l'obésité</strong> (CSO, CHU ou spécialiste en lien avec un centre) — détail dans <a href="/collections/medecins-glp1-france/qui-peut-prescrire-mounjaro-wegovy-rembourse/" style="color:#16a34a;">qui peut prescrire pour être remboursé</a>. Le renouvellement peut ensuite se faire chez votre médecin traitant.</li>
+        </ul>
+        <p>En pharmacie, la délivrance remboursée s'accompagne d'un <strong>formulaire d'accompagnement à la prescription (ITR)</strong> vérifié à chaque dispensation : c'est la cause n°1 des refus au comptoir — on l'explique dans <a href="/collections/traitements-glp1/pharmacie-refuse-delivrer-mounjaro-wegovy-que-faire/" style="color:#16a34a;">la pharmacie refuse de délivrer : que faire</a>.</p>
+
+        <h2 class="text-2xl font-bold pt-2" style="color:#1a3c34;">Pas éligible ? Il reste des options</h2>
+        <p>Un verdict négatif au test ne ferme pas la porte au traitement. L'AMM de Wegovy et Mounjaro couvre les IMC ≥ 30 (ou ≥ 27 avec comorbidité) : une <strong>prescription hors remboursement</strong> reste possible, à vos frais et aux prix réglementés (146,91–195,10 €/mois pour <a href="/collections/glp1-cout/prix-wegovy-france/" style="color:#16a34a;">Wegovy</a>, 176,10–433,80 €/mois pour <a href="/collections/glp1-cout/prix-mounjaro-france/" style="color:#16a34a;">Mounjaro</a>). Et à IMC ≥ 35, l'éligibilité se construit : dépistage des comorbidités méconnues, suivi nutritionnel documenté. Tout est détaillé dans notre guide <a href="/collections/glp1-cout/pas-eligible-remboursement-glp1-options-2026/" style="color:#16a34a;font-weight:600;">pas éligible au remboursement : vos options en 2026</a>.</p>
+
+        <h2 class="text-2xl font-bold pt-2" style="color:#1a3c34;">Questions fréquentes</h2>
+        <div class="space-y-3">
+          <div>
+            <h3 class="font-semibold" style="color:#1a3c34;">Quelles sont les conditions pour être remboursé de Wegovy ou Mounjaro en 2026 ?</h3>
+            <p>IMC ≥ 40 (ou ≥ 35 avec comorbidité), 6 mois de prise en charge nutritionnelle en échec, et primo-prescription par un spécialiste de l'obésité. Le remboursement est de 65 %.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold" style="color:#1a3c34;">Mon médecin généraliste peut-il me prescrire Wegovy remboursé ?</h3>
+            <p>Pas la première fois : la primo-prescription remboursée est réservée aux spécialistes (CSO/CHU). Le renouvellement, lui, peut être fait par votre médecin traitant.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold" style="color:#1a3c34;">Pourquoi la pharmacie demande-t-elle un formulaire ?</h3>
+            <p>Le formulaire d'accompagnement (ITR) est vérifié à chaque dispensation remboursée. Sans lui, le pharmacien peut refuser la prise en charge.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold" style="color:#1a3c34;">Que faire si je ne suis pas éligible ?</h3>
+            <p>Prescription possible à vos frais dès IMC ≥ 30, ou stratégie pour devenir éligible (bilan comorbidités + 6 mois de suivi documenté) : voir <a href="/collections/glp1-cout/pas-eligible-remboursement-glp1-options-2026/" style="color:#16a34a;">le guide des options</a>.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold" style="color:#1a3c34;">Ozempic est-il remboursé pour la perte de poids ?</h3>
+            <p>Non : Ozempic est réservé au diabète de type 2. Pour la perte de poids, seuls Wegovy et Mounjaro sont concernés par le remboursement à 65 %.</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-500">Ce test est informatif : seule l'évaluation d'un médecin fait foi. Pour aller plus loin : <a href="/collections/glp1-cout/remboursement-mounjaro-wegovy-15-juin-2026/" style="color:#16a34a;">les conditions détaillées du remboursement</a> ·
         <a href="/outils/carte-prix-pharmacies/" style="color:#16a34a;">carte des prix en pharmacie</a></p>
-      </div>
+      </section>
     </div>
   </div>
+
+  <script type="application/ld+json" set:html={faqJsonLd} />
+
 
   <script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script is:inline>
@@ -206,19 +270,21 @@ import StaticLayout from '../../layouts/StaticLayout.astro';
           state.verdict = 'non_eligible_comorbidite';
           html = '<p class="text-xl font-bold" style="color:#b45309;">Pas éligible en l\'état — il manque une comorbidité confirmée</p>' +
             '<p class="mt-1 text-gray-700">Avec un IMC de ' + imc.toFixed(1) + ', le remboursement nécessite au moins une comorbidité liée au poids (diabète, hypertension, apnée du sommeil…). Certaines passent inaperçues : parlez-en à votre médecin (un dépistage d\'apnée du sommeil, par exemple, change la donne).</p>';
-          stepsHtml = '<p>Un bilan chez votre médecin traitant peut révéler une comorbidité non diagnostiquée — c\'est l\'étape n°1.</p>';
+          stepsHtml = '<p>Un bilan chez votre médecin traitant peut révéler une comorbidité non diagnostiquée — c\'est l\'étape n°1.</p>' +
+            '<p>Guide complet : <a href="/collections/glp1-cout/pas-eligible-remboursement-glp1-options-2026/" style="color:#16a34a;font-weight:600;">pas éligible au remboursement — vos options et comment le devenir</a>.</p>';
           box.style.background = '#fffbeb'; box.style.border = '1px solid #fcd34d';
         } else if (imc >= 30) {
           state.verdict = 'non_eligible_imc30';
           html = '<p class="text-xl font-bold" style="color:#b91c1c;">Non éligible au remboursement (IMC ' + imc.toFixed(1) + ')</p>' +
             '<p class="mt-1 text-gray-700">Le remboursement à 65 % exige un IMC ≥ 35 avec comorbidité, ou ≥ 40. Avec un IMC entre 30 et 35, un traitement reste <strong>médicalement possible sur prescription</strong> (non remboursé, à votre charge : Wegovy 146,91–195,10 €/mois).</p>';
-          stepsHtml = '<p>Parlez-en à votre médecin : lui seul peut évaluer l\'intérêt d\'un traitement dans votre situation, remboursé ou non.</p>';
+          stepsHtml = '<p>Parlez-en à votre médecin : lui seul peut évaluer l\'intérêt d\'un traitement dans votre situation, remboursé ou non.</p>' +
+            '<p>Coût réel à vos frais, mutuelle, alternatives : <a href="/collections/glp1-cout/pas-eligible-remboursement-glp1-options-2026/" style="color:#16a34a;font-weight:600;">le guide des options quand on n\'est pas éligible</a>.</p>';
           box.style.background = '#fef2f2'; box.style.border = '1px solid #fecaca';
         } else {
           state.verdict = 'non_eligible';
           html = '<p class="text-xl font-bold" style="color:#b91c1c;">Non éligible (IMC ' + imc.toFixed(1) + ')</p>' +
             '<p class="mt-1 text-gray-700">Les traitements GLP-1 de l\'obésité ciblent un IMC ≥ 30. Votre médecin peut vous conseiller d\'autres approches adaptées à votre objectif.</p>';
-          stepsHtml = '';
+          stepsHtml = '<p>Pour comprendre les seuils et les options : <a href="/collections/glp1-cout/pas-eligible-remboursement-glp1-options-2026/" style="color:#16a34a;font-weight:600;">notre guide « pas éligible : vos options »</a>.</p>';
           box.style.background = '#fef2f2'; box.style.border = '1px solid #fecaca';
         }
 

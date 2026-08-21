@@ -918,10 +918,20 @@ Reste factuel, ne pose pas de diagnostic médical définitif, rappelle que la d�
       // 70B sature (429). On bascule alors : Groq 70B → Groq 8B → Mistral. Chaque modèle
       // a son PROPRE quota → pour tomber sur le fallback il faudrait que 3 modèles sur
       // 2 fournisseurs soient saturés en même temps → dead-end quasi impossible.
+      // Groq a décommissionné llama-3.3-70b-versatile et llama-3.1-8b-instant le
+      // 17/06/2026 (HTTP 404 model_not_found constaté en prod, logs du 21/08/2026).
+      // Remplacements production recommandés par Groq : openai/gpt-oss-120b (70B) et
+      // openai/gpt-oss-20b (8B). MAIS le free tier Groq plafonne ces modèles à
+      // 8 000 tokens/minute alors que notre requête (prompt système + RAG) pèse
+      // ~9 800 tokens → HTTP 413 quasi systématique (constaté en prod le 21/08).
+      // Mistral passe donc en primaire (c'était déjà lui qui servait 100 % du
+      // trafic depuis la panne Groq) ; Groq reste en secours pour la résilience.
+      // Pour redonner la primauté à un modèle 70B : réduire la requête sous 8k
+      // tokens (élaguer RAG/historique) ou passer au Dev Tier Groq (payant).
       const LLM_CHAIN = [
-        { url: "https://api.groq.com/openai/v1/chat/completions", key: groqKey, model: "llama-3.3-70b-versatile" },
         { url: "https://api.mistral.ai/v1/chat/completions", key: mistralKey, model: "mistral-small-latest" },
-        { url: "https://api.groq.com/openai/v1/chat/completions", key: groqKey, model: "llama-3.1-8b-instant" },
+        { url: "https://api.groq.com/openai/v1/chat/completions", key: groqKey, model: "openai/gpt-oss-120b" },
+        { url: "https://api.groq.com/openai/v1/chat/completions", key: groqKey, model: "openai/gpt-oss-20b" },
       ];
       let llmResponse: Response | null = null;
       let usedModel = LLM_CHAIN[0].model;

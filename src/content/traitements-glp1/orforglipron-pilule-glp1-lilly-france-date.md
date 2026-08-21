@@ -1,9 +1,9 @@
 ---
 title: "Orforglipron Comprimé : Approbation EMA et Date France"
-description: "Orforglipron comprimé France : approbation EMA attendue, efficacité (-15% du poids) et comparaison avec Wegovy et Mounjaro. Pilule GLP-1 d'Eli Lilly."
+description: "Orforglipron (Foundayo) comprimé France : approuvé par la FDA et au Royaume-Uni, décision EMA attendue. Efficacité (-12,4% du poids), comparaison Wegovy/Mounjaro."
 pubDate: 2026-03-16
 date: "2026-03-16"
-updatedAt: 2026-03-16
+updatedAt: 2026-08-21
 author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["orforglipron", "glp1 oral", "eli lilly", "comprimé", "obésité", "france", "2026", "2027"]
@@ -58,9 +58,11 @@ Eli Lilly a publié en 2025 les résultats des principales études de phase 3 de
 
 | Dose | Perte de poids à 72 semaines | ≥ 10% de perte |
 |------|------------------------------|----------------|
-| 6 mg | -7,5% | 22% des patients (≥10%) |
-| 12 mg | -8,4% | 28% des patients (≥10%) |
+| 6 mg | -7,8% | — |
+| 12 mg | -9,3% | — |
 | 36 mg | -12,4% | 59,6% des patients (≥10%) |
+
+*Résultats ATTAIN-1 à 72 semaines ([Eli Lilly / NEJM](https://investor.lilly.com/news-releases/news-release-details/lillys-oral-glp-1-orforglipron-demonstrated-meaningful-weight)) : perte moyenne de 7,8 % (6 mg), 9,3 % (12 mg) et 12,4 % (36 mg) contre 0,9 % sous placebo ; à la dose maximale, 59,6 % des participants ont perdu au moins 10 % de leur poids et 39,6 % au moins 15 %.*
 
 Ces résultats (-12,4% à 72 semaines pour la dose maximale) sont inférieurs à ceux de Wegovy (–14 à –17% selon les études STEP à 68 semaines), mais constituent une première prometteuse pour un GLP-1 oral sans contrainte alimentaire. La durée de suivi principale dans ATTAIN-1 est de 72 semaines (non 36), comparable à celle de Wegovy (68 semaines dans STEP-1).
 
@@ -82,7 +84,7 @@ Les études sur l'orforglipron dans le diabète de type 2 montrent également de
 | [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/) | Injection quotidienne | 8% | Oui |
 | Rybelsus | Comprimé quotidien (contraint) | 4-5% | Non |
 
-L'orforglipron se positionne comme l'équivalent oral de Wegovy en termes d'efficacité — une première dans l'histoire des GLP-1.
+L'orforglipron se positionne comme l'alternative orale la plus proche de Wegovy — un peu moins efficace en moyenne (−12,4 % vs −14,9 % dans STEP-1), mais sans injection ni contrainte alimentaire, une première dans l'histoire des GLP-1.
 
 > **À lire aussi** : [médicaments pour maigrir en 2026](/collections/glp1-perte-de-poids/medicament-pour-maigrir-guide-complet-france-2026/)
 
@@ -123,6 +125,7 @@ Eli Lilly a déposé une **demande d'Autorisation de Mise sur le Marché (AMM)**
 
 **Calendrier estimé** :
 - Décision EMA : 2e semestre 2026 au plus tôt. **Mise à jour avril 2026** : la FDA a approuvé l'orforglipron (nom commercial : Foundayo) le 1er avril 2026, faisant de lui la première pilule GLP-1 non peptidique autorisée. Cette approbation rapide outre-Atlantique pourrait soutenir le calendrier européen
+- **Mise à jour août 2026** : le Royaume-Uni est devenu le **premier pays européen à approuver Foundayo** (agence MHRA, [pharmaphorum](https://pharmaphorum.com/news/uk-first-european-country-approve-lillys-foundayo)) pour la gestion du poids et le diabète de type 2 — un signal supplémentaire en faveur d'une décision EMA prochaine, sans qu'aucune date officielle ne soit encore annoncée pour l'Union européenne
 - Commercialisation en France : 2027 (sous réserve des négociations de prix avec le CEPS)
 
 La France ajoute systématiquement un délai de négociation tarifaire avec le Comité Économique des Produits de Santé (CEPS) après l'AMM européenne, ce qui explique ce délai supplémentaire de 6 à 18 mois.

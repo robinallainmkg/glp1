@@ -107,6 +107,8 @@ faqSchema:
   <a href="/outils/test-eligibilite/" style="display:inline-block;background:#16a34a;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Faire le test d'éligibilité → 2 min</a>
 </div>
 
+Vous êtes hors critères (IMC entre 30 et 35, ou pas de comorbidité) ? Wegovy reste prescriptible à vos frais : voyez [vos options quand on n'est pas éligible au remboursement](/collections/glp1-cout/pas-eligible-remboursement-glp1-options-2026/).
+
 ### Comparaison avec autres GLP-1
 
 | Traitement | Prix mensuel | Remboursement |
