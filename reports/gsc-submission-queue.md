@@ -27,6 +27,7 @@ La routine AJOUTE ici a chaque publication — elle ne relance jamais dans le ch
 - [ ] https://glp1-france.fr/collections/retraites-bien-etre/retraite-yoga-perte-de-poids-france-comparatif-prix/ (article 12/08 — cible « retraite yoga perte de poids »)
 - [ ] https://glp1-france.fr/collections/regime-glp1/regime-glp1-quoi-manger-menus-erreurs/ (article 16/08 — cible « regime glp1 », requête tête sans page en top 20)
 - [ ] https://glp1-france.fr/collections/medecins-glp1-france/glp1-apres-sleeve-bypass-reprise-poids-remboursement/ (article 19/08 — cible « glp1 après sleeve », aucune page du site sur ce cluster)
+- [ ] https://glp1-france.fr/collections/glp1-cout/pas-eligible-remboursement-glp1-options-2026/ (article B8 21/08 — cible « glp1 non remboursé / pas éligible », renforce le cluster éligibilité où le site est absent)
 
 ## Soumises
 

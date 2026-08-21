@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a3c34"/>
+      <stop offset="1" stop-color="#0f2620"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1080" cy="100" r="160" fill="#16a34a" opacity="0.10"/>
+  <circle cx="120" cy="560" r="120" fill="#16a34a" opacity="0.12"/>
+  <text x="80" y="150" font-family="Georgia, serif" font-size="34" fill="#16a34a" font-weight="bold">GLP-1 FRANCE</text>
+  <text x="80" y="266" font-family="Georgia, serif" font-size="62" fill="#ffffff" font-weight="bold">Pas éligible au</text>
+  <text x="80" y="350" font-family="Georgia, serif" font-size="62" fill="#ffffff" font-weight="bold">remboursement ?</text>
+  <text x="80" y="434" font-family="Georgia, serif" font-size="62" fill="#ffffff" font-weight="bold">Vos options en 2026</text>
+  <rect x="80" y="474" width="120" height="6" fill="#16a34a"/>
+  <text x="80" y="550" font-family="Georgia, serif" font-size="36" fill="#9fd7b4">Coût réel, mutuelle, devenir éligible</text>
+  <g transform="translate(980,340)">
+    <!-- panneau de bifurcation : deux directions -->
+    <rect x="-14" y="-40" width="28" height="230" rx="8" fill="#ffffff" opacity="0.9"/>
+    <g transform="translate(0,-95)">
+      <rect x="-190" y="-38" width="185" height="72" rx="12" fill="#16a34a"/>
+      <path d="M -190 -38 L -230 -2 L -190 34 Z" fill="#16a34a"/>
+      <text x="-98" y="12" font-family="Georgia, serif" font-size="34" fill="#ffffff" font-weight="bold" text-anchor="middle">à vos frais</text>
+    </g>
+    <g transform="translate(0,20)">
+      <rect x="5" y="-38" width="200" height="72" rx="12" fill="#ffffff"/>
+      <path d="M 205 -38 L 245 -2 L 205 34 Z" fill="#ffffff"/>
+      <text x="105" y="12" font-family="Georgia, serif" font-size="32" fill="#1a3c34" font-weight="bold" text-anchor="middle">éligible 65%</text>
+    </g>
+  </g>
+</svg>
