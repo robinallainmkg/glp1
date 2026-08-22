@@ -4,11 +4,11 @@ thumbnail: "/images/thumbnails/prix-glp1-pharmacie-tableau-2026.svg"
 thumbnailAlt: "Tableau comparatif des prix des GLP-1 en pharmacie en France 2026"
 description: "Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Rybelsus : le tableau de référence des prix officiels en pharmacie 2026, avec le remboursement de chaque médicament."
 keywords: ['glp-1 en pharmacie prix', 'prix glp-1', 'glp1 prix pharmacie', 'prix agonistes glp-1', 'ozempic prix', 'wegovy prix', 'mounjaro prix', 'saxenda prix', 'trulicity prix', 'rybelsus prix']
-seoTitle: "GLP-1 en pharmacie : prix 2026 — le tableau complet officiel"
-seoDescription: "Le tableau de référence 2026 : prix officiel en pharmacie et remboursement d'Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity et Rybelsus. Chiffres BDPM sourcés."
+seoTitle: "Prix des GLP-1 en pharmacie 2026 : tableau dès 77,60 €"
+seoDescription: "Ozempic 77,60 €, Wegovy 146,91-195,10 €, Mounjaro 176,10-433,80 € : tous les prix officiels BDPM et le remboursement 2026, médicament par médicament."
 mainKeyword: "glp-1 en pharmacie prix"
 publishedAt: '2026-08-02'
-updatedAt: '2026-08-02'
+updatedAt: '2026-08-22'
 date: 2026-08-02
 featured: true
 author: 'Rédaction GLP-1 France'
