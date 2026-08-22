@@ -340,7 +340,9 @@ const SCAM_PATTERNS = [
   { pattern: /\b(achete?r?|command[eé]|pay[eé]|re[cç]u)\b.*\b(en ligne|sur internet|sur (un )?site|par courrier)\b/i, signal: 'online_purchase' },
   { pattern: /\b(site|lien|url)\b.*\b(ozempic|wegovy|mounjaro|glp|semaglutide)\b/i, signal: 'suspicious_url' },
   { pattern: /\b(arnaque|escroqu|fraud|contrefaçon|faux|fake|douteux|louche|suspect)\b/i, signal: 'explicit_scam' },
-  { pattern: /\b(pas re[cç]u|jamais livr[eé]|rembourse|litige|plainte)\b/i, signal: 'post_scam' },
+  // NB : ne PAS matcher "rembourse/remboursé" seul — vocabulaire légitime du site (remboursement 65 %).
+  // Seules les formulations de victime (demande de remboursement d'une commande) signalent une arnaque.
+  { pattern: /\b(pas re[cç]u|jamais livr[eé]|remboursez|(me|nous|se)\s+faire\s+rembourser|(me|nous)\s+rembourser|litige|plainte)\b/i, signal: 'post_scam' },
   { pattern: /\b\d{2,3}\s*€?\s*(euros?|eur)\b.*\b(achete|paye|coute)\b/i, signal: 'suspicious_price' },
   { pattern: /\bsans ordonnance\b/i, signal: 'no_prescription' },
 ];

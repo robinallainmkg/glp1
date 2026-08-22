@@ -3,7 +3,7 @@ title: "Victoza Arrêt 2026 : Alternatives et Transition"
 description: "Victoza arrêt commercialisation 2026 : alternatives au liraglutide, démarches de transition et conseils pratiques pour les patients traités."
 pubDate: 2026-03-16
 date: "2026-03-16"
-updatedAt: 2026-03-16
+updatedAt: 2026-08-22
 author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
 tags: ["victoza", "liraglutide", "arrêt", "alternative", "glp1", "2026", "ozempic", "saxenda"]
@@ -58,7 +58,7 @@ Les alternatives disponibles en France et remboursées par la Sécurité Sociale
 - **Fréquence** : Injection hebdomadaire
 - **Efficacité** : Supérieure à Victoza — réduction de l'HbA1c de 1,5 à 2% vs 1 à 1,5% avec Victoza
 - **Perte de poids** : Plus importante qu'avec Victoza (environ -4 à -6% vs -2 à -3%)
-- **Remboursement** : Oui, à 65% en bithérapie metformine pour le DT2 (100% en ALD) — voir le [remboursement Ozempic pour le diabète](/collections/glp1-cout/remboursement-ozempic-diabete-justificatif-prescription-guide-2026/)
+- **Remboursement** : Oui, à 30% pour le DT2 (100% en ALD), prix réglementé 77,60 € le stylo — voir le [remboursement Ozempic pour le diabète](/collections/glp1-cout/remboursement-ozempic-diabete-justificatif-prescription-guide-2026/)
 
 #### Trulicity (dulaglutide, injection hebdomadaire)
 [Trulicity](/collections/traitements-glp1/guide-complet-trulicity/) est une autre option remboursée, également en injection hebdomadaire.
@@ -93,7 +93,7 @@ Saxenda contient la même molécule que Victoza (liraglutide), mais à une dose 
 #### Wegovy (sémaglutide 2,4 mg)
 [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) offre une efficacité supérieure avec une injection hebdomadaire.
 
-- **Efficacité** : Perte de poids de 15 à 17% en moyenne (études STEP)
+- **Efficacité** : Perte de poids d'environ 15% en moyenne (étude STEP 1 : −14,9% à 68 semaines)
 - **Fréquence** : Injection hebdomadaire
 - **Remboursement** : Remboursé à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel)
 
@@ -168,7 +168,7 @@ Non. L'arrêt est purement commercial. Victoza a un excellent profil de sécurit
 Ils partagent des effets secondaires similaires (nausées, diarrhée, vomissements) car ils appartiennent à la même classe. Cependant, les nausées peuvent être plus prononcées lors de l'initiation d'Ozempic. La grande différence : Ozempic est pris une fois par semaine, ce qui peut modifier la manière dont les effets sont perçus.
 
 **Mon médecin traitant peut-il faire la prescription de remplacement ?**
-Oui. Depuis juin 2025, tout médecin généraliste peut prescrire les GLP-1 pour le diabète de type 2 et l'obésité. Votre médecin traitant est parfaitement habilité à gérer cette transition.
+Oui pour le diabète de type 2 : votre médecin traitant peut prescrire Ozempic ou Trulicity et gérer cette transition. Attention en revanche pour l'obésité : le remboursement à 65 % de Wegovy ou Mounjaro exige une première prescription en CSO/CHU (le généraliste ne fait que renouveler ensuite) — voir [qui peut prescrire pour être remboursé](/collections/medecins-glp1-france/qui-peut-prescrire-mounjaro-wegovy-rembourse/).
 
 **Que se passe-t-il si j'ai un profil particulier (grossesse, insuffisance rénale...) ?**
 Certaines situations particulières peuvent modifier le choix de l'alternative. Consultez votre médecin ou un spécialiste (diabétologue, endocrinologue) pour les cas complexes. Les femmes en âge de procréer doivent noter qu'une contraception est recommandée pendant les 2 mois suivant le changement de traitement.

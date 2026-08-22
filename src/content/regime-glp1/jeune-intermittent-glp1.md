@@ -137,6 +137,6 @@ Rompre immédiatement le jeûne avec 15g glucose. Revoir posologies avec médeci
 
 ## Conclusion
 
-L'association jeûne intermittent et GLP-1 représente une synergie thérapeutique prometteuse pour l'optimisation métabolique. Cette approche combinée maximise les bénéfices sur le poids, la glycémie et la sensibilité à l'insuline. Un accompagnement médical guide la mise en œuvre sécurisée.
+L'association jeûne intermittent et GLP-1 représente une synergie thérapeutique prometteuse pour l'optimisation métabolique. Cette approche combinée maximise les bénéfices sur le poids, la glycémie et la sensibilité à l'insuline. Un accompagnement médical guide la mise en œuvre sécurisée. Pour construire vos repas au quotidien, consultez notre [régime GLP-1 : quoi manger sous Wegovy, Ozempic ou Mounjaro](/collections/regime-glp1/regime-glp1-quoi-manger-menus-erreurs/).
 
  Ces informations sont fournies à titre éducatif uniquement. Consultez votre médecin traitant ou endocrinologue avant d'associer jeûne intermittent et traitement GLP-1.

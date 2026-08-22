@@ -3,7 +3,7 @@ title: "GLP-1 Idées Suicidaires Risque : Études 2026"
 description: "GLP-1 idées suicidaires risque semaglutide : ce que disent l'EMA, Epi-Phare et les études en 2026. Analyse factuelle et ressources d'aide pour les patients."
 pubDate: 2026-03-17
 date: 2026-03-17
-updatedAt: 2026-03-17
+updatedAt: 2026-08-22
 author: "Rédaction GLP-1 France"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "idées suicidaires", "santé mentale", "semaglutide", "EMA", "Epi-Phare", "pharmacovigilance", "effets secondaires", "2026"]
@@ -84,7 +84,7 @@ En avril 2024, le PRAC a publié ses premières conclusions après analyse de l'
 
 En 2025, le PRAC a étendu sa surveillance au tirzépatide (Mounjaro). Les données préliminaires n'ont pas non plus montré de signal clair, mais le suivi se poursuit.
 
-Il est important de noter que l'EMA n'a pas « blanchi » définitivement les GLP-1 sur ce sujet. L'agence a simplement conclu que les données actuelles ne justifient pas une modification des RCP (résumés des caractéristiques du produit) ni une restriction d'usage, tout en maintenant une vigilance active. **Mise à jour avril 2026** : aux États-Unis, la FDA a retiré en janvier 2026 l'avertissement relatif au risque suicidaire des notices du sémaglutide, après analyse approfondie des données post-commercialisation et des études épidémiologiques, concluant à l'absence de lien causal établi.
+Il est important de noter que l'EMA n'a pas « blanchi » définitivement les GLP-1 sur ce sujet. L'agence a simplement conclu que les données actuelles ne justifient pas une modification des RCP (résumés des caractéristiques du produit) ni une restriction d'usage, tout en maintenant une vigilance active. **Mise à jour 2026** : aux États-Unis, la FDA a demandé le 13 janvier 2026 aux fabricants de retirer l'avertissement relatif au risque suicidaire des notices des GLP-1 indiqués dans l'obésité (Wegovy, Saxenda, tirzépatide), après une méta-analyse de 91 essais et l'analyse des données en vie réelle de plus de 2,2 millions de patients, concluant à l'absence de sur-risque identifié.
 
 ## L'étude Epi-Phare en France {#epi-phare}
 

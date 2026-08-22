@@ -518,6 +518,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 **Optimisez votre traitement Wegovy :**
 
 ### Guides Wegovy Essentiels
+- **[Prix des GLP-1 en pharmacie : le tableau complet 2026](/collections/glp1-cout/prix-glp1-pharmacie-tableau-2026/)** - Comparer tous les traitements
 - **[Guide Complet Wegovy 2026](/collections/traitements-glp1/guide-complet-wegovy/)** - Posologie complète de 0.25mg à 2.4mg
 - **[Effets Secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)** - Comment gérer nausées et vomissements
 - **[Dosage Wegovy Optimal](/collections/traitements-glp1/wegovy-dosage/)** - Guide d'escalade progressive
