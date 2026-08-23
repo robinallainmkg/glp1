@@ -7,7 +7,7 @@ seoTitle: "Prix Ozempic 2026 : 77,60 €/stylo — remboursé 30%, 100% en ALD"
 seoDescription: "Prix officiel Ozempic : 77,60 € TTC le stylo (1 mois), identique dans toutes les pharmacies. Remboursé 30% diabète type 2, 100% en ALD. Point juillet 2026."
 mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
-updatedAt: '2026-08-11'
+updatedAt: '2026-08-23'
 date: 2026-06-22
 featured: true
 author: 'Rédaction GLP-1 France'
@@ -27,6 +27,8 @@ faqSchema:
     answer: "Non. L'Ozempic 2 mg dispose d'une AMM européenne mais n'est pas commercialisé en France. Seuls les dosages 0,25 mg, 0,5 mg et 1 mg sont disponibles, avec un nouveau stylo 3 ml en 0,5 mg depuis février 2026."
   - question: "Combien coûte l'Ozempic par mois sans remboursement ?"
     answer: "Le prix de l'Ozempic est réglementé : 77,60 euros TTC par stylo, et un stylo contient 4 doses, soit un mois de traitement. Sans remboursement (usage hors AMM), le coût est donc d'environ 77,60 euros par mois. Rappel : la vente sans ordonnance est illégale en France."
+  - question: "Existe-t-il de l'Ozempic en comprimé et à quel prix ?"
+    answer: "Ozempic n'existe qu'en stylo injectable. La version orale du sémaglutide s'appelle Rybelsus (comprimés de 3, 7 et 14 mg), réservée au diabète de type 2. Rybelsus n'est pas remboursé en France (avis défavorable de la HAS) et son prix est libre, variable selon les pharmacies."
 ---
 
 <script type="application/ld+json">
@@ -121,6 +123,10 @@ Le **prix Ozempic en pharmacie** en France est fixé à **77,60€ TTC par stylo
 | Saxenda | 240-300 € | Non remboursé |
 | <a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a> | ~81 € | 65% (DT2 uniquement) |
 | [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) | 176-433 € | Remboursé 65% obésité (depuis 15/06/2026) |
+
+### Ozempic en comprimé : ça existe ? (Rybelsus)
+
+Beaucoup de patients cherchent le « prix de l'Ozempic en comprimé ». Précision importante : **Ozempic n'existe qu'en stylo injectable**. La version orale du sémaglutide (la même molécule) s'appelle **Rybelsus**, en comprimés de 3, 7 et 14 mg, avec une AMM limitée au diabète de type 2. En France, Rybelsus n'est **pas remboursé** (avis défavorable de la HAS) : son prix est donc libre et varie d'une pharmacie à l'autre, contrairement à celui d'Ozempic. Pour les détails (posologie, disponibilité, prix constatés), consultez notre [guide complet Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/).
 
 ## 💊 Remboursement Sécurité Sociale
 

@@ -8,6 +8,7 @@ collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["ozempic ordonnance", "ozempic sans ordonnance", "prescription ozempic", "ozempic médecin généraliste", "comment avoir ozempic", "ozempic téléconsultation"]
 date: "2026-04-10"
+updatedAt: "2026-08-23"
 mainKeyword: "ozempic ordonnance"
 featured: true
 enableAffiliation: true
@@ -134,8 +135,8 @@ Le cout d'Ozempic varie considerablement selon votre situation medicale et votre
 
 Lorsque Ozempic est prescrit dans le cadre du diabète de type 2, il beneficie d'un **remboursement par l'Assurance maladie a hauteur de 30 %**, le reste etant pris en charge par votre mutuelle dans la plupart des cas.
 
-- **Prix public** : environ 80 a 90 euros par stylo (1 mois de traitement a 0,5 mg ou 1 mg).
-- **Reste a charge après remboursement Secu** : environ 54 a 63 euros (avant mutuelle).
+- **Prix public** : 77,60 € TTC par stylo (prix officiel BDPM, identique dans toutes les pharmacies et quel que soit le dosage 0,25, 0,5 ou 1 mg).
+- **Reste a charge après remboursement Secu (30 %)** : environ 54,32 € (avant mutuelle).
 - **Avec ALD (Affection longue durée)** : si votre diabète est reconnu en ALD, le remboursement atteint 100 %. Vous ne payez rien.
 
 ### Ozempic pour la perte de poids (hors AMM)
@@ -143,7 +144,7 @@ Lorsque Ozempic est prescrit dans le cadre du diabète de type 2, il beneficie d
 Ozempic n'a pas d'Autorisation de mise sur le marché (AMM) pour la perte de poids en France. S'il est prescrit hors AMM pour cette indication :
 
 - **Aucun remboursement** par la Sécurité sociale.
-- **Prix en pharmacie** : entre 80 et 230 euros par mois selon le dosage, entierement a votre charge.
+- **Prix en pharmacie** : 77,60 € par stylo (le prix d'un médicament remboursable est réglementé et ne varie pas selon la pharmacie), entierement a votre charge.
 - Certaines mutuelles proposent un forfait "médecine douce" ou "prevention" qui peut partiellement couvrir le cout, mais c'est rare.
 
 Pour un comparatif détaillé des prix, consultez notre [guide des prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/).
@@ -185,7 +186,7 @@ Ozempic et Wegovy contiennent exactement la même molécule : le semaglutide, fa
 
 - **AMM** : diabète de type 2 uniquement.
 - **Dosage** : 0,25 mg, 0,5 mg et 1 mg par semaine.
-- **Remboursement** : 65 % par la Sécurité sociale (100 % en ALD).
+- **Remboursement** : 30 % par la Sécurité sociale (100 % en ALD).
 - **Prescription** : tout médecin peut prescrire pour le diabète.
 
 ### Wegovy : indication obésité
@@ -213,7 +214,7 @@ Oui. Pour le diabète de type 2, tout médecin généraliste peut prescrire Ozem
 
 ### Combien coute Ozempic avec une ordonnance ?
 
-Le prix public d'un stylo Ozempic varie entre 80 et 90 euros pour un mois de traitement. Pour les patients diabetiques, la Sécurité sociale rembourse 30 % du coût (100 % en ALD). Pour une prescription hors AMM (perte de poids), le médicament n'est pas remboursé et reste entièrement à votre charge. Retrouvez tous les details sur notre [page dediee aux prix Ozempic](/collections/glp1-cout/prix-ozempic-france/).
+Le prix public d'un stylo Ozempic est de 77,60 € TTC pour un mois de traitement (prix officiel identique partout). Pour les patients diabetiques, la Sécurité sociale rembourse 30 % du coût (100 % en ALD). Pour une prescription hors AMM (perte de poids), le médicament n'est pas remboursé et reste entièrement à votre charge. Retrouvez tous les details sur notre [page dediee aux prix Ozempic](/collections/glp1-cout/prix-ozempic-france/).
 
 ### Peut-on obtenir une ordonnance Ozempic par téléconsultation ?
 
