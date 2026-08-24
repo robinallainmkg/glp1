@@ -70,6 +70,11 @@ const faqJsonLd = JSON.stringify({
             </div>
           </div>
           <p id="imcLive" class="text-sm text-gray-500 mb-4 min-h-5"></p>
+          <div class="mb-4">
+            <label for="earlyEmail" class="block text-sm font-medium text-gray-700 mb-1">Email <span class="text-gray-400 font-normal">(optionnel)</span> — recevez votre résultat et votre plan d'action</label>
+            <input type="email" id="earlyEmail" placeholder="votre@email.fr"
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none" />
+          </div>
           <button id="btnStep1" class="w-full text-white font-semibold py-3 rounded-lg text-lg" style="background:#16a34a;">Continuer →</button>
         </div>
 
@@ -211,6 +216,22 @@ const faqJsonLd = JSON.stringify({
         var r = computeImc();
         if (!r) { document.getElementById('imcLive').textContent = 'Merci d\'indiquer une taille et un poids valides.'; return; }
         state.imc = r.imc; state.taille = r.taille; state.poids = r.poids;
+        // Capture précoce (optionnelle) : enregistre le lead dès l'étape 1 pour ne pas
+        // perdre les abandons en cours de test. Une ligne complète (avec verdict) est
+        // insérée au résultat ; la routine ignore la ligne partielle si une complète existe.
+        var early = document.getElementById('earlyEmail').value.trim();
+        if (early && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(early) && !state.earlyEmail) {
+          state.earlyEmail = early;
+          sb.from('contacts').insert({
+            email: early,
+            contact_type: 'eligibility_test',
+            subject: 'Test éligibilité remboursement (capture étape 1)',
+            message: 'Test en cours (capture précoce étape 1) — IMC ' + state.imc.toFixed(1) + ' (' + state.poids + ' kg / ' + state.taille + ' cm)',
+            newsletter: true,
+            created_at: new Date().toISOString()
+          }).then(function () {});
+          if (typeof window.gtag === 'function') window.gtag('event', 'test_email_capture_early', { imc: Math.round(state.imc) });
+        }
         // Instrumentation GA4 : progression du funnel (K6) — permet de voir si les
         // visiteurs abandonnent avant le verdict ou entre le verdict et la capture.
         if (typeof window.gtag === 'function') window.gtag('event', 'test_step2', { imc: Math.round(state.imc) });
@@ -313,6 +334,28 @@ const faqJsonLd = JSON.stringify({
         // Instrumentation GA4 : mesure du funnel verdict → capture (K6)
         if (typeof window.gtag === 'function') {
           window.gtag('event', 'test_verdict', { verdict: state.verdict, imc: Math.round(state.imc) });
+        }
+
+        // Capture précoce : si l'email a été donné à l'étape 1, on enregistre la ligne
+        // complète (avec verdict) sans re-saisie, et on le montre dans le bloc capture.
+        if (state.earlyEmail) {
+          sb.from('contacts').insert({
+            email: state.earlyEmail,
+            contact_type: 'eligibility_test',
+            subject: 'Test éligibilité remboursement',
+            message: 'IMC ' + state.imc.toFixed(1) + ' (' + state.poids + ' kg / ' + state.taille + ' cm) — verdict: ' + state.verdict +
+              ' — comorbidités: ' + (state.comorbidites.join(', ') || 'aucune') + ' — suivi nutritionnel: ' + state.nutri,
+            newsletter: true,
+            created_at: new Date().toISOString()
+          }).then(function (r) {
+            if (!r.error) {
+              var msg = document.getElementById('captureMsg');
+              document.getElementById('captureEmail').value = state.earlyEmail;
+              msg.textContent = '✓ C\'est noté ! Vous recevrez votre récapitulatif à ' + state.earlyEmail + ' sous 24 h.';
+              msg.style.color = '#15803d';
+              if (typeof window.gtag === 'function') window.gtag('event', 'test_email_capture', { verdict: state.verdict, early: true });
+            }
+          });
         }
       }
 

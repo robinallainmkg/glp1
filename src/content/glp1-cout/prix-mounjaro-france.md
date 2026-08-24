@@ -311,6 +311,36 @@ Retrouvez aussi nos pages locales avec la liste des pharmacies et les centres de
   <a href="/outils/test-eligibilite/" style="display:inline-block;background:#16a34a;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">Faire le test d'éligibilité → 2 min</a>
 </div>
 
+<div style="background:#ffffff;border:1px dashed #86efac;border-radius:10px;padding:12px 14px;margin-top:12px;">
+  <p style="margin:0 0 8px;color:#1a3c34;font-size:0.95em;"><strong>Pas le temps de faire le test&nbsp;?</strong> Recevez <strong>le parcours remboursement en 1 page</strong> (gratuit, imprimable)&nbsp;: les 3 étapes et les documents à réunir.</p>
+  <form id="lmForm" style="display:flex;flex-wrap:wrap;gap:8px;">
+    <input type="email" id="lmEmail" required placeholder="votre@email.fr" style="flex:1 1 200px;border:1px solid #d1d5db;border-radius:8px;padding:9px 12px;" />
+    <button type="submit" style="background:#1a3c34;color:#fff;border:0;border-radius:8px;padding:9px 16px;font-weight:600;cursor:pointer;">Recevoir le guide</button>
+  </form>
+  <p id="lmMsg" style="margin:8px 0 0;font-size:0.9em;"></p>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('lmForm'); if(!f) return;
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var em=document.getElementById('lmEmail').value.trim();
+    var msg=document.getElementById('lmMsg');
+    if(!em) return;
+    fetch('https://ywekaivgjzsmdocchvum.supabase.co/rest/v1/contacts', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','apikey':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY','Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY'},
+      body: JSON.stringify({email:em, contact_type:'lead_magnet_parcours', subject:'Guide parcours remboursement (1 page)', message:'Capture lead magnet — page prix-mounjaro-france', newsletter:true, created_at:new Date().toISOString()})
+    }).then(function(r){
+      if(r.ok){ msg.innerHTML='✓ C\'est noté ! <a href="/guides/parcours-remboursement-glp1-1-page/" style="color:#15803d;font-weight:700;">Ouvrir le guide maintenant →</a>'; msg.style.color='#15803d';
+        if (typeof gtag==='function') gtag('event','lead_magnet_capture',{page:'prix-mounjaro-france'});
+      } else { msg.textContent='Une erreur est survenue, réessayez.'; msg.style.color='#b91c1c'; }
+    }).catch(function(){ msg.textContent='Une erreur est survenue, réessayez.'; msg.style.color='#b91c1c'; });
+  });
+})();
+</script>
+
+
 ## Obtenir le Remboursement Mounjaro : 4 Étapes Concrètes {#remboursement-etapes}
 
 Depuis le 15 juin 2026, le remboursement de Mounjaro à 65% suit un parcours balisé. Voici les 4 étapes à suivre :
