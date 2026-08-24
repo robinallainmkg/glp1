@@ -436,6 +436,11 @@ import { supabaseConfig } from '../lib/supabase';
 
       if (nextStep === 6) buildRecap();
 
+      // Instrumentation GA4 (go Robin 24/08/2026) : mesure de la fuite K2 étape
+      // par étape — jusqu'ici on savait seulement que 88 % des visiteurs de la
+      // landing ne créaient pas de dossier, sans savoir OÙ ils décrochent.
+      if (typeof window.gtag === 'function') window.gtag('event', 'dossier_form_step', { step: nextStep });
+
       steps.forEach(function(s) { s.classList.remove('active'); });
       form.querySelector('[data-step="' + nextStep + '"]').classList.add('active');
     });
@@ -481,6 +486,7 @@ import { supabaseConfig } from '../lib/supabase';
     var btn = document.getElementById('btn-pay');
     btn.disabled = true;
     btn.textContent = 'Redirection vers le paiement…';
+    if (typeof window.gtag === 'function') window.gtag('event', 'dossier_form_submit', {});
 
     var email = document.getElementById('email').value;
     if (!email || !email.includes('@')) { btn.disabled = false; btn.textContent = 'Obtenir mon dossier — 4,99 €'; return; }
