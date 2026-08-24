@@ -68,6 +68,8 @@ CONTEXTE IMPORTANT :
 - LANGUE : réponds TOUJOURS dans la langue du dernier message de l'utilisateur. S'il écrit en anglais (ou demande explicitement l'anglais), réponds ENTIÈREMENT en anglais — ne reviens pas au français (constaté en prod le 19/08/2026 : réponses en français à une utilisatrice anglophone qui avait demandé l'anglais deux fois).
 - ⛔ EFFETS SECONDAIRES — pas de pourcentage inventé : ne cite JAMAIS un chiffre de fréquence (« 60 % des patients »…) sauf s'il vient littéralement du contexte factuel récupéré. Sinon dis « fréquent, surtout en début de traitement et lors des augmentations de dose », sans pourcentage.
 - Si la personne est victime d'arnaque avérée : orienter calmement vers signal.conso.gouv.fr et pré-plainte-en-ligne.gouv.fr
+- ⚠️ COMMANDE / FACTURATION / DÉBIT : glp1-france.fr ne vend AUCUN médicament et n'encaisse AUCUNE commande de traitement (notre seul produit est le Dossier GLP-1 personnalisé à 4,99 €, un document numérique). Si quelqu'un dit avoir « commandé une boîte », été « facturé » ou « débité » pour un médicament : dis-lui CLAIREMENT que cet achat ne vient pas de notre site, que c'est très probablement un site frauduleux (les GLP-1 ne se vendent qu'en pharmacie sur ordonnance), et donne la conduite à tenir : opposition auprès de la banque, signalement sur signal.conso.gouv.fr. NE renvoie PAS vers notre email comme si nous étions le vendeur (erreur constatée en prod le 17/08/2026).
+- 🧭 HYGIÈNE DE CONVERSATION (3 règles constatées en prod) : (1) CONTINUITÉ — si le message est une simple relance (« oui », « ok », « j'aimerais en savoir plus », « dis-m'en plus »), poursuis le sujet EXACT de tes derniers messages, ne change jamais de thème ; (2) MÉMOIRE — ne redemande JAMAIS une information déjà présente dans la conversation (ville, code postal, poids, taille, traitement) : relis l'historique avant de poser une question ; (3) ANTI-RÉPÉTITION — ne rouvre pas chaque réponse par le même rappel (IMC, critères) déjà énoncé : référence l'acquis en une demi-phrase maximum et apporte du NOUVEAU.
 
 CONSERVATION DES STYLOS (FAITS OFFICIELS — notices EMA, applique-les STRICTEMENT, ne JAMAIS improviser) :
 - Règle générale : avant première utilisation, tous les stylos GLP-1 se conservent au réfrigérateur (2-8°C), jamais au congélateur.
@@ -320,11 +322,41 @@ function extractStatedImc(userTexts: string[]): number | null {
   return null;
 }
 
-function buildImcVerdictContext(imcData: { imc: number; poids: number | null; taille: number | null }): string {
+// Comorbidités reconnues mentionnées par l'utilisateur (détection déterministe).
+// Ajouté en v79 : le 14/08/2026, une prospecte IMC 36,8 ayant DIT être diabétique
+// n'a jamais reçu son verdict d'éligibilité — le contexte injecté demandait au
+// modèle de « demander d'abord les comorbidités » alors qu'elle en avait donné une.
+function extractComorbidities(userTexts: string[]): string[] {
+  const found: string[] = [];
+  const patterns: [RegExp, string][] = [
+    [/diab[eè]t/i, "diabète de type 2"],
+    [/hypertension|tension\s+(art[eé]rielle\s+)?([eé]lev[eé]e|haute)|hta\b/i, "hypertension"],
+    [/apn[eé]e/i, "apnée du sommeil"],
+    [/cholest[eé]rol|dyslipid[eé]mie|triglyc[eé]rides/i, "dyslipidémie"],
+    [/st[eé]atose|foie gras|nash\b|mash\b/i, "stéatose hépatique"],
+    [/cardiovasculaire|infarctus|avc\b|coronarien/i, "maladie cardiovasculaire"],
+  ];
+  for (const t of userTexts) {
+    for (const [re, label] of patterns) {
+      if (found.includes(label)) continue;
+      const m = t.match(re);
+      if (!m) continue;
+      // Négation simple juste avant ("pas de diabète", "sans hypertension", "aucune apnée")
+      const before = t.slice(Math.max(0, (m.index ?? 0) - 25), m.index ?? 0);
+      if (/(pas\s+d[e']\s*$|pas\s+de\s+$|sans\s+$|aucune?\s+$|ni\s+$|non\s+$)/i.test(before)) continue;
+      found.push(label);
+    }
+  }
+  return found;
+}
+
+function buildImcVerdictContext(imcData: { imc: number; poids: number | null; taille: number | null }, comorbidities: string[] = []): string {
   const { imc, poids, taille } = imcData;
   let verdict: string;
   if (imc >= 40) {
-    verdict = "ÉLIGIBLE au remboursement 65% (IMC ≥ 40, comorbidité non requise), sous réserve d'un échec de prise en charge nutritionnelle. Prochaine étape : primo-prescription en CSO/CHU.";
+    verdict = "ÉLIGIBLE au remboursement 65% (IMC ≥ 40, comorbidité non requise), sous réserve d'un échec de prise en charge nutritionnelle. Prochaine étape : primo-prescription en CSO/CHU. ANNONCE clairement ce verdict dans ta réponse (sans attendre une nouvelle question), puis propose le Dossier GLP-1 personnalisé (formulation officielle de la section CONVERSION) s'il n'a pas déjà été proposé.";
+  } else if (imc >= 35 && comorbidities.length > 0) {
+    verdict = `ÉLIGIBLE au remboursement 65% : IMC ≥ 35 AVEC comorbidité mentionnée dans la conversation (${comorbidities.join(", ")}), sous réserve de l'échec d'une prise en charge nutritionnelle de 6 mois et de la confirmation du diagnostic par le médecin. ANNONCE clairement ce verdict dans ta réponse (sans attendre une nouvelle question), puis propose le Dossier GLP-1 personnalisé (formulation officielle de la section CONVERSION) s'il n'a pas déjà été proposé.`;
   } else if (imc >= 35) {
     verdict = "éligible UNIQUEMENT si au moins une comorbidité est confirmée (diabète T2, hypertension, apnée du sommeil…). Sans comorbidité → NON éligible. Demande d'abord les comorbidités avant tout verdict.";
   } else {
@@ -877,10 +909,11 @@ serve(async (req) => {
       const userTexts = [cleanMessage, ...historyMessages.filter((m: any) => m.role === 'user').map((m: any) => m.content).reverse()];
       const imcData = extractImc(userTexts);
       const statedImc = imcData === null ? extractStatedImc(userTexts) : null;
+      const userComorbidities = extractComorbidities(userTexts);
       const imcContext = imcData
-        ? buildImcVerdictContext(imcData)
+        ? buildImcVerdictContext(imcData, userComorbidities)
         : statedImc !== null
-          ? buildImcVerdictContext({ imc: statedImc, poids: null, taille: null })
+          ? buildImcVerdictContext({ imc: statedImc, poids: null, taille: null }, userComorbidities)
           : '';
 
       const userMessageWithContext = ragContext
