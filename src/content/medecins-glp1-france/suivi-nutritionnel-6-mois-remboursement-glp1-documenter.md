@@ -86,7 +86,8 @@ Recopiez ce tableau (papier ou tableur) et remplissez-le à chaque rendez-vous :
 2. **Factures de diététicien** (elles prouvent la réalité et la régularité des séances) ;
 3. **Courbe de poids** tenue avec un professionnel (celle de votre dossier médical partagé compte) ;
 4. **Compte-rendu de programme d'éducation thérapeutique** ou d'atelier nutrition si vous en avez suivi un ;
-5. Le **courrier de synthèse M6** ci-dessus.
+5. **Documents d'une cure thermale conventionnée** orientation « affections digestives et maladies métaboliques », le cas échéant : prescription, consultations du médecin thermal de début et de fin de cure — un séjour encadré qui s'inscrit dans le parcours (voir notre guide des [cures thermales et retraites perte de poids remboursées](/retraites/)) ;
+6. Le **courrier de synthèse M6** ci-dessus.
 
 ## Les trois pièges qui coûtent le remboursement
 

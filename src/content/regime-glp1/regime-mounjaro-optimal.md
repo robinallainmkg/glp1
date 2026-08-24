@@ -160,6 +160,7 @@ Pour une vue complète, consultez notre guide sur les [effets secondaires de Mou
 - **Renforcement** : 2-3 séances/semaine pour [préserver vos muscles sous Mounjaro](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 - **Souplesse** : Yoga, étirements
 - **Cardio modéré** : Selon tolérance
+- **Coup d'accélérateur encadré** : une cure thermale minceur remboursée ou un séjour dédié peut relancer l'hygiène de vie — voir notre [guide des retraites perte de poids en France](/retraites/)
 
 ## Suivi et Ajustements
 

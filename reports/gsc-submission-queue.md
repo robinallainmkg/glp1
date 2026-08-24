@@ -32,3 +32,4 @@ La routine AJOUTE ici a chaque publication — elle ne relance jamais dans le ch
 ## Soumises
 
 - [x] https://glp1-france.fr/outils/test-eligibilite/ — soumise par Robin le 09/08/2026 (confirme en chat « fait »). Surveiller premieres impressions ; re-signaler une fois si 0 imp au 16/08.
+- [ ] https://glp1-france.fr/collections/retraites-bien-etre/cure-thermale-vichy-minceur-avis-prix/ (ajouté 24/08/2026)

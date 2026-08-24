@@ -41,7 +41,7 @@ Voici la liste des stations possédant l'agrément pour cette orientation ([Loca
 | Station | Département |
 |---|---|
 | **Brides-les-Bains** | Savoie (73) |
-| **Vichy** | Allier (03) |
+| **[Vichy](/collections/retraites-bien-etre/cure-thermale-vichy-minceur-avis-prix/)** | Allier (03) |
 | **Vittel** | Vosges (88) |
 | **Contrexéville** | Vosges (88) |
 | **Capvern** | Hautes-Pyrénées (65) |
