@@ -158,10 +158,10 @@ const updatedFr = stats.updated_at
     <section class="contrib-banner">
       <div class="contrib-inner">
         <div>
-          <h2>Vous avez vu un prix en pharmacie&nbsp;?</h2>
-          <p>Partagez-le pour aider la communauté. Anonyme, 30&nbsp;secondes.</p>
+          <h2>Wegovy ou Mounjaro disponible dans votre pharmacie&nbsp;?</h2>
+          <p>Signalez la disponibilité (ou une rupture) pour aider la communauté. Anonyme, 30&nbsp;secondes.</p>
         </div>
-        <button type="button" class="contrib-btn" id="open-submit">Partager un prix →</button>
+        <button type="button" class="contrib-btn" id="open-submit">Signaler la disponibilité →</button>
       </div>
     </section>
 
@@ -236,7 +236,7 @@ const updatedFr = stats.updated_at
         <div class="drawer-legend">
           <span class="pop-src-off">Officiel</span> prix réglementé, identique dans toutes les pharmacies
         </div>
-        <button type="button" class="drawer-cta" id="drawer-submit-btn">Vous avez vu un prix ici ? Partagez-le</button>
+        <button type="button" class="drawer-cta" id="drawer-submit-btn">Traitement disponible ici ? Signalez-le</button>
       </div>
     </aside>
   </div>
@@ -245,8 +245,8 @@ const updatedFr = stats.updated_at
   <div id="submit-modal" class="submit-modal" hidden aria-hidden="true">
     <div class="submit-modal-inner" role="dialog" aria-labelledby="submit-title">
       <button type="button" class="modal-close" id="close-submit" aria-label="Fermer">×</button>
-      <h3 id="submit-title">Partager un prix</h3>
-      <p class="submit-help">Vous avez vu un prix en pharmacie&nbsp;? Partagez-le pour aider la communauté.<br>Votre soumission sera vérifiée avant affichage.</p>
+      <h3 id="submit-title">Signaler la disponibilité (et le prix)</h3>
+      <p class="submit-help">Vous êtes passé(e) dans cette pharmacie&nbsp;? Dites à la communauté si le traitement y était <strong>disponible</strong> — c'est l'info qui manque à tout le monde (les prix, eux, sont réglementés).<br>Votre signalement sera vérifié avant affichage.</p>
 
       <form id="submit-form">
         <!-- Pharmacie : champ autocomplete (ou lecture seule si préfilled) -->
@@ -280,8 +280,17 @@ const updatedFr = stats.updated_at
         </div>
 
         <div class="form-row">
-          <label for="f-price">Prix en euros</label>
-          <input type="number" id="f-price" min="1" max="1000" step="0.01" placeholder="ex. 285,50" required>
+          <label>Disponibilité constatée</label>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <label style="display:flex;align-items:center;gap:6px;font-weight:normal;"><input type="radio" name="f-availability" value="disponible" style="accent-color:#16a34a;"> ✓ Disponible</label>
+            <label style="display:flex;align-items:center;gap:6px;font-weight:normal;"><input type="radio" name="f-availability" value="rupture" style="accent-color:#dc2626;"> En rupture</label>
+            <label style="display:flex;align-items:center;gap:6px;font-weight:normal;"><input type="radio" name="f-availability" value="sur_commande" style="accent-color:#b45309;"> Sur commande</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="f-price">Prix en euros <span class="optional">(optionnel — les prix sont réglementés)</span></label>
+          <input type="number" id="f-price" min="1" max="1000" step="0.01" placeholder="ex. 285,50">
         </div>
 
         <div class="form-row">
@@ -298,7 +307,7 @@ const updatedFr = stats.updated_at
 
         <div id="f-error" class="form-error" hidden></div>
         <div id="f-success" class="form-success" hidden>
-          Merci&nbsp;! Votre prix a été soumis. Il sera affiché après vérification.
+          Merci&nbsp;! Votre signalement a été soumis. Il sera affiché après vérification.
         </div>
 
         <button type="submit" class="submit-btn" id="f-submit">Envoyer</button>
@@ -1021,7 +1030,9 @@ const updatedFr = stats.updated_at
       const drug_slug = document.getElementById('f-drug').value;
       const dose = document.getElementById('f-dose').value.trim() || null;
       const priceStr = document.getElementById('f-price').value.replace(',', '.');
-      const price_eur = parseFloat(priceStr);
+      const price_eur = priceStr === '' ? null : parseFloat(priceStr);
+      const availEl = document.querySelector('input[name="f-availability"]:checked');
+      const availability = availEl ? availEl.value : null;
       const notes = document.getElementById('f-notes').value.trim() || null;
 
       if (!pharmacy_id) {
@@ -1032,7 +1043,11 @@ const updatedFr = stats.updated_at
         showErr('Choisis un médicament.');
         return;
       }
-      if (!Number.isFinite(price_eur) || price_eur <= 0 || price_eur > 1000) {
+      if (availability === null && price_eur === null) {
+        showErr('Indique au moins la disponibilité (ou un prix).');
+        return;
+      }
+      if (price_eur !== null && (!Number.isFinite(price_eur) || price_eur <= 0 || price_eur > 1000)) {
         showErr('Prix invalide (entre 1 et 1000 €).');
         return;
       }
@@ -1052,7 +1067,7 @@ const updatedFr = stats.updated_at
             'Prefer': 'return=minimal',
           },
           body: JSON.stringify({
-            pharmacy_id, drug_slug, dose, price_eur,
+            pharmacy_id, drug_slug, dose, price_eur, availability,
             source: 'user', verified: false, display: true,
             submitted_by_session: session_id,
             notes,

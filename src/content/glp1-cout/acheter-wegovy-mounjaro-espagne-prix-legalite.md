@@ -107,4 +107,6 @@ Pour tous les autres profils, le parcours français — [primo-prescription en C
 - Acheter sur place avec une ordonnance française est **légal** (directive 2011/24/UE) ; en ramener plus de trois mois de traitement ou acheter en ligne ne l'est **pas**.
 - La chaîne du froid (2-8 °C) rend le transport estival risqué sans équipement.
 
+English speaker living in France? Read our guide in English: [GLP-1 in France — prices, prescriptions and rules](/en/glp1-in-france/).
+
 *Sources : [Merca2 — Sanidad no financia la tirzepatida (15/05/2026)](https://www.merca2.es/2026/05/15/sanidad-mounjaro-tirzepatida-2380307/), [mi GLP-1 — Precio de Wegovy en España 2026](https://miglp1.com/guias/precio-wegovy-espana/), [Holvia — Precio de Mounjaro en farmacia](https://holvia.es/precio-mounjaro-farmacia-2026/), [Your Europe — Présenter une ordonnance dans un autre pays de l'UE](https://europa.eu/youreurope/citizens/health/prescription-medicine-abroad/prescriptions/index_fr.htm), [douane.gouv.fr — Le transport de médicaments en France par des particuliers](https://www.douane.gouv.fr/fiche/le-transport-de-medicaments-en-france-par-des-particuliers). Prix français : arrêtés de juin 2026 (base BDPM / Vidal).*

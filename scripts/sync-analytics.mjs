@@ -462,34 +462,48 @@ async function fetchGSC(token, days) {
 
   const { start, end } = dateRange(days);
 
-  const r = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(GSC_SITE_URL)}/searchAnalytics/query`, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      startDate: start,
-      endDate: end,
-      dimensions: ['page', 'query', 'date'],
-      rowLimit: 25000,
-      dimensionFilterGroups: [{
-        filters: [{
-          dimension: 'page',
-          operator: 'notContains',
-          expression: '/admin'
+  // Pagination (fix 24/08/2026) : l'ancien appel unique (rowLimit 25000, pas de
+  // startRow) échantillonnait ~25k lignes sur des centaines de milliers → la longue
+  // traîne (pages pharmacies notamment) était invisible, ce qui a rendu la keep-list
+  // noindex aveugle à ~100 sessions organiques/jour. On pagine jusqu'à 3 pages
+  // (75k lignes) pour borner l'IO.
+  const PAGE_SIZE = 25000;
+  const MAX_PAGES = 3;
+  const rawRows = [];
+  for (let page = 0; page < MAX_PAGES; page++) {
+    const r = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(GSC_SITE_URL)}/searchAnalytics/query`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        startDate: start,
+        endDate: end,
+        dimensions: ['page', 'query', 'date'],
+        rowLimit: PAGE_SIZE,
+        startRow: page * PAGE_SIZE,
+        dimensionFilterGroups: [{
+          filters: [{
+            dimension: 'page',
+            operator: 'notContains',
+            expression: '/admin'
+          }]
         }]
-      }]
-    })
-  });
+      })
+    });
 
-  if (!r.ok) {
-    console.error(`  ❌ GSC API error: ${await r.text()}`);
-    return [];
+    if (!r.ok) {
+      console.error(`  ❌ GSC API error (page ${page}): ${await r.text()}`);
+      break;
+    }
+    const data = await r.json();
+    const batch = data.rows || [];
+    rawRows.push(...batch);
+    if (batch.length < PAGE_SIZE) break;
   }
 
-  const data = await r.json();
-  const allRows = (data.rows || []).map(row => {
+  const allRows = rawRows.map(row => {
     const pagePath = new URL(row.keys[0]).pathname;
     return {
       page_path: pagePath,
@@ -504,17 +518,20 @@ async function fetchGSC(token, days) {
     };
   });
 
-  // Keep only rows from the top 500 pages by impressions to limit Supabase disk IO
+  // Réduction pour limiter l'IO Supabase SANS perdre le signal longue traîne
+  // (remplace l'ancien filtre "top 500 pages" qui jetait tout clic hors top 500) :
+  // on garde TOUTE ligne avec au moins 1 clic, quelle que soit la page, plus
+  // toutes les lignes des 1000 pages les plus vues.
   const pageImpressions = new Map();
   for (const row of allRows) {
     pageImpressions.set(row.page_path, (pageImpressions.get(row.page_path) || 0) + row.impressions);
   }
-  const top500Pages = new Set(
-    [...pageImpressions.entries()].sort((a, b) => b[1] - a[1]).slice(0, 500).map(([p]) => p)
+  const topPages = new Set(
+    [...pageImpressions.entries()].sort((a, b) => b[1] - a[1]).slice(0, 1000).map(([p]) => p)
   );
-  const rows = allRows.filter(r => top500Pages.has(r.page_path));
+  const rows = allRows.filter(r => r.clicks > 0 || topPages.has(r.page_path));
 
-  console.log(`  🔎 ${rows.length} rows fetched (${allRows.length} total, capped to top ${top500Pages.size} pages)`);
+  console.log(`  🔎 ${rows.length} rows kept (${allRows.length} fetched, ${rawRows.length} raw; clics conservés intégralement + top ${topPages.size} pages)`);
   return rows;
 }
 
