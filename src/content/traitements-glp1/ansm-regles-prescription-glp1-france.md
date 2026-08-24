@@ -2,8 +2,8 @@
 title: "ANSM Prescription GLP-1 : Règles France 2025-2026"
 description: "ANSM prescription GLP-1 règles France 2025-2026 : tout médecin peut désormais prescrire les GLP-1. Formulaire obligatoire et conditions."
 pubDate: 2026-03-16
-date: "2026-05-29"
-updatedAt: 2026-05-29
+date: "2026-08-24"
+updatedAt: 2026-08-24
 author: "Rédaction GLP-1 France"
 category: "Traitements"
 tags: ["glp1", "ANSM", "prescription", "réglementation", "France", "obésité", "diabète"]
@@ -40,10 +40,9 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 
 **Ce qui change concrètement** :
 
-- Votre médecin traitant peut vous prescrire [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) pour l'obésité, sous réserve d'un IMC initial >= 35 kg/m² et d'un échec préalable d'une prise en charge nutritionnelle (deuxième intention uniquement)
-- Il n'est plus nécessaire de consulter un spécialiste pour la première prescription
-- Le renouvellement peut également être assuré par le médecin traitant
-- Les conditions médicales d'éligibilité selon l'ANSM pour la prescription (AMM) : IMC >= 30 kg/m² (obésité) ou IMC >= 27 kg/m² avec au moins une comorbidité liée au poids. Les critères IMC >= 35 s'appliquent uniquement aux conditions de remboursement HAS (en cours d'évaluation).
+- Votre médecin traitant peut vous prescrire [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) pour l'obésité, dans le cadre de l'AMM : IMC >= 30 kg/m², ou IMC >= 27 kg/m² avec au moins une comorbidité liée au poids
+- Il n'est plus nécessaire de consulter un spécialiste pour une première prescription **dans le cadre de l'AMM** (traitement alors à votre charge)
+- **Attention, pour être remboursé c'est différent** : depuis les arrêtés de juin 2026, la prescription initiale **remboursée à 65 %** doit être faite dans un centre spécialisé de l'obésité (CSO) ou un service hospitalier spécialisé, avec des critères plus stricts (IMC >= 40, ou >= 35 avec comorbidité, après 6 mois de prise en charge nutritionnelle). Le médecin traitant assure ensuite les renouvellements.
 - Ces évolutions concernent aussi la prescription des [GLP-1 pour les adolescents obèses de 12 ans et plus](/collections/traitements-glp1/wegovy-mounjaro-adolescent-obesite-12-ans-france-guide/), un cadre spécifique encadré par l'ANSM
 
 **Ce qui ne change pas** :
@@ -103,7 +102,7 @@ Si vous êtes diabétique de type 2 et traité par un GLP-1 comme [Ozempic](/col
 
 Si vous souffrez d'obésité et souhaitez un traitement GLP-1 :
 
-- Vous pouvez désormais consulter votre médecin traitant directement, sans passer par un spécialiste — découvrez le [parcours complet pour commencer un traitement GLP-1](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/)
+- Vous pouvez consulter votre médecin traitant directement pour une prescription dans le cadre de l'AMM ; pour une prescription **remboursée**, il vous adressera à un CSO/CHU pour la primo-prescription — découvrez le [parcours complet pour commencer un traitement GLP-1](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/)
 - Votre médecin évaluera votre éligibilité (IMC, comorbidités, traitements antérieurs) — [vérifiez vos critères d'éligibilité GLP-1](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/)
 - Les traitements approuvés pour l'obésité sont Wegovy et Mounjaro
 - **Remboursement** : depuis le 15 juin 2026, Wegovy et Mounjaro sont remboursés à 65 % par l'Assurance Maladie pour l'obésité (IMC ≥ 35 avec comorbidité ou IMC ≥ 40, après échec nutritionnel, prescription initiale en CSO/CHU). Consultez nos guides sur le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/) et le [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/)
@@ -177,7 +176,7 @@ Pour comparer ces traitements en détail, consultez notre [comparatif des GLP-1]
 
 ### Mon médecin généraliste peut-il me prescrire Ozempic pour maigrir ?
 
-Non. Ozempic est indiqué uniquement pour le diabète de type 2. Pour la perte de poids, les traitements approuvés sont Wegovy, Mounjaro et Saxenda. Depuis juin 2025, votre généraliste peut vous prescrire ces traitements anti-obésité si vous remplissez les critères d'éligibilité — consultez notre guide sur le [médecin généraliste et conditions de prescription](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/) pour connaître les démarches.
+Non. Ozempic est indiqué uniquement pour le diabète de type 2. Pour la perte de poids, les traitements approuvés sont Wegovy, Mounjaro et Saxenda. Depuis juin 2025, votre généraliste peut vous prescrire ces traitements anti-obésité si vous remplissez les critères d'éligibilité (mais la primo-prescription remboursée passe par un CSO/CHU) — consultez notre guide sur le [médecin généraliste et conditions de prescription](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/) pour connaître les démarches.
 
 ### Le formulaire obligatoire va-t-il ralentir ma prise en charge ?
 

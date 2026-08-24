@@ -5,6 +5,7 @@ description: "Avant après GLP1 : résultats réels Ozempic, Wegovy et Mounjaro 
 author: "Rédaction GLP-1 France"
 pubDate: 2026-03-15
 date: 2026-03-15
+updatedAt: 2026-08-24
 category: "avant-après"
 tags: ["avant après", "glp1", "résultats", "perte de poids", "témoignages", "ozempic", "wegovy", "mounjaro"]
 image: "/images/thumbnails/avant-après-glp1.jpg"
@@ -33,8 +34,8 @@ L'étude STEP 1, publiée dans le New England Journal of Medicine en 2021, reste
 |----------|--------|---------|
 | Perte de poids moyenne | **-14,9%** | -2,4% |
 | Patients ayant perdu ≥ 5% | **86%** | 31% |
-| Patients ayant perdu ≥ 10% | 66% | 12% |
-| Patients ayant perdu ≥ 15% | 48% | 5% |
+| Patients ayant perdu ≥ 10% | 69% | 12% |
+| Patients ayant perdu ≥ 15% | 50% | 5% |
 | Patients ayant perdu ≥ 20% | 32% | 2% |
 
 Ce qui signifie concrètement : pour une personne pesant 100 kg au départ, la perte de poids moyenne sous Wegovy est d'environ 15 kg sur 16 mois. Un tiers des patients en perdent 20 kg ou plus.
@@ -116,9 +117,9 @@ C'est LA question que tous les patients se posent. Les études sont claires sur 
 
 ### Les données sur la reprise de poids
 
-L'étude STEP 4 (Wegovy) a suivi des patients qui ont arrêté le traitement après 20 semaines d'efficacité. Résultat : à 1 an après l'arrêt, **les patients avaient repris les deux tiers du poids perdu**.
+L'extension de l'étude STEP 1 (Wegovy) a suivi des patients après l'arrêt du traitement à 68 semaines. Résultat : un an après l'arrêt, **les patients avaient repris environ les deux tiers du poids perdu**.
 
-Une étude similaire avec Ozempic (étude SUSTAIN-Extended) montre une reprise de 50 à 70% du poids perdu dans les 12 mois suivant l'arrêt.
+L'étude STEP 4 confirme le mécanisme : les patients passés sous placebo après 20 semaines de sémaglutide ont repris du poids (+6,9 %), tandis que ceux qui poursuivaient le traitement continuaient d'en perdre (−7,9 %).
 
 Ce phénomène s'explique par la physiologie : le GLP-1 traite une cause biologique de l'obésité (la résistance à la satiété), mais n'agit que tant que le médicament est présent. À l'arrêt, les mécanismes de faim reprennent le dessus.
 

@@ -3,10 +3,10 @@ title: "Effets Secondaires Mounjaro Long Terme 2026 : Liste"
 thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
 description: "Effets secondaires Mounjaro à long terme 2026 : 12 effets fréquents + risques graves (pancréatite, gastroparésie, thyroïde). Témoignages et solutions."
 keywords: ['effets secondaires mounjaro', 'mounjaro effet secondaire long terme', 'effets secondaires mounjaro long terme', 'mounjaro effet secondaire grave', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'mounjaro vomissements', 'mounjaro diarrhée', 'mounjaro danger', 'mounjaro pancréatite']
-seoTitle: "Mounjaro Effets Secondaires Long Terme 2026 : liste complète et solutions"
+seoTitle: "Mounjaro : effets secondaires 2026, liste et solutions"
 seoDescription: "Effets secondaires Mounjaro long terme : nausées (24-33%), chute de cheveux, pancréatite, gastroparésie. Données études SURMOUNT 2025-2026. Solutions concrètes et quand consulter. Mis à jour juillet 2026."
 publishedAt: '2025-08-30'
-updatedAt: '2026-07-19'
+updatedAt: 2026-08-24
 date: 2026-07-19
 featured: true
 author: "Rédaction GLP-1 France"
