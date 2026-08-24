@@ -44,7 +44,7 @@ Vittel est agréée en affections digestives et maladies métaboliques (AD), aff
 
 La saison 2026 court du **23 mars au 28 novembre**, la plus longue des trois, ce qui facilite les dates hors vacances scolaires (hébergements moins chers, files d'attente plus courtes). Les activités complémentaires non remboursées restent abordables : yoga 12 €, sophro-balade 13 €, tai-chi 9,50 € la séance. Un acompte de 55 € est demandé à la réservation pour les curistes remboursés à 65-90 %.
 
-À noter : Vittel fait partie des cinq stations (avec Brides-les-Bains, Capvern, Vals-les-Bains et Vichy) où a été menée l'étude Maâthermes, qui a mesuré une perte de poids moyenne de 3,86 kg persistante 14 mois après une cure thermale AD ([lescuristes.fr](https://www.lescuristes.fr/actualites/obesite-et-cure-thermale-decouvrez-les-cures-conventionnees-dediees-a-la-perte-de-poids/2288)).
+À noter : Vittel fait partie des cinq stations (avec Brides-les-Bains, Capvern, Vals-les-Bains et [Vichy](/collections/retraites-bien-etre/cure-thermale-vichy-minceur-avis-prix/)) où a été menée l'étude Maâthermes, qui a mesuré une perte de poids moyenne de 3,86 kg persistante 14 mois après une cure thermale AD ([lescuristes.fr](https://www.lescuristes.fr/actualites/obesite-et-cure-thermale-decouvrez-les-cures-conventionnees-dediees-a-la-perte-de-poids/2288)).
 
 ## Contrexéville : la « capitale de la minceur » historique
 
