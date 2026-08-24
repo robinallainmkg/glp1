@@ -27,7 +27,33 @@ Avant d'écrire la première ligne d'un sujet du backlog, vérifier que la page 
 - Thumbnail SVG **unique** (DA verte #1a3c34 / #16a34a) dans `public/images/thumbnails/`.
 - URLs articles : `/collections/<collection>/<slug>/`.
 
-## File prioritaire
+## File prioritaire V2 (axes validés par Robin le 24/08/2026 — « Propose des axes » + « mets bien à jour la stratégie »)
+
+**Analyse marché du 24/08/2026 (sources vérifiées ce jour, à re-vérifier à la rédaction)** : le marché bascule vers (1) les **GLP-1 oraux** — orforglipron (Foundayo) approuvé par la FDA le 01/04/2026, ~300 $/mois aux US, EMA en cours, France 2027 au plus tôt ; notre signal interne : « ozempic comprimé prix » x2 WoW ; (2) les **combinaisons plus puissantes** — CagriSema (décision FDA attendue Q4 2026, REDEFINE-1 20,4 %, battu par tirzépatide en REDEFINE-4), retatrutide (phase 3 complète, TRIUMPH-4 28,7 % — record) ; (3) la **maturation du marché FR** : les premiers patients remboursés (15/06/2026) atteignent leurs 6 mois fin 2026 → vague de requêtes « renouvellement », « plateau », « arrêt/reprise de poids » à venir ; (4) marché mondial estimé ~150 Md$ d'ici 2030. Stratégie : first-mover FR sur (1)-(2), être en place AVANT la vague (3), et continuer la verticale retraites (objectif B de Robin).
+
+**Ordre de publication proposé : A1 → A4 → B10 → D10 → A2 → C10 → B11 → A3 → C11 → B12 → D12.** Anti-doublon obligatoire avant chaque rédaction (repo d'abord, puis GSC query×page). Tous ajoutés le 24/08 → publiables dès le 25/08 (fenêtre veto 24 h).
+
+### Axe A — Nouvelle génération & GLP-1 oraux (first-mover, concurrence FR quasi nulle)
+- [ ] **A1. Foundayo (orforglipron) approuvé aux États-Unis : efficacité réelle, prix, et quand en France ?** — un article `orforglipron-pilule-glp1-lilly-france-date` EXISTE déjà : anti-doublon à faire ; si la MAJ dépasse 30 % → ticket + go Robin, sinon refresh complet (approbation FDA 01/04/2026, nom commercial Foundayo, ~300 $/mois, perte 10,5 %/72 sem au dosage 36 mg, France 2027+). Cible : « pilule ozempic », « orforglipron france ».
+- [ ] **A2. CagriSema : 20 % de perte de poids, mais battu par le tirzépatide — résultats REDEFINE et calendrier** — décision FDA Q4 2026 ; REDEFINE-4 : 23,0 % vs 25,5 % pour tirzépatide (non-infériorité manquée). Angle honnête : le « successeur de Wegovy » arrive derrière Mounjaro.
+- [ ] **A3. Retatrutide : 28,7 % de perte de poids (TRIUMPH-4), le traitement le plus puissant jamais testé — guide 2026** — phase 3 complète août 2026, pas encore déposé partout ; zéro promesse de date.
+- [ ] **A4. GLP-1 en comprimé : le guide 2026 (Rybelsus disponible, orforglipron à venir, les arnaques « gélules GLP-1 »)** — hub du cluster oral ; cible « glp-1 comprimé » (pos 77-85 servie par /articles/, aucune page dédiée) + protection consommateur (gélules scam déjà vues dans contacts). NE PAS cibler « ozempic comprimé prix » (canonique = prix-ozempic-france, section ajoutée le 23/08).
+
+### Axe B — Vivre avec / après le traitement (anticiper la vague des 6 mois, échéance déc. 2026)
+- [ ] **B10. Renouvellement du remboursement à 6 mois : la règle des -5 % et comment préparer sa consultation** — Vidal 37850 (échec = perte < 5 % à 6 mois) ; lien direct Dossier/test. Intention transactionnelle forte à venir (premiers renouvellements ~12/2026).
+- [ ] **B11. Plateau sous Wegovy ou Mounjaro : pourquoi la perte de poids s'arrête et que faire** — sources STEP/SURMOUNT (plateau ~60 sem), pas d'invention.
+- [ ] **B12. Arrêter un GLP-1 : ce que disent les études sur la reprise de poids et comment sortir du traitement** — STEP 1 extension (~2/3 du poids repris à 1 an), stratégie de sortie encadrée.
+
+### Axe C — Parcours remboursement niveau 2 (l'intention exacte de nos clients payants)
+- [ ] **C10. Passer de Wegovy à Mounjaro (ou l'inverse) en restant remboursé : équivalences, ITR, procédure**
+- [ ] **C11. SMR obésité : la troisième voie de primo-prescription remboursée que personne ne connaît** — arrêtés 06/2026 (CSO, CHU, SMR) ; les CSO saturent (notre article délais), le SMR est l'angle inédit.
+
+### Axe D — Retraites & longévité (objectif secondaire n°2 de Robin, progrès hebdo suivi par email)
+- [ ] **D10. Cure thermale et GLP-1 : peut-on combiner traitement et cure remboursées ?** — pont entre nos 2 verticales, personne dessus ; maillage protocole-wegovy-cure + hub /retraites/.
+- [ ] **D12. Retraites longévité en France : NAD+, peptides, bilans — ce qui est légal, ce qui est dispo, ce qui est dangereux** — angle protection consommateur (alerte ANSM peptides déjà sourcée dans retraite-longevite-france) ; complète le cluster longévité sans commercial.
+- **D11 (rappel, NON autonome)** : refonte peau relâchée post-GLP-1 (pont Morpheus8) > 30 % → toujours en attente d'un go Robin explicite (signalé le 07/08).
+
+## File prioritaire (V1 — épuisée le 22/08/2026, conservée pour trace et suivi J+30)
 
 ### P1 — Parcours de soins (l'intention exacte de nos 2 premiers clients payants)
 

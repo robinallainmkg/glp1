@@ -71,7 +71,7 @@ jobs:
         echo "$CHANGED" | sed 's/^/  /'
 
         # Patterns qui forcent le full sync (touchent les 22k pharmacies)
-        SHARED_PATTERNS='^(src/pages/pharmacies/|public/data/pharmacies\.json|scripts/pharmacy-map/|src/components/(SiteHeader|SiteFooter|AffiliateTracker|GoogleAnalytics|Hotjar|AiCoach)\.astro|src/styles/(global|homepage)\.css|src/layouts/(StaticLayout|BaseLayout|UnifiedLayout)\.astro|astro\.config\.mjs|config/astro\.config\.mjs|package(-lock)?\.json|tsconfig\.json|tailwind\.config)'
+        SHARED_PATTERNS='^(src/pages/pharmacies/|public/data/pharmacies\.json|config/pharmacy-index-keeplist\.json|scripts/pharmacy-map/|src/components/(SiteHeader|SiteFooter|AffiliateTracker|GoogleAnalytics|Hotjar|AiCoach)\.astro|src/styles/(global|homepage)\.css|src/layouts/(StaticLayout|BaseLayout|UnifiedLayout)\.astro|astro\.config\.mjs|config/astro\.config\.mjs|package(-lock)?\.json|tsconfig\.json|tailwind\.config)'
 
         if echo "$CHANGED" | grep -qE "$SHARED_PATTERNS"; then
           echo "→ SHARED file modified → full sync needed"

@@ -187,6 +187,19 @@ Le diagnostic de fuite (point 5) se fait en comparant chaque K a sa baseline : l
 6. **[AUTONOME — backlog]** Email de livraison J0 automatique post-achat Dossier (« votre dossier est pret » + lien /mon-espace/dossier/) — actuellement l'acheteur qui ferme l'onglet de retour Stripe n'a aucun moyen de retrouver son dossier.
 Estimation actions 2+3 a 3 % de clic : K1 0,69 % → ~1,4 %, soit ~6 ventes/mois a K2-K4 constants.
 
+### Decisions Robin du 24/08/2026 (memoire strategique — NE PAS re-demander)
+
+1. **Noindex pharmacies : ON TIENT** jusqu'au verdict J+30 (~17/09). Ne PAS elargir la keep-list au-dela du critere GSC hebdo (clics >= 1 sur 28j), malgre la perte mesuree ~100 sessions organiques/j (crash 21-22/08 documente au rapport du 23/08). Re-evaluer UNIQUEMENT au verdict du 17/09 avec les donnees completes.
+2. **Fix workflow deploy valide et applique** (24/08) : `config/pharmacy-index-keeplist.json` ajoute aux SHARED_PATTERNS de deploy-hostinger.yml → un refresh keep-list declenche desormais le full sync (avant : les refreshes ne se deployaient jamais).
+3. **Content-plan V2 par axes** (Robin : « propose des axes ») : A nouvelle generation/GLP-1 oraux (orforglipron/Foundayo, CagriSema, retatrutide), B vivre avec/apres le traitement (vague des 6 mois fin 2026), C parcours remboursement niveau 2, D retraites longevite. Detail, preuves marche et ordre de publication dans content-plan.md (File prioritaire V2). L'analyse marche est datee du 24/08 — re-verifier chaque chiffre a la redaction.
+
+### Emails hebdomadaires a Robin (obligation ajoutee 24/08/2026, demande explicite)
+
+Chaque **lundi** (routine du lundi), envoyer 2 emails SEPARES a robinallainmkg@gmail.com via l'edge function `send-feedback-email` (token dans le source via get_edge_function) :
+- **(a) Stats funnel Dossier** (category `robin_weekly_funnel`) : K1-K6 vs baselines, ventes/checkouts/leads de la semaine, perfs recentes des pages funnel, 1 constat + 1 action.
+- **(b) Progres verticale retraites** (category `robin_weekly_retraites`) : tableau semaine par semaine (articles publies, impressions, clics, positions GSC du cluster /retraites/ + /collections/retraites-bien-etre/), et l'action de la semaine pour progresser. Objectif Robin : « il faut progresser aussi ici ».
+Premiers envois faits le 24/08/2026. En plus : quand la routine identifie des solutions monetisation (plus de leads), les proposer par email avec pour chaque solution le PROMPT exact que Robin peut renvoyer pour l'activer (patron de l'email `robin_funnel_solutions` du 24/08).
+
 ### PLAN RECOVERY SEO (audit 17/08/2026, "go go go" Robin — section OBLIGATOIRE dans chaque rapport quotidien jusqu'a cloture)
 
 Audit complet : `reports/audit-seo-general-2026-08-17.md`. A chaque run, reporter :
