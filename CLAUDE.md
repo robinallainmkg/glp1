@@ -200,6 +200,15 @@ Chaque **lundi** (routine du lundi), envoyer 2 emails SEPARES a robinallainmkg@g
 - **(b) Progres verticale retraites** (category `robin_weekly_retraites`) : tableau semaine par semaine (articles publies, impressions, clics, positions GSC du cluster /retraites/ + /collections/retraites-bien-etre/), et l'action de la semaine pour progresser. Objectif Robin : « il faut progresser aussi ici ».
 Premiers envois faits le 24/08/2026. En plus : quand la routine identifie des solutions monetisation (plus de leads), les proposer par email avec pour chaque solution le PROMPT exact que Robin peut renvoyer pour l'activer (patron de l'email `robin_funnel_solutions` du 24/08).
 
+### Leviers leads actives le 24/08/2026 (go Robin « les 6 leviers ») — obligations routine associees
+
+Etat des 6 leviers : (1) relance dossiers pending = FAIT en continu par l'edge function `relance-dossiers` (J+1 auto) + relance_2 manuelle unique (Philippe 24/08 ; Ruth = STOP le 01/08 via s.ruth83 — GMAIL IGNORE LES POINTS, toujours normaliser les adresses gmail avant tout ciblage ; Jonathan = 2 relances sans reponse, ne plus ecrire) ; (2) capture email etape 1 du test = DEPLOYE ; (3) lead magnet « parcours en 1 page » = DEPLOYE (/guides/parcours-remboursement-glp1-1-page/, noindex) avec encarts sur carte-prix + 3 pages prix nationales ; (4) capture email in-chat Coach = v78 (tag [[EMAIL_CAPTURE]]) ; (5) email livraison J0 = deja en prod depuis le 16/08 (generate-dossier v4, category dossier_delivery_j0) ; (6) prospection v2 = envoyee le 24/08 (category dossier_prospection_2, ~95 envois, base 27/07 moins STOP/repondeurs/acheteurs, adresses gmail normalisees).
+
+**Nouveaux contact_type a traiter CHAQUE run (en plus de eligibility_test)** :
+- `lead_magnet_parcours` : le visiteur a deja recu le lien du guide a l'ecran. Routine : J+3 email « avez-vous lu le guide ? » + test d'eligibilite, J+7 proposition Dossier (memes regles STOP/dedoublonnage que la sequence eligibility_test).
+- `coach_recap` : PROMESSE DE RECAP SOUS 24 H — chaque run DOIT verifier les nouveaux coach_recap, lire la conversation correspondante (conversation_id dans le champ message), rediger le recapitulatif (points abordes, verdict/criteres discutes, liens utiles) et l'envoyer via send-feedback-email (category coach_recap_sent). Ne pas re-lister les CSO ni la checklist detaillee (exclusivite Dossier).
+- Lignes `eligibility_test` avec message « capture précoce étape 1 » : ignorer si une ligne complete (avec verdict) existe pour le meme email ; sinon a J+1 envoyer « votre resultat vous attend » avec le lien du test.
+
 ### PLAN RECOVERY SEO (audit 17/08/2026, "go go go" Robin — section OBLIGATOIRE dans chaque rapport quotidien jusqu'a cloture)
 
 Audit complet : `reports/audit-seo-general-2026-08-17.md`. A chaque run, reporter :
