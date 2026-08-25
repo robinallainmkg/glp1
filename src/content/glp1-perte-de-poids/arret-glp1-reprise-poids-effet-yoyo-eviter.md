@@ -3,7 +3,7 @@ title: "Reprise Poids Yoyo après GLP-1 : Comment l'Éviter"
 description: "Reprise poids et effet yoyo après arrêt GLP-1 : 2/3 du poids repris à 12 mois (étude STEP 1). 7 stratégies prouvées pour éviter le rebond."
 pubDate: 2026-03-16
 date: '2026-03-17'
-updatedAt: '2026-03-17'
+updatedAt: '2026-08-25'
 author: "Rédaction GLP-1 France"
 category: "Perte de poids"
 tags: ["glp1", "arrêt traitement", "reprise de poids", "effet yoyo", "wegovy", "mounjaro", "sevrage"]
@@ -27,7 +27,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-**Reprise de poids et effet yoyo après l'arrêt d'un GLP-1** : c'est la question n°1 que se posent les patients sous Ozempic, Wegovy ou Mounjaro. Les données chiffrées sont claires — l'étude STEP 1 a montré qu'**à 12 mois après l'arrêt du sémaglutide, les patients récupèrent en moyenne 2/3 du poids perdu**, et l'**effet yoyo** est quasi-complet à 18-24 mois sans accompagnement. Mais cette **reprise de poids yoyo** n'est pas une fatalité : sevrage progressif, accompagnement nutritionnel, activité physique et suivi médical permettent de **limiter le rebond**. Voici les données scientifiques détaillées et les **7 stratégies prouvées** pour maintenir vos résultats durablement. Lire aussi : [reprise de poids 4 fois plus rapide après GLP-1](/collections/glp1-perte-de-poids/reprise-poids-glp1-4-fois-plus-rapide-etude-2026/) et notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
+**Reprise de poids et effet yoyo après l'arrêt d'un GLP-1** : c'est la question n°1 que se posent les patients sous Ozempic, Wegovy ou Mounjaro. Les données chiffrées sont claires — l'étude STEP 1 a montré qu'**à 12 mois après l'arrêt du sémaglutide, les patients récupèrent en moyenne 2/3 du poids perdu**, et la tendance au retour vers le poids de départ se poursuit ensuite sans accompagnement. Mais cette **reprise de poids yoyo** n'est pas une fatalité : sevrage progressif, accompagnement nutritionnel, activité physique et suivi médical permettent de **limiter le rebond**. Voici les données scientifiques détaillées et les **7 stratégies prouvées** pour maintenir vos résultats durablement. Lire aussi : [reprise de poids 4 fois plus rapide après GLP-1](/collections/glp1-perte-de-poids/reprise-poids-glp1-4-fois-plus-rapide-etude-2026/) et notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
 
 👉 Pour en savoir plus, consultez notre guide sur [relâchement cutané après perte de poids](/collections/effets-secondaires-glp1/glp1-relachement-cutane-peau-corps-perte-poids-solutions/).
 
@@ -50,13 +50,13 @@ Les données les plus complètes sur ce sujet proviennent des extensions des gra
 L'étude STEP 1 a montré qu'après 68 semaines de traitement par sémaglutide 2,4 mg (Wegovy), les patients avaient perdu en moyenne 14,9 % de leur poids. Une extension de l'étude a suivi les patients après l'arrêt du traitement :
 
 - **À 12 mois après l'arrêt** : les patients avaient récupéré en moyenne **deux tiers (2/3) du poids perdu** — une [reprise de poids 4 fois plus rapide après GLP-1](/collections/glp1-perte-de-poids/reprise-poids-glp1-4-fois-plus-rapide-etude-2026/) que dans les groupes placebo, soit environ 10 % du poids initial
-- **À 18-24 mois** : le retour au poids initial était quasi-complet chez la majorité des patients qui n'avaient pas modifié leur mode de vie
+- **Au-delà** : le suivi publié de l'extension s'arrête à un an après l'arrêt ; la trajectoire observée (reprise continue) suggère un retour progressif vers le poids initial chez les patients qui n'ont pas modifié leur mode de vie
 
 Ces chiffres sont cohérents avec ce qu'on observe dans d'autres contextes de perte de poids : la grande majorité des personnes qui perdent du poids de manière médicale ou chirurgicale reprennent une partie ou la totalité de leur poids dans les 2 à 5 ans suivant l'arrêt de l'intervention.
 
 ### Données sur le tirzépatide (Mounjaro)
 
-Les données de l'extension de l'étude SURMOUNT-4 sur le tirzépatide montrent un profil similaire : après l'arrêt du tirzépatide à la dose de 10 ou 15 mg, les patients ont récupéré environ **deux tiers (2/3) du poids perdu** en 12 mois (regain ~14% sur perte initiale ~21%, source SURMOUNT-4 PMC10714284), et un retour au poids initial était observé chez environ 60 % des patients à 18 mois.
+Les données de l'extension de l'étude SURMOUNT-4 sur le tirzépatide montrent un profil similaire : après l'arrêt du tirzépatide à la dose de 10 ou 15 mg, les patients ont récupéré environ **deux tiers (2/3) du poids perdu** en un an de suivi après l'arrêt (regain ~14 % sur une perte initiale ~21 %, source SURMOUNT-4, PMC10714284).
 
 ### Un phénomène connu sous d'autres traitements
 
@@ -147,7 +147,7 @@ L'orlistat est un inhibiteur des lipases intestinales qui réduit l'absorption d
 
 ### Phentermine/topiramate (non disponible en France)
 
-Cette combinaison médicamenteuse est disponible aux États-Unis (Qsymia) mais pas encore en Europe. Des études sont en cours pour son évaluation par l'EMA.
+Cette combinaison médicamenteuse est disponible aux États-Unis (Qsymia) mais **pas en Europe** : l'EMA a refusé son autorisation de mise sur le marché (sous le nom Qsiva) en octobre 2012, refus confirmé après réexamen le 21 février 2013, en raison de préoccupations cardiovasculaires (phentermine) et psychiatriques/cognitives (topiramate) à long terme ([EMA](https://www.ema.europa.eu/en/medicines/human/EPAR/qsiva)). Aucune nouvelle procédure européenne n'a abouti depuis.
 
 ### Chirurgie bariatrique
 
@@ -177,4 +177,4 @@ Oui. Il n'existe pas de contre-indication médicale à la reprise d'un traitemen
 
 ---
 
-*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. La décision d'arrêter ou de poursuivre un traitement GLP-1 doit être prise en concertation avec votre médecin. Pour comprendre les [résultats attendus sous GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/), consultez nos guides détaillés. Dernière mise à jour : mars 2026.*
+*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. La décision d'arrêter ou de poursuivre un traitement GLP-1 doit être prise en concertation avec votre médecin. Pour comprendre les [résultats attendus sous GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/), consultez nos guides détaillés. Dernière mise à jour : 25 août 2026.*

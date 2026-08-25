@@ -1,12 +1,12 @@
 ---
-title: "Orforglipron Comprimé : Approbation EMA et Date France"
-description: "Orforglipron (Foundayo) comprimé France : approuvé par la FDA et au Royaume-Uni, décision EMA attendue. Efficacité (-12,4% du poids), comparaison Wegovy/Mounjaro."
+title: "Foundayo (Orforglipron) : Prix, Efficacité, Date France"
+description: "Foundayo (orforglipron) : pilule GLP-1 approuvée aux USA (149-299 $/mois) et au Royaume-Uni, EMA en cours. Efficacité -12,4%, date France estimée 2027."
 pubDate: 2026-03-16
 date: "2026-03-16"
-updatedAt: 2026-08-21
+updatedAt: 2026-08-25
 author: "Rédaction GLP-1 France"
 category: "Traitements GLP-1"
-tags: ["orforglipron", "glp1 oral", "eli lilly", "comprimé", "obésité", "france", "2026", "2027"]
+tags: ["orforglipron", "foundayo", "glp1 oral", "eli lilly", "comprimé", "obésité", "france", "2026", "2027"]
 collection: "traitements-glp1"
 thumbnail: "/images/thumbnails/pilule-qui-fait-maigrir-illus.jpg"
 thumbnailAlt: "Orforglipron pilule GLP-1 Eli Lilly - médicament oral perte de poids"
@@ -14,8 +14,8 @@ featured: true
 published: true
 priority: 2
 schema: "Article"
-mainKeyword: "orforglipron comprimé France EMA approbation"
-secondaryKeywords: ["orforglipron date france", "orforglipron efficacité", "pilule glp1 eli lilly", "glp1 oral comprimé obésité", "orforglipron vs wegovy"]
+mainKeyword: "foundayo orforglipron france"
+secondaryKeywords: ["orforglipron date france", "orforglipron efficacité", "pilule glp1 eli lilly", "foundayo prix", "pilule ozempic", "orforglipron vs wegovy"]
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -28,7 +28,9 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Et si le prochain grand traitement contre l'obésité se prenait sous forme de comprimé, comme une aspirine ? C'est la promesse de l'**orforglipron**, un agoniste des récepteurs GLP-1 développé par **Eli Lilly** sous forme orale. Alors que [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) dominent le marché des injectables, l'orforglipron pourrait changer radicalement la donne pour les millions de patients qui refusent les injections.
+> **Mise à jour du 25/08/2026** — Foundayo (orforglipron) est **commercialisé aux États-Unis depuis avril 2026** : 149 à 299 $/mois en achat direct via LillyDirect selon le dosage ([Eli Lilly](https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill), [Drugs.com](https://www.drugs.com/medical-answers/how-foundayo-cost-3582156/)). Le Royaume-Uni l'a approuvé en août 2026 (MHRA). Côté Union européenne, le dossier est **toujours en évaluation au CHMP** ([agenda EMA mai 2026](https://www.ema.europa.eu/en/documents/agenda/agenda-chmp-meeting-18-21-may-2026_en.pdf)) : pas d'AMM européenne à ce jour, arrivée en France estimée **2027 au plus tôt**.
+
+Et si le prochain grand traitement contre l'obésité se prenait sous forme de comprimé, comme une aspirine ? C'est la promesse de l'**orforglipron** — commercialisé sous le nom **Foundayo** et surnommé « pilule Ozempic » par les médias —, un agoniste des récepteurs GLP-1 développé par **Eli Lilly** sous forme orale. Alors que [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) dominent le marché des injectables, l'orforglipron pourrait changer radicalement la donne pour les millions de patients qui refusent les injections.
 
 ## Qu'est-ce que l'orforglipron ?
 
@@ -118,8 +120,8 @@ Aucun signal de carcinome thyroïdien médullaire n'a été détecté dans les �
 Eli Lilly a déposé une **demande d'Autorisation de Mise sur le Marché (AMM)** auprès de l'Agence Européenne des Médicaments (EMA) en 2025. Le processus d'évaluation par l'EMA suit plusieurs étapes :
 
 1. **Validation du dossier** : déjà effectuée
-2. **Évaluation par le CHMP** (Comité des Médicaments à Usage Humain) : en cours
-3. **Opinion du CHMP** : attendue courant 2026
+2. **Évaluation par le CHMP** (Comité des Médicaments à Usage Humain) : **en cours** — le dossier figurait à l'agenda du CHMP de mai 2026 au stade « List of Questions » ([EMA](https://www.ema.europa.eu/en/documents/agenda/agenda-chmp-meeting-18-21-may-2026_en.pdf)), une étape intermédiaire de l'évaluation
+3. **Opinion du CHMP** : pas encore rendue en août 2026
 4. **Décision de la Commission européenne** : 67 jours après l'opinion
 5. **Décision nationale** : chaque pays adapte l'AMM à ses règles nationales
 
@@ -130,9 +132,15 @@ Eli Lilly a déposé une **demande d'Autorisation de Mise sur le Marché (AMM)**
 
 La France ajoute systématiquement un délai de négociation tarifaire avec le Comité Économique des Produits de Santé (CEPS) après l'AMM européenne, ce qui explique ce délai supplémentaire de 6 à 18 mois.
 
-### La situation aux États-Unis
+### La situation aux États-Unis : approuvé et déjà en vente
 
-Aux États-Unis, Eli Lilly a soumis l'orforglipron à la FDA (Food and Drug Administration). Une décision américaine pourrait précéder la décision européenne de quelques mois. Si la FDA approuve l'orforglipron en 2026, cela renforcera la pression sur l'EMA pour accélérer son évaluation.
+La FDA a approuvé Foundayo le **1er avril 2026** pour les adultes en situation d'obésité (ou en surpoids avec comorbidité) — première pilule GLP-1 sans contrainte alimentaire ([communiqué Eli Lilly](https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill)). La commercialisation a suivi en quelques jours via LillyDirect, puis dans les pharmacies de détail.
+
+**Prix américain constaté** ([Drugs.com](https://www.drugs.com/medical-answers/how-foundayo-cost-3582156/)) :
+- Achat direct (sans assurance) : **149 à 299 $/mois** selon le dosage via LillyDirect
+- Avec assurance privée éligible : jusqu'à 25 $/mois (carte d'épargne Foundayo)
+
+Ce positionnement tarifaire — nettement sous les injectables américains (Wegovy : plus de 1 000 $/mois au prix catalogue US) — confirme la stratégie d'accessibilité annoncée par Lilly. Il ne préjuge pas du prix européen, qui sera négocié pays par pays.
 
 ## Pourquoi l'orforglipron représente une rupture ?
 
@@ -163,7 +171,7 @@ L'OMS a inclus l'orforglipron dans ses discussions sur l'accès équitable aux t
 
 L'orforglipron n'arrivera pas en France avant 2027. Si vous avez besoin d'un traitement GLP-1 maintenant, il serait contre-productif d'attendre :
 
-1. **Consultez votre médecin** pour évaluer votre éligibilité aux traitements actuellement disponibles
+1. **Consultez votre médecin** pour évaluer votre éligibilité aux traitements actuellement disponibles — notre [test d'éligibilité en 2 minutes](/outils/test-eligibilite/) vous donne un premier verdict selon les critères officiels de remboursement
 2. **Envisagez Wegovy ou Mounjaro** si votre IMC et vos comorbidités le justifient — leur efficacité est prouvée
 3. **Renseignez-vous sur le [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/)** : Wegovy et Mounjaro sont remboursés à 65% pour l'obésité depuis le 15 juin 2026 (sous conditions : IMC ≥ 35 avec comorbidité ou ≥ 40, après échec nutritionnel)
 4. **Discutez de Rybelsus** si vous avez un diabète de type 2 et souhaitez une option orale disponible maintenant
@@ -178,8 +186,11 @@ Pour être informé en temps réel des décisions de l'EMA et des évolutions r�
 
 ## Questions fréquentes
 
-**L'orforglipron est-il déjà disponible en France en 2026 ?**
-Non. En mars 2026, l'orforglipron n'a pas encore reçu son AMM européenne. La commercialisation avant 2027 est très improbable.
+**L'orforglipron (Foundayo) est-il déjà disponible en France en 2026 ?**
+Non. En août 2026, l'orforglipron n'a toujours pas reçu son AMM européenne (dossier en cours d'évaluation au CHMP). La commercialisation en France avant 2027 est très improbable.
+
+**Combien coûte Foundayo aux États-Unis ?**
+De 149 à 299 $/mois selon le dosage en achat direct via LillyDirect, hors assurance ([Drugs.com](https://www.drugs.com/medical-answers/how-foundayo-cost-3582156/)). Le prix français n'existera qu'après l'AMM européenne et la négociation avec le CEPS.
 
 **L'orforglipron est-il aussi efficace que Mounjaro ?**
 Non. Mounjaro (tirzépatide) affiche une perte de poids de 20 à 22%, supérieure aux 12,4% de l'orforglipron (dose maximale 36 mg à 72 semaines dans l'étude ATTAIN-1). En revanche, l'orforglipron est comparable à Wegovy en efficacité, avec l'avantage d'être oral.
@@ -201,4 +212,4 @@ Mais l'attente sera longue : 2027 au plus tôt pour une commercialisation en Fra
 
 ---
 
-*Sources : Eli Lilly - études de phase 3 orforglipron (2025), EMA - statut des demandes d'AMM en cours, OMS - recommandations GLP-1 décembre 2025. Dernière mise à jour : mars 2026.*
+*Sources : Eli Lilly (communiqué d'approbation FDA du 01/04/2026, résultats ATTAIN-1), EMA (agenda CHMP mai 2026, dossier en évaluation), Drugs.com (prix US LillyDirect), pharmaphorum (approbation MHRA Royaume-Uni), OMS - recommandations GLP-1 décembre 2025. Dernière mise à jour : 25 août 2026.*
