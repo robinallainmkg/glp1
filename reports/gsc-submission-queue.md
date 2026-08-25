@@ -17,6 +17,7 @@ La routine AJOUTE ici a chaque publication — elle ne relance jamais dans le ch
 
 - [ ] https://glp1-france.fr/collections/retraites-bien-etre/cure-thermale-vichy-minceur-avis-prix/ (article 24/08 — station AD majeure, cible « cure thermale vichy minceur »)
 - [ ] https://glp1-france.fr/en/glp1-in-france/ (page pilier EN 24/08 — cible « glp-1 in france », « mounjaro price france »)
+- [ ] https://glp1-france.fr/collections/traitements-glp1/orforglipron-pilule-glp1-lilly-france-date/ (refresh A1 25/08 — recrawl : prix Foundayo US, statut EMA, FAQ)
 
 ## Soumises
 
