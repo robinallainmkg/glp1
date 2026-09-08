@@ -465,10 +465,16 @@ async function fetchGSC(token, days) {
   // Pagination (fix 24/08/2026) : l'ancien appel unique (rowLimit 25000, pas de
   // startRow) échantillonnait ~25k lignes sur des centaines de milliers → la longue
   // traîne (pages pharmacies notamment) était invisible, ce qui a rendu la keep-list
-  // noindex aveugle à ~100 sessions organiques/jour. On pagine jusqu'à 3 pages
-  // (75k lignes) pour borner l'IO.
+  // noindex aveugle à ~100 sessions organiques/jour.
+  //
+  // 08/09/2026 : le plafond de 3 pages (75k lignes) devient contraignant maintenant
+  // que la fenêtre passe de 3 à 10 jours — GSC trie par clics décroissants, donc une
+  // troncature coupe précisément la longue traîne qu'on cherche à voir. La boucle
+  // s'arrête dès qu'une page revient incomplète : monter le plafond ne coûte rien
+  // quand le volume est faible, et évite la troncature silencieuse quand il ne l'est
+  // pas. Si le log ci-dessous signale une troncature, il faut réduire --days.
   const PAGE_SIZE = 25000;
-  const MAX_PAGES = 3;
+  const MAX_PAGES = 12;
   const rawRows = [];
   for (let page = 0; page < MAX_PAGES; page++) {
     const r = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(GSC_SITE_URL)}/searchAnalytics/query`, {
@@ -501,6 +507,12 @@ async function fetchGSC(token, days) {
     const batch = data.rows || [];
     rawRows.push(...batch);
     if (batch.length < PAGE_SIZE) break;
+    // Dernière page autorisée alors qu'elle est pleine = il reste des lignes côté
+    // GSC. Elles sont perdues, et comme l'API trie par clics décroissants, ce sont
+    // les moins vues qui sautent : le signal longue traîne redevient faux.
+    if (page === MAX_PAGES - 1) {
+      console.warn(`  ⚠️  TRONCATURE : ${MAX_PAGES} pages pleines (${rawRows.length} lignes) — la longue traîne est incomplète. Réduire --days ou monter MAX_PAGES.`);
+    }
   }
 
   const allRows = rawRows.map(row => {
