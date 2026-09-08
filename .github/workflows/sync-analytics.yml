@@ -9,7 +9,7 @@ on:
       days:
         description: 'Number of days to sync'
         required: false
-        default: '3'
+        default: '10'
 
 jobs:
   sync:
